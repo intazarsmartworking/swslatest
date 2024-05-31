@@ -204,6 +204,14 @@ body {
     border-radius: 20px;
 }
 
+.footer-background{
+    background-image: url('../images/footer-bg.svg');
+    background-repeat: no-repeat; 
+    background-size:cover;
+    background-position: center;
+    border-radius: 24px;
+}
+
 @media (min-width: 1536px) {
     .container {
         width: 85%;

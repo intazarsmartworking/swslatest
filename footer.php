@@ -11,7 +11,7 @@
 
 ?>
 
-<div class="w-full relative bg-dark-black grid items-center">
+<div class="w-full relative grid items-center footer-background pt-20">
   <div class="container mx-auto md:px-0 px-10 pt-12 pb-12">
     <div class="grid flex md:grid-cols-4 gap-6">
       <div>
