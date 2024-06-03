@@ -281,7 +281,7 @@
 
 <!-- AI Vetted Section -->
 
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-36">
+<div class="w-full relative bg-dark-black grid items-center pb-28 pt-36 vetted-main-background">
     <div class="container mx-auto md:px-0 px-10">
         <h3 class="text-center small-intro"> Profile </h3>
         <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">AI Vetted<br><span class="text-dark-orange"> Profiles </span></h1>

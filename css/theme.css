@@ -1647,6 +1647,12 @@ body {
     background-position: center;
     border-radius: 24px;
 }
+.vetted-main-background{
+    background-image: url('../images/vet-bg.svg');
+    background-repeat: no-repeat; 
+    background-size:cover;
+    background-position: center;
+}
 @media (min-width: 1536px) {
     .container {
         width: 85%;
