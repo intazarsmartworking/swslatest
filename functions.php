@@ -53,6 +53,7 @@ function sws_setup() {
 		)
 	);
 
+
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
@@ -177,3 +178,41 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/theme-options-acf.php';
 
+/**
+ * Custom Taxonomy.
+ */
+require get_template_directory() . '/inc/custom-post-type.php';
+
+
+// For Footer Navigation & walker class
+
+register_nav_menus(
+	array(
+		'footer' => esc_html__( 'Footer', 'sws' ),
+	)
+);
+
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $output .= "\n<ul class=\"sub-menu\">\n";
+    }
+
+    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $classes[] = 'mb-2 text-sm leading-10';
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        $output .= '<li' . $class_names .'>';
+        $attributes = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+        $attributes .= ! empty( $item->xfn ) ? ' rel="'    . esc_attr( $item->xfn ) .'"' : '';
+        $attributes .= ! empty( $item->url ) ? ' href="'   . esc_attr( $item->url ) .'"' : '';
+        $attributes .= ' class="text-footer-menu-color"';
+        $item_output = $args->before;
+        $item_output .= '<a'. $attributes .'>';
+        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        $item_output .= '</a>';
+        $item_output .= $args->after;
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+}

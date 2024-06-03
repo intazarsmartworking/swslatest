@@ -579,106 +579,31 @@
         <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Common questions <br><span class="text-dark-orange"> and their answers </span></h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+			<?php 
+				$faq_argument = array( 'post_type' => 'faq');
+				$faq_query	= new WP_Query($faq_argument);
+			?>
+			<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
+			<?php $post_id = get_the_ID(); ?>
 
-        <div>
-		  <div class="accordian-sec-bg mb-5">
-			<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(101)">
-				<span id="accordion-label-101" class="text-xl pt-6 pb-6 font-medium text-white">What Roles Do We Offer?</span>
-				<svg id="arrow-down-101" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				  <path d="M6 9l4 4 4-4"></path>
-				</svg>
-				<svg id="arrow-up-101" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				  <path d="M6 9l4-4 4 4"></path>
-				</svg>
-			</button>
-			<div id="accordion-section-101" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-			   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
-			</div>
-		  </div>
-
-			<div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(102)">
-					<span id="accordion-label-102" class="text-xl pt-6 pb-6 font-medium text-white">Are Smart Working’s Developers Time Zones Aligned?</span>
-					<svg id="arrow-down-102" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<div>
+			  <div class="accordian-sec-bg mb-5">
+				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
+					<span id="accordion-label-<?php echo $post_id; ?>" class="text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
+					<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					  <path d="M6 9l4 4 4-4"></path>
 					</svg>
-					<svg id="arrow-up-102" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<svg id="arrow-up-<?php echo $post_id; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					  <path d="M6 9l4-4 4 4"></path>
 					</svg>
 				</button>
-				<div id="accordion-section-102" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
+				<div id="accordion-section-<?php echo $post_id; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
+				   <p class="p-4 text-base text-white"><?php echo get_the_excerpt();?></p>
 				</div>
+			  </div>
 			</div>
-
-			<div class="accordian-sec-bg  mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(103)">
-					<span id="accordion-label-103" class="text-xl pt-6 pb-6 font-medium text-white">How Many Years Of Experience Do Your Developers Have?</span>
-					<svg id="arrow-down-103" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-103" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-103" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
-				</div>
-			</div>
-		
+			<?php endwhile; wp_reset_postdata();?>
 		</div>
-		
-		
-		<div>
-		  <div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(104)">
-					<span id="accordion-label-104" class="text-xl pt-6 pb-6 font-medium text-white">How Many Years Of Experience Do Your Developers Have?</span>
-					<svg id="arrow-down-104" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-104" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-104" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
-				</div>
-			</div>
-
-		    <div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(105)">
-					<span id="accordion-label-105" class="text-xl pt-6 pb-6 font-medium text-white">How Many Years Of Experience Do Your Developers Have?</span>
-					<svg id="arrow-down-105" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-105" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-105" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
-				</div>
-			</div>	
-			
-			
-			<div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(106)">
-					<span id="accordion-label-106" class="text-xl pt-6 pb-6 font-medium text-white">What Is Smart Working’s Retention Rate?</span>
-					<svg id="arrow-down-106" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-106" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-106" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white">We cover your tech stack. With access to over 1M+ Vetted Developers we know that the fit must be perfect. We will find exactly what you need.</p>
-				</div>
-			</div>	
-			
-        </div>
-		
-        </div>
 
     </div>
 </div>

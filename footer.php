@@ -15,15 +15,33 @@
   <div class="container mx-auto md:px-0 px-10 pt-12 pb-12">
     <div class="grid flex md:grid-cols-4 gap-6">
       <div>
-        <img src="<?php echo get_template_directory_uri();?>/images/logo-gray.svg');?>" alt="" class="w-40">
+        <?php if(get_field('footer_logo', 'options')): ?>
+        <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+          <img src="<?php echo get_field('footer_logo', 'options')['url']; ?>" alt="<?php echo get_field('footer_logo', 'options')['alt']; ?>" class="w-40">
+        </a>  
+        <?php endif; ?>
+        <?php if(get_field('button_name', 'options')): ?>
         <div class="header-buttons mt-16 mb-20">
-          <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Unlock Your Free Search</a>
+        <?php
+         $unlock_btn_url = get_field('button_link', 'options');
+        ?>
+          <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_field('button_name', 'options'); ?></a>
         </div>
+        <?php endif; ?>
         
       </div>
       <div class="text-left md:text-center">
         <h3 class="text-white text-xl font-medium leading-normal"> Menu </h3>
-        <ul class="pt-7">
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'footer',
+                'container'      => 'ul',
+                'menu_class'     => 'pt-7', 
+                'depth'          => 1,
+                'walker'         => new Custom_Walker_Nav_Menu()
+            ));
+        ?>
+        <!--<ul class="pt-7">
           <li class="mb-2  text-sm leading-10">
             <a href="" class="text-footer-menu-color"> Home </a>
           </li>
@@ -42,43 +60,49 @@
           <li class="mb-2  text-sm leading-10">
             <a href="" class="text-footer-menu-color"> Contact us </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
       <div>
         <h3 class="text-white text-xl font-medium leading-normal"> Our Locations </h3>
         <div class="pb-7 pt-5">
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdiom </h4>
-          <p class="text-footer-menu-color text-sm leading-normal"> The Plaza, 535 King’s Rd, London <br> SW10 0SZ </p>
+          <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('uk_address', 'options'); ?> </p>
         </div>
         <div class="pb-7">
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> India </h4>
-          <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p>
+          <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('india_address', 'options'); ?> </p>
         </div>
       </div>
       <div>
         <h3 class="text-white text-xl font-medium leading-normal"> Contact Details </h3>
         <div class="pb-7 pt-5">
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h4>
-          <p class="text-footer-menu-color text-sm leading-tight"> info@smartworking.io <br> Oli@smartworking.io </p>
+          <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('email_footer', 'options'); ?> </p>
         </div>
         <div class="pb-7">
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> Phone </h4>
-          <p class="text-footer-menu-color text-sm leading-tight"> 0 1344 636399 (UK) <br> +1 929 362 6005 (US) <br> +49 1573 5995642 (DE) </p>
+          <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('phone_footer', 'options'); ?> </p>
         </div>
       </div>
     </div>
     <div class="grid flex md:grid-cols-3 gap-4 pt-10 pb-10">
       <div>
-	  	<p class="text-footer-menu-color text-sm">© 2024 All rights reserved by Smart Working. </p>
+	  	<p class="text-footer-menu-color text-sm"><?php echo get_field('copy_right_text', 'options'); ?> </p>
         
       </div>
       <div>
 	  	<div>
 			<div class="flex gap-4 justify-center items-center">
-				<img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/fb-icon.svg');?>" alt="">
-				<img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/twitter-icon.svg');?>" alt="">
-				<img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/instagram-icon.svg');?>" alt="">
-				<img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg');?>" alt="">
+        <?php
+         $fb_url = get_field('facebook_link', 'options');
+         $tw_url = get_field('twitter_link', 'options');
+         $insta_url = get_field('instagram_link', 'options');
+         $linkedin_url = get_field('linkedin_link', 'options');
+        ?>
+        <a href="<?php echo esc_url( $fb_url ); ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/fb-icon.svg');?>"> </a>
+				<a href="<?php echo esc_url( $tw_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/twitter-icon.svg');?>"> </a>
+				<a href="<?php echo esc_url( $insta_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/instagram-icon.svg');?>"> </a>
+				<a href="<?php echo esc_url( $linkedin_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg');?>"> </a>
 			</div>
 		</div>
 	    
@@ -86,9 +110,18 @@
 
 	  <div>
 	    <div class="flex gap-4 justify-center items-center">
-			<a href=""> <p class="text-footer-menu-color text-base font-regular leading-normal"> Privacy Policy </p> </a>
-			<a href=""> <p class="text-footer-menu-color text-base font-regular leading-normal"> Terms of Use </p> </a>
-		</div>
+      <?php
+         $btn1_url = get_field('button_1_url', 'options');
+         $btn2_url = get_field('button_2_url', 'options');
+      ?> 
+      <?php if(get_field('button_1_name', 'options')): ?> 
+			  <a href="<?php echo esc_url( $btn1_url ); ?>"> <p class="text-footer-menu-color text-base font-regular leading-normal"> <?php echo get_field('button_1_name', 'options'); ?> </p> </a>
+      <?php endif; ?>
+
+      <?php if(get_field('button_2_name', 'options')): ?>
+			  <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-footer-menu-color text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
+		  <?php endif; ?>
+    </div>
       </div>
     </div>
   </div>
