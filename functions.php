@@ -172,3 +172,8 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Theme options.
+ */
+require get_template_directory() . '/inc/theme-options-acf.php';
+
