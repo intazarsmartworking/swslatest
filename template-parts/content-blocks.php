@@ -11,166 +11,73 @@
 ?>
 
 <!-- Trusted By Organization -->
-
-<div class="w-full relative  grid items-center pt-24 bg-section-trusted" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
-  <div class="px-10">
-    <h1 class=" text-3xl sm:text-3xl lg:text-3xl 3xl:text-58 font-medium text-white text-center md:leading-tight"> Trusted by 100+ of organizations </h1>
-    <div class="grid grid-cols-2 md:grid-cols-9 gap-4 mt-9">
-	
-      <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/trust1.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/firstfence.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/barley.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/trident.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/gab.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/conpic.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/another.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/silver.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-
-	  <div class="bg-trust-box py-3 px-2 rounded-xl">
-        <img src="<?php echo get_template_directory_uri();?>/images/rebel.svg');?>" alt="" class="mb-5 md:mb-32">
-      </div>
-      
-    </div>
-   
-  </div>
-</div>
-
+<?php if (have_rows('block')) : ?>
+  <?php while (have_rows('block')) : the_row(); ?>
+    <?php if (get_row_layout() == 'trusted_organization') : ?>
+	<div class="w-full relative  grid items-center pt-24 bg-section-trusted" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+	  <div class="px-10">
+	    <?php if(get_sub_field('main_title')): ?>
+			<h1 class=" text-3xl sm:text-3xl lg:text-3xl 3xl:text-58 font-medium text-white text-center md:leading-tight"> <?php echo get_sub_field('main_title'); ?> </h1>
+		<?php endif; ?>
+		 <div class="grid grid-cols-2 md:grid-cols-9 gap-4 mt-9">
+		  <?php if(have_rows('organization_name')): ?>
+			<?php while(have_rows('organization_name')): the_row(); ?>
+				<div class="bg-trust-box py-3 px-2 rounded-xl">
+					<img src="<?php echo get_sub_field('organization_image')['url']; ?>" alt="<?php echo get_sub_field('organization_image')['url']; ?>" class="mb-5 md:mb-32">
+				</div>
+			  <?php endwhile; ?>	
+			<?php endif; ?> 
+		</div> 
+	  </div>
+	</div>
+	<?php endif; ?>
+  
 
 <!-- Europe Leading Section  -->
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
-    <div class="container mx-auto md:px-0 px-10">
-        <h3 class="text-center small-intro"> Overview </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Europe's Leading Provider Of <span class="text-dark-orange"> Time-Zone Aligned Developers </span></h1>
+<?php if (get_row_layout() == 'europe_leading_box') : ?>
+		<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
+			<div class="container mx-auto md:px-0 px-10">
+			<?php if(get_sub_field('short_title')): ?>
+				<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
+			<?php endif; ?> 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+			<?php if(get_sub_field('short_title')): ?>	
+				<h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?> </h1>
+			<?php endif; ?>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 
-        <div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/euro.svg');?>" alt="" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> £20 Per Hour </h3>
-						<span class="text-white text-base"> Average rate for a full time senior 6+yrs Developer. </span>
-					</div>
+				<?php if(have_rows('box_item')): ?>
+					<?php while(have_rows('box_item')): the_row(); ?>
+					<?php 
+						$title_name = get_sub_field('title'); 
+						$subtitle_name = get_sub_field('short_description'); 
+					?>
+						<div class="europe-box rounded-3xl mb-5">
+							  <div class="flex">
+								<div class="px-6 py-6">
+									<img src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['url']; ?>" class="mb-12">
+									<div class="mt-12">
+										<h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
+										<span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
+									</div>
+								</div>
+								
+								<div class="ml-auto">
+								  <img src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
+								</div>
+							  </div>	
+						</div>
+					<?php endwhile; ?>	
+				<?php endif; ?> 
 				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/perhour.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		
-		<div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/icon-96.svg');?>" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> 96% Success </h3>
-						<span class="text-white text-base"> 96% of the Developers we place are with the same clients 12 months later. </span>
-					</div>
-				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/main-96.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/tech-icon.svg');?>" alt="" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> 120+ Skill And Technologies </h3>
-						<span class="text-white text-base"> We will find the exact talent you need. </span>
-					</div>
-				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/technology-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/support.svg');?>" alt="" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> 24/7 Support </h3>
-						<span class="text-white text-base"> A dedicated team to help get the best out of your Developers. </span>
-					</div>
-				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/support-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/Professional.svg');?>" alt="" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> 1 M+ Technical Professionals</h3>
-						<span class="text-white text-base"> Available to hire in our network. </span>
-					</div>
-				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/professional-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="europe-box rounded-3xl mb-5">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<img src="<?php echo get_template_directory_uri();?>/images/day7.svg');?>" alt="" class="mb-12">
-					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> 7 Days </h3>
-						<span class="text-white text-base"> Hire Ai vetted Developers. </span>
-					</div>
-				</div>
-				
-				<div class="ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/day-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-        </div>
 
-    </div>
-</div>
-
+			</div>
+		</div>
+	<?php endif; ?>
+  
 
 <!-- Hire Offshore Section  -->
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-20">
+<!--<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-20">
     <div class="container mx-auto md:px-0 px-10">
         <h3 class="text-center small-intro"> How it Works </h3>
         <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Hire OffshoreDevelopers <br> <span class="text-dark-orange"> Quick Efficient & Accurate </span></h1>
@@ -253,31 +160,43 @@
         </div>
 
     </div>
-</div>
+</div>  -->
 
 <!-- Curios Section  -->
+<?php if (get_row_layout() == 'curious_section') : ?>
+			<div class="w-full relative bg-dark-black grid items-center pb-28">
+				<div class="container mx-auto md:px-0 px-10 curious-bg">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						
+							<div class="pl-7 pr-7 md:pl-48 md:pr-12">
+							<?php if(get_sub_field('small_title')): ?>
+							  <h3 class="text-center md:text-left calculator-intro mt-20"> <?php echo get_sub_field('small_title'); ?> </h3>
+							<?php endif; ?>
 
-<div class="w-full relative bg-dark-black grid items-center pb-28">
-    <div class="container mx-auto md:px-0 px-10 curious-bg">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			
-				<div class="pl-7 pr-7 md:pl-48 md:pr-12">
-				  <h3 class="text-center md:text-left calculator-intro mt-20"> Calculator </h3>
-				  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight">Curious About <span class="text-dark-orange"> Cost? </span></h1>
-				  <span class="text-center md:text-left text-white text-base"> Find out the price of your next remote hire here. </span>
-          <div class="header-buttons mt-16 mb-10 text-center md:text-left">
-            <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Click to calculate now</a>
-          </div>
+							<?php if(get_sub_field('main_heading')): ?>	
+							  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
+							<?php endif; ?> 
+							 <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+					  
+					        <?php if(get_sub_field('button_name')): ?>
+							<?php $calc_url =  get_sub_field('button_url'); ?>
+								<div class="header-buttons mt-16 mb-10 text-center md:text-left">
+								  <a href="<?php echo esc_url( $calc_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+								</div>
+							<?php endif; ?>
+							
+							</div>
+						
+						<div class="px-6">
+							<img src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['alt']; ?>">
+						</div>
+						
+					</div>
 				</div>
-			
-			<div class="px-6">
-				<img src="<?php echo get_template_directory_uri();?>/images/calcbg.svg');?>" alt="">
-			 </div>
-			
-		</div>
-	</div>
-</div>
-
+			</div>
+		<?php endif; ?>	
+	<?php endwhile; ?>
+<?php endif; ?>
 
 <!-- AI Vetted Section -->
 
@@ -630,4 +549,3 @@
 		</div>
 	</div>
 </div>
-
