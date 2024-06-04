@@ -25,9 +25,11 @@
 
 <header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">
 	<div class="flex items-center">
-		<a href="https://smartworking.io" rel="home">
-		   <img class="max-h-5" src="http://localhost/sws/wp-content/uploads/2024/05/logo_white_orange.svg" alt="">
+    <?php if(get_field('header_logo', 'options')): ?>
+		<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+		   <img class="max-h-5" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
 		</a>
+    <?php endif; ?>
 	</div>
 	<button id="menuToggle" class="focus:outline-none md:hidden">
 		<img src="<?php echo get_template_directory_uri();?>/images/hamber.png" alt="Menu">
