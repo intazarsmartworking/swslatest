@@ -54,9 +54,11 @@
   <div class="container mx-auto mt-5">
     <div class="header-wrap menu-hide-mobile | min-h-[85px] flex justify-between items-center relative z-10 header-menu-section mt-0 md:mt-8 px-10">
       <div class="logo w-1/6">
-        <a href="http://localhost/sws/" rel="home">
-          <img class="max-h-5" src="http://localhost/sws/wp-content/uploads/2024/05/logo_white_orange.svg" alt="Software Development Outsourcing Solutions">
+        <?php if(get_field('header_logo', 'options')): ?>
+        <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+          <img class="max-h-5" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
         </a>
+        <?php endif; ?>
       </div>
       <div id="navLinks" class="flex w-1/2 gap-7 hidden md:block">
         <nav class="hidden xl:block">
