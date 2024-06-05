@@ -194,302 +194,66 @@
 					</div>
 				</div>
 			</div>
-		<?php endif; ?>	
-	<?php endwhile; ?>
-<?php endif; ?>
+<?php endif; ?>	
 
 <!-- AI Vetted Section -->
 
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-36 vetted-main-background">
-    <div class="container mx-auto md:px-0 px-10">
-        <h3 class="text-center small-intro"> Profile </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">AI Vetted<br><span class="text-dark-orange"> Profiles </span></h1>
-		<p class="text-center text-white font-medium text-xl pt-10"> Efficiently Hire Top-Tier Remote Developers Perfect for Your Business. </p>
+<?php if (get_row_layout() == 'ai_vetted_section') : ?>
+   
+		<div class="w-full relative bg-dark-black grid items-center pb-28 pt-36 vetted-main-background">
+			<div class="container mx-auto md:px-0 px-10">
+			
+			  <?php if(get_sub_field('small_title')): ?>
+				<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+			  <?php endif; ?>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-28">
+			  <?php if(get_sub_field('main_heading')): ?>
+				<h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
+			  <?php endif; ?>	
+			  
+			  <?php if(get_sub_field('subheading')): ?>
+				<p class="text-center text-white font-medium text-xl pt-10"> <?php echo get_sub_field('subheading'); ?> </p>
+              <?php endif; ?>
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-28">
+				
+				
+				<?php if(have_rows('profile')): ?>
+				 <?php while(have_rows('profile')): the_row(); ?>
+					<?php $profile_url =  get_sub_field('profile_url'); ?>
 
-          <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
+				  <div class="vetted-small-bg p-7 rounded-xl">
+					<img class="mb-5 text-center mx-auto" src="<?php echo get_sub_field('profile_image')['url']; ?>" alt="<?php echo get_sub_field('profile_image')['alt']; ?>">
+					<p class="text-white pb-2 text-center text-xl"> <?php echo get_sub_field('name'); ?> </p>
+					<p class="text-white text-center mb-5 text-sm"> <?php echo get_sub_field('designation'); ?> </p>
+					
+					<div class="grid grid-cols-4 gap-2 pb-5">
+					  <?php if(have_rows('technologies_used')): ?>
+						<?php while(have_rows('technologies_used')): the_row(); ?>
+							  <div class="skill-bg">
+								<div class="flex">
+								  <h4 class="text-white text-xs text-center"> <?php echo get_sub_field('technology_name'); ?> </h4>
+								</div>
+							  </div>
+					    <?php endwhile; ?>
+					  <?php endif; ?> 
+					</div>
+					
+					<p class="text-white text-center mb-5 text-xs"> <?php echo get_sub_field('available'); ?> </p>
+					
+					<a href="<?php echo esc_url( $profile_url ); ?>"> <h3 class="text-center profile-link"> Profile </h3> </a>
+					
+				  </div>
+				  
+				  <?php endwhile; ?>	
+				<?php endif; ?> 
+				  
+				  
 				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
 			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
-		  
-		  <div class="vetted-small-bg p-7 rounded-xl">
-			<img class="mb-5 text-center mx-auto" src="<?php echo get_template_directory_uri();?>/images/vetted-user.svg');?>" alt="">
-			<p class="text-white pb-2 text-center text-xl"> Annette Black </p>
-			<p class="text-white text-center mb-5 text-sm"> Sr. UX Designer </p>
-			
-			<div class="grid grid-cols-4 gap-2 pb-5">
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Angular </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Python </h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> React</h4>
-				</div>
-			  </div>
-			  <div class="skill-bg">
-				<div class="flex">
-				  <h4 class="text-white text-xs text-center"> Node </h4>
-				</div>
-			  </div>
-			</div>
-			
-			<p class="text-white text-center mb-5 text-xs"> Available in 4 weeks </p>
-			
-			<a href=""> <h3 class="text-center profile-link"> Profile </h3> </a>
-			
-		  </div>
-		  
 		</div>
-
-    </div>
-</div>
+		<?php endif; ?>	
+	<?php endwhile; ?>
+<?php endif; ?>
 
 <!-- FAQ Section  -->
 <div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">

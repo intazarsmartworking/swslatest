@@ -1065,9 +1065,9 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_663e05bcae7ff",
-                            "label": "Main Heading",
-                            "name": "main_heading",
+                            "key": "field_6660734f2698b",
+                            "label": "Small Title",
+                            "name": "small_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -1082,6 +1082,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_663e05bcae7ff",
+                            "label": "Main Heading",
+                            "name": "main_heading",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         },
                         {
                             "key": "field_663e05cbae800",
@@ -1203,25 +1222,6 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_663e063eae806",
-                                    "label": "Experience",
-                                    "name": "experience",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
                                     "key": "field_663e0653ae807",
                                     "label": "Technologies Used",
                                     "name": "technologies_used",
@@ -1258,30 +1258,6 @@
                                             "prepend": "",
                                             "append": "",
                                             "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_663e067fae809",
-                                            "label": "Technology Image",
-                                            "name": "technology_image",
-                                            "type": "image",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "array",
-                                            "preview_size": "medium",
-                                            "library": "all",
-                                            "min_width": "",
-                                            "min_height": "",
-                                            "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
-                                            "max_size": "",
-                                            "mime_types": ""
                                         }
                                     ]
                                 },
@@ -1508,5 +1484,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717518088
+    "modified": 1717598932
 }
