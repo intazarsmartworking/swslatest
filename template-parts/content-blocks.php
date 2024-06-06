@@ -74,93 +74,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
-  
 
-<!-- Hire Offshore Section  -->
-<!--<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-20">
-    <div class="container mx-auto md:px-0 px-10">
-        <h3 class="text-center small-intro"> How it Works </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Hire OffshoreDevelopers <br> <span class="text-dark-orange"> Quick Efficient & Accurate </span></h1>
-		<p class="text-center text-white font-medium text-xl pt-10"> Select and Onboard Vetted Developers - Here is how we do it. </p>
-        <div class="grid grid-cols-1 mt-28 overlap-area">
-
-        <div class="overlap-1" id="overlap-1">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<div class="mt-12">
-						<h3 class="text-dark-black text-4xl font-medium leading-tight mb-3"> Long-term Support </h3>
-						<span class="text-dark-black text-lg font-normal"> Average rate for a full time senior 6+yrs Developer. </span>
-					</div>
-					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-						<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-					</div>
-				</div>
-				
-				<div class="purple-bg ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/technology-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		
-		<div class="overlap-2 hidden" id="overlap-2">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<div class="mt-12">
-						<h3 class="text-dark-black text-4xl font-medium leading-tight mb-3"> Long-term Support </h3>
-						<span class="text-dark-black text-lg font-normal"> Average rate for a full time senior 6+yrs Developer. </span>
-					</div>
-					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-						<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-					</div>
-				</div>
-				
-				<div class="teal-bg ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/technology-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="overlap-3 hidden" id="overlap-3">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<div class="mt-12">
-						<h3 class="text-dark-black text-4xl font-medium leading-tight mb-3"> Long-term Support </h3>
-						<span class="text-dark-black text-lg font-normal"> Average rate for a full time senior 6+yrs Developer. </span>
-					</div>
-					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-						<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-					</div>
-				</div>
-				
-				<div class="pitch-bg ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/technology-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-		<div class="overlap-4 hidden" id="overlap-4">
-			  <div class="flex">
-			    <div class="px-6 py-6">
-					<div class="mt-12">
-						<h3 class="text-dark-black text-4xl font-medium leading-tight mb-3"> Long-term Support </h3>
-						<span class="text-dark-black text-lg font-normal"> Average rate for a full time senior 6+yrs Developer. </span>
-					</div>
-					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-						<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-					</div>
-				</div>
-				
-				<div class="tealdark-bg ml-auto">
-				  <img src="<?php echo get_template_directory_uri();?>/images/technology-main.svg');?>" alt="">
-				</div>
-			  </div>	
-        </div>
-		
-        </div>
-
-    </div>
-</div>  -->
 
 <!-- Curios Section  -->
 <?php if (get_row_layout() == 'curious_section') : ?>
@@ -187,9 +101,13 @@
 							
 							</div>
 						
-						<div class="px-6">
-							<img src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['alt']; ?>">
-						</div>
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+							<div class="px-6">
+								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
+							</div>
+						<?php endif; ?>
 						
 					</div>
 				</div>
@@ -293,23 +211,40 @@
 
 
 <!-- Ready To Hire  -->
+<?php if (have_rows('block')) : ?>
+  <?php while (have_rows('block')) : the_row(); ?>
+      <?php if (get_row_layout() == 'hire_developer_section') : ?>
+		<div class="w-full relative bg-dark-black grid items-center pb-28">
+			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					
+						<div class="pl-7 pr-7 md:pl-48 md:pr-12">
+						 <?php if(get_sub_field('main_title')): ?>
+						  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+						 <?php endif; ?>	
 
-<div class="w-full relative bg-dark-black grid items-center pb-28">
-    <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			
-				<div class="pl-7 pr-7 md:pl-48 md:pr-12">
-				  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight mt-20 mb-9">Ready to Hire a Developer? </h1>
-				  <span class="text-center md:text-left text-white text-base"> It is quick and easy with Smart Working </span>
-          <div class="header-buttons mt-16 mb-10 text-center md:text-left">
-            <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-          </div>
+						<?php if(get_sub_field('subheading')): ?>	
+						  <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+						<?php endif; ?> 
+
+						<?php if(get_sub_field('button_name')): ?>
+						<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
+							  <div class="header-buttons mt-16 mb-10 text-center md:text-left">
+								<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+							  </div>
+						<?php endif; ?>	
+						</div>
+						<?php $hire_dev_main_img = get_sub_field('background_image');
+						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+						?>
+							<div class="px-6">
+								<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>">
+							</div>
+						<?php endif; ?>
+					
 				</div>
-			
-			<div class="px-6">
-				<img src="<?php echo get_template_directory_uri();?>/images/hire-main-pic.svg');?>" alt="">
-			 </div>
-			
+			</div>
 		</div>
-	</div>
-</div>
+      <?php endif; ?>		
+	<?php endwhile; ?>
+<?php endif; ?>	
