@@ -237,7 +237,7 @@
 						<?php $hire_dev_main_img = get_sub_field('background_image');
 						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
 						?>
-							<div class="px-6">
+							<div class="px-6 py-10">
 								<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>">
 							</div>
 						<?php endif; ?>
