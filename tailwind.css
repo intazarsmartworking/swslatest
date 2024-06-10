@@ -122,8 +122,8 @@ body {
 
 .skill-bg{
     border: 1px solid rgba(255, 77, 2, 0.2);
-    border-radius:6px;
-    padding: 4px 6px;
+    border-radius:26px;
+    padding: 4px 7px;
 }
 
 .profile-link{
@@ -212,12 +212,76 @@ body {
     border-radius: 24px;
 }
 
-.vetted-main-background{
+/*.vetted-main-background{
     background-image: url('../images/vet-bg.svg');
     background-repeat: no-repeat; 
     background-size:cover;
     background-position: center;
+}*/
+
+.left-profile {
+    width: 25%;
 }
+
+.dev-section{
+    width:75%;
+    border-radius: 20px;
+    border: 1.5px solid rgba(77, 35, 17, 0.3);
+    padding: 20px;
+    height: 55vh;
+}
+
+.skills{
+    background: linear-gradient(to right,rgba(239, 73, 3, 0.06), rgba(239, 73, 3, 0));
+    border:1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skills h3{
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.skills:hover{
+    background: linear-gradient(to right, rgba(255, 77, 2, 0.2), rgba(255, 77, 2, 0.01));
+    border-image-source: linear-gradient(
+                to right, 
+                rgba(255, 77, 2, 0.3), 
+                rgba(255, 77, 2, 0), 
+                rgba(255, 255, 255, 0.05)
+            );
+}
+
+.skills h3:hover{
+    color:#fff;
+}
+
+.short-bio{
+    background: linear-gradient(to right, rgb(144 46 5 / 91%), rgb(12 6 3));
+    position: absolute;
+    width: 95%;
+    bottom: 0px;
+    z-index: 999;
+    left: 7px;
+    border-radius: 10px;
+    padding-top: 12px;
+}
+
+.skill-bg h4{
+    color:rgba(252, 188, 160, 1);
+}
+
+.developer-sec-pic{
+    position: relative;
+}
+
+.developer-sec-pic img{
+    width:100%;
+}
+
+.category-filter.active h3{
+    color: #fff;
+    font-weight: 600;
+}
+
 
 @media (min-width: 1536px) {
     .container {
