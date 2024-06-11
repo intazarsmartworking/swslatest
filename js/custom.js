@@ -28,3 +28,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 }); 
+
+// Dropdown Menu
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+    const menu = dropdown.querySelector(".dropdown-menu");
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function () {
+      menu.classList.remove("show");
+    });
+
+    menu.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+});

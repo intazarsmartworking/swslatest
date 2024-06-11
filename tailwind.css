@@ -282,10 +282,22 @@ body {
     font-weight: 600;
 }
 
+.caret {
+    margin-left: 4px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  
+  .dropdown-menu.show {
+    display: block;
+  }
 
 @media (min-width: 1536px) {
     .container {
-        width: 85%;
+        width: 90%;
         max-width: none;
     }
 }
