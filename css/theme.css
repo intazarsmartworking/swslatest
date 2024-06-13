@@ -1046,6 +1046,18 @@ select {
 .h-full {
   height: 100%;
 }
+.h-screen {
+  height: 100vh;
+}
+.h-60 {
+  height: 15rem;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-auto {
+  height: auto;
+}
 .max-h-5 {
   max-height: 1.25rem;
 }
@@ -1075,6 +1087,12 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-96 {
+  width: 24rem;
+}
+.w-auto {
+  width: auto;
 }
 .max-w-4xl {
   max-width: 56rem;
@@ -1148,6 +1166,12 @@ select {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+.self-center {
+  align-self: center;
+}
+.justify-self-center {
+  justify-self: center;
 }
 .overflow-hidden {
   overflow: hidden;
