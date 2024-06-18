@@ -118,6 +118,8 @@
 <!-- AI Vetted Section -->
 
 <?php get_template_part( 'template-parts/ai-vetted-profile' );?>
+<?php get_template_part( 'template-parts/trustpilot-review' );?>
+<?php get_template_part( 'template-parts/home-blog' );?>
 
 
 <!-- FAQ Section  -->

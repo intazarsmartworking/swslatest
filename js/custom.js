@@ -52,3 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+jQuery(document).ready(function(){
+  jQuery('.slick-slider-most-blog').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    prevArrow: jQuery('.blog-prev-arrow'),
+    nextArrow: jQuery('.blog-next-arrow'),
+  responsive: [
+      {
+          breakpoint: 768, 
+          settings: {
+              slidesToShow: 1 
+          }
+      }
+  ]
+  });
+});

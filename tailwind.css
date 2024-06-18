@@ -112,6 +112,20 @@ body {
     border:1px solid rgba(255, 77, 2, 0.3);
 }
 
+.trustpilot-bg{
+    background-image: url('../images/accordian-sec-bg.svg');
+    background-repeat: no-repeat; 
+    background-size:cover;
+    background-position: center;
+    border-radius: 10px;
+    border:1px solid rgba(255, 77, 2, 0.3);
+    padding: 32px 24px;
+}
+
+.pilot-descri{
+    color: rgba(255, 255, 255, 1)
+}
+
 .vetted-small-bg{
     background-image: url('../images/profile-small.svg');
     background-repeat: no-repeat; 
@@ -294,6 +308,25 @@ body {
   .dropdown-menu.show {
     display: block;
   }
+
+.slick-slider-most-blog .slick-list {
+    padding-right: 10%; 
+}
+
+.slick-slider-most-blog::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10%; 
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    pointer-events: none; 
+} 
+
+.desig{
+    color: rgba(202, 202, 202, 1);
+}
 
 @media (min-width: 1536px) {
     .container {
@@ -529,20 +562,7 @@ body {
     width:1000px;
 }
 
-.slick-slider-most-blog .slick-list {
-    padding-right: 10%; 
-}
 
-.slick-slider-most-blog::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 10%; 
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    pointer-events: none; 
-}
 
   .w-custom-1 {
     width: 20%;
