@@ -72,3 +72,65 @@ jQuery(document).ready(function(){
   ]
   });
 });
+
+// Search Skill when someone click on search box on Homepage
+function filterSkills() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toLowerCase();
+  const skillsContainer = document.getElementById('skillsContainer');
+  const skillDivs = skillsContainer.getElementsByClassName('flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border');
+  const displayedSkills = new Set();
+
+  for (let i = 0; i < skillDivs.length; i++) {
+    const skillText = skillDivs[i].getElementsByTagName('h4')[0];
+    const txtValue = skillText.textContent || skillText.innerText;
+    if (txtValue.toLowerCase().indexOf(filter) > -1 && !displayedSkills.has(txtValue.toLowerCase())) {
+      skillDivs[i].style.display = "";
+      displayedSkills.add(txtValue.toLowerCase());
+    } else {
+      skillDivs[i].style.display = "none";
+    }
+  }
+}
+
+// Select/Unselect Skill
+function toggleSkill(skillElement) {
+  const isSelected = skillElement.classList.toggle('skill-selected');
+  const crossIcon = skillElement.querySelector('svg');
+  const skillName = skillElement.querySelector('h4').textContent.trim();
+
+  if (isSelected) {
+    addToInput(skillName);
+  } else {
+    removeFromInput(skillName);
+  }
+
+  if (crossIcon) {
+    crossIcon.classList.toggle('hidden', !isSelected);
+  }
+}
+
+// Add skill to input box
+function addToInput(skillName) {
+  const inputBox = document.getElementById('skillsInput');
+  const currentValue = inputBox.value.trim();
+  const newValue = currentValue.length === 0 ? skillName : currentValue + ', ' + skillName;
+  inputBox.value = newValue;
+}
+
+// Remove skill from input box
+function removeFromInput(skillName) {
+  const inputBox = document.getElementById('skillsInput');
+  let currentValue = inputBox.value.trim();
+  currentValue = currentValue.replace(new RegExp(skillName + ',?'), ''); // Remove the skill from input
+  inputBox.value = currentValue.trim();
+}
+
+function deselectSkill(event) {
+  event.stopPropagation(); // Prevents triggering the skill toggle again
+  const skillElement = event.currentTarget.parentNode;
+  skillElement.classList.remove('skill-selected');
+  const skillName = skillElement.querySelector('h4').textContent.trim();
+  removeFromInput(skillName);
+  event.currentTarget.classList.add('hidden');
+}
