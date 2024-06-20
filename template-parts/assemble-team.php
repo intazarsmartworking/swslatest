@@ -4,7 +4,8 @@
   <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Let's Assemble<br><span class="text-dark-orange"> Your Team </span></h1>
   <p class="text-center text-white font-medium text-xl pt-10 px-0 md:px-96"> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
 	  
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative">
+      <img src="<?php echo get_template_directory_uri();?>/images/connect-skill.svg" class="join-skill">
       <div class="bg-white py-10 px-10 rounded-xl">
         <h3 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h3>
         <div class="flex items-center border-2 border-gray-300 rounded-lg p-2 bg-white my-5">
@@ -15,7 +16,7 @@
             
         </div>
 
-        <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center overflow-y-scroll h-64 custom-scrollbar pr-5">
+        <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center overflow-y-scroll  custom-scrollbar pr-5">
             <div class=" flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
                 <img src="<?php echo get_template_directory_uri();?>/images/android.svg" class="pb-4">
                 <h4 class="text-xs font-normal text-dark-black"> Android </h4>
@@ -238,13 +239,13 @@
         </div>
 
       </div>
-	  <div class="bg-white py-10 px-10 rounded-xl">
+	  <div class="bg-white pt-10 pb-5 px-10 rounded-xl">
         <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto">
 
         <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
             <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
 
-        <form>
+        <form method="post">
 
         <input type="text" id="skillsInput"  name="skills"  readonly
         class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm">
@@ -260,6 +261,22 @@
         </form>
 
         <h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
+        </div>
+		
+		
+		<div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
+         <div class="flex">
+		  <div class="pr-4">
+			<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/formtestimonial.svg" alt="">
+		  </div>
+		  <div>
+			<p class="text-xs font-normal text-dark-black pb-3"> Ahamd Ekstrom Bothman </p>
+			<p class="text-base text-dark-black"> <b> SmartWorking brings all of our teams together into one place </b> so that they can stay on track, collaborate and communicate. </p>
+			</div>
+		 </div>
+        
+
+        
         </div>
 
       </div>

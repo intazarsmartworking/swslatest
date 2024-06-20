@@ -382,6 +382,12 @@ body {
     border:1px solid rgba(5, 4, 3, 0.2);
   }
 
+  .join-skill{
+    position: absolute;
+    left: 48%;
+    top: 10%;
+  }
+
 @media (min-width: 1536px) {
     .container {
         width: 90%;
