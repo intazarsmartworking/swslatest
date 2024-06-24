@@ -412,6 +412,28 @@ body {
         margin-top: 40px;
         margin-bottom: 40px;
     }
+
+    .left-profile, .dev-section{
+        width: 100%;
+    }
+
+    .left-profile{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .dev-section{
+        height: auto;
+    }
+
+    .join-skill{
+        display: none;
+    }
+
+    .ready-hire-bg{
+        background-size: auto;
+    }
 }
 
 /*.font-regular{

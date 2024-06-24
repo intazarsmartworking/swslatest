@@ -6,7 +6,7 @@
 	  
    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative">
       <img src="<?php echo get_template_directory_uri();?>/images/connect-skill.svg" class="join-skill">
-      <div class="bg-white py-10 px-10 rounded-xl">
+      <div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
         <h3 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h3>
         <div class="flex items-center border-2 border-gray-300 rounded-lg p-2 bg-white my-5">
             <svg class="w-6 h-6 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +239,7 @@
         </div>
 
       </div>
-	  <div class="bg-white pt-10 pb-5 px-10 rounded-xl">
+	  <div class="bg-white mb:pb-5 md:pt-10 px-4 md:px-10 pt-5 pb-3 rounded-xl">
         <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto">
 
         <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
