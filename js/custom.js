@@ -134,3 +134,4 @@ function deselectSkill(event) {
   removeFromInput(skillName);
   event.currentTarget.classList.add('hidden');
 }
+

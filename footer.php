@@ -99,10 +99,10 @@
          $insta_url = get_field('instagram_link', 'options');
          $linkedin_url = get_field('linkedin_link', 'options');
         ?>
-        <a href="<?php echo esc_url( $fb_url ); ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/fb-icon.svg');?>"> </a>
-				<a href="<?php echo esc_url( $tw_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/twitter-icon.svg');?>"> </a>
-				<a href="<?php echo esc_url( $insta_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/instagram-icon.svg');?>"> </a>
-				<a href="<?php echo esc_url( $linkedin_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg');?>"> </a>
+        <a href="<?php echo esc_url( $fb_url ); ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/fb-icon.svg"> </a>
+				<a href="<?php echo esc_url( $tw_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/twitter-icon.svg"> </a>
+				<a href="<?php echo esc_url( $insta_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/instagram-icon.svg"> </a>
+				<a href="<?php echo esc_url( $linkedin_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg"> </a>
 			</div>
 		</div>
 	    
