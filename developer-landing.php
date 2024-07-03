@@ -7,7 +7,7 @@
 
 get_header('second');
 ?>
-
+<h3> Hello </h3>
 <?php get_template_part( 'template-parts/home-blog' );?>
 
 <!-- FAQ Section  -->
