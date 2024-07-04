@@ -140,4 +140,32 @@ get_header('second');
     </div>
 </div>
 
+
+<div class="w-full relative bg-dark-black grid items-center pb-28">
+  <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
+        <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight mt-20 mb-4">Ready to Hire
+		a Developer?</h1>
+        <span class="text-center md:text-left text-white text-base"> It is quick and easy with Smart Working </span>
+        
+      </div>
+      <div class="px-6 py-10 flex justify-self-center">
+        <div class="bg-white rounded-3xl px-6 py-6">
+			<div class="rounded-2xl border-pattern px-6 py-6">
+				<h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
+				<form method="post">
+					<input type="text"  name="skills"  class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="w0z9xl">
+					<input type="text" name="fullname" placeholder="Full Name" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="3p8zek">
+					<input type="email" name="email-address" placeholder="Email Address" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="qmz9kh">
+					<button type="submit" class="w-full bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now</button>
+				</form>
+				<h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
+			</div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php get_footer();?>

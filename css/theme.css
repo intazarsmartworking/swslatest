@@ -1321,6 +1321,7 @@ select {
 .border-transparent {
   border-color: transparent;
 }
+<<<<<<< Updated upstream
 .bg-\[\#60E3D5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(96 227 213 / var(--tw-bg-opacity));
@@ -1340,6 +1341,11 @@ select {
 .bg-\[\#FFFFFF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+=======
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+>>>>>>> Stashed changes
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -1657,9 +1663,14 @@ select {
 .leading-tight {
   line-height: 1.25;
 }
+<<<<<<< Updated upstream
 .text-\[\#050403\] {
   --tw-text-opacity: 1;
   color: rgb(5 4 3 / var(--tw-text-opacity));
+=======
+.leading-9 {
+  line-height: 2.25rem;
+>>>>>>> Stashed changes
 }
 .text-black {
   --tw-text-opacity: 1;
