@@ -971,6 +971,9 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1051,9 +1054,6 @@ select {
 }
 .mt-9 {
   margin-top: 2.25rem;
-}
-.mb-14 {
-  margin-bottom: 3.5rem;
 }
 .block {
   display: block;
@@ -1321,7 +1321,6 @@ select {
 .border-transparent {
   border-color: transparent;
 }
-<<<<<<< Updated upstream
 .bg-\[\#60E3D5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(96 227 213 / var(--tw-bg-opacity));
@@ -1341,11 +1340,6 @@ select {
 .bg-\[\#FFFFFF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-=======
-.border-slate-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(148 163 184 / var(--tw-border-opacity));
->>>>>>> Stashed changes
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -1663,14 +1657,9 @@ select {
 .leading-tight {
   line-height: 1.25;
 }
-<<<<<<< Updated upstream
 .text-\[\#050403\] {
   --tw-text-opacity: 1;
   color: rgb(5 4 3 / var(--tw-text-opacity));
-=======
-.leading-9 {
-  line-height: 2.25rem;
->>>>>>> Stashed changes
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -2150,6 +2139,7 @@ body {
         background-size: auto;
     }
 }
+/* Testimonial Card Styles */
 .card-placement {
     transform: rotate(var(--deg));
     left: var(--left);
@@ -2583,20 +2573,12 @@ body {
     margin-bottom: 8rem;
   }
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .md\:mb-8 {
-    margin-bottom: 2rem;
-  }
-
-  .md\:mb-6 {
-    margin-bottom: 1.5rem;
-  }
-
   .md\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+
+  .md\:mt-8 {
+    margin-top: 2rem;
   }
 
   .md\:block {
@@ -2631,12 +2613,12 @@ body {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
   .md\:px-0 {
