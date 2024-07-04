@@ -436,6 +436,31 @@ body {
     }
 }
 
+
+/* Testimonial Card Styles */
+
+.card-placement {
+    transform: rotate(var(--deg));
+    left: var(--left);
+}
+
+.card-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    transition: all 0.5s ease-in-out;
+}
+
+.card-placement {
+    position: absolute;
+    transition: transform all 0.5s ease;
+}
+
+
+
 /*.font-regular{
     font-weight: 400;
 }
