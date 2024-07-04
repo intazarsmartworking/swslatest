@@ -27,6 +27,72 @@ document.addEventListener("DOMContentLoaded", function() {
       mobileMenuModal.classList.add("hidden");
     }
   });
+
+
+
+
+  //Card Logic
+  
+  const cards = document.querySelectorAll('.card');
+  let leftPositions = ['10px', '30px', '50px','47%', '90%', '120%'];
+  let originalLeftPostions = ['10px', '30px', '50px','47%', '90%', '120%'];
+
+  function updateCardPositions() {
+      cards.forEach((card, index) => {
+          card.style.left = leftPositions[index];
+      });
+
+      if(cards[4].style.left === originalLeftPostions[2]) {
+        document.getElementById('prevButton').disabled = true;
+      }
+      else {
+        document.getElementById('prevButton').disabled = false;
+      }
+
+      if(cards[1].style.left != originalLeftPostions[1]
+         && cards[1].style.left != originalLeftPostions[2]
+          && cards[1].style.left != originalLeftPostions[0]) {
+        document.getElementById('nextButton').disabled = true;
+      }
+      else {
+        document.getElementById('nextButton').disabled = false;
+      }
+  }
+
+  document.getElementById('nextButton').addEventListener('click', () => {
+      // Move the fourth card to the third card's position
+      const fourthCard = leftPositions[3];
+      leftPositions[3] = leftPositions[4];
+      leftPositions[1] = leftPositions[2];
+      leftPositions[4] = leftPositions[5];
+      leftPositions[2] = fourthCard;
+      leftPositions[5] = originalLeftPostions[5]
+
+      if( cards[4].style.left === originalLeftPostions[2]) {
+        leftPositions[5] = originalLeftPostions[4]
+        leftPositions[4] = originalLeftPostions[3]
+        leftPositions[3] = originalLeftPostions[2]
+        leftPositions[2] = originalLeftPostions[1]
+      }
+      
+
+      updateCardPositions();
+  });
+
+  document.getElementById('prevButton').addEventListener('click', () => {
+    const initailCard = leftPositions[0];
+    const firstCard = leftPositions[1];
+    const secondCard = leftPositions[2];
+    const thirdCard = leftPositions[3];
+      leftPositions[1] = originalLeftPostions[2];
+      leftPositions[2] = firstCard;
+      leftPositions[3] = secondCard;
+      leftPositions[4] = thirdCard;
+
+    updateCardPositions();
+  });
+
+  updateCardPositions();
 }); 
 
 // Dropdown Menu
@@ -52,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
 
 
 jQuery(document).ready(function(){
