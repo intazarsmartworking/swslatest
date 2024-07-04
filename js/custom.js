@@ -120,10 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  
-});
-
 
 
 jQuery(document).ready(function(){
