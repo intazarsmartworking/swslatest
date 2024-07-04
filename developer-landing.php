@@ -8,6 +8,100 @@
 get_header('second');
 ?>
 
+<div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
+<div class="container mx-auto mt-5">
+<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24">
+  <div class="w-full">
+    <div class="grid gap-8 relative pr-5">
+      <h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> Hire remote &nbsp; <br> 
+	  <span class="text-dark-orange"> developers </span> </h1>
+      <p class="flex text-white font-normal text-xl">No hidden cost, Fully integrated services, Timezone-aligned, Hire within a week</p>
+      <div class="header-buttons mt-6">
+        <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Get Started</a>
+      </div>
+      
+    </div>
+  </div>
+  <div class="w-full relative">
+    <img class="w-full my-12" src="<?php echo get_template_directory_uri();?>/images/landing-banner.svg" alt="">
+  </div>
+</div>
+</div>
+</div>
+
+<div class="w-full relative  grid items-center pt-24 bg-section-trusted bg-dark-black">
+  <div class="px-10">
+    <h3 class="text-center small-intro"> Clients </h3>
+    <h1 class=" text-3xl sm:text-3xl lg:text-3xl 3xl:text-58 font-medium text-white text-center md:leading-tight"> Trusted by 100+ of organizations </h1>
+    <div class="grid grid-cols-2 md:grid-cols-7 gap-4 mt-9 mb-14">
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/conpic.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/conpic.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/another.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/another.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/silver.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/silver.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/rebel.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/rebel.svg" class="mb-5 md:mb-5">
+      </div>
+	  <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/conpic.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/conpic.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/another.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/another.svg" class="mb-5 md:mb-5">
+      </div>
+	  <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/firstfence.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/barley.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trident.svg" class="mb-5 md:mb-5">
+      </div>
+      <div class="bg-trust-box py-3 px-2 rounded-xl">
+        <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/gab.svg" class="mb-5 md:mb-5">
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <?php get_template_part( 'template-parts/home-blog' );?>
 
 <!-- FAQ Section  -->
