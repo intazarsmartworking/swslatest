@@ -34,12 +34,24 @@ document.addEventListener("DOMContentLoaded", function() {
   //Card Logic
   
   const cards = document.querySelectorAll('.card');
-  let leftPositions = ['10px', '30px', '50px','47%', '90%', '120%'];
-  let originalLeftPostions = ['10px', '30px', '50px','47%', '90%', '120%'];
+  let leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
+  let originalLeftPostions = [...leftPositions];
+  let rotateCards = ['-9deg', '-7deg', '-4deg','-2deg', '0deg']
 
   function updateCardPositions() {
       cards.forEach((card, index) => {
           card.style.left = leftPositions[index];
+          if(card.style.left != originalLeftPostions[0] && 
+            card.style.left != originalLeftPostions[1] && 
+            card.style.left != originalLeftPostions[2] ) {
+
+            card.style.rotate = rotateCards[rotateCards.length-1]  
+            cards[0].style.rotate = rotateCards[rotateCards.length-1]
+          }
+          else {
+            card.style.rotate = rotateCards[index]
+            
+          }
       });
 
       if(cards[4].style.left === originalLeftPostions[2]) {
@@ -60,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   document.getElementById('nextButton').addEventListener('click', () => {
+    console.log("next", leftPositions)
       // Move the fourth card to the third card's position
       const fourthCard = leftPositions[3];
       leftPositions[3] = leftPositions[4];
@@ -68,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
       leftPositions[2] = fourthCard;
       leftPositions[5] = originalLeftPostions[5]
 
-      if( cards[4].style.left === originalLeftPostions[2]) {
+      if( cards[4].style.left === originalLeftPostions[2] || cards[4].style.left === originalLeftPostions[0]) {
         leftPositions[5] = originalLeftPostions[4]
         leftPositions[4] = originalLeftPostions[3]
         leftPositions[3] = originalLeftPostions[2]
@@ -80,11 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   document.getElementById('prevButton').addEventListener('click', () => {
+    console.log("prev", leftPositions)
     const initailCard = leftPositions[0];
     const firstCard = leftPositions[1];
     const secondCard = leftPositions[2];
     const thirdCard = leftPositions[3];
-      leftPositions[1] = originalLeftPostions[2];
+      leftPositions[1] = originalLeftPostions[0];
       leftPositions[2] = firstCard;
       leftPositions[3] = secondCard;
       leftPositions[4] = thirdCard;

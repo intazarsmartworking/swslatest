@@ -928,6 +928,9 @@ select {
 .top-0 {
   top: 0px;
 }
+.top-4 {
+  top: 1rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1113,6 +1116,12 @@ select {
 .min-h-\[85px\] {
   min-height: 85px;
 }
+.min-h-\[800px\] {
+  min-height: 800px;
+}
+.min-h-\[750px\] {
+  min-height: 750px;
+}
 .w-1\/12 {
   width: 8.333333%;
 }
@@ -1154,6 +1163,12 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-\[5\%\] {
+  width: 5%;
+}
+.w-\[2\%\] {
+  width: 2%;
 }
 .max-w-4xl {
   max-width: 56rem;
@@ -1579,6 +1594,12 @@ select {
 }
 .pt-\[80px\] {
   padding-top: 80px;
+}
+.pt-8 {
+  padding-top: 2rem;
+}
+.pl-5 {
+  padding-left: 1.25rem;
 }
 .text-left {
   text-align: left;
@@ -2156,6 +2177,12 @@ body {
     position: absolute;
     transition: transform all 0.5s ease;
 }
+#card1 { left: 10px; }
+#card2 { left: 30px; }
+#card3 { left: 50px; }
+#card4 { left: 700px; }
+#card5 { left: 1350px; }
+#card6 { left: 2100px; }
 /*.font-regular{
     font-weight: 400;
 }

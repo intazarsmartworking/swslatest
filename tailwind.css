@@ -459,6 +459,13 @@ body {
     transition: transform all 0.5s ease;
 }
 
+#card1 { left: 10px; }
+#card2 { left: 30px; }
+#card3 { left: 50px; }
+#card4 { left: 700px; }
+#card5 { left: 1350px; }
+#card6 { left: 2100px; }
+
 
 
 /*.font-regular{
