@@ -474,6 +474,10 @@ body {
 }
 
 
+.howItWorkHeading {
+    transform: rotate(270deg);
+}
+
 
 
 /*.font-regular{

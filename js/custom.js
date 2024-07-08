@@ -109,28 +109,43 @@ document.addEventListener("DOMContentLoaded", function() {
   updateCardPositions();
 
 
+
+  //How It Works Card Logic
+
   let lastScrollTop = 0;
   let isHovering = false;
   let animating = false;
   let currentCardIndex = document.querySelectorAll('.how-it-works-card').length - 1; // Start from the last card
+  let sectionFullyInView = false;
 
   const howItWorksCards = document.querySelectorAll('.how-it-works-card');
   const section = document.querySelector('.how-it-works-section');
+
+  // Function to check if the section is fully in the viewport
+  function isSectionInView() {
+    const rect = section.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  }
+
+  // Detect when the section is fully in view
+  window.addEventListener('scroll', function() {
+    if (isSectionInView()) {
+      sectionFullyInView = true;
+    } else {
+      sectionFullyInView = false;
+    }
+  });
 
   section.addEventListener('mouseenter', () => {
     isHovering = true;
   });
 
-  // section.addEventListener('mouseleave', () => {
-  //   isHovering = false;
-  //   currentCardIndex = howItWorksCards.length - 1; // Reset to the last card
-  //   howItWorksCards.forEach(card => {
-  //     card.style.transform = 'translateX(0)';
-  //   });
-  // });
+  section.addEventListener('mouseleave', () => {
+    isHovering = false;
+  });
 
   window.addEventListener('scroll', function(e) {
-    if (!isHovering || animating) return;
+    if (!sectionFullyInView || animating) return;
 
     let st = window.pageYOffset || document.documentElement.scrollTop;
     let scrollDirection = (st > lastScrollTop) ? 1 : -1; // 1 for down, -1 for up
@@ -138,7 +153,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (scrollDirection === 1 && currentCardIndex > 0) { // Ensure the first card doesn't move
       e.preventDefault();
       animating = true;
-      howItWorksCards[currentCardIndex].style.transform = 'translateX(70%)';
+      let distance = 75; // Fixed distance for animation
+      howItWorksCards[currentCardIndex].style.transform = `translateX(${distance}%)`;
       setTimeout(() => {
         currentCardIndex -= 1;
         animating = false;
@@ -146,24 +162,27 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (scrollDirection === -1 && currentCardIndex < howItWorksCards.length - 1) {
       e.preventDefault();
       animating = true;
-      currentCardIndex += 1;
-      howItWorksCards[currentCardIndex].style.transform = 'translateX(0)';
+      let distance = 500; // Fixed distance for animation
+      howItWorksCards[currentCardIndex + 1].style.transform = `translateX(0)`;
       setTimeout(() => {
+        currentCardIndex += 1;
         animating = false;
       }, 500); // Wait for the animation to complete (same as the CSS transition duration)
+    }
+
+    if (currentCardIndex === 0 || currentCardIndex === howItWorksCards.length - 1) {
+      sectionFullyInView = false; // Allow scrolling once all cards are animated
     }
 
     lastScrollTop = st <= 0 ? 0 : st;
   }, { passive: false });
 
-  // Prevent default scrolling when animating and hovering the section
+  // Prevent default scrolling when animating and section is fully in view
   window.addEventListener('wheel', function(e) {
-    if (isHovering && animating) {
+    if (sectionFullyInView && animating) {
       e.preventDefault();
     }
   }, { passive: false });
-
-  
 }); 
 
 // Dropdown Menu
