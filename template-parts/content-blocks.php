@@ -115,12 +115,13 @@
 				</div>
 			</div>
 <?php endif; ?>	
-<?php endwhile; ?>
-<?php endif; ?>
-
 
 
 <?php get_template_part( 'template-parts/client-testimonial' );?>
+
+<?php endwhile; ?>
+<?php endif; ?>
+
 <?php get_template_part( 'template-parts/ai-vetted-profile' );?>
 <?php get_template_part( 'template-parts/assemble-team' );?>
 <?php get_template_part( 'template-parts/trustpilot-review' );?>
