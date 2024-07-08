@@ -468,6 +468,18 @@ body {
 
 
 
+
+.how-it-works-card {
+    transition: transform 0.5s ease; /* Smooth transition for animation */
+}
+
+
+.howItWorkHeading {
+    transform: rotate(270deg);
+}
+
+
+
 /*.font-regular{
     font-weight: 400;
 }
