@@ -107,6 +107,63 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   updateCardPositions();
+
+
+  let lastScrollTop = 0;
+  let isHovering = false;
+  let animating = false;
+  let currentCardIndex = document.querySelectorAll('.how-it-works-card').length - 1; // Start from the last card
+
+  const howItWorksCards = document.querySelectorAll('.how-it-works-card');
+  const section = document.querySelector('.how-it-works-section');
+
+  section.addEventListener('mouseenter', () => {
+    isHovering = true;
+  });
+
+  // section.addEventListener('mouseleave', () => {
+  //   isHovering = false;
+  //   currentCardIndex = howItWorksCards.length - 1; // Reset to the last card
+  //   howItWorksCards.forEach(card => {
+  //     card.style.transform = 'translateX(0)';
+  //   });
+  // });
+
+  window.addEventListener('scroll', function(e) {
+    if (!isHovering || animating) return;
+
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollDirection = (st > lastScrollTop) ? 1 : -1; // 1 for down, -1 for up
+
+    if (scrollDirection === 1 && currentCardIndex > 0) { // Ensure the first card doesn't move
+      e.preventDefault();
+      animating = true;
+      howItWorksCards[currentCardIndex].style.transform = 'translateX(70%)';
+      setTimeout(() => {
+        currentCardIndex -= 1;
+        animating = false;
+      }, 1000); // Wait for the animation to complete (same as the CSS transition duration)
+    } else if (scrollDirection === -1 && currentCardIndex < howItWorksCards.length - 1) {
+      e.preventDefault();
+      animating = true;
+      currentCardIndex += 1;
+      howItWorksCards[currentCardIndex].style.transform = 'translateX(0)';
+      setTimeout(() => {
+        animating = false;
+      }, 500); // Wait for the animation to complete (same as the CSS transition duration)
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st;
+  }, { passive: false });
+
+  // Prevent default scrolling when animating and hovering the section
+  window.addEventListener('wheel', function(e) {
+    if (isHovering && animating) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  
 }); 
 
 // Dropdown Menu

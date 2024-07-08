@@ -72,8 +72,10 @@
 				</div>
 
 			</div>
+			<?php get_template_part( 'template-parts/client-how-it-works' );?>
 		</div>
 	<?php endif; ?>
+
 
 
 <!-- Curios Section  -->
@@ -115,6 +117,8 @@
 <?php endif; ?>	
 <?php endwhile; ?>
 <?php endif; ?>
+
+
 
 <?php get_template_part( 'template-parts/client-testimonial' );?>
 <?php get_template_part( 'template-parts/ai-vetted-profile' );?>

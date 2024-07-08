@@ -468,6 +468,14 @@ body {
 
 
 
+
+.how-it-works-card {
+    transition: transform 0.5s ease; /* Smooth transition for animation */
+}
+
+
+
+
 /*.font-regular{
     font-weight: 400;
 }
