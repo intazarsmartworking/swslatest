@@ -916,11 +916,17 @@ select {
 .inset-0 {
   inset: 0px;
 }
+.-bottom-16 {
+  bottom: -4rem;
+}
 .-left-10 {
   left: -2.5rem;
 }
 .-left-20 {
   left: -5rem;
+}
+.-left-48 {
+  left: -12rem;
 }
 .-left-9 {
   left: -2.25rem;
@@ -954,6 +960,9 @@ select {
 }
 .right-0 {
   right: 0px;
+}
+.right-12 {
+  right: 3rem;
 }
 .top-0 {
   top: 0px;
@@ -1043,6 +1052,12 @@ select {
 .mb-9 {
   margin-bottom: 2.25rem;
 }
+.mb-\[100px\] {
+  margin-bottom: 100px;
+}
+.mb-\[300px\] {
+  margin-bottom: 300px;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1096,6 +1111,9 @@ select {
 }
 .mt-5 {
   margin-top: 1.25rem;
+}
+.mt-52 {
+  margin-top: 13rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -1200,6 +1218,9 @@ select {
 .w-1\/6 {
   width: 16.666667%;
 }
+.w-2 {
+  width: 0.5rem;
+}
 .w-4 {
   width: 1rem;
 }
@@ -1227,11 +1248,20 @@ select {
 .w-\[40px\] {
   width: 40px;
 }
+.w-\[416px\] {
+  width: 416px;
+}
 .w-\[5\%\] {
   width: 5%;
 }
+.w-\[57\%\] {
+  width: 57%;
+}
 .w-\[600px\] {
   width: 600px;
+}
+.w-\[65\%\] {
+  width: 65%;
 }
 .w-auto {
   width: auto;
@@ -1312,6 +1342,9 @@ select {
 }
 .gap-2 {
   gap: 0.5rem;
+}
+.gap-28 {
+  gap: 7rem;
 }
 .gap-3 {
   gap: 0.75rem;
@@ -1411,6 +1444,10 @@ select {
 .border-none {
   border-style: none;
 }
+.border-\[\#30160a\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(48 22 10 / var(--tw-border-opacity));
+}
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1432,6 +1469,10 @@ select {
 }
 .border-transparent {
   border-color: transparent;
+}
+.bg-\[\#1F0C04\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 12 4 / var(--tw-bg-opacity));
 }
 .bg-\[\#60E3D5\] {
   --tw-bg-opacity: 1;
@@ -1504,6 +1545,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(29 29 29 / var(--tw-bg-opacity));
 }
+.bg-orange-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 20 7 / var(--tw-bg-opacity));
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1539,6 +1584,9 @@ select {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-24 {
+  padding: 6rem;
 }
 .p-3 {
   padding: 0.75rem;
@@ -1753,6 +1801,9 @@ select {
 }
 .text-\[24px\] {
   font-size: 24px;
+}
+.text-\[28px\] {
+  font-size: 28px;
 }
 .text-\[40px\] {
   font-size: 40px;
