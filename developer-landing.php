@@ -10,14 +10,19 @@ get_header('second');
 
 <div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
 <div class="container mx-auto mt-5">
-<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24">
-  <div class="w-full">
+<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24 relative">
+  <div class="absolute top-0 left-0">
+    <button class="flex items-center justify-center"><img class="mr-3" src="<?php echo get_template_directory_uri();?>/images/back_arrow.svg" alt="back" >
+     <span class="text-white">Services</span></button>
+  </div>
+  <div class="w-full ">
     <div class="grid gap-8 relative pr-5">
       <h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> Hire remote &nbsp; <br> 
 	  <span class="text-dark-orange"> developers </span> </h1>
       <p class="flex text-white font-normal text-xl">No hidden cost, Fully integrated services, Timezone-aligned, Hire within a week</p>
       <div class="header-buttons mt-6">
-        <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Get Started</a>
+        <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
+        <a href="https://smartworking.io/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
       </div>
       
     </div>
@@ -28,6 +33,57 @@ get_header('second');
 </div>
 </div>
 </div>
+
+
+<!-- Top 1% Section -->
+
+<section class="bg-black flex flex-col items-center justify-center py-16">
+<h3 class="text-center small-intro">Top 1%</h3>
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1> 
+          <span class="text-dark-orange text-[56px]">1% Wordpress Developers For You</span> 
+      </div>
+        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
+        
+        <div class="flex justify-center space-x-8 relative mb-28">
+            <!-- Step 1 -->
+             <div class="flex flex-col  items-center justify-center relative top-10">
+               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 1</h2>
+               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+               <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step1_icon.svg" alt="" />
+                   <h3 class="text-[24px] font-semibold mb-2 text-white">Outline your Tech Requirements</h3>
+                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
+                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+               </div>
+             </div>
+            <!-- Step 2 -->
+             <div class="flex flex-col  items-center justify-center relative top-36">
+               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 2</h2>
+               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+                  <img class="mb-3"  src="<?php echo get_template_directory_uri();?>/images/step2_icon.svg" alt="" />
+                   <h3 class="text-[24px] font-semibold mb-4 text-white">Interview all the Candidates</h3>
+                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
+                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+               </div>
+             </div>
+            <!-- Step 3 -->
+             <div class="flex flex-col  items-center justify-center relative top-3">
+               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 3</h2>
+               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+               <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step3_icon.svg" alt="" />
+                   <h3 class="text-[24px] font-semibold mb-2 text-white">Efficient Onboarding</h3>
+                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
+                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+               </div>
+             </div>
+             </div>
+        </div>
+
+        <div class="mt-12">
+            <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
+        </div>
+    </section>
+
 
 <div class="w-full relative  grid items-center pt-24 bg-section-trusted bg-dark-black">
   <div class="px-10">
@@ -141,24 +197,24 @@ get_header('second');
 </div>
 
 
-<div class="w-full relative bg-dark-black grid items-center pb-28">
-  <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+<div class="w-full  relative bg-dark-black grid items-center pb-28">
+  <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
-        <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight mt-20 mb-4">Ready to Hire
+        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire
 		a Developer?</h1>
-        <span class="text-center md:text-left text-white text-base"> It is quick and easy with Smart Working </span>
+        <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
         
       </div>
-      <div class="px-6 py-10 flex justify-self-center">
-        <div class="bg-white rounded-3xl px-6 py-6">
-			<div class="rounded-2xl border-pattern px-6 py-6">
+      <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
+        <div class="bg-white rounded-3xl px-6 py-6 w-full">
+			<div class="rounded-2xl border-pattern px-6 py-6 w-full">
 				<h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
 				<form method="post">
 					<input type="text"  name="skills"  class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="w0z9xl">
 					<input type="text" name="fullname" placeholder="Full Name" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="3p8zek">
 					<input type="email" name="email-address" placeholder="Email Address" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="qmz9kh">
-					<button type="submit" class="w-full bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now</button>
+					<button type="submit" class="w-full flex items-center justify-center bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now <img class="ml-4"  src="<?php echo get_template_directory_uri();?>/images/forward_arrow.svg" alt=""></button>
 				</form>
 				<h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
 			</div>

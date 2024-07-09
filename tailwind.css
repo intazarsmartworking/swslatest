@@ -479,6 +479,29 @@ body {
 }
 
 
+.custom-input {
+    width: 320px;
+    height: 64px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 0 20px 0 rgba(113, 131, 193, 0.15);
+}
+
+.gradient-bg {
+    background: radial-gradient(144.21% 122.03% at 50.12% -19.11%, rgba(255, 77, 2, 0.4) 0%, rgba(255, 77, 2, 0) 100%);
+}
+.gradient-text {
+    background: linear-gradient(180deg, #D0511B 0%, #FF4E03 48.16%, rgba(208, 81, 27, 0) 66%, rgba(255, 78, 3, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-paragraph {
+    background: linear-gradient(114.49deg, rgba(255, 77, 2, 0.2) 1.58%, rgba(188, 56, 0, 0.2) 100%);
+}
+
 
 /*.font-regular{
     font-weight: 400;
