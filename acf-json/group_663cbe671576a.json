@@ -1112,6 +1112,13 @@
                 "operator": "==",
                 "value": "theme-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pricing.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1123,5 +1130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720119186
+    "modified": 1720617932
 }

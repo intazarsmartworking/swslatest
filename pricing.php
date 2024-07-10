@@ -293,9 +293,17 @@ get_header('second');
     
 
 </div>
+<?php if (have_rows('block')) : ?>
+    <?php while (have_rows('block')) : the_row(); ?>
 
+    <?php get_template_part( 'template-parts/client-testimonial' );?>
 
+<?php endwhile; ?>
+<?php endif; ?>
+
+<div class="mt-24">
 <?php get_template_part( 'template-parts/home-blog' );?>
+</div>
 
 <!-- FAQ Section  -->
 <div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">

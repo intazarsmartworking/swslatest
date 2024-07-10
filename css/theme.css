@@ -1052,6 +1052,9 @@ select {
 .mb-9 {
   margin-bottom: 2.25rem;
 }
+.mb-96 {
+  margin-bottom: 24rem;
+}
 .mb-\[100px\] {
   margin-bottom: 100px;
 }
@@ -1084,6 +1087,9 @@ select {
 }
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
 }
 .mt-12 {
   margin-top: 3rem;
@@ -1124,14 +1130,11 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
-.mb-40 {
-  margin-bottom: 10rem;
+.mt-60 {
+  margin-top: 15rem;
 }
-.mt-10 {
-  margin-top: 2.5rem;
-}
-.mb-96 {
-  margin-bottom: 24rem;
+.mt-24 {
+  margin-top: 6rem;
 }
 .block {
   display: block;
