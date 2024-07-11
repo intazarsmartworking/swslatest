@@ -25,7 +25,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="bg-black" <?php body_class(); ?> style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
 <?php wp_body_open(); ?>
 
 <header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">
@@ -55,7 +55,7 @@
 		</div>	
 </div>
 
-<header class="site-header | w-full   md:flex" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+<header class="site-header | w-full   md:flex">
   <div class="container mx-auto mt-5">
     <div class="header-wrap menu-hide-mobile | min-h-[85px] flex justify-between items-center relative z-10 header-menu-section mt-0 md:mt-8 px-10">
       <div class="logo w-1/6">
@@ -107,7 +107,7 @@
       </div>
     </div>
 	
-	
+	<!-- home banner start -->
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'home_header') : ?>	
@@ -147,6 +147,7 @@
 	<?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>	
+<!-- home banner close -->
   </div>
 </header>
 

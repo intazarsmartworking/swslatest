@@ -14,10 +14,11 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
     <?php if (get_row_layout() == 'trusted_organization') : ?>
-	<div class="w-full relative  grid items-center pt-24 bg-section-trusted" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+	<div class="w-full relative  grid items-center" >
+	<h3 class="text-center small-intro">Clients</h3>
 	  <div class="px-10">
 	    <?php if(get_sub_field('main_title')): ?>
-			<h1 class=" text-3xl sm:text-3xl lg:text-3xl 3xl:text-58 font-medium text-white text-center md:leading-tight"> <?php echo get_sub_field('main_title'); ?> </h1>
+			<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>
 		<?php endif; ?>
 		 <div class="grid grid-cols-2 md:grid-cols-9 gap-4 mt-9">
 		  <?php if(have_rows('organization_name')): ?>
@@ -35,14 +36,14 @@
 
 <!-- Europe Leading Section  -->
 <?php if (get_row_layout() == 'europe_leading_box') : ?>
-		<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
+		<div class="w-full relative grid items-center bg-black ">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('short_title')): ?>
 				<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
 			<?php endif; ?> 
 
 			<?php if(get_sub_field('short_title')): ?>	
-				<h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?> </h1>
+				<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white">Europe's Leading Provider Of</span><span class="text-dark-orange">Time-Zone Aligned Developers</span> </h1>
 			<?php endif; ?>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 
@@ -80,7 +81,7 @@
 
 <!-- Curios Section  -->
 <?php if (get_row_layout() == 'curious_section') : ?>
-			<div class="w-full relative bg-dark-black grid items-center pb-28">
+			<div class="w-full relative grid items-center ">
 				<div class="container mx-auto md:px-0 px-10 curious-bg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						
@@ -135,10 +136,10 @@
 
 
 <!-- FAQ Section  -->
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
+<div class="w-full relative grid items-center bg-black z-10">
     <div class="container mx-auto md:px-0 px-10">
         <h3 class="text-center small-intro"> FAQ's </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Common questions <br><span class="text-dark-orange"> and their answers </span></h1>
+        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:leading-tight">Common questions <br><span class="text-dark-orange"> and their answers </span></h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 			<?php 
@@ -175,13 +176,13 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative bg-dark-black grid items-center pb-28">
+		<div class="w-full relative grid items-center bg-black">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					
 						<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
 						 <?php if(get_sub_field('main_title')): ?>
-						  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+						  <h1 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
 						 <?php endif; ?>	
 
 						<?php if(get_sub_field('subheading')): ?>	

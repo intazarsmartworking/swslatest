@@ -1,10 +1,10 @@
 <!-- Trustpiolot Review  -->
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
+<div class="w-full relative bg-black grid items-center pb-28 pt-16 md:pt-36">
     <div class="container mx-auto md:px-0 px-10">
         
         <h3 class="text-center small-intro"> Reviews </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0 md:px-96 md:leading-tight">Our  Reviews </h1>
-        <h3 class="text-white text-xl font-normal text-center py-6 px-0 md:px-96"> Read our reviews to see how our Ai-driven solutions make hiring simpler and more effective. </h3>
+        <div class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium gradient-text text-center px-0 flex items-center justify-center w-full md:leading-tight"><span class="mr-[10px]">Our</span><img  src="<?php echo get_template_directory_uri();?>/images/our_trusted_review_logo.svg" alt=""/> <span class="ml-[10px]">Reviews</span> </div>
+        <h3 class="text-white text-2xl font-normal text-center py-6 px-0 "> Read our reviews to see how our Ai-driven solutions make hiring simpler and more effective. </h3>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
         <div class="trustpilot-bg mb-5">

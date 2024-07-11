@@ -1,8 +1,8 @@
-<div class="w-full relative  grid items-center pb-28 pt-24" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+<div class="w-full relative  grid items-center">
   <div class="container md:px-0 px-10">
   <h3 class="text-center small-intro"> Make Team </h3>
-  <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Let's Assemble<br><span class="text-dark-orange"> Your Team </span></h1>
-  <p class="text-center text-white font-medium text-xl pt-10 px-0 md:px-96"> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
+  <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> Your Team </span></h1>
+  <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
 	  
    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative">
       <img src="<?php echo get_template_directory_uri();?>/images/connect-skill.svg" class="join-skill">
