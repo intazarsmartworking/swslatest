@@ -293,6 +293,65 @@ get_header('second');
     
 
 </div>
+
+
+<!-- Support Section -->
+
+<div class="container mx-auto md:px-0 px-10 pt-2 overflow-hidden" style="margin-top:100px;">
+
+        <h3 class="text-center small-intro"> Support </h3>
+        
+        <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How should we interact and take</h1> 
+        <span class="text-dark-orange text-[56px] pb-16">our partnership forward?</span> 
+
+        
+  </div>
+  
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+     
+   <div class="rounded mr-5">
+		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+        <div class="py-4 bg-white partnership">
+            <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
+            <div class="header-buttons mt-6">
+                <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Get Started</a>
+            </div>
+        </div>
+                
+    </div>
+			
+	<div class="rounded mr-5">
+		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+        <div class="py-4 bg-white partnership">
+            <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
+            <div class="header-buttons mt-6">
+                <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Get Started</a>
+            </div>
+        </div>
+                
+    </div>
+    
+    <div class="rounded mr-5">
+		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+        <div class="py-4 bg-white partnership">
+            <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
+            <div class="header-buttons mt-6">
+                <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Get Started</a>
+            </div>
+        </div>
+                
+    </div>
+		  
+	   
+    </div> 
+
+    
+  
+</div>
+
+
+<!-- Testimonial Section -->
 <?php if (have_rows('block')) : ?>
     <?php while (have_rows('block')) : the_row(); ?>
 
@@ -301,6 +360,8 @@ get_header('second');
 <?php endwhile; ?>
 <?php endif; ?>
 
+
+<!-- Blog Section -->
 <div class="mt-24">
 <?php get_template_part( 'template-parts/home-blog' );?>
 </div>
@@ -345,6 +406,28 @@ get_header('second');
 		</div>
 
     </div>
+</div>
+
+<!-- CTA Section -->
+
+<div class="w-full  relative bg-dark-black grid items-center pb-28">
+  <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10 pt-40 ">
+        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire
+		a Developer?</h1>
+        <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
+        
+        <div class="header-buttons mt-16 mb-10 text-center md:text-left pb-20">
+			<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
+		</div>
+
+      </div>
+      <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
+      <img src="http://smartworking.local/wp-content/uploads/2024/06/hire-dev-1.svg" alt="" class="w-auto">
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php get_footer();?>
