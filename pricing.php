@@ -311,7 +311,7 @@ get_header('second');
    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
      
    <div class="rounded mr-5">
-		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+		<img class="w-full" src="https://stage.smartworking.io/wp-content/uploads/2024/05/blogimg1.svg" alt="">
         <div class="py-4 bg-white partnership">
             <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
             <div class="header-buttons mt-6">
@@ -322,7 +322,7 @@ get_header('second');
     </div>
 			
 	<div class="rounded mr-5">
-		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+		<img class="w-full" src="https://stage.smartworking.io/wp-content/uploads/2024/05/blogimg1.svg" alt="">
         <div class="py-4 bg-white partnership">
             <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
             <div class="header-buttons mt-6">
@@ -333,7 +333,7 @@ get_header('second');
     </div>
     
     <div class="rounded mr-5">
-		<img class="w-full" src="http://smartworking.local/wp-content/uploads/2024/05/blogimg1.svg" alt="">
+		<img class="w-full" src="https://stage.smartworking.io/wp-content/uploads/2024/05/blogimg1.svg" alt="">
         <div class="py-4 bg-white partnership">
             <div class="text-2xl text-[#050403] leading-9">If you have questions, schedule a 30-minute call & talk to our consultant.</div>
             <div class="header-buttons mt-6">
@@ -424,7 +424,7 @@ get_header('second');
 
       </div>
       <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
-      <img src="http://smartworking.local/wp-content/uploads/2024/06/hire-dev-1.svg" alt="" class="w-auto">
+      <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/hire-dev-1.svg" alt="" class="w-auto">
       </div>
     </div>
   </div>
