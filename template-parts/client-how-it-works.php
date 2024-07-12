@@ -1,7 +1,8 @@
-<section class="relative py-16">
-    <h1 class="text-6xl text-center font-bold text-white mb-3">Hire Offshore Developers</h1>
-    <p class="text-center text-6xl text-dark-orange mb-3">Quick Efficient & Accurate.</p>
-    <p class="text-center text-2xl text-white">Select and Onboard Vetted Developers - Here is how we do it.</p>
+<section class="relative py-16 bg-black">
+<h3 class="text-center small-intro"> How It Works </h3>
+    <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">Hire Offshore Developers</h1>
+    <p class="text-center text-5xl pt-[10px] sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange mb-3">Quick Efficient & Accurate.</p>
+    <p class="text-center text-2xl pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it.</p>
     
     <div class="mt-12 w-full flex">
         <div class="w-[5%]">&nbsp;</div>

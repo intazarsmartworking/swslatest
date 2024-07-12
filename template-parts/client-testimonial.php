@@ -1,5 +1,5 @@
 <?php if (get_row_layout() == 'testimonial_section') : ?>
-	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center items-center">
+	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center items-center bg-black">
 	    <?php if(get_sub_field('small_heading')): ?>
 			<div class ="container mx-auto md:px-0 px-10">
 				<p class="text-white text-[16px] text-center flex items-center justify-center small-intro"><?php echo get_sub_field('small_heading'); ?></p>
@@ -13,7 +13,7 @@
 		<?php endif; ?>
 		<div class="w-full flex relative min-h-[700px] pt-16 overflow-hidden">
 		<div class="flex w-1/12">&nbsp;</div>
-		<div class="flex w-full relative card-container">
+		<div class="flex w-full relative card-container overflow-visible">
 		
 		    <?php if(have_rows('testimonial_card')): ?>
 			<?php while(have_rows('testimonial_card')): the_row(); ?>

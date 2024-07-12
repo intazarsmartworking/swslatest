@@ -55,8 +55,9 @@ body {
 }
 
 .bg-section-trusted{
-    background-size: 150% 160%;
-    background-repeat: no-repeat;  
+    background-size: 140% 478%;
+    background-position: left;
+    /* background: radial-gradient(circle, rgba(255, 77, 2, 0.4), rgba(255, 77, 2, 0)); */
 }
 
 .europe-box{
@@ -446,7 +447,6 @@ body {
 
 .card-container {
     display: flex;
-    overflow: hidden;
     position: relative;
 }
 
@@ -492,7 +492,7 @@ body {
 .gradient-bg {
     background: radial-gradient(144.21% 122.03% at 50.12% -19.11%, rgba(255, 77, 2, 0.4) 0%, rgba(255, 77, 2, 0) 100%);
 }
-.gradient-text {
+.gradient-text-dev-landing {
     background: linear-gradient(180deg, #D0511B 0%, #FF4E03 48.16%, rgba(208, 81, 27, 0) 66%, rgba(255, 78, 3, 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -513,6 +513,7 @@ body {
     margin-top: -100px;
     position: relative;
 }
+
 
 /*.font-regular{
     font-weight: 400;

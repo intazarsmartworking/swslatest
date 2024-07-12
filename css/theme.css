@@ -1133,6 +1133,21 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+.mt-\[24px\] {
+  margin-top: 24px;
+}
+.ml-\[10px\] {
+  margin-left: 10px;
+}
+.mr-\[10px\] {
+  margin-right: 10px;
+}
 .block {
   display: block;
 }
@@ -1328,6 +1343,9 @@ select {
 .items-center {
   align-items: center;
 }
+.justify-start {
+  justify-content: flex-start;
+}
 .justify-center {
   justify-content: center;
 }
@@ -1395,6 +1413,9 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
 }
 .overflow-y-scroll {
   overflow-y: scroll;
@@ -1759,9 +1780,6 @@ select {
 .pt-24 {
   padding-top: 6rem;
 }
-.pt-36 {
-  padding-top: 9rem;
-}
 .pt-40 {
   padding-top: 10rem;
 }
@@ -1773,6 +1791,9 @@ select {
 }
 .pt-7 {
   padding-top: 1.75rem;
+}
+.pt-\[10px\] {
+  padding-top: 10px;
 }
 .pt-\[80px\] {
   padding-top: 80px;
@@ -1795,8 +1816,8 @@ select {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .text-\[16px\] {
@@ -2027,8 +2048,9 @@ body {
     border-radius: 20px;
 }
 .bg-section-trusted{
-    background-size: 150% 160%;
-    background-repeat: no-repeat;  
+    background-size: 140% 478%;
+    background-position: left;
+    /* background: radial-gradient(circle, rgba(255, 77, 2, 0.4), rgba(255, 77, 2, 0)); */
 }
 .europe-box{
     background-image: url('../images/europe-bg.svg');
@@ -2359,7 +2381,6 @@ body {
 }
 .card-container {
     display: flex;
-    overflow: hidden;
     position: relative;
 }
 .card {
@@ -2393,7 +2414,7 @@ body {
 .gradient-bg {
     background: radial-gradient(144.21% 122.03% at 50.12% -19.11%, rgba(255, 77, 2, 0.4) 0%, rgba(255, 77, 2, 0) 100%);
 }
-.gradient-text {
+.gradient-text-dev-landing {
     background: linear-gradient(180deg, #D0511B 0%, #FF4E03 48.16%, rgba(208, 81, 27, 0) 66%, rgba(255, 78, 3, 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2971,6 +2992,10 @@ body {
 
   .lg\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .lg\:text-\[56px\] {
+    font-size: 56px;
   }
 
   .lg\:text-\[72px\] {

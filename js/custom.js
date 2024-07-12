@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", function() {
             card.style.rotate = rotateCards[index]
             
           }
+
+          if(index === 1 && cards[1].style.left === originalLeftPostions[3] 
+            || cards[2].style.left === originalLeftPostions[4]) {
+            cards[1].style.left = "700px"
+            cards[2].style.left = "1350px"
+          }
       });
 
       if(cards[4].style.left === originalLeftPostions[2]) {

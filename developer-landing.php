@@ -48,7 +48,7 @@ get_header('second');
         <div class="flex justify-center space-x-8 relative mb-28">
             <!-- Step 1 -->
              <div class="flex flex-col  items-center justify-center relative top-10">
-               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 1</h2>
+               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 1</h2>
                <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
                <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step1_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white">Outline your Tech Requirements</h3>
@@ -58,7 +58,7 @@ get_header('second');
              </div>
             <!-- Step 2 -->
              <div class="flex flex-col  items-center justify-center relative top-36">
-               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 2</h2>
+               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 2</h2>
                <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
                   <img class="mb-3"  src="<?php echo get_template_directory_uri();?>/images/step2_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-4 text-white">Interview all the Candidates</h3>
@@ -68,7 +68,7 @@ get_header('second');
              </div>
             <!-- Step 3 -->
              <div class="flex flex-col  items-center justify-center relative top-3">
-               <h2 class="text-2xl gradient-text self-start font-bold mb-4">Step 3</h2>
+               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 3</h2>
                <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
                <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step3_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white">Efficient Onboarding</h3>
