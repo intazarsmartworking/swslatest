@@ -145,7 +145,6 @@ gsap.fromTo(
       scrub: true,                      // Smooth scrubbing effect
       start: "top 50px",        // Start animation when top of section is 100px from top of viewport
       end: "+=1000",                    // End animation 1000px after start
-      markers: true,                    // Show markers for debugging
       invalidateOnRefresh: true         // Invalidate trigger on refresh
     }
   }
