@@ -73,7 +73,7 @@ body {
     border:1px solid #FF4D04;
     background: linear-gradient(to bottom right, rgb(228 80 18 / 35%), rgba(228, 80, 18, 0));
     color:#fff;
-    width: 11%;
+    width: max-content;
     margin: 0 auto;
     margin-bottom: 35px;
 }
@@ -468,10 +468,6 @@ body {
 
 
 
-
-.how-it-works-card {
-    transition: transform 0.5s ease; /* Smooth transition for animation */
-}
 
 
 .howItWorkHeading {

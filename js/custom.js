@@ -118,77 +118,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //How It Works Card Logic
 
-  let lastScrollTop = 0;
-  let isHovering = false;
-  let animating = false;
-  let currentCardIndex = document.querySelectorAll('.how-it-works-card').length - 1; // Start from the last card
-  let sectionFullyInView = false;
+  gsap.registerPlugin(ScrollTrigger);
 
-  const howItWorksCards = document.querySelectorAll('.how-it-works-card');
-  const section = document.querySelector('.how-it-works-section');
+const spacer = -500;
+let howItWorksCards = gsap.utils.toArray(".how-it-works-card");
 
-  // Function to check if the section is fully in the viewport
-  function isSectionInView() {
-    const rect = section.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+// Debug: Log the zIndex of the second card
+if (howItWorksCards[1]) {
+  console.log(howItWorksCards[1].style.zIndex);
+}
+
+gsap.fromTo(
+  ".how-it-works-card:not(:first-child)",
+  {
+    x: (index) =>  window.innerWidth + spacer, // Initial position off-screen
+    rotate: 0,
+  },
+  {
+    x: (index) => (index + 1),  // Final position on-screen
+    stagger: 0.5,
+    rotate: 0,
+    scrollTrigger: {
+      trigger: '.how-it-works-section',  // Trigger element
+      pin: ".how-it-works-section",     // Pin the entire section
+      pinSpacing: false,                // Disable automatic pinSpacing adjustment
+      scrub: true,                      // Smooth scrubbing effect
+      start: "top 50px",        // Start animation when top of section is 100px from top of viewport
+      end: "+=1000",                    // End animation 1000px after start
+      invalidateOnRefresh: true         // Invalidate trigger on refresh
+    }
   }
+);
 
-  // Detect when the section is fully in view
-  window.addEventListener('scroll', function() {
-    if (isSectionInView()) {
-      sectionFullyInView = true;
-    } else {
-      sectionFullyInView = false;
-    }
-  });
-
-  section.addEventListener('mouseenter', () => {
-    isHovering = true;
-  });
-
-  section.addEventListener('mouseleave', () => {
-    isHovering = false;
-  });
-
-  window.addEventListener('scroll', function(e) {
-    if (!sectionFullyInView || animating) return;
-
-    let st = window.pageYOffset || document.documentElement.scrollTop;
-    let scrollDirection = (st > lastScrollTop) ? 1 : -1; // 1 for down, -1 for up
-
-    if (scrollDirection === 1 && currentCardIndex > 0) { // Ensure the first card doesn't move
-      e.preventDefault();
-      animating = true;
-      let distance = 75; // Fixed distance for animation
-      howItWorksCards[currentCardIndex].style.transform = `translateX(${distance}%)`;
-      setTimeout(() => {
-        currentCardIndex -= 1;
-        animating = false;
-      }, 1000); // Wait for the animation to complete (same as the CSS transition duration)
-    } else if (scrollDirection === -1 && currentCardIndex < howItWorksCards.length - 1) {
-      e.preventDefault();
-      animating = true;
-      let distance = 500; // Fixed distance for animation
-      howItWorksCards[currentCardIndex + 1].style.transform = `translateX(0)`;
-      setTimeout(() => {
-        currentCardIndex += 1;
-        animating = false;
-      }, 500); // Wait for the animation to complete (same as the CSS transition duration)
-    }
-
-    if (currentCardIndex === 0 || currentCardIndex === howItWorksCards.length - 1) {
-      sectionFullyInView = false; // Allow scrolling once all cards are animated
-    }
-
-    lastScrollTop = st <= 0 ? 0 : st;
-  }, { passive: false });
-
-  // Prevent default scrolling when animating and section is fully in view
-  window.addEventListener('wheel', function(e) {
-    if (sectionFullyInView && animating) {
-      e.preventDefault();
-    }
-  }, { passive: false });
 }); 
 
 // Dropdown Menu
