@@ -1200,11 +1200,11 @@ select {
 .max-h-5 {
   max-height: 1.25rem;
 }
-.min-h-\[1500px\] {
-  min-height: 1500px;
-}
 .min-h-\[150px\] {
   min-height: 150px;
+}
+.min-h-\[1950px\] {
+  min-height: 1950px;
 }
 .min-h-\[550px\] {
   min-height: 550px;
@@ -1214,21 +1214,6 @@ select {
 }
 .min-h-\[85px\] {
   min-height: 85px;
-}
-.min-h-\[800px\] {
-  min-height: 800px;
-}
-.min-h-\[1200px\] {
-  min-height: 1200px;
-}
-.min-h-\[1300px\] {
-  min-height: 1300px;
-}
-.min-h-\[2000px\] {
-  min-height: 2000px;
-}
-.min-h-\[1950px\] {
-  min-height: 1950px;
 }
 .w-1\/12 {
   width: 8.333333%;

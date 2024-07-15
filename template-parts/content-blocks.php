@@ -77,7 +77,8 @@
 		</div>
 	<?php endif; ?>
 
-	
+<!-- How It Works Section -->
+<?php get_template_part( 'template-parts/client-how-it-works' );?>	
 
 <!-- Curios Section  -->
 <?php if (get_row_layout() == 'curious_section') : ?>
@@ -123,9 +124,7 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
-<!-- How It Works Section -->
 
-<?php get_template_part( 'template-parts/client-how-it-works' );?>
 
 <?php get_template_part( 'template-parts/ai-vetted-profile' );?>
 <?php get_template_part( 'template-parts/assemble-team' );?>
