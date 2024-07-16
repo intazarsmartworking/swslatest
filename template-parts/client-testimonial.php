@@ -1,8 +1,8 @@
 <?php if (get_row_layout() == 'testimonial_section') : ?>
-	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center items-center bg-black">
+	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center items-center bg-black set-margin">
 	    <?php if(get_sub_field('small_heading')): ?>
 			<div class ="container mx-auto md:px-0 px-10">
-				<p class="text-white text-[16px] text-center flex items-center justify-center small-intro"><?php echo get_sub_field('small_heading'); ?></p>
+				<p class="text-white text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
 			</div>
 		<?php endif; ?>
 		

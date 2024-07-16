@@ -510,6 +510,11 @@ body {
     position: relative;
 }
 
+.set-margin{
+    padding-top:100px;
+    padding-bottom: 100px;
+}
+
 
 /*.font-regular{
     font-weight: 400;

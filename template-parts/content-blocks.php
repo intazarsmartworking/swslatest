@@ -76,13 +76,18 @@
 			
 		</div>
 	<?php endif; ?>
-
+	<?php endwhile; ?>
+	<?php endif; ?>
 <!-- How It Works Section -->
+
 <?php get_template_part( 'template-parts/client-how-it-works' );?>	
 
+
 <!-- Curios Section  -->
+<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'curious_section') : ?>
-			<div class="w-full relative grid items-center ">
+			<div class="w-full relative grid items-center mt-4">
 				<div class="container mx-auto md:px-0 px-10 curious-bg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						
@@ -137,9 +142,10 @@
 <!-- FAQ Section  -->
 <div class="w-full relative grid items-center bg-black z-10">
     <div class="container mx-auto md:px-0 px-10">
-        <h3 class="text-center small-intro"> FAQ's </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:leading-tight">Common questions <br><span class="text-dark-orange"> and their answers </span></h1>
-
+	<h3 class="text-center small-intro"> FAQ's </h3>
+  	<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
+  	<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
+	
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
@@ -175,7 +181,7 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative grid items-center bg-black">
+		<div class="w-full relative grid items-center bg-black mt-20 mb-10 set-margin">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					

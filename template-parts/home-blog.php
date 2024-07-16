@@ -1,4 +1,4 @@
-<div class=" mx-auto md:px-0 px-10 pt-2 overflow-hidden bg-black">
+<div class=" mx-auto md:px-0 px-10 pt-2 overflow-hidden bg-black set-margin">
 
         <h3 class="text-center small-intro"> Latest Posts </h3>
         <h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight">Our  Blogs </h1>

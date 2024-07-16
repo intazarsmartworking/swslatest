@@ -1,5 +1,5 @@
 <!-- Trustpiolot Review  -->
-<div class="w-full relative bg-black grid items-center pb-28 pt-16 md:pt-36">
+<div class="w-full relative bg-black grid items-center pb-28">
     <div class="container mx-auto md:px-0 px-10">
         
         <h3 class="text-center small-intro"> Reviews </h3>

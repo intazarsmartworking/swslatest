@@ -1,4 +1,4 @@
-<div class="w-full relative  grid items-center">
+<div class="w-full relative  grid items-center set-margin">
   <div class="container md:px-0 px-10">
   <h3 class="text-center small-intro"> Make Team </h3>
   <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> Your Team </span></h1>
