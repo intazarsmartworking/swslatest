@@ -979,6 +979,15 @@ select {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -998,6 +1007,10 @@ select {
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .my-5 {
   margin-top: 1.25rem;
@@ -1233,6 +1246,9 @@ select {
 .w-2 {
   width: 0.5rem;
 }
+.w-28 {
+  width: 7rem;
+}
 .w-4 {
   width: 1rem;
 }
@@ -1282,6 +1298,9 @@ select {
   width: -moz-max-content;
   width: max-content;
 }
+.w-20 {
+  width: 5rem;
+}
 .min-w-\[280px\] {
   min-width: 280px;
 }
@@ -1302,6 +1321,9 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
 }
 .flex-grow {
   flex-grow: 1;
@@ -1324,6 +1346,12 @@ select {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -1372,6 +1400,9 @@ select {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-0 {
+  gap: 0px;
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1630,6 +1661,10 @@ select {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px-40 {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1678,6 +1713,10 @@ select {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1689,6 +1728,14 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-60 {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -1771,6 +1818,9 @@ select {
 .pt-24 {
   padding-top: 6rem;
 }
+.pt-28 {
+  padding-top: 7rem;
+}
 .pt-40 {
   padding-top: 10rem;
 }
@@ -1792,14 +1842,17 @@ select {
 .pt-\[80px\] {
   padding-top: 80px;
 }
-.pt-28 {
-  padding-top: 7rem;
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
 }
 .text-center {
   text-align: center;
+}
+.align-middle {
+  vertical-align: middle;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -2431,6 +2484,43 @@ body {
 .set-margin{
     padding-top:100px;
     padding-bottom: 100px;
+}
+.imgwidth{
+    width:50%;
+}
+.orangepart{
+    background: linear-gradient(to right, rgba(59, 28, 14, 1), rgba(255, 77, 2, 1));
+    border-radius: 12px;
+}
+.greenpart{
+    background: linear-gradient(to right, rgba(58, 103, 46, 1), rgba(23, 38, 19, 1));
+    border-radius: 12px;
+    margin-top:15px
+}
+.firozipart{
+    background: linear-gradient(to right, rgba(96, 227, 213, 1), rgba(48, 159, 148, 1));
+    border-radius: 12px;
+    margin-bottom:15px
+}
+.lightorangepart{
+    background: linear-gradient(to right, rgba(255, 123, 49, 1), rgba(236, 156, 82, 1));
+    border-radius: 12px;
+    margin-bottom:15px
+}
+.brownpart{
+    background: linear-gradient(to right, rgba(236, 193, 161, 1), rgba(208, 156, 118, 1));
+    border-radius: 12px;
+    margin-bottom:15px
+}
+.darkfirozipart{
+    background: linear-gradient(to right, rgba(119, 189, 223, 1), rgba(79, 153, 189, 1));
+    border-radius: 12px;
+    margin-bottom:15px
+}
+.violetpart{
+    background: linear-gradient(to right, rgba(194, 130, 250, 1), rgba(145, 62, 218, 1));
+    border-radius: 12px;
+    margin-bottom:15px
 }
 /*.font-regular{
     font-weight: 400;

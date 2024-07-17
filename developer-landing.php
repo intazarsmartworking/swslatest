@@ -85,10 +85,116 @@ get_header('second');
     </section>
 
 
+<!-- Benefit Section -->
+
+<section class="bg-black flex flex-col items-center justify-center py-16 w-full">
+<h3 class="text-center small-intro">Benefits</h3>
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Benefits of Hiring Wordpress</h1> 
+          <span class="text-dark-orange text-[56px]">Developer from SmartWorking</span> 
+      </div>
+        
+        <div class="flex justify-center  space-x-8 relative mb-28">
+            <div class="flex flex-col  items-center justify-center relative ">
+               <div class="my-20"> <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/metwo.svg" alt="" /> </div>
+             </div>
+        </div>
+		
+		<div class="container mx-auto md:px-0 px-10">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative mb-28">
+			<div>
+			  <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-48">
+				<img class="mb-3 w-28" src="<?php echo get_template_directory_uri();?>/images/tree.svg" alt="" />
+				<h2 class="text-2xl text-white font-bold mb-4 text-center">Hiring with Smart working</h2>
+			  </div>
+				
+			 <div class="flex flex-col justify-center items-center text-center align-middle relative greenpart px-40 py-6">
+               <div class="justify-center items-center text-center align-middle">
+				 <span class="inline-block align-middle"> <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/badge.svg" alt="" /> </span>
+				 <span class="text-2xl text-white font-bold mb-4 inline-block">96% Retention</span>
+               </div>
+			 </div>
+			</div>
+			
+			
+			<div>
+				<div class="flex flex-col justify-center relative firozipart px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/user.svg" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 49h</h4>
+					<h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
+					</div>
+				</div>
+				   
+				</div>
+				
+				<div class="flex flex-col justify-center relative lightorangepart px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/cpu.svg" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 9h</h4>
+					<h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
+					</div>
+				</div>
+				   
+				</div>
+				
+				<div class="flex flex-col justify-center relative brownpart px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/CircleClock.svg" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 19h</h4>
+					<h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
+					</div>
+				</div>
+				   
+				</div>
+				
+				<div class="flex flex-col justify-center relative darkfirozipart px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/days-warranty.svg" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 20h</h4>
+					<h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
+					</div>
+				</div>
+				   
+				</div>
+				
+				<div class="flex flex-col justify-center relative violetpart px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/eurocircle.svg" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 5h</h4>
+					<h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
+					</div>
+				</div>
+				   
+				</div>
+			</div>
+            
+        </div>
+		</div>
+        
+</section>
+
+<!-- Client Section -->
+
 <div class="w-full relative  grid items-center pt-24 bg-section-trusted bg-dark-black">
   <div class="px-10">
     <h3 class="text-center small-intro"> Clients </h3>
-    <h1 class=" text-3xl sm:text-3xl lg:text-3xl 3xl:text-58 font-medium text-white text-center md:leading-tight"> Trusted by 100+ of organizations </h1>
+    <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>
     <div class="grid grid-cols-2 md:grid-cols-7 gap-4 mt-9 mb-14">
       <div class="bg-trust-box py-3 px-2 rounded-xl">
         <img src="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" alt="https://stage.smartworking.io/wp-content/uploads/2024/06/trust1.svg" class="mb-5 md:mb-5">
@@ -164,8 +270,8 @@ get_header('second');
 <div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
     <div class="container mx-auto md:px-0 px-10">
         <h3 class="text-center small-intro"> FAQ's </h3>
-        <h1 class=" text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">Common questions <br><span class="text-dark-orange"> and their answers </span></h1>
-
+        <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
+  	    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
