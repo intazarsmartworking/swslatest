@@ -196,6 +196,10 @@ jQuery(document).ready(function(){
       }
   ]
   });
+
+  
+
+
 });
 
 // Search Skill when someone click on search box on Homepage

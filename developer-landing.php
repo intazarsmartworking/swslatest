@@ -35,6 +35,112 @@ get_header('second');
 </div>
 
 
+<!-- Vetted Profile Section -->
+
+<section class="bg-black flex flex-col items-center justify-center py-16">
+    <h3 class="text-center small-intro">Vetted Profiles</h3>
+	
+    <div class="flex flex-col items-center justify-center mb-20">
+      <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Meet Our Vetted</h1> 
+      <span class="text-dark-orange text-[56px]">Wordpress Developers</span> 
+    </div>
+	
+	
+	<div class="container mx-auto p-4">
+        <div class="flex flex-wrap -mx-2">
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                <div class="custom-bg custom-border">
+				<div class="flex items-center">
+					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+					<div>
+						<span class="text-white text-2xl font-medium block">Author Name</span>
+						<span class="text-white text-sm font-normal block">WordPress Developer</span>
+					</div>
+				</div>
+
+
+				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
+					<div class="flex flex-col sm:flex-row">
+						<img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+				    <div>
+					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
+					 <p class="text-white text-base font-medium">10 Years</p>
+				    </div>
+                    </div>
+				  <div class="flex flex-col sm:flex-row">
+					<img src="<?php echo get_template_directory_uri();?>/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+					  <div>
+						  <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
+						  <p class="text-white text-base font-medium">2 Weeks</p>
+					  </div>
+				  </div>
+              </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                <div class="custom-bg custom-border">
+				<div class="flex items-center">
+					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+					<div>
+						<span class="text-white text-2xl font-medium block">Author Name</span>
+						<span class="text-white text-sm font-normal block">WordPress Developer</span>
+					</div>
+				</div>
+
+
+				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
+					<div class="flex flex-col sm:flex-row">
+						<img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+				    <div>
+					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
+					 <p class="text-white text-base font-medium">10 Years</p>
+				    </div>
+                    </div>
+				  <div class="flex flex-col sm:flex-row">
+					<img src="<?php echo get_template_directory_uri();?>/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+					  <div>
+						  <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
+						  <p class="text-white text-base font-medium">2 Weeks</p>
+					  </div>
+				  </div>
+              </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                <div class="custom-bg custom-border">
+				<div class="flex items-center">
+					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+					<div>
+						<span class="text-white text-2xl font-medium block">Author Name</span>
+						<span class="text-white text-sm font-normal block">WordPress Developer</span>
+					</div>
+				</div>
+
+
+				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
+					<div class="flex flex-col sm:flex-row">
+						<img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+				    <div>
+					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
+					 <p class="text-white text-base font-medium">10 Years</p>
+				    </div>
+                    </div>
+				  <div class="flex flex-col sm:flex-row">
+					<img src="<?php echo get_template_directory_uri();?>/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+					  <div>
+						  <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
+						  <p class="text-white text-base font-medium">2 Weeks</p>
+					  </div>
+				  </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </div>	
+		
+		
+</section>
+
 <!-- Top 1% Section -->
 
 <section class="bg-black flex flex-col items-center justify-center py-16">
