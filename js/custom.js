@@ -264,3 +264,57 @@ function deselectSkill(event) {
   event.currentTarget.classList.add('hidden');
 }
 
+
+// JavaScript to update Interview Screen
+const priceRangeElements = document.getElementsByClassName('price-range');
+const priceValueElements = document.getElementsByClassName('range-value');
+
+if (priceRangeElements.length > 0 && priceValueElements.length > 0) {
+    const priceRange = priceRangeElements[0];
+    const priceValue = priceValueElements[0];
+
+    const updateValuePosition = () => {
+        const value = priceRange.value;
+        priceValue.textContent = value;
+
+        const rangeWidth = priceRange.offsetWidth;
+        const thumbWidth = 20; 
+        const min = priceRange.min;
+        const max = priceRange.max;
+        const percentage = (value - min) / (max - min);
+        const offset = percentage * (rangeWidth - thumbWidth) + (thumbWidth / 2);
+
+        priceValue.style.left = `${offset}px`;
+    };
+
+    priceRange.addEventListener('input', updateValuePosition);
+    updateValuePosition();
+}
+
+
+// JavaScript to update Technical Assignment
+const technicalRangeElements = document.getElementsByClassName('technical-range');
+const technicalValueElements = document.getElementsByClassName('technical-value');
+
+if (technicalRangeElements.length > 0 && technicalValueElements.length > 0) {
+    const technicalRange = technicalRangeElements[0];
+    const technicalValue = technicalValueElements[0];
+
+    const updateValuePosition1 = () => {
+        const value = technicalRange.value;
+        technicalValue.textContent = value;
+
+        const rangeWidth = technicalRange.offsetWidth;
+        const thumbWidth = 20; 
+        const min = technicalRange.min;
+        const max = technicalRange.max;
+        const percentage = (value - min) / (max - min);
+        const offset = percentage * (rangeWidth - thumbWidth) + (thumbWidth / 2);
+
+        technicalValue.style.left = `${offset}px`;
+    };
+
+    technicalRange.addEventListener('input', updateValuePosition1);
+    updateValuePosition1();
+}
+

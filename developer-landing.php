@@ -74,7 +74,68 @@ get_header('second');
 						  <p class="text-white text-base font-medium">2 Weeks</p>
 					  </div>
 				  </div>
-              </div>
+                </div>
+				<h2 class="text-sm font-medium text-white pb-10">Technologies</h2>
+				    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">MySQL</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/mysql.svg" alt="Technology 1" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Node.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/nodejs.svg" alt="Technology 2" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Python</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/python.svg" alt="Technology 3" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Angular</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/angular.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+						            <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">React.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/reactjs.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+                    </div>
+					
+					
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/orange-slider.svg">
+					</div>
+
+
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/green-slider.svg">
+					</div>
+					
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/blue-slider.svg">
+					</div>
+					
+					
+					<div class="flex flex-wrap -mx-2 mt-4">
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <p class="font-medium text-2xl text-white">€16/hr</p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                            <button class="profile-button-custom">
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+					
+					
               </div>
             </div>
             <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
@@ -103,7 +164,65 @@ get_header('second');
 						  <p class="text-white text-base font-medium">2 Weeks</p>
 					  </div>
 				  </div>
-              </div>
+				</div>
+				<h2 class="text-sm font-medium text-white pb-10">Technologies</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">MySQL</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/mysql.svg" alt="Technology 1" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Node.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/nodejs.svg" alt="Technology 2" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Python</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/python.svg" alt="Technology 3" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Angular</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/angular.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+						            <div class="flex items-center  tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">React.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/reactjs.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+                  </div>
+				  
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/orange-slider.svg">
+					</div>
+
+
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/green-slider.svg">
+					</div>
+					
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/blue-slider.svg">
+					</div>
+					
+					<div class="flex flex-wrap -mx-2 mt-4">
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <p class="font-medium text-2xl text-white">€16/hr</p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                            <button class="profile-button-custom">
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+				  
               </div>
             </div>
             <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
@@ -132,7 +251,67 @@ get_header('second');
 						  <p class="text-white text-base font-medium">2 Weeks</p>
 					  </div>
 				  </div>
-              </div>
+				</div>
+				<h2 class="text-sm font-medium text-white pb-10">Technologies</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">MySQL</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/mysql.svg" alt="Technology 1" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Node.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/nodejs.svg" alt="Technology 2" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Python</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/python.svg" alt="Technology 3" class="w-4 h-4 rounded-full">
+                        </div>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">Angular</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/angular.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+						            <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium">React.js</h3>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri();?>/images/reactjs.svg" alt="Technology 4" class="w-4 h-4 rounded-full">
+                        </div>
+                    </div>
+					
+					
+
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/orange-slider.svg">
+					</div>
+
+
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/green-slider.svg">
+					</div>
+					
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/blue-slider.svg">
+					</div>
+					
+					<div class="flex flex-wrap -mx-2 mt-4">
+                        <div class="w-full md:w-1/2 px-2 mb-4">
+                            <p class="font-medium text-2xl text-white">€16/hr</p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                            <button class="profile-button-custom">
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+
               </div>
             </div>
         </div>
@@ -294,6 +473,27 @@ get_header('second');
 		</div>
         
 </section>
+
+
+<!-- Calculate Section -->
+
+<div class="w-full relative calculate-sec grid items-center  pt-16 md:pt-20">
+    <div class="container mx-auto md:px-0 px-10 text-center  items-center ">
+      <img src="<?php echo get_template_directory_uri();?>/images/wordpress-logo.svg" class="pb-8 mx-auto">
+      <h3 class="text-5xl font-bold text-dark-black px-96 pb-10"> Calculate the cost of your Wordpress Developer </h3>
+
+      <div class="header-buttons mt-6">
+        <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded  text-white text-lg get-started-banner-home">Pricing</a>
+      </div>
+
+
+      <div class="bg-white cal-bg mt-20">
+        <h3 class="text-dark-black font-bold text-5xl pb-5"> $16 - $24? </h3>
+        <h3 class="text-dark-black font-medium text-xl"> Per Developer, Per hour </h3>
+      </div>
+
+    </div>
+</div>    
 
 <!-- Client Section -->
 
