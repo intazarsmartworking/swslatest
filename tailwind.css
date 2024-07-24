@@ -720,6 +720,14 @@ body {
     padding: 50px 40px 50px 40px;
 }
 
+.borderdown{
+    border-color: rgba(236, 236, 237, 0.2);
+}
+
+.sm-color{
+    color: rgba(127, 127, 127, 1);
+}
+
 /*.font-regular{
     font-weight: 400;
 }

@@ -44,124 +44,124 @@ get_header('second');
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pr-5">
 		
-            <div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/android.svg" class="pb-4">
+            <div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/android.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Android </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/angular.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Angular </h4>
-				</div>
-			</div>
-
-            <div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/aws.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> AWS </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Android </h4>
 				</div>
 			</div>
 			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/azure.svg" class="pb-4">
+			<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/angular.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Azure </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/devops.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> DevOps </h4>
-				</div>
-			</div>
-			
-			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/django.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Django </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Angular </h4>
 				</div>
 			</div>
 
+            <div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/aws.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> AWS </h4>
+				</div>
+			</div>
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/azure.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Azure </h4>
+				</div>
+			</div>
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/devops.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> DevOps </h4>
+				</div>
+			</div>
+			
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/django.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Django </h4>
+				</div>
+			</div>
 
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/docker.svg" class="pb-4">
+
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/docker.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Docker </h4>
-				</div>
-			</div>
-			
-			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/ios.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> iOS </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Docker </h4>
 				</div>
 			</div>
 			
 			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/java.svg" class="pb-4">
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/ios.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Java </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/kubernetes.svg" class="pb-4">
-				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Kubernetes </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> iOS </h4>
 				</div>
 			</div>
 			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/laravel.svg" class="pb-4">
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/java.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> Laravel </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Java </h4>
 				</div>
 			</div>
 			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex">
-					<img src="<?php echo get_template_directory_uri();?>/images/mongodb.svg" class="pb-4">
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/kubernetes.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> MongoDB </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Kubernetes </h4>
 				</div>
 			</div>
 			
-			<div class="flex flex-col md:flex-row items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex ">
-					<img src="<?php echo get_template_directory_uri();?>/images/mysql.svg" class="pb-4">
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/laravel.svg">
 				</div>
-				<div class="w-full flex">
-					<h4 class="text-xs font-normal text-dark-black"> MySQL </h4>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> Laravel </h4>
+				</div>
+			</div>
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto">
+					<img src="<?php echo get_template_directory_uri();?>/images/mongodb.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> MongoDB </h4>
+				</div>
+			</div>
+			
+			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
+				<div class="w-full flex justify-center md:justify-end md:w-auto ">
+					<img src="<?php echo get_template_directory_uri();?>/images/mysql.svg">
+				</div>
+				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+					<h4 class="text-xs font-bold text-dark-black"> MySQL </h4>
 				</div>
 			</div>
 

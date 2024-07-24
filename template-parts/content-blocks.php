@@ -10,31 +10,52 @@
 
 ?>
 
-<!-- Trusted By Organization -->
-<?php if (have_rows('block')) : ?>
-  <?php while (have_rows('block')) : the_row(); ?>
-    <?php if (get_row_layout() == 'trusted_organization') : ?>
-	<div class="w-full relative  grid items-center" >
-	<h3 class="text-center small-intro">Clients</h3>
-	  <div class="px-10">
-	    <?php if(get_sub_field('main_title')): ?>
-			<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>
-		<?php endif; ?>
-		 <div class="grid grid-cols-2 md:grid-cols-9 gap-4 mt-9">
-		  <?php if(have_rows('organization_name')): ?>
-			<?php while(have_rows('organization_name')): the_row(); ?>
-				<div class="bg-trust-box py-3 px-2 rounded-xl">
-					<img src="<?php echo get_sub_field('organization_image')['url']; ?>" alt="<?php echo get_sub_field('organization_image')['url']; ?>" class="mb-5 md:mb-32">
-				</div>
-			  <?php endwhile; ?>	
-			<?php endif; ?> 
+
+<!-- Future Remote -->
+<div class="w-full relative  grid items-center" >
+	<div class="px-10">
+	    <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Remote Tech Hiring </span> </h1>
+		
+		<div class="container mx-auto p-4">
+		  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
+
+		  	<div class="p-4">
+                <h2 class="text-4xl font-bold text-dark-orange">150+</h2>
+                <hr class="my-4 borderdown">
+                <h3 class="text-2xl font-medium text-white">Organisations</h3>
+                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+            </div>
+
+			<div class="p-4">
+                <h2 class="text-4xl font-bold text-dark-orange">1m+</h2>
+                <hr class="my-4 borderdown">
+                <h3 class="text-2xl font-medium text-white">Experts available</h3>
+                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+            </div>
+
+			<div class="p-4">
+                <h2 class="text-4xl font-bold text-dark-orange">96%</h2>
+                <hr class="my-4 borderdown">
+                <h3 class="text-2xl font-medium text-white">Retention rate 1</h3>
+                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+            </div>
+
+			<div class="p-4">
+                <h2 class="text-4xl font-bold text-dark-orange">£20/hr</h2>
+                <hr class="my-4 borderdown">
+                <h3 class="text-2xl font-medium text-white">Hire developer</h3>
+                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+            </div>
+		</div> 	  
 		</div> 
 	  </div>
 	</div>
-	<?php endif; ?>
+
   
 
 <!-- Europe Leading Section  -->
+<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'europe_leading_box') : ?>
 		<div class="w-full relative grid items-center bg-black ">
 			<div class="container mx-auto md:px-0 px-10">

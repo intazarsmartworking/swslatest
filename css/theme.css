@@ -1009,6 +1009,10 @@ select {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1020,6 +1024,10 @@ select {
 .my-7 {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .mb-0 {
   margin-bottom: 0px;
@@ -2677,6 +2685,12 @@ body {
     border-radius: 32px 32px 0px 0px;
     padding: 50px 40px 50px 40px;
 }
+.borderdown{
+    border-color: rgba(236, 236, 237, 0.2);
+}
+.sm-color{
+    color: rgba(127, 127, 127, 1);
+}
 /*.font-regular{
     font-weight: 400;
 }
@@ -3118,10 +3132,6 @@ body {
     margin-bottom: 6rem;
   }
 
-  .md\:mb-32 {
-    margin-bottom: 8rem;
-  }
-
   .md\:mb-5 {
     margin-bottom: 1.25rem;
   }
@@ -3162,6 +3172,10 @@ body {
     width: 60%;
   }
 
+  .md\:w-auto {
+    width: auto;
+  }
+
   .md\:w-full {
     width: 100%;
   }
@@ -3194,12 +3208,16 @@ body {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 
   .md\:p-4 {
