@@ -264,57 +264,50 @@ function deselectSkill(event) {
   event.currentTarget.classList.add('hidden');
 }
 
+// Counter function
+function animateCounter(element, start, end, duration, suffix = '') {
+  let startTime = null;
 
-// JavaScript to update Interview Screen
-const priceRangeElements = document.getElementsByClassName('price-range');
-const priceValueElements = document.getElementsByClassName('range-value');
+  const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value.toLocaleString() + suffix;
+      if (progress < 1) {
+          window.requestAnimationFrame(step);
+      }
+  };
 
-if (priceRangeElements.length > 0 && priceValueElements.length > 0) {
-    const priceRange = priceRangeElements[0];
-    const priceValue = priceValueElements[0];
-
-    const updateValuePosition = () => {
-        const value = priceRange.value;
-        priceValue.textContent = value;
-
-        const rangeWidth = priceRange.offsetWidth;
-        const thumbWidth = 20; 
-        const min = priceRange.min;
-        const max = priceRange.max;
-        const percentage = (value - min) / (max - min);
-        const offset = percentage * (rangeWidth - thumbWidth) + (thumbWidth / 2);
-
-        priceValue.style.left = `${offset}px`;
-    };
-
-    priceRange.addEventListener('input', updateValuePosition);
-    updateValuePosition();
+  window.requestAnimationFrame(step);
 }
 
+// Intersection Observer to trigger the animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const element = entry.target;
+          const targetValue = parseInt(element.getAttribute('data-target'));
+          const textContent = element.textContent.trim();
 
-// JavaScript to update Technical Assignment
-const technicalRangeElements = document.getElementsByClassName('technical-range');
-const technicalValueElements = document.getElementsByClassName('technical-value');
+          let suffix = '';
+          if (textContent.includes('+')) {
+              suffix = '+';
+          } else if (textContent.includes('%')) {
+              suffix = '%';
+          } else if (textContent.includes('£')) {
+              suffix = '£' + targetValue;
+          }
 
-if (technicalRangeElements.length > 0 && technicalValueElements.length > 0) {
-    const technicalRange = technicalRangeElements[0];
-    const technicalValue = technicalValueElements[0];
+          animateCounter(element, 0, targetValue, 2000, suffix);
+          observer.unobserve(element); // Unobserve the element after animation starts
+      }
+  });
+}, {
+  threshold: 0.5 // Adjust this threshold as needed
+});
 
-    const updateValuePosition1 = () => {
-        const value = technicalRange.value;
-        technicalValue.textContent = value;
-
-        const rangeWidth = technicalRange.offsetWidth;
-        const thumbWidth = 20; 
-        const min = technicalRange.min;
-        const max = technicalRange.max;
-        const percentage = (value - min) / (max - min);
-        const offset = percentage * (rangeWidth - thumbWidth) + (thumbWidth / 2);
-
-        technicalValue.style.left = `${offset}px`;
-    };
-
-    technicalRange.addEventListener('input', updateValuePosition1);
-    updateValuePosition1();
-}
+// Observe each counter element
+document.querySelectorAll('[data-target]').forEach(element => {
+  observer.observe(element);
+});
 

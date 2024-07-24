@@ -20,21 +20,21 @@
 		  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
 
 		  	<div class="p-4">
-                <h2 class="text-4xl font-bold text-dark-orange">150+</h2>
+                <h2 class="text-4xl font-bold text-dark-orange" data-target="150">150+</h2>
                 <hr class="my-4 borderdown">
                 <h3 class="text-2xl font-medium text-white">Organisations</h3>
                 <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
             </div>
 
 			<div class="p-4">
-                <h2 class="text-4xl font-bold text-dark-orange">1m+</h2>
+                <h2 class="text-4xl font-bold text-dark-orange" data-target="1000000">1m+</h2>
                 <hr class="my-4 borderdown">
                 <h3 class="text-2xl font-medium text-white">Experts available</h3>
                 <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
             </div>
 
 			<div class="p-4">
-                <h2 class="text-4xl font-bold text-dark-orange">96%</h2>
+                <h2 class="text-4xl font-bold text-dark-orange" data-target="96">96%</h2>
                 <hr class="my-4 borderdown">
                 <h3 class="text-2xl font-medium text-white">Retention rate 1</h3>
                 <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>

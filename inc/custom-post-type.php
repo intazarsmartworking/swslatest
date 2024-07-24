@@ -68,3 +68,39 @@ function cc_vetted_profile_post_type() {
 
 	register_post_type( 'ai-vetted-profile', $args );
 }
+
+
+
+// Custom Post Type for Hire Developers
+add_action( 'init', 'cc_hire_post_type' );
+function cc_hire_post_type() {
+	$labels = array(
+		'name'               => __( 'Hire Developer' ),
+		'singular_name'      => __( 'Hire Developer' ),
+		'all_items'          => __( 'All Hire Developer' ),
+		'add_new'            => _x( 'Add new', 'Hire Developer' ),
+		'add_new_item'       => __( 'Add New Hire Developer' ),
+		'edit_item'          => __( 'Edit Hire Developer' ),
+		'new_item'           => __( 'New Hire Developer' ),
+		'view_item'          => __( 'View Hire Developer' ),
+		'search_items'       => __( 'Search in Hire Developer' ),
+		'not_found'          => __( 'No Hire Developer found' ),
+		'not_found_in_trash' => __( 'No Hire Developer found in trash' ),
+		'parent_item_colon'  => '',
+		
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'hierarchical'       => true,
+        'show_ui'            => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'menu_icon'          => 'dashicons-universal-access',
+		'rewrite'            => array( 'slug' => 'hire' ),
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
+		'taxonomies'  		 => array( 'topics', 'category' )
+	);
+
+	register_post_type( 'hire', $args );
+}

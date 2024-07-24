@@ -44,129 +44,32 @@ get_header('second');
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pr-5">
 		
-            <div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/android.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Android </h4>
-				</div>
-			</div>
 			
-			<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/angular.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Angular </h4>
-				</div>
-			</div>
 
-            <div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/aws.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> AWS </h4>
-				</div>
-			</div>
+			<?php 
+				$hire_args = array( 'post_type' => 'hire');
+				$hire_query	= new WP_Query($hire_args);
+				
+			?>
+			<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
+			<?php 
+				$hire_image_id = get_post_thumbnail_id();
+			    $hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+				$permalink = get_permalink();
+    			$modified_permalink = rtrim($permalink, '/') . '-developer/';
+			?>
 			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/azure.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Azure </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/devops.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> DevOps </h4>
-				</div>
-			</div>
-			
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/django.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Django </h4>
-				</div>
-			</div>
-
-
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/docker.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Docker </h4>
-				</div>
-			</div>
-			
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/ios.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> iOS </h4>
-				</div>
-			</div>
-			
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/java.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Java </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/kubernetes.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Kubernetes </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/laravel.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> Laravel </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto">
-					<img src="<?php echo get_template_directory_uri();?>/images/mongodb.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> MongoDB </h4>
-				</div>
-			</div>
-			
-			<div class="flex flex-col md:flex-row items-center py-2 px-2 rounded-lg skill-border cursor-pointer">
-				<div class="w-full flex justify-center md:justify-end md:w-auto ">
-					<img src="<?php echo get_template_directory_uri();?>/images/mysql.svg">
-				</div>
-				<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-					<h4 class="text-xs font-bold text-dark-black"> MySQL </h4>
-				</div>
-			</div>
-
-
-
+				<a href="<?php echo esc_url($modified_permalink); ?>">
+					<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+						<div class="w-full flex justify-center md:justify-end md:w-auto">
+							<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
+						</div>
+						<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+							<h4 class="text-xs font-bold text-dark-black"> <?php the_title();?> </h4>
+						</div>
+					</div>
+				</a>
+			<?php endwhile; wp_reset_postdata();?>
          </div>
 		 
       </div>
