@@ -188,6 +188,9 @@ get_header('second');
 				</div>
 			</div>
 <?php endif; ?>
+
+<?php get_template_part( 'template-parts/client-testimonial' );?>
+
 <?php endwhile; ?>
 <?php endif; ?>
 
@@ -233,5 +236,45 @@ get_header('second');
 
     </div>
 </div>
+
+
+<!-- Ready To Hire  -->
+<?php if (have_rows('block')) : ?>
+  <?php while (have_rows('block')) : the_row(); ?>
+      <?php if (get_row_layout() == 'hire_developer_section') : ?>
+		<div class="w-full relative grid items-center bg-black mt-20 mb-10 set-margin">
+			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					
+						<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
+						 <?php if(get_sub_field('main_title')): ?>
+						  <h1 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+						 <?php endif; ?>	
+
+						<?php if(get_sub_field('subheading')): ?>	
+						  <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+						<?php endif; ?> 
+
+						<?php if(get_sub_field('button_name')): ?>
+						<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
+							  <div class="header-buttons mt-16 mb-10 text-center md:text-left">
+								<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+							  </div>
+						<?php endif; ?>	
+						</div>
+						<?php $hire_dev_main_img = get_sub_field('background_image');
+						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+						?>
+							<div class="px-6 py-10 flex justify-self-center">
+								<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-auto">
+							</div>
+						<?php endif; ?>
+					
+				</div>
+			</div>
+		</div>
+      <?php endif; ?>		
+	<?php endwhile; ?>
+<?php endif; ?>	
 
 <?php get_footer();?>
