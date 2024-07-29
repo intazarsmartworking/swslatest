@@ -80,7 +80,7 @@ get_header('second');
     			$modified_permalink = rtrim($permalink, '/') . '-developer/';
 			?>
 			
-				<a href="<?php echo esc_url($modified_permalink); ?>">
+				<a href="<?php echo get_permalink(); ?>">
 					<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
 						<div class="w-full flex justify-center md:justify-end md:w-auto">
 							<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
