@@ -11,7 +11,7 @@ get_header('second');
 <?php if (have_rows('section_block')) : ?>
 	<?php while (have_rows('section_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'first_section') : ?>
-        <section class="bg-black flex flex-col items-center justify-center py-16">
+        <section class="bg-black flex flex-col items-center justify-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
             <div class="flex flex-col items-center justify-center mb-20">
             <?php if(get_sub_field('main_title')): ?>    
                 <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
@@ -153,7 +153,7 @@ get_header('second');
 <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'curious_section') : ?>
-			<div class="w-full relative grid items-center mt-4">
+			<div class="w-full relative grid items-center  bg-black">
 				<div class="container mx-auto md:px-0 px-10 curious-bg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						
@@ -242,7 +242,7 @@ get_header('second');
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative grid items-center bg-black mt-20 mb-10 set-margin">
+		<div class="w-full relative grid items-center bg-black  set-margin">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					

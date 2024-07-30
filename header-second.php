@@ -30,7 +30,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">
+<header class="bg-black text-white p-4 flex justify-between items-center md:hidden">
 	<div class="flex items-center">
     <?php if(get_field('header_logo', 'options')): ?>
 		<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
