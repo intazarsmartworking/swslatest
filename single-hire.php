@@ -47,11 +47,59 @@
 </div>
 </div>
 </div>
-
 <?php endif; ?>
+
+<?php if (get_row_layout() == 'top_find_section') : ?>
+<section class="bg-black flex flex-col items-center justify-center py-16">
+<?php if(get_sub_field('top_title')): ?>  
+  <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
+<?php endif; ?>
+      <div class="flex flex-col items-center justify-center">
+        <?php if(get_sub_field('main_title')): ?> 
+          <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+          <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+        <?php endif; ?>  
+      </div>
+
+      <?php if(get_sub_field('small_paragraph')): ?> 
+        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+      <?php endif; ?>   
+        <div class="flex justify-center space-x-8 relative mb-28">
+
+
+        <?php if(have_rows('step_section')): ?>
+					<?php while(have_rows('step_section')): the_row(); ?>
+					<?php 
+						$step_title = get_sub_field('step_title'); 
+						$title = get_sub_field('title'); 
+            $position = get_sub_field('position'); 
+					?>  
+             <div class="flex flex-col  items-center justify-center relative <?php echo $position;?>">
+               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4"><?php echo $step_title;?></h2>
+               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+               <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
+                   <h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
+                   <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+                   <img class="pl-14"  src="<?php echo get_sub_field('image')['url']; ?>" alt="">
+               </div>
+             </div>
+            
+              <?php endwhile; ?>	
+            <?php endif; ?>  
+           
+             </div>
+
+        <div class="mt-12">
+            <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
+        </div>
+    </section>
+
+
+    <?php endif; ?>
     <?php endwhile; ?>
-<?php endif; ?>
+<?php endif; ?>   
 
+ 
 
 <?php get_template_part( 'template-parts/home-blog' );?>
 
