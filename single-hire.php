@@ -49,6 +49,125 @@
 </div>
 <?php endif; ?>
 
+
+
+<!-- Vetted Profile Section -->
+
+<?php if (get_row_layout() == 'vetted_profile') : ?>
+<section class="bg-black flex flex-col items-center justify-center py-16">
+	<?php if(get_sub_field('top_title')): ?>
+		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
+	<?php endif; ?> 
+	
+    <div class="flex flex-col items-center justify-center mb-20">
+	<?php if(get_sub_field('main_title')): ?>
+      <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+      <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+	<?php endif; ?>  
+    </div>
+	
+	
+	<div class="container mx-auto p-4">
+        <div class="flex flex-wrap -mx-2">
+		
+			<?php if(have_rows('vetted_box')): ?>
+			<?php while(have_rows('vetted_box')): the_row(); ?>
+			<?php 
+			  $developer_name = get_sub_field('developer_name'); 
+			  $profile = get_sub_field('profile'); 
+              $experience = get_sub_field('experience'); 
+              $avai = get_sub_field('avai'); 
+			?> 
+		
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                <div class="custom-bg custom-border">
+				<div class="flex items-center">
+					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+					<div>
+						<span class="text-white text-2xl font-medium block"><?php echo $developer_name;?></span>
+						<span class="text-white text-sm font-normal block"><?php echo $profile;?></span>
+					</div>
+				</div>
+
+
+				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
+					<div class="flex flex-col sm:flex-row">
+						<img src="<?php echo get_sub_field('image')['url']; ?>" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+				    <div>
+					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
+					 <p class="text-white text-base font-medium"><?php echo $experience;?></p>
+				    </div>
+                    </div>
+				  <div class="flex flex-col sm:flex-row">
+					<img src="<?php echo get_template_directory_uri();?>/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+					  <div>
+						  <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
+						  <p class="text-white text-base font-medium"><?php echo $avai;?></p>
+					  </div>
+				  </div>
+                </div>
+				<h2 class="text-sm font-medium text-white pb-10">Technologies</h2>
+				    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+					 <?php if(have_rows('technology')): ?>
+					 <?php while(have_rows('technology')): the_row(); ?>
+					 <?php 
+					  $tech_name = get_sub_field('name'); 
+					 ?>
+                        <div class="flex items-center tech-item">
+                            <div class="flex-1">
+                                <h3 class="text-xs font-medium"><?php echo $tech_name;?></h3>
+                            </div>
+                            <img src="<?php echo get_sub_field('image')['url']; ?>" alt="Technology 1" class="w-4 h-4 rounded-full">
+                        </div>
+						
+						<?php endwhile; ?>	
+					<?php endif; ?> 	
+                           
+                    </div>
+					
+					 <?php if(have_rows('rate')): ?>
+					 <?php while(have_rows('rate')): the_row(); ?>
+					
+					<div class="w-full p-4 mt-4">
+						<img src="<?php echo get_sub_field('image')['url']; ?>">
+					</div>
+
+						<?php endwhile; ?>	
+					<?php endif; ?>
+					
+					
+					
+					<div class="flex flex-wrap -mx-2 mt-4">
+						<?php if(get_sub_field('per_hour')): ?>
+							<div class="w-full md:w-1/2 px-2 mb-4">
+								<p class="font-medium text-2xl text-white"><?php echo get_sub_field('per_hour'); ?></p>
+							</div>
+						<?php endif; ?>
+                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                            <button class="profile-button-custom">
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+					
+					
+              </div>
+            </div>
+			
+				<?php endwhile; ?>	
+            <?php endif; ?>  
+            
+            
+        </div>
+    </div>	
+		
+		
+</section>
+<?php endif; ?> 
+
+
+<!-- Top Section -->
+
 <?php if (get_row_layout() == 'top_find_section') : ?>
 <section class="bg-black flex flex-col items-center justify-center py-16">
 <?php if(get_sub_field('top_title')): ?>  
