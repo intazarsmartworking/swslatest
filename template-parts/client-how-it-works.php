@@ -1,4 +1,4 @@
-<section class="relative px-4 lg:pt-28 lg:pb-16 bg-black">
+<section class="relative px-0 lg:pt-28 lg:pb-16 bg-black">
     <div class="w-100 mb-9">
         <h3 class="text-center small-intro"> How It Works </h3>
         <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">Hire Offshore Developers</h1>

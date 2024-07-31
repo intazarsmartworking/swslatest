@@ -1089,9 +1089,6 @@ select {
 .mb-\[300px\] {
   margin-bottom: 300px;
 }
-.ml-0 {
-  margin-left: 0px;
-}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1541,6 +1538,9 @@ select {
 .border-\[\#30160a\] {
   --tw-border-opacity: 1;
   border-color: rgb(48 22 10 / var(--tw-border-opacity));
+}
+.border-\[\#a962444d\] {
+  border-color: #a962444d;
 }
 .border-gray-200 {
   --tw-border-opacity: 1;
@@ -2764,7 +2764,7 @@ body {
     color: rgba(127, 127, 127, 1);
 }
 .how-it-works-slide{
-    width: 100%;
+    width: 100% !important;
 	height: 800px;
     min-height: 800px;
 	overflow: hidden;
@@ -3220,21 +3220,28 @@ body {
     font-weight: bold;
     color: #fff;
   }
-.container-circule { 
-    display:grid; 
-    align-items:center; 
-    height:30rem; 
-    width:-moz-max-content; 
-    width:max-content; 
-    margin:auto; 
-}
 .section-introduction .circle-box { 
     text-align: center; 
-    height: 100px; 
-    width: 100px; 
+    height: 52px; 
+    width: 52px; 
+    border: 1px solid #FFF;
     font-size: 1.3rem; 
     font-weight: 700; 
     text-transform: capitalize; 
+    background: #050403;
+    overflow: hidden;
+}
+.container-circule { 
+    display:grid; 
+    align-items:center; 
+    height:auto; 
+    width:-moz-max-content; 
+    width:max-content; 
+    margin:auto; 
+    padding: 10px;
+    border-radius: 70px;
+    border: 1px solid rgba(255, 77, 2, 0.30);
+    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
 }
 .item-1 { 
     grid-row:1; 
@@ -3262,11 +3269,36 @@ body {
 }
 .circle-box p { 
     margin: 0; 
-    font-size: 10px; 
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
 }
 .circle-box span { 
     font-size: 10px; 
     font-weight: normal; 
+}
+.left-profile {
+    width: 100% !important;
+}
+.dev-section{
+    width:100% !important;
+    border: 0;
+    padding: 20px;
+    height: auto !important;
+}
+.slick-initialized .slick-slide{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 0px 10px;
+}
+.slick-initialized .slide-item{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 0px 10px;
 }
 @keyframes clippath {
     0%,
@@ -3525,8 +3557,16 @@ body {
     width: 13rem;
   }
 
+  .md\:w-\[25\%\] {
+    width: 25%;
+  }
+
   .md\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .md\:w-\[75\%\] {
+    width: 75%;
   }
 
   .md\:w-auto {
@@ -3567,6 +3607,10 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .md\:justify-start {

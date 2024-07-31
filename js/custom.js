@@ -410,3 +410,30 @@ new ScrollMagic.Scene({
     // })
     // .addTo(controller);  
 });
+
+
+
+jQuery('.silkSlide').slick({
+  mobileFirst: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: true,
+  focusOnSelect: true,
+  responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+              mobileFirst: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              centerMode: false,
+              variableWidth: true,
+              focusOnSelect: true
+
+          }
+        }
+      ]
+});
