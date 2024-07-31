@@ -4,7 +4,7 @@
   <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> Your Team </span></h1>
   <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
 	  
-   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative px-0">
       <img src="<?php echo get_template_directory_uri();?>/images/connect-skill.svg" class="join-skill">
       <div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
         <h3 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h3>

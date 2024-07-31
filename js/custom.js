@@ -1,4 +1,18 @@
 // Home Page Accordian
+var screeSize = false; 
+const windoSize = window.innerWidth               
+// $(window).on('resize', function(){
+//     var win = $(this); //this = window
+//     if (win.height() >= 820) { /* ... */ }
+    
+// }); 
+
+if (windoSize < 680) { 
+    screeSize = true
+}else{
+    screeSize = false
+}
+
 function toggleAccordion(sectionNumber) {
     const accordionSection = document.getElementById(`accordion-section-${sectionNumber}`);
     const accordionLabel = document.getElementById(`accordion-label-${sectionNumber}`);
@@ -35,6 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const cards = document.querySelectorAll('.card');
   let leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
+  if(screeSize){
+    leftPositions = ['10px', '600px', '800px','1000px', '1200px', '1400px'];
+  }else{
+    leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
+  }
   let originalLeftPostions = [...leftPositions];
   let rotateCards = ['-9deg', '-7deg', '-4deg','-2deg', '0deg']
 
@@ -118,37 +137,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //How It Works Card Logic
 
-  gsap.registerPlugin(ScrollTrigger);
+  //gsap.registerPlugin(ScrollTrigger);
 
-const spacer = -500;
-let howItWorksCards = gsap.utils.toArray(".how-it-works-card");
+//const spacer = -500;
+
+
+//let howItWorksCards = gsap.utils.toArray(".how-it-works-card");
 
 // Debug: Log the zIndex of the second card
-if (howItWorksCards[1]) {
-  console.log(howItWorksCards[1].style.zIndex);
-}
+// if (howItWorksCards[1]) {
+//   console.log(howItWorksCards[1].style.zIndex);
+// }
 
-gsap.fromTo(
-  ".how-it-works-card:not(:first-child)",
-  {
-    x: (index) =>  window.innerWidth + spacer, // Initial position off-screen
-    rotate: 0,
-  },
-  {
-    x: (index) => (index + 1),  // Final position on-screen
-    stagger: 0.5,
-    rotate: 0,
-    scrollTrigger: {
-      trigger: '.how-it-works-section',  // Trigger element
-      pin: ".how-it-works-section",     // Pin the entire section
-      pinSpacing: false,                // Disable automatic pinSpacing adjustment
-      scrub: true,                      // Smooth scrubbing effect
-      start: "top 50px",        // Start animation when top of section is 100px from top of viewport
-      end: "+=1000",                    // End animation 1000px after start
-      invalidateOnRefresh: true         // Invalidate trigger on refresh
-    }
-  }
-);
+// gsap.fromTo(
+//   ".how-it-works-card:not(:first-child)",
+//   {
+//     x: (index) =>  window.innerWidth + spacer, // Initial position off-screen
+//     rotate: 0,
+//   },
+//   {
+//     x: (index) => (index + 1),  // Final position on-screen
+//     stagger: 0.5,
+//     rotate: 0,
+//     scrollTrigger: {
+//       trigger: '.how-it-works-section',  // Trigger element
+//       pin: ".how-it-works-section",     // Pin the entire section
+//       pinSpacing: false,                // Disable automatic pinSpacing adjustment
+//       scrub: true,                      // Smooth scrubbing effect
+//       start: "top 50px",        // Start animation when top of section is 100px from top of viewport
+//       end: "+=1000",                    // End animation 1000px after start
+//       invalidateOnRefresh: true         // Invalidate trigger on refresh
+//     }
+//   }
+// );
 
 }); 
 
@@ -311,3 +332,81 @@ document.querySelectorAll('[data-target]').forEach(element => {
   observer.observe(element);
 });
 
+var interval;
+var counter = 0;
+function sliderFunction(){
+ var interval = setInterval(function(){
+      if(counter < 100){
+        counter += 10;
+        const width = `${counter}%`
+        jQuery('#progress').css("width", width);
+        jQuery('#range').val(counter);
+        let changeValue = `$ ${counter*20}`
+        jQuery('#price-value').text(changeValue);
+        
+        
+      }else{
+        counter = 0;
+        jQuery('#progress').css("width", 0);
+        jQuery('#range').val(0);
+        let changeValue = `$ 0`
+        jQuery('#price-value').text(changeValue);
+        clearInterval(interval);
+        sliderFunction()
+      }
+  }, 600);
+}
+sliderFunction()
+
+
+
+jQuery(function () { // wait for document ready
+  // init
+
+
+               
+var controller = new ScrollMagic.Controller();
+
+// define movement of panels
+
+var wipeAnimation;
+
+if(!screeSize){
+    console.log('screeSize', screeSize)
+    wipeAnimation = new TimelineMax()
+                    .fromTo("section.panel.white", 1, {x: "5%"}, {x: "5%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.blue", 1, {x: "85%"}, {x: "10%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.turqoise", 1, {x: "90%"}, {x: "15%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.green", 1, {x:  "95%"}, {x: "20%", ease: Linear.easeNone})  // in from right
+}else{
+    wipeAnimation = new TimelineMax()
+                    .fromTo("section.panel.white", 1, {y: "5%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.blue", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.turqoise", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+                    .fromTo("section.panel.green", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
+}
+
+// create scene to pin and link animation
+new ScrollMagic.Scene({
+        triggerElement: "#pinContainer",
+        triggerHook: "onLeave",
+        duration: "300%",
+        offset:-50
+
+    })
+    .setPin("#pinContainer")
+    .setTween(wipeAnimation)
+    //.addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    // new ScrollMagic.Scene({
+    // triggerElement: ".main-box",
+    // duration: '85%' // Duration can be different from Masthead
+    // })
+    // .setPin(".box-1")
+    // .addIndicators({
+    // name: ".box-1 Pin",
+    // colorEnd: "dodgerblue"
+    // })
+    // .addTo(controller);  
+});
