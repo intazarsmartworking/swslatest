@@ -1,8 +1,8 @@
 <?php if (get_row_layout() == 'testimonial_section') : ?>
-	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center items-center bg-black set-margin">
+	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center testimonial-section items-center bg-black set-margin">
 	    <?php if(get_sub_field('small_heading')): ?>
 			<div class ="container mx-auto md:px-0 px-10">
-				<p class="text-white text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
+				<p class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
 			</div>
 		<?php endif; ?>
 		
@@ -11,8 +11,8 @@
 				<?php echo get_sub_field('main_heading'); ?>
 			</div>
 		<?php endif; ?>
-		<div class="w-full flex relative min-h-[700px] pt-16 overflow-hidden">
-		<div class="flex w-1/12">&nbsp;</div>
+		<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+		<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 		<div class="flex w-full relative card-container overflow-visible">
 		
 		    <?php if(have_rows('testimonial_card')): ?>
@@ -26,14 +26,14 @@
 				$background = get_sub_field('background_color'); 
 			?>
 		
-				<div class="bg-[<?php echo esc_attr($background); ?>] w-[600px] h-[600px] rounded-3xl absolute card-placement card" style="--deg:<?php echo esc_attr($degree);?>; --left:<?php echo esc_attr($direction);?>">
-					<div class="p-10 flex flex-col ">
+				<div class="bg-[<?php echo esc_attr($background); ?>] w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card" style="--deg:<?php echo esc_attr($degree);?>; --left:<?php echo esc_attr($direction);?>">
+					<div class="p-4 lg:p-10 flex flex-col ">
 						<div class="flex justify-between items-center mb-6">
 							<img src="<?php echo get_sub_field('logo')['url']; ?>">
 							<img src="<?php echo get_sub_field('rating')['url']; ?>">
 						</div>
 						<p class="text-2xl text-[#050403] leading-9"> <?php echo $testimonial;?> </p>
-						<div class="flex justify-between items-center mt-36">
+						<div class="flex justify-between items-center mt-10 lg:mt-36">
 							<div class="flex items-center">
 								<img class="mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 								<div>

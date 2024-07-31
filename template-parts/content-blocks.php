@@ -77,7 +77,12 @@
 						<div class="europe-box rounded-3xl mb-5">
 							  <div class="flex">
 								<div class="px-6 py-6">
-									<img src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['url']; ?>" class="mb-12">
+									<div class="icons-box">
+										<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+											<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"/>
+										</svg>
+										<img src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['url']; ?>" class="mb-12 icons-img">
+									</div>
 									<div class="mt-12">
 										<h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
 										<span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
@@ -134,8 +139,36 @@
 						<?php $curious_img = get_sub_field('main_image');
 							if (!empty($curious_img) && isset($curious_img['url'])):
 						?>
-							<div class="px-6">
-								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
+							<div class="p-8 min-h-[500px]">
+								<div class="max-w-md rounded-3xl min-h-[300px] my-6 bg-white overflow-hidden shadow-lg p-3">
+									<div class="px-6 py-4">
+										<div class="block">
+											<p class="text-[24px] text-[#64748b]">Hourly rate</p>
+										</div>
+										<div class="block">
+											<p class="text-[54px] font-[500] ">$20/hr</p>
+										</div>
+										<div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
+											<div class="sliderwrap">
+												<label class="vote">
+													<div class="progress" id="progress"></div>
+													<input class="range" id="range" type="range" max="100" value="60" />
+												</label>
+											</div>
+										</div>
+										<div class="block pt-5">
+											<div class="flex">
+												<div class="grow">
+													<span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+												</div>
+												<div class="grow text-end">
+													<span id="price-value" class="text-[24px] font-[500] text-black">£40,000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>"> -->
 							</div>
 						<?php endif; ?>
 						
@@ -202,7 +235,7 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative grid items-center bg-black mt-20 mb-10 set-margin">
+		<div class="w-full relative grid items-center bg-black pt-20 pb-10 set-margin">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					

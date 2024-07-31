@@ -15,8 +15,8 @@ module.exports = {
 				'footer-menu-color': '#aba4a4',
 				'blog-table':'#FAFAFA4D',
 				'main-gray':'#1d1d1da8'
-			},
 			}
+		},
 	},
 	plugins: [
 		require('@tailwindcss/forms'),
