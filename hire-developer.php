@@ -8,20 +8,41 @@
 get_header('second');
 ?>
 
+<?php if (have_rows('section_block')) : ?>
+	<?php while (have_rows('section_block')) : the_row(); ?>
+    <?php if (get_row_layout() == 'first_section') : ?>
+        <section class="bg-black flex flex-col items-center justify-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+            <div class="flex flex-col items-center justify-center mb-20">
+            <?php if(get_sub_field('main_title')): ?>    
+                <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+            <?php endif; ?> 
 
-<section class="bg-black flex flex-col items-center justify-center py-16">
-    <div class="flex flex-col items-center justify-center mb-20">
-      <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Hire Developers for all Software</h1> 
-      <span class="text-dark-orange text-[56px]">Development Needs</span> 
-      <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> Dedicated Developers for all software developments needs </h3>
-      <div class="header-buttons mb-20">
-        <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
-      </div>
+            <?php if(get_sub_field('orange_title')): ?>   
+                <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+            <?php endif; ?> 
 
-      <img src="<?php echo get_template_directory_uri();?>/images/hire-group.svg">
-    </div>
+            <?php if(get_sub_field('small_paragraph')): ?>      
+                <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </h3>
+            <?php endif; ?> 
 
-</section>   
+            <?php if(get_sub_field('button_name')): ?> 
+            <?php $bb_url =  get_sub_field('button_url'); ?>
+            <div class="header-buttons mb-20">
+                <a href="<?php echo esc_url( $bb_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+            </div>
+            <?php endif; ?> 
+            
+            <?php $mainimg = get_sub_field('main_image');
+				if (!empty($mainimg) && isset($mainimg['url'])):
+			?>
+            <img src="<?php echo esc_url($mainimg['url']); ?>">
+            <?php endif; ?>
+            </div>
+
+        </section>   
+        <?php endif; ?>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <!-- Explore Section -->
  
@@ -59,7 +80,7 @@ get_header('second');
     			$modified_permalink = rtrim($permalink, '/') . '-developer/';
 			?>
 			
-				<a href="<?php echo esc_url($modified_permalink); ?>">
+				<a href="<?php echo get_permalink(); ?>">
 					<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
 						<div class="w-full flex justify-center md:justify-end md:w-auto">
 							<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
@@ -82,82 +103,96 @@ get_header('second');
 
 
 <!-- Smart Working Section -->
-
+<?php if (have_rows('section_block')) : ?>
+	<?php while (have_rows('section_block')) : the_row(); ?>
+    <?php if (get_row_layout() == 'second_section') : ?>
 <div class="w-full relative grid items-center pb-32 bg-black ">
     <div class="container mx-auto md:px-0 px-10">
-        <h3 class="text-center small-intro"> Smart Work </h3>
-		<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white">When you work with</span><span class="text-dark-orange">Smart Working</span> </h1>
+        <?php if(get_sub_field('small_title')): ?>	
+            <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+        <?php endif; ?>
+
+        <?php if(get_sub_field('main_title')): ?>
+		    <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h1>
+        <?php endif; ?>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-28">
 
-            <div class="europe-box rounded-3xl mb-5">
-                <div class="flex">
-                    <div class="px-6 py-6">
-                        <img src="<?php echo get_template_directory_uri();?>/images/euro.svg"  class="mb-12">
-                        <div class="mt-12">
-                            <h3 class="text-white text-xl font-bold leading-tight mb-3"> Breathe Easy </h3>
-                            <span class="text-white text-base"> In a laoreet purus. Integer turpis quam </span>
-                        </div>
-                    </div>
+        <?php if(have_rows('box_section')): ?>
+			<?php while(have_rows('box_section')): the_row(); ?>
+            <?php 
+                $title_name = get_sub_field('title'); 
+                $subtitle_name = get_sub_field('small_text'); 
+            ?>    
 
-                </div>
-            </div>
-			
+
 			<div class="europe-box rounded-3xl mb-5">
                 <div class="flex">
                     <div class="px-6 py-6">
-                        <img src="<?php echo get_template_directory_uri();?>/images/euro.svg"  class="mb-12">
+                        <img src="<?php echo get_sub_field('icon')['url']; ?>"  class="mb-12">
                         <div class="mt-12">
-                            <h3 class="text-white text-xl font-bold leading-tight mb-3"> Build Smarter </h3>
-                            <span class="text-white text-base"> In a laoreet purus. Integer turpis quam </span>
+                            <h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
+                            <span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
                         </div>
                     </div>
 
                 </div>
             </div>
-			
-			<div class="europe-box rounded-3xl mb-5">
-                <div class="flex">
-                    <div class="px-6 py-6">
-                        <img src="<?php echo get_template_directory_uri();?>/images/euro.svg"  class="mb-12">
-                        <div class="mt-12">
-                            <h3 class="text-white text-xl font-bold leading-tight mb-3"> Achive Faster </h3>
-                            <span class="text-white text-base"> In a laoreet purus. Integer turpis quam </span>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
+                <?php endwhile; ?>	
+			<?php endif; ?> 
+
             
         </div>
 	</div>
 </div>
+    <?php endif; ?>
+  <?php endwhile; ?>
+<?php endif; ?>
 
-<!-- Curious Section --> 
-<div class="w-full relative grid items-center  bg-black ">
-    <div class="container mx-auto md:px-0 px-10 curious-bg">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Curios Section  -->
+<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+<?php if (get_row_layout() == 'curious_section') : ?>
+			<div class="w-full relative grid items-center  bg-black">
+				<div class="container mx-auto md:px-0 px-10 curious-bg">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						
+							<div class="pl-7 pr-7 md:pl-48 md:pr-12">
+							<?php if(get_sub_field('small_title')): ?>
+							  <h3 class="text-center md:text-left calculator-intro mt-20"> <?php echo get_sub_field('small_title'); ?> </h3>
+							<?php endif; ?>
 
-            <div class="pl-7 pr-7 md:pl-48 md:pr-12">
-                <h3 class="text-center md:text-left calculator-intro mt-20"> Calculator </h3>
+							<?php if(get_sub_field('main_heading')): ?>	
+							  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
+							<?php endif; ?> 
+							 <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+					  
+					        <?php if(get_sub_field('button_name')): ?>
+							<?php $calc_url =  get_sub_field('button_url'); ?>
+								<div class="header-buttons mt-16 mb-10 text-center md:text-left">
+								  <a href="<?php echo esc_url( $calc_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+								</div>
+							<?php endif; ?>
+							
+							</div>
+						
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+							<div class="px-6">
+								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
+							</div>
+						<?php endif; ?>
+						
+					</div>
+				</div>
+			</div>
+<?php endif; ?>
 
+<?php get_template_part( 'template-parts/client-testimonial' );?>
 
-                <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight">Curious About <span class="text-dark-orange"> Cost? </span></h1>
-
-                <span class="text-center md:text-left text-white text-base"> Find out the price of your next remote hire here. </span>
-
-                <div class="header-buttons mt-16 mb-10 text-center md:text-left">
-                    <a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">Click to calculate now</a>
-                </div>
-
-            </div>
-
-            <div class="px-6">
-                <img src="<?php echo get_template_directory_uri();?>/images/calcbg.svg">
-            </div>
-
-        </div>
-    </div>
-</div>
+<?php endwhile; ?>
+<?php endif; ?>
 
 <!-- Assemble Team Section -->
 <?php get_template_part( 'template-parts/assemble-team' );?>
@@ -201,5 +236,45 @@ get_header('second');
 
     </div>
 </div>
+
+
+<!-- Ready To Hire  -->
+<?php if (have_rows('block')) : ?>
+  <?php while (have_rows('block')) : the_row(); ?>
+      <?php if (get_row_layout() == 'hire_developer_section') : ?>
+		<div class="w-full relative grid items-center bg-black  set-margin">
+			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					
+						<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
+						 <?php if(get_sub_field('main_title')): ?>
+						  <h1 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+						 <?php endif; ?>	
+
+						<?php if(get_sub_field('subheading')): ?>	
+						  <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+						<?php endif; ?> 
+
+						<?php if(get_sub_field('button_name')): ?>
+						<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
+							  <div class="header-buttons mt-16 mb-10 text-center md:text-left">
+								<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+							  </div>
+						<?php endif; ?>	
+						</div>
+						<?php $hire_dev_main_img = get_sub_field('background_image');
+						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+						?>
+							<div class="px-6 py-10 flex justify-self-center">
+								<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-auto">
+							</div>
+						<?php endif; ?>
+					
+				</div>
+			</div>
+		</div>
+      <?php endif; ?>		
+	<?php endwhile; ?>
+<?php endif; ?>	
 
 <?php get_footer();?>

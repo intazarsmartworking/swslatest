@@ -1518,6 +1518,13 @@
                 "operator": "==",
                 "value": "pricing.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "hire-developer.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1529,5 +1536,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721063620
+    "modified": 1721906964
 }

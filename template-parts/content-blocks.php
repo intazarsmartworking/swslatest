@@ -68,7 +68,7 @@
 			<?php endif; ?>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 
-				<?php if(have_rows('box_item')): ?>
+					<?php if(have_rows('box_item')): ?>
 					<?php while(have_rows('box_item')): the_row(); ?>
 					<?php 
 						$title_name = get_sub_field('title'); 

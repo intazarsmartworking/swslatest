@@ -93,11 +93,12 @@ function cc_hire_post_type() {
 	$args = array(
 		'labels'             => $labels,
         'hierarchical'       => true,
+		'public'             => true, // Ensure this is set to true
         'show_ui'            => true,
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-universal-access',
-		'rewrite'            => array( 'slug' => 'hire' ),
+		'rewrite'            => array( 'slug' => 'hire', 'with_front' => false ),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
 		'taxonomies'  		 => array( 'topics', 'category' )
 	);
