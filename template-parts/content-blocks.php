@@ -14,7 +14,7 @@
 <!-- Future Remote -->
 <div class="w-full relative  grid items-center" >
 	<div class="px-10">
-	    <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Remote Tech Hiring </span> </h1>
+	    <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Hiring </span> </h1>
 		
 		<div class="container mx-auto p-4">
 		  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
@@ -22,29 +22,26 @@
 		  	<div class="p-4">
                 <h2 class="text-4xl font-bold text-dark-orange" data-target="150">150+</h2>
                 <hr class="my-4 borderdown">
-                <h3 class="text-2xl font-medium text-white">Organisations</h3>
-                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+                <h3 class="text-2xl font-medium text-white">Orgs</h3>
+                <!-- <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p> -->
             </div>
 
 			<div class="p-4">
                 <h2 class="text-4xl font-bold text-dark-orange" data-target="1000000">1m+</h2>
                 <hr class="my-4 borderdown">
                 <h3 class="text-2xl font-medium text-white">Experts available</h3>
-                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
             </div>
 
 			<div class="p-4">
                 <h2 class="text-4xl font-bold text-dark-orange" data-target="96">96%</h2>
                 <hr class="my-4 borderdown">
-                <h3 class="text-2xl font-medium text-white">Retention rate 1</h3>
-                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+                <h3 class="text-2xl font-medium text-white">Retention Rate</h3>
             </div>
 
 			<div class="p-4">
-                <h2 class="text-4xl font-bold text-dark-orange">£20/hr</h2>
+                <h2 class="text-4xl font-bold text-dark-orange" data-target="25000">25000</h2>
                 <hr class="my-4 borderdown">
-                <h3 class="text-2xl font-medium text-white">Hire developer</h3>
-                <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p>
+                <h3 class="text-2xl font-medium text-white">Candidates reviewed per month</h3>
             </div>
 		</div> 	  
 		</div> 
