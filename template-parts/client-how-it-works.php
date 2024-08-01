@@ -244,7 +244,7 @@
             <section class="how-it-works-card panel pt-5 white rounded-2xl bg-[#ECC1A1] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative  w-[100%] h-[50] lg:absolute lg:bottom-[11rem] lg:right-[7rem] howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">Step 1: Outline your tech requirements</span>
+                        <span class="text-2 lg:text-[24px] font-extrabold">Step 1: Outline your tech requirements</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -299,7 +299,7 @@
             <section class="how-it-works-card panel pt-5 blue rounded-2xl bg-[#77BDDF] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative  w-[100%] h-[50] lg:absolute lg:bottom-[11rem] lg:right-[7rem] howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">Step 2: Meet the Best Engineers</span>
+                        <span class="text-2 lg:text-[24px] font-extrabold">Step 2: Meet the Best Engineers</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -356,7 +356,7 @@
             <section class="how-it-works-card panel pt-5 turqoise rounded-2xl bg-[#C282FA] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative  w-[100%] h-[50] lg:absolute lg:bottom-[11rem] lg:right-[7rem] howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">Step 3: Quick & Effective Onboarding</span>
+                        <span class="text-2 lg:text-[24px] font-extrabold">Step 3: Quick & Effective Onboarding</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -408,7 +408,7 @@
             <section class="how-it-works-card panel pt-5 green rounded-2xl bg-[#60E3D5] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative w-[100%] h-[50] lg:absolute lg:bottom-[11rem] lg:right-[7rem] howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">Step 4: Long-term support</span>
+                        <span class="text-2 lg:text-[24px] font-extrabold">Step 4: Long-term support</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
