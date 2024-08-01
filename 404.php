@@ -53,7 +53,7 @@ get_header();
 		</section>
 	</main> -->
 
-	<section class="bg-404 w-[100%] pt-[100px] lg:py-[100px] lg:px-[200px]">
+	<section class="bg-404 w-[100%] lg:py-[100px] lg:px-[200px]">
 		<div class="container">
 			<div class="grid grid-cols-1 gap-4">
 				<div class=" text-white text-xl text-center pb-[45px]">
@@ -64,7 +64,7 @@ get_header();
 						<h1 class="text-[22px] lg:text-[56px] text-[#ffffff] leading-[56px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">Whoops! Something went wrong</h1>
 						<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] leading-[28px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">The page you were looking for is not there. A task has been created to fix this.</p>
 					</div>
-					<div class="w-[100%] text-center pt-[48px]">
+					<div class="w-[100%] text-center py-[48px] ">
 						<button class="w-[180px] text-center rounded-[6px] inline-block h-[48px] border border-[#FF4D02] text-[#ffffff] lg:mr-[10px]">
 							<svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
 								<path d="M4.42188 12.2375H19.1909" stroke="white" stroke-width="1.38462" stroke-linecap="square"/>

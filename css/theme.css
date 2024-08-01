@@ -1691,6 +1691,9 @@ select {
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
+.bg-\[url\(\'\.\.\/sws\/images\/bg-404\.png\'\)\] {
+  background-image: url('../sws/images/bg-404.png');
+}
 .from-black {
   --tw-gradient-from: #000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -1853,6 +1856,10 @@ select {
 .py-\[80px\] {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.py-\[48px\] {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
