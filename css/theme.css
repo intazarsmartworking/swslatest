@@ -3766,6 +3766,14 @@ body {
     top: 0.75rem;
   }
 
+  .lg\:-left-5 {
+    left: -1.25rem;
+  }
+
+  .lg\:bottom-20 {
+    bottom: 5rem;
+  }
+
   .lg\:ml-\[120px\] {
     margin-left: 120px;
   }

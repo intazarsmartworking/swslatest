@@ -215,6 +215,86 @@
 
 
     <?php endif; ?>
+
+
+<!-- Benefit Section -->
+<?php if (get_row_layout() == 'benefit_section') : ?>
+<section class="bg-black flex flex-col items-center justify-center py-16 w-full">
+	<?php if(get_sub_field('top_title')): ?>
+		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
+	<?php endif; ?> 
+      <div class="flex flex-col items-center justify-center">
+	  <?php if(get_sub_field('main_title')): ?>
+        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+        <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+		<?php endif; ?>   
+      </div>
+        
+        <div class="flex justify-center  space-x-8 relative mb-28">
+            <div class="flex flex-col  items-center justify-center relative ">
+               <div class="my-20"> <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/metwo.svg" alt="" /> </div>
+             </div>
+        </div>
+		
+		<div class="container mx-auto md:px-0 px-10">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative mb-28">
+			<div>
+			<?php if(get_sub_field('big_box_title')): ?>
+			  <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-48">
+				<img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
+				<h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
+			  </div>
+			<?php endif; ?>    
+				
+			<?php if(get_sub_field('below_big_box_title')): ?>	
+			 <div class="flex flex-col justify-center items-center text-center align-middle relative greenpart px-40 py-6">
+               <div class="justify-center items-center text-center align-middle">
+				 <span class="inline-block align-middle"> <img class="mb-3" src="<?php echo get_sub_field('below_big_box_image')['url']; ?>" alt="" /> </span>
+				 <span class="text-2xl text-white font-bold mb-4 inline-block"><?php echo get_sub_field('below_big_box_title'); ?></span>
+               </div>
+			 </div>
+			<?php endif; ?> 
+			
+			</div>
+			
+			
+			<div>
+			
+			<?php if(have_rows('box_section')): ?>
+			<?php while(have_rows('box_section')): the_row(); ?>
+			<?php 
+			  $title = get_sub_field('title'); 
+			  $paragraph = get_sub_field('paragraph'); 
+              $background_name = get_sub_field('background_name'); 
+			?>
+				<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
+				<div class="grid items-center grid-cols-9 gap-0">
+				  <div class="col-span-1"> 
+					<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
+				  </div>
+					<div class="col-span-5 pl-2">
+					<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
+					<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
+					</div>
+				</div>
+				   
+				</div>
+				
+				<?php endwhile; ?>	
+			<?php endif; ?> 	
+				
+				
+			</div>
+            
+        </div>
+		</div>
+        
+</section>
+<?php endif; ?>
+
+
+
+
     <?php endwhile; ?>
 <?php endif; ?>   
 

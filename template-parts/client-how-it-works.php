@@ -1,9 +1,9 @@
 <section class="relative px-0 lg:pt-28 lg:pb-16 bg-black">
     <div class="w-100 mb-9">
         <h3 class="text-center small-intro"> How It Works </h3>
-        <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">Hire Offshore Developers</h1>
-        <p class="text-center text-5xl pt-[10px] sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange mb-3">Quick Efficient & Accurate.</p>
-        <p class="text-center text-2xl pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it.</p>
+        <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">How We Find You The Best Software Talent</h1>
+        <p class="text-center text-5xl pt-[10px] sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange mb-3">Quick and Efficient</p>
+        <p class="text-center text-2xl pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it</p>
     </div>
     
     <!-- <div class="mt-12 w-full flex  overflow-hidden min-h-[1950px] how-it-works-section">
@@ -244,7 +244,7 @@
             <section class="how-it-works-card panel pt-5 white rounded-2xl bg-[#ECC1A1] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">01 Meet</span>
+                        <span class="text-[24px] font-extrabold">Step 1: Outline your tech requirements</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -286,14 +286,12 @@
                     <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
                     <ul>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best three candidates to you.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We’ll match you with the best engineers in our network & in the wider market
                         </li>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />They will match the tech stack, skills and experience you need.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Each candidate undergoes AI vetting, interviews, and technical tests.
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Hiring made easy and simple!
-                        </li>
+                        
                     </ul>
                 </div>
             </section>
@@ -301,7 +299,7 @@
             <section class="how-it-works-card panel pt-5 blue rounded-2xl bg-[#77BDDF] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">02 Meet</span>
+                        <span class="text-[24px] font-extrabold">Step 2: Meet the Best Engineers</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -343,13 +341,13 @@
                     <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
                     <ul>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best three candidates to you.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best engineers to you at no cost & within days
                         </li>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />They will match the tech stack, skills and experience you need.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Each candidate is selected based on your required tech stack, skills, and experience.
                         </li>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Hiring made easy and simple!
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />You will then interview & assess.
                         </li>
                     </ul>
                 </div>
@@ -358,7 +356,7 @@
             <section class="how-it-works-card panel pt-5 turqoise rounded-2xl bg-[#C282FA] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">03 Onboarding</span>
+                        <span class="text-[24px] font-extrabold">Step 3: Quick & Effective Onboarding</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -400,14 +398,9 @@
                     <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
                     <ul>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best three candidates to you.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Once you’ve selected a developer we will onboard & set them up with your team.
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />They will match the tech stack, skills and experience you need.
-                        </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Hiring made easy and simple!
-                        </li>
+                        
                     </ul>
                 </div>
             </section>
@@ -415,7 +408,7 @@
             <section class="how-it-works-card panel pt-5 green rounded-2xl bg-[#60E3D5] lg:rounded-[44px] lg:flex lg:pt-0">
                 <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
                     <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">04 Support</span>
+                        <span class="text-[24px] font-extrabold">Step 4: Long-term support</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
@@ -457,14 +450,9 @@
                     <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
                     <ul>
                         <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best three candidates to you.
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />UK (location specific) based experts on-hand to ensure long term success.
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />They will match the tech stack, skills and experience you need.
-                        </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Hiring made easy and simple!
-                        </li>
+                        
                     </ul>
                 </div>
             </section>
