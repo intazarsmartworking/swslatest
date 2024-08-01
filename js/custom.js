@@ -354,7 +354,7 @@ function sliderFunction(){
         clearInterval(interval);
         sliderFunction()
       }
-  }, 50);
+  }, 100);
 }
 sliderFunction()
 

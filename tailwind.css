@@ -1083,6 +1083,12 @@ body {
     stroke: rgba(255, 255, 255, 0.6);
     animation: svgAnimation1 20s linear infinite;
 }
+.bg-404{
+    background: url('../sws/images/bg-404.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 .assemble-section-bg{
