@@ -337,7 +337,7 @@ var counter = 0;
 function sliderFunction(){
  var interval = setInterval(function(){
       if(counter < 100){
-        counter += 10;
+        counter += 1;
         const width = `${counter}%`
         jQuery('#progress').css("width", width);
         jQuery('#range').val(counter);
@@ -354,7 +354,7 @@ function sliderFunction(){
         clearInterval(interval);
         sliderFunction()
       }
-  }, 600);
+  }, 50);
 }
 sliderFunction()
 
@@ -437,3 +437,8 @@ jQuery('.silkSlide').slick({
         }
       ]
 });
+
+
+setTimeout(() =>{
+  $('.silkSlide').slick('unslick');
+}, 200)

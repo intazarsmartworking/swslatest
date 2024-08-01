@@ -742,8 +742,8 @@ body {
 }
 .how-it-works-slide{
     width: 100% !important;
-	height: 800px;
-    min-height: 800px;
+	height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
 	overflow: hidden;
     position: relative;
 }
@@ -1076,20 +1076,13 @@ body {
 }
 .europe-box .icons-box .line {
     stroke-dasharray: 260;
-    stroke-width: 1px;
+    stroke-width: 2px;
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.6);
-    animation: svgAnimation 2.5s linear infinite;
+    animation: svgAnimation 20s linear infinite;
 }
 
-@keyframes svgAnimation {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 1000;
-    }
-}
+
 .assemble-section-bg{
     position: relative;
     border-radius: 24px;
@@ -1097,6 +1090,29 @@ body {
     background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
 
 }
+.assemble-section-bg .svg{
+    position: absolute;
+}
+
+.assemble-section-bg .line{
+    stroke-dasharray: 100%;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.527);
+    animation: svgAnimation 10s linear infinite;
+}
+
+@keyframes svgAnimation {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 8000;
+    }
+}
+
+
+/* 
 .assemble-section-bg::before {
     content: "";
     position: absolute;
@@ -1108,6 +1124,35 @@ body {
     border: 2px solid #FF4D04;
     animation: clippath 10s infinite linear;
 }
+.assemble-section-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    border: 2px solid #FF4D04;
+    animation: clippath 10s infinite -5s linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+} */
+
+
 .sliderwrap {
     text-align: center;
     width: 100%;
@@ -1297,21 +1342,7 @@ body {
 }
   
 
-@keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 95% 0);
-    }
-    25% {
-        clip-path: inset(0 95% 0 0);
-    }
-    50% {
-        clip-path: inset(95% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 95%);
-    }
-}
+
 
 @media (max-width: 640px) {
     .howItWorkHeading{
@@ -1323,6 +1354,7 @@ body {
     }
     .panel{
         height: auto;
+        width: 94%;
     }
     .testimonial-section .card-container .card-placement{
         rotate:0deg !important;

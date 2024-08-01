@@ -1234,6 +1234,9 @@ select {
 .h-\[40px\] {
   height: 40px;
 }
+.h-\[50\] {
+  height: 50;
+}
 .h-\[600px\] {
   height: 600px;
 }
@@ -1317,6 +1320,9 @@ select {
 }
 .w-96 {
   width: 24rem;
+}
+.w-\[300px\] {
+  width: 300px;
 }
 .w-\[40px\] {
   width: 40px;
@@ -2765,8 +2771,8 @@ body {
 }
 .how-it-works-slide{
     width: 100% !important;
-	height: 800px;
-    min-height: 800px;
+	height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
 	overflow: hidden;
     position: relative;
 }
@@ -3092,18 +3098,10 @@ body {
 }
 .europe-box .icons-box .line {
     stroke-dasharray: 260;
-    stroke-width: 1px;
+    stroke-width: 2px;
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.6);
-    animation: svgAnimation 2.5s linear infinite;
-}
-@keyframes svgAnimation {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 1000;
-    }
+    animation: svgAnimation 20s linear infinite;
 }
 .assemble-section-bg{
     position: relative;
@@ -3112,6 +3110,25 @@ body {
     background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
 
 }
+.assemble-section-bg .svg{
+    position: absolute;
+}
+.assemble-section-bg .line{
+    stroke-dasharray: 100%;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.527);
+    animation: svgAnimation 10s linear infinite;
+}
+@keyframes svgAnimation {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 8000;
+    }
+}
+/* 
 .assemble-section-bg::before {
     content: "";
     position: absolute;
@@ -3123,6 +3140,33 @@ body {
     border: 2px solid #FF4D04;
     animation: clippath 10s infinite linear;
 }
+.assemble-section-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    border: 2px solid #FF4D04;
+    animation: clippath 10s infinite -5s linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+} */
 .sliderwrap {
     text-align: center;
     width: 100%;
@@ -3300,21 +3344,6 @@ body {
     background: #fff;
     margin: 0px 10px;
 }
-@keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 95% 0);
-    }
-    25% {
-        clip-path: inset(0 95% 0 0);
-    }
-    50% {
-        clip-path: inset(95% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 95%);
-    }
-}
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -3325,6 +3354,7 @@ body {
     }
     .panel{
         height: auto;
+        width: 94%;
     }
     .testimonial-section .card-container .card-placement{
         rotate:0deg !important;
@@ -3712,10 +3742,6 @@ body {
     left: -12rem;
   }
 
-  .lg\:-left-5 {
-    left: -1.25rem;
-  }
-
   .lg\:-right-20 {
     right: -5rem;
   }
@@ -3724,12 +3750,16 @@ body {
     bottom: 0px;
   }
 
-  .lg\:bottom-20 {
-    bottom: 5rem;
+  .lg\:bottom-\[11rem\] {
+    bottom: 11rem;
   }
 
   .lg\:right-12 {
     right: 3rem;
+  }
+
+  .lg\:right-9 {
+    right: 2.25rem;
   }
 
   .lg\:top-3 {
@@ -3802,6 +3832,10 @@ body {
 
   .lg\:rounded-\[44px\] {
     border-radius: 44px;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:p-10 {
