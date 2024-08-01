@@ -337,7 +337,7 @@ var counter = 0;
 function sliderFunction(){
  var interval = setInterval(function(){
       if(counter < 100){
-        counter += 10;
+        counter += 1;
         const width = `${counter}%`
         jQuery('#progress').css("width", width);
         jQuery('#range').val(counter);
@@ -354,7 +354,7 @@ function sliderFunction(){
         clearInterval(interval);
         sliderFunction()
       }
-  }, 600);
+  }, 50);
 }
 sliderFunction()
 
@@ -410,3 +410,35 @@ new ScrollMagic.Scene({
     // })
     // .addTo(controller);  
 });
+
+
+
+jQuery('.silkSlide').slick({
+  mobileFirst: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: true,
+  focusOnSelect: true,
+  responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+              mobileFirst: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              centerMode: false,
+              variableWidth: true,
+              focusOnSelect: true
+
+          }
+        }
+      ]
+});
+
+
+setTimeout(() =>{
+  $('.silkSlide').slick('unslick');
+}, 200)

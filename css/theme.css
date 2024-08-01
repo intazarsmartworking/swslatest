@@ -1089,9 +1089,6 @@ select {
 .mb-\[300px\] {
   margin-bottom: 300px;
 }
-.ml-0 {
-  margin-left: 0px;
-}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1237,6 +1234,9 @@ select {
 .h-\[40px\] {
   height: 40px;
 }
+.h-\[50\] {
+  height: 50;
+}
 .h-\[600px\] {
   height: 600px;
 }
@@ -1320,6 +1320,9 @@ select {
 }
 .w-96 {
   width: 24rem;
+}
+.w-\[300px\] {
+  width: 300px;
 }
 .w-\[40px\] {
   width: 40px;
@@ -1541,6 +1544,9 @@ select {
 .border-\[\#30160a\] {
   --tw-border-opacity: 1;
   border-color: rgb(48 22 10 / var(--tw-border-opacity));
+}
+.border-\[\#a962444d\] {
+  border-color: #a962444d;
 }
 .border-gray-200 {
   --tw-border-opacity: 1;
@@ -2764,9 +2770,9 @@ body {
     color: rgba(127, 127, 127, 1);
 }
 .how-it-works-slide{
-    width: 100%;
-	height: 800px;
-    min-height: 800px;
+    width: 100% !important;
+	height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
 	overflow: hidden;
     position: relative;
 }
@@ -3092,18 +3098,10 @@ body {
 }
 .europe-box .icons-box .line {
     stroke-dasharray: 260;
-    stroke-width: 1px;
+    stroke-width: 2px;
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.6);
-    animation: svgAnimation 2.5s linear infinite;
-}
-@keyframes svgAnimation {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 1000;
-    }
+    animation: svgAnimation 20s linear infinite;
 }
 .assemble-section-bg{
     position: relative;
@@ -3112,6 +3110,25 @@ body {
     background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
 
 }
+.assemble-section-bg .svg{
+    position: absolute;
+}
+.assemble-section-bg .line{
+    stroke-dasharray: 100%;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.527);
+    animation: svgAnimation 10s linear infinite;
+}
+@keyframes svgAnimation {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 8000;
+    }
+}
+/* 
 .assemble-section-bg::before {
     content: "";
     position: absolute;
@@ -3123,6 +3140,33 @@ body {
     border: 2px solid #FF4D04;
     animation: clippath 10s infinite linear;
 }
+.assemble-section-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    border: 2px solid #FF4D04;
+    animation: clippath 10s infinite -5s linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+} */
 .sliderwrap {
     text-align: center;
     width: 100%;
@@ -3220,21 +3264,28 @@ body {
     font-weight: bold;
     color: #fff;
   }
-.container-circule { 
-    display:grid; 
-    align-items:center; 
-    height:30rem; 
-    width:-moz-max-content; 
-    width:max-content; 
-    margin:auto; 
-}
 .section-introduction .circle-box { 
     text-align: center; 
-    height: 100px; 
-    width: 100px; 
+    height: 52px; 
+    width: 52px; 
+    border: 1px solid #FFF;
     font-size: 1.3rem; 
     font-weight: 700; 
     text-transform: capitalize; 
+    background: #050403;
+    overflow: hidden;
+}
+.container-circule { 
+    display:grid; 
+    align-items:center; 
+    height:auto; 
+    width:-moz-max-content; 
+    width:max-content; 
+    margin:auto; 
+    padding: 10px;
+    border-radius: 70px;
+    border: 1px solid rgba(255, 77, 2, 0.30);
+    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
 }
 .item-1 { 
     grid-row:1; 
@@ -3262,26 +3313,36 @@ body {
 }
 .circle-box p { 
     margin: 0; 
-    font-size: 10px; 
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
 }
 .circle-box span { 
     font-size: 10px; 
     font-weight: normal; 
 }
-@keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 95% 0);
-    }
-    25% {
-        clip-path: inset(0 95% 0 0);
-    }
-    50% {
-        clip-path: inset(95% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 95%);
-    }
+.left-profile {
+    width: 100% !important;
+}
+.dev-section{
+    width:100% !important;
+    border: 0;
+    padding: 20px;
+    height: auto !important;
+}
+.slick-initialized .slick-slide{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 0px 10px;
+}
+.slick-initialized .slide-item{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 0px 10px;
 }
 @media (max-width: 640px) {
     .howItWorkHeading{
@@ -3293,6 +3354,7 @@ body {
     }
     .panel{
         height: auto;
+        width: 94%;
     }
     .testimonial-section .card-container .card-placement{
         rotate:0deg !important;
@@ -3525,8 +3587,16 @@ body {
     width: 13rem;
   }
 
+  .md\:w-\[25\%\] {
+    width: 25%;
+  }
+
   .md\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .md\:w-\[75\%\] {
+    width: 75%;
   }
 
   .md\:w-auto {
@@ -3567,6 +3637,10 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .md\:justify-start {
@@ -3668,10 +3742,6 @@ body {
     left: -12rem;
   }
 
-  .lg\:-left-5 {
-    left: -1.25rem;
-  }
-
   .lg\:-right-20 {
     right: -5rem;
   }
@@ -3680,16 +3750,28 @@ body {
     bottom: 0px;
   }
 
-  .lg\:bottom-20 {
-    bottom: 5rem;
+  .lg\:bottom-\[11rem\] {
+    bottom: 11rem;
   }
 
   .lg\:right-12 {
     right: 3rem;
   }
 
+  .lg\:right-9 {
+    right: 2.25rem;
+  }
+
   .lg\:top-3 {
     top: 0.75rem;
+  }
+
+  .lg\:-left-5 {
+    left: -1.25rem;
+  }
+
+  .lg\:bottom-20 {
+    bottom: 5rem;
   }
 
   .lg\:ml-\[120px\] {
@@ -3758,6 +3840,10 @@ body {
 
   .lg\:rounded-\[44px\] {
     border-radius: 44px;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:p-10 {

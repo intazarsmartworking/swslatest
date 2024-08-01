@@ -1,4 +1,4 @@
-<section class="relative px-4 lg:pt-28 lg:pb-16 bg-black">
+<section class="relative px-0 lg:pt-28 lg:pb-16 bg-black">
     <div class="w-100 mb-9">
         <h3 class="text-center small-intro"> How It Works </h3>
         <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">How We Find You The Best Software Talent</h1>
@@ -237,13 +237,13 @@
         </div>
     </div> -->
 
-    <div class="how-it-works-slide" id="pinContainer">
+    <div class="how-it-works-slide p-3 lg:p-0" id="pinContainer">
 
 
 
             <section class="how-it-works-card panel pt-5 white rounded-2xl bg-[#ECC1A1] lg:rounded-[44px] lg:flex lg:pt-0">
-                <div class="relative flex pl-5 pb-4 justify-between items-center w-100 lg:w-1/6">
-                    <p class="relative lg:absolute lg:bottom-20 lg:flex lg:-left-5 howItWorkHeading gap-2">
+                <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
+                    <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
                         <span class="text-[24px] font-extrabold">Step 1: Outline your tech requirements</span>
                     </p>
                 </div>
@@ -297,8 +297,8 @@
             </section>
 
             <section class="how-it-works-card panel pt-5 blue rounded-2xl bg-[#77BDDF] lg:rounded-[44px] lg:flex lg:pt-0">
-                <div class="relative flex pl-5 pb-4 justify-between items-center w-100 lg:w-1/6">
-                    <p class="relative lg:absolute lg:bottom-20 lg:flex lg:-left-5 howItWorkHeading gap-2">
+                <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
+                    <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
                         <span class="text-[24px] font-extrabold">Step 2: Meet the Best Engineers</span>
                     </p>
                 </div>
@@ -354,8 +354,8 @@
             </section>
 
             <section class="how-it-works-card panel pt-5 turqoise rounded-2xl bg-[#C282FA] lg:rounded-[44px] lg:flex lg:pt-0">
-                <div class="relative flex pl-5 pb-4 justify-between items-center w-100 lg:w-1/6">
-                    <p class="relative lg:absolute lg:bottom-20 lg:flex lg:-left-5 howItWorkHeading gap-2">
+                <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
+                    <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
                         <span class="text-[24px] font-extrabold">Step 3: Quick & Effective Onboarding</span>
                     </p>
                 </div>
@@ -406,9 +406,9 @@
             </section>
 
             <section class="how-it-works-card panel pt-5 green rounded-2xl bg-[#60E3D5] lg:rounded-[44px] lg:flex lg:pt-0">
-                <div class="relative flex pl-5 pb-4 justify-between items-center w-100 lg:w-1/6">
-                    <p class="relative lg:absolute lg:bottom-20 lg:flex lg:-left-5 howItWorkHeading gap-2">
-                        <span class="text-[24px] font-extrabold">Step 4: Long-term support </span>
+                <div class="relative flex pl-5 pb-4 justify-between w-100 lg:w-1/6">
+                    <p class="relative w-[300px] h-[50] lg:absolute lg:bottom-[11rem] lg:right-9 howItWorkHeading gap-2">
+                        <span class="text-[24px] font-extrabold">Step 4: Long-term support</span>
                     </p>
                 </div>
                 <div class="flex items-center justify-center">
