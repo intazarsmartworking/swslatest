@@ -1770,9 +1770,9 @@ select {
   padding-left: 24rem;
   padding-right: 24rem;
 }
-.px-\[150px\] {
-  padding-left: 150px;
-  padding-right: 150px;
+.px-\[0px\] {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .py-1 {
   padding-top: 0.25rem;
@@ -1826,33 +1826,9 @@ select {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-\[100px\] {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.px-\[15px\] {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.py-\[0px\] {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.px-\[0px\] {
-  padding-left: 0px;
-  padding-right: 0px;
-}
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.py-\[80px\] {
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -3948,12 +3924,12 @@ body {
     max-width: 417px;
   }
 
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:justify-between {
