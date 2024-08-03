@@ -53,7 +53,7 @@ get_header();
 		</section>
 	</main> -->
 
-	<section class="bg-404 w-[100%] pt-[100px] lg:py-[100px] lg:px-[200px]">
+	<section class="bg-404 w-[100%] lg:py-[100px] lg:px-[200px]">
 		<div class="container">
 			<div class="grid grid-cols-1 gap-4">
 				<div class=" text-white text-xl text-center pb-[45px]">
