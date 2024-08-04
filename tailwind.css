@@ -1356,30 +1356,6 @@ body {
 
 
 
-@media (max-width: 640px) {
-    .howItWorkHeading{
-        transform: rotate(0deg);
-    }
-    .how-it-works-slide{
-        height: 900px;
-        min-height: 900px;
-    }
-    .panel{
-        height: auto;
-        width: 94%;
-    }
-    .testimonial-section .card-container .card-placement{
-        rotate:0deg !important;
-        --deg:0deg !important;
-    }
-    .assemble-section-bg{
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
-
-}
-
-
 
 .timeline {
     padding: 0px;
@@ -1503,4 +1479,50 @@ body {
     /* border: 15px solid #4F6FDA; */
     background: linear-gradient(114deg, #FF4D02 1.58%, #7F2B07 100%);
     min-height: 400px;
+}
+
+
+
+
+
+
+
+
+.timeline-item .hide-bottom-border::after{
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .howItWorkHeading{
+        transform: rotate(0deg);
+    }
+    .how-it-works-slide{
+        height: 900px;
+        min-height: 900px;
+    }
+    .panel{
+        height: auto;
+        width: 94%;
+    }
+    .testimonial-section .card-container .card-placement{
+        rotate:0deg !important;
+        --deg:0deg !important;
+    }
+    .assemble-section-bg{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .timeline-content-box{
+        padding-left: 30px;
+    }
+    .timeline-item > .curv-img{
+        display: none;
+    }
+    .timeline-item .border-left-img::before{
+        display: none;
+    }
+    .timeline-item .hide-bottom-border::after{
+        display: block;
+    }
+
 }
