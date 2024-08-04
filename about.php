@@ -58,21 +58,21 @@ get_header('second');
                 <span class="draw-line"></span>
                 <div class="timeline-item pb-[100px]" id="scroll-effect-1">
                     <div class="timeline-content-box max-w-[1000px]">
-                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">20 Years ago</h1>
-                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">For more than 20 years our founder worked with international developers but never imagined anything like the COVID pandemic would come up with huge losses.</p>
+                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium">20 Years ago</h1>
+                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">For more than 20 years our founder worked with international developers but never imagined anything like the COVID pandemic would come up with huge losses.</p>
                     </div> 
                 </div>
                 <div class="timeline-item pb-[150px]" id="scroll-effect-2">
                     <div class="timeline-content-box max-w-[1000px]">
-                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">What losses are we talking about?</h1>
-                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium">What losses are we talking about?</h1>
+                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                             Losses that the IT industry made during the pandemic by paying high salaries to their local employees who were not ever performing satisfactorily compared to many international developers. 
                             Here enters an Idea into our Smart Working founder Julian Rowse’s brain. 
                         </p>
                     </div>  
                 </div>
                 <div class="timeline-item pb-[150px]" id="scroll-effect-3">
-                    <img class="absolute w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
+                    <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1000px]">
                         <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">2020</h1>
                         <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium ">
@@ -83,14 +83,14 @@ get_header('second');
 
                 <div class="timeline-item pb-[180px]" id="scroll-effect-4">
                     <div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
-                        <div class="grid grid-cols-2 gap-0">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                             <div class="">
-                                <p class="text-[15px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                                <p class="text-[15px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                                     We were founded by Julian Rowse in 2020 <span class="text-[#ffffff80]">after the pandemic normalised remote working for so many businesses. Julian has spent over</span> 20 years working with international developers. <span class="text-[#ffffff80]">He had a great understanding of the level of skill in the labour force and wanted to give</span> many businesses the opportunity to work with exceptionally talented people, who will come at a real cost saving compared to hiring locally.
                                 </p>
                             </div>
-                            <div>
-                                <img class=" absolute right-10 bottom-[-60px] inline w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
+                            <div class="pt-7">
+                                <img class=" relative lg:absolute lg:right-10 lg:bottom-[-60px] inline w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
 
                             </div>
                         </div>
@@ -98,10 +98,10 @@ get_header('second');
                 </div>
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-5">
-                    <img class="absolute w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
+                    <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1000px]">
-                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium ">2021</h1>
-                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                        <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium ">2021</h1>
+                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                             2020 brought many challenges in the IT industry. While it impacted growth, Julian, who has spent over 20 years working with international developers, focused on and analysed the problems closely as an experienced professional. He worked closely with his connections globally and convinced 100s of international developers to work with him remotely and delivered success to 10 european businesses.
                         </p>
                     </div> 
@@ -110,7 +110,7 @@ get_header('second');
                 <div class="timeline-item pb-[100px]" id="scroll-effect-6">
                     <div class="timeline-content-box max-w-[1000px]">
                         <div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Mission</span></div>
-                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] leading-[56px] font-medium">
+                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
                              Our vision to provide top-tier IT professionals and resources, fostering innovation and excellence.
                         </p>
                     </div> 
@@ -119,7 +119,7 @@ get_header('second');
                 <div class="timeline-item pb-[100px]" id="scroll-effect-7">
                     <div class="timeline-content-box max-w-[1000px]">
                         <div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Vision</span></div>
-                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] leading-[56px] font-medium">
+                        <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
                             To be the leading provider of skilled IT professionals, recognized for our commitment to client success and quality.
                         </p>
                     </div> 
@@ -129,8 +129,8 @@ get_header('second');
                     <div class="timeline-content-box max-w-[1280px]">
                         <div class="pb-5"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Values</span></div>
                         <div class="block mt-5 value-item">
-                            <div class="grid grid-cols-3 gap-0">
-                                <div class="box-1 grid-item relative border-bottom-img py-12 pr-10">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                                <div class="box-1 grid-item relative border-bottom-img py-12 lg:pr-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6899 15.183L18.2302 17.8156C18.1711 18.183 18.2339 18.567 18.4074 18.8993C18.7176 19.4864 19.3194 19.8205 19.9379 19.8205C20.2074 19.8205 20.4807 19.7578 20.7336 19.623L23.0265 18.3824L25.4118 19.6193C25.7422 19.7928 26.1244 19.8538 26.4881 19.7965C27.4278 19.6451 28.0702 18.7571 27.917 17.8045L27.4204 15.303L29.3607 13.4402C29.6339 13.1762 29.813 12.8199 29.8665 12.4322C29.9902 11.4944 29.3274 10.6322 28.4025 10.5104L25.8161 10.191L24.6216 7.80206C24.6179 7.79837 24.6161 7.79283 24.6142 7.78914C24.4481 7.46975 24.1914 7.21314 23.8721 7.04698C23.021 6.6076 21.9742 6.9436 21.5311 7.80021L20.4198 10.1264L17.7557 10.5085C17.3754 10.5602 17.0172 10.7393 16.7459 11.0199C16.0923 11.6993 16.1108 12.7867 16.7902 13.4476L18.6899 15.183Z" fill="#FF4D02"/>
@@ -141,7 +141,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Pursuing the highest quality in our services and talent.</p>
                                 </div>
 
-                                <div class="box-2 grid-item relative border-left-img border-bottom-img py-12 px-10">
+                                <div class="box-2 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
                                             <path d="M24.3349 4.89246C25.1633 4.89246 25.8349 5.56404 25.8349 6.39246V6.5842C25.8349 7.41262 25.1633 8.0842 24.3349 8.0842C23.5065 8.0842 22.8349 7.41262 22.8349 6.5842V6.39246C22.8349 5.56404 23.5065 4.89246 24.3349 4.89246Z" fill="#FF4D02"/>
@@ -159,7 +159,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Embracing change and seeking better solutions.</p>
                                 </div>
 
-                                <div class="box-3 grid-item relative border-left-img border-bottom-img py-12 px-10">
+                                <div class="box-3 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1721 29.0537C36.6109 28.4925 32.8669 27.3682 31.9309 27.3682C31.1814 27.3682 27.4374 28.4925 26.6878 29.0537C26.1266 29.6149 26.1266 30.1762 26.1266 31.4869V34.1085C26.1266 38.7885 31.1814 40.0992 31.5561 40.2876H31.9309C32.1174 40.2876 37.3586 38.7885 37.3586 34.1085V31.3005C37.5469 30.1762 37.5469 29.6149 37.1721 29.0537Z" fill="#FF4D02"/>
@@ -171,7 +171,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Building trust through honesty and transparency.</p>
                                 </div>
 
-                                <div class="grid-item relative py-12 pr-10">
+                                <div class="grid-item relative hide-bottom-border border-bottom-img py-12 lg:pr-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
                                             <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M7.84784 23.9507V14.862C7.84784 14.0977 7.22754 13.4774 6.46323 13.4774C5.69892 13.4774 5.07861 14.0977 5.07861 14.862V23.9507C5.07861 24.715 5.69892 25.3353 6.46323 25.3353C7.22754 25.3353 7.84784 24.715 7.84784 23.9507Z" fill="#FF4D02"/>
@@ -188,7 +188,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Working together to achieve shared goals.</p>
                                 </div>
 
-                                <div class="grid-item relative border-left-img py-12 px-10">
+                                <div class="grid-item relative hide-bottom-border border-left-img border-bottom-img py-12 lg:px-10">
                                     <span class="block">
                                         <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.4">
@@ -206,7 +206,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Prioritizing client needs and satisfaction.</p>
                                 </div>
 
-                                <div class="grid-item relative py-12 border-left-img px-10">
+                                <div class="grid-item relative py-12 hide-bottom-border border-left-img border-bottom-img lg:px-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
                                             <g opacity="0.4">
@@ -231,15 +231,15 @@ get_header('second');
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-9">
                     <div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
-                        <div class="grid grid-cols-2 gap-0">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                             <div class="">
-                                <p class="text-[15px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                                <p class="text-[15px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                                     With the time we started delivering success by saving money, <span class="text-[#ffffff80]">recruitment & legal terms management,</span> and skilled IT professionals around the european IT businesses, <span class="text-[#ffffff80]">we experienced immense growth with increasing team size putting their sweat & blood like</span> Oliver Rowse <span class="text-[#ffffff80]">&</span> Hugo Rowse <span class="text-[#ffffff80]">at Smart Working.</span>
                                     
                                 </p>
                             </div>
-                            <div>
-                                <img class=" absolute right-10 bottom-[-60px] inline w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
+                            <div class="pt-[30px]">
+                                <img class=" relative lg:absolute lg:right-10 lg:bottom-[-60px] inline w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
 
                             </div>
                         </div>
@@ -247,11 +247,11 @@ get_header('second');
                 </div>
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-10">
-                    <img class="absolute w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
+                    <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
                         <div class="max-w-[1000px]">
-                            <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">2022</h1>
-                            <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                            <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium">2022</h1>
+                            <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                                 Like we started with a vision to onboard solutions to all the IT challenges, neither us or our developers comprtomised with integrity.
                             </p>
                             <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
@@ -259,14 +259,14 @@ get_header('second');
                             </p>
                         </div>
 
-                        <div class="grid grid-cols-10 gap-5 content-center mt-5">
+                        <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
                             <div class="grid-item col-span-7 content-center">
-                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] leading-[56px] font-medium">
+                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
                                     We started saving more than 40-50% on wages of 100+ european & American businesses.
                                 </p>
                             </div>
-                            <div class="grid-item col-span-3 content-center text-end pt-5">
-                                <span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[30px] pr-[30px]"><span class="text-[26px] leading-[0px] font-xl absolute top-[13px] left-[21px]">UP TO</span>50<span class="text-[40px] leading-[0px] font-xl absolute bottom-[13px] right-[10px]">%</span></span>
+                            <div class="grid-item col-span-3 content-center lg:text-end pt-5">
+                                <span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[30px] pr-[30px]"><span class="text-[26px] leading-[0px] font-xl lg:absolute top-[13px] left-[21px]">UP TO</span>50<span class="text-[40px] leading-[0px] font-xl lg:absolute bottom-[13px] right-[10px]">%</span></span>
                             </div>
                         </div>
                     </div> 
@@ -274,7 +274,7 @@ get_header('second');
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-11">
                     <div class="timeline-content-box relative border border-[rgba(245,248,255,0.1)] lg:left-[-90px] bg-[#1f0c04] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:px-[100px] lg:py-[50px]">
-                            <div class="grid grid-cols-2 gap-0">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                                 <div class="box-1 grid-item relative border-bottom-img py-12 pr-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -295,7 +295,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We are able to find and attract the world’s best for our clients</p>
                                 </div>
 
-                                <div class="box-2 grid-item relative border-left-img border-bottom-img py-12 px-10">
+                                <div class="box-2 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
                                     <span class="block">
                                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.8604 39.839C13.5072 39.8656 13.1517 39.8922 12.7915 39.9104L12.8075 28.7226L12.8532 28.6914C15.315 27.0115 17.6346 26.3011 20.8049 26.2253C22.3874 26.1861 23.9312 26.4053 25.4766 26.6248C25.9926 26.6981 26.5088 26.7714 27.0264 26.8351C28.5471 27.0221 29.8775 27.7378 29.8775 29.2699C29.8775 30.6211 28.7565 31.7587 27.4232 31.9783C25.4747 32.2993 22.9895 33.2549 22.515 33.2549C22.6734 33.261 23.2374 33.2931 23.9463 33.3333C25.4417 33.4183 27.5812 33.5397 27.9148 33.5318C30.3802 33.4727 32.8743 31.799 34.7927 30.2251C35.2804 29.8251 35.76 29.4315 36.2371 29.0724C37.4413 28.1647 39.0167 28.2008 40.08 29.2699C41.2603 30.4537 40.9132 32.4592 39.733 33.645L39.3573 34.0227C36.9658 36.4282 34.7749 38.632 31.4997 39.9051C26.7658 41.7466 22.3714 40.8789 17.5849 39.9337L17.4398 39.9051C16.2137 39.6625 15.0499 39.7498 13.8604 39.839Z" fill="#FF4D02"/>
@@ -309,7 +309,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We are able to provide highly skilled developers at a 50% saving</p>
                                 </div>
 
-                                <div class="box-1 grid-item relative py-12 pr-10">
+                                <div class="box-1 grid-item relative border-bottom-img hide-bottom-border py-12 pr-10">
                                     <span class="block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1527 24.9539C25.9674 24.9539 29.885 21.0401 29.885 16.2309C29.885 11.4217 25.9674 7.50781 21.1527 7.50781C16.3379 7.50781 12.4204 11.4217 12.4204 16.2309C12.4204 21.0401 16.3379 24.9539 21.1527 24.9539Z" fill="#FF4D02"/>
@@ -322,7 +322,7 @@ get_header('second');
                                     <p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">All our developers speak perfect English and have experience with UK/US companies</p>
                                 </div>
 
-                                <div class="box-2 grid-item relative border-left-img py-12 px-10">
+                                <div class="box-2 grid-item relative border-left-img  py-12 lg:px-10">
                                     <span class="block">
                                          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                                             <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M23.2064 6.46094C13.5343 6.46094 5.66785 14.3292 5.66785 23.9994C5.66785 33.6714 13.5343 41.5379 23.2064 41.5379C32.8765 41.5379 40.7448 33.6714 40.7448 23.9994C40.7448 14.3292 32.8765 6.46094 23.2064 6.46094Z" fill="#FF4D02"/>
@@ -338,12 +338,12 @@ get_header('second');
                     </div> 
                 </div>
                 <div class="timeline-item pb-[100px]" id="scroll-effect-12">
+                    <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
-                        <img class="absolute w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
-                        <div class="grid grid-cols-10 gap-5 content-center">
+                        <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
                             <div class="grid-item col-span-8 content-center">
-                                <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">2023</h1>
-                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                                <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium">2023</h1>
+                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                                     Every year our software developers, QA engineers, designers, customer success teams, and project managers kept on working hard to increase the count of happy clients from <span class="text-[#FFAD8A]">10 to 300+ with successful 1500+ projects delivery…</span>
                                 </p>
                             </div>
@@ -352,17 +352,17 @@ get_header('second');
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-10 gap-5 content-center">
-                            <div class="grid-item col-span-6 content-center">
+                        <div class="grid grid-cols-2 lg:grid-cols-10 gap-5 content-center mt-[15px] lg:mt-[0px]">
+                            <div class="grid-item col-span-2 lg:col-span-6 content-center">
                                 <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[38px] text-[#ffffff] font-medium">
                                   …we never work targeting to receive such good comments but our clients are also very kind
                                 </p>
                             </div>
-                            <div class="grid-item col-span-2 content-center text-end pt-5">
+                            <div class="grid-item col-span-1 lg:col-span-2 content-center text-end pt-5">
                                 <img class="img-1 inline w-[160px] rounded-[6px] border border-[#009EFF] shadow-[0px_0px_40px_10px_rgba(0,158,255,0.30)]" src="<?php echo get_template_directory_uri();?>/images/2023-2.png" />
 
                             </div>
-                            <div class="grid-item col-span-2 content-center text-end pt-5">
+                            <div class="grid-item col-span-1 lg:col-span-2 content-center text-end pt-5">
                                 <img class="img-2 inline w-[180px] rounded-[6px] border border-[#E805C6] shadow-[0px_0px_40px_10px_rgba(232,5,198,0.30)]" src="<?php echo get_template_directory_uri();?>/images/2023-3.png" />
                             </div>
                         </div>
@@ -393,12 +393,12 @@ get_header('second');
 
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-13">
+                    <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
-                        <img class="absolute w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                         <div class="grid grid-cols-10 gap-5 content-center">
                             <div class="grid-item col-span-8 content-center">
-                                <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">2024</h1>
-                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium">
+                                <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium">2024</h1>
+                                <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
                                         We started with 100s of international developers and built a pool of 3M+ tallents starting from a Mid Level (3-4 yrs) experienced candidate to a Senior Level (5 yrs +) experienced fellows.
                                         <br class="mb-lg"><br class="mb-lg"><br class="mb-lg">
                                         We continue to grow.....”
@@ -412,20 +412,29 @@ get_header('second');
                     <div class="timeline-content-box relative lg:left-[-90px] bg-[#ffffff] border border-[#fffff] rounded-[12px] min-h-[200px] max-w-[1380px] p-3 lg:p-[50px]">
                             <div class="slide-show max-w-[100%] px-30" >
                                 <div class="silkSlide">
-                                    <div class="slide-item text-center w-[200px]">
+                                    <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-1.png" />
                                     </div>
-                                    <div class="slide-item w-[200px] text-center">
+                                    <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" />
                                     </div>
-                                    <div class="slide-item w-[200px] text-center">
+                                    <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" />
                                     </div>
-                                    <div class="slide-item w-[200px] text-center">
+                                    <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
                                     </div>
-                                    <div class="slide-item w-[200px] text-center">
+                                    <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-5.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +442,7 @@ get_header('second');
                 </div>
                 <div class="timeline-item pb-[0px]">
                     <div class="timeline-content-box relative  rounded-[12px] min-h-[100px] max-w-[1280px] p-3 lg:p-[50px]">
-                        <h1 class=" text-[#FF4D02] text-[56px] font-[500]">To be continued...</h1>
+                        <h1 class="text-[30px] text-[#FF4D02] lg:text-[56px] font-[500]">To be continued...</h1>
                     </div>
                 </div>
                 <!-- meege branch -->
@@ -443,14 +452,14 @@ get_header('second');
 </section>
 
 <section class="w-[100%] px-[5%]">
-    <div class="relative grid grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
+    <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] leading-[62px]">Check Our Vetting Process Now</h1>
-            <p class=" text-white text-[16px] lg:text-[24px] mt-[30px] mb-[30px]">How we make sure which candidate would <br>be able to add values to your projects?</p>
+            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Check Our Vetting Process Now</h1>
+            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]">How we make sure which candidate would <br>be able to add values to your projects?</p>
             <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] ">Check Now</a>
         </div>
-        <div class=" text-end">
+        <div class="text-end pt-[40px] lg:pt-[0px]">
             <img class="w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
         </div>
     </div>
