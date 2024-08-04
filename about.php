@@ -436,6 +436,18 @@ get_header('second');
                                     <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
                                     </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-5.png" />
+                                    </div>
                                 </div>
                             </div>
                     </div> 

@@ -607,20 +607,17 @@ new ScrollMagic.Scene({
 
 
 jQuery('.silkSlide').slick({
-  mobileFirst: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 1,
+  slidesToShow: 5,
   slidesToScroll: 1,
   centerMode: false,
-  variableWidth: false,
-  focusOnSelect: false,
+  focusOnSelect: true,
   autoplay: true,
   responsive: [
         {
           breakpoint: 1024,
           settings: {
-              mobileFirst: true,
               infinite: true,
               speed: 300,
               slidesToShow: 5,
@@ -628,7 +625,6 @@ jQuery('.silkSlide').slick({
               centerMode: false,
               variableWidth: true,
               focusOnSelect: true
-
           }
         }
       ]
