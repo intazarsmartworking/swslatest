@@ -614,6 +614,8 @@ jQuery('.silkSlide').slick({
   centerMode: false,
   focusOnSelect: true,
   autoplay: true,
+  arrows: false,
+  dots:false,
   responsive: [
         {
           breakpoint: 1024,

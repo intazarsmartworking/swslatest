@@ -1209,9 +1209,6 @@ select {
 .mt-\[24px\] {
   margin-top: 24px;
 }
-.mt-\[30px\] {
-  margin-top: 30px;
-}
 .mt-\[56px\] {
   margin-top: 56px;
 }
@@ -1392,9 +1389,6 @@ select {
 }
 .w-\[180px\] {
   width: 180px;
-}
-.w-\[200px\] {
-  width: 200px;
 }
 .w-\[214px\] {
   width: 214px;
@@ -1630,6 +1624,9 @@ select {
 .rounded-\[30px\] {
   border-radius: 30px;
 }
+.rounded-\[32px\] {
+  border-radius: 32px;
+}
 .rounded-\[56px\] {
   border-radius: 56px;
 }
@@ -1773,6 +1770,22 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(252 237 234 / var(--tw-bg-opacity));
 }
+.bg-\[\#FFFFFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#c3b0f8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 176 248 / var(--tw-bg-opacity));
+}
+.bg-\[\#dda077\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 160 119 / var(--tw-bg-opacity));
+}
+.bg-\[\#f09e9e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 158 158 / var(--tw-bg-opacity));
+}
 .bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1860,6 +1873,9 @@ select {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-\[40px\] {
+  padding: 40px;
 }
 .px-0 {
   padding-left: 0px;
@@ -2134,6 +2150,9 @@ select {
 .pt-\[30px\] {
   padding-top: 30px;
 }
+.pt-\[40px\] {
+  padding-top: 40px;
+}
 .pt-\[48px\] {
   padding-top: 48px;
 }
@@ -2145,9 +2164,6 @@ select {
 }
 .pt-\[80px\] {
   padding-top: 80px;
-}
-.pt-\[40px\] {
-  padding-top: 40px;
 }
 .text-left {
   text-align: left;
@@ -2207,6 +2223,9 @@ select {
 .text-\[26px\] {
   font-size: 26px;
 }
+.text-\[30px\] {
+  font-size: 30px;
+}
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -2244,9 +2263,6 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-\[30px\] {
-  font-size: 30px;
 }
 .font-\[16px\] {
   font-weight: 16px;
@@ -2298,9 +2314,6 @@ select {
 }
 .leading-\[56px\] {
   line-height: 56px;
-}
-.leading-\[62px\] {
-  line-height: 62px;
 }
 .leading-normal {
   line-height: 1.5;
@@ -3793,6 +3806,9 @@ body {
 .timeline-item .hide-bottom-border::after{
     display: none;
 }
+.card-slide-item{
+    display: inline-block;
+}
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -4515,12 +4531,12 @@ body {
     line-height: 56px;
   }
 
-  .lg\:leading-tight {
-    line-height: 1.25;
-  }
-
   .lg\:leading-\[62px\] {
     line-height: 62px;
+  }
+
+  .lg\:leading-tight {
+    line-height: 1.25;
   }
 }
 @media (min-width: 1280px) {
