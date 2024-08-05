@@ -3487,7 +3487,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
     background: linear-gradient(90deg, rgba(51,17,2,1) 0%, rgba(57,20,2,1) 20%, rgba(65,22,4,1) 38%, rgba(79,25,3,1) 55%, rgba(92,30,4,1) 78%, rgba(91,3,3,1) 100%); 
 }
-.video_border-wrap {
+.form_border_wrap {
     pointer-events: none;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -3503,17 +3503,17 @@ body {
     inset: 0%;
     overflow: hidden;
 }
-.video_border-gradient{
+.form_border_gradient{
     width: 20rem;
     height: 20rem;
     position: absolute;
-    inset: auto auto 0% 0%;
+    inset: auto auto 0% -1%;
     animation-play-state: running;
-    animation: videoBorder 15s linear infinite;
+    animation: videoBorder 20s linear infinite;
     background-image: linear-gradient(180deg, #ff4b04b6, transparent);
     
 }
-.video_border-gradient:nth-child(2) {
+.form_border_gradient:nth-child(2) {
     animation-delay: 2s;
 }
 /* .assemble-section-animation::before{

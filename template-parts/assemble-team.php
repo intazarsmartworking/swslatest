@@ -5,9 +5,9 @@
   <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
 	  
     <div class="assemble-section-animation my-16  md:mb-24">
-        <div class="video_border-wrap">
-            <div class="video_border-gradient"></div>
-            <div class="video_border-gradient"></div>
+        <div class="form_border_wrap">
+            <div class="form_border_gradient"></div>
+            <div class="form_border_gradient"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 assemble-section-bg rounded-3xl relative px-0">
                 <!-- <svg class="svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
