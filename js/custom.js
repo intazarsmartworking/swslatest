@@ -493,111 +493,85 @@ new ScrollMagic.Scene({
               .offset( 0 )
               //.setClassToggle( ".article-2 .card", "is-visible" )
               .setTween(effect1)
-              .addIndicators({ name: 'effect 1' })
+              //.addIndicators({ name: 'effect 1' })
               .addTo( controller );
 
     var change2 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-2" })
               .offset( -300 )
               //.setClassToggle( ".article-2 .card", "is-visible" )
               .setTween(effect2)
-              .addIndicators({ name: 'effect 2' })
+              //.addIndicators({ name: 'effect 2' })
               .addTo( controller );
       
     var change3 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-3" })
               .offset( 0 )
               .setTween(effect3)
               //.setClassToggle( ".article-3 .card", "is-visible" )
-              .addIndicators({ name: 'effect 3' })
+              //.addIndicators({ name: 'effect 3' })
               .addTo( controller );
 
     var change4 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-4" })
               .offset( 100 )
               .setTween(effect4)
-              .addIndicators({ name: 'effect 4' })
+              //.addIndicators({ name: 'effect 4' })
               .addTo( controller );
 
     var change5 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-5" })
               .offset( 0 )
               .setTween(effect5)
-              .addIndicators({ name: 'effect 5' })
+              //.addIndicators({ name: 'effect 5' })
               .addTo( controller );
 
     var change6 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-6" })
               .offset( 0 )
               .setTween(effect6)
-              .addIndicators({ name: 'effect 6' })
+              //.addIndicators({ name: 'effect 6' })
               .addTo( controller );
 
     var change7 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-7" })
               .offset( 0 )
               .setTween(effect7)
-              .addIndicators({ name: 'effect 7' })
+              //.addIndicators({ name: 'effect 7' })
               .addTo( controller );
 
     var change8 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-8" })
               .offset( 200 )
               .setTween(effect8)
-              .addIndicators({ name: 'effect 8' })
+              //.addIndicators({ name: 'effect 8' })
               .addTo( controller );
 
     var change9 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-9" })
               .offset( 200 )
               .setTween(effect9)
-              .addIndicators({ name: 'effect 9' })
+              //.addIndicators({ name: 'effect 9' })
               .addTo( controller );
 
     var change10 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-10" })
               .offset( 100 )
               .setTween(effect10)
-              .addIndicators({ name: 'effect 10' })
+              //.addIndicators({ name: 'effect 10' })
               .addTo( controller );
 
     var change11 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-11" })
               .offset( 200 )
               .setTween(effect11)
-              .addIndicators({ name: 'effect 11' })
+              //.addIndicators({ name: 'effect 11' })
               .addTo( controller );
 
 
     var change12 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-12" })
               .offset( 200 )
               .setTween(effect12)
-              .addIndicators({ name: 'effect 12' })
+              //.addIndicators({ name: 'effect 12' })
               .addTo( controller );
 
     var change13 = new ScrollMagic.Scene({ triggerElement: "#scroll-effect-13" })
               .offset( 200 )
               .setTween(effect13)
-              .addIndicators({ name: 'effect 13' })
+              //.addIndicators({ name: 'effect 13' })
               .addTo( controller );
 
 
-      
-    // var scene4 = new ScrollMagic.Scene({ triggerElement: ".article-4" })
-    //           .triggerHook( "onLeave" )
-    //           .setClassToggle( ".article-4 .card", "is-visible" )
-    //           .addIndicators({ name: 'article 4' })
-    //           .addTo( controller );
-
-    // var scene5 = new ScrollMagic.Scene({ triggerElement: ".article-5" })
-    //           .duration(200)
-    //           .setClassToggle( ".article-5 .card", "is-visible" )
-    //           .addIndicators({ name: 'article 5' })
-    //           .addTo( controller );
-
-    // var scene6 = new ScrollMagic.Scene({ triggerElement: ".article-6" })
-    //           .duration( 200 )
-    //           .on( "enter", function() {
-    //             var targetCard = document.querySelector( ".article-6 .card" );
-    //                 targetCard.classList.add( 'is-visible' );
-    //           })
-    //           .on( "leave", function() {
-    //             var targetCard = document.querySelector( ".article-6 .card" );
-    //                 targetCard.classList.remove( 'yellow' )
-    //                 targetCard.classList.add( 'blue' );
-    //           })
-    //           .addIndicators({ name: "article 6" })
-    //           .addTo( controller );
     
     
 

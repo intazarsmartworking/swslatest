@@ -30,7 +30,7 @@ get_header('second');
                         </p>
                     </div>  
                 </div>
-                <div class="timeline-item pb-[150px]" id="scroll-effect-3">
+                <div class="timeline-item  pb-[150px] curv-box" id="scroll-effect-3">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1000px]">
                         <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium">2020</h1>
@@ -56,7 +56,7 @@ get_header('second');
                     </div> 
                 </div>
 
-                <div class="timeline-item pb-[100px]" id="scroll-effect-5">
+                <div class="timeline-item curv-box pb-[100px]" id="scroll-effect-5">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1000px]">
                         <h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium ">2021</h1>
@@ -206,7 +206,7 @@ get_header('second');
                     </div> 
                 </div>
 
-                <div class="timeline-item pb-[100px]" id="scroll-effect-10">
+                <div class="timeline-item curv-box pb-[100px]" id="scroll-effect-10">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
                         <div class="max-w-[1000px]">
@@ -298,7 +298,7 @@ get_header('second');
                             </div>
                     </div> 
                 </div>
-                <div class="timeline-item pb-[100px]" id="scroll-effect-12">
+                <div class="timeline-item curv-box pb-[100px]" id="scroll-effect-12">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
                         <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
@@ -400,7 +400,7 @@ get_header('second');
                 </div>
 
 
-                <div class="timeline-item pb-[100px]" id="scroll-effect-13">
+                <div class="timeline-item curv-box pb-[100px]" id="scroll-effect-13">
                     <img  src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" class=" absolute right-[90px] w-[100%] h-[100%] bottom-[-90px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">

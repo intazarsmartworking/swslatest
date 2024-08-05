@@ -3476,35 +3476,56 @@ body {
     transform: translate(0);
     overflow: hidden;
     padding: 2px;
+    max-width: 1250px;
+    margin: 40px auto;
 
 }
 .assemble-section-bg{
     position: relative;
     z-index: 99;
     background: rgb(51,17,2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     background: linear-gradient(90deg, rgba(51,17,2,1) 0%, rgba(57,20,2,1) 20%, rgba(65,22,4,1) 38%, rgba(79,25,3,1) 55%, rgba(92,30,4,1) 78%, rgba(91,3,3,1) 100%); 
 }
-.assemble-section-animation::after{
+.form_border_wrap {
+    pointer-events: none;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: xor;
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    position: absolute;
+    inset: 0%;
+    overflow: hidden;
+}
+.form_border_gradient{
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    inset: auto auto 0% -1%;
+    animation-play-state: running;
+    animation: videoBorder 20s linear infinite;
+    background-image: linear-gradient(180deg, #ff4b04b6, transparent);
+    
+}
+.form_border_gradient:nth-child(2) {
+    animation-delay: 2s;
+}
+/* .assemble-section-animation::before{
     content: '';
     position: absolute;
     background-image: linear-gradient(180deg, #ffffff80, transparent);
     width: 20rem;
     height: 20rem;
     inset: auto auto 0% 0%;
-    /* animation-play-state: running; */
     animation: videoBorder 15s linear infinite;
     z-index: 1;
-}
-.assemble-section-animation::before{
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(180deg, #ffffff80, transparent);
-    width: 20rem;
-    height: 20rem;
-    inset: auto auto 0% 0%;
-    animation: videoBorder 15s linear infinite;
-    z-index: 1;
-}
+} */
 /* .assemble-section-bg .svg{
     position: absolute;
 }
@@ -3526,7 +3547,7 @@ body {
         opacity: 1;
     }
     21% {
-        transform: translateZ(0) translate(-50%, -140%) rotate(45deg);
+        transform: translateZ(0) translate(-50%, -200%) rotate(45deg);
     }
     30%{
         transform: translateZ(0) translate(50%, -190%) rotate(90deg);
@@ -3828,7 +3849,7 @@ body {
 .timeline .timeline-box .timeline-item.in-view::before {
     content: "";
     position: absolute;
-    left: 2px;
+    left: -8px;
     top: 0;
     width: 20px;
     height: 20px;
@@ -3837,8 +3858,36 @@ body {
     border: 5px solid #fff;
     transition: 0.125s ease-in-out, background-color 0.2s ease-out, color 0.1s ease-out, border 0.1s ease-out;
     box-shadow: 0px 0px 24px rgba(255, 77, 2, 1);
+    z-index: 1;
 }
-.timeline .timeline-box .timeline-item::before {
+.timeline .timeline-box .timeline-item.in-view.curv-box::before{
+    left: 24px;
+}
+.timeline .timeline-box .timeline-item .curv-img{
+    display: none;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.timeline .timeline-box .timeline-item.in-view .curv-img{
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: block;
+}
+.timeline-content{
+    z-index: 99;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* .timeline .timeline-box .timeline-item::before {
     content: "";
     position: absolute;
     left: 3px;
@@ -3847,16 +3896,12 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    /* background: inherit;
-    background: #bdc3c7; */
     transition: all 0.4s ease-in-out;
-    /* border-radius: 14px; */
     border: 1px solid rgba(255, 77, 2, 0.80);
     background: rgba(198, 78, 26, 0.20);
     box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
-    -webkit-backdrop-filter: blur(50px);
-            backdrop-filter: blur(50px);
-}
+    backdrop-filter: blur(50px);
+} */
 .timeline .timeline-box .timeline-item::after {
     content: "";
     position: absolute;
