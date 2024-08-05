@@ -1482,14 +1482,11 @@ body {
 }
 
 
-
-
-
-
-
-
 .timeline-item .hide-bottom-border::after{
     display: none;
+}
+.card-slide-item{
+    display: inline-block;
 }
 
 @media (max-width: 640px) {

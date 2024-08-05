@@ -1624,6 +1624,9 @@ select {
 .rounded-\[30px\] {
   border-radius: 30px;
 }
+.rounded-\[32px\] {
+  border-radius: 32px;
+}
 .rounded-\[56px\] {
   border-radius: 56px;
 }
@@ -1767,6 +1770,22 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(252 237 234 / var(--tw-bg-opacity));
 }
+.bg-\[\#FFFFFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#c3b0f8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 176 248 / var(--tw-bg-opacity));
+}
+.bg-\[\#dda077\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 160 119 / var(--tw-bg-opacity));
+}
+.bg-\[\#f09e9e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 158 158 / var(--tw-bg-opacity));
+}
 .bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1854,6 +1873,9 @@ select {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-\[40px\] {
+  padding: 40px;
 }
 .px-0 {
   padding-left: 0px;
@@ -3783,6 +3805,9 @@ body {
 }
 .timeline-item .hide-bottom-border::after{
     display: none;
+}
+.card-slide-item{
+    display: inline-block;
 }
 @media (max-width: 640px) {
     .howItWorkHeading{

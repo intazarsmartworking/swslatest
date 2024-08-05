@@ -373,16 +373,63 @@ get_header('second');
                 <div class="timeline-item pb-[100px]">
                     <div class="timeline-content-box max-w-[1280px]">
 
-                        <div class="grid grid-cols-1 gap-5 content-center">
-                            <div>
-                                <div class="slide-show grid grid-cols-1 max-w-[100%]" >
-                                    <div class="silkSlide">
-                                        <div class="slide-item">your content</div>
-                                        <div class="slide-item">your content</div>
-                                        <div class="slide-item">your content</div>
-                                        <div class="slide-item">your content</div>
-                                        <div class="slide-item">your content</div>
-                                        <div class="slide-item">your content</div>
+                        <!-- <div class="slide-show grid grid-cols-1 max-w-[100%]" >
+                                <div class="silkSlide">
+                                    <div class="slide-item">your content</div>
+                                    <div class="slide-item">your content</div>
+                                    <div class="slide-item">your content</div>
+                                    <div class="slide-item">your content</div>
+                                    <div class="slide-item">your content</div>
+                                    <div class="slide-item">your content</div>
+                                </div>
+                            </div> -->
+                        <div>
+
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#C282FA] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#77BDDF] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#ECC1A1] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#60E3D5] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#FFFFFF] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#c3b0f8] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#f09e9e] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#dda077] min-h-[500px]">
+                                <div class="grid grid-cols-1">
+                                    <div>Smart Working’s process was seamless. Our goal was to find someone who would fit perfectly into our team, to deliver high value, and that’s what we got.  The feedback calls with their UK team since have been useful.  A highly recommended service.
                                     </div>
                                 </div>
                             </div>
@@ -435,6 +482,18 @@ get_header('second');
                                     </div>
                                     <div class="slide-item text-center">
                                         <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" />
+                                    </div>
+                                    <div class="slide-item text-center">
+                                        <img width="100%" class="inline rounded-[6px]" src="<?php echo get_template_directory_uri();?>/images/client-5.png" />
                                     </div>
                                 </div>
                             </div>
