@@ -304,41 +304,59 @@
 
 
 <!-- FAQ Section  -->
-<div class="w-full relative grid items-center bg-black z-10">
-    <div class="container mx-auto md:px-0 px-10">
-	<h3 class="text-center small-intro"> FAQ's </h3>
-  	<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
-  	<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
-	
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
-			<?php 
-				$faq_argument = array( 'post_type' => 'faq');
-				$faq_query	= new WP_Query($faq_argument);
-			?>
-			<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
-			<?php $post_id = get_the_ID(); ?>
 
-			<div>
-			  <div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
-					<span id="accordion-label-<?php echo $post_id; ?>" class="text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
-					<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-<?php echo $post_id; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					  <path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-<?php echo $post_id; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-				   <p class="p-4 text-base text-white"><?php echo get_the_excerpt();?></p>
+<?php if (have_rows('hire_block_section')) : ?>
+ <?php while (have_rows('hire_block_section')) : the_row(); ?>
+   <?php if (get_row_layout() == 'faq_section') : ?>
+		<div class="w-full relative grid items-center bg-black z-10">
+			<div class="container mx-auto md:px-0 px-10">
+			<?php if(get_sub_field('top_title')): ?>
+				<h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
+			<?php endif; ?>
+			
+			<?php if(get_sub_field('main_title')): ?>
+				<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"> <?php echo get_sub_field('main_title'); ?> <br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> <?php echo get_sub_field('orange_title'); ?> </span></h1>
+			<?php endif; ?>
+			
+			<?php if(get_sub_field('small_paragraph')): ?>
+			<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
+			<?php endif; ?>
+			
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+					
+					<?php if(have_rows('faq_part')): ?>
+					<?php while(have_rows('faq_part')): the_row(); ?>
+					<?php 
+					  $question = get_sub_field('question'); 
+					  $answer = get_sub_field('answer'); 
+					  $row_index = get_row_index();
+					?>
+					<div>
+					  <div class="accordian-sec-bg mb-5">
+						<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $row_index; ?>)">
+							<span id="accordion-label-<?php echo $row_index; ?>" class="text-xl pt-6 pb-6 font-medium text-white"> <?php echo $question;?> </span>
+							<svg id="arrow-down-<?php echo $row_index; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							  <path d="M6 9l4 4 4-4"></path>
+							</svg>
+							<svg id="arrow-up-<?php echo $row_index; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							  <path d="M6 9l4-4 4 4"></path>
+							</svg>
+						</button>
+						<div id="accordion-section-<?php echo $row_index; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
+						   <p class="p-4 text-base text-white"> <?php echo $answer;?> </p>
+						</div>
+					  </div>
+					</div>
+					
+					<?php endwhile; ?>	
+					<?php endif; ?>
 				</div>
-			  </div>
-			</div>
-			<?php endwhile; wp_reset_postdata();?>
-		</div>
 
-    </div>
-</div>
+			</div>
+		</div>
+		<?php endif; ?>  
+    <?php endwhile; ?>
+<?php endif; ?>  
 
 <?php
     endwhile;
