@@ -50,8 +50,9 @@ get_header('second');
         </div>
     </div>
 </div> -->
-<section class="w-[100%] lg:py-[100px] lg:px-[100px]">
-    <div class="container">
+<section class="w-[100%] lg:py-[100px] lg:px-[100px] section-about-us bg-[#050403]">
+    <img  src="<?php echo get_template_directory_uri();?>/images/bg-about.png" class=" absolute left-0 top-0 w-[100%] z-1 opacity-[0.5] section-about-us-bg">
+    <div class="container relative z-10">
         <div class="timeline">
             <div class="timeline-box">
                 <span class="default-line"></span>
@@ -230,6 +231,7 @@ get_header('second');
 
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-9">
+                    <img  src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" class=" absolute right-[20px] w-[100%] h-[100%] top-[-150px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
                     <div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                             <div class="">
@@ -239,7 +241,7 @@ get_header('second');
                                 </p>
                             </div>
                             <div class="pt-[30px]">
-                                <img class=" relative lg:absolute lg:right-10 lg:bottom-[-60px] inline w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
+                                <img class="ani-img relative lg:absolute lg:right-10 lg:bottom-[-60px] inline w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png" />
 
                             </div>
                         </div>
@@ -273,6 +275,7 @@ get_header('second');
                 </div>
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-11">
+                     <img  src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" class=" absolute right-[90px] w-[100%] h-[100%] top-[-90px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
                     <div class="timeline-content-box relative border border-[rgba(245,248,255,0.1)] lg:left-[-90px] bg-[#1f0c04] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:px-[100px] lg:py-[50px]">
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                                 <div class="box-1 grid-item relative border-bottom-img py-12 pr-10">
@@ -373,7 +376,7 @@ get_header('second');
                 <div class="timeline-item pb-[100px]">
                     <div class="timeline-content-box max-w-[1280px]">
 
-                        <!-- <div class="slide-show grid grid-cols-1 max-w-[100%]" >
+                            <div class="slide-show grid grid-cols-1 max-w-[100%]" >
                                 <div class="silkSlide">
                                     <div class="slide-item">your content</div>
                                     <div class="slide-item">your content</div>
@@ -382,8 +385,8 @@ get_header('second');
                                     <div class="slide-item">your content</div>
                                     <div class="slide-item">your content</div>
                                 </div>
-                            </div> -->
-                        <div>
+                            </div>
+                        <!-- <div>
 
                             <div class="card-slide-item w-[100%] max-w-[500px] rounded-[32px] p-[40px] bg-[#C282FA] min-h-[500px]">
                                 <div class="grid grid-cols-1">
@@ -433,13 +436,14 @@ get_header('second');
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div> 
                 </div>
 
 
                 <div class="timeline-item pb-[100px]" id="scroll-effect-13">
+                    <img  src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" class=" absolute right-[90px] w-[100%] h-[100%] bottom-[-90px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
                     <img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
                     <div class="timeline-content-box max-w-[1280px]">
                         <div class="grid grid-cols-10 gap-5 content-center">

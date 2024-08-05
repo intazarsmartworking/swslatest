@@ -1090,15 +1090,47 @@ body {
     background-repeat: no-repeat;
 }
 
+.assemble-section-animation{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 2px transparent;
+    backdrop-filter: blur(20px);
+    transform: translate(0);
+    overflow: hidden;
+    padding: 2px;
+
+}
 
 .assemble-section-bg{
     position: relative;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 77, 2, 0.30);
-    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
-
+    z-index: 99;
+    background: rgb(51,17,2);
+    background: linear-gradient(90deg, rgba(51,17,2,1) 0%, rgba(57,20,2,1) 20%, rgba(65,22,4,1) 38%, rgba(79,25,3,1) 55%, rgba(92,30,4,1) 78%, rgba(91,3,3,1) 100%); 
 }
-.assemble-section-bg .svg{
+
+.assemble-section-animation::after{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(180deg, #ffffff80, transparent);
+    width: 20rem;
+    height: 20rem;
+    inset: auto auto 0% 0%;
+    /* animation-play-state: running; */
+    animation: videoBorder 15s linear infinite;
+    z-index: 1;
+}
+.assemble-section-animation::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(180deg, #ffffff80, transparent);
+    width: 20rem;
+    height: 20rem;
+    inset: auto auto 0% 0%;
+    animation: videoBorder 15s linear infinite;
+    z-index: 1;
+}
+
+/* .assemble-section-bg .svg{
     position: absolute;
 }
 
@@ -1108,6 +1140,41 @@ body {
     fill: transparent;
     stroke: rgba(255, 255, 255, 0.527);
     animation: svgAnimation2 10s linear infinite;
+} */
+
+@keyframes videoBorder {
+    0%{
+        transform: translateZ(0) translate(-50%);
+        opacity: 0;
+    }
+    20% {
+        transform: translateZ(0) translate(-50%, -140%);
+        opacity: 1;
+    }
+    21% {
+        transform: translateZ(0) translate(-50%, -140%) rotate(45deg);
+    }
+    30%{
+        transform: translateZ(0) translate(50%, -190%) rotate(90deg);
+    }
+    46% {
+        transform: translateZ(0) translate(270%, -190%) rotate(90deg);
+    }
+    47% {
+        transform: translateZ(0) translate(270%, -190%) rotate(135deg);
+    }
+    54% {
+        transform: translateZ(0) translate(320%, -140%) rotate(180deg);
+        opacity: 1;
+    }
+    70% {
+        transform: translateZ(0) translate(320%, -20%) rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0) translate(320%, -20%) rotate(180deg);
+        opacity: 0;
+    }
 }
 
 @keyframes svgAnimation1 {
@@ -1376,7 +1443,11 @@ body {
     width: 4px;
     height: 0;
     position: absolute;
-    background: #ff4d02;
+    /* background: #ff4d02; */
+    background: rgb(0,0,0);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(205,79,26,1) 50%, rgba(5,0,0,0.6895133053221288) 100%);
+    background-size: 4px 600px;
+    background-repeat: repeat-y;
 }
 .timeline .draw-line::after{
     content: '';
@@ -1442,8 +1513,8 @@ body {
     background-repeat: no-repeat; 
     background-size:cover;
     background-position: center; */
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(205,79,26,1) 50%, rgba(5,0,0,0.6895133053221288) 100%);
+    /* background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(205,79,26,1) 50%, rgba(5,0,0,0.6895133053221288) 100%); */
     z-index: -1;
 }
 
@@ -1487,6 +1558,12 @@ body {
 }
 .card-slide-item{
     display: inline-block;
+}
+.section-about-us{
+    background: url('./images/bg-about.png');
+    background-size: 100% 1100px;
+    background-repeat: no-repeat;
+    background-position:  top 0px left 0px;
 }
 
 @media (max-width: 640px) {
