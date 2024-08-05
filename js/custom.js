@@ -457,7 +457,7 @@ new ScrollMagic.Scene({
 
   const effect9 = new TimelineMax()
     .fromTo("#scroll-effect-9 p", 0.4, { x: '-200px', opacity: 0 }, { x: 0, opacity: 1, ease: Power2.EaseInOut }, "start")
-    .fromTo("#scroll-effect-9 img", 0.4, { x: '300px', opacity: 0 }, { x: 0, opacity: 1, ease: Power2.EaseInOut }, "start")
+    .fromTo("#scroll-effect-9 .ani-img", 0.4, { x: '300px', opacity: 0 }, { x: 0, opacity: 1, ease: Power2.EaseInOut }, "start")
 
   const effect10 = new TimelineMax()
     .fromTo("#scroll-effect-10 h1", 0.4, { x: '-300px', opacity: 0 }, { x: 0, opacity: 1, ease: Power2.EaseInOut }, "start")
