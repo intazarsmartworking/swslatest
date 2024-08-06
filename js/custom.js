@@ -572,11 +572,31 @@ new ScrollMagic.Scene({
               .addTo( controller );
 
 
+              
     
-    
-
+              
+  
 
 });
+
+function fadeSquares(el1, el2){
+  console.log('working')
+  el1.fadeOut(2000, ()=>{
+    el1.fadeIn(2000);
+  });
+}
+let el1 = jQuery('.path1');
+let el2 = jQuery('#movebox');
+
+setInterval(function (){
+  console.log('timent')
+  fadeSquares(el1, el2);
+}, 6000)
+
+
+
+
+
 
 
 
@@ -650,3 +670,28 @@ if(lineToDraw.length) {
     });	
   });
 }
+
+
+jQuery('a[href^="#"]').on('click',function (e) {
+  var target = this.hash,
+      $target = jQuery(target);
+
+  jQuery('html, body').stop().animate({
+    'scrollTop': $target.offset().top-70
+  }, 900, 'swing', function () {
+    window.location.hash = target;
+  });
+});
+
+function fixDiv() {
+  var $div = jQuery(".stickysidenav");
+  if (jQuery(window).scrollTop() > $div.data("top")) { 
+    jQuery('.stickysidenav').css({'position': 'fixed', 'top': '0', 'width': '100%'}); 
+  }
+  else {
+    jQuery('.stickysidenav').css({'position': 'static', 'top': 'auto', 'width': '100%'});
+  }
+}
+
+jQuery(".stickysidenav").data("top", jQuery(".stickysidenav").offset().top ); // set original position on load
+jQuery(window).scroll(fixDiv);
