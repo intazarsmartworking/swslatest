@@ -777,7 +777,7 @@ $(window).scroll(function() {
 
 
 
-// jQuery('#show-more').on('click', function (e) {
-//   jQuery('#sticky-details').toggleClass('show-details')
-//   sticky_relocate();
-// })
+jQuery('#show-more').on('click', function (e) {
+  jQuery('#sticky-details').toggleClass('show-details')
+  sticky_relocate();
+})
