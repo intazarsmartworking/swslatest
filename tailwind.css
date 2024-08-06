@@ -1702,6 +1702,26 @@ body {
     max-width: 176px;
     min-width: 237px;
 }
+.side-bar-fix{
+    position: fixed;
+    top: 70px;
+}
+.show-more-box .grid-item h1{
+    margin-bottom: 30px;
+}
+.show-more-box .grid-item h3{
+    margin-bottom: 20px;
+}
+
+.show-more-box .grid-item p{
+    margin-bottom: 30px;
+}
+/* #sticky-details{
+    display: none;
+}
+#sticky-details.show-details{
+    display: block;
+} */
 
 @media (max-width: 640px) {
     .howItWorkHeading{
