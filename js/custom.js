@@ -707,6 +707,7 @@ function scrollToAnyPoint (navItem) {
 scrollToAnyPoint("a[data-location]");
 
 jQuery('#show-more').on('click', function(){
+  elementPosition = null;
   jQuery('.stickysidenav').hide()
   jQuery('#sticky-details').toggleClass('show-details')
   setTimeout( function(){
