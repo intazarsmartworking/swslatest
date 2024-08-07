@@ -4075,12 +4075,15 @@ body {
 .show-more-box .grid-item p{
     margin-bottom: 30px;
 }
-/* #sticky-details{
+.scroll-section{
+    padding-top: 40px;
+}
+#sticky-details{
     display: none;
 }
 #sticky-details.show-details{
     display: block;
-} */
+}
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);

@@ -671,113 +671,49 @@ if(lineToDraw.length) {
   });
 }
 
+var elementPosition = null;
 
-// jQuery('a[href^="#"]').on('click',function (e) {
-//   var target = this.hash,
-//       $target = jQuery(target);
+function menuOnScroll(mySection, myMenu, myClass) {
+  jQuery(window).scroll(function(){
+    var elScroll = jQuery(window).scrollTop();
+    if(jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top) && elementPosition != null){
+      jQuery('.stickysidenav').addClass('side-bar-fix');
+    } else {
+      jQuery('.stickysidenav').removeClass('side-bar-fix');
+    }  
+    jQuery(mySection).each(function(i){
+      if (jQuery(this).offset().top <= elScroll) {
+        jQuery(myMenu).removeClass(myClass);
+        jQuery(myMenu).eq(i).addClass(myClass);
+      }
+    });
+  });
+}
+menuOnScroll('.scroll-section',"a[data-location]", 'active');
 
-//   jQuery('html, body').stop().animate({
-//     'scrollTop': $target.offset().top-70
-//   }, 900, 'swing', function () {
-//     window.location.hash = target;
-//   });
-// });
-
-// function fixDiv() {
-//   var $div = jQuery(".stickysidenav");
-//   if (jQuery(window).scrollTop() > $div.data("top")) { 
-//     jQuery('.stickysidenav').css({'position': 'fixed', 'top': '70px', 'width': '100%'}); 
-//   }
-//   else {
-//     jQuery('.stickysidenav').css({'position': 'static', 'top': 'auto', 'width': '100%'});
-//   }
-// }
-
-// jQuery(".stickysidenav").data("top", jQuery(".stickysidenav").offset().top ); // set original position on load
-// jQuery(window).scroll(fixDiv);
-
-function sticky_relocate() {
-  var window_top = jQuery(window).scrollTop();
-  var div_top = jQuery('#sticky-anchor').offset().top;
-  if (window_top > div_top) {
-    jQuery('.stickysidenav').addClass('side-bar-fix');
-  } else {
-    jQuery('.stickysidenav').removeClass('side-bar-fix');
-  }
+function scrollToAnyPoint (navItem) {
+  var getAttr;
+  jQuery(navItem).click(function(e){
+    e.preventDefault();
+    // getAttr = jQuery(this).attr('data-location');
+    getAttr = jQuery(this).attr('data-location');
+    console.log('getAttr', getAttr)
+    const getID = '#'+getAttr;
+    var toSection = jQuery(getID).offset().top + 20;
+    jQuery("html, body").animate({scrollTop:toSection}, 1000)
+  });
 }
 
-jQuery(function() {
-  jQuery(window).scroll(sticky_relocate);
-  sticky_relocate();
-});
+scrollToAnyPoint("a[data-location]");
 
-// jQuery(document).ready(function () {
-//   jQuery(document).on("scroll", onScroll);
-
-//   jQuery('a[href^="#"]').on('click', function (e) {
-//     e.preventDefault();
-//     jQuery(document).off("scroll");
-
-//     jQuery('a').each(function () {
-//       jQuery(this).removeClass('active');
-//     })
-//     jQuery(this).addClass('active');
-
-//     var target = this.hash;
-//     $target = $(target);
-//     jQuery('html, body').stop().animate({
-//       'scrollTop': $target.offset().top+2
-//     }, 500, 'swing', function () {
-//       window.location.hash = target;
-//       jQuery(document).on("scroll", onScroll);
-//     });
-//   });
-// });
-
-// function onScroll(event){
-//   var scrollPosition = jQuery(document).scrollTop();
-//   jQuery('.scroll-section').each(function () {
-//     var currentLink = jQuery(this);
-//     var refElement = jQuery(currentLink.attr("href"));
-//     if (refElement.position().top <= scrollPosition) {
-//       jQuery('.stickysidenav ul li a').removeClass("active");
-//       currentLink.addClass("active");
-//     }
-//   });
-// }
-
-$(document).ready(function() {
-  $('a[href*=#]').bind('click', function(e) {
-      e.preventDefault(); // prevent hard jump, the default behavior
-
-      var target = $(this).attr("href"); // Set the target as variable
-
-      // perform animated scrolling by getting top-position of target-element and set it as scroll target
-      $('html, body').stop().animate({
-          scrollTop: $(target).offset().top
-      }, 600, function() {
-          location.hash = target; //attach the hash (#jumptarget) to the pageurl
-      });
-
-      return false;
-  });
-});
-
-$(window).scroll(function() {
-  var scrollDistance = $(document).scrollTop();
-  $('.scroll-section').each(function(i) {
-      if ($(this).position().top <= scrollDistance) {
-          $('.stickysidenav ul li a.active').removeClass('active');
-          $('.stickysidenav ul li a').eq(i).addClass('active');
-      }
-  });
-}).scroll();
-
-
-
-
-
-jQuery('#show-more').on('click', function (e) {
+jQuery('#show-more').on('click', function(){
+  jQuery('.stickysidenav').hide()
   jQuery('#sticky-details').toggleClass('show-details')
-  sticky_relocate();
+  setTimeout( function(){
+   elementPosition = jQuery('#fix-side-box').offset();
+   jQuery('.stickysidenav').fadeIn('slow')
+  }, 100)
+  setTimeout( function(){
+    jQuery('.stickysidenav').fadeIn('slow')
+   }, 300)
 })
