@@ -588,7 +588,7 @@
                   <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#FF4F04] font-normal "> 
                     <svg class=" inline-block mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
-                    </svg><span class=" cursor-pointer " id="show-more">Show</span></p>
+                    </svg><span class="cursor-pointer " id="show-more">Show</span></p>
               </div>
               <div class="grid-item col-span-2 content-center text-end pt-5">
                   <img class="img-3 inline w-[214px]" src="<?php echo get_template_directory_uri();?>/images/show-more-img.png" />
@@ -604,14 +604,14 @@
     <div class="max-w-[1280px] mx-auto">
           <div class="show-more-box pt-[60px]">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
-              <div class="grid-item col-span-2 content-start">
+              <div class="grid-item col-span-2 content-start" id="fix-side-box">
                 <div class="stickysidenav">
                   <ul class="scroll-menu">
-                    <li><a class="active" href="#target1"><span>1.</span> Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</a></li>
-                    <li><a href="#target2"><span>2.</span> Why Hire an Offshore WordPress Developer?</a></li>
-                    <li><a href="#target3"><span>3.</span> Top Benefits of Hiring Dedicated Offshore WordPress Developers</a></li>
-                    <li><a href="#target4"><span>4.</span> Questions to Ask When Hiring an Offshore WordPress Developer</a></li>
-                    <li><a href="#target5"><span>5.</span> Conclusion</a></li>
+                    <li><a class=" cursor-pointer" data-location="target1"><span>1.</span> Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</a></li>
+                    <li><a class=" cursor-pointer" data-location="target2"><span>2.</span> Why Hire an Offshore WordPress Developer?</a></li>
+                    <li><a class=" cursor-pointer" data-location="target3"><span>3.</span> Top Benefits of Hiring Dedicated Offshore WordPress Developers</a></li>
+                    <li><a class=" cursor-pointer" data-location="target4"><span>4.</span> Questions to Ask When Hiring an Offshore WordPress Developer</a></li>
+                    <li><a class=" cursor-pointer" data-location="target5"><span>5.</span> Conclusion</a></li>
                   </ul>
                 </div>
               </div>
