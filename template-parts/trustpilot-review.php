@@ -13,9 +13,9 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Paul </p>
+				<!-- <p class="text-xs desig"> Lead Product Designer, Google </p> -->
+                <p class="text-sm pt-5 pilot-descri"> We struggled to fill a Senior Dev-Ops role in the UK. Smartworking-solutions provided quality developers from India, handling all steps from vetting to interviews. They delivered a perfect fit. Highly recommended. </p>
 			  </div>
 		 </div>
 		</div>
@@ -26,9 +26,8 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Phil </p>
+                <p class="text-sm pt-5 pilot-descri"> Smart Working built a remote team of 6 developers for us. They quickly integrate, produce high-quality work, and operate like normal team members. We'll keep using Smart Working as we grow. </p>
 			  </div>
 		 </div>
 		</div>
@@ -39,9 +38,8 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Oliver Rebbeck </p>
+                <p class="text-sm pt-5 pilot-descri"> We've had a great experience with Smart Working. They made the process easy, and we had a new employee within weeks. Regular check-ins and guidance helped us get the best from our hire. Highly recommended. </p>
 			  </div>
 		 </div>
 		</div>
@@ -52,9 +50,8 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Steven </p>
+                <p class="text-sm pt-5 pilot-descri"> Smart Working was efficient and easy to work with. They did exactly as described with no pressure or surprises, solving our development resource issues. Our developer integrated well and continues to grow. </p>
 			  </div>
 		 </div>
 		</div>
@@ -65,9 +62,48 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Jimmy Holt </p>
+                <p class="text-sm pt-5 pilot-descri"> We hired two impressive software engineers from Smart Working. They work full-time, like regular team members, matching our hours. We're excited to have them visit the UK soon for a week-long meet-up.
+				</p>
+			  </div>
+		 </div>
+		</div>
+
+		<div class="trustpilot-bg mb-5">
+		  <div class="flex">
+			  <div class="pr-4">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+			  </div>
+			  <div>
+				<p class="font-bold text-base text-white"> Jones </p>
+                <p class="text-sm pt-5 pilot-descri"> Good, efficient process at Smart Working Solutions. They usually onboard new team members within a month of receiving our job description. We also feel well supported by their Indian team.
+				</p>
+			  </div>
+		 </div>
+		</div>
+
+		<div class="trustpilot-bg mb-5">
+		  <div class="flex">
+			  <div class="pr-4">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+			  </div>
+			  <div>
+				<p class="font-bold text-base text-white"> Jeremy Burgess </p>
+                <p class="text-sm pt-5 pilot-descri"> Smart Working made offshore recruitment easy. They provided an excellent Senior Dev, Ritesh, who quickly integrated and impressed us. The process was fast and effective, with great support.
+				</p>
+			  </div>
+		 </div>
+		</div>
+
+		<div class="trustpilot-bg mb-5">
+		  <div class="flex">
+			  <div class="pr-4">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+			  </div>
+			  <div>
+				<p class="font-bold text-base text-white"> Callum Crombie </p>
+                <p class="text-sm pt-5 pilot-descri"> Smart Working made the process quick and simple. They introduced strong candidates within two days of receiving the job description. We were impressed and highly recommend their service.
+				</p>
 			  </div>
 		 </div>
 		</div>
@@ -78,9 +114,8 @@
 				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
 			  </div>
 			  <div>
-				<p class="font-bold text-base text-white"> Ahamd Ekstrom Bothman </p>
-				<p class="text-xs desig"> Lead Product Designer, Google </p>
-                <p class="text-sm pt-5 pilot-descri"> Eum eligendi dignissimos voluptatem. Iste aut cum laborum nostrum. Velit voluptas qui dicta sit sunt maiores hic maiores. Provident sequi illo incidunt cum assumenda illum voluptatibus. </p>
+				<p class="font-bold text-base text-white"> Belle </p>
+                <p class="text-sm pt-5 pilot-descri"> Great service from Smart Working. Vikas joined us over a year ago and has made a significant impact. Initially, we focused on communication, but now we have a great routine, and things are progressing well. </p>
 			  </div>
 		 </div>
 		</div>
