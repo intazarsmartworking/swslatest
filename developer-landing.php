@@ -37,7 +37,7 @@ get_header('second');
 
 <!-- Vetted Profile Section -->
 
-<section class="bg-black flex flex-col items-center justify-center py-16">
+<section class="flex flex-col items-center justify-center py-16">
     <h3 class="text-center small-intro">Vetted Profiles</h3>
 	
     <div class="flex flex-col items-center justify-center mb-20">
@@ -322,7 +322,7 @@ get_header('second');
 
 <!-- Top 1% Section -->
 
-<section class="bg-black flex flex-col items-center justify-center py-16">
+<section class="flex flex-col items-center justify-center py-16">
 <h3 class="text-center small-intro">Top 1%</h3>
       <div class="flex flex-col items-center justify-center">
         <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1> 
@@ -372,7 +372,7 @@ get_header('second');
 
 <!-- Benefit Section -->
 
-<section class="bg-black flex flex-col items-center justify-center py-16 w-full">
+<section class="flex flex-col items-center justify-center py-16 w-full">
 <h3 class="text-center small-intro">Benefits</h3>
       <div class="flex flex-col items-center justify-center">
         <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Benefits of Hiring Wordpress</h1> 
@@ -587,7 +587,7 @@ get_header('second');
 
 <!-- Client Section -->
 
-<div class="w-full relative  grid items-center pt-24 bg-section-trusted bg-dark-black">
+<div class="w-full relative  grid items-center pt-24 bg-section-trusted">
   <div class="px-10">
     <h3 class="text-center small-intro"> Clients </h3>
     <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>
@@ -663,7 +663,7 @@ get_header('second');
 <?php get_template_part( 'template-parts/home-blog' );?>
 
 <!-- FAQ Section  -->
-<div class="w-full relative bg-dark-black grid items-center pb-28 pt-16 md:pt-36">
+<div class="w-full relative grid items-center pb-28 pt-16 md:pt-36">
     <div class="container mx-auto md:px-0 px-10">
         <h3 class="text-center small-intro"> FAQ's </h3>
         <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
@@ -699,7 +699,7 @@ get_header('second');
 </div>
 
 
-<div class="w-full  relative bg-dark-black grid items-center pb-28">
+<div class="w-full  relative grid items-center pb-28">
   <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
@@ -726,7 +726,7 @@ get_header('second');
   </div>
 </div>
 
-<div class="w-full relative bg-dark-black grid items-center pt-16 md:pt-36">
+<div class="w-full relative grid items-center pt-16 md:pt-36">
     <div class="max-w-[1280px] mx-auto">
           <div class="d-block">
             <h3 class="text-center small-intro"> Hire </h3>
@@ -755,7 +755,7 @@ get_header('second');
     </div>
 </div>
 </div>
-<div class="w-full relative bg-dark-black" id="sticky-details">
+<div class="w-full relative" id="sticky-details">
     <div class="max-w-[1280px] mx-auto">
           <div class="show-more-box mt-[60px]">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">

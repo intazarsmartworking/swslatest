@@ -1,4 +1,4 @@
-<div class="w-full relative grid items-center bg-black">
+<div class="w-full relative grid items-center">
 	<div class="container mx-auto md:px-0 px-10">
 		<div class=" mx-auto md:px-0 px-10 pt-2">
 

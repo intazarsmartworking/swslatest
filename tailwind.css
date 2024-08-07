@@ -1665,7 +1665,6 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #050403;
     /* border-radius: 24px;
     background: radial-gradient(188.91% 103.49% at 50.12% -19.11%, #5F1C00 0%, #1D0900 100%); */
 }
@@ -1724,6 +1723,43 @@ body {
 }
 #sticky-details.show-details{
     display: block;
+}
+.bg-vp{
+    background-position: center;
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+}
+.vetting-step-section-inner{
+    border-radius: 18px;
+    border: 0.75px solid rgba(255, 77, 2, 0.30);
+    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, #1C0A02 0%, #100601 100%);
+}
+.section-dicription{
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 20px;
+    list-style-type: circle;
+}
+.section-dicription li{
+    color:#E5E5E5;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.steps-box{
+    box-shadow: 0px 0px 70px 0px rgba(55, 93, 251, 0.25);
+    background: radial-gradient(50% 50% at 50% 100%, #E45012 0%, rgba(228, 80, 18, 0.00) 100%);
+    display: inline-block;
+    height: 50px;
+    min-width: 120px;
+    text-align: center;
+}
+.flip-img{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 
 @media (max-width: 640px) {
