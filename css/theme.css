@@ -1251,6 +1251,12 @@ select {
 .mt-\[70px\] {
   margin-top: 70px;
 }
+.mt-32 {
+  margin-top: 8rem;
+}
+.mt-40 {
+  margin-top: 10rem;
+}
 .block {
   display: block;
 }
