@@ -400,6 +400,10 @@
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Once you’ve selected a developer we will onboard & set them up with your team.
                         </li>
+
+                        <li class="text-[20px] flex leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We take care of HR, Payroll, Pension and all employment costs
+                        </li>
                         
                     </ul>
                 </div>
@@ -451,6 +455,10 @@
                     <ul>
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />UK (location specific) based experts on-hand to ensure long term success.
+                        </li>
+
+                        <li class="text-[20px] flex leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Smart Working’s Customer Success Team will be in regular contact.
                         </li>
                         
                     </ul>
