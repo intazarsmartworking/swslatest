@@ -946,6 +946,9 @@ select {
 .bottom-\[-90px\] {
   bottom: -90px;
 }
+.bottom-\[100px\] {
+  bottom: 100px;
+}
 .bottom-\[13px\] {
   bottom: 13px;
 }
@@ -988,6 +991,9 @@ select {
 .right-\[20px\] {
   right: 20px;
 }
+.right-\[9\%\] {
+  right: 9%;
+}
 .right-\[90px\] {
   right: 90px;
 }
@@ -1024,8 +1030,14 @@ select {
 .top-\[170px\] {
   top: 170px;
 }
+.z-0 {
+  z-index: 0;
+}
 .z-10 {
   z-index: 10;
+}
+.z-\[0\] {
+  z-index: 0;
 }
 .z-\[1\] {
   z-index: 1;
@@ -1149,6 +1161,9 @@ select {
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
+.mb-\[60px\] {
+  margin-bottom: 60px;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1247,6 +1262,9 @@ select {
 }
 .mt-\[40px\] {
   margin-top: 40px;
+}
+.mt-\[50px\] {
+  margin-top: 50px;
 }
 .mt-\[60px\] {
   margin-top: 60px;
@@ -1365,6 +1383,9 @@ select {
 }
 .min-h-\[300px\] {
   min-height: 300px;
+}
+.min-h-\[350px\] {
+  min-height: 350px;
 }
 .min-h-\[400px\] {
   min-height: 400px;
@@ -1526,6 +1547,9 @@ select {
 .max-w-\[600px\] {
   max-width: 600px;
 }
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
 .max-w-\[950px\] {
   max-width: 950px;
 }
@@ -1543,6 +1567,10 @@ select {
 }
 .grow {
   flex-grow: 1;
+}
+.rotate-\[-30deg\] {
+  --tw-rotate: -30deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1716,6 +1744,9 @@ select {
 }
 .rounded-\[56px\] {
   border-radius: 56px;
+}
+.rounded-\[60px\] {
+  border-radius: 60px;
 }
 .rounded-\[6px\] {
   border-radius: 6px;
@@ -2076,17 +2107,21 @@ select {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
+.py-\[10\%\] {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.py-\[1rem\] {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .py-\[32px\] {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.py-\[4rem\] {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-\[50px\] {
   padding-top: 50px;
@@ -2434,6 +2469,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[\#ffff\] {
+  color: #ffff;
+}
 .text-\[\#ffffff\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2773,10 +2811,7 @@ body {
     border-radius: 20px;
 }
 .footer-background{
-    background-image: url('../images/footer-bg.svg');
-    background-repeat: no-repeat; 
-    background-size:cover;
-    background-position: center;
+    background: linear-gradient(180deg, transparent 0%, #270D02 100%);
     border-radius: 24px;
 }
 .left-profile {
@@ -4170,6 +4205,34 @@ body {
     filter: FlipH;
     -ms-filter: "FlipH";
 }
+.calculator-box .inner-box{
+    border-radius: 24px;
+    background: radial-gradient(217.29% 122.1% at 19.03% 0%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
+}
+.clinet-logo .item{
+   max-width: 180px;
+   min-height: 115px;
+   text-align: center;
+   display: inline-block; 
+   margin: 20px;
+}
+.path-box img{
+    animation: fadeinout 2s infinite;
+}
+@keyframes fadeinout
+{
+  0%{
+    opacity:0;
+  }
+  50%
+  {
+    opacity:1;
+  }
+  100%
+  {
+    opacity:0;
+  }
+}
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -4201,6 +4264,9 @@ body {
     }
     .timeline-item .hide-bottom-border::after{
         display: block;
+    }
+    .clinet-logo .item{
+        margin: 6px;
     }
 
 }
@@ -4401,6 +4467,10 @@ body {
     display: none;
   }
 
+  .md\:min-h-\[600px\] {
+    min-height: 600px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -4478,6 +4548,11 @@ body {
   .md\:px-96 {
     padding-left: 24rem;
     padding-right: 24rem;
+  }
+
+  .md\:px-\[10\%\] {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .md\:py-10 {
@@ -4846,6 +4921,10 @@ body {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:leading-\[30px\] {
+    line-height: 30px;
   }
 
   .lg\:leading-\[36px\] {
