@@ -570,21 +570,33 @@
 </div>
 
 
-
+<?php if (have_rows('hire_block_section')) : ?>
+ <?php while (have_rows('hire_block_section')) : the_row(); ?>
+   <?php if (get_row_layout() == 'hire_offshore') : ?>
 <div class="w-full relative bg-black grid items-center pt-16 md:pt-36">
     <div class="max-w-[1280px] mx-auto">
           <div class="d-block">
-            <h3 class="text-center small-intro"> Hire </h3>
-            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Hire Offshore<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
-            WordPress Developer</span></h1>
+		  <?php if(get_sub_field('top_title')): ?>
+            <h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
+		  <?php endif; ?>  
+
+			<?php if(get_sub_field('main_title')): ?>
+            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+            <?php echo get_sub_field('orange_title'); ?></span></h1>
+			<?php endif; ?>  
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
               <div class="grid-item col-span-8 content-center">
-                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium">Why Hiring an Offshore WordPress Developer is the Smart Choice (A Guide)</h1>
+				<?php if(get_sub_field('title')): ?>
+                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h1>
+				<?php endif; ?> 
+
+				<?php if(get_sub_field('paragraph')): ?>	
                   <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] font-normal ">
-                    The globally popular content management system WordPress is revolutionising website development with its user-friendly interface and robust features. We've compiled this guide to answer your offshore WordPress developer hiring concerns. And if you still have any unanswered questions, you can talk to our consultants anytime. We're happy to <span class="text-[#FF4D02]">help and chat for free.</span>
+                    <?php echo get_sub_field('paragraph'); ?>
                   </p>
+				<?php endif; ?>   
                   <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#FF4F04] font-normal "> 
                     <svg class=" inline-block mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
@@ -600,6 +612,8 @@
     </div>
 </div>
 </div>
+
+		
 <div class="w-full relative bg-black" id="sticky-details">
     <div class="max-w-[1280px] mx-auto">
           <div class="show-more-box pt-[60px]">
@@ -607,273 +621,51 @@
               <div class="grid-item col-span-2 content-start" id="fix-side-box">
                 <div class="stickysidenav">
                   <ul class="scroll-menu">
-                    <li><a class=" cursor-pointer" data-location="target1"><span>1.</span> Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</a></li>
-                    <li><a class=" cursor-pointer" data-location="target2"><span>2.</span> Why Hire an Offshore WordPress Developer?</a></li>
-                    <li><a class=" cursor-pointer" data-location="target3"><span>3.</span> Top Benefits of Hiring Dedicated Offshore WordPress Developers</a></li>
-                    <li><a class=" cursor-pointer" data-location="target4"><span>4.</span> Questions to Ask When Hiring an Offshore WordPress Developer</a></li>
-                    <li><a class=" cursor-pointer" data-location="target5"><span>5.</span> Conclusion</a></li>
+				  
+				  <?php if(have_rows('table_content')): ?>
+				  <?php $section_count = 1; ?>
+					<?php while(have_rows('table_content')): the_row(); ?>
+					<?php 
+					  $main_title = get_sub_field('main_title'); 
+					  $unique_id = 'target' . $section_count;
+					?>
+                    <li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>"><span><?php echo $section_count;?>.</span> <?php echo $main_title;?> </a></li>
+                    
+					
+					<?php $section_count++;?>
+					<?php endwhile; ?>	
+					<?php endif; ?>
                   </ul>
                 </div>
               </div>
               <div class="grid-item col-span-6 content-start">
-                <div class="scroll-section min-h-[500px]" id="target1">
-                  <h1 class="text-[36px] text-white font-semibold">Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</h1>
-                  <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
-                  <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
-                  <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
-                  <p class="text-[18px] text-white font-medium ">These can arise when dealing with offshore developers. For instance, not being in the same time zone can make it difficult to iron out work coordination issues or exchange project feedback.</p>
                 
-                  <h3 class="text-[24px] text-white font-semibold">3. Cultural differences</h3>
-                  <p class="text-[18px] text-white font-medium ">Variations in work culture, communication methods, and business practices between onshore and offshore developers can often lead to confusion and misunderstanding.</p>
+				
+				<?php if(have_rows('table_content')): ?>
+				  <?php $section_count = 1; ?>
+					<?php while(have_rows('table_content')): the_row(); ?>
+					<?php 
+					  $main_title = get_sub_field('main_title'); 
+					  $unique_id = 'target' . $section_count;
+					?>
+				<div class="scroll-section min-h-[500px]" id="<?php echo $unique_id; ?>">
+                  <h1 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h1>
+                  <?php if(have_rows('description')): ?>
+				  <?php while(have_rows('description')): the_row(); ?>
+				  
+					<?php echo get_sub_field('main_description') ;?>
+					
+                  <?php endwhile; ?>	
+				  <?php endif; ?>
+				  
+				</div>
+				<?php $section_count++;?>
+				<?php endwhile; ?>	
+				<?php endif; ?>
                 
-                  <h3 class="text-[24px] text-white font-semibold">4. Quality assurance</h3>
-                  <p class="text-[18px] text-white font-medium ">Ensuring the quality and reliability of outsourced development can be challenging, notably when direct oversight and supervision are lacking.</p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                 
-
-                </div>
-                <div class="scroll-section min-h-[500px]" id="target2">
-                <h1 class="text-[36px] text-white font-semibold">Why Hire an Offshore WordPress Developer?</h1>
-                  <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
-                  <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
-                  <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
-                  <p class="text-[18px] text-white font-medium ">These can arise when dealing with offshore developers. For instance, not being in the same time zone can make it difficult to iron out work coordination issues or exchange project feedback.</p>
                 
-                  <h3 class="text-[24px] text-white font-semibold">3. Cultural differences</h3>
-                  <p class="text-[18px] text-white font-medium ">Variations in work culture, communication methods, and business practices between onshore and offshore developers can often lead to confusion and misunderstanding.</p>
                 
-                  <h3 class="text-[24px] text-white font-semibold">4. Quality assurance</h3>
-                  <p class="text-[18px] text-white font-medium ">Ensuring the quality and reliability of outsourced development can be challenging, notably when direct oversight and supervision are lacking.</p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-                  
-                </div>
-                <div class="scroll-section min-h-[500px]" id="target3">
-                <h1 class="text-[36px] text-white font-semibold">Top Benefits of Hiring Dedicated Offshore WordPress Developers</h1>
-                  <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
-                  <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
-                  <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
-                  <p class="text-[18px] text-white font-medium ">These can arise when dealing with offshore developers. For instance, not being in the same time zone can make it difficult to iron out work coordination issues or exchange project feedback.</p>
                 
-                  <h3 class="text-[24px] text-white font-semibold">3. Cultural differences</h3>
-                  <p class="text-[18px] text-white font-medium ">Variations in work culture, communication methods, and business practices between onshore and offshore developers can often lead to confusion and misunderstanding.</p>
-                
-                  <h3 class="text-[24px] text-white font-semibold">4. Quality assurance</h3>
-                  <p class="text-[18px] text-white font-medium ">Ensuring the quality and reliability of outsourced development can be challenging, notably when direct oversight and supervision are lacking.</p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-                
-                </div>
-                <div class="scroll-section min-h-[500px]" id="target4">
-                <h1 class="text-[36px] text-white font-semibold">Questions to Ask When Hiring an Offshore WordPress Developer</h1>
-                  <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
-                  <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
-                  <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
-                  <p class="text-[18px] text-white font-medium ">These can arise when dealing with offshore developers. For instance, not being in the same time zone can make it difficult to iron out work coordination issues or exchange project feedback.</p>
-                
-                  <h3 class="text-[24px] text-white font-semibold">3. Cultural differences</h3>
-                  <p class="text-[18px] text-white font-medium ">Variations in work culture, communication methods, and business practices between onshore and offshore developers can often lead to confusion and misunderstanding.</p>
-                
-                  <h3 class="text-[24px] text-white font-semibold">4. Quality assurance</h3>
-                  <p class="text-[18px] text-white font-medium ">Ensuring the quality and reliability of outsourced development can be challenging, notably when direct oversight and supervision are lacking.</p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-                  
-                  
-                </div>
-                <div class="scroll-section min-h-[500px]" id="target5">
-                <h1 class="text-[36px] text-white font-semibold">Conclusion</h1>
-                  <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
-                  <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
-                  <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
-                  <p class="text-[18px] text-white font-medium ">These can arise when dealing with offshore developers. For instance, not being in the same time zone can make it difficult to iron out work coordination issues or exchange project feedback.</p>
-                
-                  <h3 class="text-[24px] text-white font-semibold">3. Cultural differences</h3>
-                  <p class="text-[18px] text-white font-medium ">Variations in work culture, communication methods, and business practices between onshore and offshore developers can often lead to confusion and misunderstanding.</p>
-                
-                  <h3 class="text-[24px] text-white font-semibold">4. Quality assurance</h3>
-                  <p class="text-[18px] text-white font-medium ">Ensuring the quality and reliability of outsourced development can be challenging, notably when direct oversight and supervision are lacking.</p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">6. Security concerns</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                  Businesses worry about security when considering offshore software development. They think going outside the country to develop their software will be problematic. When the software they create for the business runs amok, it can bring about significant issues like data breaches, data leaks, etc.
-
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">7. Scalability and flexibility</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-
-                  <h3 class="text-[24px] text-white font-semibold">5. Technical expertise</h3>
-                  <p class="text-[18px] text-white font-medium ">
-                    Assessing the technical skills of offshore developers, including their proficiency in WordPress development, plugin customisation, and theme integration, can be difficult without proper evaluation processes.
-                  </p>
-                  
-                </div>
               </div>
               <div class="grid-item col-span-2 content-start">
                 <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
@@ -891,6 +683,10 @@
 </div>
 </div>
 </div>
+
+<?php endif; ?>  
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <?php
     endwhile;
