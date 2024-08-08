@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
-                    <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
+                    <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We’ll match you with the best engineers in our network & in the wider market
@@ -338,7 +338,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
-                    <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
+                    <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best engineers to you at no cost & within days
@@ -395,7 +395,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
-                    <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
+                    <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Once you’ve selected a developer we will onboard & set them up with your team.
@@ -447,7 +447,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
-                    <h3 class="text-[40px] text-bold">Meet the Candidates</h3>
+                    <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
                         <li class="text-[20px] flex leading-9">
                             <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />UK (location specific) based experts on-hand to ensure long term success.
