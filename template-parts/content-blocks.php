@@ -60,8 +60,8 @@
 				<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
 			<?php endif; ?> 
 
-			<?php if(get_sub_field('short_title')): ?>	
-				<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white">Europe's Leading Provider Of</span><span class="text-dark-orange">Time-Zone Aligned Developers</span> </h1>
+			<?php if(get_sub_field('main_heading')): ?>	
+				<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h1>
 			<?php endif; ?>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 
