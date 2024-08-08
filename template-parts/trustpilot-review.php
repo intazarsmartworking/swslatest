@@ -10,7 +10,7 @@
         <div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/paul.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Paul </p>
@@ -23,7 +23,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/phil.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Phil </p>
@@ -35,7 +35,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/oliver.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Oliver Rebbeck </p>
@@ -47,7 +47,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/steven.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Steven </p>
@@ -59,7 +59,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/jimmy.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Jimmy Holt </p>
@@ -72,7 +72,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/johns.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Jones </p>
@@ -85,7 +85,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/jermany.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Jeremy Burgess </p>
@@ -98,7 +98,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/callum.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Callum Crombie </p>
@@ -111,7 +111,7 @@
 		<div class="trustpilot-bg mb-5">
 		  <div class="flex">
 			  <div class="pr-4">
-				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/Base.svg" alt="">
+				<img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/belle.png" alt="">
 			  </div>
 			  <div>
 				<p class="font-bold text-base text-white"> Belle </p>
