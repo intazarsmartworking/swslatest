@@ -249,7 +249,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/howItWorksCards_avatar.svg" />
+                        <img src="<?php echo get_template_directory_uri();?>/images/outline-your-requirements.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -304,7 +304,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/howItWorksCards_avatar.svg" />
+                        <img src="<?php echo get_template_directory_uri();?>/images/Meet-the-best-engineers.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -361,7 +361,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/howItWorksCards_avatar.svg" />
+                        <img src="<?php echo get_template_directory_uri();?>/images/Quick-Effective-Onboarding.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -417,7 +417,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/howItWorksCards_avatar.svg" />
+                        <img src="<?php echo get_template_directory_uri();?>/images/Long-Term-support.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
