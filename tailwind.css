@@ -1787,6 +1787,11 @@ body {
   }
 }
 
+.gradient-bg{
+    border: 1px solid rgba(255, 77, 2, 0.30);
+    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
+}
+
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -1821,6 +1826,9 @@ body {
     }
     .clinet-logo .item{
         margin: 6px;
+    }
+    .stickysidenav.side-bar-fix{
+       position: relative !important;
     }
 
 }
