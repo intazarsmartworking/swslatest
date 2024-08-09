@@ -5,7 +5,7 @@
  * @package sws
  */
 
-get_header('second');
+ get_header();
 ?>
 
 <?php if (have_rows('section_block')) : ?>
