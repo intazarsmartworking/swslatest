@@ -1,4 +1,4 @@
-<?php get_header('second'); ?>
+<?php  get_header(); ?>
 
 
 <?php

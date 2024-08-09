@@ -5,7 +5,7 @@
  * @package sws
  */
 
-get_header('second');
+ get_header();
 ?>
 
 

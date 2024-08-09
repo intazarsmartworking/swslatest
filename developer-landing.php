@@ -5,7 +5,7 @@
  * @package sws
  */
 
-get_header('second');
+ get_header();
 ?>
 
 <div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
