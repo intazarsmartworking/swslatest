@@ -5,7 +5,7 @@
  * @package sws
  */
 
-get_header('second');
+ get_header();
 ?>
 
 <section class="w-[100%] md:min-h-[600px] py-[4rem] lg:py-[10rem] bg-vp" style="background-image: url('<?php echo get_template_directory_uri();?>/images/bg-vp.png');">

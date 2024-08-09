@@ -11,6 +11,50 @@
 ?>
 
 
+<!-- home banner start -->
+<?php if (have_rows('block')) : ?>
+  <?php while (have_rows('block')) : the_row(); ?>
+	<?php if (get_row_layout() == 'home_header') : ?>
+	<div class="container mx-auto mt-5">		
+	<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24">
+      <div class="w-full">
+        <div class="grid gap-8 relative pr-5">
+		
+		  <?php if(get_sub_field('title')): ?>
+          <h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
+		  <?php endif; ?>
+		  
+		  <?php if(get_sub_field('description')): ?>
+          <p class="flex text-white font-normal text-xl"><?php echo get_sub_field('description'); ?></p>
+		  <?php endif; ?>
+		  
+		  <?php if(get_sub_field('button_name')): ?>
+		  <?php $home_banner_url =  get_sub_field('button_url'); ?>
+          <div class="header-buttons mt-6">
+            <a href="<?php echo esc_url( $home_banner_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+          </div>
+		  <?php endif; ?>
+		  
+		  <?php if(get_sub_field('app_star_icon')): ?>
+		  <div class="get-app mt-8">
+           <img src="<?php echo get_sub_field('app_star_icon')['url']; ?>" alt="<?php echo get_sub_field('app_star_icon')['alt']; ?>">
+          </div>
+		  <?php endif; ?>	
+		  
+        </div>
+      </div>
+	  <?php if(get_sub_field('image')): ?>
+      <div class="w-full relative">
+        <img class="w-full my-12" src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo get_sub_field('image')['alt']; ?>">
+      </div>
+	  <?php endif; ?>
+    </div>
+	</div>
+	<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>	
+<!-- home banner close -->
+
 <!-- Future Remote -->
 <div class="w-full relative  grid items-center" >
 	<div class="px-10">
