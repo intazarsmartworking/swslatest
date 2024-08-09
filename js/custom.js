@@ -627,6 +627,42 @@ jQuery('.silkSlide').slick({
 });
 
 
+jQuery('.relatedBlogs').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: false,
+  focusOnSelect: true,
+  autoplay: true,
+  arrows: false,
+  dots:false,
+  responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+              infinite: true,
+              speed: 300,
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              centerMode: false,
+              variableWidth: true,
+              focusOnSelect: true
+          }
+        }
+      ]
+});
+
+
+jQuery('#prev-blog').click(function(e) {
+  jQuery('.relatedBlogs').slick('slickNext');
+});
+
+jQuery('#next-blog').click(function(e) {
+  jQuery('.relatedBlogs').slick('slickPrev');
+});
+
+
 
 
 var items = $(".timeline .timeline-item"),
@@ -676,7 +712,7 @@ var elementPosition = null;
 function menuOnScroll(mySection, myMenu, myClass) {
   jQuery(window).scroll(function(){
     var elScroll = jQuery(window).scrollTop();
-    if(jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top) && elementPosition != null){
+    if((jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top)) && (boxScrollHeight > jQuery(window).scrollTop())){
       jQuery('.stickysidenav').addClass('side-bar-fix');
     } else {
       jQuery('.stickysidenav').removeClass('side-bar-fix');
@@ -707,14 +743,23 @@ function scrollToAnyPoint (navItem) {
 scrollToAnyPoint("a[data-location]");
 
 jQuery('#show-more').on('click', function(){
+  callFunction()
+})
+
+
+var boxScrollHeight = 0
+function callFunction(){
   elementPosition = null;
   jQuery('.stickysidenav').hide()
   jQuery('#sticky-details').toggleClass('show-details')
+ 
   setTimeout( function(){
-   elementPosition = jQuery('#fix-side-box').offset();
+   elementPosition = jQuery('.show-more-box').offset();
    jQuery('.stickysidenav').fadeIn('slow')
+   
   }, 100)
   setTimeout( function(){
     jQuery('.stickysidenav').fadeIn('slow')
+    boxScrollHeight = jQuery('#sticky-details').height();
    }, 300)
-})
+}
