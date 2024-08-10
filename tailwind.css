@@ -1806,6 +1806,45 @@ body {
     background-size: 60% 50%;
     background-position: center right 0px;
 }
+.thin-scroll-bar{
+    padding-right: 10px;
+}
+.thin-scroll-bar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.thin-scroll-bar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.thin-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+.progress-range{
+    border-radius: 28px;
+    border: 1px solid #DF4402;
+    background: linear-gradient(180deg, #FFEBE3 0%, #FFF 100%);
+}
+.progress-range::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #434343;
+}
+
+.btn-gradient{
+    background: linear-gradient(269deg, #D13F01 0%, #EC4702 100%);
+    box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
+}
+.accordion-box .accordion-item .accordion-details{
+    display: none;
+}
+.price-list-box{
+    background: radial-gradient(152.95% 117.03% at 22.81% 4%, #291005 0%, #180903 100%);
+}
 
 @media (max-width: 640px) {
     .howItWorkHeading{

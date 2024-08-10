@@ -763,3 +763,16 @@ function callFunction(){
     boxScrollHeight = jQuery('#sticky-details').height();
    }, 300)
 }
+
+const progress = document.querySelector('.progress-range');
+  
+progress.addEventListener('input', function() {
+  const value = this.value;
+  this.style.background = `linear-gradient(to right, #D13F01 0%, #EC4702 ${value}%, transparent ${value}%, transparent 100%)`
+})
+
+
+
+jQuery(".accordion-item .accordion-title").click(function(){
+  jQuery(this).next().slideToggle().siblings(".accordion-details:visible").slideUp();
+});
