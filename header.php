@@ -27,7 +27,7 @@
 	<?php wp_head(); ?>
 </head>
 <!-- background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png'); -->
-<body class="bg-black" <?php body_class(); ?> style="">
+<body  <?php body_class(); ?> style="">
 <?php wp_body_open(); ?>
 
 <header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">

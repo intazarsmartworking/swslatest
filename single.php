@@ -237,10 +237,10 @@ get_header();
 					<h1 class="text-white text-[25px] lg:text-[48px] font-bold mb-0">Related Blogs</h1>
 				</div>
 				<div class="grid-item col-span-5 text-end ">
-					<span class=" inline-block p-[10px] w-[50px] rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3" id="prev-blog">
+					<span class=" inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3" id="prev-blog">
 						<
 					</span>
-					<span class=" inline-block p-[10px] w-[50px] rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle" id="next-blog">
+					<span class=" inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle" id="next-blog">
 						>
 					</span>
 				</div>

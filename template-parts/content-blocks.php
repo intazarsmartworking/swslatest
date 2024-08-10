@@ -98,14 +98,14 @@
 <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'europe_leading_box') : ?>
-		<div class="w-full relative grid items-center bg-black ">
+		<div class="w-full relative grid items-center ">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('short_title')): ?>
 				<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
 			<?php endif; ?> 
 
 			<?php if(get_sub_field('main_heading')): ?>	
-				<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h1>
+				<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h1>
 			<?php endif; ?>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
 
@@ -235,7 +235,7 @@
 
 
 <!-- FAQ Section  -->
-<div class="w-full relative grid items-center bg-black z-10">
+<div class="w-full relative grid items-center z-10">
     <div class="container mx-auto md:px-0 px-10">
 	<h3 class="text-center small-intro"> FAQ's </h3>
   	<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
@@ -276,7 +276,7 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative grid items-center bg-black pt-20 pb-10 set-margin">
+		<div class="w-full relative grid items-center  pt-20 pb-10 set-margin">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					
