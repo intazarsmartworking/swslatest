@@ -21,6 +21,10 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #0F0F0F;
+    background-image: radial-gradient(circle, rgba(172,58,9,0.4) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: top -200px left 0px;
+    background-size: 100% 1024px;
 }
 
 
@@ -1790,6 +1794,17 @@ body {
 .gradient-bg{
     border: 1px solid rgba(255, 77, 2, 0.30);
     background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.20) 0%, rgba(255, 77, 2, 0.01) 100%);
+}
+.assemble-team{
+    background: linear-gradient(270deg, rgba(172,58,9,0.3) 0%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    background-position: center right 0px;
+}
+.assemble-inner{
+    background-repeat: no-repeat;
+    background-size: 60% 50%;
+    background-position: center right 0px;
 }
 
 @media (max-width: 640px) {
