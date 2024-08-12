@@ -115,7 +115,7 @@
 						$title_name = get_sub_field('title'); 
 						$subtitle_name = get_sub_field('short_description'); 
 					?>
-						<div class="europe-box rounded-3xl mb-5">
+						<div class="europe-box rounded-3xl mb-5 min-h-[250px]">
 							  <div class="flex">
 								<div class="px-6 py-6">
 									<div class="icons-box">
@@ -130,8 +130,8 @@
 									</div>
 								</div>
 								
-								<div class="ml-auto">
-								  <img src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
+								<div class="ml-auto absolute right-0 bottom-0 ">
+								  <img class=" max-h-[240px] w-auto" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
 								</div>
 							  </div>	
 						</div>
