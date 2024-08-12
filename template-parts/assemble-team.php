@@ -6,16 +6,24 @@
     <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
         
         <div class="assemble-section-animation my-16  md:mb-24">
-            <div class="form_border_wrap">
+            <div class="item-animtion"></div>
+            <div class="item-animtion"></div>
+            <!-- <div class="form_border_wrap">
                 <div class="form_border_gradient"></div>
                 <div class="form_border_gradient"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 assemble-section-bg rounded-3xl relative px-0">
+            </div> -->
+            <div class="grid grid-cols-1 md:grid-cols-11 gap-4 assemble-section-bg rounded-3xl relative px-0">
                     <!-- <svg class="svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <rect rx="24" ry="24" class="line" height="100%"  width="100%" stroke-linejoin="round"/>
                     </svg> -->
-                <img src="<?php echo get_template_directory_uri();?>/images/connect-skill.svg" class="join-skill">
-                <div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
+                
+                <div class="bg-white col-span-6 relative py-4 md:py-10 px-4 md:px-10 rounded-xl">
+                    <div class=" text-center w-[40px] h-[40px] rounded-[50%] border-[3px] border-[#fff] bg-[#FF4D02] absolute pt-[4px] right-[-27px] top-[40px] ">
+                        <svg class=" inline-block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4998 18.0764C13.2438 18.0764 12.9878 17.9785 12.7928 17.7835C12.4018 17.3935 12.4018 16.7604 12.7928 16.3694L17.0858 12.0754L12.7928 7.78147C12.4018 7.39047 12.4018 6.75747 12.7928 6.36747C13.1838 5.97647 13.8158 5.97647 14.2068 6.36747L19.2068 11.3685C19.5978 11.7594 19.5978 12.3915 19.2068 12.7825L14.2068 17.7835C14.0118 17.9785 13.7558 18.0764 13.4998 18.0764Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50025 18.0764C6.24425 18.0764 5.98825 17.9785 5.79325 17.7835C5.40225 17.3935 5.40225 16.7604 5.79325 16.3694L10.0862 12.0754L5.79325 7.78147C5.40225 7.39047 5.40225 6.75747 5.79325 6.36747C6.18425 5.97647 6.81625 5.97647 7.20725 6.36747L12.2072 11.3685C12.5982 11.7594 12.5982 12.3915 12.2072 12.7825L7.20725 17.7835C7.01225 17.9785 6.75625 18.0764 6.50025 18.0764Z" fill="white"/>
+                        </svg>
+                    </div>
                     <h3 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h3>
                     <div class="flex items-center border-2 border-gray-300 rounded-lg p-2 bg-white my-5">
                         <svg class="w-6 h-6 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +256,7 @@
                     </div>
 
                 </div>
-                <div class="bg-white mb:pb-5 md:pt-10 px-4 md:px-10 pt-5 pb-3 rounded-xl">
+                <div class="bg-white col-span-5 mb:pb-5 md:pt-10 px-4 md:px-10 pt-5 pb-3 rounded-xl">
                     <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto">
 
                     <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
