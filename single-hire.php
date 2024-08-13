@@ -663,7 +663,7 @@
 					  $main_title = get_sub_field('main_title'); 
 					  $unique_id = 'target' . $section_count;
 					?>
-				<div class="scroll-section min-h-[500px]" id="<?php echo $unique_id; ?>">
+				<div class="scroll-section" id="<?php echo $unique_id; ?>">
                   <h1 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h1>
                   <?php if(have_rows('description')): ?>
 				  <?php while(have_rows('description')): the_row(); ?>
