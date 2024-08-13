@@ -92,7 +92,7 @@
 
 				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
 					<div class="flex flex-col sm:flex-row">
-						<img src="<?php echo get_sub_field('image')['url']; ?>" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
 				    <div>
 					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
 					 <p class="text-white text-base font-medium"><?php echo $experience;?></p>
