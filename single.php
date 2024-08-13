@@ -223,7 +223,7 @@ get_header();
 								<a href="<?php the_permalink(); ?>"><img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>"> </a>
 								</div>
 								<p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y');?></p>
-								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" ><?php the_title();?></p></a>
+								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?> </p></a>
 								<a href="<?php the_permalink(); ?>"><p class="text-[16px] text-[#ffffff] mb-4" ><?php echo wp_trim_words(get_the_content(), 40); ?></p></a>
 								<div class="w-[100%] mt-10">
 								<?php
