@@ -1138,6 +1138,14 @@ body {
     animation-delay: 5s;
 }
 /* change animation */
+.slider-wrapper{
+    padding-left: 15px;
+}
+.slider-overlay{
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+  }
   
 @keyframes traverse {
     0% {

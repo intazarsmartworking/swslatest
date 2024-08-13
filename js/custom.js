@@ -47,91 +47,91 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //Card Logic
   
-  const cards = document.querySelectorAll('.card');
-  let leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
-  if(screeSize){
-    leftPositions = ['10px', '600px', '800px','1000px', '1200px', '1400px'];
-  }else{
-    leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
-  }
-  let originalLeftPostions = [...leftPositions];
-  let rotateCards = ['-9deg', '-7deg', '-4deg','-2deg', '0deg']
+  // const cards = document.querySelectorAll('.card');
+  // let leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
+  // if(screeSize){
+  //   leftPositions = ['10px', '600px', '800px','1000px', '1200px', '1400px'];
+  // }else{
+  //   leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
+  // }
+  // let originalLeftPostions = [...leftPositions];
+  // let rotateCards = ['-9deg', '-7deg', '-4deg','-2deg', '0deg']
 
-  function updateCardPositions() {
-      cards.forEach((card, index) => {
-          card.style.left = leftPositions[index];
-          if(card.style.left != originalLeftPostions[0] && 
-            card.style.left != originalLeftPostions[1] && 
-            card.style.left != originalLeftPostions[2] ) {
+  // function updateCardPositions() {
+  //     cards.forEach((card, index) => {
+  //         card.style.left = leftPositions[index];
+  //         if(card.style.left != originalLeftPostions[0] && 
+  //           card.style.left != originalLeftPostions[1] && 
+  //           card.style.left != originalLeftPostions[2] ) {
 
-            card.style.rotate = rotateCards[rotateCards.length-1]  
-            cards[0].style.rotate = rotateCards[rotateCards.length-1]
-          }
-          else {
-            card.style.rotate = rotateCards[index]
+  //           card.style.rotate = rotateCards[rotateCards.length-1]  
+  //           cards[0].style.rotate = rotateCards[rotateCards.length-1]
+  //         }
+  //         else {
+  //           card.style.rotate = rotateCards[index]
             
-          }
+  //         }
 
-          if(index === 1 && cards[1].style.left === originalLeftPostions[3] 
-            || cards[2].style.left === originalLeftPostions[4]) {
-            cards[1].style.left = "700px"
-            cards[2].style.left = "1350px"
-          }
-      });
+  //         if(index === 1 && cards[1].style.left === originalLeftPostions[3] 
+  //           || cards[2].style.left === originalLeftPostions[4]) {
+  //           cards[1].style.left = "700px"
+  //           cards[2].style.left = "1350px"
+  //         }
+  //     });
 
-      if(cards[4].style.left === originalLeftPostions[2]) {
-        document.getElementById('prevButton').disabled = true;
-      }
-      else {
-        document.getElementById('prevButton').disabled = false;
-      }
+  //     if(cards[4].style.left === originalLeftPostions[2]) {
+  //       document.getElementById('prevButton').disabled = true;
+  //     }
+  //     else {
+  //       document.getElementById('prevButton').disabled = false;
+  //     }
 
-      if(cards[1].style.left != originalLeftPostions[1]
-         && cards[1].style.left != originalLeftPostions[2]
-          && cards[1].style.left != originalLeftPostions[0]) {
-        document.getElementById('nextButton').disabled = true;
-      }
-      else {
-        document.getElementById('nextButton').disabled = false;
-      }
-  }
+  //     if(cards[1].style.left != originalLeftPostions[1]
+  //        && cards[1].style.left != originalLeftPostions[2]
+  //         && cards[1].style.left != originalLeftPostions[0]) {
+  //       document.getElementById('nextButton').disabled = true;
+  //     }
+  //     else {
+  //       document.getElementById('nextButton').disabled = false;
+  //     }
+  // }
 
-  document.getElementById('nextButton').addEventListener('click', () => {
-    console.log("next", leftPositions)
-      // Move the fourth card to the third card's position
-      const fourthCard = leftPositions[3];
-      leftPositions[3] = leftPositions[4];
-      leftPositions[1] = leftPositions[2];
-      leftPositions[4] = leftPositions[5];
-      leftPositions[2] = fourthCard;
-      leftPositions[5] = originalLeftPostions[5]
+  // document.getElementById('nextButton').addEventListener('click', () => {
+  //   console.log("next", leftPositions)
+  //     // Move the fourth card to the third card's position
+  //     const fourthCard = leftPositions[3];
+  //     leftPositions[3] = leftPositions[4];
+  //     leftPositions[1] = leftPositions[2];
+  //     leftPositions[4] = leftPositions[5];
+  //     leftPositions[2] = fourthCard;
+  //     leftPositions[5] = originalLeftPostions[5]
 
-      if( cards[4].style.left === originalLeftPostions[2] || cards[4].style.left === originalLeftPostions[0]) {
-        leftPositions[5] = originalLeftPostions[4]
-        leftPositions[4] = originalLeftPostions[3]
-        leftPositions[3] = originalLeftPostions[2]
-        leftPositions[2] = originalLeftPostions[1]
-      }
+  //     if( cards[4].style.left === originalLeftPostions[2] || cards[4].style.left === originalLeftPostions[0]) {
+  //       leftPositions[5] = originalLeftPostions[4]
+  //       leftPositions[4] = originalLeftPostions[3]
+  //       leftPositions[3] = originalLeftPostions[2]
+  //       leftPositions[2] = originalLeftPostions[1]
+  //     }
       
 
-      updateCardPositions();
-  });
+  //     updateCardPositions();
+  // });
 
-  document.getElementById('prevButton').addEventListener('click', () => {
-    console.log("prev", leftPositions)
-    const initailCard = leftPositions[0];
-    const firstCard = leftPositions[1];
-    const secondCard = leftPositions[2];
-    const thirdCard = leftPositions[3];
-      leftPositions[1] = originalLeftPostions[0];
-      leftPositions[2] = firstCard;
-      leftPositions[3] = secondCard;
-      leftPositions[4] = thirdCard;
+  // document.getElementById('prevButton').addEventListener('click', () => {
+  //   console.log("prev", leftPositions)
+  //   const initailCard = leftPositions[0];
+  //   const firstCard = leftPositions[1];
+  //   const secondCard = leftPositions[2];
+  //   const thirdCard = leftPositions[3];
+  //     leftPositions[1] = originalLeftPostions[0];
+  //     leftPositions[2] = firstCard;
+  //     leftPositions[3] = secondCard;
+  //     leftPositions[4] = thirdCard;
 
-    updateCardPositions();
-  });
+  //   updateCardPositions();
+  // });
 
-  updateCardPositions();
+  // updateCardPositions();
 
 
 
@@ -764,15 +764,79 @@ function callFunction(){
    }, 300)
 }
 
-const progress = document.querySelector('.progress-range');
+// const progress = document.querySelector('.progress-range');
   
-progress.addEventListener('input', function() {
-  const value = this.value;
-  this.style.background = `linear-gradient(to right, #D13F01 0%, #EC4702 ${value}%, transparent ${value}%, transparent 100%)`
-})
+// progress.addEventListener('input', function() {
+//   const value = this.value;
+//   this.style.background = `linear-gradient(to right, #D13F01 0%, #EC4702 ${value}%, transparent ${value}%, transparent 100%)`
+// })
 
 
 
 jQuery(".accordion-item .accordion-title").click(function(){
   jQuery(this).next().slideToggle().siblings(".accordion-details:visible").slideUp();
+});
+
+
+
+jQuery(document).ready(function(){
+  var listPosition = []
+  var x = document.querySelectorAll(".slider-item");
+  for (let i = 0; i < x.length; i++) {
+    const leftPos = 630*i;
+    listPosition.push(leftPos)
+  }
+
+  listPosition.forEach((ele, index) =>{
+    x[index].style.left = `${ele}px`
+  })
+
+  const maxMove = (x.length-2)*630;
+  let maxMoveItem = 0
+
+  indexChange = 0
+
+  jQuery('#prevButton').on('click', function(){
+     if(maxMoveItem >= 0){
+      const changePosi = listPosition.map((ele) => (ele - 630));
+      changePosi.forEach((ele, index) =>{
+        if(ele >= 0 && changePosi[0] <= 0){
+          //x[index].style.left = `${ele}px`;
+          jQuery(x[index]).animate({left:`${ele}px`})
+          if(ele <= 0){
+            // x[index].style.rotate = `${index*2}deg`;
+            jQuery(x[index]).animate({rotate:`-${index*2}deg`})
+            jQuery(x[index]).addClass('active')
+          }
+        }
+      })
+      console.log(changePosi)
+      listPosition = changePosi;
+      maxMoveItem = listPosition[changePosi.length -2];
+     }
+    
+  })
+
+  jQuery('#nextButton').on('click', function(){
+    if(maxMove >= maxMoveItem){
+      const changePosi = listPosition.map((ele) => (ele + 630));
+      changePosi.forEach((ele, index) =>{
+        if(ele >= 0  && changePosi[0] <= 0){
+          // x[index].style.left = `${ele}px`
+          jQuery(x[index]).animate({left:`${ele}px`})
+          if(ele > 0){
+            //x[index].style.rotate = `${0}deg`
+            jQuery(x[index]).animate({rotate:`${0}deg`})
+            jQuery(x[index]).removeClass('active')
+          }
+        }
+      })
+      console.log(changePosi)
+      listPosition = changePosi;
+      maxMoveItem = listPosition[changePosi.length -1];
+    }
+  })
+  
+
+
 });
