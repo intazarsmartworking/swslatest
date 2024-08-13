@@ -29,7 +29,7 @@
 						<div class="py-4">
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_author();?> ● </span>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-							<div class="font-bold text-2xl mb-2 text-white"><?php the_title();?></div>
+							<div class="font-bold text-2xl mb-2 text-white"><?php echo wp_trim_words(get_the_title(), 3); ?> </div>
 							<p class="home-blog-para text-base"> <?php echo get_the_excerpt();?></p>
 						</div>
 						<div class="py-4">
