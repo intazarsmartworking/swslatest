@@ -22,7 +22,7 @@ get_header();
 			$image_src = wp_get_attachment_image_src($image_id, 'full');
 		?>
 	
-		<div class="max-w-[600px] relative mx-auto text-center">
+		<div class="max-w-[900px] relative mx-auto text-center">
 			<h1 class="text-[#FF4D02] text-[16px] font-bold ">Published <?php echo get_the_date('F j, Y');?></h1>
 			<h1 class="text-white text-[25px] lg:text-[48px] font-bold mb-0"><?php the_title();?></h1>
 			<div class="w-[100%] mt-10">
@@ -57,9 +57,9 @@ get_header();
 			
 		</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[120px]">
+		<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[50px]">
             <div class="grid-item col-span-10">
-				<img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>">
+				<img class="w-[100%] max-h-[600px]" src="<?php echo esc_url($image_src[0]); ?>">
             </div>
         </div>
 		
@@ -75,7 +75,7 @@ get_header();
 
 		<div class="w-full relative block" id="sticky-details" >
 			<div class="max-w-[100%] w-full mx-auto">
-				<div class="show-more-box mt-[60px]">
+				<div class="show-more-box mt-[60px]"  id="single-box-content">
 				
 				<?php
 				  if ( have_posts() ) :
@@ -85,7 +85,7 @@ get_header();
 				
 				
 					<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
-						<div class="grid-item col-span-2 content-start" id="fix-side-box">
+						<div class="grid-item col-span-2 text-white content-start" id="fix-side-box">
 							<div class="stickysidenav">
 								<p class="text-[20px] text-white font-medium !mb-2">In this article</p>
 								<?php if(have_rows('table_content')): ?>
@@ -102,7 +102,7 @@ get_header();
 								</ul>
 							</div>
 						</div>
-						<div class="grid-item col-span-6 content-start">
+						<div class="grid-item col-span-6 text-white content-start ">
 							<p class="text-[20px] text-white font-medium "> <?php echo  get_the_content();?> </p>
 							
 							<?php if(have_rows('table_content')): ?>
@@ -166,7 +166,7 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<div class="grid-item col-span-2 content-start">
+						<div class="grid-item col-span-2 text-white content-start">
 							<div class=" bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
 								
 							<div>
@@ -218,9 +218,9 @@ get_header();
 					$image_src = wp_get_attachment_image_src($image_id, 'full'); 
 					?>
 						<div class="slide-item !bg-transparent">
-							<div class="block">
+							<div class="block text-white">
 								<div class="mb-6">
-								<a href="<?php the_permalink(); ?>"><img class="w-[100%] max-h-[200px] rounded-[12px]" src="<?php echo esc_url($image_src[0]); ?>"> </a>
+								<a href="<?php the_permalink(); ?>"><img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>"> </a>
 								</div>
 								<p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y');?></p>
 								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" ><?php the_title();?></p></a>
@@ -246,7 +246,7 @@ get_header();
 													break;
 											}
 									?>
-									<span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
+									<span class=" inline-block px-[30px] mb-2 py-[8px] mr-3 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
 									<?php
 									endforeach;
 									endif;

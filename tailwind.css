@@ -1138,6 +1138,22 @@ body {
     animation-delay: 5s;
 }
 /* change animation */
+.slider-wrapper{
+    padding-left: 15px;
+}
+.slider-overlay{
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+}
+ul{
+    list-style: circle;
+    margin-left: 20px;
+}
+ol{
+    margin-left: 20px;
+    list-style: decimal;
+}
   
 @keyframes traverse {
     0% {

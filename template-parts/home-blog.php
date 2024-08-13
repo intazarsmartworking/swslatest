@@ -24,7 +24,7 @@
 					<a href="">
 						<div class="rounded mr-5">
 						<?php if ($image_src): ?>
-							<img class="w-full" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						<?php endif; ?>
 						<div class="py-4">
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_author();?> ● </span>

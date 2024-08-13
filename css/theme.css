@@ -1235,6 +1235,9 @@ select {
 .ml-auto {
   margin-left: auto;
 }
+.mr-2 {
+  margin-right: 0.5rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -1334,6 +1337,9 @@ select {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mt-\[20px\] {
+  margin-top: 20px;
+}
 .block {
   display: block;
 }
@@ -1401,6 +1407,9 @@ select {
 .h-\[240px\] {
   height: 240px;
 }
+.h-\[250px\] {
+  height: 250px;
+}
 .h-\[26px\] {
   height: 26px;
 }
@@ -1457,6 +1466,12 @@ select {
 }
 .max-h-\[400px\] {
   max-height: 400px;
+}
+.max-h-\[600px\] {
+  max-height: 600px;
+}
+.max-h-\[250px\] {
+  max-height: 250px;
 }
 .min-h-\[100px\] {
   min-height: 100px;
@@ -1656,6 +1671,9 @@ select {
 }
 .max-w-\[90\%\] {
   max-width: 90%;
+}
+.max-w-\[900px\] {
+  max-width: 900px;
 }
 .max-w-\[950px\] {
   max-width: 950px;
@@ -3909,6 +3927,25 @@ body {
     animation-delay: 5s;
 }
 /* change animation */
+<<<<<<< HEAD
+.slider-wrapper{
+    padding-left: 15px;
+}
+.slider-overlay{
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+}
+ul{
+    list-style: circle;
+    margin-left: 20px;
+}
+ol{
+    margin-left: 20px;
+    list-style: decimal;
+}
+=======
+>>>>>>> ce16811520351a4e08a27296d43ebc0f712d6b29
 @keyframes traverse {
     0% {
       offset-distance: 0%;
@@ -5144,6 +5181,10 @@ body {
     padding: 50px;
   }
 
+  .lg\:p-\[20px\] {
+    padding: 20px;
+  }
+
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -5174,6 +5215,11 @@ body {
     padding-bottom: 100px;
   }
 
+  .lg\:py-\[10px\] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .lg\:py-\[10rem\] {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -5182,6 +5228,11 @@ body {
   .lg\:py-\[15\%\] {
     padding-top: 15%;
     padding-bottom: 15%;
+  }
+
+  .lg\:py-\[3rem\] {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .lg\:py-\[50px\] {
@@ -5202,6 +5253,11 @@ body {
   .lg\:py-\[90px\] {
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+
+  .lg\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .lg\:pb-16 {
