@@ -92,7 +92,7 @@
 
 				<div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
 					<div class="flex flex-col sm:flex-row">
-						<img src="<?php echo get_sub_field('image')['url']; ?>" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
+						<img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
 				    <div>
 					 <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
 					 <p class="text-white text-base font-medium"><?php echo $experience;?></p>
@@ -545,12 +545,22 @@
 <div class="w-full  relative bg-black grid items-center pb-28 pt-40">
   <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+	<?php if (have_rows('hire_block_section')) : ?>
+	 <?php while (have_rows('hire_block_section')) : the_row(); ?>
+	   <?php if (get_row_layout() == 'ready_hire') : ?>
       <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
-        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire
-		a Developer?</h1>
-        <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
-        
+	    <?php if(get_sub_field('title')): ?>
+        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h1>
+		<?php endif; ?>
+		
+		<?php if(get_sub_field('paragraph')): ?>
+        <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> <?php echo get_sub_field('paragraph'); ?> </span>
+        <?php endif; ?>
+		
       </div>
+	<?php endif; ?>  
+	<?php endwhile; ?>
+	<?php endif; ?> 
       <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
         <div class="bg-white rounded-3xl px-6 py-6 w-full">
 			<div class="rounded-2xl border-pattern px-6 py-6 w-full">
@@ -653,7 +663,7 @@
 					  $main_title = get_sub_field('main_title'); 
 					  $unique_id = 'target' . $section_count;
 					?>
-				<div class="scroll-section min-h-[500px]" id="<?php echo $unique_id; ?>">
+				<div class="scroll-section" id="<?php echo $unique_id; ?>">
                   <h1 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h1>
                   <?php if(have_rows('description')): ?>
 				  <?php while(have_rows('description')): the_row(); ?>

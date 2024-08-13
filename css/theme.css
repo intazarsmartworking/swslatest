@@ -3927,6 +3927,7 @@ body {
     animation-delay: 5s;
 }
 /* change animation */
+<<<<<<< HEAD
 .slider-wrapper{
     padding-left: 15px;
 }
@@ -3943,6 +3944,8 @@ ol{
     margin-left: 20px;
     list-style: decimal;
 }
+=======
+>>>>>>> ce16811520351a4e08a27296d43ebc0f712d6b29
 @keyframes traverse {
     0% {
       offset-distance: 0%;

@@ -1073,6 +1073,54 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66bb594c61ece": {
+                    "key": "layout_66bb594c61ece",
+                    "name": "ready_hire",
+                    "label": "Ready Hire",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66bb595561ecf",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_66bb596b61ed0",
+                            "label": "Paragraph",
+                            "name": "paragraph",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66b4c309c0193": {
                     "key": "layout_66b4c309c0193",
                     "name": "hire_offshore",
@@ -1330,5 +1378,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723122829
+    "modified": 1723554185
 }
