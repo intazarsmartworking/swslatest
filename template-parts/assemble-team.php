@@ -8,14 +8,9 @@
         <div class="assemble-section-animation my-16  md:mb-24">
             <div class="item-animtion"></div>
             <div class="item-animtion"></div>
-            <!-- <div class="form_border_wrap">
-                <div class="form_border_gradient"></div>
-                <div class="form_border_gradient"></div>
-            </div> -->
+            
             <div class="grid grid-cols-1 md:grid-cols-11 gap-4 assemble-section-bg rounded-3xl relative px-0">
-                    <!-- <svg class="svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-                        <rect rx="24" ry="24" class="line" height="100%"  width="100%" stroke-linejoin="round"/>
-                    </svg> -->
+                    
                 
                 <div class="bg-white col-span-6 relative py-4 md:py-10 px-4 md:px-10 rounded-xl">
                     <div class=" text-center w-[40px] h-[40px] rounded-[50%] border-[3px] border-[#fff] bg-[#FF4D02] absolute pt-[4px] right-[-27px] top-[40px] ">
@@ -34,222 +29,30 @@
                     </div>
 
                     <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center overflow-y-scroll  custom-scrollbar pr-5">
-                        <div class=" flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/android.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Android </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
+                        
+						
+						<?php 
+							$hire_args = array( 'post_type' => 'hire');
+							$hire_query	= new WP_Query($hire_args);
+							
+						?>
+						<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
+						<?php 
+							$hire_image_id = get_post_thumbnail_id();
+							$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+							$permalink = get_permalink();
+							$modified_permalink = rtrim($permalink, '/') . '-developer/';
+						?>
 
                         <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/angular.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Angular </h4>
+                            <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="pb-4">
+                            <h4 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h4>
                             <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
                             <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
                             </svg>
                         </div>
 
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/aws.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> AWS </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/azure.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Azure </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/devops.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> DevOps </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/django.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Django </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/docker.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Docker </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/ios.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> iOS </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/java.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Java </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/kubernetes.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Kubernetes </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/laravel.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Laravel </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/mongodb.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> MongoDB </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/mysql.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> MySQL </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/nodejs.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Node JS </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/php.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> PHP </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class=" flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/powerbi.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Power BI </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/python.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Python </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/reactjs.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> React </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class=" flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/android.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Android </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/angular.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Angular </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/aws.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> AWS </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/azure.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Azure </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/devops.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> DevOps </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/django.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Django </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/docker.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Docker </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/ios.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> iOS </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo get_template_directory_uri();?>/images/java.svg" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> Java </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
+						<?php endwhile; wp_reset_postdata();?>
                     
 
                         
