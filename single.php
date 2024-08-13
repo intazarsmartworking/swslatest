@@ -246,7 +246,7 @@ get_header();
 													break;
 											}
 									?>
-									<span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
+									<span class=" inline-block px-[30px] mb-2 py-[8px] mr-3 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
 									<?php
 									endforeach;
 									endif;
