@@ -249,7 +249,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/outline-your-requirements.png" />
+                        <img class="rounded-lg" src="<?php echo get_template_directory_uri();?>/images/outline-your-requirements.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -285,11 +285,11 @@
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
                     <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We’ll match you with the best engineers in our network & in the wider market
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />We’ll match you with the best engineers in our network & in the wider market
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Each candidate undergoes AI vetting, interviews, and technical tests.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />Each candidate undergoes AI vetting, interviews, and technical tests.
                         </li>
                         
                     </ul>
@@ -304,7 +304,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/Meet-the-best-engineers.png" />
+                        <img class="rounded-lg" src="<?php echo get_template_directory_uri();?>/images/Meet-the-best-engineers.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -340,14 +340,14 @@
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
                     <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We will present the best engineers to you at no cost & within days
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />We will present the best engineers to you at no cost & within days
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Each candidate is selected based on your required tech stack, skills, and experience.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />Each candidate is selected based on your required tech stack, skills, and experience.
                         </li>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />You will then interview & assess.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />You will then interview & assess.
                         </li>
                     </ul>
                 </div>
@@ -361,7 +361,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/Quick-Effective-Onboarding.png" />
+                        <img class=" rounded-lg" src="<?php echo get_template_directory_uri();?>/images/Quick-Effective-Onboarding.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -397,12 +397,12 @@
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
                     <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Once you’ve selected a developer we will onboard & set them up with your team.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />Once you’ve selected a developer we will onboard & set them up with your team.
                         </li>
 
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />We take care of HR, Payroll, Pension and all employment costs
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />We take care of HR, Payroll, Pension and all employment costs
                         </li>
                         
                     </ul>
@@ -417,7 +417,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <div class="relative">
-                        <img src="<?php echo get_template_directory_uri();?>/images/Long-Term-support.png" />
+                        <img class=" rounded-lg" src="<?php echo get_template_directory_uri();?>/images/Long-Term-support.png" />
                         <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-5 top-4 lg:top-3 lg:-left-20 rounded-3xl bg-[#F4C8BA]">
                             <div class="flex mb-2 justify-between items-center">
                                 <div class="flex items-center">
@@ -453,12 +453,12 @@
                 <div class="flex flex-col justify-center items-center p-3 max-w-[100%] lg:ml-[120px] lg:pl-[0px] lg:max-w-[417px]">
                     <!-- <h3 class="text-[40px] text-bold">Meet the Candidates</h3> -->
                     <ul>
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />UK (location specific) based experts on-hand to ensure long term success.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />UK (location specific) based experts on-hand to ensure long term success.
                         </li>
 
-                        <li class="text-[20px] flex leading-9">
-                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3" />Smart Working’s Customer Success Team will be in regular contact.
+                        <li class="text-[20px] flex items-start leading-9">
+                            <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="mr-3 mt-3" />Smart Working’s Customer Success Team will be in regular contact.
                         </li>
                         
                     </ul>

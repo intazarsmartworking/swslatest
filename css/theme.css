@@ -1458,6 +1458,9 @@ select {
 .max-h-\[400px\] {
   max-height: 400px;
 }
+.max-h-\[600px\] {
+  max-height: 600px;
+}
 .min-h-\[100px\] {
   min-height: 100px;
 }
@@ -1666,6 +1669,9 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-\[900px\] {
+  max-width: 900px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1745,6 +1751,9 @@ select {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-start {
+  justify-items: start;
 }
 .gap-0 {
   gap: 0px;

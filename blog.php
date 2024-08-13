@@ -11,7 +11,7 @@
 
 <section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[10rem]">
     <div class="w-[100%] max-w-[1280px] mx-auto px-[20px] lg:px-[0px]">
-		<div class="max-w-[600px] relative mx-auto text-center">
+		<div class="max-w-[900px] relative mx-auto text-center">
 			<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >BLOGS</span></div>
 			<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Our ideas and insights</h1>
 			<h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hire Developers</h1>
@@ -32,9 +32,9 @@
 			$image_src = wp_get_attachment_image_src($image_id, 'full');
 		?>
 		
-		<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[120px]">
+		<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[50px]">
             <div class="grid-item col-span-6">
-				<a href="<?php the_permalink(); ?>"> <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
+				<a href="<?php the_permalink(); ?>"> <img class="w-[100%] h-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
             </div>
             <div class="grid-item col-span-4 p-[40px]">
                 <p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y');?></p>

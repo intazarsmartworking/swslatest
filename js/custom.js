@@ -665,23 +665,23 @@ jQuery('#next-blog').click(function(e) {
 
 
 
-var items = $(".timeline .timeline-item"),
-timelineHeight = $(".timeline .timeline-box").height(),
-greyLine = $('.default-line'),
-lineToDraw = $('.draw-line');
+var items = jQuery(".timeline .timeline-item"),
+timelineHeight = jQuery(".timeline .timeline-box").height(),
+greyLine = jQuery('.default-line'),
+lineToDraw = jQuery('.draw-line');
 
 // sets the height that the greyLine (.default-line) should be according to `.timeline ul` height
 
 // run this function only if draw line exists on the page
 if(lineToDraw.length) {
-  $(window).on('scroll', function () {
+  jQuery(window).on('scroll', function () {
 
     // Need to constantly get '.draw-line' height to compare against '.default-line'
     var redLineHeight = lineToDraw.height(),
     greyLineHeight = greyLine.height(),
-    windowDistance = $(window).scrollTop(),
-    windowHeight = $(window).height() / 2,
-    timelineDistance = $(".timeline").offset().top;
+    windowDistance = jQuery(window).scrollTop(),
+    windowHeight = jQuery(window).height() / 2,
+    timelineDistance = jQuery(".timeline").offset().top;
 
     if(windowDistance >= timelineDistance - windowHeight) {
       line = windowDistance - timelineDistance + windowHeight;
@@ -696,23 +696,25 @@ if(lineToDraw.length) {
     // This takes care of adding the class in-view to the li:before items
     var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
     items.each(function(index){
-      var circlePosition = $(this).offset();
+      var circlePosition = jQuery(this).offset();
 
       if(bottom > circlePosition.top) {				
-        $(this).addClass('in-view');
+        jQuery(this).addClass('in-view');
       } else {
-        $(this).removeClass('in-view');
+        jQuery(this).removeClass('in-view');
       }
     });	
   });
 }
 
 var elementPosition = null;
+var boxScrollHeight = 0;
 
 function menuOnScroll(mySection, myMenu, myClass) {
   jQuery(window).scroll(function(){
     var elScroll = jQuery(window).scrollTop();
     if((jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top)) && (boxScrollHeight > jQuery(window).scrollTop())){
+      console.log(jQuery(window).scrollTop())
       jQuery('.stickysidenav').addClass('side-bar-fix');
     } else {
       jQuery('.stickysidenav').removeClass('side-bar-fix');
@@ -743,11 +745,12 @@ function scrollToAnyPoint (navItem) {
 scrollToAnyPoint("a[data-location]");
 
 jQuery('#show-more').on('click', function(){
+  console.log('log')
   callFunction()
 })
 
 
-var boxScrollHeight = 0
+
 function callFunction(){
   elementPosition = null;
   jQuery('.stickysidenav').hide()
@@ -756,11 +759,12 @@ function callFunction(){
   setTimeout( function(){
    elementPosition = jQuery('.show-more-box').offset();
    jQuery('.stickysidenav').fadeIn('slow')
-   
   }, 100)
   setTimeout( function(){
     jQuery('.stickysidenav').fadeIn('slow')
-    boxScrollHeight = jQuery('#sticky-details').height();
+    let sideMenuH = jQuery('.stickysidenav').height()
+    boxScrollHeight = jQuery('.show-more-box').height() + elementPosition.top - sideMenuH;
+    console.log(boxScrollHeight, elementPosition)
    }, 300)
 }
 
