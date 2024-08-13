@@ -27,7 +27,7 @@
                     <div class=" block w-full mt-3">
                         <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                     </div>
-                    <div class="block w-full mt-3 max-h-[250px] overflow-y-auto thin-scroll-bar">
+                    <div class="block w-full mt-3 max-h-[240px] overflow-y-auto thin-scroll-bar">
                         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                             <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                 <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
