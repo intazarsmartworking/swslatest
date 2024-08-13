@@ -220,7 +220,7 @@ get_header();
 						<div class="slide-item !bg-transparent">
 							<div class="block text-white">
 								<div class="mb-6">
-								<a href="<?php the_permalink(); ?>"><img class="w-[100%] max-h-[200px] rounded-[12px]" src="<?php echo esc_url($image_src[0]); ?>"> </a>
+								<a href="<?php the_permalink(); ?>"><img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>"> </a>
 								</div>
 								<p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y');?></p>
 								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" ><?php the_title();?></p></a>

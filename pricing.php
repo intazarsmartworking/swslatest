@@ -9,7 +9,7 @@
 ?>
 
 <section class="price-page w-full relative">
-    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
+    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[30px]">
         <div class="max-w-[600px] relative mx-auto text-center">
 			<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
 			<h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">without the small print</h1>
@@ -19,15 +19,15 @@
 </section>
 
 <section class="price-page py-[30px] lg:pt-[0px] w-full relative">
-    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
+    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[10px]">
         <div class="max-w-[100%] relative mx-auto rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
-                <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[40px] ">
+                <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
                     <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Role</h1>
                     <div class=" block w-full mt-3">
                         <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                     </div>
-                    <div class="block w-full mt-3 max-h-[300px] overflow-y-auto thin-scroll-bar">
+                    <div class="block w-full mt-3 max-h-[250px] overflow-y-auto thin-scroll-bar">
                         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                             <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                 <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
@@ -176,10 +176,10 @@
 
 
                 </div>
-                <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[40px]">
-                    <div class="block">
+                <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
+                    <!-- <div class="block">
                         <h1 class=" text-center"><img class="h-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/heading-logo.png"></h1>
-                    </div>
+                    </div> -->
                     <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
                         <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">$20,000/mo</h1>
                         <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">It is estimated that smartworking can place employees in upcoming 2 weeks.</p>

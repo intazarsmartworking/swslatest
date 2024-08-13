@@ -1145,7 +1145,15 @@ body {
     position: relative;
     width: 100%;
     padding-left: 15px;
-  }
+}
+ul{
+    list-style: circle;
+    margin-left: 20px;
+}
+ol{
+    margin-left: 20px;
+    list-style: decimal;
+}
   
 @keyframes traverse {
     0% {
