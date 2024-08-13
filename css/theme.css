@@ -1047,6 +1047,27 @@ select {
 .top-\[40px\] {
   top: 40px;
 }
+.top-\[100px\] {
+  top: 100px;
+}
+.right-\[0\] {
+  right: 0;
+}
+.top-\[10\%\] {
+  top: 10%;
+}
+.top-\[20\%\] {
+  top: 20%;
+}
+.right-\[-100px\] {
+  right: -100px;
+}
+.right-\[-150px\] {
+  right: -150px;
+}
+.top-\[30\%\] {
+  top: 30%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1088,6 +1109,12 @@ select {
 }
 .col-span-8 {
   grid-column: span 8 / span 8;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 0.25rem;
 }
 .-mx-2 {
   margin-left: -0.5rem;
@@ -1300,6 +1327,12 @@ select {
 }
 .mt-\[80px\] {
   margin-top: 80px;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1567,6 +1600,9 @@ select {
   width: -moz-max-content;
   width: max-content;
 }
+.w-\[400px\] {
+  width: 400px;
+}
 .min-w-\[280px\] {
   min-width: 280px;
 }
@@ -1642,6 +1678,22 @@ select {
 }
 .rotate-\[-30deg\] {
   --tw-rotate: -30deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[30deg\] {
+  --tw-rotate: 30deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[90deg\] {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[0deg\] {
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[180deg\] {
+  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
@@ -2794,6 +2846,9 @@ select {
 }
 .opacity-\[0\.5\] {
   opacity: 0.5;
+}
+.opacity-\[0\.6\] {
+  opacity: 0.6;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

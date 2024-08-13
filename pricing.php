@@ -322,6 +322,7 @@
 
 <section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
+        <img class="absolute right-[-150px] opacity-[0.6] top-[20%] w-[400px] z-0 rotate-[180deg]" src="http://sws.local/wp-content/themes/sws/images/sqr-circule.png">
         <div class="w-full text-center">
             <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">Compare</span></div>
             <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Cost Comparison</h1>
@@ -333,98 +334,98 @@
             <div class="grid grid-cols-1 lg:grid-cols-9 gap-0">
                 <div class="grid-item col-span-3 rounded-[12px]">
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-bold mb-0">Aspect</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">Aspect</h1>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Salary Costs</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Salary Costs</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Recruitment Expenses</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Recruitment Expenses</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Employee Benefits</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Employee Benefits</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Office Space and Equipment</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Office Space and Equipment</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Overtime and Leave</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Overtime and Leave</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Administrative Costs</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Administrative Costs</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Turnover and Retention</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Turnover and Retention</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Scalability</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Scalability</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-bold mb-0">Overall Cost Efficiency</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Overall Cost Efficiency</p>
                     </div>
                 </div>
                 <div class="grid-item col-span-3 rounded-[12px] bg-gradient-to-r from-[#FF7D46] from-0%  to-[#FF4F05] to-100% ">
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-bold mb-0">SmartWorking Developers</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">SmartWorking Developers</h1>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Lower due to regional wage differences</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Lower due to regional wage differences</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Minimal, as we handle the entire hiring process at no extra cost</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Minimal, as we handle the entire hiring process at no extra cost</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Covered by the us</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Covered by the us</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Not required, as developers work remotely</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Not required, as developers work remotely</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Managed by us, typically at no extra cost</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Managed by us, typically at no extra cost</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Handled by us at no extra cost</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Handled by us at no extra cost</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">We provide replacements without additional recruitment costs</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">We provide replacements without additional recruitment costs</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Easy to scale up or down based on project needs without extra costs</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Easy to scale up or down based on project needs without extra costs</p>
                     </div>
                     <div class="line-box  h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Generally more cost-effective due to bundled services and lower wages</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Generally more cost-effective due to bundled services and lower wages</p>
                     </div>
                 </div>
                 <div class="grid-item col-span-3 rounded-[12px]">
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-bold mb-0">In-House Developers</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">In-House Developers</h1>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Higher, especially in regions with high living costs</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Higher, especially in regions with high living costs</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">High, including job postings, recruiter fees, and onboarding</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">High, including job postings, recruiter fees, and onboarding</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Includes healthcare, retirement plans, and other perks</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Includes healthcare, retirement plans, and other perks</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Significant cost for office space, utilities, and equipment</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Significant cost for office space, utilities, and equipment</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Additional expenses for overtime pay and managing leave</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Additional expenses for overtime pay and managing leave</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Includes payroll management, HR, and other administrative tasks</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Includes payroll management, HR, and other administrative tasks</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">High cost related to rehiring and training new employees</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">High cost related to rehiring and training new employees</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Scaling requires significant investment in time and resources</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Scaling requires significant investment in time and resources</p>
                     </div>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-bold mb-0">Higher due to direct and indirect costs</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Higher due to direct and indirect costs</p>
                     </div>
                 </div>
             </div>
