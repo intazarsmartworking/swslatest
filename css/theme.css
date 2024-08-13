@@ -3908,6 +3908,7 @@ body {
     animation: traverse 10s infinite linear;
     animation-delay: 5s;
 }
+/* change animation */
 @keyframes traverse {
     0% {
       offset-distance: 0%;
