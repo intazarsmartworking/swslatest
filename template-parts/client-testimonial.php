@@ -24,8 +24,6 @@
 				$testimonial = get_sub_field('testimonial'); 
 				$author_name = get_sub_field('name'); 
 				$author_designation = get_sub_field('designation'); 
-				$degree = get_sub_field('degree'); 
-				$direction = get_sub_field('direction'); 
 				$background = get_sub_field('background_color'); 
 				$linkedin = get_sub_field('linkedin');
 			?>

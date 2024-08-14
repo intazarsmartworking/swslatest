@@ -339,9 +339,8 @@
 									$testimonial = get_sub_field('testimonial'); 
 									$author_name = get_sub_field('name'); 
 									$author_designation = get_sub_field('designation'); 
-									$degree = get_sub_field('degree'); 
-									$direction = get_sub_field('direction'); 
 									$background = get_sub_field('background_color'); 
+									$linkedin = get_sub_field('linkedin');
 								?>
 							
 									<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card">
@@ -359,7 +358,7 @@
 														<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
 													</div>
 												</div>
-												<img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" />
+												<a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a>
 											</div>
 										</div>
 									</div>
