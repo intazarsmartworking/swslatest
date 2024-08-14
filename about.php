@@ -331,8 +331,8 @@
 							
 	    
 							<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
-							<div class="flex w-full relative card-container overflow-visible">
-							
+							<div class="slider-wrapper w-full relative card-container overflow-visible">
+								<div class="slider-overlay">
 								<?php if(have_rows('testimonial_card')): ?>
 								<?php while(have_rows('testimonial_card')): the_row(); ?>
 								<?php 
@@ -344,7 +344,7 @@
 									$background = get_sub_field('background_color'); 
 								?>
 							
-									<div class="bg-[<?php echo esc_attr($background); ?>] w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card" style="--deg:<?php echo esc_attr($degree);?>; --left:<?php echo esc_attr($direction);?>">
+									<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card">
 										<div class="p-4 lg:p-10 flex flex-col ">
 											<div class="flex justify-between items-center mb-6">
 												<img src="<?php echo get_sub_field('logo')['url']; ?>">
@@ -365,7 +365,7 @@
 									</div>
 									<?php endwhile; ?>	
 								<?php endif; ?> 
-								
+							</div>	
 							</div>
 						</div>
 						<div>
