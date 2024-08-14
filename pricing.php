@@ -29,126 +29,23 @@
                     </div>
                     <div class="block w-full mt-3 max-h-[240px] overflow-y-auto thin-scroll-bar">
                         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+						
+						<?php 
+						$hire_args = array( 'post_type' => 'hire');
+						$hire_query	= new WP_Query($hire_args);
+						?>
+						<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
+						<?php 
+							$hire_image_id = get_post_thumbnail_id();
+							$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+						?>
                             <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
+                                <img class="w-[26px] inline-block" src="<?php echo esc_url($hire_image_src[0]) ;?>">
+                                <span class="block"> <?php the_title();?> </span>
                             </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
-                            <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/angular.png">
-                                <span class="block">Angular</span>
-                            </div>
+                            
+                        <?php endwhile; wp_reset_postdata();?>   
+                            
                         </div>
                     </div>
                     <div class=" block w-full mt-[30px]">
