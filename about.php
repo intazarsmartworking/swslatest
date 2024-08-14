@@ -117,7 +117,7 @@
 
 						<div class="timeline-item pb-[100px]"  id="scroll-effect-8">
 							<div class="timeline-content-box max-w-[1280px]">
-								<div class="pb-5"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Values</span></div>
+								<div class="pb-5"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Our Values</span></div>
 								<div class="block mt-5 value-item">
 									<div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
 										<div class="box-1 grid-item relative border-bottom-img py-12 lg:pr-10">
@@ -127,8 +127,8 @@
 													<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M36.1108 31.8324H30.4061C29.9983 31.8324 29.6677 32.1631 29.6677 32.5709V37.6109C29.6677 38.3863 29.0585 38.9955 28.2831 38.9955C27.5261 38.9955 26.8985 38.3863 26.8985 37.6109V25.2417C26.8985 24.2632 26.1231 23.4694 25.1446 23.4694H21.0092C20.0308 23.4694 19.2554 24.2632 19.2554 25.2417V37.6109C19.2554 38.3863 18.6277 38.9955 17.8708 38.9955C17.0954 38.9955 16.4862 38.3863 16.4862 37.6109V29.1001C16.4862 28.6923 16.1556 28.3617 15.7477 28.3617H10.0431C8.10466 28.3617 6.51697 29.9309 6.51697 31.8878V38.3863C6.51697 40.3432 8.10466 41.9309 10.0431 41.9309H36.1108C38.0492 41.9309 39.6369 40.3432 39.6369 38.3863V35.3586C39.6369 33.4201 38.0492 31.8324 36.1108 31.8324Z" fill="#FF4D02"/>
 												</svg>
 											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Excellence</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Pursuing the highest quality in our services and talent.</p>
+											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Quality</h1>
+											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We are committed to sourcing, vetting, and delivering the best tech talent globally.</p>
 										</div>
 
 										<div class="box-2 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
@@ -145,8 +145,8 @@
 													<path d="M29.7469 36.3925V37.8449C29.7469 40.8999 27.2517 43.3925 24.1995 43.3925C21.1471 43.3925 18.6519 40.8999 18.6519 37.8449V36.3925H29.7469Z" fill="#FF4D02"/>
 												</svg>
 											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Innovation</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Embracing change and seeking better solutions.</p>
+											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Excellence</h1>
+											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Our commitment to excellence drives us to consistently exceed expectations, delivering exceptional talent to all our clients.</p>
 										</div>
 
 										<div class="box-3 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
@@ -157,8 +157,8 @@
 													<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M19.9477 28.6807C17.3261 28.6807 14.8929 29.0554 13.0209 29.6167C11.8966 29.9914 10.7741 30.5527 10.0246 31.3022C9.27688 32.0499 8.71381 33.1742 8.71381 34.485C8.71381 35.7957 9.08858 36.7317 10.0246 37.6677C10.7741 38.4154 11.8966 38.9785 13.0209 39.3514C14.8929 39.9145 17.3261 40.2874 19.9477 40.2874C21.0701 40.2874 21.8197 39.5397 21.8197 38.4154V30.5527C21.8197 29.4302 21.0701 28.6807 19.9477 28.6807Z" fill="#FF4D02"/>
 												</svg>
 											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Integrity</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Building trust through honesty and transparency.</p>
+											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Innovation</h1>
+											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We embrace new ideas and technologies to continually improve our platform and processes, staying ahead of industry trends.</p>
 										</div>
 
 										<div class="grid-item relative hide-bottom-border border-bottom-img py-12 lg:pr-10">
@@ -174,42 +174,10 @@
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M35.7248 29.2735C35.6159 29.0871 35.4627 28.9228 35.1581 28.5923C33.9784 27.3129 31.8165 24.948 30.5353 23.4379C30.1402 23.0539 29.9316 23.0483 29.4313 23.1517C28.1224 23.4194 27.4448 25.0551 28.7648 29.1572C28.8627 29.4563 28.7962 29.5892 28.4547 29.5892H26.627C24.6368 29.5892 23.6418 29.5892 22.9642 29.9954C22.3458 30.3683 21.8898 30.9628 21.6922 31.6569C21.4762 32.4175 21.7347 33.3775 22.2534 35.2994L22.7371 37.092C23.0104 38.1092 23.1488 38.6188 23.4368 38.9991C23.7027 39.348 24.0571 39.6194 24.4633 39.7855C24.9045 39.9646 25.4325 39.9646 26.4867 39.9646H32.2098C33.5168 39.9646 34.1722 39.9646 34.6725 39.7135C35.1341 39.4846 35.507 39.1117 35.7359 38.6502C35.987 38.1499 35.987 37.4945 35.987 36.1855V30.7099C35.987 30.2631 35.987 30.0379 35.9408 29.8274C35.8965 29.6317 35.8245 29.4471 35.7248 29.2735Z" fill="#FF4D02"/>
 												</svg>
 											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Collaboration</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Working together to achieve shared goals.</p>
+											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Diversity</h1>
+											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We believe in the power of diverse teams and are dedicated to creating opportunities for talented individuals from all backgrounds.</p>
 										</div>
 
-										<div class="grid-item relative hide-bottom-border border-left-img border-bottom-img py-12 lg:px-10">
-											<span class="block">
-												<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g opacity="0.4">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M34.1391 5.28406H31.7256C30.9307 5.28406 30.2856 5.92918 30.2856 6.72406C30.2856 7.51894 30.9307 8.16406 31.7256 8.16406H34.1391C37.4664 8.16406 40.1736 10.8713 40.1736 14.1986V17.2265C40.1736 18.0213 40.8187 18.6665 41.6136 18.6665C42.4085 18.6665 43.0536 18.0213 43.0536 17.2265V14.1986C43.0536 9.28342 39.0543 5.28406 34.1391 5.28406Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05349 18.6665C7.84837 18.6665 8.49349 18.0213 8.49349 17.2265V14.1986C8.49349 10.8713 11.2007 8.16406 14.528 8.16406H17.0029C17.7978 8.16406 18.4429 7.51894 18.4429 6.72406C18.4429 5.92918 17.7978 5.28406 17.0029 5.28406H14.528C9.61285 5.28406 5.61349 9.28342 5.61349 14.1986V17.2265C5.61349 18.0213 6.25861 18.6665 7.05349 18.6665Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M16.9414 39.8539H14.5279C11.2006 39.8539 8.49337 37.1467 8.49337 33.8212V30.7934C8.49337 29.9985 7.84825 29.3534 7.05337 29.3534C6.25849 29.3534 5.61337 29.9985 5.61337 30.7934V33.8212C5.61337 38.7345 9.61273 42.7339 14.5279 42.7339H16.9414C17.7363 42.7339 18.3814 42.0888 18.3814 41.2939C18.3814 40.499 17.7363 39.8539 16.9414 39.8539Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M41.6135 29.3514C40.8186 29.3514 40.1735 29.9966 40.1735 30.7914V33.8193C40.1735 37.1466 37.4663 39.8519 34.139 39.8519H31.6641C30.8692 39.8519 30.2241 40.497 30.2241 41.2919C30.2241 42.0868 30.8692 42.7319 31.6641 42.7319H34.139C39.0542 42.7319 43.0535 38.7345 43.0535 33.8193V30.7914C43.0535 29.9966 42.4084 29.3514 41.6135 29.3514Z" fill="#FF4D02"/>
-													</g>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5405 26.098C21.6528 26.1109 15.9048 26.1506 15.9058 30.1974C15.9824 31.8146 17.1335 32.9002 18.7701 32.9002H28.3294C29.9541 32.9002 31.1042 31.8156 31.1928 30.1753C31.2104 26.17 25.4439 26.1156 23.5405 26.098Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5545 24.1111C25.8234 24.1111 27.6686 22.2659 27.6686 19.9979C27.6686 17.729 25.8234 15.8828 23.5545 15.8828C21.2855 15.8828 19.4403 17.729 19.4403 19.9979C19.4403 22.2659 21.2855 24.1111 23.5545 24.1111Z" fill="#FF4D02"/>
-												</svg>
-
-											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Customer Focus</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Prioritizing client needs and satisfaction.</p>
-										</div>
-
-										<div class="grid-item relative py-12 hide-bottom-border border-left-img border-bottom-img lg:px-10">
-											<span class="block">
-												<svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
-													<g opacity="0.4">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0206 30.8553C7.75863 30.8553 5.91663 32.7033 5.91663 34.9753V39.9353C5.91663 42.1953 7.75863 44.0353 10.0206 44.0353C12.2826 44.0353 14.1246 42.1953 14.1246 39.9353V34.9753C14.1246 32.7033 12.2826 30.8553 10.0206 30.8553Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M24.9152 23.4139C22.6532 23.4139 20.8132 25.2539 20.8132 27.5159V39.9359C20.8132 42.1959 22.6532 44.0359 24.9152 44.0359C27.1772 44.0359 29.0192 42.1959 29.0192 39.9359V27.5159C29.0192 25.2539 27.1772 23.4139 24.9152 23.4139Z" fill="#FF4D02"/>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8136 6.03503C37.5516 6.03503 35.7096 7.87503 35.7096 10.135V39.935C35.7096 42.195 37.5516 44.035 39.8136 44.035C42.0756 44.035 43.9176 42.195 43.9176 39.935V10.135C43.9176 7.87503 42.0756 6.03503 39.8136 6.03503Z" fill="#FF4D02"/>
-													</g>
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.97715 24.237L21.5552 10.657V15.735C21.5552 16.563 22.2272 17.235 23.0552 17.235C23.8832 17.235 24.5552 16.563 24.5552 15.735V7.01103C24.5512 6.81703 24.5132 6.63103 24.4412 6.46303C24.3692 6.28503 24.2612 6.11903 24.1152 5.97503C23.9712 5.82903 23.8032 5.71903 23.6232 5.64703C23.4472 5.57503 23.2572 5.53503 23.0552 5.53503H14.3651C13.5371 5.53503 12.8651 6.20703 12.8651 7.03503C12.8651 7.86303 13.5371 8.53503 14.3651 8.53503H19.4352L5.85515 22.115C5.26915 22.701 5.26915 23.651 5.85515 24.237C6.14915 24.529 6.53115 24.677 6.91715 24.677C7.30115 24.677 7.68515 24.529 7.97715 24.237Z" fill="#FF4D02"/>
-												</svg>
-											</span>
-											<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Continuous Improvement</h1>
-											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Committed to learning and growth.</p>
-										</div>
 
 
 
