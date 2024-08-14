@@ -105,6 +105,29 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_66bccd4004995",
+            "label": "Author",
+            "name": "author",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "author-sws"
+            ],
+            "taxonomy": "",
+            "filters": "",
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -125,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723457838
+    "modified": 1723652588
 }

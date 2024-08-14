@@ -105,3 +105,38 @@ function cc_hire_post_type() {
 
 	register_post_type( 'hire', $args );
 }
+
+
+// Custom Post Type for Author
+add_action( 'init', 'cc_author_post_type' );
+function cc_author_post_type() {
+	$labels = array(
+		'name'               => __( 'Author' ),
+		'singular_name'      => __( 'Author' ),
+		'all_items'          => __( 'All Author' ),
+		'add_new'            => _x( 'Add new', 'Author' ),
+		'add_new_item'       => __( 'Add New Author' ),
+		'edit_item'          => __( 'Edit Author' ),
+		'new_item'           => __( 'New Author' ),
+		'view_item'          => __( 'View Author' ),
+		'search_items'       => __( 'Search in Author' ),
+		'not_found'          => __( 'No Author found' ),
+		'not_found_in_trash' => __( 'No Author found in trash' ),
+		'parent_item_colon'  => '',
+		
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'hierarchical'       => true,
+		'public'             => true, // Ensure this is set to true
+        'show_ui'            => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'menu_icon'          => 'dashicons-edit',
+		'rewrite'            => array( 'slug' => 'author-sws', 'with_front' => false ),
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
+	);
+
+	register_post_type( 'author-sws', $args );
+}
