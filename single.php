@@ -130,41 +130,62 @@ get_header();
 							<?php endif; ?>	
 							
 							
+							<?php
+							$author_posts  = get_field('author'); 
+							
+							if( $author_posts && is_array($author_posts) ) :
+								$author_post = $author_posts[0];
+								
+								if( $author_post ) :
+								// Retrieve the custom fields from the author CPT
+								$author_name = get_the_title($author_post->ID);
+								$author_designation = get_field('author_designation', $author_post->ID);
+								$linkedin_url = get_field('linkedin_url', $author_post->ID);
+								$author_short_description = get_the_excerpt($author_post->ID);
+								$author_image_url  = get_the_post_thumbnail_url($author_post->ID, 'thumbnail'); // Retrieves the featured image
 
+								// Display the author's information
+								?>
 							<div class="blog-bio py-[10px] border-t border-[#eaecf04d] mt-10 pt-[24px]">
 								<div class="grid grid-cols-1 lg:grid-cols-10">
 									<div class="grid-item col-span-5">
 										<div class="flex flex-row">
 											<div class="basis">
 												<div class=" w-[50px] h-[50px] rounded-[50%] overflow-hidden ">
-													<img class="w-[100%] rounded-full " src="<?php echo get_template_directory_uri();?>/images/auther-img.png">
+													<img class="w-[100%] rounded-full " src="<?php echo esc_url($author_image_url); ?>">
 												</div>
 											</div>
 											<div class="basis pl-3">
-												<p class="text-[18px] text-white font-normal !mb-0">Olivia Rhye</p>
-												<p class="text-[16px] text-[#AAA] font-normal">Product Designer, Untitled</p>
+												<p class="text-[18px] text-white font-normal !mb-0"><?php echo $author_name; ?></p>
+												<?php if( $author_designation ) : ?>
+												<p class="text-[16px] text-[#AAA] font-normal"><?php echo $author_designation; ?></p>
+												<?php endif; ?>
 											</div>
 										</div>
 									</div>
 									<div class="grid-item col-span-5 text-end">
-										<span class=" inline-block p-[10px] rounded-[8px] border bottom-[#fff] text-[#fff] text-[16px] align-top mr-3">
-											<img class="inline-block " src="<?php echo get_template_directory_uri();?>/images/link-icon.png"> Copy link
-										</span>
+										<?php if( $linkedin_url ) : ?>
 										<span class=" inline-block p-[10px]  rounded-[8px] border bottom-[#fff] align-top mr-3">
-											<img class="w-[100%] rounded-full " src="<?php echo get_template_directory_uri();?>/images/twit-icon.png">
+											<a href="<?php echo esc_url($linkedin_url); ?>" target="_blank"> <img class="w-[100%] rounded-full " src="<?php echo get_template_directory_uri();?>/images/linkin-icon.png"> </a>
 										</span>
-										<span class=" inline-block p-[10px]  rounded-[8px] border bottom-[#fff] align-top mr-3">
-											<img class="w-[100%] rounded-full " src="<?php echo get_template_directory_uri();?>/images/fb-icon.png">
-										</span>
-										<span class=" inline-block p-[10px]  rounded-[8px] border bottom-[#fff] align-top mr-3">
-											<img class="w-[100%] rounded-full " src="<?php echo get_template_directory_uri();?>/images/linkin-icon.png">
-										</span>
+										<?php endif; ?>
 									</div>
 								</div>
+								<?php if( $author_short_description ) : ?>
 								<div class="w-full">
-									<p class="text-[18px] text-white font-normal">Lectus leo massa amet posuere. Malesuada mattis non convallis quisque. Libero sit et imperdiet bibendum quisque dictum vestibulum in non.</p>
+									<p class="text-[18px] text-white font-normal"> <?php echo $author_short_description; ?> </p>
 								</div>
+								<?php endif; ?>
 							</div>
+							 <?php
+								else :
+									echo '<p>Author information is not available.</p>';
+								endif;
+								else :
+									echo '<p>No author assigned to this post.</p>';
+								endif;
+							?>	
+							
 						</div>
 						<div class="grid-item col-span-2 text-white content-start">
 							<div class=" bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
