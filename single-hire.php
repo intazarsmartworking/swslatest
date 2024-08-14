@@ -644,7 +644,7 @@
 					  $main_title = get_sub_field('main_title'); 
 					  $unique_id = 'target' . $section_count;
 					?>
-                    <li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>"><span><?php echo $section_count;?>.</span> <?php echo $main_title;?> </a></li>
+                    <li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>"> <?php echo $main_title;?> </a></li>
                     
 					
 					<?php $section_count++;?>
