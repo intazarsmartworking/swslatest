@@ -394,7 +394,7 @@
         </div>
 		
 		<div class="container mx-auto md:px-0 px-10">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative mb-28">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative">
 			<div>
 			  <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-48">
 				<img class="mb-3 w-28" src="<?php echo get_template_directory_uri();?>/images/tree.svg" alt="" />
@@ -485,7 +485,7 @@
 
 <!-- Calculate Section -->
 
-<div class="w-full relative calculate-sec grid items-center lg:py-[15%]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
+<div class="w-full relative calculate-sec grid items-center lg:py-[100px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
@@ -587,7 +587,7 @@
 
 <!-- Client Section -->
 
-<div class="w-full relative  grid items-center pt-24 bg-section-trusted">
+<div class="w-full relative  grid items-center pt-6 bg-section-trusted">
   <div class="px-10">
     <h3 class="text-center small-intro"> Clients </h3>
     <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>

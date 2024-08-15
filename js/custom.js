@@ -208,18 +208,52 @@ jQuery(document).ready(function(){
     autoplaySpeed: 2000,
     prevArrow: jQuery('.blog-prev-arrow'),
     nextArrow: jQuery('.blog-next-arrow'),
-  responsive: [
-      {
-          breakpoint: 768, 
-          settings: {
-              slidesToShow: 1 
-          }
-      }
-  ]
+    responsive: [
+        {
+            breakpoint: 768, 
+            settings: {
+                slidesToShow: 1 
+            }
+        }
+    ]
   });
 
-  
+  jQuery('.logo-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 10,
+    slidesToScroll: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
+
+  
 
 });
 
@@ -358,14 +392,9 @@ function sliderFunction(){
 }
 sliderFunction()
 
-
-
-jQuery(function () { // wait for document ready
-  // init
-
-
-               
 var controller = new ScrollMagic.Controller();
+
+function homePageAnimation(){
 
 // define movement of panels
 
@@ -399,18 +428,16 @@ new ScrollMagic.Scene({
     //.addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    // new ScrollMagic.Scene({
-    // triggerElement: ".main-box",
-    // duration: '85%' // Duration can be different from Masthead
-    // })
-    // .setPin(".box-1")
-    // .addIndicators({
-    // name: ".box-1 Pin",
-    // colorEnd: "dodgerblue"
-    // })
-    // .addTo(controller); 
+              
+    
+             
+}
 
-    // var tl = new TimelineMax({pause: true}); 
+
+
+function aboutUsAnimation(){
+
+  
 
   const effect1 = new TimelineMax()
     .fromTo("#scroll-effect-1 h1", 0.4, { y: '40px', opacity: 0.3 }, { y: 0, opacity: 1, ease: Power2.EaseInOut }, "start")
@@ -572,12 +599,10 @@ new ScrollMagic.Scene({
               .addTo( controller );
 
 
-              
-    
-              
-  
+}
 
-});
+
+
 
 function fadeSquares(el1, el2){
   console.log('working')
@@ -844,3 +869,34 @@ jQuery(document).ready(function(){
 
 
 });
+
+
+
+function loadAnimation(){
+  var action = TweenMax.to('#circle',5,{
+      bezier:{
+        curviness: 1.25,
+        type: "cubic",
+        values:[
+          {x:100, y:100}, 
+          {x:200, y:200}, 
+          {x:300, y:300},
+          {x:400, y:400},
+          {x:500, y:500}
+        ]},
+      ease: Power0.easeNone})
+
+ const scrollBar = new ScrollMagic.Scene({
+    triggerElement: "#wrapper",
+    triggerHook: "onLeave",
+    duration: '100%',   
+    offset:0
+  })
+  .setTween(action)
+  .setPin("#wrapper")
+  .addTo(controller)
+  .addIndicators();
+
+  console.log('bezier', controller, scrollBar)
+
+}
