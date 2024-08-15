@@ -30,19 +30,34 @@
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_author();?> ● </span>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 							<div class="font-bold text-2xl mb-2 text-white"><?php echo wp_trim_words(get_the_title(), 3); ?> </div>
-							<p class="home-blog-para text-base"> <?php echo get_the_excerpt();?></p>
+							<p class="home-blog-para text-base"> <?php echo wp_trim_words(get_the_content(), 30); ?></p>
 						</div>
 						<div class="py-4">
-							<?php
-								$post_tags = get_the_tags();
-								if ($post_tags) {
-									foreach($post_tags as $tag) {
-										echo '<span class="tagsection">' . $tag->name . '</span>';
-									}
-								} else {
-									echo '<span class="tagsection">No tags</span>';
+						<?php
+						$categories = get_the_category();
+						if ($categories) :
+							foreach ($categories  as $category) :
+								$class = '';
+								switch ($category->name) {
+									case 'Offshore Developer':
+										$class = 'bg-[#F9F5FF] text-[#6941C6]';
+										break;
+									case 'Backend Developer':
+										$class = 'bg-[#EEF4FF] text-[#3538CD]';
+										break;
+									case 'Full Stack Developer':
+										$class = 'bg-[#FDF2FA] text-[#C11574]';
+										break;	
+									default:
+										$class = 'bg-[#EEF4FF] text-[#3538CD]';
+										break;
 								}
-							?>
+						?>
+						<span class=" inline-block px-[30px] mb-1 py-[8px] mr-1 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
+						<?php
+						endforeach;
+						endif;
+						?>
 						</div>
 					</div>
 				</a>
