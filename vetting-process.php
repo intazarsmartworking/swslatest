@@ -116,7 +116,10 @@
             </div>
 
             <div class="path-box w-[100%] h-[190px] text-center">
-                <svg class="<?php echo $img_inline_class;?>" xmlns="http://www.w3.org/2000/svg" width="577" height="190" viewBox="0 0 577 190" fill="none">
+                <div class="vetting-path <?php echo $img_inline_class;?>" style="mask-image: url('<?php echo get_template_directory_uri();?>/images/path-line.png')">
+                    <div class="vetting_img"></div>
+                </div>
+                <!-- <svg class="<?php echo $img_inline_class;?>" xmlns="http://www.w3.org/2000/svg" width="577" height="190" viewBox="0 0 577 190" fill="none">
                     <path d="M576 0V55C576 77.0914 558.091 95 536 95H41C18.9086 95 1 112.909 1 135V190" stroke="url(#paint0_linear_1535_1839)"/>
                     <defs>
                         <linearGradient id="paint0_linear_1535_1839" x1="0.999996" y1="190" x2="576" y2="3.70274e-06" gradientUnits="userSpaceOnUse">
@@ -127,7 +130,7 @@
                         </linearGradient>
                     </defs>
                     
-                </svg>
+                </svg> -->
                 <!-- <img  src="<?php echo get_template_directory_uri();?>/images/path-line.png"> -->
             </div>
             
