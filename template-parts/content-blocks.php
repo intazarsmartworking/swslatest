@@ -224,7 +224,7 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/client-how-it-works' );?>	
+
 
 <?php get_template_part( 'template-parts/ai-vetted-profile' );?>
 <?php get_template_part( 'template-parts/assemble-team' );?>
