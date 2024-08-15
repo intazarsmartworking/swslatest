@@ -21,28 +21,61 @@
 				$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);		
 			?>
 		
-					<a href="">
+					<a href="<?php the_permalink(); ?>">
 						<div class="rounded mr-5">
 						<?php if ($image_src): ?>
 							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						<?php endif; ?>
 						<div class="py-4">
-							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_author();?> ● </span>
+						
+						<?php
+						$author_posts  = get_field('author'); 
+						if( $author_posts && is_array($author_posts) ) :
+							$author_post = $author_posts[0];
+							
+						if( $author_post ) :
+						$author_name = get_the_title($author_post->ID);
+						?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo $author_name; ?> ● </span>
+							
+						<?php
+							else :?>
+								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+						<?php endif;
+							else :?>
+								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+						<?	endif;
+						?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 							<div class="font-bold text-2xl mb-2 text-white"><?php echo wp_trim_words(get_the_title(), 3); ?> </div>
-							<p class="home-blog-para text-base"> <?php echo get_the_excerpt();?></p>
+							<p class="home-blog-para text-base"> <?php echo wp_trim_words(get_the_content(), 20); ?></p>
 						</div>
 						<div class="py-4">
-							<?php
-								$post_tags = get_the_tags();
-								if ($post_tags) {
-									foreach($post_tags as $tag) {
-										echo '<span class="tagsection">' . $tag->name . '</span>';
-									}
-								} else {
-									echo '<span class="tagsection">No tags</span>';
+						<?php
+						$categories = get_the_category();
+						if ($categories) :
+							foreach ($categories  as $category) :
+								$class = '';
+								switch ($category->name) {
+									case 'Offshore Developer':
+										$class = 'bg-[#F9F5FF] text-[#6941C6]';
+										break;
+									case 'Backend Developer':
+										$class = 'bg-[#EEF4FF] text-[#3538CD]';
+										break;
+									case 'Full Stack Developer':
+										$class = 'bg-[#FDF2FA] text-[#C11574]';
+										break;	
+									default:
+										$class = 'bg-[#EEF4FF] text-[#3538CD]';
+										break;
 								}
-							?>
+						?>
+						<span class=" inline-block px-[30px] mb-1 py-[8px] mr-1 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
+						<?php
+						endforeach;
+						endif;
+						?>
 						</div>
 					</div>
 				</a>
@@ -51,7 +84,7 @@
 			</div> 
 
 			<div class="header-buttons mt-12 mb-12 text-center">
-			<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">View all</a>
+			<a href="/blog" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">View all</a>
 			</div>
 		
 		</div>

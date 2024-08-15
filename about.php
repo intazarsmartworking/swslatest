@@ -187,7 +187,7 @@
 						</div>
 
 
-						<div class="timeline-item pb-[100px]" id="scroll-effect-9">
+						<!-- <div class="timeline-item pb-[100px]" id="scroll-effect-9">
 							<img  src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" class=" absolute right-[20px] w-[100%] h-[100%] top-[-150px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
 							<div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
 								<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -204,7 +204,7 @@
 									</div>
 								</div>
 							</div> 
-						</div>
+						</div> -->
 
 						<div class="timeline-item curv-box pb-[100px]" id="scroll-effect-10">
 							<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
@@ -243,7 +243,7 @@
 							</div> 
 						</div>
 
-						<div class="timeline-item pb-[100px]" id="scroll-effect-11">
+						<!-- <div class="timeline-item pb-[100px]" id="scroll-effect-11">
 							 <img  src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" class=" absolute right-[90px] w-[100%] h-[100%] top-[-90px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
 							<div class="timeline-content-box relative border border-[rgba(245,248,255,0.1)] lg:left-[-90px] bg-[#1f0c04] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:px-[100px] lg:py-[50px]">
 									<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -267,7 +267,7 @@
 
 									</div>
 							</div> 
-						</div>
+						</div> -->
 						<div class="timeline-item curv-box pb-[100px]" id="scroll-effect-12">
 							<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
 							<div class="timeline-content-box max-w-[1280px]">

@@ -8,15 +8,29 @@
  get_header();
 ?>
 
-<section class="price-page w-full relative">
-    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[30px]">
-        <div class="max-w-[600px] relative mx-auto text-center">
-			<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-			<h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">without the small print</h1>
-            <p class="text-white text-[16px] lg:text-[24px] font-normal mb-0">Simple terms, tailored to your company.<p>
+<?php if (have_rows('pricing_block')) : ?>
+<?php while (have_rows('pricing_block')) : the_row(); ?>
+<?php if (get_row_layout() == 'top_section') : ?>
+	<section class="price-page w-full relative">
+		<div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[30px]">
+			<div class="max-w-[600px] relative mx-auto text-center">
+			  <?php if(get_sub_field('main_heading')): ?>
+				<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
+			  <?php endif; ?>	
+			  
+			  <?php if(get_sub_field('orange_heading')): ?>
+				<h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_heading'); ?></h1>
+			  <?php endif; ?>
+			  
+			  <?php if(get_sub_field('paragraph')): ?>	
+				<p class="text-white text-[16px] lg:text-[24px] font-normal mb-0"><?php echo get_sub_field('paragraph'); ?><p>
+			  <?php endif; ?>	
+			</div>
 		</div>
-    </div>
-</section>
+	</section>
+<?php endif; ?>	
+<?php endwhile; ?>
+<?php endif; ?>
 
 <section class="price-page py-[30px] lg:pt-[0px] w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[10px]">
@@ -40,7 +54,6 @@
 							$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
 						?>
                             <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <img class="w-[26px] inline-block" src="<?php echo esc_url($hire_image_src[0]) ;?>">
                                 <span class="block"> <?php the_title();?> </span>
                             </div>
                             
@@ -95,119 +108,78 @@
             </div>
 		</div>
         <div class=" w-full relative mt-6 ">
+		
+			<?php if (have_rows('pricing_block')) : ?>
+			<?php while (have_rows('pricing_block')) : the_row(); ?>
+			<?php if (get_row_layout() == 'top_section_accordion') : ?>
             <div class="accordion-box w-full">
                 <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[rgba(255,77,2,0.10)] ">
+					<?php if(get_sub_field('heading')): ?>
                     <div class="accordion-title w-full text-[24px] relative text-white cursor-pointer">
-                        What’s the source of YouRate’s data?
+                        <?php echo get_sub_field('heading'); ?>
                         <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
                     </div>
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('sub_heading')): ?>
                     <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
+                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('sub_heading'); ?></h1>
                     </div>
+					<?php endif; ?>
                 </div>
             </div>
+			<?php endif; ?>	
+			<?php endwhile; ?>
+			<?php endif; ?>
+			
+			
         </div>
     </div>
 </section>
 
-
+<?php if (have_rows('pricing_block')) : ?>
+<?php while (have_rows('pricing_block')) : the_row(); ?>
+<?php if (get_row_layout() == 'add_on_section') : ?>
 <section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
         <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >Add-ons</span></div>
-            <h1 class="gradient-text text-[25px] lg:text-[56px] font-medium mb-0">Our Add-ons</h1>
+			<?php if(get_sub_field('top_heading')): ?>
+            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_heading'); ?></span></div>
+            <?php endif; ?>
+			
+			<?php if(get_sub_field('main_heading')): ?>
+			<h1 class="gradient-text text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
+			<?php endif; ?>
         </div>
 
         <div class=" w-full relative mt-6 ">
             <div class="accordion-box w-full">
-                <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[#60E3D5] bg-gradient-to-r from-[#309F94] from-0%  to-[#60E3D5] to-100% ">
+			
+			<?php if(have_rows('toggle_part')): ?>
+			<?php while(have_rows('toggle_part')): the_row(); ?>
+			<?php 
+				$title_name = get_sub_field('title'); 
+				$price = get_sub_field('price'); 
+				$description = get_sub_field('description'); 
+				$first_colour = get_sub_field('first_colour'); 
+				$second_colour = get_sub_field('second_colour'); 
+			?>
+                <div class="accordion-item p-[24px] mt-5 rounded-[24px] w-full border border-[<?php echo $second_colour;?>] bg-gradient-to-r from-[<?php echo $first_colour;?>] from-0%  to-[<?php echo $second_colour;?>] to-100% ">
                     <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
                         <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-1.png">
+                            <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
                         </span>
-                        What’s the source of YouRate’s data?
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$45/m</span>
+                        <?php echo $title_name;?>
+                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?></span>
                         <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
                     </div>
                     <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
+                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo $description;?></h1>
                     </div>
                 </div>
-
-                <div class="accordion-item mt-5 p-[24px] rounded-[24px] w-full border border-[#FF7B31] bg-gradient-to-r from-[#EC9C52] from-0%  to-[#FF7B31] to-100% ">
-                    <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
-                        <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-2.png">
-                        </span>
-                        Legal Processing & Onboarding
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$0</span>
-                        <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
-                    </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-                    </div>
-                </div>
-
-                <div class="accordion-item mt-5 p-[24px] rounded-[24px] w-full border border-[#D09C76] bg-gradient-to-r from-[#D09C76] from-0%  to-[#ECC1A1] to-100% ">
-                    <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
-                        <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-3.png">
-                        </span>
-                        Medical Insurance
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$0</span>
-                        <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
-                    </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-                    </div>
-                </div>
-
-                <div class="accordion-item mt-5 p-[24px] rounded-[24px] w-full border border-[#6098B3] bg-gradient-to-r from-[#4F99BD] from-0%  to-[#77BDDF] to-100% ">
-                    <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
-                        <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-4.png">
-                        </span>
-                        HR & IT Support
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$0</span>
-                        <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
-                    </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-                    </div>
-                </div>
-
-                <div class="accordion-item mt-5 p-[24px] rounded-[24px] w-full border border-[#9C68C9] bg-gradient-to-r from-[#913EDA] from-0%  to-[#C282FA] to-100% ">
-                    <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
-                        <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-5.png">
-                        </span>
-                        Payroll Management
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$0</span>
-                        <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
-                    </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-                    </div>
-                </div>
-
-
-                <div class="accordion-item mt-5 p-[24px] rounded-[24px] w-full border border-[#60E3D5] bg-gradient-to-r from-[#309F94] from-0%  to-[#60E3D5] to-100% ">
-                    <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
-                        <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/accod-6.png">
-                        </span>
-                        Timezone & Working Hours Tracking
-                        <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">$0</span>
-                        <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
-                    </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Flexible pricing,</h1>
-                    </div>
-                </div>
-
-
-
-
+				
+			<?php endwhile; ?>	
+			<?php endif; ?> 	
 
             </div>
         </div>
@@ -217,363 +189,299 @@
     </div>
 </section>
 
+<?php endif; ?>	
+
+<?php if (get_row_layout() == 'compare_section') : ?>
 <section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
         <img class="absolute right-[-150px] opacity-[0.6] top-[20%] w-[400px] z-0 rotate-[180deg]" src="http://sws.local/wp-content/themes/sws/images/sqr-circule.png">
         <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">Compare</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Cost Comparison</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0">Overview</h1>
-            <p class="text-white text-[16px] lg:text-[24px] font-medium mb-0 max-w-[80%] block mx-auto ">Hiring an offshore engineer has always benefited our clients; we claim this because our clients have experienced it. Let’s examine why the market is evolving toward hiring offshore talent, which saves time, energy, money, and more.</p>
-        </div>
+		  <?php if(get_sub_field('top_heading')): ?>
+            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]"><?php echo get_sub_field('top_heading'); ?></span></div>
+		 <?php endif; ?> 	
+
+		<?php if(get_sub_field('main_title')): ?>
+		   <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+		<?php endif; ?> 	
+		 
+		<?php if(get_sub_field('orange_title')): ?>   
+            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+		<?php endif; ?> 
+		
+		<?php if(get_sub_field('paragraph')): ?>	
+            <p class="text-white text-[16px] lg:text-[24px] font-medium mb-0 max-w-[80%] block mx-auto "><?php echo get_sub_field('paragraph'); ?></p>
+        <?php endif; ?> 
+		</div>
 
         <div class="w-full relative border border-[rgba(255,77,2,0.20)] bg-[] rounded-[20px] price-list-box p-[20px] mt-8">
             <div class="grid grid-cols-1 lg:grid-cols-9 gap-0">
                 <div class="grid-item col-span-3 rounded-[12px]">
+					<?php if(get_sub_field('table_one_heading')): ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">Aspect</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_one_heading'); ?></h1>
                     </div>
+					<?php endif; ?> 
+					
+					<?php if(have_rows('table_first_content')): ?>
+					<?php while(have_rows('table_first_content')): the_row(); ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Salary Costs</p>
+                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                     </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Recruitment Expenses</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Employee Benefits</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Office Space and Equipment</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Overtime and Leave</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Administrative Costs</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Turnover and Retention</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Scalability</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0">Overall Cost Efficiency</p>
-                    </div>
+					<?php endwhile; ?>	
+					<?php endif; ?>
+                    
+                    
                 </div>
                 <div class="grid-item col-span-3 rounded-[12px] bg-gradient-to-r from-[#FF7D46] from-0%  to-[#FF4F05] to-100% ">
+				
+					<?php if(get_sub_field('table_second_heading')): ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">SmartWorking Developers</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_second_heading'); ?></h1>
                     </div>
+					<?php endif; ?>
+					
+					<?php if(have_rows('table_second_content')): ?>
+					<?php while(have_rows('table_second_content')): the_row(); ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Lower due to regional wage differences</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                     </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Minimal, as we handle the entire hiring process at no extra cost</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Covered by the us</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Not required, as developers work remotely</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Managed by us, typically at no extra cost</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Handled by us at no extra cost</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">We provide replacements without additional recruitment costs</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Easy to scale up or down based on project needs without extra costs</p>
-                    </div>
-                    <div class="line-box  h-[90px] px-[15px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Generally more cost-effective due to bundled services and lower wages</p>
-                    </div>
+                    <?php endwhile; ?>	
+					<?php endif; ?> 
+                    
+                    
                 </div>
                 <div class="grid-item col-span-3 rounded-[12px]">
+				
+					<?php if(get_sub_field('table_third_heading')): ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0">In-House Developers</h1>
+                        <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_third_heading'); ?></h1>
                     </div>
+					<?php endif; ?>
+					
+					<?php if(have_rows('table_third_content')): ?>
+					<?php while(have_rows('table_third_content')): the_row(); ?>
                     <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Higher, especially in regions with high living costs</p>
+                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                     </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">High, including job postings, recruiter fees, and onboarding</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Includes healthcare, retirement plans, and other perks</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Significant cost for office space, utilities, and equipment</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Additional expenses for overtime pay and managing leave</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Includes payroll management, HR, and other administrative tasks</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">High cost related to rehiring and training new employees</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Scaling requires significant investment in time and resources</p>
-                    </div>
-                    <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                        <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0">Higher due to direct and indirect costs</p>
-                    </div>
+                    <?php endwhile; ?>	
+					<?php endif; ?>
+                    
                 </div>
             </div>
         </div>
 
     </div> 
 </section>
+<?php endif; ?>
 
+<?php if (get_row_layout() == 'support_section') : ?>
 <section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
         <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">Support</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">How should we interact and take</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0">our partnership forward?</h1>
+		<?php if(get_sub_field('top_title')): ?>
+            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]"><?php echo get_sub_field('top_title'); ?></span></div>
+		<?php endif; ?>
+		
+		<?php if(get_sub_field('main_title')): ?>	
+		 <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+		 <?php endif; ?>
+		 
+		 <?php if(get_sub_field('orange_title')): ?>
+            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+		<?php endif; ?>	
         </div>
 
         <div class="w-full relative mt-8">
             <div class="grid grid-cols-1 lg:grid-cols-9 gap-5">
+				
+				<?php if(have_rows('support_box')): ?>
+				<?php while(have_rows('support_box')): the_row();
+				$description = get_sub_field('description'); 
+				$button_name = get_sub_field('button_name');
+				$button_link = get_sub_field('button_link');
+				$support_image = get_sub_field('image');
+				?>
                 <div class="grid-item col-span-3 relative pb-[100px]">
-                    <img class="w-[100%] rounded-lg h-[240px]" src="<?php echo get_template_directory_uri();?>/images/root-price-1.png">
+					<?php if (!empty($support_image) && isset($support_image['url'])):?>
+                    <img class="w-[100%] rounded-lg h-[240px]" src="<?php echo esc_url($support_image['url']); ?>" alt="<?php echo esc_url($support_image['alt']); ?>">
+					<?php endif; ?>
+					
                     <div class="absolute w-[calc(100%-30px)] left-[15px] bottom-0 bg-white rounded-[15px] p-[20px]">
-                        <p class="text-[19px] lg:text-[19px] font-medium mb-0">If you have questions, schedule a 30-minute call & talk to our consultant.</p>
-                        <button class=" text-white text-[16px] mt-4 rounded-[10px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] ">Schedule a Call</button>
+                        <p class="text-[19px] lg:text-[19px] font-medium mb-0"><?php echo $description;?></p>
+                        <a href="<?php echo $button_link;?>"> <button class=" text-white text-[16px] mt-4 rounded-[10px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] "><?php echo $button_name ;?></button> </a>
                     </div>
                 </div>
-                <div class="grid-item col-span-3 relative pb-[100px]">
-                    <img class="w-[100%] rounded-lg h-[240px]" src="<?php echo get_template_directory_uri();?>/images/root-price-2.png">
-                    <div class="absolute w-[calc(100%-30px)] left-[15px] bottom-0 bg-white rounded-[15px] p-[20px]">
-                        <p class="text-[19px] lg:text-[19px] font-medium mb-0">If you prefer a callback, drop us your details & one of our consultants will connect with you.</p>
-                        <button class=" text-white text-[16px] mt-4 rounded-[10px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] ">Request a Callback</button>
-                    </div>
-                </div>
-                <div class="grid-item col-span-3 relative pb-[100px]">
-                    <img class="w-[100%] rounded-lg h-[240px]" src="<?php echo get_template_directory_uri();?>/images/root-price-3.png">
-                    <div class="absolute w-[calc(100%-30px)] left-[15px] bottom-0 bg-white rounded-[15px] p-[20px]">
-                        <p class="text-[19px] lg:text-[19px] font-medium mb-0">If you prefer a callback, drop us your details & one of our consultants will connect with you.</p>
-                        <button class=" text-white text-[16px] mt-4 rounded-[10px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] ">Hire a Professional</button>
-                    </div>
-                </div>
+				<?php endwhile; ?>	
+				<?php endif; ?>
             </div>
         </div>
-
-    </div> 
+	</div> 
 </section>
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
+
+<?php if (have_rows('block')) : ?>
+<?php while (have_rows('block')) : the_row(); ?>
+<?php if (get_row_layout() == 'testimonial_section') : ?>
+	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center testimonial-section items-center set-margin">
+	    <?php if(get_sub_field('small_heading')): ?>
+			<div class ="container mx-auto md:px-0 px-10">
+				<p class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
+			</div>
+		<?php endif; ?>
+		
+		<?php if(get_sub_field('main_heading')): ?>
+			<div class="flex flex-col items-center justify-center">
+				<?php echo get_sub_field('main_heading'); ?>
+			</div>
+		<?php endif; ?>
+		<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+		<div class="flex w-0 lg:w-1/12">&nbsp;</div>
+		<div class="slider-wrapper w-full relative card-container overflow-visible">
+			<div class="slider-overlay">
+
+			
+		
+		    <?php if(have_rows('testimonial_card')): ?>
+			<?php while(have_rows('testimonial_card')): the_row(); ?>
+			<?php 
+				$testimonial = get_sub_field('testimonial'); 
+				$author_name = get_sub_field('name'); 
+				$author_designation = get_sub_field('designation'); 
+				$background = get_sub_field('background_color'); 
+				$linkedin = get_sub_field('linkedin');
+			?>
+
+
+		
+				<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card" >
+					<div class="p-4 lg:p-10 flex flex-col ">
+						<div class="flex justify-between items-center mb-6">
+							<img src="<?php echo get_sub_field('logo')['url']; ?>">
+							<img src="<?php echo get_sub_field('rating')['url']; ?>">
+						</div>
+						<p class="text-2xl text-[#050403] leading-9"> <?php echo $testimonial;?> </p>
+						<div class="flex justify-between items-center mt-10 lg:mt-36">
+							<div class="flex items-center">
+								<img class="mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+								<div>
+									<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
+									<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
+								</div>
+							</div>
+
+							<a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a>
+						</div>
+					</div>
+				</div>
+				<?php endwhile; ?>	
+			<?php endif; ?> 
+			
+		</div>
+		</div>
+	</div>
+	<div>
+		<div class="buttons flex gap-3">
+			<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
+			<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
+		</div>
+	</div>
+
+	</div>
+<?php endif; ?>	
+<?php endwhile; ?>
+<?php endif; ?>
+
+
+<?php get_template_part( 'template-parts/home-blog' );?>
+
+<?php if (have_rows('pricing_block')) : ?>
+<?php while (have_rows('pricing_block')) : the_row(); ?>
+<?php if (get_row_layout() == 'faq_section') : ?>
 <section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
     <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
         <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">Testimonial</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">They all love us</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0">What our client say</h1>
-        </div>
-
-        <div class="w-full relative mt-8">
-            
-        </div>
-
-    </div> 
-</section> 
-
-<section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
-    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
-        <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">Testimonial</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">They all love us</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0">What our client say</h1>
-        </div>
-
-        <div class="w-full relative mt-8">
-            <div class="grid grid-cols-1 lg:grid-cols-9 gap-5">
-                <div class="grid-item col-span-3 relative">
-                    <div class="block">
-                        <div class="mb-6">
-                            <img class="w-[100%] max-h-[200px] rounded-[12px]" src="<?php echo get_template_directory_uri();?>/images/blog-1.png">
-                        </div>
-                        <p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • 20 Jan 2022</p>
-                        <p class="text-[24px] text-[#ffffff] font-bold mb-4" >UX review presentations</p>
-                        <p class="text-[16px] text-[#ffffff] mb-4" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
-                        <div class="w-[100%] mt-10">
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#F9F5FF] text-[#6941C6]">Design</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#EEF4FF] text-[#3538CD]">Research</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#FDF2FA] text-[#C11574]">Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-span-3 relative">
-                    <div class="block">
-                        <div class="mb-6">
-                            <img class="w-[100%] max-h-[200px] rounded-[12px]" src="<?php echo get_template_directory_uri();?>/images/blog-1.png">
-                        </div>
-                        <p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • 20 Jan 2022</p>
-                        <p class="text-[24px] text-[#ffffff] font-bold mb-4" >UX review presentations</p>
-                        <p class="text-[16px] text-[#ffffff] mb-4" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
-                        <div class="w-[100%] mt-10">
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#F9F5FF] text-[#6941C6]">Design</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#EEF4FF] text-[#3538CD]">Research</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#FDF2FA] text-[#C11574]">Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-span-3 relative">
-                    <div class="block">
-                        <div class="mb-6">
-                            <img class="w-[100%] max-h-[200px] rounded-[12px]" src="<?php echo get_template_directory_uri();?>/images/blog-1.png">
-                        </div>
-                        <p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • 20 Jan 2022</p>
-                        <p class="text-[24px] text-[#ffffff] font-bold mb-4" >UX review presentations</p>
-                        <p class="text-[16px] text-[#ffffff] mb-4" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
-                        <div class="w-[100%] mt-10">
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#F9F5FF] text-[#6941C6]">Design</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#EEF4FF] text-[#3538CD]">Research</span>
-                            <span class=" inline-block px-[30px] py-[8px] mr-3 text-[14px] italic rounded-[30px] bg-[#FDF2FA] text-[#C11574]">Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div> 
-</section> 
-
-<section class="price-page py-[30px] lg:pt-[0px]  w-full relative">
-    <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[90px]">
-        <div class="w-full text-center">
-            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]">FAQ’s</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Common questions</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0">and their answers</h1>
+			<?php if(get_sub_field('top_title')): ?>
+            <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]"><?php echo get_sub_field('top_title'); ?></span></div>
+            <?php endif; ?>
+			
+			<?php if(get_sub_field('main_title')): ?>
+			<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+			<?php endif; ?>
+			
+			<?php if(get_sub_field('orange_title')): ?>
+            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+			<?php endif; ?>
+			
         </div>
 
         <div class="w-full relative mt-8">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5">
+			
+				<?php if(have_rows('faq_part')): ?>
+				<?php while(have_rows('faq_part')): the_row();
+				$question = get_sub_field('question'); 
+				$answer = get_sub_field('answer');
+				?>
                 <div class="grid-item col-span-5 relative">
                     <div class="accordion-box w-full">
                         <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
                             <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px]">
-                                 How do you track the remote employee’s working hours?
+                                 <?php echo $question;?>
                                 <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
                             </div>
                             <div class="accordion-details w-full relative py-3">
                                 <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
+                                    <?php echo $answer;?>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="grid-item col-span-5 relative">
-                    <div class="accordion-box w-full">
-                        <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
-                            <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px]">
-                            Will the talent salary be negotiable?
-                                <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
-                            </div>
-                            <div class="accordion-details w-full relative py-3">
-                                <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item col-span-5 relative">
-                    <div class="accordion-box w-full">
-                        <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
-                            <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px]">
-                            Who acts as the employer of the hired developer throughout the contract?
-                                <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
-                            </div>
-                            <div class="accordion-details w-full relative py-3">
-                                <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item col-span-5 relative">
-                    <div class="accordion-box w-full">
-                        <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
-                            <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px]">
-                                Is the leave policy based on local or Indian terms?
-                                <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
-                            </div>
-                            <div class="accordion-details w-full relative py-3">
-                                <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item col-span-5 relative">
-                    <div class="accordion-box w-full">
-                        <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
-                            <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px] ">
-                            Can you handle it if we need to hire bulk talents from Smart Working?
-                                <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
-                            </div>
-                            <div class="accordion-details w-full relative py-3">
-                                <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item col-span-5 relative">
-                    <div class="accordion-box w-full">
-                        <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[#ff4e023b] from-0%  to-[transparent] to-100% ">
-                            <div class="accordion-title w-full text-[20px] relative text-white cursor-pointer pr-[30px]">
-                                 How do you track the remote employee’s working hours?
-                                <span class=" block w-[30px] h-[30px] border border-[rgba(255,255,255,0.10)] rounded-[8px] absolute right-0 top-0 text-white text-center">+</span>
-                            </div>
-                            <div class="accordion-details w-full relative py-3">
-                                <p class="text-white text-[16px] lg:text-[16px]">
-                                    We have paid subscriptions to reputed software, and our dedicated IT team keeps track of employees' daily activities. Also, if you or your company have any other policies to update in the employee’s system, our IT team proactively supports you throughout the process.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+				<?php endwhile; ?>	
+				<?php endif; ?>
+			</div>
         </div>
 
 
     </div> 
 </section>
+<?php endif; ?>
 
+
+<?php if (get_row_layout() == 'ready_hire_section') : ?>
 <section class="w-[100%] px-[5%] mb-[60px]">
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire a Developer?</h1>
-            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]">It is quick and easy with Smart Working</p>
+			<?php if(get_sub_field('title')): ?>
+            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_sub_field('title'); ?></h1>
+			<?php endif; ?>
+			
+			<?php if(get_sub_field('paragraph')): ?>
+            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"><?php echo get_sub_field('paragraph'); ?></p>
+			<?php endif; ?>
             
-            <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Schedule a Call </a>
+			<?php if(get_sub_field('button_name')): ?>
+			<?php $button_url =  get_sub_field('button_url'); ?>
+            <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02]" href="<?php echo esc_url($button_url); ?>"> <?php echo get_sub_field('button_name'); ?> </a>
+			<?php endif; ?>
         </div>
         
+		<?php $right_side_image = get_sub_field('right_side_image');
+		if (!empty($right_side_image) && isset($right_side_image['url'])):
+		?>
         <div class="text-end pt-[40px] lg:pt-[0px]">
-            <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
+            <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo esc_url($right_side_image['url']); ?>" alt="<?php echo esc_attr($right_side_image['alt']); ?>">
         </div>
+		<?php endif; ?>
         
     </div>
 </section>
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer();?>

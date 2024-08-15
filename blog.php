@@ -37,7 +37,24 @@
 				<a href="<?php the_permalink(); ?>"> <img class="w-[100%] h-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
             </div>
             <div class="grid-item col-span-4 p-[40px]">
-                <p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y');?></p>
+                <?php
+					$author_posts  = get_field('author'); 
+					if( $author_posts && is_array($author_posts) ) :
+						$author_post = $author_posts[0];
+						
+					if( $author_post ) :
+					$author_name = get_the_title($author_post->ID);
+					?>
+					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo $author_name; ?> ● </span>
+					<?php
+					else :?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+					<?php endif;
+						else :?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+					<?php endif;
+					?>
+					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 				<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php the_title(); ?></p> </a>
 				<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
 				<div class="w-[100%] min-h-[100px] mt-10">
@@ -84,17 +101,7 @@
             <div class="grid-item col-span-6">
 				<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Get the latest</h1>
             </div>
-            <!--<div class="grid-item col-span-2">
-				<input type="text" placeholder="Search" class="form-input w-[100%] h-[50px] text-white border-[#632A0B] bg-[#632A0B] rounded-[12px]">
-			</div>
-			<div class="grid-item col-span-2">
-				<select class="form-select w-[100%] h-[50px] border-[#632A0B] text-white bg-[#632A0B] rounded-[10px] ">
-					<option>option 1</option>
-					<option>option 2</option>
-					<option>option 3</option>
-					<option>option 4</option>
-				</select>
-			</div> -->
+            
         </div>
 
 		
@@ -119,7 +126,24 @@
 					<div class="mb-6">
 					<a href="<?php the_permalink(); ?>"> <img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
 					</div>
-					<p class="text-[14px] text-[#FF4D02] font-bold mb-4" >Olivia Rhye • <?php echo get_the_date('F j, Y'); ?></p>
+					<?php
+					$author_posts  = get_field('author'); 
+					if( $author_posts && is_array($author_posts) ) :
+						$author_post = $author_posts[0];
+						
+					if( $author_post ) :
+					$author_name = get_the_title($author_post->ID);
+					?>
+					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo $author_name; ?> ● </span>
+					<?php
+					else :?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+					<?php endif;
+						else :?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+					<?php endif;
+					?>
+					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 					<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?>  </p> </a>
 					<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
 					<div class="w-[100%] min-h-[100px] mt-10">
