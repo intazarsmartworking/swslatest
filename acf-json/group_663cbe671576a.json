@@ -1117,44 +1117,6 @@
                                     "return_format": "string"
                                 },
                                 {
-                                    "key": "field_6686ef45c310a",
-                                    "label": "Degree",
-                                    "name": "degree",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_6686ef5bc310b",
-                                    "label": "Direction",
-                                    "name": "direction",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
                                     "key": "field_66b4db69a8edb",
                                     "label": "LinkedIn",
                                     "name": "linkedin",
@@ -1555,5 +1517,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723128694
+    "modified": 1723700664
 }
