@@ -605,7 +605,7 @@ function aboutUsAnimation(){
 
 
 function fadeSquares(el1, el2){
-  console.log('working')
+  //console.log('working')
   el1.fadeOut(2000, ()=>{
     el1.fadeIn(2000);
   });
@@ -614,7 +614,7 @@ let el1 = jQuery('.path1');
 let el2 = jQuery('#movebox');
 
 setInterval(function (){
-  console.log('timent')
+  //console.log('timent')
   fadeSquares(el1, el2);
 }, 6000)
 
@@ -873,7 +873,7 @@ jQuery(document).ready(function(){
 
 
 function loadAnimation(){
-  var action = TweenMax.to('#circle',5,{
+  var action = new TimelineMax().to('#circle',5,{
       bezier:{
         curviness: 1.25,
         type: "cubic",
@@ -888,14 +888,19 @@ function loadAnimation(){
 
  const scrollBar = new ScrollMagic.Scene({
     triggerElement: "#wrapper",
-    triggerHook: "onLeave",
-    duration: '100%',   
-    offset:0
+    duration: "100%",   
+    offset:300
   })
   .setTween(action)
   .setPin("#wrapper")
   .addTo(controller)
-  .addIndicators();
+  .on('update', (e) =>{
+    // console.log(e, action)
+    // const top = `translate3d(0px, ${e.scrollPos}px, 0px)`
+    // jQuery('#circle').css({transform: top})
+    
+  })
+  //.addIndicators();
 
   console.log('bezier', controller, scrollBar)
 
