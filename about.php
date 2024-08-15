@@ -459,4 +459,9 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
+<script type="text/javascript">
+    jQuery(window).bind("load", function() {
+		aboutUsAnimation()
+	});
+</script>
 <?php get_footer();?>

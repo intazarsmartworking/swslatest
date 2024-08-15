@@ -3915,6 +3915,19 @@ ol{
     background: rgba(255, 255, 255, 0.02) !important;
     padding: 20px;
 }
+#wrapper{
+    height: 100vh;
+    width: 100%;
+    background: grey;
+    overflow: hidden;
+  }
+#circle {
+    width: 50px;
+    height: 50px;
+    background: tomato;
+    border-radius: 50%;
+    margin-right: 2vw;
+  }
 @keyframes traverse {
     0% {
       offset-distance: 0%;
