@@ -208,18 +208,52 @@ jQuery(document).ready(function(){
     autoplaySpeed: 2000,
     prevArrow: jQuery('.blog-prev-arrow'),
     nextArrow: jQuery('.blog-next-arrow'),
-  responsive: [
-      {
-          breakpoint: 768, 
-          settings: {
-              slidesToShow: 1 
-          }
-      }
-  ]
+    responsive: [
+        {
+            breakpoint: 768, 
+            settings: {
+                slidesToShow: 1 
+            }
+        }
+    ]
   });
 
-  
+  jQuery('.logo-slider').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 10,
+    slidesToScroll: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
+
+  
 
 });
 
@@ -844,3 +878,29 @@ jQuery(document).ready(function(){
 
 
 });
+
+
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+  
+  let test = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#track",
+      start: 0,
+      end: '+=300%+=50px',
+      // end: '+=' + ((window.innerHeight * 3) + 50),
+      scrub: true,
+      markers: true
+    }
+  }); 
+  
+ test.fromTo("#element", 
+  {x: 0, y: 0}, 
+  { ease: "none", motionPath:
+    { path: [
+      {x: '50vw', y: '100vh'}, 
+      {x: '25vw', y: '200vh'}, 
+      {x: '75vw', y: '300vh' }, 
+      {x: '0vw', y: '400vh'}
+    ]}
+  }, 
+ );

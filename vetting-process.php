@@ -11,7 +11,7 @@
 <?php if (have_rows('vetting_process')) : ?>
   <?php while (have_rows('vetting_process')) : the_row(); ?>
 	<?php if (get_row_layout() == 'top_section') : ?>
-		<section class="w-[100%] md:min-h-[600px] py-[4rem] lg:py-[10rem] bg-vp" style="background-image: url('<?php echo get_template_directory_uri();?>/images/bg-vp.png');">
+		<section class="w-[100%] md:min-h-[300px] py-[3rem] lg:py-[4rem] bg-vp" style="background-image: url('<?php echo get_template_directory_uri();?>/images/bg-vp.png');">
 			<div class="max-w-[600px] relative mx-auto text-center">
 			   <?php if(get_sub_field('main_title')): ?>
 				<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"> <?php echo get_sub_field('main_title'); ?> </h1>
@@ -29,10 +29,12 @@
 	<?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>	
-
 <section class="w-[100%] relative vetting-step-section">
     <div class="w-[100%] relative z-10 vetting-step-section-inner max-w-[1375px] mx-auto p-3 lg:px-[60px] lg:py-[80px]">
-	
+    <!-- <div class="w-[20px] left-[50%] top-0 h-[100%] absolute bg-red-300 " id="track">
+        <img id="element" class="w-[30px] bg-[#fff]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
+        
+    </div> -->
 		<?php if (have_rows('vetting_process')) : ?>
 		<?php while (have_rows('vetting_process')) : the_row(); ?>
 		<?php if (get_row_layout() == 'step_section') : ?>
@@ -107,7 +109,19 @@
         </div>
 
         <div class="path-box w-[100%] h-[190px] text-center">
-            <img class="<?php echo $img_inline_class;?>" src="<?php echo get_template_directory_uri();?>/images/path-line.png">
+            <svg class="<?php echo $img_inline_class;?>" xmlns="http://www.w3.org/2000/svg" width="577" height="190" viewBox="0 0 577 190" fill="none">
+                <path d="M576 0V55C576 77.0914 558.091 95 536 95H41C18.9086 95 1 112.909 1 135V190" stroke="url(#paint0_linear_1535_1839)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_1535_1839" x1="0.999996" y1="190" x2="576" y2="3.70274e-06" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#D0511B" stop-opacity="0.1"/>
+                    <stop offset="0.296676" stop-color="#D0511B"/>
+                    <stop offset="0.701861" stop-color="#D0511B"/>
+                    <stop offset="1" stop-color="#D0511B" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                
+            </svg>
+            <!-- <img  src="<?php echo get_template_directory_uri();?>/images/path-line.png"> -->
         </div>
 		
 		<?php endwhile; ?>	
@@ -120,7 +134,7 @@
 		<?php endif; ?>
         
 
-        <div class="block w-[100%] text-center pt-[4rem]">
+        <div class="block w-[100%] text-center">
             <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="">Get Started</a>
         </div>
 
@@ -129,6 +143,7 @@
     </div>
     <img class="absolute right-[9%] bottom-[100px] w-[300px] z-0 rotate-[-30deg]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
 </section>
+<div class="spacer s2"></div>
 
 
 <section class="calculator-box w-[100%] mt-[50px]">
@@ -184,91 +199,22 @@
         <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">100+ of Organizations</h1>
     </div>
     <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
-        <div class="clinet-logo text-center">
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div><div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            <div class="item">
-                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> 
-            </div>
-            
+        <div class="logo-slider">
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+            <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
         </div>
     </div>
 </section>

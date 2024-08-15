@@ -1154,6 +1154,11 @@ ol{
     margin-left: 20px;
     list-style: decimal;
 }
+.logo-slider .slide-item{
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02) !important;
+    padding: 20px;
+}
   
 @keyframes traverse {
     0% {
