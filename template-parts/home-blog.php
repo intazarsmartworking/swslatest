@@ -21,16 +21,34 @@
 				$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);		
 			?>
 		
-					<a href="">
+					<a href="<?php the_permalink(); ?>">
 						<div class="rounded mr-5">
 						<?php if ($image_src): ?>
 							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						<?php endif; ?>
 						<div class="py-4">
-							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_author();?> ● </span>
+						
+						<?php
+						$author_posts  = get_field('author'); 
+						if( $author_posts && is_array($author_posts) ) :
+							$author_post = $author_posts[0];
+							
+						if( $author_post ) :
+						$author_name = get_the_title($author_post->ID);
+						?>
+							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo $author_name; ?> ● </span>
+							
+						<?php
+							else :?>
+								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+						<?php endif;
+							else :?>
+								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> No Author ● </span>
+						<?	endif;
+						?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 							<div class="font-bold text-2xl mb-2 text-white"><?php echo wp_trim_words(get_the_title(), 3); ?> </div>
-							<p class="home-blog-para text-base"> <?php echo wp_trim_words(get_the_content(), 30); ?></p>
+							<p class="home-blog-para text-base"> <?php echo wp_trim_words(get_the_content(), 20); ?></p>
 						</div>
 						<div class="py-4">
 						<?php
@@ -66,7 +84,7 @@
 			</div> 
 
 			<div class="header-buttons mt-12 mb-12 text-center">
-			<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">View all</a>
+			<a href="/blog" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">View all</a>
 			</div>
 		
 		</div>
