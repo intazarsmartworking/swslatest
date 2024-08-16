@@ -322,52 +322,61 @@
 
 <!-- Top 1% Section -->
 
-<section class="flex flex-col items-center justify-center py-16">
-<h3 class="text-center small-intro">Top 1%</h3>
+<section class="w-full relative py-16">
+  <div class="container mx-auto mt-5 max-w-[1280px]">
+      <h3 class="text-center small-intro">Top 1%</h3>
       <div class="flex flex-col items-center justify-center">
-        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1> 
+          <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1> 
           <span class="text-dark-orange text-[56px]">1% Wordpress Developers For You</span> 
+          <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
       </div>
-        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
-        
-        <div class="flex justify-center space-x-8 relative mb-28">
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative mb-28">
             <!-- Step 1 -->
-             <div class="flex flex-col  items-center justify-center relative top-10">
-               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 1</h2>
-               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
-               <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step1_icon.svg" alt="" />
+             <div class="grid-item col-span-3 pt-[50px] relative">
+               <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 1</h2>
+               <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                    <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step1_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white">Outline your Tech Requirements</h3>
                    <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
-                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   
+                   <div class="absolute w-[100%] text-center left-0 bottom-[0px]">
+                    <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   </div>
                </div>
+               <div class="mirror-box min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
              </div>
             <!-- Step 2 -->
-             <div class="flex flex-col  items-center justify-center relative top-36">
-               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 2</h2>
-               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+             <div class="grid-item col-span-3 pt-[50px] relative mt-[90px]">
+               <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 2</h2>
+               <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
                   <img class="mb-3"  src="<?php echo get_template_directory_uri();?>/images/step2_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-4 text-white">Interview all the Candidates</h3>
                    <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
-                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   <div class="absolute w-[100%] text-center left-0 bottom-[0px]">
+                    <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   </div>
+               </div>
+               <div class="mirror-box min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
+                 <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
                </div>
              </div>
             <!-- Step 3 -->
-             <div class="flex flex-col  items-center justify-center relative top-3">
-               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4">Step 3</h2>
-               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
-               <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step3_icon.svg" alt="" />
+             <div class="grid-item col-span-3 pt-[50px] relative">
+               <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 3</h2>
+               <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                  <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step3_icon.svg" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white">Efficient Onboarding</h3>
                    <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
-                   <img class="pl-14"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   <div class="absolute w-[100%] text-center left-0 bottom-[0px]">
+                    <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
+                   </div>
                </div>
+               <div class="mirror-box min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
              </div>
              </div>
         </div>
-
-        <div class="mt-12">
-            <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
-        </div>
-    </section>
+  </div>
+</section>
 
 
 <!-- Benefit Section -->
@@ -726,7 +735,7 @@
   </div>
 </div>
 
-<div class="w-full relative grid items-center pt-16 md:pt-36">
+<div class="w-full relative grid items-center pt-3 md:pt-10">
     <div class="max-w-[1280px] mx-auto">
           <div class="d-block">
             <h3 class="text-center small-intro"> Hire </h3>
