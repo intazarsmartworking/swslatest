@@ -49,7 +49,7 @@
 <section class="bg-black flex flex-col items-center justify-center py-16">
     <h3 class="text-center small-intro">Explore</h3>
 	
-    <div class="flex flex-col items-center justify-center mb-20">
+    <div class="flex flex-col items-center justify-center">
       <h1 class="text-4xl  text-[56px] mb-4 text-white">Need top notch developers?</h1> 
       <span class="text-dark-orange text-[56px]">You are in the right place.</span> 
       <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 md:px-96"> 
@@ -58,7 +58,7 @@
     </div>
 
 
-    <div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-16  md:mb-24 assemble-section-bg rounded-3xl relative w-full md:w-3/4">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-8  md:mb-3 assemble-section-bg rounded-3xl relative w-full md:w-3/4">
       <div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
         <h3 class="text-dark-black text-xl font-bold text-center pb-10"> Find and hire software engineers by skills </h3>
         
@@ -81,7 +81,7 @@
 			?>
 			
 				<a href="<?php echo get_permalink(); ?>">
-					<div class="flex flex-col md:flex-row items-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+					<div class="flex flex-col md:flex-row items-center min-h-[55px] content-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
 						<div class="w-full flex justify-center md:justify-end md:w-auto">
 							<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
 						</div>
