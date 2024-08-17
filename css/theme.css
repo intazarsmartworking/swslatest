@@ -2321,10 +2321,6 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.py-\[70px\] {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2390,6 +2386,9 @@ select {
 }
 .pl-7 {
   padding-left: 1.75rem;
+}
+.pl-\[20px\] {
+  padding-left: 20px;
 }
 .pl-\[60px\] {
   padding-left: 60px;
@@ -2477,9 +2476,6 @@ select {
 }
 .pt-\[80px\] {
   padding-top: 80px;
-}
-.pl-\[20px\] {
-  padding-left: 20px;
 }
 .text-left {
   text-align: left;

@@ -787,9 +787,10 @@ function callFunction(){
   }, 100)
   setTimeout( function(){
     jQuery('.stickysidenav').fadeIn('slow')
-    let sideMenuH = jQuery('.stickysidenav').height()
-    boxScrollHeight = jQuery('.show-more-box').height() + elementPosition.top - sideMenuH;
-    console.log(boxScrollHeight, elementPosition)
+    let sideMenuH = jQuery('.stickysidenav').height();
+    let moreBoxH =  jQuery('.show-more-box').height();
+    boxScrollHeight = ( moreBoxH + elementPosition.top) - sideMenuH;
+    console.log(boxScrollHeight, elementPosition, sideMenuH)
    }, 300)
 }
 
