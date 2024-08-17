@@ -1748,7 +1748,7 @@ ol{
 }
 .scroll-menu li{
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .scroll-menu li a{
     display: block;
@@ -2075,6 +2075,21 @@ ol{
     display: inline-block;
   }
 
+  .scroll-section h5{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .scroll-section p{
+    font-size: 20px;
+    color: #E3E3E3;
+  }
+
+  .scroll-section p a{
+    color: #FF4D02;
+  }
+  
+  
 
 
 @media (max-width: 640px) {

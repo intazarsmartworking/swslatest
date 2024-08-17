@@ -997,9 +997,6 @@ select {
 .top-\[-150px\] {
   top: -150px;
 }
-.top-\[-30px\] {
-  top: -30px;
-}
 .top-\[-4px\] {
   top: -4px;
 }
@@ -1120,13 +1117,13 @@ select {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.my-\[50px\] {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 .my-\[40px\] {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+.my-\[50px\] {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .\!mb-0 {
   margin-bottom: 0px !important;
@@ -2324,6 +2321,10 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.py-\[70px\] {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2476,6 +2477,9 @@ select {
 }
 .pt-\[80px\] {
   padding-top: 80px;
+}
+.pl-\[20px\] {
+  padding-left: 20px;
 }
 .text-left {
   text-align: left;
@@ -2678,6 +2682,10 @@ select {
 .text-\[\#AAA\] {
   --tw-text-opacity: 1;
   color: rgb(170 170 170 / var(--tw-text-opacity));
+}
+.text-\[\#B8B8B8\] {
+  --tw-text-opacity: 1;
+  color: rgb(184 184 184 / var(--tw-text-opacity));
 }
 .text-\[\#C11574\] {
   --tw-text-opacity: 1;
@@ -4407,7 +4415,7 @@ ol{
 }
 .scroll-menu li{
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .scroll-menu li a{
     display: block;
@@ -4718,6 +4726,18 @@ ol{
   }
 .auther-blog-list .cursor-pointer:hover .blog-img{
     display: inline-block;
+  }
+.scroll-section h5{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+  }
+.scroll-section p{
+    font-size: 20px;
+    color: #E3E3E3;
+  }
+.scroll-section p a{
+    color: #FF4D02;
   }
 @media (max-width: 640px) {
     .howItWorkHeading{
