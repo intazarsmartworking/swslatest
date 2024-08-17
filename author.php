@@ -19,12 +19,12 @@
         <div>
     </div>
 </section>
-<section class="w-full">
+<section class="w-full p-3">
     <div class="auther-page w-[100%] max-w-[1280px] mx-auto relative">
         <div class="auther-page-bg">
             <div class="grid grid-cols-1 lg:grid-cols-10">
                 <div class="grid-item col-span-4 relative">
-                    <img class="relative lg:absolute top-[-30px] lg:left-[80px] w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png">
+                    <img class="relative lg:absolute lg:top-[-30px] lg:left-[80px] w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_template_directory_uri();?>/images/2020-man.png">
                 </div>
                 <div class="grid-item col-span-6 p-[20px] lg:p-[70px]">
                     <h5 class="text-white text-[20px] lg:text-[40px] font-medium mb-0">Julian Rowse</h5>
@@ -51,7 +51,7 @@
     </div>
 </section>
 
-<section class="w-full">
+<section class="w-full p-3">
     <div class="auther-blog-list w-[100%] max-w-[1280px] mx-auto relative">
         <div class="grid grid-cols-1 lg:grid-cols-10 my-[50px]">
             <div class="grid-item col-span-10 content-center p-3 relative border-b border-[#FF4D0233]">

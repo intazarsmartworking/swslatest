@@ -5121,6 +5121,10 @@ ol{
     top: 0.75rem;
   }
 
+  .lg\:top-\[-30px\] {
+    top: -30px;
+  }
+
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
   }
