@@ -787,18 +787,13 @@ function callFunction(){
   }, 100)
   setTimeout( function(){
     jQuery('.stickysidenav').fadeIn('slow')
-    let sideMenuH = jQuery('.stickysidenav').height()
-    boxScrollHeight = jQuery('.show-more-box').height() + elementPosition.top - sideMenuH;
-    console.log(boxScrollHeight, elementPosition)
+    let sideMenuH = jQuery('.stickysidenav').height();
+    let moreBoxH =  jQuery('.show-more-box').height();
+    boxScrollHeight = ( moreBoxH + elementPosition.top) - sideMenuH;
+    console.log(boxScrollHeight, elementPosition, sideMenuH)
    }, 300)
 }
 
-// const progress = document.querySelector('.progress-range');
-  
-// progress.addEventListener('input', function() {
-//   const value = this.value;
-//   this.style.background = `linear-gradient(to right, #D13F01 0%, #EC4702 ${value}%, transparent ${value}%, transparent 100%)`
-// })
 
 
 
@@ -905,3 +900,85 @@ function loadAnimation(){
   console.log('bezier', controller, scrollBar)
 
 }
+
+
+var skillPriceData = null;
+var skillExpData = null;
+var skillPeopleData = null;
+
+function skillPrice(price){
+  jQuery('.item-skill').removeClass('active');
+  const activeItem = `#select-item-${price.id}`
+  jQuery(activeItem).addClass('active')
+  skillPriceData = price;
+  console.log(price)
+  if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
+    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    jQuery('#total-price').text(cost)
+
+  }
+}
+function skillExperience(count){
+  jQuery('.exp-item').removeClass('active');
+  const activeItem = `#exp-item-${count.id}`
+  jQuery(activeItem).addClass('active')
+
+  skillExpData = count;
+  if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
+    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData);
+    jQuery('#total-price').text(cost)
+  }
+  console.log(count)
+}
+
+function skilleldPeople(count){
+  console.log(count.target.value)
+  skillPeopleData = count.target.value;
+  if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
+    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    jQuery('#total-price').text(cost)
+  }
+}
+
+// const div = document.querySelector(`#resize`);
+// const box = document.querySelector(`#resizable`);
+// box.addEventListener(`mousedown`, (e) => {
+//   const {
+//     offsetX,
+//     offsetY,
+//   } = e;
+//   div.style.width = offsetX + `px`;
+// });
+
+
+const leftPane = document.querySelector(".left");
+const rightPane = document.querySelector(".right");
+const gutter = document.querySelector(".gutter");
+
+
+function resizer(e) {
+  
+  window.addEventListener('mousemove', mousemove);
+  window.addEventListener('mouseup', mouseup);
+  
+  let prevX = e.x;
+  const leftPanel = leftPane.getBoundingClientRect();
+  
+  
+  function mousemove(e) {
+    let newX = prevX - e.x;
+    const boxSize = leftPanel.width - newX;
+    leftPane.style.width = boxSize + "px";
+    console.log('boxSize', boxSize)
+  }
+  
+  function mouseup() {
+    window.removeEventListener('mousemove', mousemove);
+    window.removeEventListener('mouseup', mouseup);
+    
+  }
+  
+  
+}
+
+gutter.addEventListener('mousedown', resizer);

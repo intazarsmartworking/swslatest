@@ -63,27 +63,27 @@
                         <p>Service providers: We may engage third-party service providers to assist us in operating our business and providing our services. These service providers have access to your information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
                         <p>Legal purposes: We may share your information when required by law or in response to valid legal requests.</p>
                     </div> 
-                    <div class="scroll-section" id="target4">
+                    <div class="scroll-section" id="targe4">
+                        <h5>Data Security</h5>
+                        <p>We take appropriate measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, please note that no method of data transmission over the Internet or electronic storage is completely secure.</p>
+                    </div> 
+                    <div class="scroll-section" id="target5">
                         <h5>Your Choices</h5>
                         <p>You have the right to access, correct, or delete your personal information. If you wish to exercise any of these rights, please contact us using the information provided below.</p>
 
                     </div> 
-                    <div class="scroll-section" id="target5">
+                    <div class="scroll-section" id="target6">
                         <h5>Cookies and Tracking Technologies</h5>
                         <p>We may use cookies and similar tracking technologies to improve your experience on our Site and to collect usage data. You can manage your cookie preferences through your browser settings.</p>
                     </div> 
-                    <div class="scroll-section" id="target6">
+                    <div class="scroll-section" id="target7">
                         <h5>Links to Third-Party Sites</h5>
                         <p>Our Site may contain links to third-party websites. We are not responsible for the privacy practices or content of these sites. We encourage you to review the privacy policies of any such sites before providing any personal information.</p>
                     </div> 
-                    <div class="scroll-section" id="target7">
+                    <div class="scroll-section" id="target8">
                         <h5>Changes to this Privacy Policy</h5>
                         <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated Privacy Policy on this page.</p>
                     </div> 
-                    <div class="scroll-section" id="target8">
-                         <h5>Changes to this Privacy Policy</h5>
-                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated Privacy Policy on this page.</p>
-                    </div>
                     <div class="scroll-section" id="target9">
                         <h5>Contact Us</h5>
                         <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:<a href="#">info@smartworking-solutions.com</a></p>
@@ -93,6 +93,24 @@
             <div>
         </div>
         
+    </div>
+</section>
+
+<section class="w-[100%] px-[5%] my-[40px]">
+    <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
+        <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
+        <div class="pt-[60px]">
+            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire
+            a Developer? </h1>
+            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]">It is quick and easy with Smart Working</p>
+        
+            <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] ">Schedule a Call</a>
+        </div>
+        
+       
+        <div class="text-end pt-[40px] lg:pt-[0px]">
+            <img class="w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
+        </div>
     </div>
 </section>
 
