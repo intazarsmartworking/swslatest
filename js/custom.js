@@ -932,8 +932,8 @@ function skillExperience(count){
 }
 
 function skilleldPeople(count){
-  console.log(count.target.value)
-  skillPeopleData = count.target.value;
+  //console.log(count.target.value)
+  skillPeopleData = count;
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
     const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
     jQuery('#total-price').text(cost)
@@ -950,35 +950,16 @@ function skilleldPeople(count){
 //   div.style.width = offsetX + `px`;
 // });
 
-
-const leftPane = document.querySelector(".left");
-const rightPane = document.querySelector(".right");
-const gutter = document.querySelector(".gutter");
-
-
-function resizer(e) {
-  
-  window.addEventListener('mousemove', mousemove);
-  window.addEventListener('mouseup', mouseup);
-  
-  let prevX = e.x;
-  const leftPanel = leftPane.getBoundingClientRect();
-  
-  
-  function mousemove(e) {
-    let newX = prevX - e.x;
-    const boxSize = leftPanel.width - newX;
-    leftPane.style.width = boxSize + "px";
-    console.log('boxSize', boxSize)
-  }
-  
-  function mouseup() {
-    window.removeEventListener('mousemove', mousemove);
-    window.removeEventListener('mouseup', mouseup);
-    
-  }
-  
-  
-}
-
-gutter.addEventListener('mousedown', resizer);
+const
+  range = document.getElementById('slide-range'),
+  rangeV = document.getElementById('rangeV'),
+  setValue = ()=>{
+    const
+      newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+      newPosition = 10 - (newValue * 0.2);
+    rangeV.innerHTML = `<span>${range.value}</span>`;
+    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    skilleldPeople(range.value)
+  };
+document.addEventListener("DOMContentLoaded", setValue);
+range.addEventListener('input', setValue);

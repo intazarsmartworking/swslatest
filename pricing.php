@@ -146,20 +146,35 @@
                         <div class="d-block w-full mt-3">
                             <div class="relative mb-6">
 
+                            <div class="range-wrap">
+                                <!-- <div class="range-active"></div> -->
+                                <div class="range-value" id="rangeV"></div>
+                                <input class="custom" id="slide-range" type="range" min="10" max="800" value="10" step="1">
+                                <div class="absolute w-[100%] bottom-0 left-0">
+                                    <div class="grid slide-range-box grid-cols-10 gap-3">
+                                        <div class="col-span-2">10</div>
+                                        <div class="col-span-2 text-center">235</div>
+                                        <div class="col-span-2 text-center">404</div>
+                                        <div class="col-span-2 text-center">572</div>
+                                        <div class="col-span-2 text-right">800</div>
+                                    </div>
+                                </div>
+                            </div>
+
                                 <!-- <div class="slider-input">
-                                    <div class="fill-box left" id="resize">
-                                        <img class="slide-icon gutter" src="<?php echo get_template_directory_uri();?>/images/slide-icon.png" />
+                                    <div class="fill-box left-box">
+                                        <img class="slide-icon gutter" id="resize" src="<?php echo get_template_directory_uri();?>/images/slide-icon.png" />
                                     </div>
                                 </div> -->
 
 
-                               <select class="w-full" onchange="skilleldPeople(event)">
+                               <!-- <select class="w-full" onchange="skilleldPeople(event)">
                                 <option value="10">10</option>
                                 <option value="20">20</option>
                                 <option value="30">30</option>
                                 <option value="40">40</option>
                                 <option value="50">50</option>
-                               </select>
+                               </select> -->
                             </div>
                         </div>
                     </div>
