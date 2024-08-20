@@ -70,7 +70,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 
     $args = array(
         'post_type' => 'ai-vetted-profile',
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'orderby' => 'date',
         'order' => 'DESC',
     );
@@ -91,8 +91,10 @@ function ajax_fetch_ai_vetted_profile_posts() {
 
     // Check if there are any posts
     if ($query->have_posts()) {
+        $total_posts = $query->post_count;
 		echo '<div class="grid grid-cols-1 md:grid-cols-4 gap-4">';
-        while ($query->have_posts()) {
+		$counter = 0;
+        while ($query->have_posts() && $counter < 4 ) {
             $query->the_post();
 			$designation = get_field('profile');
 			$dev_image_id = get_post_thumbnail_id();
@@ -118,14 +120,43 @@ function ajax_fetch_ai_vetted_profile_posts() {
             echo '</div>';
             echo '</div>';
             echo '</a>';
+			$counter++;
         }
 		echo '</div>';
+
+		if ($total_posts > 4) {
+        echo '<div class="grid-cols-1">';
+		echo '<section class="section-introduction p-3">';
+		echo '<div class="container-circule">';
+		$counter = 0;
+		while ($query->have_posts() && $counter < 3) {
+		$query->the_post();
+		$dev_image_id = get_post_thumbnail_id();
+		$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+		echo '<div class="item-' . $counter . ' circle-box">';
+		echo '<img src="' . esc_url($dev_image_src[0]) . '" />';
+		echo '</div>'; 
+		$counter++;
+		}
+		$remaining_count = $total_posts - 7;
+		 
+		 
+		if ($remaining_count > 0) {
+			echo '<div class="item-4 circle-box">';
+			echo '<p>+' . $remaining_count . '</p>';
+			echo '</div>';
+		}
+		echo '</div>'; 
+		echo '</section>';
+		echo '</div>';
+
         wp_reset_postdata();
     } else {
         echo '<p>No posts found.</p>';
     }
 
     die();
+}
 }
 add_action('wp_ajax_nopriv_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 add_action('wp_ajax_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
