@@ -279,7 +279,7 @@
 					
 						<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
 						 <?php if(get_sub_field('main_title')): ?>
-						  <h1 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+						  <h1 class="text-left text-white text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
 						 <?php endif; ?>	
 
 						<?php if(get_sub_field('subheading')): ?>	
