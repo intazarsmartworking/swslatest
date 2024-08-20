@@ -64,7 +64,7 @@
                 <div class="bg-white col-span-5 p-3 px-5 lg:p-[2.5rem] rounded-xl">
                     <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
-                    <div class="rounded-2xl p-3 border-pattern ">
+                    <div class="rounded-2xl p-3 lg:px-[2.5rem] border-pattern ">
                         <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
 
                     <form method="post">
@@ -86,7 +86,7 @@
                     </div>
                     
                     
-                    <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern mt-4">
+                    <div class="rounded-2xl px-6 pt-6 pb-3  lg:px-[2.5rem] border-pattern mt-4">
                     <div class="flex">
                     <div class="pr-4">
                         <img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/formtestimonial.svg" alt="">
