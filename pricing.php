@@ -579,4 +579,10 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
+<script type="text/javascript">
+    jQuery(window).bind("load", function() {
+	    loadPricePage()
+	});
+</script>
+
 <?php get_footer();?>
