@@ -1030,6 +1030,9 @@ select {
 .top-\[40px\] {
   top: 40px;
 }
+.bottom-\[20px\] {
+  bottom: 20px;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1420,6 +1423,12 @@ select {
 .h-full {
   height: 100%;
 }
+.h-\[450px\] {
+  height: 450px;
+}
+.h-\[55px\] {
+  height: 55px;
+}
 .max-h-5 {
   max-height: 1.25rem;
 }
@@ -1585,6 +1594,9 @@ select {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+.w-\[70px\] {
+  width: 70px;
 }
 .min-w-\[280px\] {
   min-width: 280px;
@@ -1850,6 +1862,9 @@ select {
 }
 .rounded-\[56px\] {
   border-radius: 56px;
+}
+.rounded-\[5px\] {
+  border-radius: 5px;
 }
 .rounded-\[60px\] {
   border-radius: 60px;
@@ -2337,6 +2352,10 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.px-\[2\.5rem\] {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .\!pt-3 {
   padding-top: 0.75rem !important;
 }
@@ -2669,6 +2688,9 @@ select {
 }
 .leading-tight {
   line-height: 1.25;
+}
+.leading-6 {
+  line-height: 1.5rem;
 }
 .text-\[\#040524\] {
   --tw-text-opacity: 1;
@@ -5327,6 +5349,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:w-\[600px\] {
     width: 600px;
+  }
+
+  .lg\:w-\[450px\] {
+    width: 450px;
   }
 
   .lg\:grid-cols-1 {
