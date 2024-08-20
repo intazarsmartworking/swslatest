@@ -91,7 +91,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 
     // Check if there are any posts
     if ($query->have_posts()) {
-		echo '<div class="grid grid-cols-1 md:grid-cols-4 gap-4">';
+		echo '<div class="userMore">';
         while ($query->have_posts()) {
             $query->the_post();
 			$designation = get_field('profile');

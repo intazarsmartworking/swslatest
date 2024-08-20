@@ -485,11 +485,43 @@ body {
 
 
 .howItWorkHeading {
-    transform: rotate(-90deg);
-    float: left;
-    white-space: nowrap;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    position: absolute;
+    left: 1rem;
 }
+.hiw-bullat-point{
+    padding: 0px;
+    margin-left: 0px;
+}
+.hiw-bullat-point li{
+    padding: 0px;
+    color: #050403;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 12px;
 
+}
+.hiw-bullat-point li .bullet-point{
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+.how-it-works-card h3{
+    color: #050403;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 12px; 
+}
+.userMore .slick-list .developer-sec-pic{
+    border-radius: 20px;
+}
 
 .custom-input {
     width: 320px;
@@ -1091,6 +1123,9 @@ body {
     position: relative;
     width: 100%;
     padding-left: 15px;
+}
+.slider-overlay .slider-item.active:last-child{
+    rotate: 0deg !important;
 }
 ul{
     list-style: circle;
@@ -2022,6 +2057,49 @@ input[type="range"]::-moz-range-progress {
     width: 100%;
   }
 
+  .single-blog{
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+  }
+  .single-blog p{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 25px;
+    line-height: 30px;
+  }
+  .single-blog h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .single-blog h2{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .single-blog h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .single-blog h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .single-blog h5{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .single-blog h6{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+ 
   
 
 
@@ -2029,10 +2107,11 @@ input[type="range"]::-moz-range-progress {
     .howItWorkHeading{
         transform: rotate(0deg);
     }
-    .how-it-works-slide{
+    .how-it-works-card{
         height: 900px;
         min-height: 900px;
     }
+    
     .panel{
         height: auto;
         width: 94%;

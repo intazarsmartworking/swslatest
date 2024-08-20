@@ -861,6 +861,33 @@ jQuery(document).ready(function(){
     }
   })
   
+  setTimeout(() =>{
+    jQuery('.userMore').slick({
+      infinite: true,
+      speed: 100,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      centerMode: false,
+      focusOnSelect: true,
+      autoplay: true,
+      arrows: false,
+      dots:false,
+      responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                  infinite: true,
+                  speed: 100,
+                  slidesToShow:2,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  variableWidth: true,
+                  focusOnSelect: true
+              }
+            }
+          ]
+    });
+  }, 1000)
 
 
 });

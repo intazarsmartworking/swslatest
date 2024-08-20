@@ -102,8 +102,8 @@ get_header();
 								</ul>
 							</div>
 						</div>
-						<div class="grid-item col-span-6 text-white content-start ">
-							<p class="text-[20px] text-white font-medium "> <?php echo  get_the_content();?> </p>
+						<div class="grid-item col-span-6 text-white single-blog content-start ">
+							<p class="text-white font-medium "> <?php echo  get_the_content();?> </p>
 							
 							<?php if(have_rows('table_content')): ?>
 							<?php $section_count = 1; ?>
@@ -114,7 +114,7 @@ get_header();
 							  $table_content_img = get_sub_field('image');
 							?>
 							<div class="scroll-section" id="<?php echo $unique_id; ?>">
-								<h1 class="text-[24px] text-white font-semibold"><?php echo $main_title;?></h1>
+								<h1><?php echo $main_title;?></h1>
 								<?php if(have_rows('main_description')): ?>
 								<?php while(have_rows('main_description')): the_row(); ?>
 								<?php echo get_sub_field('description') ;?>
@@ -156,9 +156,9 @@ get_header();
 												</div>
 											</div>
 											<div class="basis pl-3">
-												<p class="text-[18px] text-white font-normal !mb-0"><?php echo $author_name; ?></p>
+												<p><?php echo $author_name; ?></p>
 												<?php if( $author_designation ) : ?>
-												<p class="text-[16px] text-[#AAA] font-normal"><?php echo $author_designation; ?></p>
+												<p class="text-[#AAA] font-normal"><?php echo $author_designation; ?></p>
 												<?php endif; ?>
 											</div>
 										</div>
@@ -173,7 +173,7 @@ get_header();
 								</div>
 								<?php if( $author_short_description ) : ?>
 								<div class="w-full">
-									<p class="text-[18px] text-white font-normal"> <?php echo $author_short_description; ?> </p>
+									<p class=" text-white font-normal"> <?php echo $author_short_description; ?> </p>
 								</div>
 								<?php endif; ?>
 							</div>

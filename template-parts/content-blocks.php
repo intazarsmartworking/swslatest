@@ -117,7 +117,7 @@
 					?>
 						<div class="europe-box rounded-3xl mb-5 min-h-[250px]">
 							  <div class="flex">
-								<div class="px-6 py-6">
+								<div class="w-[100%] max-w-[70%] px-6 py-6">
 									<div class="icons-box">
 										<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
 											<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"/>
@@ -131,7 +131,7 @@
 								</div>
 								
 								<div class="ml-auto absolute right-0 bottom-0 ">
-								  <img class=" max-h-[240px] w-auto" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
+								  <img class=" max-h-[120px] lg:max-h-[240px] w-auto" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
 								</div>
 							  </div>	
 						</div>
