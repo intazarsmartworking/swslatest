@@ -323,14 +323,14 @@
 <!-- Top 1% Section -->
 
 <section class="w-full relative py-16">
-  <div class="container mx-auto mt-5 max-w-[1280px]">
+  <div class="container mx-auto max-w-[1280px]">
       <h3 class="text-center small-intro">Top 1%</h3>
       <div class="flex flex-col items-center justify-center">
           <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1> 
           <span class="text-dark-orange text-[56px]">1% Wordpress Developers For You</span> 
           <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
       </div>
-        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative mb-28">
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
             <!-- Step 1 -->
              <div class="grid-item col-span-3 pt-[50px] relative">
                <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 1</h2>

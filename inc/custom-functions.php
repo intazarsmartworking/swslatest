@@ -92,7 +92,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
     // Check if there are any posts
     if ($query->have_posts()) {
         $total_posts = $query->post_count;
-		echo '<div class="grid grid-cols-1 md:grid-cols-4 gap-4">';
+		echo '<div class="userMore">';
 		$counter = 0;
         while ($query->have_posts() && $counter < 4 ) {
             $query->the_post();

@@ -178,10 +178,7 @@
                                 </div>
                                 <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                     <div class="sliderwrap">
-                                        <label class="vote">
-                                            <div class="progress" id="progress" style="width: 37%;"></div>
-                                            <input class="range" id="range" type="range" max="100" value="60">
-                                        </label>
+                                        <input class="home-range-slider" id="range" type="range" max="100" value="60">
                                     </div>
                                 </div>
                                 <div class="block pt-5">

@@ -126,10 +126,10 @@
                     <div class=" block w-full mt-[30px]">
                         <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h1>
                         <div class="d-block w-full mt-3">
-                            <span id="exp-item-1" onclick="skillExperience({id:1,level:'other'})"  class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
+                            <!-- <span id="exp-item-1" onclick="skillExperience({id:1,level:'other'})"  class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
                                 Any experience
                                 <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                            </span>
+                            </span> -->
                             <span id="exp-item-2" onclick="skillExperience({id:2,level:'midLevel'})" class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
                                 Mid level (3-4year)
                                 <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
@@ -149,14 +149,19 @@
                             <div class="range-wrap">
                                 <!-- <div class="range-active"></div> -->
                                 <div class="range-value" id="rangeV"></div>
-                                <input class="custom" id="slide-range" type="range" min="10" max="800" value="10" step="1">
+                                <input class="custom" id="slide-range" type="range" min="1" max="10" value="1" step="1">
                                 <div class="absolute w-[100%] bottom-0 left-0">
-                                    <div class="grid slide-range-box grid-cols-10 gap-3">
-                                        <div class="col-span-2">10</div>
-                                        <div class="col-span-2 text-center">235</div>
-                                        <div class="col-span-2 text-center">404</div>
-                                        <div class="col-span-2 text-center">572</div>
-                                        <div class="col-span-2 text-right">800</div>
+                                    <div class="grid slide-range-box grid-cols-10 gap-0">
+                                        <div class="col-span-1">1</div>
+                                        <div class="col-span-1 text-center">2</div>
+                                        <div class="col-span-1 text-center">3</div>
+                                        <div class="col-span-1 text-center">4</div>
+                                        <div class="col-span-1 text-center">5</div>
+                                        <div class="col-span-1 text-center">6</div>
+                                        <div class="col-span-1 text-center">7</div>
+                                        <div class="col-span-1 text-center">8</div>
+                                        <div class="col-span-1 text-center">9</div>
+                                        <div class="col-span-1 text-right">10</div>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +191,7 @@
                         <h1 class=" text-center"><img class="h-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/heading-logo.png"></h1>
                     </div> -->
                     <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
-                        <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">$<span id="total-price">20000</span>/mo</h1>
+                        <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">$<span id="total-price">20000</span>/hr</h1>
                         <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">It is estimated that smartworking can place employees in upcoming 2 weeks.</p>
                         <button class="w-full text-white text-[16px] rounded-[14px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] " >Start saving with SmartWorking</button>
                         <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Our recruitment specialist will be in touch soon!</p>
@@ -259,7 +264,7 @@
 				$first_colour = get_sub_field('first_colour'); 
 				$second_colour = get_sub_field('second_colour'); 
 			?>
-                <div class="accordion-item p-[24px] mt-5 rounded-[24px] w-full border border-[<?php echo $second_colour;?>] bg-gradient-to-r from-[<?php echo $first_colour;?>] from-0%  to-[<?php echo $second_colour;?>] to-100% ">
+                <div class="accordion-item p-[24px] mt-5 rounded-[24px] w-full border" style="background-image:linear-gradient(to right, <?php echo $second_colour;?> 0%, <?php echo $first_colour;?> 100%); border-color: <?php echo $second_colour;?>;">
                     <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
                         <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
                             <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
@@ -308,7 +313,7 @@
         <?php endif; ?> 
 		</div>
 
-        <div class="w-full relative border border-[rgba(255,77,2,0.20)] bg-[] rounded-[20px] price-list-box p-[20px] mt-8">
+        <div class="w-full relative border border-[rgba(255,77,2,0.20)] bg-[] rounded-[20px] price-list-box px-[20px] mt-8">
             <div class="grid grid-cols-1 lg:grid-cols-9 gap-0">
                 <div class="grid-item col-span-3 rounded-[12px]">
 					<?php if(get_sub_field('table_one_heading')): ?>
@@ -479,8 +484,8 @@
 	</div>
 	<div>
 		<div class="buttons flex gap-3">
-			<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
-			<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
+			<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="prevButton">&#8592;</button>
+			<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="nextButton">&#8594;</button>
 		</div>
 	</div>
 
@@ -578,5 +583,11 @@
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>
+
+<script type="text/javascript">
+    jQuery(window).bind("load", function() {
+	    loadPricePage()
+	});
+</script>
 
 <?php get_footer();?>

@@ -11,7 +11,7 @@
 				<?php echo get_sub_field('main_heading'); ?>
 			</div>
 		<?php endif; ?>
-		<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+		<div class="w-full flex relative min-h-[550px] pr-3 lg:pr-0 pt-16 overflow-hidden">
 		<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 		<div class="slider-wrapper w-full relative card-container overflow-visible">
 			<div class="slider-overlay">
@@ -30,16 +30,17 @@
 
 
 		
-				<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card" >
+				<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" >
 					<div class="p-4 lg:p-10 flex flex-col ">
 						<div class="flex justify-between items-center mb-6">
-							<img src="<?php echo get_sub_field('logo')['url']; ?>">
+							<img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">
 							<img src="<?php echo get_sub_field('rating')['url']; ?>">
 						</div>
-						<p class="text-2xl text-[#050403] leading-9"> <?php echo $testimonial;?> </p>
-						<div class="flex justify-between items-center mt-10 lg:mt-36">
+						<p class="text-[20px] text-[#050403] leading-6"> <?php echo $testimonial;?> </p>
+
+						<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-[2.5rem]">
 							<div class="flex items-center">
-								<img class="mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+								<img class=" w-[70px] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 								<div>
 									<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
 									<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
@@ -58,8 +59,8 @@
 	</div>
 	<div>
 		<div class="buttons flex gap-3">
-			<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
-			<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
+			<button class="text-white p-3 rounded-[10px] border border-[#464444] " id="prevButton">&#8592;</button>
+			<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="nextButton">&#8594;</button>
 		</div>
 	</div>
 
