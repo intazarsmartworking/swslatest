@@ -17,24 +17,7 @@
 						<!-- Posts will be loaded here via AJAX -->	
 						</div> 
 			</div>
-			<div class="grid-cols-1">
-				<section class="section-introduction p-3">
-					<div class="container-circule"> 
-						<div class="item-1 circle-box">
-							<img src="	http://sws.local/wp-content/uploads/2024/06/alex.png" /> 
-						</div> 
-						<div class="item-2 circle-box">
-							<img src="http://sws.local/wp-content/uploads/2024/06/marcel.png" /> 
-						</div> 
-						<div class="item-3 circle-box"> 
-							<img src="http://sws.local/wp-content/uploads/2024/06/balck.png" /> 
-						</div> 
-						<div class="item-4 circle-box"> 
-							<p>+46</p>
-						</div> 
-					</div> 
-				</section>
-		</div> 
+			 
 		</div>
 	  </div>
 	</div>
