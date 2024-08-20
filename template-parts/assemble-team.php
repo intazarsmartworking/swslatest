@@ -28,39 +28,41 @@
                         
                     </div>
 
-                    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center overflow-y-scroll  custom-scrollbar pr-5">
-                        
-						
-						<?php 
-							$hire_args = array( 'post_type' => 'hire');
-							$hire_query	= new WP_Query($hire_args);
-							
-						?>
-						<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
-						<?php 
-							$hire_image_id = get_post_thumbnail_id();
-							$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
-							$permalink = get_permalink();
-							$modified_permalink = rtrim($permalink, '/') . '-developer/';
-						?>
+                    <div class="h-[450px] overflow-y-scroll custom-scrollbar">
+                        <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center pr-5">
+                            
+                            
+                            <?php 
+                                $hire_args = array( 'post_type' => 'hire');
+                                $hire_query	= new WP_Query($hire_args);
+                                
+                            ?>
+                            <?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
+                            <?php 
+                                $hire_image_id = get_post_thumbnail_id();
+                                $hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+                                $permalink = get_permalink();
+                                $modified_permalink = rtrim($permalink, '/') . '-developer/';
+                            ?>
 
-                        <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                            <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="pb-4">
-                            <h4 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h4>
-                            <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                            <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
-                            </svg>
+                            <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
+                                <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="pb-4">
+                                <h4 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h4>
+                                <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
+                                <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+
+                            <?php endwhile; wp_reset_postdata();?>
+                        
+
+                            
                         </div>
-
-						<?php endwhile; wp_reset_postdata();?>
-                    
-
-                        
                     </div>
 
                 </div>
                 <div class="bg-white col-span-5 mb:pb-5 md:pt-10 px-4 md:px-10 pt-5 pb-3 rounded-xl">
-                    <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto">
+                    <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
                     <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
                         <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
