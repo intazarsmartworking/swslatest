@@ -1432,6 +1432,9 @@ select {
 .h-full {
   height: 100%;
 }
+.h-\[350px\] {
+  height: 350px;
+}
 .max-h-5 {
   max-height: 1.25rem;
 }
@@ -1488,6 +1491,9 @@ select {
 }
 .min-h-\[85px\] {
   min-height: 85px;
+}
+.min-h-\[580px\] {
+  min-height: 580px;
 }
 .w-0 {
   width: 0px;
@@ -5621,6 +5627,14 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:text-\[72px\] {
     font-size: 72px;
+  }
+
+  .lg\:text-\[55px\] {
+    font-size: 55px;
+  }
+
+  .lg\:text-\[45px\] {
+    font-size: 45px;
   }
 
   .lg\:leading-\[30px\] {

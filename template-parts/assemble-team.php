@@ -12,7 +12,7 @@
             <div class="grid grid-cols-1 md:grid-cols-11 gap-4 assemble-section-bg rounded-3xl relative px-0">
                     
                 
-                <div class="bg-white col-span-6 relative py-4 md:py-10 px-4 md:px-10 rounded-xl">
+                <div class="bg-white col-span-6 relative p-3 px-5 rounded-xl">
                     <div class=" text-center w-[40px] h-[40px] rounded-[50%] border-[3px] border-[#fff] bg-[#FF4D02] absolute pt-[4px] right-[-27px] top-[40px] ">
                         <svg class=" inline-block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4998 18.0764C13.2438 18.0764 12.9878 17.9785 12.7928 17.7835C12.4018 17.3935 12.4018 16.7604 12.7928 16.3694L17.0858 12.0754L12.7928 7.78147C12.4018 7.39047 12.4018 6.75747 12.7928 6.36747C13.1838 5.97647 13.8158 5.97647 14.2068 6.36747L19.2068 11.3685C19.5978 11.7594 19.5978 12.3915 19.2068 12.7825L14.2068 17.7835C14.0118 17.9785 13.7558 18.0764 13.4998 18.0764Z" fill="white"/>
@@ -28,7 +28,7 @@
                         
                     </div>
 
-                    <div class="h-[450px] overflow-y-scroll custom-scrollbar">
+                    <div class="h-[350px] overflow-y-scroll custom-scrollbar">
                         <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center pr-5">
                             
                             
@@ -61,10 +61,10 @@
                     </div>
 
                 </div>
-                <div class="bg-white col-span-5 mb:pb-5 md:pt-10 px-4 md:px-10 pt-5 pb-3 rounded-xl">
+                <div class="bg-white col-span-5 p-3 px-5 rounded-xl">
                     <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
-                    <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
+                    <div class="rounded-2xl p-3 border-pattern ">
                         <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
 
                     <form method="post">
@@ -82,11 +82,11 @@
                         <button type="submit" class="w-full bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200">Submit Now</button>
                     </form>
 
-                    <h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
+                    <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
                     </div>
                     
                     
-                    <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern my-7">
+                    <div class="rounded-2xl px-6 pt-6 pb-3 border-pattern mt-4">
                     <div class="flex">
                     <div class="pr-4">
                         <img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/formtestimonial.svg" alt="">
