@@ -1,6 +1,6 @@
 <div class="w-full relative assemble-team">
     <div class="w-full relative  grid items-center assemble-inner set-margin" style="background-image: url('<?php echo get_template_directory_uri();?>/images/bg-line-box.png');">
-    <div class="container md:px-0 px-10">
+    <div class="container md:px-0 px-10 max-w-[80rem] mx-auto">
     <h3 class="text-center small-intro"> Make Team </h3>
     <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> Your Team </span></h1>
     <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
@@ -12,7 +12,7 @@
             <div class="grid grid-cols-1 md:grid-cols-11 gap-4 assemble-section-bg rounded-3xl relative px-0">
                     
                 
-                <div class="bg-white col-span-6 relative p-3 px-5 rounded-xl">
+                <div class="bg-white col-span-6 relative p-3 lg:p-[2.5rem] px-5 rounded-xl">
                     <div class=" text-center w-[40px] h-[40px] rounded-[50%] border-[3px] border-[#fff] bg-[#FF4D02] absolute pt-[4px] right-[-27px] top-[40px] ">
                         <svg class=" inline-block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4998 18.0764C13.2438 18.0764 12.9878 17.9785 12.7928 17.7835C12.4018 17.3935 12.4018 16.7604 12.7928 16.3694L17.0858 12.0754L12.7928 7.78147C12.4018 7.39047 12.4018 6.75747 12.7928 6.36747C13.1838 5.97647 13.8158 5.97647 14.2068 6.36747L19.2068 11.3685C19.5978 11.7594 19.5978 12.3915 19.2068 12.7825L14.2068 17.7835C14.0118 17.9785 13.7558 18.0764 13.4998 18.0764Z" fill="white"/>
@@ -28,7 +28,7 @@
                         
                     </div>
 
-                    <div class="h-[350px] overflow-y-scroll custom-scrollbar">
+                    <div class="h-[22rem] overflow-y-scroll custom-scrollbar">
                         <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center pr-5">
                             
                             
@@ -61,7 +61,7 @@
                     </div>
 
                 </div>
-                <div class="bg-white col-span-5 p-3 px-5 rounded-xl">
+                <div class="bg-white col-span-5 p-3 px-5 lg:p-[2.5rem] rounded-xl">
                     <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
                     <div class="rounded-2xl p-3 border-pattern ">
