@@ -273,8 +273,8 @@
                         <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?></span>
                         <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
                     </div>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo $description;?></h1>
+                    <div class="accordion-details w-full relative pt-4">
+                        <p class="text-white text-[15px] lg:text-[18px] font-medium mb-0"><?php echo $description;?></p>
                     </div>
                 </div>
 				

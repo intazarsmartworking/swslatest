@@ -1133,9 +1133,13 @@ ul{
     list-style: circle;
     margin-left: 20px;
 }
+
 ol{
     margin-left: 20px;
     list-style: decimal;
+}
+ul li, ol li{
+    margin-bottom: 15px;
 }
 .logo-slider .slide-item{
     border-radius: 20px;

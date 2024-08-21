@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[700px]">
+                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
                         <h3 class="text-[40px] text-bold">Outline your tech requirements</h3>
                         <ul class="hiw-bullat-point">
                             <li>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[700px]">
+                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
                         <h3 class="text-[40px] text-bold">Meet the Best Engineers</h3>
                         <ul class="hiw-bullat-point">
                             <li>
@@ -123,7 +123,7 @@
                         </div>
                         
                     </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[700px]">
+                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
                         <h3 class="text-[40px] text-bold">Quick & Effective Onboarding</h3>
                         <ul class="hiw-bullat-point">
                             <li>
@@ -167,7 +167,7 @@
                         </div>
                         
                     </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[700px]">
+                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
                         <h3 class="text-[40px] text-bold">Long-term support</h3>
                         <ul class="hiw-bullat-point">
                             <li>

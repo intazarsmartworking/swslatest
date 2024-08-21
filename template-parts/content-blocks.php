@@ -154,7 +154,69 @@
 <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'curious_section') : ?>
-			<div class="w-full relative grid items-center mt-4">
+
+	<section class="calculator-box w-[100%] mt-[50px]">
+        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
+                <div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
+                    <div class="block mb-5">
+							<?php if(get_sub_field('small_title')): ?>
+								<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
+							  
+							<?php endif; ?>
+						
+					</div>
+					<?php if(get_sub_field('main_heading')): ?>	
+						<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+					<?php endif; ?>
+                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
+					<?php if(get_sub_field('button_name')): ?>
+						<?php $calc_url =  get_sub_field('button_url'); ?>
+						<p>
+							<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+						</p>
+					<?php endif; ?>
+                </div>
+                <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
+                        
+                        <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
+                            <div class="px-6 py-4">
+                                <div class="block">
+                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                </div>
+                                <div class="block">
+                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                </div>
+                                <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
+                                    <div class="sliderwrap">
+                                        <input class="home-range-slider" id="range" type="range" max="100" value="60">
+                                    </div>
+                                </div>
+                                <div class="block pt-5">
+                                    <div class="flex">
+                                        <div class="grow">
+                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                        </div>
+                                        <div class="grow text-end">
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
+
+						<?php endif; ?>
+                    
+                </div>
+        </div>
+    </section>
+
+
+
+			<!-- <div class="w-full relative grid items-center mt-4">
 				<div class="container mx-auto md:px-0 px-10 curious-bg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						
@@ -206,13 +268,13 @@
 										</div>
 									</div>
 								</div>
-								<!-- <img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>"> -->
+								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
 							</div>
 						<?php endif; ?>
 						
 					</div>
 				</div>
-			</div>
+			</div> -->
 <?php endif; ?>	
 
 
@@ -233,12 +295,12 @@
 
 <!-- FAQ Section  -->
 <div class="w-full relative grid items-center z-10">
-    <div class="container mx-auto md:px-0 px-10">
+    <div class="container mx-auto md:px-0 px-10 lg:py-[100px]">
 	<h3 class="text-center small-intro"> FAQ's </h3>
   	<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
   	<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
 	
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
 				$faq_query	= new WP_Query($faq_argument);

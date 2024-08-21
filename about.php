@@ -119,7 +119,7 @@
 							<div class="timeline-content-box max-w-[1280px]">
 								<div class="pb-5"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Our Values</span></div>
 								<div class="block mt-5 value-item">
-									<div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+									<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
 										<div class="box-1 grid-item relative border-bottom-img py-12 lg:pr-10">
 											<span class="block">
 												<svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
@@ -149,7 +149,7 @@
 											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Our commitment to excellence drives us to consistently exceed expectations, delivering exceptional talent to all our clients.</p>
 										</div>
 
-										<div class="box-3 grid-item relative border-left-img border-bottom-img py-12 lg:px-10">
+										<div class="box-3 grid-item relative  py-12 lg:px-10">
 											<span class="block">
 												<svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M37.1721 29.0537C36.6109 28.4925 32.8669 27.3682 31.9309 27.3682C31.1814 27.3682 27.4374 28.4925 26.6878 29.0537C26.1266 29.6149 26.1266 30.1762 26.1266 31.4869V34.1085C26.1266 38.7885 31.1814 40.0992 31.5561 40.2876H31.9309C32.1174 40.2876 37.3586 38.7885 37.3586 34.1085V31.3005C37.5469 30.1762 37.5469 29.6149 37.1721 29.0537Z" fill="#FF4D02"/>
@@ -161,7 +161,7 @@
 											<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We embrace new ideas and technologies to continually improve our platform and processes, staying ahead of industry trends.</p>
 										</div>
 
-										<div class="grid-item relative hide-bottom-border border-bottom-img py-12 lg:pr-10">
+										<div class="box-4 grid-item relative border-left-img py-12 lg:px-10">
 											<span class="block">
 												<svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
 													<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M7.84784 23.9507V14.862C7.84784 14.0977 7.22754 13.4774 6.46323 13.4774C5.69892 13.4774 5.07861 14.0977 5.07861 14.862V23.9507C5.07861 24.715 5.69892 25.3353 6.46323 25.3353C7.22754 25.3353 7.84784 24.715 7.84784 23.9507Z" fill="#FF4D02"/>
@@ -237,7 +237,7 @@
 									<?php endif; ?>
 									
 									<div class="grid-item col-span-3 content-center lg:text-end pt-5">
-										<span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[30px] pr-[30px]"><span class="text-[26px] leading-[0px] font-xl lg:absolute top-[13px] left-[21px]"> <?php echo get_sub_field('eight_section_up_title'); ?> </span> <?php echo get_sub_field('eight_section_percent_number'); ?> <span class="text-[40px] leading-[0px] font-xl lg:absolute bottom-[13px] right-[10px]">%</span></span>
+										<span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[40px] pr-[40px]"><span class="text-[26px] leading-[0px] font-xl lg:absolute top-[4px] left-[21px]"> <?php echo get_sub_field('eight_section_up_title'); ?> </span> <?php echo get_sub_field('eight_section_percent_number'); ?> <span class="text-[40px] leading-[0px] font-xl lg:absolute bottom-[13px] right-[10px]">%</span></span>
 									</div>
 								</div>
 							</div> 
