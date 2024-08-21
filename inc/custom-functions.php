@@ -36,22 +36,21 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 // Function to fetch and display categories for 'ai-vetted-profile'
 function display_ai_vetted_profile_categories() {
-	$uncategorized_id = get_cat_ID('Uncategorized');
-    $categories = get_categories(array(
-        'taxonomy' => 'category', 
+	$terms  = get_terms(array(
+        'taxonomy' => 'vettedcategory', 
         'type' => 'ai-vetted-profile',
         'orderby' => 'name',
         'order' => 'ASC',
-		'exclude' => $uncategorized_id, 
+		'hide_empty' => false, 
     ));
     
     // Check if there are any categories
-    if ($categories) {
+    if (!empty($terms) && !is_wp_error($terms)) {
         echo '<div class="left-profile">';
-        foreach ($categories as $category) {
+        foreach ($terms as $term) {
             echo '<div class="skills px-4 py-5 rounded-2xl mb-4">';
-            echo '<a href="#" class="category-filter" data-category-id="' . esc_attr($category->term_id) . '">';
-            echo '<h3>' . esc_html($category->name) . '</h3>';
+            echo '<a href="#" class="category-filter" data-category-id="' . esc_attr($term->term_id) . '">';
+            echo '<h3>' . esc_html($term->name) . '</h3>';
             echo '</a>';
             echo '</div>';
         }
@@ -79,7 +78,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
     if ($category_id) {
         $args['tax_query'] = array(
             array(
-                'taxonomy' => 'category',
+                'taxonomy' => 'vettedcategory',
                 'field' => 'term_id',
                 'terms' => $category_id,
             ),
