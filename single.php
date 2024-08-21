@@ -96,7 +96,10 @@ get_header();
 									$unique_id = 'target' . $section_count; 
 								?>
 								<ul class="scroll-menu">
-									<li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>"><span> <?php echo $section_count;?>.</span> <?php echo $title_name;?> </a></li>
+									<li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>">
+									<!-- <?php echo $section_count;?> -->
+										<span>&#9679</span> 
+										<?php echo $title_name;?> </a></li>
 								<?php $section_count++; endwhile; ?>	
 								<?php endif; ?>	
 								</ul>
