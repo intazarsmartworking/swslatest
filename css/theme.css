@@ -1018,9 +1018,6 @@ select {
 .top-\[0px\] {
   top: 0px;
 }
-.top-\[13px\] {
-  top: 13px;
-}
 .top-\[170px\] {
   top: 170px;
 }
@@ -1032,6 +1029,12 @@ select {
 }
 .top-\[40px\] {
   top: 40px;
+}
+.top-\[4px\] {
+  top: 4px;
+}
+.top-\[13px\] {
+  top: 13px;
 }
 .z-0 {
   z-index: 0;
@@ -1130,6 +1133,10 @@ select {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.my-\[4rem\] {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 .my-\[50px\] {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1184,6 +1191,9 @@ select {
 }
 .mb-\[30px\] {
   margin-bottom: 30px;
+}
+.mb-\[40px\] {
+  margin-bottom: 40px;
 }
 .mb-\[60px\] {
   margin-bottom: 60px;
@@ -1311,6 +1321,21 @@ select {
 .mt-\[90px\] {
   margin-top: 90px;
 }
+.mb-\[4rem\] {
+  margin-bottom: 4rem;
+}
+.mb-\[6rem\] {
+  margin-bottom: 6rem;
+}
+.mt-\[4rem\] {
+  margin-top: 4rem;
+}
+.mb-\[10rem\] {
+  margin-bottom: 10rem;
+}
+.mb-\[8rem\] {
+  margin-bottom: 8rem;
+}
 .block {
   display: block;
 }
@@ -1381,6 +1406,9 @@ select {
 .h-\[220px\] {
   height: 220px;
 }
+.h-\[22rem\] {
+  height: 22rem;
+}
 .h-\[240px\] {
   height: 240px;
 }
@@ -1389,9 +1417,6 @@ select {
 }
 .h-\[26px\] {
   height: 26px;
-}
-.h-\[300px\] {
-  height: 300px;
 }
 .h-\[30px\] {
   height: 30px;
@@ -1431,12 +1456,6 @@ select {
 }
 .h-full {
   height: 100%;
-}
-.h-\[350px\] {
-  height: 350px;
-}
-.h-\[22rem\] {
-  height: 22rem;
 }
 .max-h-5 {
   max-height: 1.25rem;
@@ -1486,6 +1505,9 @@ select {
 .min-h-\[55px\] {
   min-height: 55px;
 }
+.min-h-\[580px\] {
+  min-height: 580px;
+}
 .min-h-\[600px\] {
   min-height: 600px;
 }
@@ -1494,9 +1516,6 @@ select {
 }
 .min-h-\[85px\] {
   min-height: 85px;
-}
-.min-h-\[580px\] {
-  min-height: 580px;
 }
 .w-0 {
   width: 0px;
@@ -1652,17 +1671,20 @@ select {
 .max-w-\[500px\] {
   max-width: 500px;
 }
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
 .max-w-\[600px\] {
   max-width: 600px;
 }
 .max-w-\[70\%\] {
   max-width: 70%;
 }
-.max-w-\[700px\] {
-  max-width: 700px;
-}
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+.max-w-\[80rem\] {
+  max-width: 80rem;
 }
 .max-w-\[90\%\] {
   max-width: 90%;
@@ -1678,9 +1700,6 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
-}
-.max-w-\[80rem\] {
-  max-width: 80rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1920,6 +1939,9 @@ select {
 .border-l {
   border-left-width: 1px;
 }
+.border-l-\[5px\] {
+  border-left-width: 5px;
+}
 .border-t {
   border-top-width: 1px;
 }
@@ -1981,6 +2003,9 @@ select {
 .border-\[\#ffffff\] {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-\[rgba\(239\2c 80\2c 12\2c 0\.30\)\] {
+  border-color: rgba(239,80,12,0.30);
 }
 .border-\[rgba\(245\2c 248\2c 255\2c 0\.1\)\] {
   border-color: rgba(245,248,255,0.1);
@@ -2264,6 +2289,10 @@ select {
   padding-left: 15px;
   padding-right: 15px;
 }
+.px-\[2\.25rem\] {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
 .px-\[2\.5rem\] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2431,6 +2460,9 @@ select {
 .pl-3 {
   padding-left: 0.75rem;
 }
+.pl-4 {
+  padding-left: 1rem;
+}
 .pl-7 {
   padding-left: 1.75rem;
 }
@@ -2461,6 +2493,9 @@ select {
 .pr-\[30px\] {
   padding-right: 30px;
 }
+.pr-\[40px\] {
+  padding-right: 40px;
+}
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -2484,6 +2519,9 @@ select {
 }
 .pt-3 {
   padding-top: 0.75rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .pt-40 {
   padding-top: 10rem;
@@ -2526,6 +2564,18 @@ select {
 }
 .pt-\[80px\] {
   padding-top: 80px;
+}
+.pt-\[7rem\] {
+  padding-top: 7rem;
+}
+.pt-\[6rem\] {
+  padding-top: 6rem;
+}
+.pt-\[5rem\] {
+  padding-top: 5rem;
+}
+.pt-\[4rem\] {
+  padding-top: 4rem;
 }
 .text-left {
   text-align: left;
@@ -2743,6 +2793,10 @@ select {
 .text-\[\#FF4D02\] {
   --tw-text-opacity: 1;
   color: rgb(255 77 2 / var(--tw-text-opacity));
+}
+.text-\[\#FF4E03\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 78 3 / var(--tw-text-opacity));
 }
 .text-\[\#FF4F04\] {
   --tw-text-opacity: 1;
@@ -3901,6 +3955,9 @@ ul{
 ol{
     margin-left: 20px;
     list-style: decimal;
+}
+ul li, ol li{
+    margin-bottom: 15px;
 }
 .logo-slider .slide-item{
     border-radius: 20px;
@@ -5128,10 +5185,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     width: 50%;
   }
 
-  .md\:w-3\/4 {
-    width: 75%;
-  }
-
   .md\:w-\[25\%\] {
     width: 25%;
   }
@@ -5304,6 +5357,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     grid-column: span 6 / span 6;
   }
 
+  .lg\:mb-\[50px\] {
+    margin-bottom: 50px;
+  }
+
   .lg\:ml-\[10px\] {
     margin-left: 10px;
   }
@@ -5412,6 +5469,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding: 120px;
   }
 
+  .lg\:p-\[2\.5rem\] {
+    padding: 2.5rem;
+  }
+
   .lg\:p-\[20px\] {
     padding: 20px;
   }
@@ -5428,10 +5489,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding: 70px;
   }
 
-  .lg\:p-\[2\.5rem\] {
-    padding: 2.5rem;
-  }
-
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -5445,6 +5502,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .lg\:px-\[100px\] {
     padding-left: 100px;
     padding-right: 100px;
+  }
+
+  .lg\:px-\[2\.5rem\] {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:px-\[200px\] {
@@ -5512,16 +5574,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding-bottom: 90px;
   }
 
-  .lg\:py-\[2\.5rem\] {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .lg\:px-\[2\.5rem\] {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .lg\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -5560,6 +5612,14 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:pt-\[0px\] {
     padding-top: 0px;
+  }
+
+  .lg\:pt-\[100px\] {
+    padding-top: 100px;
+  }
+
+  .lg\:pt-\[50px\] {
+    padding-top: 50px;
   }
 
   .lg\:text-end {
@@ -5633,6 +5693,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 40px;
   }
 
+  .lg\:text-\[45px\] {
+    font-size: 45px;
+  }
+
   .lg\:text-\[48px\] {
     font-size: 48px;
   }
@@ -5647,14 +5711,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:text-\[72px\] {
     font-size: 72px;
-  }
-
-  .lg\:text-\[55px\] {
-    font-size: 55px;
-  }
-
-  .lg\:text-\[45px\] {
-    font-size: 45px;
   }
 
   .lg\:leading-\[30px\] {

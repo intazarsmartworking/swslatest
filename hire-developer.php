@@ -11,7 +11,7 @@
 <?php if (have_rows('section_block')) : ?>
 	<?php while (have_rows('section_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'first_section') : ?>
-        <section class="bg-black flex flex-col items-center justify-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png');">
+        <section class="flex flex-col items-center justify-center py-16">
             <div class="flex flex-col items-center justify-center mb-20">
             <?php if(get_sub_field('main_title')): ?>    
                 <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
@@ -46,58 +46,59 @@
 
 <!-- Explore Section -->
  
-<section class="bg-black flex flex-col items-center justify-center py-16">
-    <h3 class="text-center small-intro">Explore</h3>
-	
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-4xl  text-[56px] mb-4 text-white">Need top notch developers?</h1> 
-      <span class="text-dark-orange text-[56px]">You are in the right place.</span> 
-      <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 md:px-96"> 
-        With Arc, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
-      </h3>
-    </div>
+<section class=" w-full py-16">
+	<div class="mx-auto w-[100%] max-w-[1280px]">
+			<h3 class="text-center small-intro">Explore</h3>
+			<div class="flex flex-col items-center justify-center">
+				<h1 class="text-4xl  text-[56px] mb-4 text-white">Need top notch developers?</h1> 
+				<span class="text-dark-orange text-[56px]">You are in the right place.</span> 
+				<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 max-w-[60%] "> 
+					With Arc, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
+				</h3>
+			</div>
 
 
-    <div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-8  md:mb-3 assemble-section-bg rounded-3xl relative w-full md:w-3/4">
-      <div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
-        <h3 class="text-dark-black text-xl font-bold text-center pb-10"> Find and hire software engineers by skills </h3>
-        
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pr-5">
-		
-			
-
-			<?php 
-				$hire_args = array( 'post_type' => 'hire');
-				$hire_query	= new WP_Query($hire_args);
+			<div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-8  md:mb-3 assemble-section-bg rounded-3xl relative">
+			<div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
+				<h3 class="text-dark-black text-xl font-bold text-center pb-10"> Find and hire software engineers by skills </h3>
 				
-			?>
-			<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
-			<?php 
-				$hire_image_id = get_post_thumbnail_id();
-			    $hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
-				$permalink = get_permalink();
-    			$modified_permalink = rtrim($permalink, '/') . '-developer/';
-			?>
-			
-				<a href="<?php echo get_permalink(); ?>">
-					<div class="flex flex-col md:flex-row items-center min-h-[55px] content-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
-						<div class="w-full flex justify-center md:justify-end md:w-auto">
-							<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
-						</div>
-						<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
-							<h4 class="text-xs font-bold text-dark-black"> <?php the_title();?> </h4>
-						</div>
-					</div>
-				</a>
-			<?php endwhile; wp_reset_postdata();?>
-         </div>
-		 
-      </div>
-	  <div class="header-buttons my-5 text-center">
-				<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
-		</div>
-    </div>		
+
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pr-5">
+				
+					
+
+					<?php 
+						$hire_args = array( 'post_type' => 'hire');
+						$hire_query	= new WP_Query($hire_args);
+						
+					?>
+					<?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
+					<?php 
+						$hire_image_id = get_post_thumbnail_id();
+						$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+						$permalink = get_permalink();
+						$modified_permalink = rtrim($permalink, '/') . '-developer/';
+					?>
+					
+						<a href="<?php echo get_permalink(); ?>">
+							<div class="flex flex-col md:flex-row items-center min-h-[55px] content-center  py-2 px-2 rounded-lg skill-border cursor-pointer">
+								<div class="w-full flex justify-center md:justify-end md:w-auto">
+									<img src="<?php echo esc_url($hire_image_src[0]) ;?>">
+								</div>
+								<div class="w-full flex justify-center md:justify-start md:w-auto pl-2">
+									<h4 class="text-xs font-bold text-dark-black"> <?php the_title();?> </h4>
+								</div>
+							</div>
+						</a>
+					<?php endwhile; wp_reset_postdata();?>
+				</div>
+				
+			</div>
+			<div class="header-buttons my-5 text-center">
+						<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
+				</div>
+			</div>	
+	</div>	
 
 </section>   
 
@@ -106,54 +107,206 @@
 <?php if (have_rows('section_block')) : ?>
 	<?php while (have_rows('section_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'second_section') : ?>
-<div class="w-full relative grid items-center pb-32 bg-black ">
-    <div class="container mx-auto md:px-0 px-10">
-        <?php if(get_sub_field('small_title')): ?>	
-            <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
-        <?php endif; ?>
+	<div class="w-full relative grid items-center pb-32">
+		<div class="mx-auto w-[100%] max-w-[1280px] md:px-0 px-10">
+			<?php if(get_sub_field('small_title')): ?>	
+				<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+			<?php endif; ?>
 
-        <?php if(get_sub_field('main_title')): ?>
-		    <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h1>
-        <?php endif; ?>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-28">
+			<?php if(get_sub_field('main_title')): ?>
+				<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h1>
+			<?php endif; ?>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-28">
 
-        <?php if(have_rows('box_section')): ?>
-			<?php while(have_rows('box_section')): the_row(); ?>
-            <?php 
-                $title_name = get_sub_field('title'); 
-                $subtitle_name = get_sub_field('small_text'); 
-            ?>    
+			<?php if(have_rows('box_section')): ?>
+				<?php while(have_rows('box_section')): the_row(); ?>
+				<?php 
+					$title_name = get_sub_field('title'); 
+					$subtitle_name = get_sub_field('small_text'); 
+				?>    
 
 
-			<div class="europe-box rounded-3xl mb-5">
-                <div class="flex">
-                    <div class="px-6 py-6">
-                        <img src="<?php echo get_sub_field('icon')['url']; ?>"  class="mb-12">
-                        <div class="mt-12">
-                            <h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
-                            <span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
-                        </div>
-                    </div>
+				<div class="europe-box rounded-3xl mb-5">
+					<div class="flex">
+						<div class="px-6 py-6">
+							<img src="<?php echo get_sub_field('icon')['url']; ?>"  class="mb-12">
+							<div class="mt-12">
+								<h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
+								<span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
+							</div>
+						</div>
 
-                </div>
-            </div>
+					</div>
+				</div>
 
-                <?php endwhile; ?>	
-			<?php endif; ?> 
+					<?php endwhile; ?>	
+				<?php endif; ?> 
 
-            
-        </div>
+				
+			</div>
+		</div>
 	</div>
-</div>
     <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>
+
+<section class="smart-hire py-[4rem]">
+	<div class="mx-auto w-[100%] max-w-[1280px]">
+
+		<div class="grid grid-cols-1 lg:grid-cols-10 content-center">
+			<div class="grid-item col-span-10 relative text-center">
+				<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[2.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] ">Smart Work</span></div>
+				<h1 class="text-[25px] font-medium lg:text-[56px] mb-0 text-white">When you work with</h1>
+				<h1 class="text-[25px] font-medium lg:text-[56px] text-[#FF4E03]">Smart Wroking</h1>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-9 gap-4 content-center mt-[4rem] mb-[8rem]">
+				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
+					<div class="flex">
+						<div class="w-[100%] max-w-[100%] px-6 py-6">
+							<div class="icons-box">
+								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
+								</svg>
+								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
+							</div>
+							<div class="mt-12">
+								<h3 class="text-white text-xl font-bold leading-tight mb-3"> Breathe Easy </h3>
+								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
+					<div class="flex">
+						<div class="w-[100%] max-w-[100%] px-6 py-6">
+							<div class="icons-box">
+								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
+								</svg>
+								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
+							</div>
+							<div class="mt-12">
+								<h3 class="text-white text-xl font-bold leading-tight mb-3"> Build Smarter</h3>
+								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
+					<div class="flex">
+						<div class="w-[100%] max-w-[100%] px-6 py-6">
+							<div class="icons-box">
+								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
+								</svg>
+								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
+							</div>
+							<div class="mt-12">
+								<h3 class="text-white text-xl font-bold leading-tight mb-3">Achive Faster</h3>
+								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+		</div>
+		
+		<div class="grid grid-cols-1 lg:grid-cols-10 content-center mb-[6rem]">
+			<div class="grid-item col-span-5 relative">
+				<img class=" w-[100%] max-w-[100%] rounded-[20px]" src="<?php echo get_template_directory_uri();?>/images/smart-hire-1.jpg">
+			</div>
+			<div class="grid-item col-span-5 relative lg:pl-[40px]">
+				<h1 class="text-[25px] font-bold lg:text-[48px] mb-4 text-white">What to expect from us</h1>
+				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[40px]">
+					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">We give you not a fish but a fishing rod.</p>
+					<p class="text-[18px] lg:text-[18px] mb-4 text-white">We offer a flexible solution that can tackle any challenge, deliver with speed, and scale on demand. At all times, you stay in ultimate control of your team and hiring process.
+					We just connect the dots for you.</p>
+				</div>
+				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[40px]">
+					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">Just like your own employees...</p>
+					<p class="text-[18px] lg:text-[18px] mb-4 text-white">You select the candidates, get to know them personally, and manage them as part of your team. They work for you full-time, know your product and your needs - just like your own employees.</p>
+				</div>
+				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[30px]">
+					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">...but hassle-free.</p>
+					<p class="text-[18px] lg:text-[18px] mb-4 text-white">Taxes, payrolls, etc... We all know the frustrating and time-expensive administration of a new hire. Don't worry. We'll take care of that for you.</p>
+
+					<p class="text-[18px] lg:text-[18px] mb-4 text-white">if your Smart Working developers misses deadlines or fails to meet expectations, we'll match you with a new remote developer, without shifting your project schedule or cost. admittedly, we've never had to do this. but it's our promise. just in case.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- Curios Section  -->
 <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'curious_section') : ?>
-			<div class="w-full relative grid items-center  bg-black">
+
+	<section class="calculator-box w-[100%] mt-[50px] lg:mb-[50px]">
+        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
+                <div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
+                    <div class="block mb-5">
+							<?php if(get_sub_field('small_title')): ?>
+								<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
+							  
+							<?php endif; ?>
+						
+					</div>
+					<?php if(get_sub_field('main_heading')): ?>	
+						<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+					<?php endif; ?>
+                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
+					<?php if(get_sub_field('button_name')): ?>
+						<?php $calc_url =  get_sub_field('button_url'); ?>
+						<p>
+							<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+						</p>
+					<?php endif; ?>
+                </div>
+                <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
+                        
+                        <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
+                            <div class="px-6 py-4">
+                                <div class="block">
+                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                </div>
+                                <div class="block">
+                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                </div>
+                                <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
+                                    <div class="sliderwrap">
+                                        <input class="home-range-slider" id="range" type="range" max="100" value="60">
+                                    </div>
+                                </div>
+                                <div class="block pt-5">
+                                    <div class="flex">
+                                        <div class="grow">
+                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                        </div>
+                                        <div class="grow text-end">
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
+
+						<?php endif; ?>
+                    
+                </div>
+        </div>
+    </section>
+
+
+
+
+
+			<!-- <div class="w-full relative grid items-center  bg-black">
 				<div class="container mx-auto md:px-0 px-10 curious-bg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 						
@@ -186,7 +339,7 @@
 						
 					</div>
 				</div>
-			</div>
+			</div> -->
 <?php endif; ?>
 
 <?php get_template_part( 'template-parts/client-testimonial' );?>
@@ -201,13 +354,13 @@
 <?php get_template_part( 'template-parts/home-blog' );?>
 
 <!-- FAQ Section  -->
-<div class="w-full relative grid items-center bg-black z-10">
+<div class="w-full relative grid items-center z-10 lg:pt-[100px]">
     <div class="container mx-auto md:px-0 px-10">
 	<h3 class="text-center small-intro"> FAQ's </h3>
   	<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
   	<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
 	
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
 				$faq_query	= new WP_Query($faq_argument);
@@ -242,7 +395,7 @@
 <?php if (have_rows('block')) : ?>
   <?php while (have_rows('block')) : the_row(); ?>
       <?php if (get_row_layout() == 'hire_developer_section') : ?>
-		<div class="w-full relative grid items-center bg-black  set-margin">
+		<div class="w-full relative grid items-center set-margin">
 			<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					
