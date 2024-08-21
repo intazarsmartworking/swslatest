@@ -127,8 +127,7 @@ function cc_hire_post_type() {
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-universal-access',
 		'rewrite'            => array( 'slug' => 'hire', 'with_front' => false ),
-		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
-		'taxonomies'  		 => array( 'topics', 'category' )
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
 	register_post_type( 'hire', $args );
