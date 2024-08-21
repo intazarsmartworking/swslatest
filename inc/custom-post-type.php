@@ -27,8 +27,7 @@ function cc_faq_post_type() {
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-welcome-write-blog',
 		'rewrite'            => array( 'slug' => 'faq' ),
-		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
-		'taxonomies'  => array( 'topics', 'category' )
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
 	register_post_type( 'faq', $args );
@@ -63,10 +62,39 @@ function cc_vetted_profile_post_type() {
 		'menu_icon'          => 'dashicons-groups',
 		'rewrite'            => array( 'slug' => 'ai-vetted-profile' ),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
-		'taxonomies'  => array( 'topics', 'category' )
+		'taxonomies'  		 => array( 'vettedcategory' )
 	);
 
 	register_post_type( 'ai-vetted-profile', $args );
+}
+
+// Custom Taxonomy for Vetted
+add_action( 'init', 'cc_vetted_taxonomy', 0 );
+function cc_vetted_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Vetted Category', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Vetted Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Vetted Category' ),
+		'all_items'         => __( 'All Vetted Category' ),
+		'parent_item'       => __( 'Parent Vetted Category' ),
+		'parent_item_colon' => __( 'Parent Vetted Category:' ),
+		'edit_item'         => __( 'Edit Vetted Category' ),
+		'update_item'       => __( 'Update Vetted Category' ),
+		'add_new_item'      => __( 'Add New TopVetted Categoryic' ),
+		'new_item_name'     => __( 'New Vetted Category Name' ),
+		'menu_name'         => __( 'Vetted Category' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'vettedcategories' ),
+	);
+
+	register_taxonomy( 'vettedcategory', array( 'ai-vetted-profile' ), $args );
 }
 
 
@@ -99,8 +127,7 @@ function cc_hire_post_type() {
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-universal-access',
 		'rewrite'            => array( 'slug' => 'hire', 'with_front' => false ),
-		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
-		'taxonomies'  		 => array( 'topics', 'category' )
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
 	register_post_type( 'hire', $args );

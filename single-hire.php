@@ -169,7 +169,8 @@
 <!-- Top Section -->
 
 <?php if (get_row_layout() == 'top_find_section') : ?>
-<section class="bg-black flex flex-col items-center justify-center py-16">
+<section class="w-full relative py-16">
+<div class="container mx-auto max-w-[1280px]">
 <?php if(get_sub_field('top_title')): ?>  
   <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 <?php endif; ?>
@@ -178,12 +179,13 @@
           <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
           <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
         <?php endif; ?>  
+		<?php if(get_sub_field('small_paragraph')): ?> 
+        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+      <?php endif; ?>  
       </div>
 
-      <?php if(get_sub_field('small_paragraph')): ?> 
-        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
-      <?php endif; ?>   
-        <div class="flex justify-center space-x-8 relative mb-28">
+       
+        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
 
 
         <?php if(have_rows('step_section')): ?>
@@ -193,14 +195,17 @@
 						$title = get_sub_field('title'); 
             $position = get_sub_field('position'); 
 					?>  
-             <div class="flex flex-col  items-center justify-center relative <?php echo $position;?>">
-               <h2 class="text-2xl gradient-text-dev-landing self-start font-bold mb-4"><?php echo $step_title;?></h2>
-               <div class="bg-gray-800 min-w-[405px] gradient-bg p-4 min-h-[550px] rounded-lg w-80">
+             <div class="grid-item col-span-3 pt-[50px] relative <?php echo $position;?>">
+               <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
+               <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
                <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
-                   <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
-                   <img class="pl-14"  src="<?php echo get_sub_field('image')['url']; ?>" alt="">
+                  <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+                    <div class="absolute w-[100%] text-center left-0 bottom-[0px]">
+                    <img class="max-w-[100%] h-[220px] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
+                   </div>
                </div>
+			   
              </div>
             
               <?php endwhile; ?>	
@@ -208,13 +213,12 @@
            
              </div>
 
-        <div class="mt-12">
-            <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
+        <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
+           <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
         </div>
-    </section>
-
-
-    <?php endif; ?>
+</div>		
+</section>
+<?php endif; ?>
 
 
 <!-- Benefit Section -->
