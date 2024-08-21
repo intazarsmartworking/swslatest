@@ -19,17 +19,7 @@
 					<div class="timeline-box">
 						<span class="default-line"></span>
 						<span class="draw-line"></span>
-						<div class="timeline-item pb-[100px]" id="scroll-effect-1">
-							<div class="timeline-content-box max-w-[1000px]">
-							  <?php if(get_sub_field('first_section_heading')): ?>
-								<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"> <?php echo get_sub_field('first_section_heading'); ?> </h1>
-							  <?php endif; ?> 
-
-							  <?php if(get_sub_field('first_section_paragraph')): ?>
-								<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium"> <?php echo get_sub_field('first_section_paragraph'); ?> </p>
-							  <?php endif; ?>
-							</div> 
-						</div>
+						
 						<div class="timeline-item pb-[150px]" id="scroll-effect-2">
 							<div class="timeline-content-box max-w-[1000px]">
 							   <?php if(get_sub_field('second_section_heading')): ?>
@@ -43,21 +33,7 @@
 							   <?php endif; ?>	
 							</div>  
 						</div>
-						<div class="timeline-item  pb-[150px] curv-box" id="scroll-effect-3">
-							<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
-							<div class="timeline-content-box max-w-[1000px]">
-							   <?php if(get_sub_field('third_section_heading')): ?>
-								<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium"> <?php echo get_sub_field('third_section_heading'); ?> </h1>
-							   <?php endif; ?>
-							   
-								<?php if(get_sub_field('third_section_paragraph')): ?>
-								<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium ">
-									<?php echo get_sub_field('third_section_paragraph'); ?>
-								</p>
-								<?php endif; ?>
-							</div> 
-						</div>
-
+						
 						<div class="timeline-item pb-[180px]" id="scroll-effect-4">
 							<div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
 								<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -73,6 +49,48 @@
 
 									</div>
 								</div>
+							</div> 
+						</div>
+						
+						
+						<div class="timeline-item  pb-[150px] curv-box" id="scroll-effect-3">
+							<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
+							<div class="timeline-content-box max-w-[1000px]">
+							   <?php if(get_sub_field('third_section_heading')): ?>
+								<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium"> <?php echo get_sub_field('third_section_heading'); ?> </h1>
+							   <?php endif; ?>
+							   
+								<?php if(get_sub_field('third_section_paragraph')): ?>
+								<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[28px] text-[#ffffff] leading-[36px] font-medium ">
+									<?php echo get_sub_field('third_section_paragraph'); ?>
+								</p>
+								<?php endif; ?>
+							</div> 
+						</div>
+
+						
+						
+						<div class="timeline-item pb-[100px]" id="scroll-effect-6">
+							<div class="timeline-content-box max-w-[1000px]">
+							
+								<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Mission</span></div>
+							
+
+							<?php if(get_sub_field('mission_paragraph')): ?>
+							<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium"> <?php echo get_sub_field('mission_paragraph'); ?> </p>
+							<?php endif; ?>		
+							</div> 
+						</div>
+						
+						<div class="timeline-item pb-[100px]" id="scroll-effect-7">
+							<div class="timeline-content-box max-w-[1000px]">
+								<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Vision</span></div>
+								
+								<?php if(get_sub_field('vision_paragraph')): ?>
+								<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
+									<?php echo get_sub_field('vision_paragraph'); ?>
+								</p>
+								<?php endif; ?>	
 							</div> 
 						</div>
 
@@ -91,29 +109,9 @@
 							</div> 
 						</div>
 
-						<div class="timeline-item pb-[100px]" id="scroll-effect-6">
-							<div class="timeline-content-box max-w-[1000px]">
-							
-								<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Mission</span></div>
-							
+						
 
-							<?php if(get_sub_field('mission_paragraph')): ?>
-							<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium"> <?php echo get_sub_field('mission_paragraph'); ?> </p>
-							<?php endif; ?>		
-							</div> 
-						</div>
-
-						<div class="timeline-item pb-[100px]" id="scroll-effect-7">
-							<div class="timeline-content-box max-w-[1000px]">
-								<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Vision</span></div>
-								
-								<?php if(get_sub_field('vision_paragraph')): ?>
-								<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
-									<?php echo get_sub_field('vision_paragraph'); ?>
-								</p>
-								<?php endif; ?>	
-							</div> 
-						</div>
+						
 
 						<div class="timeline-item pb-[100px]"  id="scroll-effect-8">
 							<div class="timeline-content-box max-w-[1280px]">
@@ -237,7 +235,7 @@
 									<?php endif; ?>
 									
 									<div class="grid-item col-span-3 content-center lg:text-end pt-5">
-										<span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[30px] pr-[30px]"><span class="text-[26px] leading-[0px] font-xl lg:absolute top-[13px] left-[21px]"> <?php echo get_sub_field('eight_section_up_title'); ?> </span> <?php echo get_sub_field('eight_section_percent_number'); ?> <span class="text-[40px] leading-[0px] font-xl lg:absolute bottom-[13px] right-[10px]">%</span></span>
+										<span class="discount inline-block text-[70px] lg:text-[200px] text-[#FF4D02] leading-[130px] font-medium relative pt-[30px] pr-[30px]"><span class="text-[26px] leading-[0px] font-xl lg:absolute top-[13px] left-[21px]"> <?php echo get_sub_field('eight_section_up_title'); ?> </span> <?php echo get_sub_field('eight_section_percent_number'); ?> <span class="text-[40px] leading-[0px] font-xl lg:absolute bottom-[13px] right-[10px]"> /5 </span></span>
 									</div>
 								</div>
 							</div> 
