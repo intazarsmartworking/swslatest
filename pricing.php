@@ -222,8 +222,8 @@
 					<?php endif; ?>
 					
 					<?php if(get_sub_field('sub_heading')): ?>
-                    <div class="accordion-details w-full relative">
-                        <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('sub_heading'); ?></h1>
+                    <div class="accordion-details w-full relative pt-5">
+                        <p class="text-white text-[15px] lg:text-[18px] mb-0"><?php echo get_sub_field('sub_heading'); ?></p>
                     </div>
 					<?php endif; ?>
                 </div>
