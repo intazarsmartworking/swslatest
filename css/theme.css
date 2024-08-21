@@ -1033,6 +1033,24 @@ select {
 .top-\[40px\] {
   top: 40px;
 }
+.left-\[-12\%\] {
+  left: -12%;
+}
+.top-\[-6\%\] {
+  top: -6%;
+}
+.right-\[-12\%\] {
+  right: -12%;
+}
+.right-\[0\] {
+  right: 0;
+}
+.top-\[0\] {
+  top: 0;
+}
+.top-\[-30\%\] {
+  top: -30%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1681,6 +1699,12 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-\[480px\] {
+  max-width: 480px;
+}
+.max-w-\[320px\] {
+  max-width: 320px;
 }
 .flex-1 {
   flex: 1 1 0%;

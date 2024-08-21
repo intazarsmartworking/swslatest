@@ -59,7 +59,8 @@
 
 
 			<div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-8  md:mb-3 assemble-section-bg rounded-3xl relative">
-			<div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl">
+			<img class=" w-[100%] max-w-[320px] absolute right-[-12%] top-[-30%]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png">
+			<div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl relative z-10">
 				<h3 class="text-dark-black text-xl font-bold text-center pb-10"> Find and hire software engineers by skills </h3>
 				
 
@@ -212,7 +213,8 @@
 				</div>
 		</div>
 		
-		<div class="grid grid-cols-1 lg:grid-cols-10 content-center mb-[6rem]">
+		<div class="grid grid-cols-1 lg:grid-cols-10 content-center mb-[6rem] relative">
+			<img class=" w-[100%] max-w-[320px] absolute left-[-12%] top-[-6%]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png">
 			<div class="grid-item col-span-5 relative">
 				<img class=" w-[100%] max-w-[100%] rounded-[20px]" src="<?php echo get_template_directory_uri();?>/images/smart-hire-1.jpg">
 			</div>
