@@ -154,28 +154,47 @@
         <img class="absolute right-[9%] bottom-[100px] w-[300px] z-0 rotate-[-30deg]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
     </section>
 
-   
+<!-- Curios Section  -->
+<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+<?php if (get_row_layout() == 'curious_section') : ?>
 
-
-    <section class="calculator-box w-[100%] mt-[50px]">
-        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
-                <div class="grid-item col-span-5 py-[10%]">
-                    <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >Calculator</span></div>
-                    <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4">Curious About</h1>
-                    <h1 class="text-[26px] lg:text-[36px] text-[#FF4D02] lg:leading-[30px] font-medium mb-4">Cost?</h1>
-                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium">Find out the price of your next remote hire here.</p>
-                    <p><a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home">Click to calculate now</a></p>
+	<section class="calculator-box w-[100%] mt-[50px]">
+        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
+                <div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
+                    <div class="block mb-5">
+							<?php if(get_sub_field('small_title')): ?>
+								<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
+							  
+							<?php endif; ?>
+						
+					</div>
+					<?php if(get_sub_field('main_heading')): ?>	
+						<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+					<?php endif; ?>
+                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
+					<?php if(get_sub_field('button_name')): ?>
+						<?php $calc_url =  get_sub_field('button_url'); ?>
+						<p>
+							<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+						</p>
+					<?php endif; ?>
                 </div>
-                <div class="grid-item col-span-5 relative py-[10%]">
+                <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
                         
                         <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                             <div class="px-6 py-4">
+							  <?php if(get_sub_field('hourly_rate_title')): ?>
                                 <div class="block">
-                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                    <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
                                 </div>
+							  <?php endif; ?>
+
+							 <?php if(get_sub_field('amount')): ?> 
                                 <div class="block">
-                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                    <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
                                 </div>
+							 <?php endif; ?>	
                                 <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                     <div class="sliderwrap">
                                         <input class="home-range-slider" id="range" type="range" max="100" value="60">
@@ -183,21 +202,32 @@
                                 </div>
                                 <div class="block pt-5">
                                     <div class="flex">
+									<?php if(get_sub_field('amount_save_title')): ?>
                                         <div class="grow">
-                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                            <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
                                         </div>
+									<?php endif; ?>	
                                         <div class="grow text-end">
-                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo get_template_directory_uri();?>/images/calculater-bg.png">
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
+
+						<?php endif; ?>
                     
                 </div>
         </div>
     </section>
+
+<?php endif; ?> 
+<?php endwhile; ?>
+<?php endif; ?>  
 
 <?php if (have_rows('vetting_process')) : ?>
 <?php while (have_rows('vetting_process')) : the_row(); ?>

@@ -1794,6 +1794,13 @@
                 "operator": "==",
                 "value": "hire-developer.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "vetting-process.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1805,5 +1812,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724334823
+    "modified": 1724336265
 }
