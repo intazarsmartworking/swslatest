@@ -494,7 +494,7 @@
 
 <!-- Calculate Section -->
 
-<div class="w-full relative calculate-sec grid items-center lg:py-[100px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
+<div class="w-full relative calculate-sec grid items-center lg:py-[50px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
