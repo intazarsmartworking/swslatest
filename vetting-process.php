@@ -199,53 +199,69 @@
         </div>
     </section>
 
-
+<?php if (have_rows('vetting_process')) : ?>
+<?php while (have_rows('vetting_process')) : the_row(); ?>
+<?php if (get_row_layout() == 'client_section') : ?>
     <section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[10rem]">
         <div class="max-w-[600px] relative mx-auto text-center">
-        <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >Clients</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Trusted by</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">100+ of Organizations</h1>
+		<?php if(get_sub_field('top_title')): ?>
+        <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_title'); ?></span></div>
+		<?php endif; ?>
+
+		<?php if(get_sub_field('main_title')): ?>
+		<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+		<?php endif; ?>
+		
+		<?php if(get_sub_field('orange_title')): ?>
+        <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_title'); ?></h1>
+		<?php endif; ?>
+		
         </div>
         <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
             <div class="logo-slider">
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+			<?php if(have_rows('clients')): ?>
+            <?php while(have_rows('clients')): the_row(); ?>
+                <div class="slide-item"><img src="<?php echo get_sub_field('client_image')['url']; ?>" /> </div>
+			<?php endwhile; ?>	
+            <?php endif; ?> 	
             </div>
         </div>
     </section>
+<?php endif; ?>
 
 
-
+<?php if (get_row_layout() == 'cta_section') : ?>
     <section class="w-[100%] px-[5%] mb-[60px]">
         <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
             <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
             <div class="pt-[60px]">
-                <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Check Our Vetting Process Now</h1>
-                <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> How we make sure which candidate would be able to add values to your projects?</p>
-                
-                <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Check Now </a>
+			<?php if(get_sub_field('heading')): ?>
+                <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_sub_field('heading'); ?> </h1>
+			 <?php endif; ?>
+			 
+			 <?php if(get_sub_field('description')): ?>
+                <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_sub_field('description'); ?> </p>
+             <?php endif; ?>    
+			 
+			<?php if(get_sub_field('button_name')): ?>
+			<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?> 
+                <a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_sub_field('button_name'); ?> </a>
+			<?php endif; ?>		
             </div>
             
+			<?php $hire_dev_main_img = get_sub_field('right_image');
+				if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+			?>
             <div class="text-end pt-[40px] lg:pt-[0px]">
-                <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
+                <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" />
             </div>
+			<?php endif; ?>
             
         </div>
     </section>
-
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
 </div>
 
