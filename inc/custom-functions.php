@@ -103,19 +103,17 @@ function ajax_fetch_ai_vetted_profile_posts() {
             echo '<div class="short-bio">';
             echo '<p class="text-white pb-2 text-center text-xl">' . get_the_title() . '</p>';
             echo '<p class="text-white text-center mb-5 text-sm">' . esc_html($designation) . '</p>';
-            echo '<div class="grid grid-cols-3 gap-2 pb-5 px-6">';
+            echo '<div class="block pb-3">';
+            echo '<ul class="skill-card-itme">';
             // Display the repeater field 'skills'
             if (have_rows('skills')) {
                 while (have_rows('skills')) {
                     the_row();
                     $skill = get_sub_field('skill');
-                    echo '<div class="skill-bg">';
-                    echo '<div class="flex justify-center">';
-                    echo '<h4 class="text-xs">' . esc_html($skill) . '</h4>';
-                    echo '</div>';
-                    echo '</div>';
+                    echo '<li>' . esc_html($skill) . '</li>';
                 }
             }
+            echo '</ul>';
             echo '</div>';
             echo '</div>';
             echo '</a>';

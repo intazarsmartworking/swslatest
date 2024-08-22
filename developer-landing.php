@@ -712,7 +712,7 @@
   <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
-        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire
+        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire
 		a Developer?</h1>
         <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
         
