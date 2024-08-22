@@ -25,35 +25,7 @@ get_header();
 		<div class="max-w-[900px] relative mx-auto text-center">
 			<h1 class="text-[#FF4D02] text-[16px] font-bold ">Published <?php echo get_the_date('F j, Y');?></h1>
 			<h1 class="text-white text-[25px] lg:text-[48px] font-bold mb-0"><?php the_title();?></h1>
-			<div class="w-[100%] mt-10">
 			
-			<?php
-			$categories = get_the_category();
-			if ($categories) :
-				foreach ($categories  as $category) :
-					$class = '';
-					switch ($category->name) {
-						case 'Offshore Developer':
-							$class = 'bg-[#F9F5FF] text-[#6941C6]';
-							break;
-						case 'Backend Developer':
-							$class = 'bg-[#EEF4FF] text-[#3538CD]';
-							break;
-						case 'Full Stack Developer':
-							$class = 'bg-[#FDF2FA] text-[#C11574]';
-							break;	
-						default:
-							$class = 'bg-[#EEF4FF] text-[#3538CD]';
-							break;
-					}
-			?>
-			
-				<span class=" inline-block px-[30px] py-[8px] mr-1 mb-1 text-[14px] italic rounded-[30px] <?php echo $class; ?>"> <?php echo $category->name; ?> </span>
-				<?php
-				endforeach;
-				endif;
-				?>
-			</div>
 			
 		</div>
 
@@ -266,33 +238,7 @@ get_header();
 								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?> </p></a>
 								<a href="<?php the_permalink(); ?>"><p class="text-[16px] text-[#ffffff] mb-4" ><?php echo wp_trim_words(get_the_content(), 40); ?></p></a>
-								<div class="w-[100%] mt-10">
-								<?php
-									$categories = get_the_category();
-									if ($categories) :
-										foreach ($categories  as $category) :
-											$class = '';
-											switch ($category->name) {
-												case 'Offshore Developer':
-													$class = 'bg-[#F9F5FF] text-[#6941C6]';
-													break;
-												case 'Backend Developer':
-													$class = 'bg-[#EEF4FF] text-[#3538CD]';
-													break;
-												case 'Full Stack Developer':
-													$class = 'bg-[#FDF2FA] text-[#C11574]';
-													break;	
-												default:
-													$class = 'bg-[#EEF4FF] text-[#3538CD]';
-													break;
-											}
-									?>
-									<span class=" inline-block px-[30px] mb-1 py-[8px] mr-1 text-[14px] italic rounded-[30px] <?php echo $class; ?>"><?php echo $category->name; ?></span>
-									<?php
-									endforeach;
-									endif;
-									?>
-								</div>
+								
 							</div>
 						</div>
 					<?php endwhile;  wp_reset_postdata();?>
