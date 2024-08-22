@@ -180,12 +180,17 @@
                         
                         <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                             <div class="px-6 py-4">
+							  <?php if(get_sub_field('hourly_rate_title')): ?>
                                 <div class="block">
-                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                    <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
                                 </div>
+							  <?php endif; ?>
+
+							 <?php if(get_sub_field('amount')): ?> 
                                 <div class="block">
-                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                    <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
                                 </div>
+							 <?php endif; ?>	
                                 <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                     <div class="sliderwrap">
                                         <input class="home-range-slider" id="range" type="range" max="100" value="60">
@@ -193,11 +198,13 @@
                                 </div>
                                 <div class="block pt-5">
                                     <div class="flex">
+									<?php if(get_sub_field('amount_save_title')): ?>
                                         <div class="grow">
-                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                            <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
                                         </div>
+									<?php endif; ?>	
                                         <div class="grow text-end">
-                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
                                         </div>
                                     </div>
                                 </div>
@@ -214,67 +221,6 @@
         </div>
     </section>
 
-
-
-			<!-- <div class="w-full relative grid items-center mt-4">
-				<div class="container mx-auto md:px-0 px-10 curious-bg">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						
-							<div class="pl-7 pr-7 md:pl-48 md:pr-12">
-							<?php if(get_sub_field('small_title')): ?>
-							  <h3 class="text-center md:text-left calculator-intro mt-20"> <?php echo get_sub_field('small_title'); ?> </h3>
-							<?php endif; ?>
-
-							<?php if(get_sub_field('main_heading')): ?>	
-							  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
-							<?php endif; ?> 
-							 <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
-					  
-					        <?php if(get_sub_field('button_name')): ?>
-							<?php $calc_url =  get_sub_field('button_url'); ?>
-								<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-								  <a href="<?php echo esc_url( $calc_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
-								</div>
-							<?php endif; ?>
-							
-							</div>
-						
-						<?php $curious_img = get_sub_field('main_image');
-							if (!empty($curious_img) && isset($curious_img['url'])):
-						?>
-							<div class="p-8 min-h-[500px]">
-								<div class="max-w-md rounded-3xl min-h-[300px] my-6 bg-white overflow-hidden shadow-lg p-3">
-									<div class="px-6 py-4">
-										<div class="block">
-											<p class="text-[24px] text-[#64748b]">Hourly rate</p>
-										</div>
-										<div class="block">
-											<p class="text-[54px] font-[500] ">$20/hr</p>
-										</div>
-										<div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
-											<div class="sliderwrap">
-												<input class="home-range-slider" id="range" type="range" max="100" value="60" />
-											</div>
-										</div>
-										<div class="block pt-5">
-											<div class="flex">
-												<div class="grow">
-													<span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
-												</div>
-												<div class="grow text-end">
-													<span id="price-value" class="text-[24px] font-[500] text-black">£40,000</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
-							</div>
-						<?php endif; ?>
-						
-					</div>
-				</div>
-			</div> -->
 <?php endif; ?>	
 
 
