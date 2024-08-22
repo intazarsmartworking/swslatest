@@ -30,34 +30,76 @@
 <body  <?php body_class(); ?> style="">
 <?php wp_body_open(); ?>
 
-<header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">
-	<div class="flex items-center">
-    <?php if(get_field('header_logo', 'options')): ?>
-		<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-		   <img class="max-h-5" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
-		</a>
-    <?php endif; ?>
-	</div>
-	<button id="menuToggle" class="focus:outline-none md:hidden">
-		<img src="<?php echo get_template_directory_uri();?>/images/hamber.png" alt="Menu">
-	</button>
+<header class="main-header w-[100%]">
+  <div class="container mx-auto !p-0 relative">
+    <div class="grid grid-cols-1 md:grid-cols-10 gap-4 content-center h-[100%] header-box relative">
+      <div class="col-span-2 content-center">
+        <?php if(get_field('header_logo', 'options')): ?>
+          <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+            <img class="h-[28px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
+          </a>
+        <?php endif; ?>
+      </div>
+      <div class="col-span-6 content-center relative">
+        <ul class="header-menu">
+          <li><a href="">Company</a></li>
+          <li>
+            <a>
+              Service
+              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
+              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
+            </a>
+          </li>
+          <li>
+            <a>
+              Pricing 
+              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
+              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
+            </a>
+          </li>
+          <li><a href="">Insights</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Find a Developer</a></li>
+        </ul>
+      </div>
+      <div class="col-span-2 content-center text-end">
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-[20px]" target="">Login</a>
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Get Started</a>
+      </div>
+    </div> 
+    <div class="mega-menu-box">
+          <div class="grid grid-cols-1 md:grid-cols-9 h-[100%]">
+            <div class="col-span-3">
+              <ul class="mega-menu-left">
+                <li class="active">
+                  <a>
+                    <span class="menu-title">Front-End Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span class="menu-title">Back-End Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-3 py-[12px]">
+              <div class="w-[100%] bg-[#231008] h-[100%] rounded-[10px]"></div>
+            </div>
+            <div class="col-span-3"></div>
+          </div>
+    </div>
+  </div>
 </header>
-		
-<div id="mobileMenuModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 text-white p-4 hidden">
-	<div class="absolute inset-0 bg-black opacity-50"></div>
-		<div class="bg-white w-1/2 h-full p-4">
-			<ul id="mobileMenu" class="flex flex-col">
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">What We Do?</</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Resources</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">For Developers</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">About us</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Services</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Contact us</a></li>
-			</ul>
-		</div>	
-</div>
 
-<header class="site-header | w-full   md:flex">
+
+		
+
+
+<header class="site-header hidden">
   <div class="container mx-auto mt-5">
     <div class="header-wrap menu-hide-mobile | min-h-[85px] flex justify-between items-center relative z-10 header-menu-section mt-0 md:mt-8 px-10">
       <div class="logo w-1/6">
