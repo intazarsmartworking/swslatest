@@ -266,7 +266,7 @@
             <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
             <div class="pt-[60px]">
 			<?php if(get_sub_field('heading')): ?>
-                <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_sub_field('heading'); ?> </h1>
+                <h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?> </h1>
 			 <?php endif; ?>
 			 
 			 <?php if(get_sub_field('description')): ?>

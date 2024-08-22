@@ -259,7 +259,7 @@ get_header();
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_field('cta_heading'); ?></h1>
+            <h1 class=" text-white text-[32px] lg:text-[22px] lg:leading-[42px]"><?php echo get_field('cta_heading'); ?></h1>
 			
 			<?php if(get_field('cta_paragraph')): ?>
             <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_field('cta_paragraph'); ?></p>

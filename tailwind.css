@@ -1147,6 +1147,41 @@ ul li, ol li{
     padding: 20px;
 }
 
+.skill-card-itme{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.skill-card-itme li{
+    display: inline-block;
+    border: 1px solid rgba(255, 77, 2, 0.2);
+    border-radius: 26px;
+    padding: 4px 10px;
+    color: rgba(252, 188, 160, 1);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 2px;
+}
+
+.responsive-table{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.responsive-table::-webkit-scrollbar-track {
+    background: transparent;
+}
+.responsive-table::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.responsive-table::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
   
 
 @keyframes traverse {
