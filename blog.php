@@ -82,7 +82,7 @@
 		
 		<?php
 		$all_posts_args = array(
-			'posts_per_page' => 6,
+			'posts_per_page' => -1,
 			'post__not_in'   => array($latest_post_id),
 			'post_status'    => 'publish',
 		);
