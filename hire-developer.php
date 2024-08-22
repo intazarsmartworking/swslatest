@@ -148,101 +148,48 @@
 		</div>
 	</div>
     <?php endif; ?>
-  <?php endwhile; ?>
-<?php endif; ?>
 
+<?php if (get_row_layout() == 'expect_section') : ?>
 <section class="smart-hire py-[4rem]">
 	<div class="mx-auto w-[100%] max-w-[1280px]">
 
-		<div class="grid grid-cols-1 lg:grid-cols-10 content-center">
-			<div class="grid-item col-span-10 relative text-center">
-				<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[2.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] ">Smart Work</span></div>
-				<h1 class="text-[25px] font-medium lg:text-[56px] mb-0 text-white">When you work with</h1>
-				<h1 class="text-[25px] font-medium lg:text-[56px] text-[#FF4E03]">Smart Wroking</h1>
-			</div>
-		</div>
-
-		<div class="grid grid-cols-1 lg:grid-cols-9 gap-4 content-center mt-[4rem] mb-[8rem]">
-				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
-					<div class="flex">
-						<div class="w-[100%] max-w-[100%] px-6 py-6">
-							<div class="icons-box">
-								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
-								</svg>
-								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
-							</div>
-							<div class="mt-12">
-								<h3 class="text-white text-xl font-bold leading-tight mb-3"> Breathe Easy </h3>
-								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
-					<div class="flex">
-						<div class="w-[100%] max-w-[100%] px-6 py-6">
-							<div class="icons-box">
-								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
-								</svg>
-								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
-							</div>
-							<div class="mt-12">
-								<h3 class="text-white text-xl font-bold leading-tight mb-3"> Build Smarter</h3>
-								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="grid-item col-span-3 europe-box rounded-3xl min-h-[250px]">
-					<div class="flex">
-						<div class="w-[100%] max-w-[100%] px-6 py-6">
-							<div class="icons-box">
-								<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-									<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"></rect>
-								</svg>
-								<img src="<?php echo get_template_directory_uri();?>/images/laptop.png" class="mb-12 icons-img">
-							</div>
-							<div class="mt-12">
-								<h3 class="text-white text-xl font-bold leading-tight mb-3">Achive Faster</h3>
-								<span class="text-white text-base">In a laoreet purus. Integer turpis quam</span>
-							</div>
-						</div>
-					</div>	
-				</div>
-		</div>
 		
 		<div class="grid grid-cols-1 lg:grid-cols-10 content-center mb-[6rem] relative">
 			<img class=" w-[100%] max-w-[320px] absolute left-[-12%] top-[-6%]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png">
+			<?php $hire_dev_main_img = get_sub_field('left_side_image');
+				if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+			?>
 			<div class="grid-item col-span-5 relative">
-				<img class=" w-[100%] max-w-[100%] rounded-[20px]" src="<?php echo get_template_directory_uri();?>/images/smart-hire-1.jpg">
+				<img class=" w-[100%] max-w-[100%] rounded-[20px]" src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>">
 			</div>
+			<?php endif; ?>
 			<div class="grid-item col-span-5 relative lg:pl-[40px]">
-				<h1 class="text-[25px] font-bold lg:text-[48px] mb-4 text-white">What to expect from us</h1>
+			<?php if(get_sub_field('heading')): ?>
+				<h1 class="text-[25px] font-bold lg:text-[48px] mb-4 text-white"><?php echo get_sub_field('heading'); ?></h1>
+			<?php endif; ?>	
+			
+			<?php if(have_rows('list_part')): ?>
+            <?php while(have_rows('list_part')): the_row(); ?>
 				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[40px]">
-					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">We give you not a fish but a fishing rod.</p>
-					<p class="text-[18px] lg:text-[18px] mb-4 text-white">We offer a flexible solution that can tackle any challenge, deliver with speed, and scale on demand. At all times, you stay in ultimate control of your team and hiring process.
-					We just connect the dots for you.</p>
+					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white"><?php echo get_sub_field('heading'); ?></p>
+					<p class="text-[18px] lg:text-[18px] mb-4 text-white"> <?php echo get_sub_field('paragraph'); ?> </p>
 				</div>
-				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[40px]">
-					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">Just like your own employees...</p>
-					<p class="text-[18px] lg:text-[18px] mb-4 text-white">You select the candidates, get to know them personally, and manage them as part of your team. They work for you full-time, know your product and your needs - just like your own employees.</p>
-				</div>
-				<div class=" border-l-[5px] border-[rgba(239,80,12,0.30)] pl-4 mb-[30px]">
-					<p class="text-[22px] font-semibold lg:text-[24px] mb-4 text-white">...but hassle-free.</p>
-					<p class="text-[18px] lg:text-[18px] mb-4 text-white">Taxes, payrolls, etc... We all know the frustrating and time-expensive administration of a new hire. Don't worry. We'll take care of that for you.</p>
-
-					<p class="text-[18px] lg:text-[18px] mb-4 text-white">if your Smart Working developers misses deadlines or fails to meet expectations, we'll match you with a new remote developer, without shifting your project schedule or cost. admittedly, we've never had to do this. but it's our promise. just in case.</p>
-				</div>
+			<?php endwhile; ?>	
+            <?php endif; ?> 	
+				
 			</div>
 		</div>
 	</div>
 </section>
 
+    <?php endif; ?>
+  <?php endwhile; ?>
+<?php endif; ?>
+
+
 <!-- Curios Section  -->
 <?php if (have_rows('block')) : ?>
-	<?php while (have_rows('block')) : the_row(); ?>
+<?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'curious_section') : ?>
 
 	<section class="calculator-box w-[100%] mt-[50px] lg:mb-[50px]">
@@ -270,12 +217,17 @@
                         
                         <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                             <div class="px-6 py-4">
+							  <?php if(get_sub_field('hourly_rate_title')): ?>
                                 <div class="block">
-                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                    <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
                                 </div>
+							  <?php endif; ?>
+
+							 <?php if(get_sub_field('amount')): ?> 
                                 <div class="block">
-                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                    <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
                                 </div>
+							 <?php endif; ?>	
                                 <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                     <div class="sliderwrap">
                                         <input class="home-range-slider" id="range" type="range" max="100" value="60">
@@ -283,11 +235,13 @@
                                 </div>
                                 <div class="block pt-5">
                                     <div class="flex">
+									<?php if(get_sub_field('amount_save_title')): ?>
                                         <div class="grow">
-                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                            <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
                                         </div>
+									<?php endif; ?>	
                                         <div class="grow text-end">
-                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
                                         </div>
                                     </div>
                                 </div>
@@ -304,44 +258,6 @@
         </div>
     </section>
 
-
-
-
-
-			<!-- <div class="w-full relative grid items-center  bg-black">
-				<div class="container mx-auto md:px-0 px-10 curious-bg">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						
-							<div class="pl-7 pr-7 md:pl-48 md:pr-12">
-							<?php if(get_sub_field('small_title')): ?>
-							  <h3 class="text-center md:text-left calculator-intro mt-20"> <?php echo get_sub_field('small_title'); ?> </h3>
-							<?php endif; ?>
-
-							<?php if(get_sub_field('main_heading')): ?>	
-							  <h1 class="text-center md:text-left text-3xl sm:text-4xl lg:text-4xl 3xl:text-58 font-medium text-white  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
-							<?php endif; ?> 
-							 <span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
-					  
-					        <?php if(get_sub_field('button_name')): ?>
-							<?php $calc_url =  get_sub_field('button_url'); ?>
-								<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-								  <a href="<?php echo esc_url( $calc_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
-								</div>
-							<?php endif; ?>
-							
-							</div>
-						
-						<?php $curious_img = get_sub_field('main_image');
-							if (!empty($curious_img) && isset($curious_img['url'])):
-						?>
-							<div class="px-6">
-								<img src="<?php echo esc_url($curious_img['url']); ?>" alt="<?php echo esc_url($curious_img['url']); ?>">
-							</div>
-						<?php endif; ?>
-						
-					</div>
-				</div>
-			</div> -->
 <?php endif; ?>
 
 <?php get_template_part( 'template-parts/client-testimonial' );?>
@@ -349,10 +265,8 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
-<!-- Assemble Team Section -->
-<?php get_template_part( 'template-parts/assemble-team' );?>
 
-<!-- Blog Section -->
+<?php get_template_part( 'template-parts/assemble-team' );?>
 <?php get_template_part( 'template-parts/home-blog' );?>
 
 <!-- FAQ Section  -->

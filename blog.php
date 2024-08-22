@@ -57,33 +57,7 @@
 					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
 				<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php the_title(); ?></p> </a>
 				<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
-				<div class="w-[100%] min-h-[100px] mt-10">
-				 <?php
-					$categories = get_the_category();
-					if ($categories) :
-						foreach ($categories  as $category) :
-							$class = '';
-							switch ($category->name) {
-								case 'Offshore Developer':
-									$class = 'bg-[#F9F5FF] text-[#6941C6]';
-									break;
-								case 'Backend Developer':
-									$class = 'bg-[#EEF4FF] text-[#3538CD]';
-									break;
-								case 'Full Stack Developer':
-									$class = 'bg-[#FDF2FA] text-[#C11574]';
-									break;	
-								default:
-									$class = 'bg-[#EEF4FF] text-[#3538CD]';
-									break;
-							}
-					?>
-					<span class=" inline-block px-[30px] py-[8px] mr-2 mb-2 text-[14px] italic rounded-[30px] <?php echo $class; ?>"> <?php echo $category->name; ?> </span>
-					<?php
-						endforeach;
-					endif;
-					?>
-				</div>
+				
 				<div class="d-block">
 					<a href="<?php the_permalink(); ?>" class="inline-block px-[30px] py-[10px] mr-3 text-[14px] rounded-[30px] border border-[#050403] text-[#050403] hover:bg-[#050403] hover:text-[#ffffff]" >Read more</a>
 				</div>
@@ -108,7 +82,7 @@
 		
 		<?php
 		$all_posts_args = array(
-			'posts_per_page' => 6,
+			'posts_per_page' => -1,
 			'post__not_in'   => array($latest_post_id),
 			'post_status'    => 'publish',
 		);
@@ -144,35 +118,9 @@
 					<?php endif;
 					?>
 					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-					<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?>  </p> </a>
+					<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?>  </p> </a>
 					<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
-					<div class="w-[100%] min-h-[100px] mt-10">
-					 <?php
-						$categories = get_the_category();
-						if ($categories) :
-							foreach ($categories  as $category) :
-								$class = '';
-								switch ($category->name) {
-									case 'Offshore Developer':
-									$class = 'bg-[#F9F5FF] text-[#6941C6]';
-									break;
-									case 'Backend Developer':
-										$class = 'bg-[#EEF4FF] text-[#3538CD]';
-										break;
-									case 'Full Stack Developer':
-										$class = 'bg-[#FDF2FA] text-[#C11574]';
-										break;	
-									default:
-										$class = 'bg-[#EEF4FF] text-[#3538CD]';
-										break;
-								}
-						?>
-						<span class=" inline-block px-[30px] py-[8px] mr-1 m-1 text-[14px] italic rounded-[30px] <?php echo $class; ?>"> <?php echo $category->name; ?> </span>
-						<?php
-							endforeach;
-						endif;
-						?>
-					</div>
+					
 				</div>
 			</div>
 			
@@ -183,12 +131,11 @@
 			
 		</div>
 
-		<!-- <div class="w-[100%] text-center pt-[50px]">
-			<a href="#" class="inline-block px-[30px] py-[10px] mr-3 text-[14px] rounded-[30px] border border-[#ffffff] text-[#ffffff] hover:bg-[#FF4D02] hover:border-[#FF4D02]" >Read more</a>
-		</div> -->
+		
         
     </div>
 </section>
+
 
 <section class="w-[100%] px-[5%] mb-[60px]">
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">

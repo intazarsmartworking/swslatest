@@ -154,28 +154,47 @@
         <img class="absolute right-[9%] bottom-[100px] w-[300px] z-0 rotate-[-30deg]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
     </section>
 
-   
+<!-- Curios Section  -->
+<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+<?php if (get_row_layout() == 'curious_section') : ?>
 
-
-    <section class="calculator-box w-[100%] mt-[50px]">
-        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
-                <div class="grid-item col-span-5 py-[10%]">
-                    <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >Calculator</span></div>
-                    <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4">Curious About</h1>
-                    <h1 class="text-[26px] lg:text-[36px] text-[#FF4D02] lg:leading-[30px] font-medium mb-4">Cost?</h1>
-                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium">Find out the price of your next remote hire here.</p>
-                    <p><a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home">Click to calculate now</a></p>
+	<section class="calculator-box w-[100%] mt-[50px]">
+        <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
+                <div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
+                    <div class="block mb-5">
+							<?php if(get_sub_field('small_title')): ?>
+								<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
+							  
+							<?php endif; ?>
+						
+					</div>
+					<?php if(get_sub_field('main_heading')): ?>	
+						<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+					<?php endif; ?>
+                    <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
+					<?php if(get_sub_field('button_name')): ?>
+						<?php $calc_url =  get_sub_field('button_url'); ?>
+						<p>
+							<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+						</p>
+					<?php endif; ?>
                 </div>
-                <div class="grid-item col-span-5 relative py-[10%]">
+                <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
                         
                         <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                             <div class="px-6 py-4">
+							  <?php if(get_sub_field('hourly_rate_title')): ?>
                                 <div class="block">
-                                    <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                    <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
                                 </div>
+							  <?php endif; ?>
+
+							 <?php if(get_sub_field('amount')): ?> 
                                 <div class="block">
-                                    <p class="text-[54px] font-[500] ">$20/hr</p>
+                                    <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
                                 </div>
+							 <?php endif; ?>	
                                 <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                     <div class="sliderwrap">
                                         <input class="home-range-slider" id="range" type="range" max="100" value="60">
@@ -183,69 +202,96 @@
                                 </div>
                                 <div class="block pt-5">
                                     <div class="flex">
+									<?php if(get_sub_field('amount_save_title')): ?>
                                         <div class="grow">
-                                            <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                            <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
                                         </div>
+									<?php endif; ?>	
                                         <div class="grow text-end">
-                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ 740</span>
+                                            <span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo get_template_directory_uri();?>/images/calculater-bg.png">
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+                        <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
+
+						<?php endif; ?>
                     
                 </div>
         </div>
     </section>
 
+<?php endif; ?> 
+<?php endwhile; ?>
+<?php endif; ?>  
 
+<?php if (have_rows('vetting_process')) : ?>
+<?php while (have_rows('vetting_process')) : the_row(); ?>
+<?php if (get_row_layout() == 'client_section') : ?>
     <section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[10rem]">
         <div class="max-w-[600px] relative mx-auto text-center">
-        <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >Clients</span></div>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Trusted by</h1>
-            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">100+ of Organizations</h1>
+		<?php if(get_sub_field('top_title')): ?>
+        <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_title'); ?></span></div>
+		<?php endif; ?>
+
+		<?php if(get_sub_field('main_title')): ?>
+		<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+		<?php endif; ?>
+		
+		<?php if(get_sub_field('orange_title')): ?>
+        <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_title'); ?></h1>
+		<?php endif; ?>
+		
         </div>
         <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
             <div class="logo-slider">
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
-                <div class="slide-item"><img src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" /> </div>
+			<?php if(have_rows('clients')): ?>
+            <?php while(have_rows('clients')): the_row(); ?>
+                <div class="slide-item"><img src="<?php echo get_sub_field('client_image')['url']; ?>" /> </div>
+			<?php endwhile; ?>	
+            <?php endif; ?> 	
             </div>
         </div>
     </section>
+<?php endif; ?>
 
 
-
+<?php if (get_row_layout() == 'cta_section') : ?>
     <section class="w-[100%] px-[5%] mb-[60px]">
         <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
             <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
             <div class="pt-[60px]">
-                <h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]">Check Our Vetting Process Now</h1>
-                <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> How we make sure which candidate would be able to add values to your projects?</p>
-                
-                <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Check Now </a>
+			<?php if(get_sub_field('heading')): ?>
+                <h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?> </h1>
+			 <?php endif; ?>
+			 
+			 <?php if(get_sub_field('description')): ?>
+                <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_sub_field('description'); ?> </p>
+             <?php endif; ?>    
+			 
+			<?php if(get_sub_field('button_name')): ?>
+			<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?> 
+                <a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_sub_field('button_name'); ?> </a>
+			<?php endif; ?>		
             </div>
             
+			<?php $hire_dev_main_img = get_sub_field('right_image');
+				if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+			?>
             <div class="text-end pt-[40px] lg:pt-[0px]">
-                <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
+                <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" />
             </div>
+			<?php endif; ?>
             
         </div>
     </section>
-
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
 </div>
 
