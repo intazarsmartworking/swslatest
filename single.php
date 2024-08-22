@@ -236,7 +236,7 @@ get_header();
 								<?php endif;
 								?>
 								<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?> </p></a>
+								<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?> </p></a>
 								<a href="<?php the_permalink(); ?>"><p class="text-[16px] text-[#ffffff] mb-4" ><?php echo wp_trim_words(get_the_content(), 40); ?></p></a>
 								
 							</div>
@@ -254,22 +254,34 @@ get_header();
 
 
 
+<?php if(get_field('cta_heading')): ?>
 <section class="w-[100%] px-[5%] mb-[60px]">
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Check Our Vetting Process Now</h1>
-            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> How we make sure which candidate would be able to add values to your projects?</p>
-            
-            <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Check Now </a>
+            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_field('cta_heading'); ?></h1>
+			
+			<?php if(get_field('cta_paragraph')): ?>
+            <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_field('cta_paragraph'); ?></p>
+            <?php endif; ?>
+			
+			<?php if(get_field('cta_button_name')): ?>
+			<?php $cta_btn_url =  get_field('cta_button_url'); ?>
+            <a href="<?php echo esc_url( $cta_btn_url ); ?>" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_field('cta_button_name'); ?> </a>
+			<?php endif; ?>
         </div>
         
+		<?php $cta_right_image = get_field('cta_right_image');
+			if (!empty($cta_right_image) && isset($cta_right_image['url'])):
+		?>
         <div class="text-end pt-[40px] lg:pt-[0px]">
-            <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" />
+            <img class="inline-block w-[100%] max-w-[500px]" src="<?php echo esc_url($cta_right_image['url']); ?>" alt="<?php echo esc_attr($cta_right_image['alt']); ?>" />
         </div>
+		<?php endif; ?>
         
     </div>
 </section>
+<?php endif; ?>
 <script type="text/javascript">
 
 	jQuery(window).bind("load", function() {

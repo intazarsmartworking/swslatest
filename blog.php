@@ -118,7 +118,7 @@
 					<?php endif;
 					?>
 					<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-					<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 3); ?>  </p> </a>
+					<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?>  </p> </a>
 					<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
 					
 				</div>
@@ -135,6 +135,7 @@
         
     </div>
 </section>
+
 
 <section class="w-[100%] px-[5%] mb-[60px]">
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
