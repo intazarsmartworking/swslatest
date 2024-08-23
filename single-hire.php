@@ -312,7 +312,7 @@
 
  <!-- Calculate Section -->
 
-<div class="w-full relative calculate-sec grid items-center lg:py-[15%]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
+<div class="w-full relative calculate-sec grid items-center lg:py-[100px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
@@ -324,7 +324,7 @@
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No hidden fees</h3>
-                        <p class=" text-white text-[16px] font-medium ">Includes HR and admin support</p>
+                        <p class=" text-white text-[16px] font-medium ">Include HR, legal work and admin support</p>
                       </div>
                   </div>
                   <div class="flex flex-row">
@@ -332,8 +332,8 @@
                         <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">Support</h3>
-                        <p class=" text-white text-[16px] font-medium ">Includes HR and admin support</p>
+                        <h3 class=" text-white text-[18px] font-medium">Relatively flexible</h3>
+                        <p class=" text-white text-[16px] font-medium ">No minimum length of contract</p>
                       </div>
                   </div>
                 </div>
@@ -344,7 +344,7 @@
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No Charge</h3>
-                        <p class=" text-white text-[16px] font-medium ">Not satisfied after a week?</p>
+                        <p class=" text-white text-[16px] font-medium ">We do not charge a finder’s fee</p>
                       </div>
                   </div>
                   <div class="flex flex-row">
@@ -352,8 +352,8 @@
                           <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">Support</h3>
-                        <p class=" text-white text-[16px] font-medium ">Includes HR and admin support</p>
+                        <h3 class=" text-white text-[18px] font-medium">Cost Saving</h3>
+                        <p class=" text-white text-[16px] font-medium ">40-50% annually and 15% on-cost of employment</p>
                       </div>
                   </div>
                 </div>
