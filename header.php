@@ -30,34 +30,207 @@
 <body  <?php body_class(); ?> style="">
 <?php wp_body_open(); ?>
 
-<header class="bg-light-black text-white p-4 flex justify-between items-center md:hidden">
-	<div class="flex items-center">
-    <?php if(get_field('header_logo', 'options')): ?>
-		<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-		   <img class="max-h-5" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
-		</a>
-    <?php endif; ?>
-	</div>
-	<button id="menuToggle" class="focus:outline-none md:hidden">
-		<img src="<?php echo get_template_directory_uri();?>/images/hamber.png" alt="Menu">
-	</button>
-</header>
-		
-<div id="mobileMenuModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 text-white p-4 hidden">
-	<div class="absolute inset-0 bg-black opacity-50"></div>
-		<div class="bg-white w-1/2 h-full p-4">
-			<ul id="mobileMenu" class="flex flex-col">
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">What We Do?</</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Resources</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">For Developers</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">About us</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Services</a></li>
-				<li class="pb-5"><a href="#" class="text-xl font-regular text-dark-black">Contact us</a></li>
-			</ul>
-		</div>	
-</div>
+<header class="main-header w-[100%]">
+  <div class="container mx-auto !p-0 relative">
+    <div class="grid grid-cols-1 md:grid-cols-10 gap-4 content-center h-[100%] header-box relative">
+      <div class="col-span-2 content-center">
+        <?php if(get_field('header_logo', 'options')): ?>
+          <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+            <img class="h-[28px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
+          </a>
+        <?php endif; ?>
+      </div>
+      <div class="col-span-5 content-center relative">
+        
+        <ul class="header-menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Vetting Process</a></li>
+          <li>
+            <a data-mainmenu="hireDevId">
+            Hire Developer
+              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
+              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
+            </a>
+          </li>
+          <li><a href="">Pricing</a></li>
+          <li>
+            <a data-mainmenu="insightsId">
+              Insights 
+              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
+              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
+            </a>
+          </li>
+          <li><a href="">For Developers</a></li>
+        </ul>
+      </div>
+      <div class="col-span-3 content-center text-end">
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-[20px]" target="">Find a Developer</a>
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
+      </div>
+    </div> 
+    <div class="mega-menu-box">
+      
+      <div class="show-main-menu" id="hireDevId">
+          <div class="grid grid-cols-1 md:grid-cols-9 h-[100%]">
+            <div class="col-span-3">
+              <ul class="mega-menu-left">
+                <li class="active" data-menu="frontEndDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
+                    <span class="menu-title">Front-End Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="backEndDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
+                    <span class="menu-title">Back-End Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="fullStackDev">
+                  <a>
+                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/full-stack-development.svg">
+                    <span class="menu-title">Full Stack Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="mobileDev">
+                  <a>
+                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/mobile-development.svg">
+                    <span class="menu-title">Mobile Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="webDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/web-development.svg">
+                    <span class="menu-title">Web Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="gameDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
+                    <span class="menu-title">Game & Systems Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                <li data-menu="specializedDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
+                    <span class="menu-title">Specialized Development</span>
+                    <span class="menu-sub-title">Front-End Development</span>
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="col-span-3 py-[12px]">
+              <div class="w-[100%] bg-[#231008] h-[100%] rounded-[10px] p-5">
+                  <div class="show-more-menu show-more" id="frontEndDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">AngularJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Front End Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">JavaScript Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">ReactJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">VueJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="backEndDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">.Net Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Back End Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">C# Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Django Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Laravel Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Node.js Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">PHP Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Python Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Ruby on Rails Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">SQL Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="fullStackDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">Full Stack Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="mobileDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">Android Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">iOS Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">App Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="webDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">Web Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Web3 Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">WordPress Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Magento Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Shopify Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="gameDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">C & C++ Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">JavaScript Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">React Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+                  <div class="show-more-menu" id="specializedDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="#">Data Scientist <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="#">Data Analyst <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="col-span-3 p-4">
+             <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/menu-img.svg">
+            </div>
+          </div>
+      </div>
 
-<header class="site-header | w-full   md:flex">
+      <div class="show-main-menu" id="insightsId">
+        <div class="grid grid-cols-1 md:grid-cols-9 h-[100%]">
+            <div class="col-span-3">
+              <ul class="mega-menu-left">
+                <li>
+                  <a href="#">
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
+                    <span class="menu-title">Blogs</span>
+                    <span class="menu-sub-title">Learn from the experts</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
+                    <span class="menu-title">Case Studies</span>
+                    <span class="menu-sub-title">Explore customer stories</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-3 py-[12px]"></div>
+            <div class="col-span-3 p-4">
+              <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/menu-img.svg">
+            </div>
+          </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</header>
+
+
+		
+
+
+<header class="site-header hidden">
   <div class="container mx-auto mt-5">
     <div class="header-wrap menu-hide-mobile | min-h-[85px] flex justify-between items-center relative z-10 header-menu-section mt-0 md:mt-8 px-10">
       <div class="logo w-1/6">

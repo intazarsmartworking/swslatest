@@ -36,7 +36,7 @@ body {
 
 .container {
     width: 100%; 
-    max-width: 1200px; 
+    max-width: 1280px; 
     margin: 0 auto; 
     padding: 0 20px; 
   }
@@ -2225,6 +2225,159 @@ input[type="range"].home-range-slider {
     margin-left: -50%;
     background-color: #fff;
   }
+
+
+
+  .main-header{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    padding: 20px;
+  }
+  .header-box{
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
+    padding: 13px 23px;
+  }
+  .header-menu{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+  .header-menu li{
+    display: inline-block;
+    margin: 0px 5px;
+  }
+  .header-menu li a{
+    display: block;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 4px;
+    position: relative;
+  }
+  .header-menu li a:hover, .header-menu li a.active{
+    background: rgba(255, 255, 255, 0.10);
+  }
+  .caret-down, .caret-up{
+    vertical-align: text-top;
+  }
+  .header-menu li a .caret-up, .header-menu li a.active .caret-down{
+    display: none;
+  }
+  .header-menu li a.active .caret-up, .header-menu li a .caret-down{
+    display: inline-block;
+  }
+  .mega-menu-box{
+    width: 100%;
+    max-width: 950px;
+    min-height: 560.119px;
+    border-radius: 20px;
+    border: 1px solid #ec480248;
+    background: #1e1414;
+    padding: 0;
+    border-radius: 20px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    overflow: hidden;
+  }
+  .mega-menu-box.open{
+    display: block;
+  }
+  .mega-menu-left{
+    padding: 0px;
+    margin: 0px;
+  }
+  .mega-menu-left li{
+    display: block;
+    padding: 12px 0px 12px 15px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  .mega-menu-left li.active{
+    background: linear-gradient(90deg, rgba(172,58,9,0.2) 0%, rgba(0,0,0,0) 100%);
+  }
+  .mega-menu-left li a{
+    display: block;
+    padding: 10px 10px 10px 45px;
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+  }
+  .mega-menu-left li a .menu-icons{
+    position: absolute;
+    left: 8px;
+    top: 16px;
+    opacity: 0.5;
+  }
+  .mega-menu-left li.active a .menu-icons{
+    opacity: 1;
+  }
+  .mega-menu-left li.active a{
+    background: #231008;
+  }
+  .mega-menu-left li a .menu-title{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: block;
+  }
+  .mega-menu-left li a .menu-sub-title{
+    font-size: 12px;
+    font-weight: 400;
+    color: #C9C8C8;
+    display: block;
+  }
+  .show-more-menu{
+    width: 100%;
+    display: none;
+  }
+  .show-more-menu.show-more{
+    display: block;
+  }
+  .mega-menu-center{
+    padding: 0px;
+    margin: 0px;
+  }
+  .mega-menu-center li{
+    display: block;
+  }
+  .mega-menu-center li a{
+    display: block;
+    position: relative;
+    color: #C9C8C8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .mega-menu-center li a:hover{
+    color: #fff;
+  }
+  .mega-menu-center li a span{
+    display: none;
+    margin-left:5px;
+  }
+  .mega-menu-center li a:hover span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .show-main-menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .show-main-menu.active-menu{
+    display: block;
+  }
+
+
   
 
 
