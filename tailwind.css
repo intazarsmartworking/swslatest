@@ -2234,6 +2234,15 @@ input[type="range"].home-range-slider {
     top: 0px;
     z-index: 1000;
     padding: 20px;
+    width: 100%;
+  }
+  .main-header.fixed{
+    position: fixed;
+  }
+  .main-header.fixed .header-box{
+    background: rgb(119,98,98);
+    background: linear-gradient(90deg, rgba(119,98,98,0.865983893557423) 0%, rgba(89,30,5,1) 50%, rgba(119,98,98,0.865983893557423) 100%);
+    backdrop-filter: blur(10px);
   }
   .header-box{
     border-radius: 14px;

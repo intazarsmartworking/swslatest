@@ -1047,3 +1047,15 @@ jQuery('body').on('click',function(event){
 });
 
 
+jQuery(window).scroll(function(){
+  var sticky = jQuery('.main-header'),
+      scroll = jQuery(window).scrollTop();
+      jQuery('.header-menu li a').removeClass('active');
+      jQuery(".mega-menu-box").removeClass("open");
+    if (scroll >= 100){
+      sticky.addClass('fixed')
+    }else{
+      sticky.removeClass('fixed')
+    };
+});
+

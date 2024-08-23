@@ -85,7 +85,7 @@
                         <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
                     </div> -->
                     <div class="rounded-2xl p-3 lg:px-[1rem] border-pattern ">
-                        <iframe aria-label='Share Your Requirement' frameborder="0" style="height:400px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
+                        <iframe aria-label='Share Your Requirement' frameborder="0" style="height:330px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
                         <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
                     </div>
                     
