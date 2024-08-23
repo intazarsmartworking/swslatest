@@ -529,12 +529,7 @@
         <div class="bg-white rounded-3xl px-6 py-6 w-full">
 			<div class="rounded-2xl border-pattern px-6 py-6 w-full">
 				<h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
-				<form method="post">
-					<input type="text"  name="skills"  class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="w0z9xl">
-					<input type="text" name="fullname" placeholder="Full Name" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="3p8zek">
-					<input type="email" name="email-address" placeholder="Email Address" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="qmz9kh">
-					<button type="submit" class="w-full flex items-center justify-center bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now <img class="ml-4"  src="<?php echo get_template_directory_uri();?>/images/forward_arrow.svg" alt=""></button>
-				</form>
+				<iframe aria-label='Share Your Requirement' frameborder="0" style="height:400px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
 				<h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
 			</div>
        </div>
@@ -649,7 +644,7 @@
               <div class="grid-item col-span-2 content-start">
                 <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
                     <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h1>
-                    <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
+                    <a href="/pricing/" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                       </svg>

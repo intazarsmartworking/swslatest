@@ -144,7 +144,7 @@
             <h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]">Check Our Vetting Process Now</h1>
             <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> How we make sure which candidate would be able to add values to your projects?</p>
             
-            <a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Check Now </a>
+            <a href="/contact-us/" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> Check Now </a>
         </div>
         
         <div class="text-end pt-[40px] lg:pt-[0px]">

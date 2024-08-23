@@ -440,7 +440,7 @@
 					<p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_sub_field('cta_description'); ?> </p>
 				<?php endif; ?> 
 				
-				<a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_sub_field('cta_button_name'); ?> </a>
+				<a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] " href="/contact-us/"> <?php echo get_sub_field('cta_button_name'); ?> </a>
 				</div>
 				
 				<?php $cta_right_side_image = get_sub_field('cta_right_side_image');
