@@ -31,9 +31,26 @@
 <?php wp_body_open(); ?>
 
 <header class="main-header w-[100%]">
-  <div class="container mx-auto !p-0 relative">
-    <div class="grid grid-cols-1 md:grid-cols-10 gap-4 content-center h-[100%] header-box relative">
-      <div class="col-span-2 content-center">
+  <div class="mobile-menu">
+    <div class="grid grid-cols-10 content-center h-[100%] header-box relative">
+      <div class="col-span-7 content-center">
+        <?php if(get_field('header_logo', 'options')): ?>
+          <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+            <img class="h-[25px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
+          </a>
+        <?php endif; ?>
+      </div>
+      <div class="col-span-3 content-center text-right">
+        <button id="mobile-menu-show" class="button inline-block button-small rounded-md p-[8px] border-little-orange border-2 text-[16px] text-white radial-gradient-login">
+          <img class="w-[22px]" src="<?php echo get_template_directory_uri();?>/images/menu-icons.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto !p-0 relative desk-top-menu" id="mobile-show-menu">
+    <div class="grid grid-cols-1 md:grid-cols-10 lg:gap-4 content-center h-[100%] header-box relative">
+      <div class="col-span-2 content-center hide-mobile">
         <?php if(get_field('header_logo', 'options')): ?>
           <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
             <img class="h-[28px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
@@ -41,7 +58,6 @@
         <?php endif; ?>
       </div>
       <div class="col-span-5 content-center relative">
-        
         <ul class="header-menu">
           <li><a href="">About</a></li>
           <li><a href="">Vetting Process</a></li>

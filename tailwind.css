@@ -2234,6 +2234,16 @@ input[type="range"].home-range-slider {
     top: 0px;
     z-index: 1000;
     padding: 20px;
+    width: 100%;
+  }
+  .main-header.fixed{
+    position: fixed;
+    padding: 0px;
+  }
+  .main-header.fixed .header-box{
+    background: rgb(119,98,98);
+    background: linear-gradient(90deg, rgba(119,98,98,0.865983893557423) 0%, rgba(89,30,5,1) 50%, rgba(119,98,98,0.865983893557423) 100%);
+    backdrop-filter: blur(10px);
   }
   .header-box{
     border-radius: 14px;
@@ -2379,6 +2389,12 @@ input[type="range"].home-range-slider {
 
 
   
+  .mobile-menu{
+    display: none;
+  }
+  .desk-top-menu{
+    display: block;
+  }
 
 
 @media (max-width: 640px) {
@@ -2419,6 +2435,38 @@ input[type="range"].home-range-slider {
     }
     .stickysidenav.side-bar-fix{
        position: relative !important;
+    }
+    .header-box{
+        padding: 13px 15px;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .desk-top-menu{
+        display: none;
+    }
+    .desk-top-menu.isMenuShow{
+        display: block;
+    }
+    .hide-mobile{
+        display: none;
+    }
+    .main-header.fixed .header-box{
+        border-radius: 0px;
+        backdrop-filter: none;
+    }
+    .header-menu{
+        text-align: left;
+    }
+    .header-menu li{
+        display: block;
+        width: 100%;
+    }
+    .mega-menu-box.open{
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+        top: 0px;
     }
 
 }
