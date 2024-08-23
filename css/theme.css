@@ -1569,6 +1569,9 @@ select {
 .w-\[246px\] {
   width: 246px;
 }
+.w-\[24px\] {
+  width: 24px;
+}
 .w-\[280px\] {
   width: 280px;
 }
@@ -2188,6 +2191,9 @@ select {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .p-\[10px\] {
   padding: 10px;
@@ -4962,6 +4968,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-weight: 400;
     color: #fff;
     border-radius: 4px;
+    position: relative;
   }
 .header-menu li a:hover, .header-menu li a.active{
     background: rgba(255, 255, 255, 0.10);
@@ -4977,8 +4984,8 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   }
 .mega-menu-box{
     width: 100%;
-    max-width: 900px;
-    height: 560.119px;
+    max-width: 950px;
+    min-height: 560.119px;
     border: 1px solid #ec480248;
     background: #1e1414;
     padding: 0;
@@ -5001,14 +5008,25 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     display: block;
     padding: 12px 0px 12px 15px;
     margin-bottom: 0px;
+    cursor: pointer;
   }
 .mega-menu-left li.active{
     background: linear-gradient(90deg, rgba(172,58,9,0.2) 0%, rgba(0,0,0,0) 100%);
   }
 .mega-menu-left li a{
     display: block;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 10px 45px;
     border-radius: 10px 0px 0px 10px;
+    position: relative;
+  }
+.mega-menu-left li a .menu-icons{
+    position: absolute;
+    left: 8px;
+    top: 16px;
+    opacity: 0.5;
+  }
+.mega-menu-left li.active a .menu-icons{
+    opacity: 1;
   }
 .mega-menu-left li.active a{
     background: #231008;
@@ -5023,6 +5041,47 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 12px;
     font-weight: 400;
     color: #C9C8C8;
+    display: block;
+  }
+.show-more-menu{
+    width: 100%;
+    display: none;
+  }
+.show-more-menu.show-more{
+    display: block;
+  }
+.mega-menu-center{
+    padding: 0px;
+    margin: 0px;
+  }
+.mega-menu-center li{
+    display: block;
+  }
+.mega-menu-center li a{
+    display: block;
+    position: relative;
+    color: #C9C8C8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+.mega-menu-center li a:hover{
+    color: #fff;
+  }
+.mega-menu-center li a span{
+    display: none;
+    margin-left:5px;
+  }
+.mega-menu-center li a:hover span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+.show-main-menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+.show-main-menu.active-menu{
     display: block;
   }
 @media (max-width: 640px) {
