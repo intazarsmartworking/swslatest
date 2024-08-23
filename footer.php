@@ -41,26 +41,7 @@
                 'walker'         => new Custom_Walker_Nav_Menu()
             ));
         ?>
-        <!--<ul class="pt-7">
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> Home </a>
-          </li>
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> Services </a>
-          </li>
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> About us </a>
-          </li>
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> Candidates </a>
-          </li>
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> Testimonials </a>
-          </li>
-          <li class="mb-2  text-sm leading-10">
-            <a href="" class="text-footer-menu-color"> Contact us </a>
-          </li>
-        </ul> -->
+        
       </div>
       <div>
         <h3 class="text-white text-xl font-medium leading-normal"> Our Locations </h3>

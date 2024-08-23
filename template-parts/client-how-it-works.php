@@ -100,7 +100,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 3: Quick
+                        Step 3: Onboarding
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
@@ -144,7 +144,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                     Step 4: Long-term
+                     Step 4: Support
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
