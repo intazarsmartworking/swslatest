@@ -176,7 +176,7 @@
                     <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4 text-center">
                         <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
                         <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save $354,000/year</h1>
-                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smartworking can save a 500 person company $354,000 per year compared to the non-enterprise price of your company.</p>
+                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p>
                         
                     </div>
                     
