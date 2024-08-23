@@ -144,9 +144,7 @@
 							</div>
 						<?php endif; ?>
                         <div class="w-full md:w-1/2 px-2 mb-4 text-right">
-                            <button class="profile-button-custom">
-                                View Profile
-                            </button>
+                            <a href="/contact-us/"> <button class="profile-button-custom"> Hire Now </button> </a>
                         </div>
                     </div>
 					
