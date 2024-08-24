@@ -1057,6 +1057,12 @@ select {
 .top-\[40px\] {
   top: 40px;
 }
+.right-\[-30\%\] {
+  right: -30%;
+}
+.top-\[-8\%\] {
+  top: -8%;
+}
 .z-0 {
   z-index: 0;
 }
