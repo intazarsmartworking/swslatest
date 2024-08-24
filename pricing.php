@@ -115,10 +115,6 @@
 							$hire_image_id = get_post_thumbnail_id();
 							$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
 						?>
-                            <div onclick="skillPrice()"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                <span class="block"> <?php the_title();?> </span>
-                            </div>
-                            
                         <?php endwhile; wp_reset_postdata();?>    -->
                             
                         </div>
@@ -126,10 +122,6 @@
                     <div class=" block w-full mt-[30px]">
                         <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h1>
                         <div class="d-block w-full mt-3">
-                            <!-- <span id="exp-item-1" onclick="skillExperience({id:1,level:'other'})"  class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
-                                Any experience
-                                <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                            </span> -->
                             <span id="exp-item-2" onclick="skillExperience({id:2,level:'midLevel'})" class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
                                 Mid level (3-4year)
                                 <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
@@ -166,20 +158,6 @@
                                 </div>
                             </div>
 
-                                <!-- <div class="slider-input">
-                                    <div class="fill-box left-box">
-                                        <img class="slide-icon gutter" id="resize" src="<?php echo get_template_directory_uri();?>/images/slide-icon.png" />
-                                    </div>
-                                </div> -->
-
-
-                               <!-- <select class="w-full" onchange="skilleldPeople(event)">
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="30">30</option>
-                                <option value="40">40</option>
-                                <option value="50">50</option>
-                               </select> -->
                             </div>
                         </div>
                     </div>
@@ -187,20 +165,18 @@
 
                 </div>
                 <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
-                    <!-- <div class="block">
-                        <h1 class=" text-center"><img class="h-[26px] inline-block" src="<?php echo get_template_directory_uri();?>/images/heading-logo.png"></h1>
-                    </div> -->
+                    
                     <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
                         <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">$<span id="total-price">20000</span>/hr</h1>
-                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">It is estimated that smartworking can place employees in upcoming 2 weeks.</p>
-                        <button class="w-full text-white text-[16px] rounded-[14px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] " >Start saving with SmartWorking</button>
-                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Our recruitment specialist will be in touch soon!</p>
+                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
+                        <a href="/contact-us/"> <button class="w-full text-white text-[16px] rounded-[14px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] " >Start saving with SmartWorking</button> </a>
+                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p>
                     </div>
 
                     <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4 text-center">
                         <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
                         <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save $354,000/year</h1>
-                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smartworking can save a 500 person company $354,000 per year compared to the non-enterprise price of your company.</p>
+                        <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p>
                         
                     </div>
                     
@@ -283,10 +259,7 @@
 
             </div>
         </div>
-
-
-
-    </div>
+	</div>
 </section>
 
 <?php endif; ?>	
@@ -437,14 +410,11 @@
 				<?php echo get_sub_field('main_heading'); ?>
 			</div>
 		<?php endif; ?>
-		<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+		<div class="w-full flex relative min-h-[580px] pr-3 lg:pr-0 pt-16 overflow-hidden">
 		<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 		<div class="slider-wrapper w-full relative card-container overflow-visible">
 			<div class="slider-overlay">
-
-			
-		
-		    <?php if(have_rows('testimonial_card')): ?>
+			<?php if(have_rows('testimonial_card')): ?>
 			<?php while(have_rows('testimonial_card')): the_row(); ?>
 			<?php 
 				$testimonial = get_sub_field('testimonial'); 
@@ -454,18 +424,16 @@
 				$linkedin = get_sub_field('linkedin');
 			?>
 
-
-		
-				<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card" >
+				<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" >
 					<div class="p-4 lg:p-10 flex flex-col ">
 						<div class="flex justify-between items-center mb-6">
-							<img src="<?php echo get_sub_field('logo')['url']; ?>">
+							<img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">
 							<img src="<?php echo get_sub_field('rating')['url']; ?>">
 						</div>
-						<p class="text-2xl text-[#050403] leading-9"> <?php echo $testimonial;?> </p>
-						<div class="flex justify-between items-center mt-10 lg:mt-36">
+						<p class="text-[20px] text-[#050403] leading-6"> <?php echo $testimonial;?> </p>
+						<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-[2.5rem]">
 							<div class="flex items-center">
-								<img class="mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+								<img class=" w-[70px] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 								<div>
 									<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
 									<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
@@ -544,9 +512,7 @@
 				<?php endif; ?>
 			</div>
         </div>
-
-
-    </div> 
+	</div> 
 </section>
 <?php endif; ?>
 

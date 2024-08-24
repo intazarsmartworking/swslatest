@@ -185,25 +185,6 @@
 						</div>
 
 
-						<!-- <div class="timeline-item pb-[100px]" id="scroll-effect-9">
-							<img  src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" class=" absolute right-[20px] w-[100%] h-[100%] top-[-150px] max-w-[400px] max-h-[400px] z-1 opacity-[0.5]">
-							<div class="timeline-content-box relative lg:left-[-90px] bg-[#1f0c04] border border-[rgba(245,248,255,0.1)] rounded-[12px] min-h-[400px] max-w-[1380px] p-3 lg:p-[100px]">
-								<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-								  <?php if(get_sub_field('seventh_section_paragraph')): ?>
-									<div class="">
-										<p class="text-[15px] lg:text-[28px] text-[#ffffff] lg:leading-[36px] font-medium">
-											<?php echo get_sub_field('seventh_section_paragraph'); ?>
-										</p>
-									</div>
-								  <?php endif; ?>		
-									<div class="pt-[30px]">
-										<img class="ani-img relative lg:absolute lg:right-10 lg:bottom-[-60px] inline w-[100%] max-w-[416px] rounded-[30px] border shadow-[0px_0px_40px_10px_rgba(255,77,2,0.40)]" src="<?php echo get_sub_field('seventh_section_image')['url']; ?>" />
-
-									</div>
-								</div>
-							</div> 
-						</div> -->
-
 						<div class="timeline-item curv-box pb-[100px]" id="scroll-effect-10">
 							<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
 							<div class="timeline-content-box max-w-[1280px]">
@@ -341,16 +322,16 @@
 									$linkedin = get_sub_field('linkedin');
 								?>
 							
-									<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[600px] rounded-3xl absolute card-placement card">
+									<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card">
 										<div class="p-4 lg:p-10 flex flex-col ">
 											<div class="flex justify-between items-center mb-6">
-												<img src="<?php echo get_sub_field('logo')['url']; ?>">
+												<img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">
 												<img src="<?php echo get_sub_field('rating')['url']; ?>">
 											</div>
-											<p class="text-2xl text-[#050403] leading-9"> <?php echo $testimonial;?> </p>
-											<div class="flex justify-between items-center mt-10 lg:mt-36">
+											<p class="text-[20px] text-[#050403] leading-6"> <?php echo $testimonial;?> </p>
+											<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-[2.5rem]">
 												<div class="flex items-center">
-													<img class="mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+													<img class=" w-[70px] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 													<div>
 														<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
 														<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
@@ -440,7 +421,7 @@
 					<p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> <?php echo get_sub_field('cta_description'); ?> </p>
 				<?php endif; ?> 
 				
-				<a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_sub_field('cta_button_name'); ?> </a>
+				<a class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] " href="/contact-us/"> <?php echo get_sub_field('cta_button_name'); ?> </a>
 				</div>
 				
 				<?php $cta_right_side_image = get_sub_field('cta_right_side_image');

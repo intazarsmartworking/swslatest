@@ -93,11 +93,11 @@
                     <div class="rounded-2xl px-6 pt-6 pb-3  lg:px-[2.5rem] border-pattern mt-4">
                     <div class="flex">
                     <div class="pr-4">
-                        <img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/formtestimonial.svg" alt="">
+                        <img class="mb-7 w-48" src="<?php echo get_template_directory_uri();?>/images/09.-Adam-Burrage-Managing-Director.png" alt="">
                     </div>
                     <div>
-                        <p class="text-xs font-normal text-dark-black pb-3"> Ahamd Ekstrom Bothman </p>
-                        <p class="text-base text-dark-black"> <b> SmartWorking brings all of our teams together into one place </b> so that they can stay on track, collaborate and communicate. </p>
+                        <p class="text-xs font-normal text-dark-black pb-3"> Adam Burrage </p>
+                        <p class="text-base text-dark-black"> Smart Working found us an excellent developer very quickly who has been one of our best developers since she began. We see her as a core member of the team and can see her being with us for the long term. It has worked really well. </p>
                         </div>
                     </div>
                     
