@@ -147,7 +147,22 @@
                     
 
                     <div class="block w-[100%] text-center">
-                        <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="">Get Started</a>
+                        <div class="mx-auto w-[100%] max-w-[250px] mb-7 relative">
+                            <div class="w-[100%] absolute z-2 left-[1rem] top-[38px]">
+                                <div class="w-[50px] h-[50px] inline-block rounded-full border border-[#fff] overflow-hidden">
+                                    <img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/2023-1.png">
+                                </div>
+                                <div class="w-[50px] h-[50px] inline-block rounded-full border border-[#fff] relative left-[-20px] overflow-hidden">
+                                    <img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/2023-2.png">
+                                </div>
+                                <div class="w-[50px] h-[50px] inline-block rounded-full text-white text-[13px] text-center pt-[14px] bg-[#000] border border-[#fff] relative left-[-40px] overflow-hidden">
+                                    50+
+                                </div>
+                            </div>
+                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/vetting-bottom.svg">
+                        </div>
+
+                        <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="">Hire Top 1% engineers</a>
                     </div>
 
 
