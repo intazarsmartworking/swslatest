@@ -47,63 +47,63 @@
                         </div>
                         <div class="block w-full mt-3 !pt-3 max-h-[240px] overflow-y-auto thin-scroll-bar">
                             <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                                <div onclick="skillPrice({id:1,midLevel:16,senior:20})" id="select-item-1"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:1,midLevel:12,senior:15})" id="select-item-1"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">WordPress</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:2,midLevel:20,senior:24})" id="select-item-2"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:2,midLevel:15,senior:18})" id="select-item-2"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">PHP</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:3,midLevel:20,senior:24})" id="select-item-3"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:3,midLevel:15,senior:18})" id="select-item-3"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">QA</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:4,midLevel:18,senior:23})" id="select-item-4"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:4,midLevel:14,senior:17})" id="select-item-4"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Data Analyst</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:5,midLevel:18,senior:23})" id="select-item-5"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:5,midLevel:14,senior:17})" id="select-item-5"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Data Engineer</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:6,midLevel:23,senior:26})" id="select-item-6"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:6,midLevel:17,senior:20})" id="select-item-6"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">MongoDB</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:7,midLevel:23,senior:26})" id="select-item-7"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:7,midLevel:17,senior:20})" id="select-item-7"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Laravel</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:8,midLevel:23,senior:26})" id="select-item-8"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:8,midLevel:17,senior:20})" id="select-item-8"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Kubernetes</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:9,midLevel:23,senior:26})" id="select-item-9"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:9,midLevel:17,senior:20})" id="select-item-9"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">iOS</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:10,midLevel:23,senior:26})" id="select-item-10"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:10,midLevel:17,senior:20})" id="select-item-10"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Docker</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:11,midLevel:23,senior:26})" id="select-item-11"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:11,midLevel:17,senior:20})" id="select-item-11"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Django</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:12,midLevel:23,senior:26})" id="select-item-12" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:12,midLevel:17,senior:20})" id="select-item-12" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">DevOps</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:13,midLevel:23,senior:26})" id="select-item-13"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:13,midLevel:17,senior:20})" id="select-item-13"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Azure</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:14,midLevel:23,senior:26})" id="select-item-14"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:14,midLevel:17,senior:20})" id="select-item-14"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">AWS</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
-                                <div onclick="skillPrice({id:15,midLevel:23,senior:26})" id="select-item-15" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+                                <div onclick="skillPrice({id:15,midLevel:17,senior:20})" id="select-item-15" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
                                     <span class="block">Angular</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
@@ -171,7 +171,7 @@
                     <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
                         
                         <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
-                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">$<span id="total-price">20000</span>/hr</h1>
+                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">£<span id="total-price">0</span>/hr</h1>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
                             <a href="/contact-us/"> <button class="w-full text-white text-[16px] rounded-[14px] py-[10px] px-[20px] border-0 btn-gradient shadow-[0px,10px,25px,0px,rgba(16, 30, 54, 0.10)] " >Start saving with SmartWorking</button> </a>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p>
@@ -179,7 +179,7 @@
 
                         <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4 text-center">
                             <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
-                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save $354,000/year</h1>
+                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save £<span id="discount-price">0</span>/month</h1>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p>
                             
                         </div>
@@ -402,7 +402,7 @@
     <?php if (have_rows('block')) : ?>
     <?php while (have_rows('block')) : the_row(); ?>
     <?php if (get_row_layout() == 'testimonial_section') : ?>
-        <div class="pt-[80px] my-0 mx-auto flex flex-col justify-center testimonial-section items-center set-margin">
+        <div class="pb-[80px] my-0 mx-auto flex flex-col justify-center testimonial-section items-center">
             <?php if(get_sub_field('small_heading')): ?>
                 <div class ="container mx-auto md:px-0 px-10">
                     <p class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
