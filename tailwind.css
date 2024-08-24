@@ -21,10 +21,10 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #0F0F0F;
-    background-image: radial-gradient(circle, rgba(172,58,9,0.4) 0%, transparent 50%);
-    background-repeat: no-repeat;
+    /* background-image: radial-gradient(circle, rgba(172,58,9,0.4) 0%, transparent 50%); */
+    /* background-repeat: no-repeat;
     background-position: top -200px left 0px;
-    background-size: 100% 1024px;
+    background-size: 100% 1024px; */
 }
 
 
@@ -577,44 +577,44 @@ body {
 }
 
 .orangepart{
-    background: linear-gradient(to right, rgba(59, 28, 14, 1), rgba(255, 77, 2, 1));
+    border: 1px solid #9F502F;
+    background: linear-gradient(299deg, #3B1C0E 0.1%, #FF4D02 100.1%);
     border-radius: 12px;
 }
 
 .greenpart{
-    background: linear-gradient(to right, rgba(58, 103, 46, 1), rgba(23, 38, 19, 1));
+    border: 1px solid #60E3D5;
+    background: linear-gradient(299deg, #60E3D5 0.1%, #309F94 100.1%);
     border-radius: 12px;
-    margin-top:15px
 }
 
 .firozipart{
-    background: linear-gradient(to right, rgba(96, 227, 213, 1), rgba(48, 159, 148, 1));
+    border: 1px solid #FF7B31;
+    background: linear-gradient(299deg, #FF7B31 0.1%, #EC9C52 100.1%);
     border-radius: 12px;
-    margin-bottom:15px
 }
 
 .lightorangepart{
-    background: linear-gradient(to right, rgba(255, 123, 49, 1), rgba(236, 156, 82, 1));
+    border: 1px solid #ECC1A1;
+    background: linear-gradient(299deg, #ECC1A1 0.1%, #D09C76 100.1%);
     border-radius: 12px;
-    margin-bottom:15px
 }
 
 .brownpart{
-    background: linear-gradient(to right, rgba(236, 193, 161, 1), rgba(208, 156, 118, 1));
+    border: 1px solid #6098B3;
+    background: linear-gradient(299deg, #77BDDF 0.1%, #4F99BD 100.1%);
     border-radius: 12px;
-    margin-bottom:15px
 }
 
 .darkfirozipart{
     background: linear-gradient(to right, rgba(119, 189, 223, 1), rgba(79, 153, 189, 1));
     border-radius: 12px;
-    margin-bottom:15px
 }
 
 .violetpart{
-    background: linear-gradient(to right, rgba(194, 130, 250, 1), rgba(145, 62, 218, 1));
+    border: 1px solid #9C68C9;
+    background: linear-gradient(299deg, #C282FA 0.1%, #913EDA 100.1%);
     border-radius: 12px;
-    margin-bottom:15px
 }
 
 .custom-bg {
@@ -623,8 +623,23 @@ body {
     padding: 24px;
 }
 .custom-border {
-    border: 1px solid rgba(255, 77, 2, 0.3);
     border-radius: 24px;
+    border: 1px solid rgba(255, 77, 2, 0.30);
+    background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(255, 77, 2, 0.10) 0%, rgba(255, 77, 2, 0.00) 100%);
+}
+.tooltip-box{
+    position: absolute;
+    top: -31px;
+    width: 32px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+    display: block;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+    padding-top: 2px;
 }
 
 
@@ -704,12 +719,12 @@ body {
     font-size:16px;
 }
 
-.calculate-sec{
+/* .calculate-sec{
     background-image: url('../images/calculate-bg.svg');
     background-repeat: no-repeat; 
     background-size:cover;
     background-position: center;
-}
+} */
 
 .cal-bg{
     border-radius: 32px 32px 0px 0px;
@@ -2394,6 +2409,16 @@ input[type="range"].home-range-slider {
   }
   .desk-top-menu{
     display: block;
+  }
+  .landing-dev-box{
+    outline: 10px solid #99300454;
+  }
+  .logoSlider .bg-trust-box{
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .logoSlider .bg-trust-box img{
+    width: 100%;
   }
 
 

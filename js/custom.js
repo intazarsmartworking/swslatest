@@ -679,6 +679,45 @@ jQuery('.relatedBlogs').slick({
 });
 
 
+$('.logoSlider').slick({
+  dots: true,
+  infinite: false,
+  speed: 100,
+  slidesToShow: 8,
+  slidesToScroll: 4,
+  centerMode: false,
+  focusOnSelect: true,
+  autoplay: true,
+  arrows: false,
+  dots:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 8,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+
 jQuery('#prev-blog').click(function(e) {
   jQuery('.relatedBlogs').slick('slickNext');
 });

@@ -65,9 +65,11 @@
                 </div>
 			</div>
             <div class="grid-item col-span-5 content-center relative">
-				<div class=" bg-white rounded-[30px] min-h-[600px] py-[30px] px-[10px]">
-                    <iframe aria-label='Share Your Requirement' frameborder="0" style="height:550px;width:100%;border:none;" src='https://forms.smartworking.io/shubhankit/form/ContactUsForm/formperma/id4WgG4ZljDvVm388-5p-A9d9t9TFE8-Mm8cXswDscI'></iframe>
+                <img class="absolute right-[-200px] bottom-[150px] w-[450px] z-0 rotate-[0deg]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
+				<div class=" bg-white rounded-[30px] min-h-[750px] py-[40px] px-[25px] relative z-10">
+                    <iframe aria-label='Share Your Requirement' frameborder="0" style="height:700px;width:100%;border:none;" src='https://forms.smartworking.io/shubhankit/form/ContactUsForm/formperma/id4WgG4ZljDvVm388-5p-A9d9t9TFE8-Mm8cXswDscI'></iframe>
                 </div>
+                
 			</div>
         </div>
     </div>
