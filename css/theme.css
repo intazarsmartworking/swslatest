@@ -1069,6 +1069,15 @@ select {
 .top-\[66\%\] {
   top: 66%;
 }
+.top-\[-10\%\] {
+  top: -10%;
+}
+.left-\[-20\%\] {
+  left: -20%;
+}
+.top-\[-16\%\] {
+  top: -16%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1660,6 +1669,9 @@ select {
   width: -moz-max-content;
   width: max-content;
 }
+.w-\[150\%\] {
+  width: 150%;
+}
 .min-w-\[280px\] {
   min-width: 280px;
 }
@@ -1740,6 +1752,13 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-\[max-content\] {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.max-w-\[initial\] {
+  max-width: initial;
 }
 .flex-1 {
   flex: 1 1 0%;
