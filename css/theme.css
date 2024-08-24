@@ -2451,6 +2451,10 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
