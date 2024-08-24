@@ -1702,7 +1702,7 @@ ul li, ol li{
 }
 
 .scroll-section{
-    padding-top: 40px;
+    padding-top: 10px;
 }
 #sticky-details{
     display: none;
@@ -1829,6 +1829,9 @@ ul li, ol li{
 }
 .price-list-box{
     background: radial-gradient(152.95% 117.03% at 22.81% 4%, #291005 0%, #180903 100%);
+}
+.change-icons{
+    rotate: 180deg;
 }
 
 

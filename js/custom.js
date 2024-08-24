@@ -809,7 +809,14 @@ function scrollToAnyPoint (navItem) {
 scrollToAnyPoint("a[data-location]");
 
 jQuery('#show-more').on('click', function(){
-  console.log('log')
+  console.log('log', jQuery(this).text())
+  jQuery('#change-icons').toggleClass('change-icons')
+
+  if(jQuery(this).text() == 'Show'){
+    jQuery(this).text('Hide')
+  }else{
+    jQuery(this).text('Show')
+  }
   callFunction()
 })
 

@@ -940,9 +940,6 @@ select {
 .bottom-\[13px\] {
   bottom: 13px;
 }
-.bottom-\[150px\] {
-  bottom: 150px;
-}
 .bottom-\[20px\] {
   bottom: 20px;
 }
@@ -982,9 +979,6 @@ select {
 .right-\[-150px\] {
   right: -150px;
 }
-.right-\[-200px\] {
-  right: -200px;
-}
 .right-\[-27px\] {
   right: -27px;
 }
@@ -1017,9 +1011,6 @@ select {
 }
 .top-4 {
   top: 1rem;
-}
-.top-\[-150px\] {
-  top: -150px;
 }
 .top-\[-30\%\] {
   top: -30%;
@@ -1437,9 +1428,6 @@ select {
 .h-\[25px\] {
   height: 25px;
 }
-.h-\[26px\] {
-  height: 26px;
-}
 .h-\[28px\] {
   height: 28px;
 }
@@ -1472,9 +1460,6 @@ select {
 }
 .h-\[55px\] {
   height: 55px;
-}
-.h-\[600px\] {
-  height: 600px;
 }
 .h-\[80px\] {
   height: 80px;
@@ -1635,9 +1620,6 @@ select {
 .w-\[40px\] {
   width: 40px;
 }
-.w-\[450px\] {
-  width: 450px;
-}
 .w-\[50\%\] {
   width: 50%;
 }
@@ -1758,10 +1740,6 @@ select {
 }
 .rotate-\[-30deg\] {
   --tw-rotate: -30deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.rotate-\[0deg\] {
-  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-\[180deg\] {
@@ -2450,10 +2428,6 @@ select {
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
-}
-.px-\[10px\] {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .\!pb-0 {
   padding-bottom: 0px !important;
@@ -4535,7 +4509,7 @@ ul li, ol li{
     top: 70px;
 }
 .scroll-section{
-    padding-top: 40px;
+    padding-top: 10px;
 }
 #sticky-details{
     display: none;
@@ -4656,6 +4630,9 @@ ul li, ol li{
 }
 .price-list-box{
     background: radial-gradient(152.95% 117.03% at 22.81% 4%, #291005 0%, #180903 100%);
+}
+.change-icons{
+    rotate: 180deg;
 }
 .vetting_img{
     background-image: linear-gradient(90deg, white, transparent);
@@ -5677,10 +5654,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     margin-right: 10px;
   }
 
-  .lg\:mt-36 {
-    margin-top: 9rem;
-  }
-
   .lg\:mt-\[0px\] {
     margin-top: 0px;
   }
@@ -5857,11 +5830,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .lg\:py-\[10rem\] {
     padding-top: 10rem;
     padding-bottom: 10rem;
-  }
-
-  .lg\:py-\[15\%\] {
-    padding-top: 15%;
-    padding-bottom: 15%;
   }
 
   .lg\:py-\[30px\] {
