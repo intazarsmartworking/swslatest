@@ -982,11 +982,17 @@ select {
 .right-\[-27px\] {
   right: -27px;
 }
+.right-\[-30\%\] {
+  right: -30%;
+}
 .right-\[-35\%\] {
   right: -35%;
 }
 .right-\[-7px\] {
   right: -7px;
+}
+.right-\[0\] {
+  right: 0;
 }
 .right-\[0px\] {
   right: 0px;
@@ -1015,11 +1021,11 @@ select {
 .top-\[-30\%\] {
   top: -30%;
 }
-.top-\[-45\%\] {
-  top: -45%;
-}
 .top-\[-4px\] {
   top: -4px;
+}
+.top-\[-5\%\] {
+  top: -5%;
 }
 .top-\[-5\] {
   top: -5;
@@ -1029,6 +1035,9 @@ select {
 }
 .top-\[-6\%\] {
   top: -6%;
+}
+.top-\[-8\%\] {
+  top: -8%;
 }
 .top-\[-80px\] {
   top: -80px;
@@ -1057,11 +1066,8 @@ select {
 .top-\[40px\] {
   top: 40px;
 }
-.right-\[-30\%\] {
-  right: -30%;
-}
-.top-\[-8\%\] {
-  top: -8%;
+.top-\[66\%\] {
+  top: 66%;
 }
 .z-0 {
   z-index: 0;
