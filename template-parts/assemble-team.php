@@ -1,4 +1,4 @@
-<div class="w-full relative assemble-team">
+<div class="w-full relative">
     <div class="w-full relative  grid items-center assemble-inner lg:pt-[50px]">
     <div class="container md:px-0 px-10 max-w-[80rem] mx-auto">
     <h3 class="text-center small-intro"> Make Team </h3>

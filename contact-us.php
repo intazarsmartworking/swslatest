@@ -69,8 +69,8 @@
 		<?php endif; ?>	
 			
 		<div class="grid-item col-span-5 content-center relative">
-			<div class=" bg-white rounded-[30px] min-h-[600px] py-[30px] px-[10px]">
-              <iframe aria-label='Share Your Requirement' frameborder="0" style="height:550px;width:100%;border:none;" src='https://forms.smartworking.io/shubhankit/form/ContactUsForm/formperma/id4WgG4ZljDvVm388-5p-A9d9t9TFE8-Mm8cXswDscI'></iframe>
+			<div class=" bg-white rounded-[30px] min-h-[750px] py-[40px] px-[25px]">
+              <iframe aria-label='Share Your Requirement' frameborder="0" style="height:750px;width:100%;border:none;" src='https://forms.smartworking.io/shubhankit/form/ContactUsForm/formperma/id4WgG4ZljDvVm388-5p-A9d9t9TFE8-Mm8cXswDscI'></iframe>
             </div>
 		</div>
         </div>
