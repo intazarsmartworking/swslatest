@@ -43,12 +43,12 @@
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
                         <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Role</h1>
                         <div class=" block w-full mt-3">
-                            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
+                            <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>
-                        <div class="block w-full mt-3 !pt-3 max-h-[240px] overflow-y-auto thin-scroll-bar">
-                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                        <div class="block w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
+                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem">
                                 <div onclick="skillPrice({id:1,midLevel:12,senior:15})" id="select-item-1"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">WordPress</span>
+                                    <span class="block pro-name">WordPress</span>
                                     <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
                                 </div>
                                 <div onclick="skillPrice({id:2,midLevel:15,senior:18})" id="select-item-2"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">

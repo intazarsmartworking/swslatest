@@ -1189,4 +1189,9 @@ jQuery("#mobile-menu-show").on('click', function(){
 })
 
 
-
+$("#myInput").on("keyup", function() {
+  var value = this.value.toLowerCase().trim();
+  $("#searchItem .item-skill").show().filter(function() {
+    return $(this).text().toLowerCase().trim().indexOf(value) == -1;
+  }).hide();
+});
