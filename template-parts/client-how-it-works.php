@@ -16,21 +16,7 @@
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
-                            <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-0 top-4 lg:top-3 rounded-3xl bg-[#F4C8BA]">
-                                <div class="flex mb-2 justify-between items-center">
-                                    <div class="flex items-center">
-                                        <span class="bg-[#C4654B] w-[40px] h-[40px] rounded-full mr-3"></span>
-                                        <p class="text-[24px] font-bold">UX Designer</p>
-                                    </div>
-                                    <p>5d</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p>Part-time | New York</p>
-                                </div>
-                                <div class="bg-[#DD572C] py-2 px-5 rounded-full w-max">
-                                    <p class="text-white">Applied Jan 24</p>
-                                </div>
-                            </div>
+                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/outline-your-requirements.png" />
                         </div>
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
@@ -57,21 +43,7 @@
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
-                            <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-0 top-4 lg:top-3 rounded-3xl bg-[#F4C8BA]">
-                                <div class="flex mb-2 justify-between items-center">
-                                    <div class="flex items-center">
-                                        <span class="bg-[#C4654B] w-[40px] h-[40px] rounded-full mr-3"></span>
-                                        <p class="text-[24px] font-bold">UX Designer</p>
-                                    </div>
-                                    <p>5d</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p>Part-time | New York</p>
-                                </div>
-                                <div class="bg-[#DD572C] py-2 px-5 rounded-full w-max">
-                                    <p class="text-white">Applied Jan 24</p>
-                                </div>
-                            </div>
+                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Meet-the-best-engineers.png" />
                         </div>
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
@@ -102,21 +74,7 @@
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
-                            <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-0 top-4 lg:top-3 rounded-3xl bg-[#F4C8BA]">
-                                <div class="flex mb-2 justify-between items-center">
-                                    <div class="flex items-center">
-                                        <span class="bg-[#C4654B] w-[40px] h-[40px] rounded-full mr-3"></span>
-                                        <p class="text-[24px] font-bold">UX Designer</p>
-                                    </div>
-                                    <p>5d</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p>Part-time | New York</p>
-                                </div>
-                                <div class="bg-[#DD572C] py-2 px-5 rounded-full w-max">
-                                    <p class="text-white">Applied Jan 24</p>
-                                </div>
-                            </div>
+                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Quick-Effective-Onboarding.png" />
                         </div>
                         
                     </div>
@@ -145,21 +103,7 @@
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
-                            <div class="min-h-[150px] p-4 flex-col min-w-[280px] absolute left-0 top-4 lg:top-3 rounded-3xl bg-[#F4C8BA]">
-                                <div class="flex mb-2 justify-between items-center">
-                                    <div class="flex items-center">
-                                        <span class="bg-[#C4654B] w-[40px] h-[40px] rounded-full mr-3"></span>
-                                        <p class="text-[24px] font-bold">UX Designer</p>
-                                    </div>
-                                    <p>5d</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p>Part-time | New York</p>
-                                </div>
-                                <div class="bg-[#DD572C] py-2 px-5 rounded-full w-max">
-                                    <p class="text-white">Applied Jan 24</p>
-                                </div>
-                            </div>
+							<img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Long-Term-support.png" />
                         </div>
                         
                     </div>
@@ -178,5 +122,5 @@
                     </div>
                 </div>
             </section>
-    </div>
+	</div>
 </section>
