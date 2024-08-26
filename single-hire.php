@@ -1,15 +1,9 @@
 <?php  get_header(); ?>
-
-
-<?php
-  if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
-	
-?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php if (have_rows('hire_block_section')) : ?>
-	<?php while (have_rows('hire_block_section')) : the_row(); ?>
-    <?php if (get_row_layout() == 'banner_section') : ?>
+<?php while (have_rows('hire_block_section')) : the_row(); ?>
+<?php if (get_row_layout() == 'banner_section') : ?>
 
 <div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
 <div class="container mx-auto mt-5">
@@ -65,8 +59,6 @@
       <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
 	<?php endif; ?>  
     </div>
-	
-	
 	<div class="container mx-auto p-4">
         <div class="flex flex-wrap -mx-2">
 		
@@ -184,15 +176,13 @@
 
        
         <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
-
-
-        <?php if(have_rows('step_section')): ?>
-					<?php while(have_rows('step_section')): the_row(); ?>
-					<?php 
-						$step_title = get_sub_field('step_title'); 
-						$title = get_sub_field('title'); 
-            $position = get_sub_field('position'); 
-					?>  
+		<?php if(have_rows('step_section')): ?>
+		<?php while(have_rows('step_section')): the_row(); ?>
+		<?php 
+		  $step_title = get_sub_field('step_title'); 
+		  $title = get_sub_field('title'); 
+          $position = get_sub_field('position'); 
+		?>  
              <div class="grid-item col-span-3 pt-[50px] relative <?php echo $position;?>">
                <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
                <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
@@ -203,13 +193,10 @@
                     <img class="max-w-[100%] h-[220px] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
                    </div>
                </div>
-			   
-             </div>
-            
-              <?php endwhile; ?>	
-            <?php endif; ?>  
-           
-             </div>
+			 </div>
+        <?php endwhile; ?>	
+        <?php endif; ?>  
+        </div>
 
         <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
            <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
@@ -247,58 +234,40 @@
         </div>
 		
 		<div class="container mx-auto md:px-0 px-10">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative mb-28">
-			<div>
+		<div class="grid grid-cols-1 md:grid-cols-10 gap-6 justify-center relative">
 			<?php if(get_sub_field('big_box_title')): ?>
-			  <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-48">
-				<img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
-				<h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
-			  </div>
-			<?php endif; ?>    
-				
-			<?php if(get_sub_field('below_big_box_title')): ?>	
-			 <div class="flex flex-col justify-center items-center text-center align-middle relative greenpart px-40 py-6">
-               <div class="justify-center items-center text-center align-middle">
-				 <span class="inline-block align-middle"> <img class="mb-3" src="<?php echo get_sub_field('below_big_box_image')['url']; ?>" alt="" /> </span>
-				 <span class="text-2xl text-white font-bold mb-4 inline-block"><?php echo get_sub_field('below_big_box_title'); ?></span>
-               </div>
-			 </div>
-			<?php endif; ?> 
-			
-			</div>
-			
-			
-			<div>
+				<div class="grid-item col-span-10">
+					<div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-28">
+					  <img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
+					  <h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
+					</div>
+				</div>
+			<?php endif; ?>
 			
 			<?php if(have_rows('box_section')): ?>
 			<?php while(have_rows('box_section')): the_row(); ?>
 			<?php 
 			  $title = get_sub_field('title'); 
 			  $paragraph = get_sub_field('paragraph'); 
-              $background_name = get_sub_field('background_name'); 
+			  $background_name = get_sub_field('background_name'); 
 			?>
-				<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
-				<div class="grid items-center grid-cols-9 gap-0">
-				  <div class="col-span-1"> 
-					<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
-				  </div>
-					<div class="col-span-5 pl-2">
-					<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
-					<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
+				<div class="grid-item col-span-5">
+					<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
+					  <div class="grid items-center grid-cols-9 gap-0">
+						  <div class="col-span-1"> 
+							<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
+						  </div>
+						  <div class="col-span-5 pl-2">
+							<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
+							<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
+						  </div>
+					  </div>
 					</div>
 				</div>
-				   
-				</div>
-				
-				<?php endwhile; ?>	
-			<?php endif; ?> 	
-				
-				
-			</div>
-            
-        </div>
+			<?php endwhile; ?>	
+			<?php endif; ?> 
 		</div>
-        
+		</div>
 </section>
 <?php endif; ?>
 
