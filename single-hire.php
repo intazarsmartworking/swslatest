@@ -31,13 +31,36 @@
       
     </div>
   </div>
-  <?php $main_image = get_sub_field('main_image');
-	if (!empty($main_image) && isset($main_image['url'])):
-  ?>
-    <div class="w-full relative">
-        <img class="w-full my-12" src="<?php echo esc_url($main_image['url']); ?>" alt="">
-    </div>
-  <?php endif; ?>
+  <div class="w-full relative">
+	<div class="w-[100%] landing-dev-box h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+	
+	<?php if(have_rows('banner_right_box')): ?>
+	<?php while(have_rows('banner_right_box')): the_row(); ?>
+	<?php 
+	  $heading_name = get_sub_field('heading_name'); 
+	  $heading_value = get_sub_field('heading_value'); 
+	?>
+	  <div class="w-[100%] py-[10px] pl-[65px] pr-[10px] relative mb-[20px]">
+	  
+		  <?php $main_image = get_sub_field('icon');
+			if (!empty($main_image) && isset($main_image['url'])):
+		  ?>
+			  <div class="w-[52px] h-[52px] absolute left-0 top-[10px] rounded-[50%] text-center bg-[#FF4D02] overflow-hidden pt-[9px]">
+				<img  src="<?php echo esc_url($main_image['url']); ?>" alt="">
+			  </div>
+		  <?php endif; ?>
+		  <?php if($heading_name): ?>
+		  <span class="block text-[16px] text-[#08111F] "><?php echo $heading_name;?></span>
+		  <?php endif; ?>
+		  
+		  <?php if($heading_value): ?>
+		  <span class="block text-[24px] text-[#08111F] font-[700]"><?php echo $heading_value;?></span>
+		  <?php endif; ?>
+	  </div>
+	<?php endwhile; ?>	
+	<?php endif; ?>  
+	</div>
+  </div>
 </div>
 </div>
 </div>
