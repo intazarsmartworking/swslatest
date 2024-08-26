@@ -1515,9 +1515,6 @@ select {
 .max-h-\[120px\] {
   max-height: 120px;
 }
-.max-h-\[240px\] {
-  max-height: 240px;
-}
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -2541,6 +2538,9 @@ select {
 .pb-\[45px\] {
   padding-bottom: 45px;
 }
+.pb-\[80px\] {
+  padding-bottom: 80px;
+}
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -2657,9 +2657,6 @@ select {
 }
 .pt-\[9px\] {
   padding-top: 9px;
-}
-.pb-\[80px\] {
-  padding-bottom: 80px;
 }
 .text-left {
   text-align: left;
@@ -5117,13 +5114,13 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   }
 .header-menu li{
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0px;
   }
 .header-menu li a{
     display: block;
     cursor: pointer;
-    padding: 12px 16px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 13px;
     font-weight: 400;
     color: #fff;
     border-radius: 4px;
