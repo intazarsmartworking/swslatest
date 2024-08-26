@@ -996,9 +996,11 @@ var skillPeopleData = 1;
 
 
 function skillPrice(price){
-  jQuery('.item-skill').removeClass('active');
-  const activeItem = `#select-item-${price.id}`
-  jQuery(activeItem).addClass('active')
+  //console.log(item)
+  //const price = JSON.parse(item);
+  // jQuery('.item-skill').removeClass('active');
+  // const activeItem = `#select-item-${price.id}`
+  // jQuery(activeItem).addClass('active')
   skillPriceData = price;
   console.log(price)
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
@@ -1195,3 +1197,94 @@ $("#myInput").on("keyup", function() {
     return $(this).text().toLowerCase().trim().indexOf(value) == -1;
   }).hide();
 });
+
+var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;;
+
+console.log('dataSet', timeZone)
+
+
+function priceRateGet(){
+  var priceDataPound = [
+    {id:1, midLevel:12,senior:15, name:'WordPress'},
+    {id:2,midLevel:15,senior:18, name:'PHP'},
+    {id:3,midLevel:15,senior:18, name:'QA'},
+    {id:4,midLevel:14,senior:17, name:'Data Analyst'},
+    {id:5,midLevel:14,senior:17, name:'Data Engineer'},
+    {id:6,midLevel:17,senior:20, name:'MongoDB'},
+    {id:7,midLevel:17,senior:20, name:'Laravel'},
+    {id:8,midLevel:17,senior:20, name:'Kubernetes'},
+    {id:9,midLevel:17,senior:20, name:'iOS'},
+    {id:10,midLevel:17,senior:20, name:'Docker'},
+    {id:11,midLevel:17,senior:20, name:'Django'},
+    {id:12,midLevel:17,senior:20, name:'DevOps'},
+    {id:13,midLevel:17,senior:20, name:'Azure'},
+    {id:14,midLevel:17,senior:20, name:'AWS'},
+    {id:15,midLevel:17,senior:20, name:'Angular'}
+  ]
+
+  var priceDataDoller = [
+    {id:1, midLevel:16, senior:20, name:'WordPress'},
+    {id:2, midLevel:20, senior:24, name:'PHP'},
+    {id:3, midLevel:20, senior:24, name:'QA'},
+    {id:4, midLevel:18, senior:23, name:'Data Analyst'},
+    {id:5, midLevel:18, senior:23, name:'Data Engineer'},
+    {id:6, midLevel:23, senior:26, name:'MongoDB'},
+    {id:7, midLevel:23, senior:26, name:'Laravel'},
+    {id:8, midLevel:23, senior:26, name:'Kubernetes'},
+    {id:9, midLevel:23, senior:26, name:'iOS'},
+    {id:10, midLevel:23, senior:26, name:'Docker'},
+    {id:11, midLevel:23, senior:26, name:'Django'},
+    {id:12, midLevel:23, senior:26, name:'DevOps'},
+    {id:13, midLevel:23, senior:26, name:'Azure'},
+    {id:14, midLevel:23, senior:26, name:'AWS'},
+    {id:15, midLevel:23, senior:26, name:'Angular'}
+  ]
+
+  var priceDataEuro = [
+    {id:1,midLevel:14,senior:18, name:'WordPress'},
+    {id:2,midLevel:18,senior:21, name:'PHP'},
+    {id:3,midLevel:18,senior:21, name:'QA'},
+    {id:4,midLevel:17,senior:20, name:'Data Analyst'},
+    {id:5,midLevel:17,senior:20, name:'Data Engineer'},
+    {id:6,midLevel:20,senior:24, name:'MongoDB'},
+    {id:7,midLevel:20,senior:24, name:'Laravel'},
+    {id:8,midLevel:20,senior:24, name:'Kubernetes'},
+    {id:9,midLevel:20,senior:24, name:'iOS'},
+    {id:10,midLevel:20,senior:24, name:'Docker'},
+    {id:11,midLevel:20,senior:24, name:'Django'},
+    {id:12,midLevel:20,senior:24, name:'DevOps'},
+    {id:13,midLevel:20,senior:24, name:'Azure'},
+    {id:14,midLevel:20,senior:24, name:'AWS'},
+    {id:15,midLevel:20,senior:24, name:'Angular'}
+  ]
+
+  var priceLocationList = []
+
+  if(timeZone.includes('Europe')){
+    priceLocationList = priceDataEuro;
+  }else{
+    priceLocationList = priceDataPound;
+    console.log('priceDataDoller', priceDataDoller)
+  }
+
+
+
+  var priceData = jQuery('#searchItem');
+      priceLocationList.forEach(function(item) {
+        var itemData = jQuery('<div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] "><span class="block pro-name">'+item.name+'</span><span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span></div>').data('price', item)
+          priceData.append(itemData);
+      });
+
+
+      priceData.on('click', '.item-skill', function() {
+          jQuery('.item-skill').removeClass('active')
+          jQuery(this).addClass('active')
+          var priceValue = jQuery(this).data('price');
+          skillPrice(priceValue);
+      });
+
+
+
+
+}
+

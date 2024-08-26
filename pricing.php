@@ -45,83 +45,9 @@
                         <div class=" block w-full mt-3">
                             <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>
-                        <div class="block w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
-                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem">
-                                <div onclick="skillPrice({id:1,midLevel:12,senior:15})" id="select-item-1"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block pro-name">WordPress</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:2,midLevel:15,senior:18})" id="select-item-2"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">PHP</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:3,midLevel:15,senior:18})" id="select-item-3"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">QA</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:4,midLevel:14,senior:17})" id="select-item-4"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Data Analyst</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:5,midLevel:14,senior:17})" id="select-item-5"   class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Data Engineer</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:6,midLevel:17,senior:20})" id="select-item-6"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">MongoDB</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:7,midLevel:17,senior:20})" id="select-item-7"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Laravel</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:8,midLevel:17,senior:20})" id="select-item-8"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Kubernetes</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:9,midLevel:17,senior:20})" id="select-item-9"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">iOS</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:10,midLevel:17,senior:20})" id="select-item-10"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Docker</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:11,midLevel:17,senior:20})" id="select-item-11"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Django</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:12,midLevel:17,senior:20})" id="select-item-12" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">DevOps</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:13,midLevel:17,senior:20})" id="select-item-13"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Azure</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:14,midLevel:17,senior:20})" id="select-item-14"  class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">AWS</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-                                <div onclick="skillPrice({id:15,midLevel:17,senior:20})" id="select-item-15" class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
-                                    <span class="block">Angular</span>
-                                    <img class="active-img absolute h-[20px] w-[20px] right-[-7px] top-[-5px]" src="<?php echo get_template_directory_uri();?>/images/active-skill.png" />
-                                </div>
-
-                            
-                            
-                            <!-- <?php 
-                            $hire_args = array( 'post_type' => 'hire');
-                            $hire_query	= new WP_Query($hire_args);
-                            ?>
-                            <?php while ($hire_query->have_posts()) : $hire_query->the_post();?>
-                            <?php 
-                                $hire_image_id = get_post_thumbnail_id();
-                                $hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
-                            ?>
-                            <?php endwhile; wp_reset_postdata();?>    -->
-                                
-                            </div>
+                        <div class="w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
+                            <!-- Append Item from id in javascript file -->
+                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem"></div>
                         </div>
                         <div class=" block w-full mt-[30px]">
                             <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h1>
@@ -559,7 +485,8 @@
 
 <script type="text/javascript">
     jQuery(window).bind("load", function() {
-	    loadPricePage()
+	    loadPricePage();
+        priceRateGet();
 	});
 </script>
 
