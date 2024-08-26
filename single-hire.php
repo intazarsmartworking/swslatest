@@ -140,16 +140,73 @@
                            
                     </div>
 					
-					 <?php if(have_rows('rate')): ?>
-					 <?php while(have_rows('rate')): the_row(); ?>
+					 <?php  
+						 $interview_screening_value = get_sub_field('interview_screening');
+						 $interview_screening_percent = get_sub_field('interview_screening');
+						 $interview_screening_multiply = $interview_screening_percent* 10;
+						 $interview_screening_color = get_sub_field('interview_screening_color');
+					 ?>
 					
-					<div class="w-full p-4 mt-4">
-						<img src="<?php echo get_sub_field('image')['url']; ?>">
-					</div>
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $interview_screening_color;?>; left:calc(<?php echo $interview_screening_multiply;?>% - 16px)">
+								<?php echo $interview_screening_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $interview_screening_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $interview_screening_multiply;?>%; background:<?php echo $interview_screening_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
 
-						<?php endwhile; ?>	
-					<?php endif; ?>
 					
+					
+					<?php  
+						 $technical_assignment_value = get_sub_field('technical_assignment');
+						 $technical_assignment_percent = get_sub_field('technical_assignment');
+						 $technical_assignment_multiply = $technical_assignment_percent* 10;
+						 $technical_assignment_color = get_sub_field('technical_assignment_color');
+					 ?>
+					
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Assisment</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $technical_assignment_color;?>; left:calc(<?php echo $technical_assignment_multiply;?>% - 16px)">
+								<?php echo $technical_assignment_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $technical_assignment_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $technical_assignment_multiply;?>%; background:<?php echo $technical_assignment_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
+
+					
+					
+					 <?php 
+						 $language_proficiency_value = get_sub_field('language_proficiency');
+						 $language_proficiency_percent = get_sub_field('language_proficiency');
+						 $language_proficiency_multiply = $language_proficiency_percent* 10;
+						 $language_proficiency_color = get_sub_field('language_proficiency_color');
+					 ?>
+					
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Language Proficiency</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $language_proficiency_color;?>; left:calc(<?php echo $language_proficiency_multiply;?>% - 16px)">
+								<?php echo $language_proficiency_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $language_proficiency_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $language_proficiency_multiply;?>%; background:<?php echo $language_proficiency_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
+
 					
 					
 					<div class="flex flex-wrap -mx-2 mt-4">

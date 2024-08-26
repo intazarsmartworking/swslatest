@@ -96,7 +96,7 @@
                       <img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
                       <div>
                         <span class="text-white text-2xl font-medium block">Author Name</span>
-                        <span class="text-white text-sm font-normal block">WordPress Developer</span>
+                        <span class="text-white text-sm font-normal block">WordPress Developer11</span>
                       </div>
                   </div>
                   <div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
