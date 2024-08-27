@@ -87,49 +87,49 @@
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
                     <span class="menu-title">Front-End Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
                   </a>
                 </li>
                 <li data-menu="backEndDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
                     <span class="menu-title">Back-End Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
                   </a>
                 </li>
                 <li data-menu="fullStackDev">
                   <a>
                   <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/full-stack-development.svg">
                     <span class="menu-title">Full Stack Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
-                  </a>
-                </li>
-                <li data-menu="mobileDev">
-                  <a>
-                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/mobile-development.svg">
-                    <span class="menu-title">Mobile Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
                   </a>
                 </li>
                 <li data-menu="webDev">
                   <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/web-development.svg">
-                    <span class="menu-title">Web Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
+                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/mobile-development.svg">
+                    <span class="menu-title">Web Developer</span>
                   </a>
                 </li>
-                <li data-menu="gameDev">
+                <li data-menu="cloudDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/web-development.svg">
+                    <span class="menu-title">Cloud Developer</span>
+                  </a>
+                </li>
+                <li data-menu="trendingDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
-                    <span class="menu-title">Game & Systems Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
+                    <span class="menu-title">Trending Development</span>
                   </a>
                 </li>
                 <li data-menu="specializedDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Specialized Development</span>
-                    <span class="menu-sub-title">Front-End Development</span>
+                    <span class="menu-title">Mobile App Development</span>
+                  </a>
+                </li>
+				
+				<li data-menu="specializedDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
+                    <span class="menu-title">Software Development</span>
                   </a>
                 </li>
                 
@@ -139,59 +139,86 @@
               <div class="w-[100%] bg-[#231008] h-[100%] rounded-[10px] p-5">
                   <div class="show-more-menu show-more" id="frontEndDev">
                     <ul class="mega-menu-center">
-                      <li><a href="#">AngularJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Front End Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">JavaScript Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">ReactJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">VueJs Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
                   <div class="show-more-menu" id="backEndDev">
                     <ul class="mega-menu-center">
-                      <li><a href="#">.Net Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Back End Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">C# Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Django Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Laravel Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Node.js Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">PHP Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Python Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Ruby on Rails Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">SQL Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/java-developer/">Java Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/python/">Python Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/ruby-on-rails-developer/">Ruby on Rails Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/dot-net-developer/">.Net Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/node-js-developer/">Node.js Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/django-developer/">Django Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
                   <div class="show-more-menu" id="fullStackDev">
                     <ul class="mega-menu-center">
-                      <li><a href="#">Full Stack Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/node-js-developer/">Node.js  Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+				  <div class="show-more-menu" id="webDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/woocommerce-developer/">WooCommerce Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/wordpress-developer/">WordPress Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/magento-developer/">Magento Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/shopify-developer/">Shopify Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/node-js-developer/">Node.js Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+				  <div class="show-more-menu" id="cloudDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="/hire/devops-developer/">DevOps Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/aws-developer/">AWS Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/azure-developer/">Azure Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+				  <div class="show-more-menu" id="trendingDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
                   <div class="show-more-menu" id="mobileDev">
                     <ul class="mega-menu-center">
-                      <li><a href="#">Android Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">iOS Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">App Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/android-developer/">Android Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/ios-developer/">iOS Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/flutter-developer/">Flutter Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/react-native-developer/">React Native Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
-                  <div class="show-more-menu" id="webDev">
-                    <ul class="mega-menu-center">
-                      <li><a href="#">Web Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Web3 Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">WordPress Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Magento Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Shopify Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
-                  </div>
-                  <div class="show-more-menu" id="gameDev">
-                    <ul class="mega-menu-center">
-                      <li><a href="#">C & C++ Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">JavaScript Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">React Developers <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
-                  </div>
+                  
+                  
                   <div class="show-more-menu" id="specializedDev">
                     <ul class="mega-menu-center">
-                      <li><a href="#">Data Scientist <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="#">Data Analyst <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/java-developer/">Java Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/python/">Python Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="hire/dot-net-developer/">.NET Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/flutter-developer/">Flutter Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/docker-developer/">Docker Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/kubernetes-developer/">Kubernetes Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
               </div>
