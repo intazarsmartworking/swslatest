@@ -687,25 +687,27 @@
                 
                 
               </div>
+			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
                 <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
-                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h1>
-                    <a href="/pricing/" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
+                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]"><?php echo get_sub_field('right_cta_heading'); ?></h1>
+					<?php if(get_sub_field('right_cta_button_name')): ?>
+                    <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]"><?php echo get_sub_field('right_cta_button_name'); ?> 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                       </svg>
                     </a>
-                <div>
+					<?php endif; ?>
+                </div>
               </div>
-            </div>
-          </div>
+			  <?php endif; ?>
     </div>
 </div>
 </div>
 </div>
 
 <?php endif; ?>  
-    <?php endwhile; ?>
+<?php endwhile; ?>
 <?php endif; ?>
 
 <?php
