@@ -59,8 +59,8 @@
       </div>
       <div class="col-span-5 content-center relative">
         <ul class="header-menu">
-          <li><a href="">About</a></li>
-          <li><a href="">Vetting Process</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/vetting-process/">Vetting Process</a></li>
           <li>
             <a data-mainmenu="hireDevId">
             Hire Developer
@@ -68,20 +68,13 @@
               <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
             </a>
           </li>
-          <li><a href="">Pricing</a></li>
-          <li>
-            <a data-mainmenu="insightsId">
-              Insights 
-              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
-              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
-            </a>
-          </li>
-          <li><a href="">For Developers</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+		  <li><a href="/blog/">Insights</a></li>
         </ul>
       </div>
       <div class="col-span-3 content-center text-end">
-        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-[20px]" target="">Find a Developer</a>
-        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
+        <a href="/find-a-developer/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-[20px]" target="">Find a Developer</a>
+        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
       </div>
     </div> 
     <div class="mega-menu-box">
@@ -220,13 +213,7 @@
                     <span class="menu-sub-title">Learn from the experts</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#">
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
-                    <span class="menu-title">Case Studies</span>
-                    <span class="menu-sub-title">Explore customer stories</span>
-                  </a>
-                </li>
+                
               </ul>
             </div>
             <div class="col-span-3 py-[12px]"></div>
