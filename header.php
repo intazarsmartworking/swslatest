@@ -119,7 +119,7 @@
                     <span class="menu-title">Trending Development</span>
                   </a>
                 </li>
-                <li data-menu="specializedDev">
+                <li data-menu="mobileDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
                     <span class="menu-title">Mobile App Development</span>
