@@ -161,7 +161,7 @@ function cc_author_post_type() {
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-edit',
-		'rewrite'            => array( 'slug' => 'author-sws', 'with_front' => false ),
+		'rewrite'            => array( 'slug' => 'author-sws'),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
