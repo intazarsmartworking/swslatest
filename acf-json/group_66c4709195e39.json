@@ -258,6 +258,13 @@
                 "operator": "==",
                 "value": "privacy-policy.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "term-of-use.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -269,5 +276,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724150617
+    "modified": 1724788260
 }
