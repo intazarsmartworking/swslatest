@@ -446,10 +446,10 @@
                 </div>
               </div>
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
-                <h1 class=" text-white text-[56px] font-semibold ">$16 - $2_?</h1>
+                <h1 class=" text-white text-[56px] font-semibold ">£16 - £2_?</h1>
                 <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
                 <div class="d-block mt-[40px]">
-                  <a class="bg-[#FF4D02] inline-block w-[170px] text-center text-[18px] p-4 rounded-[4px] text-white ">Pricing <svg class=" inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <a class="bg-[#FF4D02] inline-block w-[248px] text-center text-[18px] p-4 rounded-[4px] text-white" href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
 </svg></a>
                 </div>
