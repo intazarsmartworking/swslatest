@@ -5104,7 +5104,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .header-menu li a{
     display: block;
     cursor: pointer;
-    padding: 8px;
+    padding: 13px;
     font-size: 17px;
     font-weight: 400;
     color: #fff;
