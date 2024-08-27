@@ -26,7 +26,7 @@
 
       <div class="header-buttons mt-6">
         <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-        <a href="/contact-us/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
+        <a href="https://smartworking.io/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
       </div>
       
     </div>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
-           <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
+           <a href="/contact-us/"> <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button> </a>
         </div>
 </div>		
 </section>
