@@ -200,62 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-jQuery(document).ready(function(){
-  jQuery('.slick-slider-most-blog').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    prevArrow: jQuery('.blog-prev-arrow'),
-    nextArrow: jQuery('.blog-next-arrow'),
-    responsive: [
-        {
-            breakpoint: 768, 
-            settings: {
-                slidesToShow: 1 
-            }
-        }
-    ]
-  });
 
-  jQuery('.logo-slider').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 10,
-    slidesToScroll: 3,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
-
-  
-
-});
 
 // Search Skill when someone click on search box on Homepage
 function filterSkills() {
@@ -1008,25 +953,25 @@ function skillPrice(price){
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){
-      const discount = 750;
+      const discount = 750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 14){
-      const discount = 1500;
+      const discount = 1500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 15){
-      const discount = 1875;
+      const discount = 1875*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 17){
-      const discount = 2625;
+      const discount = 2625*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 18){
-      const discount = 3000;
+      const discount = 3000*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 20){
-      const discount = 3750;
+      const discount = 3750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 22){
-      const discount = 4500;
+      const discount = 4500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }
 
@@ -1046,25 +991,25 @@ function skillExperience(count){
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){
-      const discount = 750;
+      const discount = 750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 14){
-      const discount = 1500;
+      const discount = 1500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 15){
-      const discount = 1875;
+      const discount = 1875*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 17){
-      const discount = 2625;
+      const discount = 2625*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 18){
-      const discount = 3000;
+      const discount = 3000*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 20){
-      const discount = 3750;
+      const discount = 3750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 22){
-      const discount = 4500;
+      const discount = 4500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }
 
@@ -1082,25 +1027,25 @@ function skilleldPeople(count){
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){
-      const discount = 750;
+      const discount = 750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 14){
-      const discount = 1500;
+      const discount = 1500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 15){
-      const discount = 1875;
+      const discount = 1875*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 17){
-      const discount = 2625;
+      const discount = 2625*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 18){
-      const discount = 3000;
+      const discount = 3000*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 20){
-      const discount = 3750;
+      const discount = 3750*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }else if(skillPriceData[skillExpData.level] == 22){
-      const discount = 4500;
+      const discount = 4500*skillPeopleData;
       jQuery('#discount-price').text(discount)
     }
 
@@ -1135,7 +1080,7 @@ range.addEventListener('input', setValue);
 }
 
 
-jQuery(".header-menu li a").on('click', function(){
+jQuery(".header-menu li a.more_menu").on('click', function(){
   jQuery('.header-menu li a').removeClass('active');
   jQuery(this).addClass('active')
   jQuery('.mega-menu-box').addClass('open')
@@ -1287,4 +1232,62 @@ function priceRateGet(){
 
 
 }
+
+jQuery(document).ready(function(){
+  jQuery('.slick-slider-most-blog').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    prevArrow: jQuery('.blog-prev-arrow'),
+    nextArrow: jQuery('.blog-next-arrow'),
+    responsive: [
+        {
+            breakpoint: 768, 
+            settings: {
+                slidesToShow: 1 
+            }
+        }
+    ]
+  });
+
+  jQuery('.logo-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 10,
+    slidesToScroll: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+
+  priceRateGet()
+  
+
+});
 

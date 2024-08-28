@@ -30,7 +30,7 @@
         <?php endif; ?>
         
       </div>
-      <div class="text-left md:text-center">
+      <div class="text-left">
         <h3 class="text-white text-xl font-medium leading-normal"> Menu </h3>
         <?php
             wp_nav_menu( array(

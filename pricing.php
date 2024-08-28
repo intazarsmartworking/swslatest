@@ -486,7 +486,7 @@
 <script type="text/javascript">
     jQuery(window).bind("load", function() {
 	    loadPricePage();
-        priceRateGet();
+        // priceRateGet();
 	});
 </script>
 
