@@ -1,6 +1,6 @@
 <div class="w-full relative grid items-center">
 	<div class="container mx-auto md:px-0 px-10">
-		<div class=" mx-auto md:px-0 px-10 pt-2">
+		<div class="mx-auto px-0 md:px-0 lg:px-10 pt-2">
 
 				<h3 class="text-center small-intro"> Latest Posts </h3>
 				<h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight">Our  Blogs </h1>
@@ -22,7 +22,7 @@
 			?>
 		
 					<a href="<?php the_permalink(); ?>">
-						<div class="rounded mr-5">
+						<div class="rounded">
 						<?php if ($image_src): ?>
 							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						<?php endif; ?>
