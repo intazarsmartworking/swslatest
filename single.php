@@ -120,7 +120,7 @@ get_header();
 										$linkedin_url = get_field('linkedin_url', $author_post->ID);
 										$author_short_description = get_the_excerpt($author_post->ID);
 										$author_image_url  = get_the_post_thumbnail_url($author_post->ID, 'thumbnail'); // Retrieves the featured image
-
+										$author_permalink = get_permalink($author_post->ID);
 										// Display the author's information
 										?>
 									<div class="blog-bio py-[10px] border-t border-[#eaecf04d] mt-10 pt-[24px]">
@@ -129,13 +129,13 @@ get_header();
 												<div class="flex flex-row">
 													<div class="basis">
 														<div class=" w-[50px] h-[50px] rounded-[50%] overflow-hidden ">
-															<img class="w-[100%] rounded-full " src="<?php echo esc_url($author_image_url); ?>">
+															<a href="<?php echo esc_url($author_permalink); ?>"> <img class="w-[100%] rounded-full " src="<?php echo esc_url($author_image_url); ?>"> </a>
 														</div>
 													</div>
 													<div class="basis pl-3">
-														<p><?php echo $author_name; ?></p>
+														<a href="<?php echo esc_url($author_permalink); ?>"> <p><?php echo $author_name; ?></p> </a>
 														<?php if( $author_designation ) : ?>
-														<p class="text-[#AAA] font-normal"><?php echo $author_designation; ?></p>
+														 <p class="text-[#AAA] font-normal"><?php echo $author_designation; ?></p> 
 														<?php endif; ?>
 													</div>
 												</div>
@@ -150,7 +150,7 @@ get_header();
 										</div>
 										<?php if( $author_short_description ) : ?>
 										<div class="w-full">
-											<p class=" text-white font-normal"> <?php echo $author_short_description; ?> </p>
+										<a href="<?php echo esc_url($author_permalink); ?>"> <p class=" text-white font-normal"> <?php echo $author_short_description; ?> </p> </a>
 										</div>
 										<?php endif; ?>
 									</div>

@@ -1,15 +1,9 @@
 <?php  get_header(); ?>
-
-
-<?php
-  if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
-	
-?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php if (have_rows('hire_block_section')) : ?>
-	<?php while (have_rows('hire_block_section')) : the_row(); ?>
-    <?php if (get_row_layout() == 'banner_section') : ?>
+<?php while (have_rows('hire_block_section')) : the_row(); ?>
+<?php if (get_row_layout() == 'banner_section') : ?>
 
 <div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
 <div class="container mx-auto mt-5">
@@ -37,13 +31,36 @@
       
     </div>
   </div>
-  <?php $main_image = get_sub_field('main_image');
-	if (!empty($main_image) && isset($main_image['url'])):
-  ?>
-    <div class="w-full relative">
-        <img class="w-full my-12" src="<?php echo esc_url($main_image['url']); ?>" alt="">
-    </div>
-  <?php endif; ?>
+  <div class="w-full relative">
+	<div class="w-[100%] landing-dev-box h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+	
+	<?php if(have_rows('banner_right_box')): ?>
+	<?php while(have_rows('banner_right_box')): the_row(); ?>
+	<?php 
+	  $heading_name = get_sub_field('heading_name'); 
+	  $heading_value = get_sub_field('heading_value'); 
+	?>
+	  <div class="w-[100%] py-[10px] pl-[65px] pr-[10px] relative mb-[20px]">
+	  
+		  <?php $main_image = get_sub_field('icon');
+			if (!empty($main_image) && isset($main_image['url'])):
+		  ?>
+			  <div class="w-[52px] h-[52px] absolute left-0 top-[10px] rounded-[50%] text-center bg-[#FF4D02] overflow-hidden pt-[9px]">
+				<img  src="<?php echo esc_url($main_image['url']); ?>" alt="">
+			  </div>
+		  <?php endif; ?>
+		  <?php if($heading_name): ?>
+		  <span class="block text-[16px] text-[#08111F] "><?php echo $heading_name;?></span>
+		  <?php endif; ?>
+		  
+		  <?php if($heading_value): ?>
+		  <span class="block text-[24px] text-[#08111F] font-[700]"><?php echo $heading_value;?></span>
+		  <?php endif; ?>
+	  </div>
+	<?php endwhile; ?>	
+	<?php endif; ?>  
+	</div>
+  </div>
 </div>
 </div>
 </div>
@@ -65,8 +82,6 @@
       <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
 	<?php endif; ?>  
     </div>
-	
-	
 	<div class="container mx-auto p-4">
         <div class="flex flex-wrap -mx-2">
 		
@@ -82,7 +97,11 @@
             <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
                 <div class="custom-bg custom-border">
 				<div class="flex items-center">
-					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+				<?php $poet_image = get_sub_field('image');
+					if (!empty($poet_image) && isset($poet_image['url'])):
+				?>
+					<img src="<?php echo esc_url($poet_image['url']); ?>" alt="Author" class="w-16 h-16 rounded-full mr-4">
+				<?php endif; ?>	
 					<div>
 						<span class="text-white text-2xl font-medium block"><?php echo $developer_name;?></span>
 						<span class="text-white text-sm font-normal block"><?php echo $profile;?></span>
@@ -117,7 +136,11 @@
                             <div class="flex-1">
                                 <h3 class="text-xs font-medium"><?php echo $tech_name;?></h3>
                             </div>
-                            <img src="<?php echo get_sub_field('image')['url']; ?>" alt="Technology 1" class="w-4 h-4 rounded-full">
+							<?php $tech_image = get_sub_field('image');
+								if (!empty($tech_image) && isset($tech_image['url'])):
+							?>
+                            <img src="<?php echo esc_url($tech_image['url']); ?>" alt="Technology 1" class="w-4 h-4 rounded-full">
+							<?php endif; ?> 
                         </div>
 						
 						<?php endwhile; ?>	
@@ -125,16 +148,73 @@
                            
                     </div>
 					
-					 <?php if(have_rows('rate')): ?>
-					 <?php while(have_rows('rate')): the_row(); ?>
+					 <?php  
+						 $interview_screening_value = get_sub_field('interview_screening');
+						 $interview_screening_percent = get_sub_field('interview_screening');
+						 $interview_screening_multiply = $interview_screening_percent* 10;
+						 $interview_screening_color = get_sub_field('interview_screening_color');
+					 ?>
 					
-					<div class="w-full p-4 mt-4">
-						<img src="<?php echo get_sub_field('image')['url']; ?>">
-					</div>
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $interview_screening_color;?>; left:calc(<?php echo $interview_screening_multiply;?>% - 16px)">
+								<?php echo $interview_screening_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $interview_screening_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $interview_screening_multiply;?>%; background:<?php echo $interview_screening_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
 
-						<?php endwhile; ?>	
-					<?php endif; ?>
 					
+					
+					<?php  
+						 $technical_assignment_value = get_sub_field('technical_assignment');
+						 $technical_assignment_percent = get_sub_field('technical_assignment');
+						 $technical_assignment_multiply = $technical_assignment_percent* 10;
+						 $technical_assignment_color = get_sub_field('technical_assignment_color');
+					 ?>
+					
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Assisment</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $technical_assignment_color;?>; left:calc(<?php echo $technical_assignment_multiply;?>% - 16px)">
+								<?php echo $technical_assignment_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $technical_assignment_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $technical_assignment_multiply;?>%; background:<?php echo $technical_assignment_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
+
+					
+					
+					 <?php 
+						 $language_proficiency_value = get_sub_field('language_proficiency');
+						 $language_proficiency_percent = get_sub_field('language_proficiency');
+						 $language_proficiency_multiply = $language_proficiency_percent* 10;
+						 $language_proficiency_color = get_sub_field('language_proficiency_color');
+					 ?>
+					
+						<div class="w-full py-4 mt-4">
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Language Proficiency</p>
+						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+							<span class="tooltip-box" style="background:<?php echo $language_proficiency_color;?>; left:calc(<?php echo $language_proficiency_multiply;?>% - 16px)">
+								<?php echo $language_proficiency_value;?>
+								<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+								  <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $language_proficiency_color;?>"/>
+								</svg>
+							</span>
+							<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $language_proficiency_multiply;?>%; background:<?php echo $language_proficiency_color;?>;"></div>
+						  </div>
+						  <p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+						</div>
+
 					
 					
 					<div class="flex flex-wrap -mx-2 mt-4">
@@ -184,15 +264,13 @@
 
        
         <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
-
-
-        <?php if(have_rows('step_section')): ?>
-					<?php while(have_rows('step_section')): the_row(); ?>
-					<?php 
-						$step_title = get_sub_field('step_title'); 
-						$title = get_sub_field('title'); 
-            $position = get_sub_field('position'); 
-					?>  
+		<?php if(have_rows('step_section')): ?>
+		<?php while(have_rows('step_section')): the_row(); ?>
+		<?php 
+		  $step_title = get_sub_field('step_title'); 
+		  $title = get_sub_field('title'); 
+          $position = get_sub_field('position'); 
+		?>  
              <div class="grid-item col-span-3 pt-[50px] relative <?php echo $position;?>">
                <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
                <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
@@ -203,16 +281,13 @@
                     <img class="max-w-[100%] h-[220px] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
                    </div>
                </div>
-			   
-             </div>
-            
-              <?php endwhile; ?>	
-            <?php endif; ?>  
-           
-             </div>
+			 </div>
+        <?php endwhile; ?>	
+        <?php endif; ?>  
+        </div>
 
         <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
-           <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
+           <a href="/contact-us/"> <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button> </a>
         </div>
 </div>		
 </section>
@@ -247,58 +322,40 @@
         </div>
 		
 		<div class="container mx-auto md:px-0 px-10">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center relative mb-28">
-			<div>
+		<div class="grid grid-cols-1 md:grid-cols-10 gap-6 justify-center relative">
 			<?php if(get_sub_field('big_box_title')): ?>
-			  <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-48">
-				<img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
-				<h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
-			  </div>
-			<?php endif; ?>    
-				
-			<?php if(get_sub_field('below_big_box_title')): ?>	
-			 <div class="flex flex-col justify-center items-center text-center align-middle relative greenpart px-40 py-6">
-               <div class="justify-center items-center text-center align-middle">
-				 <span class="inline-block align-middle"> <img class="mb-3" src="<?php echo get_sub_field('below_big_box_image')['url']; ?>" alt="" /> </span>
-				 <span class="text-2xl text-white font-bold mb-4 inline-block"><?php echo get_sub_field('below_big_box_title'); ?></span>
-               </div>
-			 </div>
-			<?php endif; ?> 
-			
-			</div>
-			
-			
-			<div>
+				<div class="grid-item col-span-10">
+					<div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-28">
+					  <img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
+					  <h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
+					</div>
+				</div>
+			<?php endif; ?>
 			
 			<?php if(have_rows('box_section')): ?>
 			<?php while(have_rows('box_section')): the_row(); ?>
 			<?php 
 			  $title = get_sub_field('title'); 
 			  $paragraph = get_sub_field('paragraph'); 
-              $background_name = get_sub_field('background_name'); 
+			  $background_name = get_sub_field('background_name'); 
 			?>
-				<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
-				<div class="grid items-center grid-cols-9 gap-0">
-				  <div class="col-span-1"> 
-					<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
-				  </div>
-					<div class="col-span-5 pl-2">
-					<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
-					<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
+				<div class="grid-item col-span-5">
+					<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
+					  <div class="grid items-center grid-cols-9 gap-0">
+						  <div class="col-span-1"> 
+							<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
+						  </div>
+						  <div class="col-span-5 pl-2">
+							<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
+							<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
+						  </div>
+					  </div>
 					</div>
 				</div>
-				   
-				</div>
-				
-				<?php endwhile; ?>	
-			<?php endif; ?> 	
-				
-				
-			</div>
-            
-        </div>
+			<?php endwhile; ?>	
+			<?php endif; ?> 
 		</div>
-        
+		</div>
 </section>
 <?php endif; ?>
 
@@ -318,7 +375,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 content-center">
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-hidden-Fee.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No hidden fees</h3>
@@ -327,7 +386,9 @@
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						  <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Relatively-flexible.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">Relatively flexible</h3>
@@ -338,7 +399,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-[60px] content-center">
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-Charge.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No Charge</h3>
@@ -347,7 +410,9 @@
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
-                          <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                          <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						    <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Cost-Saving.svg">
+						  </div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">Cost Saving</h3>
@@ -397,10 +462,10 @@
                 </div>
               </div>
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
-                <h1 class=" text-white text-[56px] font-semibold ">$16 - $2_?</h1>
+                <h1 class=" text-white text-[56px] font-semibold ">£16 - £2_?</h1>
                 <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
                 <div class="d-block mt-[40px]">
-                  <a class="bg-[#FF4D02] inline-block w-[170px] text-center text-[18px] p-4 rounded-[4px] text-white ">Pricing <svg class=" inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <a class="bg-[#FF4D02] inline-block w-[248px] text-center text-[18px] p-4 rounded-[4px] text-white" href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
 </svg></a>
                 </div>
@@ -638,25 +703,27 @@
                 
                 
               </div>
+			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
                 <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
-                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h1>
-                    <a href="/pricing/" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
+                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]"><?php echo get_sub_field('right_cta_heading'); ?></h1>
+					<?php if(get_sub_field('right_cta_button_name')): ?>
+                    <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]"><?php echo get_sub_field('right_cta_button_name'); ?> 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                       </svg>
                     </a>
-                <div>
+					<?php endif; ?>
+                </div>
               </div>
-            </div>
-          </div>
+			  <?php endif; ?>
     </div>
 </div>
 </div>
 </div>
 
 <?php endif; ?>  
-    <?php endwhile; ?>
+<?php endwhile; ?>
 <?php endif; ?>
 
 <?php

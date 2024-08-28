@@ -2282,8 +2282,8 @@ input[type="range"].home-range-slider {
   .header-menu li a{
     display: block;
     cursor: pointer;
-    padding: 8px;
-    font-size: 13px;
+    padding: 13px;
+    font-size: 17px;
     font-weight: 400;
     color: #fff;
     border-radius: 4px;
