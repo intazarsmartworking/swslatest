@@ -1096,15 +1096,6 @@ select {
 .top-\[66\%\] {
   top: 66%;
 }
-.top-\[-25px\] {
-  top: -25px;
-}
-.right-\[100px\] {
-  right: 100px;
-}
-.right-\[150px\] {
-  right: 150px;
-}
 .z-0 {
   z-index: 0;
 }
@@ -1514,9 +1505,6 @@ select {
 .h-\[90px\] {
   height: 90px;
 }
-.h-\[calc\(100\%\+50px\)\] {
-  height: calc(100% + 50px);
-}
 .max-h-5 {
   max-height: 1.25rem;
 }
@@ -1757,9 +1745,6 @@ select {
 }
 .max-w-\[538px\] {
   max-width: 538px;
-}
-.max-w-\[60\%\] {
-  max-width: 60%;
 }
 .max-w-\[600px\] {
   max-width: 600px;
@@ -3407,7 +3392,7 @@ body {
     }
 
     .ready-hire-bg{
-        background-size: auto;
+        padding: 20px 0px;
     }
 }
 /* Testimonial Card Styles */
@@ -5800,6 +5785,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     right: 2.5rem;
   }
 
+  .lg\:right-\[150px\] {
+    right: 150px;
+  }
+
   .lg\:top-0 {
     top: 0px;
   }
@@ -5810,10 +5799,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:top-\[inherit\] {
     top: inherit;
-  }
-
-  .lg\:right-\[150px\] {
-    right: 150px;
   }
 
   .lg\:col-span-2 {
@@ -5842,6 +5827,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:mr-\[20px\] {
     margin-right: 20px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:mt-\[0px\] {
@@ -5894,6 +5883,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:w-\[600px\] {
     width: 600px;
+  }
+
+  .lg\:max-w-\[60\%\] {
+    max-width: 60%;
   }
 
   .lg\:grid-cols-1 {

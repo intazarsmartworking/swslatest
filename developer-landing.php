@@ -25,7 +25,7 @@
                   <p class="flex text-white font-normal text-xl">No hidden cost, Fully integrated services, Timezone-aligned, Hire within a week</p>
                   <div class="header-buttons mt-6">
                       <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-                      <a href="https://smartworking.io/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
+                      <a href="https://smartworking.io/" class="button button-small mt-2 lg:mt-0 inline-block  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
                   </div>
                 </div>
             </div>
