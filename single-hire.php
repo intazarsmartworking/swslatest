@@ -136,7 +136,11 @@
                             <div class="flex-1">
                                 <h3 class="text-xs font-medium"><?php echo $tech_name;?></h3>
                             </div>
-                            <img src="<?php echo get_sub_field('image')['url']; ?>" alt="Technology 1" class="w-4 h-4 rounded-full">
+							<?php $tech_image = get_sub_field('image');
+								if (!empty($tech_image) && isset($tech_image['url'])):
+							?>
+                            <img src="<?php echo esc_url($tech_image['url']); ?>" alt="Technology 1" class="w-4 h-4 rounded-full">
+							<?php endif; ?> 
                         </div>
 						
 						<?php endwhile; ?>	
