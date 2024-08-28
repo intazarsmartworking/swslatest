@@ -375,7 +375,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 content-center">
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-hidden-Fee.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No hidden fees</h3>
@@ -384,7 +386,9 @@
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						  <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Relatively-flexible.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">Relatively flexible</h3>
@@ -395,7 +399,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-[60px] content-center">
                   <div class="flex flex-row">
                       <div class="pr-3">
-                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                        <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-Charge.svg">
+						</div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No Charge</h3>
@@ -404,7 +410,9 @@
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
-                          <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">$</div>
+                          <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
+						    <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Cost-Saving.svg">
+						  </div>
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">Cost Saving</h3>
