@@ -8,12 +8,12 @@
 		
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="flex flex-col items-center justify-center">
-				<?php echo get_sub_field('main_heading'); ?>
+				<div class=" text-center text-[25px] font-semibold md:text-[56px]"><?php echo get_sub_field('main_heading'); ?></div>
 			</div>
 		<?php endif; ?>
-		<div class="w-full flex relative min-h-[620px] pr-3 lg:pr-0 pt-16 pb-16 overflow-hidden">
+		<div class="w-full flex relative min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
 		<div class="flex w-0 lg:w-1/12">&nbsp;</div>
-		<div class="slider-wrapper w-full min-h-[500px] pt-[30px] relative card-container overflow-visible">
+		<div class="slider-wrapper w-full min-h-[400px] lg:min-h-[500px] pt-[30px] relative card-container overflow-visible">
 			<div class="slider-overlay">
 
 			

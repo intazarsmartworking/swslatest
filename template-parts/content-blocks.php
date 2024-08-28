@@ -53,7 +53,7 @@
 	<!-- home banner close -->
 	<!-- Future Remote -->
 	<div class="w-full relative  grid items-center" >
-	<div class="px-10">
+	<div class="px-0 md:px-10">
 		<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Hiring </span> </h1>
 		<div class="container mx-auto p-4">
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
@@ -94,7 +94,7 @@
 		<?php if(get_sub_field('main_heading')): ?>	
 		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h1>
 		<?php endif; ?>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-28">
 			<?php if(have_rows('box_item')): ?>
 			<?php while(have_rows('box_item')): the_row(); ?>
 			<?php 
@@ -135,7 +135,7 @@
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
 	<section class="calculator-box w-[100%] mt-[50px]">
-	<div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10%]">
+	<div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
 		<div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
 			<div class="block mb-5">
 				<?php if(get_sub_field('small_title')): ?>
@@ -149,7 +149,7 @@
 			<?php if(get_sub_field('button_name')): ?>
 			<?php $calc_url =  get_sub_field('button_url'); ?>
 			<p>
-				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
 			</p>
 			<?php endif; ?>
 		</div>
@@ -205,8 +205,8 @@
 	<div class="w-full relative grid items-center z-10">
 	<div class="container mx-auto md:px-0 px-10 lg:py-[100px]">
 		<h3 class="text-center small-intro"> FAQ's </h3>
-		<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
-		<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
+		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
+		<p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
@@ -217,7 +217,7 @@
 			<div>
 				<div class="accordian-sec-bg mb-5">
 				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
-					<span id="accordion-label-<?php echo $post_id; ?>" class="text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
+					<span id="accordion-label-<?php echo $post_id; ?>" class="text-[18px] md:text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
 					<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M6 9l4 4 4-4"></path>
 					</svg>
@@ -238,12 +238,12 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'hire_developer_section') : ?>
-	<div class="w-full relative grid items-center  pt-20 pb-10 set-margin">
+	<div class="w-full relative grid items-center px-3  pt-20 pb-10 set-margin">
 	<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
 				<?php if(get_sub_field('main_title')): ?>
-				<h1 class="text-left text-white text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mt-20 mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+				<h1 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight mt-8 md:mt-20 md:mb-9"><?php echo get_sub_field('main_title'); ?></h1>
 				<?php endif; ?>	
 				<?php if(get_sub_field('subheading')): ?>	
 				<span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>

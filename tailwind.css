@@ -2496,5 +2496,8 @@ input[type="range"].home-range-slider {
         overflow-y: auto;
         top: 0px;
     }
+    .home-form{
+        min-height: 400px;
+    }
 
 }

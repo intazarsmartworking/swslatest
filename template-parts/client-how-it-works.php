@@ -1,9 +1,9 @@
 <section class="relative px-0 lg:pt-28 lg:pb-16 ">
-    <div class="w-100 mb-9">
+    <div class="w-100 p-3 mb-9">
         <h3 class="text-center small-intro"> How It Works </h3>
-        <h1 class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-center font-bold text-white mb-3">How We Find You The Best Software Talent</h1>
-        <p class="text-center text-5xl pt-[10px] sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange mb-3">Quick and Efficient</p>
-        <p class="text-center text-2xl pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it</p>
+        <h1 class="text-[25px] lg:text-[56px] text-center font-bold text-white mb-3">How We Find You The Best Software Talent</h1>
+        <p class="text-center text-[25px] pt-[10px] lg:text-[45px]  text-dark-orange mb-3">Quick and Efficient</p>
+        <p class="text-center text-[14px] lg:text-[25px]  pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it</p>
     </div>
     
     <div class="how-it-works-slide p-3 lg:p-0" id="pinContainer">
