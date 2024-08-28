@@ -97,7 +97,11 @@
             <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
                 <div class="custom-bg custom-border">
 				<div class="flex items-center">
-					<img src="<?php echo get_sub_field('image')['url']; ?>" alt="Author" class="w-16 h-16 rounded-full mr-4">
+				<?php $poet_image = get_sub_field('image');
+					if (!empty($poet_image) && isset($poet_image['url'])):
+				?>
+					<img src="<?php echo esc_url($poet_image['url']); ?>" alt="Author" class="w-16 h-16 rounded-full mr-4">
+				<?php endif; ?>	
 					<div>
 						<span class="text-white text-2xl font-medium block"><?php echo $developer_name;?></span>
 						<span class="text-white text-sm font-normal block"><?php echo $profile;?></span>
