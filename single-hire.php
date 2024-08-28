@@ -97,7 +97,7 @@
             <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
                 <div class="custom-bg custom-border">
 				<div class="flex items-center">
-					<img src="<?php echo get_template_directory_uri();?>/images/johnauthor.svg" alt="Author" class="w-16 h-16 rounded-full mr-4">
+					<img src="<?php echo get_sub_field('image')['url']; ?>" alt="Author" class="w-16 h-16 rounded-full mr-4">
 					<div>
 						<span class="text-white text-2xl font-medium block"><?php echo $developer_name;?></span>
 						<span class="text-white text-sm font-normal block"><?php echo $profile;?></span>

@@ -5,10 +5,9 @@
 
         <div class="grid grid-cols-1 py-3 lg:py-[80px]">
             <div class=" text-center">
-                <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Our Leader</h1>
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">Thoughts</h1>
+               
             </div>
-        <div>
+        </div>
     </div>
 </section>
 <section class="w-full p-3">
