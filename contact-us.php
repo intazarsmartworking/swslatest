@@ -5,7 +5,7 @@
  * @package sws
  */
 
- get_header();
+ get_header('second');
 ?>
 <section class="w-full p-4 py-[100px]">
 	<div class="mx-auto w-[100%] max-w-[1280px]">
@@ -76,4 +76,4 @@
         </div>
     </div>
 </section>
-<?php get_footer();?>
+<?php get_footer('second');?>

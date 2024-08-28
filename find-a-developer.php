@@ -5,7 +5,7 @@
  * @package sws
  */
 
- get_header();
+ get_header('second');
 ?>
 
 <section class="w-full p-4 py-[100px] bg-[#050403]">
@@ -21,4 +21,4 @@
 
 
 
-<?php get_footer();?>
+<?php get_footer('second');?>
