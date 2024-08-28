@@ -4,11 +4,13 @@
 <?php if (have_rows('hire_block_section')) : ?>
 <?php while (have_rows('hire_block_section')) : the_row(); ?>
 <?php if (get_row_layout() == 'banner_section') : ?>
-
-<div class="w-full   md:flex" style="background-image: url('https://stage.smartworking.io/wp-content/themes/sws/images/Homepage.png');">
-<div class="container mx-auto mt-5">
+<div class=" w-full relative">
+  	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-12%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
+  	<div class=" w-full relative z-10">
+<div class="w-full   md:flex">
+<div class="container mx-auto relative z-10 mt-5">
 <div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24 relative">
-  <div class="absolute top-0 left-0">
+  <div class="absolute top-[-30px] lg:top-0 left-0">
     <button class="flex items-center justify-center"><img class="mr-3" src="<?php echo get_template_directory_uri();?>/images/back_arrow.svg" alt="back" >
      <span class="text-white">Services</span></button>
   </div>
@@ -26,7 +28,7 @@
 
       <div class="header-buttons mt-6">
         <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-        <a href="https://smartworking.io/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
+        <a href="https://smartworking.io/" class="button button-small mt-2 lg:mt-0 inline-block  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
       </div>
       
     </div>
@@ -45,7 +47,7 @@
 		  <?php $main_image = get_sub_field('icon');
 			if (!empty($main_image) && isset($main_image['url'])):
 		  ?>
-			  <div class="w-[52px] h-[52px] absolute left-0 top-[10px] rounded-[50%] text-center bg-[#FF4D02] overflow-hidden pt-[9px]">
+			  <div class="w-[52px] h-[52px] absolute left-0 top-[10px] rounded-[50%] text-center bg-[#FF4D02] overflow-hidden pt-[0px]">
 				<img  src="<?php echo esc_url($main_image['url']); ?>" alt="">
 			  </div>
 		  <?php endif; ?>
@@ -71,15 +73,15 @@
 <!-- Vetted Profile Section -->
 
 <?php if (get_row_layout() == 'vetted_profile') : ?>
-<section class="bg-black flex flex-col items-center justify-center py-16">
+<section class="flex flex-col items-center justify-center py-16">
 	<?php if(get_sub_field('top_title')): ?>
 		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 	<?php endif; ?> 
 	
     <div class="flex flex-col items-center justify-center mb-20">
 	<?php if(get_sub_field('main_title')): ?>
-      <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-      <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+      <h1 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+      <span class="text-dark-orange  text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
 	<?php endif; ?>  
     </div>
 	<div class="container mx-auto p-4">
@@ -254,8 +256,8 @@
 <?php endif; ?>
       <div class="flex flex-col items-center justify-center">
         <?php if(get_sub_field('main_title')): ?> 
-          <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-          <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+          <h1 class="text-4xl font-bold text-center text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+          <span class="text-dark-orange text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
         <?php endif; ?>  
 		<?php if(get_sub_field('small_paragraph')): ?> 
         <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
@@ -273,7 +275,7 @@
 		?>  
              <div class="grid-item col-span-3 pt-[50px] relative <?php echo $position;?>">
                <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
-               <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+               <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px]">
                <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
                   <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
@@ -296,14 +298,14 @@
 
 <!-- Benefit Section -->
 <?php if (get_row_layout() == 'benefit_section') : ?>
-<section class="bg-black flex flex-col items-center justify-center py-16 w-full">
+<section class="flex flex-col items-center justify-center py-16 w-full">
 	<?php if(get_sub_field('top_title')): ?>
 		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 	<?php endif; ?> 
       <div class="flex flex-col items-center justify-center">
 	  <?php if(get_sub_field('main_title')): ?>
-        <h1 class="text-4xl font-bold text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-        <span class="text-dark-orange text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+        <h1 class="font-bold text-[40px] md:text-[56px] mb-4 text-center text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+        <span class="text-dark-orange text-[35px] md:text-[56px] text-center"><?php echo get_sub_field('orange_title'); ?></span> 
 		<?php endif; ?>   
       </div>
         
@@ -325,7 +327,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-10 gap-6 justify-center relative">
 			<?php if(get_sub_field('big_box_title')): ?>
 				<div class="grid-item col-span-10">
-					<div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-28">
+					<div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-3 py-7 md:px-12 md:py-12">
 					  <img class="mb-3 w-28" src="<?php echo get_sub_field('big_box_image')['url']; ?>" alt="" />
 					  <h2 class="text-2xl text-white font-bold mb-4 text-center"><?php echo get_sub_field('big_box_title'); ?></h2>
 					</div>
@@ -339,13 +341,13 @@
 			  $paragraph = get_sub_field('paragraph'); 
 			  $background_name = get_sub_field('background_name'); 
 			?>
-				<div class="grid-item col-span-5">
+				<div class="grid-item col-span-10 md:col-span-5">
 					<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
 					  <div class="grid items-center grid-cols-9 gap-0">
-						  <div class="col-span-1"> 
+						  <div class="col-span-2 md:col-span-1"> 
 							<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
 						  </div>
-						  <div class="col-span-5 pl-2">
+						  <div class="col-span-7 md:col-span-8 pl-2">
 							<h4 class="text-2xl text-white font-bold mb-2"><?php echo $title;?></h4>
 							<h5 class="text-sm text-white font-normal"><?php echo $paragraph;?></h5>
 						  </div>
@@ -368,7 +370,7 @@
  <!-- Calculate Section -->
 
 <div class="w-full relative calculate-sec grid items-center lg:py-[100px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
-    <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
+    <div class="container mx-auto px-0 md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
               <div class="grid-item col-span-6 content-center">
@@ -518,14 +520,14 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'faq_section') : ?>
-		<div class="w-full relative grid items-center bg-black z-10">
+		<div class="w-full relative grid items-center z-10">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('top_title')): ?>
 				<h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('main_title')): ?>
-				<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"> <?php echo get_sub_field('main_title'); ?> <br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"> <?php echo get_sub_field('orange_title'); ?> </span></h1>
+				<h1 class="text-dark-orange text-[35px] md:text-[56px] text-center"> <?php echo get_sub_field('main_title'); ?> <br><span class="text-dark-orange"> <?php echo get_sub_field('orange_title'); ?> </span></h1>
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('small_paragraph')): ?>
@@ -569,15 +571,15 @@
 <?php endif; ?>  
 
 
-<div class="w-full  relative bg-black grid items-center pb-28 pt-40">
-  <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="w-full  relative grid items-center pb-28">
+  <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
 	<?php if (have_rows('hire_block_section')) : ?>
 	 <?php while (have_rows('hire_block_section')) : the_row(); ?>
 	   <?php if (get_row_layout() == 'ready_hire') : ?>
-      <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
+      <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
 	    <?php if(get_sub_field('title')): ?>
-        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h1>
+        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h1>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('paragraph')): ?>
@@ -588,9 +590,9 @@
 	<?php endif; ?>  
 	<?php endwhile; ?>
 	<?php endif; ?> 
-      <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
-        <div class="bg-white rounded-3xl px-6 py-6 w-full">
-			<div class="px-6 py-6 w-full">
+      <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
+        <div class="bg-white lg:right-[150px] relative lg:absolute top-[-50px] h-[500px] rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
+			<div class="rounded-2xl border-pattern px-6 py-6 w-full">
 				<iframe aria-label='Share Your Requirement' frameborder="0" style="height:400px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
 				<h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
 			</div>
@@ -604,7 +606,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'hire_offshore') : ?>
-<div class="w-full relative bg-black grid items-center pt-16 md:pt-36">
+<div class="w-full relative grid items-center pt-16 md:pt-36">
     <div class="max-w-[1280px] mx-auto">
           <div class="d-block">
 		  <?php if(get_sub_field('top_title')): ?>
@@ -650,7 +652,7 @@
 </div>
 
 		
-<div class="w-full relative bg-black" id="sticky-details">
+<div class="w-full relative" id="sticky-details">
     <div class="max-w-[1280px] mx-auto">
           <div class="show-more-box pt-[60px]">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
@@ -718,6 +720,8 @@
               </div>
 			  <?php endif; ?>
     </div>
+</div>
+</div>
 </div>
 </div>
 </div>
