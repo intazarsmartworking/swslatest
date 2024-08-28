@@ -3451,6 +3451,7 @@ body {
 }
 .gradient-bg {
     background: radial-gradient(144.21% 122.03% at 50.12% -19.11%, rgba(255, 77, 2, 0.4) 0%, rgba(255, 77, 2, 0) 100%);
+    padding: 20px;
 }
 .gradient-text-dev-landing {
     opacity: 0.6;
