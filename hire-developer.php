@@ -54,9 +54,9 @@
 			<div class="mx-auto w-[100%] max-w-[1280px]">
 					<h3 class="text-center small-intro">Explore</h3>
 					<div class="flex flex-col items-center justify-center">
-						<h1 class="text-4xl  text-[56px] mb-4 text-white">Need top notch developers?</h1> 
-						<span class="text-dark-orange text-[56px]">You are in the right place.</span> 
-						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 max-w-[60%] "> 
+						<h1 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white">Need top notch developers?</h1> 
+						<span class="text-dark-orange  text-[35px] text-center  lg:text-[56px]">You are in the right place.</span> 
+						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> 
 							With Arc, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
 						</h3>
 					</div>

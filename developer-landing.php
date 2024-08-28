@@ -25,7 +25,7 @@
                   <p class="flex text-white font-normal text-xl">No hidden cost, Fully integrated services, Timezone-aligned, Hire within a week</p>
                   <div class="header-buttons mt-6">
                       <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-                      <a href="https://smartworking.io/" class="button button-small  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
+                      <a href="https://smartworking.io/" class="button button-small mt-2 lg:mt-0 inline-block  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
                   </div>
                 </div>
             </div>
@@ -448,7 +448,7 @@
             <!-- Step 2 -->
             <div class="grid-item col-span-3 pt-[50px] relative mt-0 md:mt-[90px]">
                 <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 2</h2>
-                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px]">
                   <img class="mb-3"  src="<?php echo get_template_directory_uri();?>/images/step2_icon.svg" alt="" />
                   <h3 class="text-[24px] font-semibold mb-4 text-white">Interview all the Candidates</h3>
                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
@@ -768,7 +768,7 @@
     <div class="w-full relative grid items-center pb-28 pt-16 md:pt-36">
         <div class="container mx-auto md:px-0 px-10">
             <h3 class="text-center small-intro"> FAQ's </h3>
-            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
+            <h1 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
             <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
           <?php 
