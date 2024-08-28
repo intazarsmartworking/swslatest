@@ -2256,11 +2256,9 @@ input[type="range"].home-range-slider {
   }
   .main-header.fixed{
     position: fixed;
-    padding: 0px;
   }
   .main-header.fixed .header-box{
-    background: rgb(119,98,98);
-    background: linear-gradient(90deg, rgba(119,98,98,0.865983893557423) 0%, rgba(89,30,5,1) 50%, rgba(119,98,98,0.865983893557423) 100%);
+    background: rgba(0,0,0,0.2);
     backdrop-filter: blur(10px);
   }
   .header-box{
@@ -2342,7 +2340,7 @@ input[type="range"].home-range-slider {
   .mega-menu-left li a .menu-icons{
     position: absolute;
     left: 8px;
-    top: 16px;
+    top: 8px;
     opacity: 0.5;
   }
   .mega-menu-left li.active a .menu-icons{
@@ -2423,9 +2421,16 @@ input[type="range"].home-range-slider {
   .logoSlider .bg-trust-box img{
     width: 100%;
   }
+  #menu-footer-menu{
+    padding: 0px;
+    margin: 0px;
+  }
+  #menu-footer-menu li{
+    display: block;
+  }
 
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
     .howItWorkHeading{
         transform: rotate(0deg);
     }
@@ -2447,7 +2452,7 @@ input[type="range"].home-range-slider {
         padding-right: 5px !important;
     }
     .timeline-content-box{
-        padding-left: 30px;
+        padding-left: 35px;
     }
     .timeline-item > .curv-img{
         display: none;
@@ -2480,8 +2485,8 @@ input[type="range"].home-range-slider {
         display: none;
     }
     .main-header.fixed .header-box{
-        border-radius: 0px;
-        backdrop-filter: none;
+        /* border-radius: 0px;
+        backdrop-filter: none; */
     }
     .header-menu{
         text-align: left;
@@ -2498,6 +2503,25 @@ input[type="range"].home-range-slider {
     }
     .home-form{
         min-height: 400px;
+    }
+    .timeline .timeline-box .timeline-item.in-view.curv-box::before {
+        left: -8px;
+    }
+    .timeline .timeline-box .timeline-item.in-view .curv-img{
+        display: none;
+    }
+    .header-menu li a{
+        padding: 8px;
+        font-size: 13px;
+    }
+    .mobile-m-0{
+        margin: 0px !important;
+    }
+    .mirror-box{
+        display: none;
+    }
+    .show-details{
+        padding: 0px 20px;
     }
 
 }

@@ -53,7 +53,7 @@
       <div class="col-span-2 content-center hide-mobile">
         <?php if(get_field('header_logo', 'options')): ?>
           <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-            <img class="h-[28px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
+            <img class="h-[23px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
           </a>
         <?php endif; ?>
       </div>
@@ -62,7 +62,7 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/vetting-process/">Vetting Process</a></li>
           <li>
-            <a data-mainmenu="hireDevId">
+            <a class="more_menu" data-mainmenu="hireDevId">
             Hire Developer
               <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
               <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
@@ -72,9 +72,9 @@
 		  <li><a href="/blog/">Insights</a></li>
         </ul>
       </div>
-      <div class="col-span-3 content-center text-end">
-        <a href="/find-a-developer/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-[20px]" target="">Find a Developer</a>
-        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
+      <div class="col-span-3 content-center text-start md:text-end">
+        <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange" target="">Find a Developer</a>
+        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
       </div>
     </div> 
     <div class="mega-menu-box">

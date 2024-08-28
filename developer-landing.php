@@ -13,7 +13,7 @@
     <div class="w-full md:flex">
       <div class="container mx-auto relative z-10 mt-5">
           <div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 lg:mt-[100px] mb-0 md:mb-24 relative">
-            <div class="absolute top-0 left-0">
+            <div class="absolute top-[-30px] lg:top-0 left-0">
                 <button class="flex items-center justify-center"><img class="mr-3" src="<?php echo get_template_directory_uri();?>/images/back_arrow.svg" alt="back" >
                 <span class="text-white">Services</span></button>
             </div>
@@ -85,8 +85,8 @@
     <section class="flex flex-col items-center justify-center py-16">
       <h3 class="text-center small-intro">Vetted Profiles</h3>
       <div class="flex flex-col items-center justify-center mb-20">
-          <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Meet Our Vetted</h1>
-          <span class="text-dark-orange text-[56px]">Wordpress Developers</span> 
+          <h1 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white">Meet Our Vetted</h1>
+          <span class="text-dark-orange  text-center text-[35px] md:text-[56px]">Wordpress Developers</span> 
       </div>
       <div class="container mx-auto p-4">
           <div class="flex flex-wrap -mx-2">
@@ -427,15 +427,15 @@
       <div class="container mx-auto max-w-[1280px]">
           <h3 class="text-center small-intro">Top 1%</h3>
           <div class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">How We Find Top</h1>
-            <span class="text-dark-orange text-[56px]">1% Wordpress Developers For You</span> 
+            <h1 class="text-4xl font-bold text-center text-[35px] md:text-[56px] mb-4 text-white">How We Find Top</h1>
+            <span class="text-dark-orange text-center text-[35px] md:text-[56px]">1% Wordpress Developers For You</span> 
             <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
             <!-- Step 1 -->
             <div class="grid-item col-span-3 pt-[50px] relative">
                 <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 1</h2>
-                <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
                   <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step1_icon.svg" alt="" />
                   <h3 class="text-[24px] font-semibold mb-2 text-white">Outline your Tech Requirements</h3>
                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
@@ -443,12 +443,12 @@
                       <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
                   </div>
                 </div>
-                <div class="mirror-box min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
+                <div class="mirror-box min-w-[100%] md:min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
             </div>
             <!-- Step 2 -->
-            <div class="grid-item col-span-3 pt-[50px] relative mt-[90px]">
+            <div class="grid-item col-span-3 pt-[50px] relative mt-0 md:mt-[90px]">
                 <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 2</h2>
-                <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
                   <img class="mb-3"  src="<?php echo get_template_directory_uri();?>/images/step2_icon.svg" alt="" />
                   <h3 class="text-[24px] font-semibold mb-4 text-white">Interview all the Candidates</h3>
                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
@@ -456,14 +456,14 @@
                       <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
                   </div>
                 </div>
-                <div class="mirror-box min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
+                <div class="mirror-box min-w-[100%] md:min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
                   <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button>
                 </div>
             </div>
             <!-- Step 3 -->
             <div class="grid-item col-span-3 pt-[50px] relative">
                 <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing">Step 3</h2>
-                <div class="min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
+                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px] w-[100%]">
                   <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/step3_icon.svg" alt="" />
                   <h3 class="text-[24px] font-semibold mb-2 text-white">Efficient Onboarding</h3>
                   <p class="mb-4 text-[16px] text-white">Each candidate undergoes AI vetted, interviews, technical testing, written assessments and screening to ensure the perfect fit.</p>
@@ -471,7 +471,7 @@
                       <img class="max-w-[100%] h-[220px] inline-block"  src="<?php echo get_template_directory_uri();?>/images/benefits_card_avatar.svg" alt="">
                   </div>
                 </div>
-                <div class="mirror-box min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
+                <div class="mirror-box min-w-[100%] md:min-w-[405px] min-h-[180px] w-[100%] mt-10"></div>
             </div>
           </div>
       </div>
@@ -484,8 +484,8 @@
     <section class="flex flex-col items-center justify-center py-16 w-full !pb-0">
       <h3 class="text-center small-intro">Benefits</h3>
       <div class="flex flex-col items-center justify-center">
-          <h1 class="text-4xl font-bold text-[56px] mb-4 text-white">Benefits of Hiring Wordpress</h1>
-          <span class="text-dark-orange text-[56px]">Developer from SmartWorking</span> 
+          <h1 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Benefits of Hiring Wordpress</h1>
+          <span class="text-dark-orange text-[35px] md:text-[56px] text-center">Developer from SmartWorking</span> 
       </div>
       <div class="relative mb-28 w-[100%] lg:mt-[150px]">
           <div class="grid grid-cols-1 relative justify-center content-center">
@@ -503,84 +503,84 @@
       <div class="container mx-auto md:px-0 px-10">
           <div class="grid grid-cols-1 md:grid-cols-10 gap-6 justify-center relative">
             <div class="grid-item col-span-10">
-                <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-40 py-28">
+                <div class="flex flex-col justify-center items-center text-center align-middle relative orangepart px-3 py-7 md:px-12 md:py-12">
                   <img class="mb-3 w-28" src="<?php echo get_template_directory_uri();?>/images/tree.svg" alt="" />
                   <h2 class="text-2xl text-white font-bold mb-4 text-center">Hiring with Smart working</h2>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
 
                 <div class="flex flex-col justify-center relative greenpart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/user-dev.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">96% Retention</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers.</h5>
                       </div>
                   </div>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
                 <div class="flex flex-col justify-center relative firozipart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/user.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 49h</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
                       </div>
                   </div>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
               <div class="flex flex-col justify-center relative lightorangepart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/cpu.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 9h</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
                       </div>
                   </div>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
               <div class="flex flex-col justify-center relative brownpart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/CircleClock.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 19h</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
                       </div>
                   </div>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
               <div class="flex flex-col justify-center relative darkfirozipart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/days-warranty.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 20h</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
                       </div>
                   </div>
                 </div>
             </div>
-            <div class="grid-item col-span-5">
+            <div class="grid-item col-span-10 md:col-span-5">
                 <div class="flex flex-col justify-center relative violetpart px-10 py-5">
                   <div class="grid items-center grid-cols-9 gap-0">
-                      <div class="col-span-1"> 
+                      <div class="col-span-2 md:col-span-1"> 
                         <img class="mb-3" src="<?php echo get_template_directory_uri();?>/images/eurocircle.svg" alt="" /> 
                       </div>
-                      <div class="col-span-5 pl-2">
+                      <div class="col-span-7 md:col-span-8 pl-2">
                         <h4 class="text-2xl text-white font-bold mb-2">Hire engineer in 5h</h4>
                         <h5 class="text-sm text-white font-normal">A Dedicated Team To Help Get The Best Out Of Your Developers</h5>
                       </div>
@@ -802,32 +802,32 @@
 
 
     <div class="w-full  relative grid items-center pb-28">
-      <div class="container mx-auto md:px-0 px-10 flex items-center ready-hire-bg h-96">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center mb-10">
+      <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
+        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
+          <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
             <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire a Developer?</h1>
             <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
             
           </div>
-          <div class="px-6 py-10 flex justify-self-center min-w-[538px]">
-            <div class="bg-white rounded-3xl px-6 py-6 w-full">
-          <div class="rounded-2xl border-pattern px-6 py-6 w-full">
-            <h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
-            <form method="post">
-              <input type="text"  name="skills"  class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="w0z9xl">
-              <input type="text" name="fullname" placeholder="Full Name" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="3p8zek">
-              <input type="email" name="email-address" placeholder="Email Address" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="qmz9kh">
-              <button type="submit" class="w-full flex items-center justify-center bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now <img class="ml-4"  src="<?php echo get_template_directory_uri();?>/images/forward_arrow.svg" alt=""></button>
-            </form>
-            <h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
+          <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
+            <div class="bg-white lg:right-[150px] relative lg:absolute top-[-50px] h-[500px] rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
+                <div class="rounded-2xl border-pattern px-6 py-6 w-full">
+                  <h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
+                  <form method="post">
+                    <input type="text"  name="skills"  class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="w0z9xl">
+                    <input type="text" name="fullname" placeholder="Full Name" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="3p8zek">
+                    <input type="email" name="email-address" placeholder="Email Address" class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm" fdprocessedid="qmz9kh">
+                    <button type="submit" class="w-full flex items-center justify-center bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200" fdprocessedid="ytbjb">Submit Now <img class="ml-4"  src="<?php echo get_template_directory_uri();?>/images/forward_arrow.svg" alt=""></button>
+                  </form>
+                  <h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
+                </div>
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="w-full relative grid items-center pt-3 md:pt-10">
+    <div class="w-full relative grid items-center px-4 pt-3 md:pt-10">
         <div class="max-w-[1280px] mx-auto">
               <div class="d-block">
                 <h3 class="text-center small-intro"> Hire </h3>

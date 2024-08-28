@@ -93,7 +93,7 @@
                         <?php endif; ?>	
                         </div>
                         
-                        <div class="grid-item col-span-5 content-start lg:pl-[60px]">
+                        <div class="grid-item col-span-5 content-start lg:pl-[60px] pt-5 md:pt-0">
                             <?php if ($is_odd): ?>
                                 <div class="w-[100%] ml-auto content-center text-center h-[400px] rounded-[12px] border border-[#401A0A] bg-[#1F0C04]">
                                     <img class="inline-block" src="<?php echo get_sub_field('main_image')['url']; ?>">
