@@ -5266,6 +5266,13 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .logoSlider .bg-trust-box img{
     width: 100%;
   }
+#menu-footer-menu{
+    padding: 0px;
+    margin: 0px;
+  }
+#menu-footer-menu li{
+    display: block;
+  }
 @media (max-width: 640px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -5521,20 +5528,20 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     margin-bottom: 0.75rem;
   }
 
-  .md\:mt-28 {
-    margin-top: 7rem;
-  }
-
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .md\:mb-9 {
     margin-bottom: 2.25rem;
   }
 
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:mt-28 {
+    margin-top: 7rem;
+  }
+
+  .md\:mt-8 {
+    margin-top: 2rem;
   }
 
   .md\:block {
@@ -5698,11 +5705,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .md\:text-\[56px\] {
     font-size: 56px;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .md\:text-xl {

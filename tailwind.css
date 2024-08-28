@@ -2423,6 +2423,13 @@ input[type="range"].home-range-slider {
   .logoSlider .bg-trust-box img{
     width: 100%;
   }
+  #menu-footer-menu{
+    padding: 0px;
+    margin: 0px;
+  }
+  #menu-footer-menu li{
+    display: block;
+  }
 
 
 @media (max-width: 640px) {
