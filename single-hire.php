@@ -7,9 +7,9 @@
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-12%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
-<div class="w-full   md:flex">
-<div class="container mx-auto relative z-10 mt-5">
-<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24 relative">
+<div class="w-full   md:flex py-16">
+<div class="container mx-auto relative z-10">
+<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center relative">
   <div class="absolute top-[-30px] lg:top-0 left-0">
     <button class="flex items-center justify-center"><img class="mr-3" src="<?php echo get_template_directory_uri();?>/images/back_arrow.svg" alt="back" >
      <span class="text-white">Services</span></button>
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="w-full relative">
-	<div class="w-[100%] landing-dev-box h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+	<div class="w-[100%] landing-dev-box min-h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
 	
 	<?php if(have_rows('banner_right_box')): ?>
 	<?php while(have_rows('banner_right_box')): the_row(); ?>
@@ -52,11 +52,11 @@
 			  </div>
 		  <?php endif; ?>
 		  <?php if($heading_name): ?>
-		  <span class="block text-[16px] text-[#08111F] "><?php echo $heading_name;?></span>
+		  <span class="block text-[12px] md:text-[16px] text-[#08111F] "><?php echo $heading_name;?></span>
 		  <?php endif; ?>
 		  
 		  <?php if($heading_value): ?>
-		  <span class="block text-[24px] text-[#08111F] font-[700]"><?php echo $heading_value;?></span>
+		  <span class="block text-[18px] md:text-[24px] text-[#08111F] font-[700]"><?php echo $heading_value;?></span>
 		  <?php endif; ?>
 	  </div>
 	<?php endwhile; ?>	
@@ -260,7 +260,7 @@
           <span class="text-dark-orange text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
         <?php endif; ?>  
 		<?php if(get_sub_field('small_paragraph')): ?> 
-        <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+        <p class="mb-12 text-[13px] md:text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
       <?php endif; ?>  
       </div>
 
@@ -273,7 +273,7 @@
 		  $title = get_sub_field('title'); 
           $position = get_sub_field('position'); 
 		?>  
-             <div class="grid-item col-span-3 pt-[50px] relative <?php echo $position;?>">
+             <div class="grid-item col-span-3 pt-[50px] relative" style="margin-top:<?php echo $position;?>">
                <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
                <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px]">
                <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
@@ -309,7 +309,7 @@
 		<?php endif; ?>   
       </div>
         
-	  <div class="relative mb-28 w-[100%] lg:mt-[150px]">
+	  <div class="relative mb-16 md:mb-28 w-[100%] lg:mt-[150px]">
             <div class="grid grid-cols-1 relative justify-center content-center">
                <div class="solution_bg_bg-wrap w-[100%] max-w-[950px] h-[500px]">
                   <img class="w-[100%] h-[100%] absolute top-0 z-[1] left-0 opacity-[0.2] " src="<?php echo get_template_directory_uri();?>/images/chip-bg.png" alt="" />
@@ -369,7 +369,7 @@
 
  <!-- Calculate Section -->
 
-<div class="w-full relative calculate-sec grid items-center lg:py-[100px]" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
+<div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto px-0 md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
@@ -483,7 +483,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
 <?php while (have_rows('hire_block_section')) : the_row(); ?>
 <?php if (get_row_layout() == 'client_section') : ?>
-    <section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[10rem]">
+    <section class="w-[100%] md:min-h-[600px] py-16">
         <div class="max-w-[600px] relative mx-auto text-center">
 		<?php if(get_sub_field('top_title')): ?>
         <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_title'); ?></span></div>
@@ -520,7 +520,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'faq_section') : ?>
-		<div class="w-full relative grid items-center z-10">
+		<div class="w-full relative grid items-center z-10 py-16">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('top_title')): ?>
 				<h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
@@ -571,7 +571,7 @@
 <?php endif; ?>  
 
 
-<div class="w-full  relative grid items-center pb-28">
+<div class="w-full  relative grid items-center py-16">
   <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
 	<?php if (have_rows('hire_block_section')) : ?>
@@ -606,7 +606,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'hire_offshore') : ?>
-<div class="w-full relative grid items-center pt-16 md:pt-36">
+<div class="w-full relative grid items-center py-16">
     <div class="max-w-[1280px] mx-auto">
           <div class="d-block">
 		  <?php if(get_sub_field('top_title')): ?>

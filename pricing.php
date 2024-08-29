@@ -119,9 +119,9 @@
                 <?php while (have_rows('pricing_block')) : the_row(); ?>
                 <?php if (get_row_layout() == 'top_section_accordion') : ?>
                 <div class="accordion-box w-full">
-                    <div class="accordion-item p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[rgba(255,77,2,0.10)] ">
+                    <div class="p-[24px] rounded-[24px] w-full border border-[rgba(255,77,2,0.30)] bg-gradient-to-r from-[rgba(255,77,2,0.10)] ">
                         <?php if(get_sub_field('heading')): ?>
-                        <div class="accordion-title w-full text-[24px] relative text-white cursor-pointer">
+                        <div class="accordion-title w-full text-[24px] relative text-white">
                             <?php echo get_sub_field('heading'); ?>
                             <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
                         </div>
@@ -170,18 +170,18 @@
                     $first_colour = get_sub_field('first_colour'); 
                     $second_colour = get_sub_field('second_colour'); 
                 ?>
-                    <div class="accordion-item p-[24px] mt-5 rounded-[24px] w-full border" style="background-image:linear-gradient(to right, <?php echo $second_colour;?> 0%, <?php echo $first_colour;?> 100%); border-color: <?php echo $second_colour;?>;">
-                        <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white cursor-pointer pl-[60px] pr-[100px]">
+                    <div class="p-[24px] mt-5 rounded-[24px] w-full border" style="background-image:linear-gradient(to right, <?php echo $second_colour;?> 0%, <?php echo $first_colour;?> 100%); border-color: <?php echo $second_colour;?>;">
+                        <div class="accordion-title w-full text-[16px] lg:text-[24px] relative text-white pl-[60px] pr-[100px]">
                             <span class=" block w-[40px] rounded-[8px] h-[40px] border border-[rgba(255,255,255,0.30)] p-[8px] absolute left-0 top-[-5] text-white text-center">
                                 <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
                             </span>
                             <?php echo $title_name;?>
-                            <span class=" block w-[150px] h-[30px] absolute right-[40px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?></span>
-                            <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
+                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?></span>
+                            <!-- <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span> -->
                         </div>
-                        <div class="accordion-details w-full relative pt-4">
+                        <!-- <div class="accordion-details w-full relative pt-4">
                             <p class="text-white text-[15px] lg:text-[18px] font-medium mb-0"><?php echo $description;?></p>
-                        </div>
+                        </div> -->
                     </div>
                     
                 <?php endwhile; ?>	

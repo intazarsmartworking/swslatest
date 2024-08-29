@@ -281,7 +281,7 @@ body {
     background: linear-gradient(to right, rgb(144 46 5 / 91%), rgb(12 6 3));
     position: absolute;
     width: 95%;
-    bottom: 0px;
+    bottom: 7px;
     z-index: 999;
     left: 7px;
     border-radius: 10px;
