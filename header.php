@@ -224,7 +224,7 @@
               </div>
             </div>
             <div class="col-span-3 p-4">
-              <div class="max-w-md relative z-10 rounded-3xl min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
+              <div class="max-w-md relative z-10 rounded-[12px] min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
                 <div class="px-6 py-4">
                   <div class="block">
                     <p class="text-[14px] text-[#64748b]">Hourly rate</p>
