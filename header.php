@@ -224,7 +224,37 @@
               </div>
             </div>
             <div class="col-span-3 p-4">
-             <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/menu-img.svg">
+              <div class="max-w-md relative z-10 rounded-3xl min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
+                <div class="px-6 py-4">
+                  <div class="block">
+                    <p class="text-[14px] text-[#64748b]">Hourly rate</p>
+                  </div>
+                  <div class="block">
+                    <p class="text-[32px] font-[500] ">£20/hr</p>
+                  </div>
+                  <div class="block w-100 mt-3 h-[90px] border-b border-gray-400">
+                    <div class="sliderwrap">
+                      <input class="home-range-slider header-range" type="range" max="100" value="0">
+                    </div>
+                  </div>
+                  <div class="block pt-5">
+                    <div class="flex">
+                      <div class="grow">
+                        <span class="text-[11px] font-[400] text-gray-500 ">Amount save</span>
+                      </div>
+                      <div class="grow text-end">
+                        <span class="text-[15px] price-value font-[500] text-black">£ </span>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                
+                </div>
+              </div>
+              <p class="text-[18px] text-[#FF4E03] mt-8">Curious About Cost?</p>
+              <p class="text-[12px] text-[#fff] mt-3">Find out the price of your next remote hire here.</p>
+              <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button>
             </div>
           </div>
       </div>
@@ -245,7 +275,34 @@
             </div>
             <div class="col-span-3 py-[12px]"></div>
             <div class="col-span-3 p-4">
-              <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/menu-img.svg">
+            <div class="max-w-md relative z-10 rounded-3xl min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
+                <div class="px-6 py-4">
+                  <div class="block">
+                    <p class="text-[14px] text-[#64748b]">Hourly rate</p>
+                  </div>
+                  <div class="block">
+                    <p class="text-[32px] font-[500] ">£20/hr</p>
+                  </div>
+                  <div class="block w-100 mt-3 h-[90px] border-b border-gray-400">
+                    <div class="sliderwrap">
+                      <input class="home-range-slider header-range" type="range" max="100" value="0">
+                    </div>
+                  </div>
+                  <div class="block pt-5">
+                    <div class="flex">
+                      <div class="grow">
+                        <span class="text-[11px] font-[400] text-gray-500 ">Amount save</span>
+                      </div>
+                      <div class="grow text-end">
+                        <span class="text-[15px] price-value font-[500] text-black">£ </span>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                
+                </div>
+              </div>
             </div>
           </div>
       </div>

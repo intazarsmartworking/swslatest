@@ -328,7 +328,7 @@ function sliderFunction(){
         counter = 0;
         jQuery('#progress').css("width", 0);
         jQuery('#range').val(0);
-        let changeValue = `$ 0`
+        let changeValue = `£ 0`
         jQuery('#price-value').text(changeValue);
         clearInterval(interval);
         sliderFunction()
@@ -336,6 +336,32 @@ function sliderFunction(){
   }, 100);
 }
 sliderFunction()
+
+var interval2;
+var counter2 = 0;
+function sliderFunction2(){
+ var interval2 = setInterval(function(){
+      if(counter2 < 100){
+        counter2 += 1;
+        const width = `${counter2}%`
+        jQuery('.progress-bar').css("width", width);
+        jQuery('.header-range').val(counter2);
+        let changeValue = `£ ${counter2*20}`
+        jQuery('.price-value').text(changeValue);
+        
+        
+      }else{
+        counter2 = 0;
+        jQuery('progress-bar').css("width", 0);
+        jQuery('.header-range').val(0);
+        let changeValue = `£ 0`
+        jQuery('.price-value').text(changeValue);
+        clearInterval(interval2);
+        sliderFunction2()
+      }
+  }, 100);
+}
+sliderFunction2()
 
 var controller = new ScrollMagic.Controller();
 
