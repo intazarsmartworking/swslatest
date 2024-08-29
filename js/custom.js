@@ -328,7 +328,7 @@ function sliderFunction(){
         counter = 0;
         jQuery('#progress').css("width", 0);
         jQuery('#range').val(0);
-        let changeValue = `$ 0`
+        let changeValue = `£ 0`
         jQuery('#price-value').text(changeValue);
         clearInterval(interval);
         sliderFunction()
@@ -336,6 +336,32 @@ function sliderFunction(){
   }, 100);
 }
 sliderFunction()
+
+var interval2;
+var counter2 = 0;
+function sliderFunction2(){
+ var interval2 = setInterval(function(){
+      if(counter2 < 100){
+        counter2 += 1;
+        const width = `${counter2}%`
+        jQuery('.progress-bar').css("width", width);
+        jQuery('.header-range').val(counter2);
+        let changeValue = `£ ${counter2*20}`
+        jQuery('.price-value').text(changeValue);
+        
+        
+      }else{
+        counter2 = 0;
+        jQuery('progress-bar').css("width", 0);
+        jQuery('.header-range').val(0);
+        let changeValue = `£ 0`
+        jQuery('.price-value').text(changeValue);
+        clearInterval(interval2);
+        sliderFunction2()
+      }
+  }, 100);
+}
+sliderFunction2()
 
 var controller = new ScrollMagic.Controller();
 
@@ -1164,7 +1190,32 @@ function priceRateGet(){
     {id:12,midLevel:17,senior:20, name:'DevOps'},
     {id:13,midLevel:17,senior:20, name:'Azure'},
     {id:14,midLevel:17,senior:20, name:'AWS'},
-    {id:15,midLevel:17,senior:20, name:'Angular'}
+    {id:15,midLevel:17,senior:20, name:'Angular'},
+    {id:16,midLevel:17,senior:20, name:'Python'},
+    {id:17,midLevel:17,senior:20, name:'Node.js'},
+    {id:18,midLevel:17,senior:20, name:'Woo Commerce'},
+    {id:19,midLevel:17,senior:20, name:'Unity'},
+    {id:20,midLevel:17,senior:20, name:'AI'},
+    {id:21,midLevel:17,senior:20, name:'.Net'},
+    {id:22,midLevel:17,senior:20, name:'Ruby on Rails'},
+    {id:23,midLevel:17,senior:20, name:'JavaScript'},
+    {id:24,midLevel:17,senior:20, name:'Salesforce'},
+    {id:25,midLevel:17,senior:20, name:'Java'},
+    {id:26,midLevel:17,senior:20, name:'Game'},
+    {id:27,midLevel:17,senior:20, name:'Blockchain'},
+    {id:28,midLevel:17,senior:20, name:'React'},
+    {id:29,midLevel:17,senior:20, name:'React Native'},
+    {id:30,midLevel:17,senior:20, name:'Magento'},
+    {id:31,midLevel:17,senior:20, name:'Shopify Developer'},
+    {id:32,midLevel:17,senior:20, name:'Flutter'},
+    {id:33,midLevel:17,senior:20, name:'Kubernetes'},
+    {id:34,midLevel:17,senior:20, name:'AWS'},
+    {id:35,midLevel:17,senior:20, name:'Azure'},
+    {id:36,midLevel:17,senior:20, name:'DevOps'},
+    {id:37,midLevel:17,senior:20, name:'Django'},
+    {id:38,midLevel:17,senior:20, name:'Docker'},
+    {id:39,midLevel:17,senior:20, name:'iOS'},
+    {id:40,midLevel:17,senior:20, name:'Android'},
   ]
 
   var priceDataDoller = [
