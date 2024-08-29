@@ -1,4 +1,4 @@
-<section class="relative px-0 lg:pt-28 lg:pb-16 ">
+<section class="relative px-0 py-16">
     <div class="w-100 p-3 mb-9">
         <h3 class="text-center small-intro"> How It Works </h3>
         <h1 class="text-[25px] lg:text-[56px] text-center font-bold text-white mb-3">How We Find You The Best Software Talent</h1>

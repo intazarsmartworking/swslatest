@@ -1,4 +1,4 @@
-<div class="w-full relative grid items-center">
+<div class="w-full relative grid items-center py-16">
 	<div class="container mx-auto md:px-0 px-10">
 		<div class="mx-auto px-0 md:px-0 lg:px-10 pt-2">
 
