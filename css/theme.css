@@ -1515,9 +1515,6 @@ select {
 .min-h-\[180px\] {
   min-height: 180px;
 }
-.min-h-\[200px\] {
-  min-height: 200px;
-}
 .min-h-\[250px\] {
   min-height: 250px;
 }
@@ -1547,9 +1544,6 @@ select {
 }
 .min-h-\[600px\] {
   min-height: 600px;
-}
-.min-h-\[700px\] {
-  min-height: 700px;
 }
 .min-h-\[85px\] {
   min-height: 85px;
@@ -2056,9 +2050,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.border-\[\#fffff\] {
-  border-color: #fffff;
-}
 .border-\[rgba\(239\2c 80\2c 12\2c 0\.30\)\] {
   border-color: rgba(239,80,12,0.30);
 }
@@ -2160,10 +2151,6 @@ select {
   background-color: rgb(255 77 2 / var(--tw-bg-opacity));
 }
 .bg-\[\#fff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
@@ -2505,9 +2492,6 @@ select {
 }
 .pb-\[45px\] {
   padding-bottom: 45px;
-}
-.pb-\[80px\] {
-  padding-bottom: 80px;
 }
 .pl-2 {
   padding-left: 0.5rem;
@@ -6033,11 +6017,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .lg\:py-\[80px\] {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-
-  .lg\:py-\[90px\] {
-    padding-top: 90px;
-    padding-bottom: 90px;
   }
 
   .lg\:pl-\[100px\] {

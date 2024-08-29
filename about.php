@@ -72,29 +72,7 @@
 
 									
 									
-									<div class="timeline-item pb-[100px]" id="scroll-effect-6">
-										<div class="timeline-content-box max-w-[1000px]">
-										
-											<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Mission</span></div>
-										
-
-										<?php if(get_sub_field('mission_paragraph')): ?>
-										<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium"> <?php echo get_sub_field('mission_paragraph'); ?> </p>
-										<?php endif; ?>		
-										</div> 
-									</div>
 									
-									<div class="timeline-item pb-[100px]" id="scroll-effect-7">
-										<div class="timeline-content-box max-w-[1000px]">
-											<div class="pb-6"><span class="btn px-[40px] py-[15px] text-white text-[16px] rounded-[56px] font-medium text-center border border-[#EE500C] ">Vision</span></div>
-											
-											<?php if(get_sub_field('vision_paragraph')): ?>
-											<p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[40px] text-[#ffffff] lg:leading-[56px] font-medium">
-												<?php echo get_sub_field('vision_paragraph'); ?>
-											</p>
-											<?php endif; ?>	
-										</div> 
-									</div>
 
 									<div class="timeline-item curv-box pb-[100px]" id="scroll-effect-5">
 										<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
@@ -149,7 +127,7 @@
 														<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Our commitment to excellence drives us to consistently exceed expectations, delivering exceptional talent to all our clients.</p>
 													</div>
 
-													<div class="box-3 grid-item relative  py-12 lg:px-10">
+													<div class="box-3 grid-item relative  py-12 lg:pr-10">
 														<span class="block">
 															<svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M37.1721 29.0537C36.6109 28.4925 32.8669 27.3682 31.9309 27.3682C31.1814 27.3682 27.4374 28.4925 26.6878 29.0537C26.1266 29.6149 26.1266 30.1762 26.1266 31.4869V34.1085C26.1266 38.7885 31.1814 40.0992 31.5561 40.2876H31.9309C32.1174 40.2876 37.3586 38.7885 37.3586 34.1085V31.3005C37.5469 30.1762 37.5469 29.6149 37.1721 29.0537Z" fill="#FF4D02"/>
@@ -311,7 +289,7 @@
 										<div class="timeline-content-box max-w-[1280px]">
 										
 					
-										<div class="w-full flex relative min-h-[700px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+										<div class="w-full flex relative min-h-[600px] pr-3 lg:pr-0 pt-16 overflow-hidden">
 										<div class="slider-wrapper w-full relative card-container overflow-visible">
 											<div class="slider-overlay">
 											<?php if(have_rows('testimonial_card')): ?>
@@ -380,23 +358,7 @@
 										</div> 
 									</div>
 
-									<div class="timeline-item pb-[100px]">
-										<div class="timeline-content-box relative lg:left-[-90px] bg-[#ffffff] border border-[#fffff] rounded-[12px] min-h-[200px] max-w-[1380px] p-3 lg:p-[50px]">
-												<div class="slide-show max-w-[100%] px-30" >
-													<div class="silkSlide">
-													
-													<?php if(have_rows('eleventh_section_logo')): ?>
-													<?php while(have_rows('eleventh_section_logo')): the_row(); ?>
-														<div class="slide-item text-center">
-															<img width="100%" class="inline rounded-[6px]" src="<?php echo get_sub_field('client_logo')['url']; ?>" />
-														</div>
-													<?php endwhile; ?>	
-													<?php endif; ?> 	
-														
-													</div>
-												</div>
-										</div> 
-									</div>
+									
 									
 									<?php if(get_sub_field('eleventh_section_continue')): ?>
 									<div class="timeline-item pb-[0px]">
