@@ -1,5 +1,5 @@
 <?php if (get_row_layout() == 'testimonial_section') : ?>
-	<div class="pt-[80px] my-0 mx-auto flex flex-col justify-center testimonial-section items-center set-margin">
+	<div class="my-0 mx-auto flex flex-col justify-center testimonial-section items-center py-16">
 	    <?php if(get_sub_field('small_heading')): ?>
 			<div class ="container mx-auto md:px-0 px-10">
 				<p class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>

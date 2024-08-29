@@ -9,7 +9,7 @@
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('first_title')): ?>
-        <div class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium gradient-text text-center px-0 flex items-center justify-center w-full md:leading-tight">
+        <div class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white">
 		 <span class="mr-[10px]"><?php echo get_sub_field('first_title'); ?></span>
 		 <?php $title_image = get_sub_field('title_image');
 		  if (!empty($title_image) && isset($title_image['url'])):

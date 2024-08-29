@@ -17,8 +17,8 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'home_header') : ?>
-	<div class="container mx-auto mt-5">
-	<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center mt-9 mb-0 md:mb-24">
+	<div class="container mx-auto py-16">
+	<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center">
 		<div class="w-full">
 			<div class="grid gap-8 relative pr-5">
 				<?php if(get_sub_field('title')): ?>
@@ -52,7 +52,7 @@
 	<?php endif; ?>	
 	<!-- home banner close -->
 	<!-- Future Remote -->
-	<div class="w-full relative  grid items-center" >
+	<div class="w-full relative  grid items-center py-16" >
 	<div class="px-0 md:px-10">
 		<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Hiring </span> </h1>
 		<div class="container mx-auto p-4">
@@ -86,7 +86,7 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'europe_leading_box') : ?>
-	<div class="w-full relative grid items-center ">
+	<div class="w-full relative grid items-center py-16">
 	<div class="container mx-auto md:px-0 px-10">
 		<?php if(get_sub_field('short_title')): ?>
 		<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
@@ -134,7 +134,7 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
-	<section class="calculator-box w-[100%] mt-[50px]">
+	<section class="calculator-box w-[100%] py-16">
 	<div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
 		<div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
 			<div class="block mb-5">
@@ -179,7 +179,7 @@
 						</div>
 						<?php endif; ?>	
 						<div class="grow text-end">
-							<span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
+							<span id="price-value" class="text-[24px] font-[500] text-black">£ </span>
 						</div>
 					</div>
 				</div>
@@ -202,8 +202,8 @@
 	<?php get_template_part( 'template-parts/trustpilot-review' );?>
 	<?php get_template_part( 'template-parts/home-blog' );?>
 	<!-- FAQ Section  -->
-	<div class="w-full relative grid items-center z-10">
-	<div class="container mx-auto md:px-0 px-10 lg:py-[100px]">
+	<div class="w-full relative grid items-center z-10 py-16">
+	<div class="container mx-auto md:px-0 px-10 ">
 		<h3 class="text-center small-intro"> FAQ's </h3>
 		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
 		<p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
@@ -238,7 +238,7 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'hire_developer_section') : ?>
-	<div class="w-full relative grid items-center px-3  pt-20 pb-10 set-margin">
+	<div class="w-full relative grid items-center px-3  py-16">
 	<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">

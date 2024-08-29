@@ -1,11 +1,11 @@
-<div class="w-full relative">
-    <div class="w-full relative  grid items-center assemble-inner pt-[30px] lg:pt-[50px]">
+<div class="w-full relative py-16">
+    <div class="w-full relative  grid items-center assemble-inner">
     <div class="container pt-[0px] md:px-0 px-10 max-w-[80rem] mx-auto">
     <h3 class="text-center small-intro"> Make Team </h3>
     <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-dark-orange"> Your Team </span></h1>
     <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
         
-        <div class="assemble-section-animation my-16  md:mb-24">
+        <div class="assemble-section-animation">
             <div class="item-animtion"></div>
             <div class="item-animtion"></div>
             

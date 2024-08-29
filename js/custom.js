@@ -320,7 +320,7 @@ function sliderFunction(){
         const width = `${counter}%`
         jQuery('#progress').css("width", width);
         jQuery('#range').val(counter);
-        let changeValue = `$ ${counter*20}`
+        let changeValue = `£ ${counter*20}`
         jQuery('#price-value').text(changeValue);
         
         
