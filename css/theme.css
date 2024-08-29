@@ -1154,17 +1154,9 @@ select {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 .my-4 {
   margin-top: 1rem;
@@ -5513,11 +5505,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     grid-column: span 8 / span 8;
   }
 
-  .md\:my-14 {
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
-  }
-
   .md\:mb-24 {
     margin-bottom: 6rem;
   }
@@ -6011,11 +5998,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .lg\:py-\[100px\] {
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-
-  .lg\:py-\[10px\] {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .lg\:py-\[10rem\] {
