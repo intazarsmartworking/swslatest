@@ -51,7 +51,7 @@
                         <ul class="hiw-bullat-point">
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We will present the best engineers to you at no cost & within days
+                                We will present the best engineers to you at no cost.
                             </li>
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
