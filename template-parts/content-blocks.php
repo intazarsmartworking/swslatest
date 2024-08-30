@@ -60,7 +60,7 @@
 				<div class="p-4">
 				<h2 class="text-4xl font-bold text-dark-orange" data-target="150">150+</h2>
 				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white">Orgs</h3>
+				<h3 class="text-2xl font-medium text-white">Organisations</h3>
 				<!-- <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p> -->
 				</div>
 				<div class="p-4">
