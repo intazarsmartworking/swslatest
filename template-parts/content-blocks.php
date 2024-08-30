@@ -74,7 +74,7 @@
 				<h3 class="text-2xl font-medium text-white">Retention Rate</h3>
 				</div>
 				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="25000">25000</h2>
+				<h2 class="text-4xl font-bold text-dark-orange" data-target="25000">35000</h2>
 				<hr class="my-4 borderdown">
 				<h3 class="text-2xl font-medium text-white">Candidates reviewed per month</h3>
 				</div>
