@@ -313,23 +313,27 @@ document.querySelectorAll('[data-target]').forEach(element => {
 
 var interval;
 var counter = 0;
+var newChangeValue = 1600;
 function sliderFunction(){
  var interval = setInterval(function(){
-      if(counter < 100){
+      if(counter <= 100 && newChangeValue <= 4200){
         counter += 1;
         const width = `${counter}%`
         jQuery('#progress').css("width", width);
         jQuery('#range').val(counter);
-        let changeValue = `£ ${counter*20}`
+        newChangeValue += 26;
+        let changeValue = `£ ${newChangeValue}`
         jQuery('#price-value').text(changeValue);
         
         
       }else{
         counter = 0;
+        newChangeValue = 1600;
         jQuery('#progress').css("width", 0);
         jQuery('#range').val(0);
         let changeValue = `£ 0`
-        jQuery('#price-value').text(changeValue);
+        const newValue = `£ 1600`;
+        jQuery('#price-value').text(newValue);
         clearInterval(interval);
         sliderFunction()
       }
@@ -339,23 +343,27 @@ sliderFunction()
 
 var interval2;
 var counter2 = 0;
+var newChangeValue2 = 1600;
 function sliderFunction2(){
  var interval2 = setInterval(function(){
-      if(counter2 < 100){
+      if(counter2 <= 100 && newChangeValue2 <= 4200){
         counter2 += 1;
         const width = `${counter2}%`
         jQuery('.progress-bar').css("width", width);
         jQuery('.header-range').val(counter2);
-        let changeValue = `£ ${counter2*20}`
+        newChangeValue2 += 26;
+        let changeValue = `£ ${newChangeValue2}`
         jQuery('.price-value').text(changeValue);
         
         
       }else{
         counter2 = 0;
+        newChangeValue2 = 1600;
         jQuery('progress-bar').css("width", 0);
         jQuery('.header-range').val(0);
         let changeValue = `£ 0`
-        jQuery('.price-value').text(changeValue);
+        const newValue = `£ 1600`
+        jQuery('.price-value').text(newValue);
         clearInterval(interval2);
         sliderFunction2()
       }
