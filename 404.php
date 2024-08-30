@@ -9,50 +9,6 @@
 
 get_header();
 ?>
-
-	<!-- <main id="primary" class="site-main">
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'sws' ); ?></h1>
-			</header>
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'sws' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'sws' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div>
-
-					<?php
-					$sws_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'sws' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$sws_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div>
-		</section>
-	</main> -->
-
 	<section class="bg-404 w-[100%] lg:py-[100px] lg:px-[200px]">
 		<div class="container">
 			<div class="grid grid-cols-1 gap-4">
@@ -116,7 +72,7 @@ get_header();
 									</div>
 									
 									<div class="w-full lg:w-[100%] px-6 pb-8">
-										<a class="text-nowrap text-[#FF4D02] font-[16px]" href="#">Check pricing 
+										<a class="text-nowrap text-[#FF4D02] font-[16px]" href="/pricing/">Check pricing 
 											<svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
 												<path d="M4.16666 10H15.8333M15.8333 10L9.99999 4.16667M15.8333 10L9.99999 15.8333" stroke="#FF4D02" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
@@ -145,7 +101,7 @@ get_header();
 									</div>
 									
 									<div class="w-full lg:w-[100%] px-6 pb-8">
-										<a class="text-nowrap text-[#FF4D02] font-[16px]" href="#">View lastest posts
+										<a class="text-nowrap text-[#FF4D02] font-[16px]" href="/blog/">View lastest posts
 											<svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
 												<path d="M4.16666 10H15.8333M15.8333 10L9.99999 4.16667M15.8333 10L9.99999 15.8333" stroke="#FF4D02" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
