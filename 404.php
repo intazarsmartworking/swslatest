@@ -124,7 +124,7 @@ get_header();
 											</svg>
 										</div>
 										<div class="mt-12">
-											<h3 class="text-white text-xl font-bold leading-tight mb-3">Chat to us </h3>
+											<h3 class="text-white text-xl font-bold leading-tight mb-3">Schedule a call </h3>
 											<span class="text-white text-md">Can’t find what you’re looking for?</span>
 										</div>
 									</div>

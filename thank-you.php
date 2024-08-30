@@ -123,13 +123,13 @@ get_header();
                                                 </svg>
                                             </div>
                                             <div class="mt-12">
-                                                <a href="https://calendly.com/smart-working/30min"> <h3 class="text-white text-xl font-bold leading-tight mb-3">Schedule a call </h3> </a>
+                                                <h3 class="text-white text-xl font-bold leading-tight mb-3">Schedule a call </h3> 
                                                 <span class="text-white text-md">Can’t find what you’re looking for?</span>
                                             </div>
                                         </div>
                                         
                                         <div class="w-full lg:w-[100%] px-6 pb-8">
-                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="#">Chat to our team
+                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="https://calendly.com/smart-working/30min">Chat to our team
                                                 <svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <path d="M4.16666 10H15.8333M15.8333 10L9.99999 4.16667M15.8333 10L9.99999 15.8333" stroke="#FF4D02" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
