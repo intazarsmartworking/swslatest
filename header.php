@@ -59,7 +59,7 @@
       </div>
       <div class="col-span-5 content-center relative">
         <ul class="header-menu">
-          <li><a href="/about/">About</a></li>
+          <li><a href="/about/">About Us</a></li>
           <li><a href="/vetting-process/">Vetting Process</a></li>
           <li>
             <a class="more_menu" data-mainmenu="hireDevId">
