@@ -71,7 +71,7 @@ get_header();
                                         </div>
                                         
                                         <div class="w-full lg:w-[100%] px-6 pb-8">
-                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="#">Check pricing 
+                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="/pricing/">Check pricing 
                                                 <svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <path d="M4.16666 10H15.8333M15.8333 10L9.99999 4.16667M15.8333 10L9.99999 15.8333" stroke="#FF4D02" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
@@ -100,7 +100,7 @@ get_header();
                                         </div>
                                         
                                         <div class="w-full lg:w-[100%] px-6 pb-8">
-                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="#">View lastest posts
+                                            <a class="text-nowrap text-[#FF4D02] font-[16px]" href="/blog/">View lastest posts
                                                 <svg class=" inline-block " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                     <path d="M4.16666 10H15.8333M15.8333 10L9.99999 4.16667M15.8333 10L9.99999 15.8333" stroke="#FF4D02" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
