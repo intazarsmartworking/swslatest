@@ -162,7 +162,7 @@
                             <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/vetting-bottom.svg">
                         </div>
 
-                        <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="">Hire Top 1% engineers</a>
+                        <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="/find-a-developer/">Hire Top 1% engineers</a>
                     </div>
 
 
