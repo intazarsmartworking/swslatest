@@ -12,7 +12,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 1: Outline
+                        Step 1: Our Matching Process
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
@@ -20,15 +20,15 @@
                         </div>
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Outline your tech requirements</h3>
+                        <h3 class="text-[40px] text-bold">Our Matching Process</h3>
                         <ul class="hiw-bullat-point">
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We’ll match you with the best engineers in our network & in the wider market
+                                We have a network of over 1m tech professionals, covering 120+ skills & technologies.
                             </li>
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Each candidate undergoes AI vetting, interviews, and technical tests.
+                                Our team uses AI tools & technical assessments to vet 35k engineers each month & we’ll match you with the best.
                             </li>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 3: Onboarding
+                        Step 3: Quick Onboarding
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
@@ -79,15 +79,15 @@
                         
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Quick & Effective Onboarding</h3>
+                        <h3 class="text-[40px] text-bold">Quick Onboarding</h3>
                         <ul class="hiw-bullat-point">
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Once you’ve selected a developer we will onboard & set them up with your team.
+                                Once you’ve selected the perfect developer we will onboard them with your team and take care of HR & payroll.
                             </li>
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We take care of HR, Payroll, Pension and all employment costs
+                                It takes 7 days to hire developers with us. They’ll cost around £20/hr (all-in) & work your hours.
                             </li>
                         </ul>
                     </div>
@@ -99,7 +99,7 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                     Step 4: Support
+                     Step 4: Long Term Success
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
@@ -108,15 +108,15 @@
                         
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Long-term support</h3>
+                        <h3 class="text-[40px] text-bold">Long Term Success </h3>
                         <ul class="hiw-bullat-point">
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                UK (location specific) based experts on-hand to ensure long term success.
+                                Our experts will work closely with you & your developers to ensure long term success.
                             </li>
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Smart Working’s Customer Success Team will be in regular contact.
+                                96% of the developers we place are with the same client 12 months later.
                             </li>
                         </ul>
                     </div>
