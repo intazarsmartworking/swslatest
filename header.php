@@ -86,19 +86,19 @@
                 <li class="active" data-menu="frontEndDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
-                    <span class="menu-title">Front-End Development</span>
+                    <span class="menu-title">Front-End Developer</span>
                   </a>
                 </li>
                 <li data-menu="backEndDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
-                    <span class="menu-title">Back-End Development</span>
+                    <span class="menu-title">Back-End Developer</span>
                   </a>
                 </li>
                 <li data-menu="fullStackDev">
                   <a>
                   <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/full-stack-development.svg">
-                    <span class="menu-title">Full Stack Development</span>
+                    <span class="menu-title">Full Stack Developer</span>
                   </a>
                 </li>
                 <li data-menu="webDev">
@@ -113,23 +113,25 @@
                     <span class="menu-title">Cloud Developer</span>
                   </a>
                 </li>
-                <li data-menu="trendingDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
-                    <span class="menu-title">Trending Development</span>
-                  </a>
-                </li>
+                
                 <li data-menu="mobileDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Mobile App Development</span>
+                    <span class="menu-title">Mobile App Developer</span>
                   </a>
                 </li>
 				
 				<li data-menu="specializedDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Software Development</span>
+                    <span class="menu-title">Software Developer</span>
+                  </a>
+                </li>
+				
+				<li data-menu="trendingDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
+                    <span class="menu-title">Trending Developer</span>
                   </a>
                 </li>
                 
@@ -191,14 +193,7 @@
                       <li><a href="/hire/azure-developer/">Azure Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
-				  <div class="show-more-menu" id="trendingDev">
-                    <ul class="mega-menu-center">
-                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
-                  </div>
+				  
                   <div class="show-more-menu" id="mobileDev">
                     <ul class="mega-menu-center">
                       <li><a href="/hire/android-developer/">Android Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
@@ -219,6 +214,15 @@
                       <li><a href="/hire/kubernetes-developer/">Kubernetes Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                       <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                       <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+				  
+				  <div class="show-more-menu" id="trendingDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
               </div>
@@ -254,7 +258,7 @@
               </div>
               <p class="text-[18px] text-[#FF4E03] mt-8">Curious About Cost?</p>
               <p class="text-[12px] text-[#fff] mt-3">Find out the price of your next remote hire here.</p>
-              <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button>
+              <a href="/pricing/"> <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button> </a>
             </div>
           </div>
       </div>
