@@ -49,10 +49,7 @@
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdiom </h4>
           <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('uk_address', 'options'); ?> </p>
         </div>
-        <div class="pb-7">
-          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> India </h4>
-          <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('india_address', 'options'); ?> </p>
-        </div>
+        
       </div>
       <div>
         <h3 class="text-white text-xl font-medium leading-normal"> Contact Details </h3>
@@ -80,9 +77,9 @@
          $insta_url = get_field('instagram_link', 'options');
          $linkedin_url = get_field('linkedin_link', 'options');
         ?>
-        
+        <a href="<?php echo esc_url( $linkedin_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg"> </a>
 				<a href="<?php echo esc_url( $tw_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/twitter-icon.svg"> </a>
-				<a href="<?php echo esc_url( $linkedin_url );  ?>"><img class="w-5 h-5" src="<?php echo get_template_directory_uri();?>/images/linkedin-icon.svg"> </a>
+				
 			</div>
 		</div>
 	    
