@@ -48,40 +48,34 @@
 	</div>
 	</div>
 	<?php endif; ?>
-	<?php endwhile; ?>
-	<?php endif; ?>	
+
 	<!-- home banner close -->
 	<!-- Future Remote -->
+	<?php if (get_row_layout() == 'future_hiring') : ?>
 	<div class="w-full relative  grid items-center py-16" >
 	<div class="px-0 md:px-10">
-		<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> The Future of Hiring </span> </h1>
+	    <?php if(get_sub_field('main_heading')): ?>
+		<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h1>
+		<?php endif; ?>
 		<div class="container mx-auto p-4">
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
+			<?php if(have_rows('block_part')): ?>
+			<?php while(have_rows('block_part')): the_row(); ?>
 				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="150">150+</h2>
+				<h2 class="text-4xl font-bold text-dark-orange" data-target="<?php echo get_sub_field('data_target'); ?>"><?php echo get_sub_field('heading'); ?></h2>
 				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white">Organisations</h3>
-				<!-- <p class="text-base font-normal mt-2 sm-color">Increase in productivity using Stratis</p> -->
+				<h3 class="text-2xl font-medium text-white"><?php echo get_sub_field('second_heading'); ?></h3>
 				</div>
-				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="1000000">1m+</h2>
-				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white">Experts available</h3>
-				</div>
-				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="96">96%</h2>
-				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white">Retention Rate</h3>
-				</div>
-				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="35000">35000</h2>
-				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white">Candidates reviewed per month</h3>
-				</div>
+			<?php endwhile; ?>	
+			<?php endif; ?> 	
 			</div>
 		</div>
 	</div>
 	</div>
+	<?php endif; ?>
+	<?php endwhile; ?>
+	<?php endif; ?>	
+	
 	<!-- Europe Leading Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
@@ -206,7 +200,6 @@
 	<div class="container mx-auto md:px-0 px-10 ">
 		<h3 class="text-center small-intro"> FAQ's </h3>
 		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
-		<p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
