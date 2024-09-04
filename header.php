@@ -63,7 +63,7 @@
           <li><a href="/vetting-process/">Vetting Process</a></li>
           <li>
             <a class="more_menu" data-mainmenu="hireDevId">
-            Hire Developer
+            Hire Developers
               <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
               <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
             </a>

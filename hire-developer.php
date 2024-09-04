@@ -100,7 +100,7 @@
 						
 					</div>
 					<div class="header-buttons my-5 text-center">
-								<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
+								<a href="/contact-us/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
 						</div>
 					</div>	
 			</div>	
