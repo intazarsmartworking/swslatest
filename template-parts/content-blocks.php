@@ -198,8 +198,21 @@
 	<!-- FAQ Section  -->
 	<div class="w-full relative grid items-center z-10 py-16">
 	<div class="container mx-auto md:px-0 px-10 ">
-		<h3 class="text-center small-intro"> FAQ's </h3>
-		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
+	<?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+	<?php if (get_row_layout() == 'home_faq_heading') : ?>
+		
+	<?php if(get_sub_field('small_heading')): ?>		
+		<h3 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h3>
+	<?php endif; ?>	
+
+	<?php if(get_sub_field('main_heading')): ?>		
+		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"><?php echo get_sub_field('orange_heading'); ?> </span></h1>
+	<?php endif; ?>
+
+	<?php endif; ?>
+	<?php endwhile; ?>
+	<?php endif; ?> 	
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
