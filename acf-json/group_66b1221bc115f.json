@@ -23,44 +23,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_66b1235d7829d",
-                            "label": "First Section Heading",
-                            "name": "first_section_heading",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_66b1237c7829e",
-                            "label": "First Section Paragraph",
-                            "name": "first_section_paragraph",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
-                        },
-                        {
                             "key": "field_66b123a77829f",
                             "label": "Second Section Heading",
                             "name": "second_section_heading",
@@ -116,25 +78,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_66b123e4782a2",
-                            "label": "Third Section Paragraph",
-                            "name": "third_section_paragraph",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
                         },
                         {
                             "key": "field_66b12524782a3",
@@ -202,25 +145,6 @@
                             "key": "field_66b12562782a6",
                             "label": "Six Section Paragraph",
                             "name": "six_section_paragraph",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
-                        },
-                        {
-                            "key": "field_66b12589782a7",
-                            "label": "Mission Paragraph",
-                            "name": "mission_paragraph",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -418,25 +342,6 @@
                             "maxlength": "",
                             "rows": "",
                             "new_lines": ""
-                        },
-                        {
-                            "key": "field_66b1275d782b1",
-                            "label": "Eight Section Since Part",
-                            "name": "eight_section_since_part",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         },
                         {
                             "key": "field_66b1276a782b2",
@@ -972,51 +877,6 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_66b12d56ab739",
-                            "label": "Eleventh Section Logo",
-                            "name": "eleventh_section_logo",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_66b12d6bab73a",
-                                    "label": "Client Logo",
-                                    "name": "client_logo",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "preview_size": "medium",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                }
-                            ]
-                        },
-                        {
                             "key": "field_66b12d97ab73b",
                             "label": "Eleventh Section Continue",
                             "name": "eleventh_section_continue",
@@ -1144,5 +1004,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1722934513
+    "modified": 1725548721
 }
