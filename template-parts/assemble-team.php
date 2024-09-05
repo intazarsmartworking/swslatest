@@ -1,10 +1,24 @@
 <div class="w-full relative py-16">
     <div class="w-full relative  grid items-center assemble-inner">
     <div class="container pt-[0px] md:px-0 px-10 max-w-[80rem] mx-auto">
-    <h3 class="text-center small-intro"> Make Team </h3>
-    <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-dark-orange"> Your Team </span></h1>
-    <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> We connect companies with talented developers worldwide, making it easier to build strong, effective teams </p>
-        
+    <?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+	<?php if (get_row_layout() == 'assemble_section') : ?>	
+    <?php if(get_sub_field('small_title')): ?>    
+        <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+   <?php endif; ?>
+   
+   <?php if(get_sub_field('main_heading')): ?>  
+        <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span></h1>
+    <?php endif; ?>
+
+    <?php if(get_sub_field('small_paragraph')): ?>  
+        <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] pb-[50px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
+    <?php endif; ?>
+    
+    <?php endif; ?>
+	<?php endwhile; ?>
+	<?php endif; ?>    
         <div class="assemble-section-animation">
             <div class="item-animtion"></div>
             <div class="item-animtion"></div>
