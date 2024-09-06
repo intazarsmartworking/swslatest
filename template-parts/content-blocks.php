@@ -120,10 +120,11 @@
 	</div>
 	</div>
 	<?php endif; ?>
-	<?php endwhile; ?>
-	<?php endif; ?>
+	
 	<!-- How It Works Section -->
 	<?php get_template_part( 'template-parts/client-how-it-works' );?>	
+	<?php endwhile; ?>
+	<?php endif; ?>
 	<!-- Curios Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
