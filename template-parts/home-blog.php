@@ -34,7 +34,7 @@
 				$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);		
 			?>
 		
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>">
 						<div class="rounded">
 						<?php if ($image_src): ?>
 							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
