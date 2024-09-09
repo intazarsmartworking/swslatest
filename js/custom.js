@@ -1114,13 +1114,15 @@ range.addEventListener('input', setValue);
 }
 
 
-jQuery(".header-menu li a.more_menu").on('click', function(){
+jQuery(".header-menu li a.more_menu").on('click', function(e){
+  e.preventDefault();
   jQuery('.header-menu li a').removeClass('active');
   jQuery(this).addClass('active')
+  
   jQuery('.mega-menu-box').addClass('open')
   jQuery('.show-main-menu').removeClass('active-menu')
   const getAttr = jQuery(this).attr('data-mainmenu');
-  console.log('getAttr', getAttr)
+ 
   const getId = `#${getAttr}`;
   jQuery(getId).addClass('active-menu');
   jQuery('.mega-menu-left li').removeClass('active');
