@@ -58,19 +58,14 @@
         <?php endif; ?>
       </div>
       <div class="col-span-5 content-center relative">
-        <ul class="header-menu">
-          <li><a href="/about/">About Us</a></li>
-          <li><a href="/vetting-process/">Vetting Process</a></li>
-          <li>
-            <a class="more_menu" data-mainmenu="hireDevId">
-            Hire Developers
-              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
-              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
-            </a>
-          </li>
-          <li><a href="/pricing/">Pricing</a></li>
-		  <li><a href="/blog/">Insights</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'header_menu',
+            'menu_class'     => 'header-menu',
+            'container'      => false,
+            'walker'         => new Hire_Custom_Walker_Nav_Menu()
+        ));
+        ?>
       </div>
       <div class="col-span-3 content-center text-start md:text-end">
         <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange" target="">Find a Developer</a>
