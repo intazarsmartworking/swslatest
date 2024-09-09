@@ -983,7 +983,8 @@ function skillPrice(price){
   skillPriceData = price;
   console.log(price)
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
-    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    //const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    const cost = Number(skillPriceData[skillExpData.level])
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){
@@ -1021,7 +1022,8 @@ function skillExperience(count){
 
   skillExpData = count;
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
-    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData);
+    // const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData);
+    const cost = Number(skillPriceData[skillExpData.level])
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){
@@ -1057,7 +1059,8 @@ function skilleldPeople(count){
   //console.log(count.target.value)
   skillPeopleData = count;
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
-    const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    // const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
+    const cost = Number(skillPriceData[skillExpData.level])
     jQuery('#total-price').text(cost)
 
     if(skillPriceData[skillExpData.level] == 12){

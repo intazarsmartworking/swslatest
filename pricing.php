@@ -16,7 +16,7 @@
     <?php while (have_rows('pricing_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'top_section') : ?>
         <section class="price-page w-full relative">
-            <div class=" container w-[100%] !max-w-[1280px] relative py-[30px] lg:py-[30px]">
+            <div class=" container w-[100%] !max-w-[1280px] relative py-16">
                 <div class="max-w-[600px] relative mx-auto text-center">
                 <?php if(get_sub_field('main_heading')): ?>
                     <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
@@ -36,7 +36,7 @@
     <?php endwhile; ?>
     <?php endif; ?>
 
-    <section class="price-page py-[30px] w-full relative">
+    <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
             <div class="max-w-[100%] relative mx-auto rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
@@ -123,7 +123,7 @@
                         <?php if(get_sub_field('heading')): ?>
                         <div class="accordion-title w-full text-[24px] relative text-white">
                             <?php echo get_sub_field('heading'); ?>
-                            <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span>
+                            <!-- <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span> -->
                         </div>
                         <?php endif; ?>
                         
@@ -146,7 +146,7 @@
     <?php if (have_rows('pricing_block')) : ?>
     <?php while (have_rows('pricing_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'add_on_section') : ?>
-    <section class="price-page py-[30px]  w-full relative">
+    <section class="price-page py-16  w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
             <div class="w-full text-center">
                 <?php if(get_sub_field('top_heading')): ?>
@@ -195,7 +195,7 @@
     <?php endif; ?>	
 
     <?php if (get_row_layout() == 'compare_section') : ?>
-    <section class="price-page py-[30px] w-full relative">
+    <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
             <img class="absolute right-[-150px] opacity-[0.6] top-[20%] w-[400px] z-0 rotate-[180deg]" src="http://sws.local/wp-content/themes/sws/images/sqr-circule.png">
             <div class="w-full text-center">
@@ -278,7 +278,7 @@
     <?php endif; ?>
 
     <?php if (get_row_layout() == 'support_section') : ?>
-    <section class="price-page py-[30px] w-full relative">
+    <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
             <div class="w-full text-center">
             <?php if(get_sub_field('top_title')): ?>
@@ -328,7 +328,7 @@
     <?php if (have_rows('block')) : ?>
     <?php while (have_rows('block')) : the_row(); ?>
     <?php if (get_row_layout() == 'testimonial_section') : ?>
-        <section class="price-page py-[30px] w-full relative">
+        <section class="price-page py-16 w-full relative">
             <div class="py-[30px] mx-auto flex flex-col justify-center testimonial-section items-center">
                 <?php if(get_sub_field('small_heading')): ?>
                     <div class ="container mx-auto md:px-0 px-10">
@@ -400,7 +400,7 @@
     <?php if (have_rows('pricing_block')) : ?>
     <?php while (have_rows('pricing_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'faq_section') : ?>
-    <section class="price-page py-[30px]  w-full relative">
+    <section class="price-page py-16  w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
             <div class="w-full text-center">
                 <?php if(get_sub_field('top_title')): ?>
@@ -450,7 +450,7 @@
 
 
     <?php if (get_row_layout() == 'ready_hire_section') : ?>
-    <section class="w-[100%] px-[5%] mb-[60px]">
+    <section class="w-[100%] px-[5%] py-16">
         <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
             <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
             <div class="pt-[60px]">

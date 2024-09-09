@@ -30,7 +30,7 @@
 				<?php if(get_sub_field('button_name')): ?>
 				<?php $home_banner_url =  get_sub_field('button_url'); ?>
 				<div class="header-buttons mt-6">
-				<a href="<?php echo esc_url( $home_banner_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+				<a href="<?php echo esc_url( $home_banner_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[30px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[20px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
 				</div>
 				<?php endif; ?>
 				<?php if(get_sub_field('app_star_icon')): ?>
