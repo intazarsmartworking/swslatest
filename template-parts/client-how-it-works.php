@@ -6,11 +6,13 @@
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('first_title')): ?>	
-        <h1 class="text-[25px] lg:text-[56px] text-center font-bold text-white mb-3"><?php echo get_sub_field('first_title'); ?> </h1>
+        <h1 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">
+            <?php echo get_sub_field('first_title'); ?> 
+        </h1>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('second_title')): ?>	
-        <p class="text-center text-[25px] pt-[10px] lg:text-[45px]  text-dark-orange mb-3"><?php echo get_sub_field('second_title'); ?></p>
+        <p class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-center px-0 md:px-96 md:leading-tight  text-dark-orange mb-3"><?php echo get_sub_field('second_title'); ?></p>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('small_paragraph')): ?>	
@@ -29,7 +31,7 @@
 			$background_name = get_sub_field('background_name'); 
 		?>
 
-            <section class="how-it-works-card panel p-3 lg:-[0px] <?php echo $background_name;?> rounded-2xl bg-[<?php echo $background_color;?>] lg:rounded-[44px] lg:pt-0">
+            <section class="how-it-works-card panel p-3 lg:-[0px] <?php echo $background_name;?> rounded-2xl bg-[<?php echo $background_color;?>] lg:rounded-[44px] lg:pt-0" style="background:<?php echo $background_color;?>">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">

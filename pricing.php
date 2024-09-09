@@ -73,7 +73,7 @@
                                     <div class="range-value" id="rangeV"></div>
                                     <input class="custom" id="slide-range" type="range" min="1" max="10" value="1" step="1">
                                     <div class="absolute w-[100%] bottom-0 left-0">
-                                        <div class="grid slide-range-box grid-cols-10 gap-0">
+                                        <div class="grid slide-range-box grid-cols-10 gap-10">
                                             <div class="col-span-1">1</div>
                                             <div class="col-span-1 text-center">2</div>
                                             <div class="col-span-1 text-center">3</div>
@@ -355,7 +355,7 @@
                         $linkedin = get_sub_field('linkedin');
                     ?>
 
-                        <div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" >
+                        <div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;">
                             <div class="p-4 lg:p-10 flex flex-col ">
                                 <div class="flex justify-between items-center mb-6">
                                     <img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">

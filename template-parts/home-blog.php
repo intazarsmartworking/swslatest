@@ -37,7 +37,7 @@
 					<a href="<?php the_permalink(); ?>">
 						<div class="rounded">
 						<?php if ($image_src): ?>
-							<img class="w-[100%] rounded-lg h-[250px] " src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+							<img class="w-[100%] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						<?php endif; ?>
 						<div class="py-4">
 						
