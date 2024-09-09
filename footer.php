@@ -44,15 +44,15 @@
         
       </div>
       <div>
-        <h3 class="text-white text-xl font-medium leading-normal"> Our Locations </h3>
+        <h3 class="text-white text-xl font-medium leading-normal"> Our Location </h3>
         <div class="pb-7 pt-5">
-          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdiom </h4>
+          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h4>
           <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('uk_address', 'options'); ?> </p>
         </div>
-        <div class="pb-7">
+        <!-- <div class="pb-7">
           <h4 class="text-footer-menu-color text-base font-medium leading-normal"> India </h4>
           <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('india_address', 'options'); ?> </p>
-        </div>
+        </div> -->
       </div>
       <div>
         <h3 class="text-white text-xl font-medium leading-normal"> Contact Details </h3>

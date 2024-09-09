@@ -591,9 +591,9 @@
 	<?php endwhile; ?>
 	<?php endif; ?> 
       <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
-        <div class="bg-white lg:right-[150px] relative lg:absolute top-[-50px] h-[500px] rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
-			<div class="rounded-2xl border-pattern px-6 py-6 w-full">
-				<iframe aria-label='Share Your Requirement' frameborder="0" style="height:400px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
+        <div class="bg-white ml-0 lg:ml-[12%] relative rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
+			<div class="w-full">
+				<iframe aria-label='Share Your Requirement' frameborder="0" style="height:320px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
 				<h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4>
 			</div>
        </div>
