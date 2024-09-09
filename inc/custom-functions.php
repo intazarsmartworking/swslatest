@@ -5,8 +5,82 @@
 register_nav_menus(
 	array(
 		'footer' => esc_html__( 'Footer', 'sws' ),
+        'header_menu' => __('Header Menu')
 	)
 );
+
+
+class Hire_Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+
+    // Start Level
+    function start_lvl(&$output, $depth = 0, $args = null) {
+        $indent = str_repeat("\t", $depth);
+        $classes = array('sub-menu');
+        $class_names = join(' ', apply_filters('nav_menu_submenu_css_class', $classes, $args, $depth));
+        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+        $output .= "\n" . $indent . '<ul' . $class_names . '>' . "\n";
+    }
+
+    // Start Element
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $indent = ($depth) ? str_repeat("\t", $depth) : '';
+
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
+        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+
+        $id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth);
+        $id = $id ? ' id="' . esc_attr($id) . '"' : '';
+
+        $output .= $indent . '<li' . $id . $class_names .'>';
+
+        $atts = array();
+        $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+        $atts['target'] = ! empty( $item->target ) ? $item->target : '';
+        $atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+        $atts['href']   = ! empty( $item->url ) ? $item->url : '';
+
+        // Add specific class and data attribute for "Hire Developers" menu item
+        if ($item->title == 'Hire Developers') {
+            $atts['class'] = 'more_menu';
+            $atts['data-mainmenu'] = 'hireDevId';
+        }
+
+        $attributes = '';
+        foreach ( $atts as $attr => $value ) {
+            if ( ! empty( $value ) ) {
+                $value = ( 'href' === $attr ) ? esc_url($value) : esc_attr($value);
+                $attributes .= ' ' . $attr . '="' . $value . '"';
+            }
+        }
+
+        $title = apply_filters('the_title', $item->title, $item->ID);
+        $item_output = $args->before;
+
+        // Add caret images for "Hire Developers"
+        $item_output .= '<a'. $attributes .'>';
+        $item_output .= $args->link_before . $title . $args->link_after;
+
+        // Add caret images only for the "Hire Developers" menu item
+        if ($item->title == 'Hire Developers') {
+            $item_output .= '<img class="w-[22px] caret-down" src="' . get_template_directory_uri() . '/images/caret-down.png">';
+            $item_output .= '<img class="w-[22px] caret-up" src="' . get_template_directory_uri() . '/images/caret-up.png">';
+        }
+
+        $item_output .= '</a>';
+        $item_output .= $args->after;
+
+        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+    }
+
+    // End Element
+    function end_el(&$output, $item, $depth = 0, $args = null) {
+        $output .= "</li>\n";
+    }
+}
+
+
+
 
 class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
     function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -98,7 +172,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			$designation = get_field('profile');
 			$dev_image_id = get_post_thumbnail_id();
 			$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
-            echo '<a href="' . get_permalink() . '" class="grid-item col-span-3 block developer-sec-pic">';
+            echo '<a href="/contact-us/" class="grid-item col-span-3 block developer-sec-pic">';
             echo '<img src="' . esc_url($dev_image_src[0]) . '" class="rounded-xl">';
             echo '<div class="short-bio">';
             echo '<p class="text-white pb-2 text-center text-xl">' . get_the_title() . '</p>';

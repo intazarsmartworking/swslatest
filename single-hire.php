@@ -82,6 +82,7 @@
 	<?php if(get_sub_field('main_title')): ?>
       <h1 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
       <span class="text-dark-orange  text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+	  <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> No hidden costs, timezone aligned and able to hire in one week. </h3>
 	<?php endif; ?>  
     </div>
 	<div class="container mx-auto p-4">
@@ -181,7 +182,7 @@
 					 ?>
 					
 						<div class="w-full py-4 mt-4">
-						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Assisment</p>
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
 						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
 							<span class="tooltip-box" style="background:<?php echo $technical_assignment_color;?>; left:calc(<?php echo $technical_assignment_multiply;?>% - 16px)">
 								<?php echo $technical_assignment_value;?>
@@ -204,7 +205,7 @@
 					 ?>
 					
 						<div class="w-full py-4 mt-4">
-						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Language Proficiency</p>
+						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
 						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
 							<span class="tooltip-box" style="background:<?php echo $language_proficiency_color;?>; left:calc(<?php echo $language_proficiency_multiply;?>% - 16px)">
 								<?php echo $language_proficiency_value;?>
@@ -382,8 +383,8 @@
 						</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">No hidden fees</h3>
-                        <p class=" text-white text-[16px] font-medium ">Include HR, legal work and admin support</p>
+                        <h3 class=" text-white text-[18px] font-medium">No Hidden Costs</h3>
+                        <p class=" text-white text-[16px] font-medium ">We take care of all employment costs and provide long-term support. </p>
                       </div>
                   </div>
                   <div class="flex flex-row">
@@ -393,7 +394,7 @@
 						</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">Relatively flexible</h3>
+                        <h3 class=" text-white text-[18px] font-medium">Flexibility</h3>
                         <p class=" text-white text-[16px] font-medium ">No minimum length of contract</p>
                       </div>
                   </div>
@@ -407,7 +408,7 @@
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">No Charge</h3>
-                        <p class=" text-white text-[16px] font-medium ">We do not charge a finder’s fee</p>
+                        <p class=" text-white text-[16px] font-medium ">We do not charge a search or placement fee</p>
                       </div>
                   </div>
                   <div class="flex flex-row">
@@ -418,7 +419,7 @@
                       </div>
                       <div>
                         <h3 class=" text-white text-[18px] font-medium">Cost Saving</h3>
-                        <p class=" text-white text-[16px] font-medium ">40-50% annually and 15% on-cost of employment</p>
+                        <p class=" text-white text-[16px] font-medium ">40-50% annual saving from hiring locally. </p>
                       </div>
                   </div>
                 </div>
@@ -464,7 +465,7 @@
                 </div>
               </div>
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
-                <h1 class=" text-white text-[56px] font-semibold ">£16 - £2_?</h1>
+                <h1 class=" text-white text-[56px] font-semibold ">£18/hr</h1>
                 <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
                 <div class="d-block mt-[40px]">
                   <a class="bg-[#FF4D02] inline-block w-[248px] text-center text-[18px] p-4 rounded-[4px] text-white" href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">

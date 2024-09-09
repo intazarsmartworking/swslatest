@@ -58,19 +58,14 @@
         <?php endif; ?>
       </div>
       <div class="col-span-5 content-center relative">
-        <ul class="header-menu">
-          <li><a href="/about/">About</a></li>
-          <li><a href="/vetting-process/">Vetting Process</a></li>
-          <li>
-            <a class="more_menu" data-mainmenu="hireDevId">
-            Hire Developer
-              <img class="w-[22px] caret-down" src="<?php echo get_template_directory_uri();?>/images/caret-down.png">
-              <img class="w-[22px] caret-up" src="<?php echo get_template_directory_uri();?>/images/caret-up.png">
-            </a>
-          </li>
-          <li><a href="/pricing/">Pricing</a></li>
-		  <li><a href="/blog/">Insights</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'header_menu',
+            'menu_class'     => 'header-menu',
+            'container'      => false,
+            'walker'         => new Hire_Custom_Walker_Nav_Menu()
+        ));
+        ?>
       </div>
       <div class="col-span-3 content-center text-start md:text-end">
         <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange" target="">Find a Developer</a>
@@ -86,19 +81,19 @@
                 <li class="active" data-menu="frontEndDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
-                    <span class="menu-title">Front-End Development</span>
+                    <span class="menu-title">Front-End Developer</span>
                   </a>
                 </li>
                 <li data-menu="backEndDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
-                    <span class="menu-title">Back-End Development</span>
+                    <span class="menu-title">Back-End Developer</span>
                   </a>
                 </li>
                 <li data-menu="fullStackDev">
                   <a>
                   <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/full-stack-development.svg">
-                    <span class="menu-title">Full Stack Development</span>
+                    <span class="menu-title">Full Stack Developer</span>
                   </a>
                 </li>
                 <li data-menu="webDev">
@@ -113,23 +108,25 @@
                     <span class="menu-title">Cloud Developer</span>
                   </a>
                 </li>
-                <li data-menu="trendingDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
-                    <span class="menu-title">Trending Development</span>
-                  </a>
-                </li>
+                
                 <li data-menu="mobileDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Mobile App Development</span>
+                    <span class="menu-title">Mobile App Developer</span>
                   </a>
                 </li>
 				
 				<li data-menu="specializedDev">
                   <a>
                     <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Software Development</span>
+                    <span class="menu-title">Software Developer</span>
+                  </a>
+                </li>
+				
+				<li data-menu="trendingDev">
+                  <a>
+                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
+                    <span class="menu-title">Trending Developer</span>
                   </a>
                 </li>
                 
@@ -191,14 +188,7 @@
                       <li><a href="/hire/azure-developer/">Azure Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
-				  <div class="show-more-menu" id="trendingDev">
-                    <ul class="mega-menu-center">
-                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
-                  </div>
+				  
                   <div class="show-more-menu" id="mobileDev">
                     <ul class="mega-menu-center">
                       <li><a href="/hire/android-developer/">Android Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
@@ -219,6 +209,15 @@
                       <li><a href="/hire/kubernetes-developer/">Kubernetes Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                       <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                       <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                    </ul>
+                  </div>
+				  
+				  <div class="show-more-menu" id="trendingDev">
+                    <ul class="mega-menu-center">
+                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
+                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
                     </ul>
                   </div>
               </div>
@@ -254,7 +253,7 @@
               </div>
               <p class="text-[18px] text-[#FF4E03] mt-8">Curious About Cost?</p>
               <p class="text-[12px] text-[#fff] mt-3">Find out the price of your next remote hire here.</p>
-              <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button>
+              <a href="/pricing/"> <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button> </a>
             </div>
           </div>
       </div>

@@ -1,129 +1,62 @@
+<?php if (get_row_layout() == 'how_it_works') : ?>
 <section class="relative px-0 py-16">
     <div class="w-100 p-3 mb-9">
-        <h3 class="text-center small-intro"> How It Works </h3>
-        <h1 class="text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight">
-            <span class="text-white">How We Find You</span>
-            <span class="text-dark-orange">Quick and Efficient</span>
-        </h1>
-        <!-- <p class="text-[25px] lg:text-[56px] text-center  text-dark-orange mb-3"></p> -->
-        <p class="text-center text-[14px] lg:text-[25px]  pt-[10px] text-white">Select and Onboard Vetted Developers - Here is how we do it</p>
+	 <?php if(get_sub_field('small_title')): ?>
+        <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+	<?php endif; ?>
+	
+	 <?php if(get_sub_field('first_title')): ?>	
+        <h1 class="text-[25px] lg:text-[56px] text-center font-bold text-white mb-3"><?php echo get_sub_field('first_title'); ?> </h1>
+	<?php endif; ?>
+	
+	 <?php if(get_sub_field('second_title')): ?>	
+        <p class="text-center text-[25px] pt-[10px] lg:text-[45px]  text-dark-orange mb-3"><?php echo get_sub_field('second_title'); ?></p>
+	<?php endif; ?>
+	
+	 <?php if(get_sub_field('small_paragraph')): ?>	
+        <p class="text-center text-[14px] lg:text-[25px]  pt-[10px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+	<?php endif; ?>	
     </div>
     
     <div class="how-it-works-slide p-3 lg:p-0" id="pinContainer">
+	
+		<?php if(have_rows('box_content')): ?>
+		<?php while(have_rows('box_content')): the_row(); ?>
+		<?php 
+			$small_title = get_sub_field('small_title'); 
+			$right_side_heading = get_sub_field('right_side_heading'); 
+			$background_color = get_sub_field('background_color'); 
+			$background_name = get_sub_field('background_name'); 
+		?>
 
-            <section class="how-it-works-card panel p-3 lg:-[0px] white rounded-2xl bg-[#ECC1A1] lg:rounded-[44px] lg:pt-0">
+            <section class="how-it-works-card panel p-3 lg:-[0px] <?php echo $background_name;?> rounded-2xl bg-[<?php echo $background_color;?>] lg:rounded-[44px] lg:pt-0">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
                     <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 1: Outline
+                        <?php echo $small_title;?>
                     </div>
                     <div class="grid-item col-span-3 relative">
                         <div class="relative pl-[100px]">
-                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/outline-your-requirements.png" />
+                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_sub_field('images')['url']; ?>" />
                         </div>
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Outline your tech requirements</h3>
+                        <h3 class="text-[40px] text-bold"><?php echo $right_side_heading;?></h3>
                         <ul class="hiw-bullat-point">
+						<?php if(have_rows('main_points')): ?>
+						<?php while(have_rows('main_points')): the_row(); ?>
                             <li>
                                 <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We’ll match you with the best engineers in our network & in the wider market
+                                <?php echo get_sub_field('points'); ?>
                             </li>
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Each candidate undergoes AI vetting, interviews, and technical tests.
-                            </li>
+						<?php endwhile; ?>	
+						<?php endif; ?>	
                         </ul>
                     </div>
                 </div>
             </section>
-
-            <section class="how-it-works-card panel p-3 lg:-[0px] blue rounded-2xl bg-[#77BDDF] lg:rounded-[44px] lg:pt-0">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
-                    <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 2: Meet
-                    </div>
-                    <div class="grid-item col-span-3 relative">
-                        <div class="relative pl-[100px]">
-                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Meet-the-best-engineers.png" />
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Meet the Best Engineers</h3>
-                        <ul class="hiw-bullat-point">
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We will present the best engineers to you at no cost & within days
-                            </li>
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Each candidate is selected based on your required tech stack, skills, and experience.
-                            </li>
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                You will then interview & assess.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="how-it-works-card panel p-3 lg:-[0px] turqoise rounded-2xl bg-[#C282FA] lg:rounded-[44px] lg:pt-0">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
-                    <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                        Step 3: Onboarding
-                    </div>
-                    <div class="grid-item col-span-3 relative">
-                        <div class="relative pl-[100px]">
-                            <img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Quick-Effective-Onboarding.png" />
-                        </div>
-                        
-                    </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Quick & Effective Onboarding</h3>
-                        <ul class="hiw-bullat-point">
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Once you’ve selected a developer we will onboard & set them up with your team.
-                            </li>
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                We take care of HR, Payroll, Pension and all employment costs
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="how-it-works-card panel p-3 lg:-[0px] green rounded-2xl bg-[#60E3D5] lg:rounded-[44px]">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-10 pt-[50px] md:pt-[0px] lg:pl-[100px] h-[100%] content-center">
-                    <div class="howItWorkHeading top-[20px] lg:top-[inherit] lg:bottom-[30px] text-2 lg:text-[24px] font-extrabold">
-                     Step 4: Support
-                    </div>
-                    <div class="grid-item col-span-3 relative">
-                        <div class="relative pl-[100px]">
-							<img class="rounded-[20px] w-[100%] max-w-[100%]" src="<?php echo get_template_directory_uri();?>/images/Long-Term-support.png" />
-                        </div>
-                        
-                    </div>
-                    <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold">Long-term support</h3>
-                        <ul class="hiw-bullat-point">
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                UK (location specific) based experts on-hand to ensure long term success.
-                            </li>
-                            <li>
-                                <img src="<?php echo get_template_directory_uri();?>/images/bullet_point_symbol.svg" class="bullet-point" />
-                                Smart Working’s Customer Success Team will be in regular contact.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+		<?php endwhile; ?>	
+		<?php endif; ?> 	
 	</div>
 </section>
+<?php endif; ?>

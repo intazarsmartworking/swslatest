@@ -19,7 +19,7 @@
 				if (!empty($image) && isset($image['url'])):
 			?>	
 				<div class="block mb-8 mt-5">
-                    <img class="w-[100%] max-w-[250px]" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                    <a href="<?php echo home_url();?>"> <img class="w-[100%] max-w-[250px]" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"> </a>
                 </div>
 			<?php endif; ?>	
 				

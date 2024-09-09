@@ -2623,6 +2623,12 @@ select {
 .pt-\[9px\] {
   padding-top: 9px;
 }
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
+.pb-\[50px\] {
+  padding-bottom: 50px;
+}
 .text-left {
   text-align: left;
 }

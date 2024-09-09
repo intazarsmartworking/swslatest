@@ -9,13 +9,13 @@
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('first_title')): ?>
-        <div class="text-[35px] lg:text-[56px] font-medium text-white whitespace-nowrap">
+        <div class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center">
 		 <span class="mr-[10px]"><?php echo get_sub_field('first_title'); ?></span>
 		 <?php $title_image = get_sub_field('title_image');
 		  if (!empty($title_image) && isset($title_image['url'])):
 		 ?>
 		 
-		 <img class=" h-[30px] lg:h-[30px]"  src="<?php echo esc_url($title_image['url']); ?>" alt="<?php echo esc_url($title_image['alt']); ?>"/> 
+		 <img class="mx-auto" src="<?php echo esc_url($title_image['url']); ?>" alt="<?php echo esc_url($title_image['alt']); ?>"/> 
 		 <?php endif; ?>
 		 <span class="ml-[10px]"><?php echo get_sub_field('second_title'); ?></span> 
 		</div>

@@ -1,11 +1,24 @@
 <div class="w-full relative grid items-center py-16">
 	<div class="container mx-auto md:px-0 px-10">
 		<div class="mx-auto px-0 md:px-0 lg:px-10 pt-2">
+		<?php if (have_rows('block')) : ?>
+		<?php while (have_rows('block')) : the_row(); ?>
+		<?php if (get_row_layout() == 'home_blog_heading') : ?>	
+			<?php if(get_sub_field('small_heading')): ?>		
+				<h3 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h3>
+			<?php endif; ?>
 
-				<h3 class="text-center small-intro"> Latest Posts </h3>
-				<h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight">Our  Blogs </h1>
-				<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> Interviews, tips, guides, industry best practices, and news. </h3>
-		
+			<?php if(get_sub_field('main_heading')): ?>		
+				<h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?> </h1>
+			<?php endif; ?>
+
+			<?php if(get_sub_field('small_paragraph')): ?>	
+				<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </h3>
+			<?php endif; ?>	
+			
+		<?php endif; ?>
+		<?php endwhile; ?>
+		<?php endif; ?> 
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
 			<?php
 				$blog_args = array(

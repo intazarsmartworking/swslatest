@@ -57,7 +57,7 @@
 						<h1 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white">Need top notch developers?</h1> 
 						<span class="text-dark-orange  text-[35px] text-center  lg:text-[56px]">You are in the right place.</span> 
 						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> 
-							With Arc, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
+							With Smart Working, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
 						</h3>
 					</div>
 
@@ -100,7 +100,7 @@
 						
 					</div>
 					<div class="header-buttons my-5 text-center">
-								<a href="https://smartworking.io/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
+								<a href="/contact-us/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
 						</div>
 					</div>	
 			</div>	

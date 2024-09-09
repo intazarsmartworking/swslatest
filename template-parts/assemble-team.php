@@ -1,10 +1,24 @@
 <div class="w-full relative py-16">
     <div class="w-full relative  grid items-center assemble-inner">
     <div class="container pt-[0px] md:px-0 px-10 max-w-[80rem] mx-auto">
-    <h3 class="text-center small-intro"> Make Team </h3>
-    <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight">Let's Assemble<br><span class="text-dark-orange"> Your Team </span></h1>
-    <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] px-0 "> Our goal is pair fantastic talent with perfect opportunities for mutual success. </p>
-        
+    <?php if (have_rows('block')) : ?>
+	<?php while (have_rows('block')) : the_row(); ?>
+	<?php if (get_row_layout() == 'assemble_section') : ?>	
+    <?php if(get_sub_field('small_title')): ?>    
+        <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+   <?php endif; ?>
+   
+   <?php if(get_sub_field('main_heading')): ?>  
+        <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span></h1>
+    <?php endif; ?>
+
+    <?php if(get_sub_field('small_paragraph')): ?>  
+        <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] pb-[50px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
+    <?php endif; ?>
+    
+    <?php endif; ?>
+	<?php endwhile; ?>
+	<?php endif; ?>    
         <div class="assemble-section-animation">
             <div class="item-animtion"></div>
             <div class="item-animtion"></div>
@@ -64,10 +78,10 @@
                 <div class="bg-white col-span-5 p-3 px-5 lg:p-[2.5rem] rounded-xl">
                     <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
-                    <!-- <div class="rounded-2xl p-3 lg:px-[2.5rem] border-pattern ">
+                     <div class="rounded-2xl p-3 lg:px-[2.5rem] border-pattern ">
                         <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
 
-                        <form method="post">
+                        <!--<form method="post">
 
                         <input type="text" id="skillsInput"  name="skills"  readonly
                         class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm">
@@ -80,14 +94,15 @@
                             class="mt-4 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dark-black focus:border-dark-black  sm:text-sm">
                             
                             <button type="submit" class="w-full bg-dark-orange text-white mt-4 py-2 px-4 rounded-md hover:bg-dark-black focus:outline-none focus:bg-dark-black transition duration-200">Submit Now</button>
-                        </form>
+                        </form>-->
 
-                        <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
-                    </div> -->
-                    <div class="rounded-2xl border-pattern ">
-                        <iframe class="home-form" aria-label='Share Your Requirement' frameborder="0" style="height:330px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
+                        <?php echo do_shortcode('[contact-form-7 id="713a21a" title="Assemble Team Form"]'); ?>
                         <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
                     </div>
+                    <!-- <div class="rounded-2xl border-pattern ">
+                        <iframe class="home-form" aria-label='Share Your Requirement' frameborder="0" style="height:330px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
+                        <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
+                    </div>  -->
                     
                     
                     <div class="rounded-2xl px-6 pt-6 pb-3  lg:px-[2.5rem] border-pattern mt-4 hide-mobile">
