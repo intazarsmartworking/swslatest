@@ -212,3 +212,29 @@ require get_template_directory() . '/inc/custom-post-type.php';
  require get_template_directory() . '/inc/class-svg-enable.php';
 
 
+// Code for Block Free Email
+ function block_free_email_domains($result, $tag) {
+    $name = $tag['name'];
+    
+    // List of free email domains to block
+    $free_domains = array('gmail.com', 'yahoo.com', 'aol.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com', 'live.com', 'zoho.com', 'dont-reply.me');
+
+    // Only apply this check to the email field
+    if ($name == 'email-address') {
+        $email = isset($_POST[$name]) ? trim($_POST[$name]) : '';
+        
+        // Extract the domain from the email
+        $email_domain = substr(strrchr($email, "@"), 1);
+        
+        // If the email domain is in the list of free domains, invalidate the form
+        if (in_array($email_domain, $free_domains)) {
+            $result->invalidate($tag, 'Please use a business email address.');
+        }
+    }
+
+    return $result;
+}
+add_filter('wpcf7_validate_email*', 'block_free_email_domains', 20, 2);
+
+
+
