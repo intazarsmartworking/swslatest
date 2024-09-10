@@ -205,4 +205,10 @@ require get_template_directory() . '/inc/custom-post-type.php';
  require get_template_directory() . '/inc/custom-functions.php';
 
 
+ /**
+ * Custom SVG
+ */
+
+ require get_template_directory() . '/inc/class-svg-enable.php';
+
 
