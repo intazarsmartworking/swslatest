@@ -1,7 +1,7 @@
 <?php if (have_rows('block')) : ?>
 <?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'review_section') : ?>
-<div class="w-full relative grid items-center pb-28">
+<div class="w-full relative grid items-center py-16">
     <div class="container mx-auto md:px-0 px-10">
 	
         <?php if(get_sub_field('top_title')): ?>

@@ -1319,7 +1319,7 @@ jQuery(document).ready(function(){
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 10,
+    slidesToShow: 7,
     slidesToScroll: 3,
     autoplay: true,
     responsive: [
@@ -1328,22 +1328,29 @@ jQuery(document).ready(function(){
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          dots: false,
           infinite: true,
-          dots: true
+          autoplay: true,
         }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 2,
+          autoplay: true,
+          dots: false,
+          infinite: true,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
         }
       }
     ]
