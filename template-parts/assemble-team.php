@@ -9,7 +9,7 @@
    <?php endif; ?>
    
    <?php if(get_sub_field('main_heading')): ?>  
-        <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span></h2>
+        <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><span class="text-dark-orange block"> <?php echo get_sub_field('orange_heading'); ?> </span></h2>
     <?php endif; ?>
 
     <?php if(get_sub_field('small_paragraph')): ?>  

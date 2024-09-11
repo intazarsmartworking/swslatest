@@ -8,7 +8,7 @@
 		
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="flex flex-col items-center justify-center">
-				<h2 class=" text-center text-[25px] font-semibold md:text-[56px]"><?php echo get_sub_field('main_heading'); ?></h2>
+				<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
 			</div>
 		<?php endif; ?>
 		<div class="w-full flex relative min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
