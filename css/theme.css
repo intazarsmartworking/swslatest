@@ -1166,10 +1166,6 @@ select {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -5543,6 +5539,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     grid-column: span 8 / span 8;
   }
 
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
   .md\:mb-24 {
     margin-bottom: 6rem;
   }
@@ -5555,10 +5555,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     margin-bottom: 0.75rem;
   }
 
-  .md\:mb-9 {
-    margin-bottom: 2.25rem;
-  }
-
   .md\:mt-28 {
     margin-top: 7rem;
   }
@@ -5569,10 +5565,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .md\:mt-\[90px\] {
     margin-top: 90px;
-  }
-
-  .md\:mb-2 {
-    margin-bottom: 0.5rem;
   }
 
   .md\:block {

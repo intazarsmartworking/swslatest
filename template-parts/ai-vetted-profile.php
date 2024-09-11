@@ -18,19 +18,176 @@
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?>  
-	  <div class="grid md:flex md:flex-wrap items-start mt-10">
-		<div class="md:w-[25%] px-6">
+	  <div class="grid grid-cols-1 lg:grid-cols-10 mt-10">
+		<div class="grid-item col-span-2 px-6">
 			<?php display_ai_vetted_profile_categories();?>
 		</div>
-		<div class="md:w-[75%] p-3 border rounded-lg border-[#a962444d]">
+		<div class="grid-item col-span-8 p-3 border rounded-lg border-[#a962444d]">
+			<div class="slide-show max-w-[100%] mt-3">
 
-			
-	
+				<div class="your-class" id="vetted-profile">
+					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
+							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+									<li>WordPress</li>
+									<li>PHP</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
 
-			<div class="slide-show grid grid-cols-1 max-w-[100%]" >
-						<div class="dev-section">
-						<!-- Posts will be loaded here via AJAX -->	
-						</div> 
+
+						<!-- <div class="dev-section">
+						Posts will be loaded here via AJAX 
+						</div> -->
 			</div>
 			 
 		</div>
