@@ -1,14 +1,14 @@
 <?php if (get_row_layout() == 'how_it_works') : ?>
 <section class="relative px-0 py-16">
-    <div class="w-100 p-3 mb-9">
+    <div class="w-100 p-3 pb-0 mb-10">
 	 <?php if(get_sub_field('small_title')): ?>
-        <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+        <h4 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h4>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('first_title')): ?>	
-        <h1 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">
+        <h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight">
             <?php echo get_sub_field('first_title'); ?> 
-        </h1>
+        </h2>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('second_title')): ?>	
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="grid-item col-span-6 self-center lg:pl-[40px] max-w-[600px]">
-                        <h3 class="text-[40px] text-bold"><?php echo $right_side_heading;?></h3>
+                        <h4 class="text-[40px] font-bold"><?php echo $right_side_heading;?></h4>
                         <ul class="hiw-bullat-point">
 						<?php if(have_rows('main_points')): ?>
 						<?php while(have_rows('main_points')): the_row(); ?>

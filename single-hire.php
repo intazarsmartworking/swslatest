@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="w-full relative">
-	<div class="w-[100%] landing-dev-box min-h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+	<div class="w-[100%] landing-dev-box min-h-[450px] p-[30px] rounded-[30px] bg-white max-w-[330px] md:max-w-[450px] border-[10px] border-[#fff] lg:ml-auto">
 	
 	<?php if(have_rows('banner_right_box')): ?>
 	<?php while(have_rows('banner_right_box')): the_row(); ?>
@@ -80,9 +80,12 @@
 	
     <div class="flex flex-col items-center justify-center">
 	<?php if(get_sub_field('main_title')): ?>
-      <h1 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-      <span class="text-dark-orange  text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
-	  <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> No hidden costs, timezone aligned and able to hire in one week. </h3>
+		<h1 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+			<?php echo get_sub_field('main_title'); ?>
+			<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
+		</h1> 
+      
+	  <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"> No hidden costs, timezone aligned and able to hire in one week. </p>
 	<?php endif; ?>  
     </div>
 	<div class="container mx-auto p-4">
@@ -222,11 +225,11 @@
 					
 					<div class="flex flex-wrap -mx-2 mt-4">
 						<?php if(get_sub_field('per_hour')): ?>
-							<div class="w-full md:w-1/2 px-2 mb-4">
+							<div class="w-1/2 px-2 mb-4">
 								<p class="font-medium text-2xl text-white"><?php echo get_sub_field('per_hour'); ?></p>
 							</div>
 						<?php endif; ?>
-                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                        <div class="w-1/2 px-2 mb-4 text-right">
                             <a href="/contact-us/"> <button class="profile-button-custom"> Hire Now </button> </a>
                         </div>
                     </div>
@@ -257,8 +260,11 @@
 <?php endif; ?>
       <div class="flex flex-col items-center justify-center">
         <?php if(get_sub_field('main_title')): ?> 
-          <h1 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-          <span class="text-dark-orange text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+          <h1 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white lg:leading-[74px]">
+			<?php echo get_sub_field('main_title'); ?>
+			<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
+		</h1> 
+          
         <?php endif; ?>  
 		<?php if(get_sub_field('small_paragraph')): ?> 
         <p class="mb-12 text-[13px] md:text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
@@ -305,8 +311,11 @@
 	<?php endif; ?> 
       <div class="flex flex-col items-center justify-center">
 	  <?php if(get_sub_field('main_title')): ?>
-        <h1 class="font-medium text-[40px] md:text-[56px] mb-4 text-center text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-        <span class="text-dark-orange text-[35px] md:text-[56px] text-center"><?php echo get_sub_field('orange_title'); ?></span> 
+        <h1 class="font-medium text-[40px] md:text-[56px] mb-4 li text-center text-white lg:leading-[74px]">
+			<?php echo get_sub_field('main_title'); ?>
+			<span class="text-dark-orange font-medium block"><?php echo get_sub_field('orange_title'); ?></span> 
+		</h1> 
+        
 		<?php endif; ?>   
       </div>
         
@@ -343,7 +352,7 @@
 			  $background_name = get_sub_field('background_name'); 
 			?>
 				<div class="grid-item col-span-10 md:col-span-5">
-					<div class="flex flex-col justify-center relative <?php echo $background_name;?> px-10 py-5">
+					<div class="flex flex-col rounded-[12px] justify-center relative <?php echo $background_name;?> px-10 py-5">
 					  <div class="grid items-center grid-cols-9 gap-0">
 						  <div class="col-span-2 md:col-span-1"> 
 							<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" /> 
@@ -371,7 +380,7 @@
  <!-- Calculate Section -->
 
 <div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
-    <div class="container mx-auto px-0 md:px-0 px-10 min-h-[300px]">
+    <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
               <div class="grid-item col-span-6 content-center">
@@ -465,13 +474,16 @@
                 </div>
               </div>
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
-                <h1 class=" text-white text-[56px] font-semibold ">£18/hr</h1>
-                <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
-                <div class="d-block mt-[40px]">
-                  <a class="button inline-block w-[248px] button-small rounded-md px-[10px] md:px-[20px] py-[15px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
-</svg></a>
-                </div>
+				<div class=" border border-[#fff] rounded-[20px] p-[40px] max-w-[400px] mx-auto">
+						<h1 class=" text-white text-[56px] font-semibold ">£18/hr</h1>
+						<p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
+						<div class="d-block mt-[40px]">
+							<a class="button inline-block w-[100%] max-w-[248px] button-small rounded-md px-[10px] md:px-[20px] py-[15px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
+								</svg>
+							</a>
+						</div>
+				</div>
               </div>
           </div>
       </div>
@@ -487,16 +499,20 @@
     <section class="w-[100%] md:min-h-[300px] py-16">
         <div class="max-w-[600px] relative mx-auto text-center">
 		<?php if(get_sub_field('top_title')): ?>
-        <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_title'); ?></span></div>
+        <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 		<?php endif; ?>
 
 		<?php if(get_sub_field('main_title')): ?>
-		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"><?php echo get_sub_field('main_title'); ?></h1>
+		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
+			<?php echo get_sub_field('main_title'); ?>
+			<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
+	
+		</h1>
 		<?php endif; ?>
 		
-		<?php if(get_sub_field('orange_title')): ?>
-        <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight text-[#FF4D02] "><?php echo get_sub_field('orange_title'); ?></h1>
-		<?php endif; ?>
+		<!-- <?php if(get_sub_field('orange_title')): ?>
+        <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px] text-[#FF4D02] "><?php echo get_sub_field('orange_title'); ?></h1>
+		<?php endif; ?> -->
 		
         </div>
         <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
@@ -528,7 +544,9 @@
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('main_title')): ?>
-				<h1 class="text-dark-orange text-[35px] md:text-[56px] text-center"> <?php echo get_sub_field('main_title'); ?> <br><span class="text-dark-orange"> <?php echo get_sub_field('orange_title'); ?> </span></h1>
+				<h1 class=" text-white font-medium text-[35px] md:text-[56px] text-center lg:leading-[74px]"> <?php echo get_sub_field('main_title'); ?>
+				<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
+			</h1>
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('small_paragraph')): ?>
@@ -632,7 +650,7 @@
                   </p>
 				<?php endif; ?>   
                   <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#FF4F04] font-normal "> 
-                    <svg id="change-icons" class=" inline-block  mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                    <svg id="change-icons" class=" inline-block change-icons  mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
                     	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
                     </svg>
 					<span class="cursor-pointer " id="show-more">Show</span></p>
