@@ -553,7 +553,7 @@
 			<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
 			<?php endif; ?>
 			
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
 					
 					<?php if(have_rows('faq_part')): ?>
 					<?php while(have_rows('faq_part')): the_row(); ?>
