@@ -28,7 +28,7 @@
 
       <div class="header-buttons mt-6">
         <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-        <a href="https://smartworking.io/" class="button button-small mt-2 lg:mt-0 inline-block  px-8 py-5 font-bold rounded-xl text-white text-lg get-started-banner-home">Hire Now</a>
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-8 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Hire Now</a>
       </div>
       
     </div>
@@ -78,9 +78,9 @@
 		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 	<?php endif; ?> 
 	
-    <div class="flex flex-col items-center justify-center mb-20">
+    <div class="flex flex-col items-center justify-center">
 	<?php if(get_sub_field('main_title')): ?>
-      <h1 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+      <h1 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
       <span class="text-dark-orange  text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
 	  <h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> No hidden costs, timezone aligned and able to hire in one week. </h3>
 	<?php endif; ?>  
@@ -128,7 +128,7 @@
 					  </div>
 				  </div>
                 </div>
-				<h2 class="text-sm font-medium text-white pb-10">Technologies</h2>
+				<h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
 				    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 					 <?php if(have_rows('technology')): ?>
 					 <?php while(have_rows('technology')): the_row(); ?>
@@ -257,7 +257,7 @@
 <?php endif; ?>
       <div class="flex flex-col items-center justify-center">
         <?php if(get_sub_field('main_title')): ?> 
-          <h1 class="text-4xl font-bold text-center text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+          <h1 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
           <span class="text-dark-orange text-center text-[35px] md:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
         <?php endif; ?>  
 		<?php if(get_sub_field('small_paragraph')): ?> 
@@ -305,21 +305,21 @@
 	<?php endif; ?> 
       <div class="flex flex-col items-center justify-center">
 	  <?php if(get_sub_field('main_title')): ?>
-        <h1 class="font-bold text-[40px] md:text-[56px] mb-4 text-center text-white"><?php echo get_sub_field('main_title'); ?></h1> 
+        <h1 class="font-medium text-[40px] md:text-[56px] mb-4 text-center text-white"><?php echo get_sub_field('main_title'); ?></h1> 
         <span class="text-dark-orange text-[35px] md:text-[56px] text-center"><?php echo get_sub_field('orange_title'); ?></span> 
 		<?php endif; ?>   
       </div>
         
-	  <div class="relative mb-16 md:mb-28 w-[100%] lg:mt-[150px]">
+	  <div class="relative mb-16 md:mb-28 w-[100%] lg:mt-[50px]">
             <div class="grid grid-cols-1 relative justify-center content-center">
-               <div class="solution_bg_bg-wrap w-[100%] max-w-[950px] h-[500px]">
+               <div class="solution_bg_bg-wrap w-[100%] max-w-[1280px] min-h-[650px]">
                   <img class="w-[100%] h-[100%] absolute top-0 z-[1] left-0 opacity-[0.2] " src="<?php echo get_template_directory_uri();?>/images/chip-bg.png" alt="" />
-                  <img class="w-[280px] absolute top-[170px] z-[99] left-[calc(50%-140px)] " src="<?php echo get_template_directory_uri();?>/images/sw-logo.png" alt="" />
+                  <img class="w-[380px] absolute top-[246px] z-[99] left-[calc(50%-160px)] " src="<?php echo get_template_directory_uri();?>/images/sw-logo.png" alt="" />
                   <div class="solution_path-img" style="mask-image: url('<?php echo get_template_directory_uri();?>/images/bg-line.png')">
                     <div class="solution_path-gradient"></div>
                   </div>
                   <img class="w-[80px] absolute top-0 z-[99] left-[20px]" src="<?php echo get_template_directory_uri();?>/images/you-1.png" alt="" />
-                  <img class="w-[134px] absolute top-0 z-[99] right-[20px]" src="<?php echo get_template_directory_uri();?>/images/top-1.png" alt="" />
+                  <img class="w-[134px] absolute top-[30px] z-[99] right-[20px]" src="<?php echo get_template_directory_uri();?>/images/top-1.png" alt="" />
                </div>
              </div>
         </div>
@@ -468,7 +468,7 @@
                 <h1 class=" text-white text-[56px] font-semibold ">£18/hr</h1>
                 <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
                 <div class="d-block mt-[40px]">
-                  <a class="bg-[#FF4D02] inline-block w-[248px] text-center text-[18px] p-4 rounded-[4px] text-white" href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <a class="button inline-block w-[248px] button-small rounded-md px-[10px] md:px-[20px] py-[15px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
 </svg></a>
                 </div>
@@ -491,11 +491,11 @@
 		<?php endif; ?>
 
 		<?php if(get_sub_field('main_title')): ?>
-		<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"><?php echo get_sub_field('main_title'); ?></h1>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('orange_title')): ?>
-        <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_title'); ?></h1>
+        <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight text-[#FF4D02] "><?php echo get_sub_field('orange_title'); ?></h1>
 		<?php endif; ?>
 		
         </div>

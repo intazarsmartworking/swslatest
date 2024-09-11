@@ -144,7 +144,7 @@
 			<?php if(get_sub_field('button_name')): ?>
 			<?php $calc_url =  get_sub_field('button_url'); ?>
 			<p>
-				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] text-center uppercase button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
 			</p>
 			<?php endif; ?>
 		</div>
@@ -214,7 +214,7 @@
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?> 	
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
 				$faq_query	= new WP_Query($faq_argument);
