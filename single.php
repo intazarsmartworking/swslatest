@@ -60,7 +60,7 @@ get_header();
 						
 							<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
 								<div class="grid-item col-span-2 text-white content-start" id="fix-side-box">
-									<div class="stickysidenav">
+									<div class="stickysidenav blog-data-show">
 										<p class="text-[20px] text-white font-medium !mb-2">In this article</p>
 										<?php if(have_rows('table_content')): ?>
 										<?php 
