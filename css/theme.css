@@ -4537,6 +4537,10 @@ ul li, ol li{
     max-width: 320px;
     min-width: 237px;
 }
+.blog-data-show.stickysidenav{
+    max-width: 237px;
+    min-width: 237px;
+}
 .side-bar-fix{
     position: fixed;
     top: 70px;
