@@ -1279,7 +1279,12 @@ function priceRateGet(){
 
 
   var priceData = jQuery('#searchItem');
-      priceLocationList.forEach(function(item) {
+  const sortPriceLocationList = priceLocationList.sort((a,b)=> {
+    var a1 = a.name.toLowerCase();
+    var b1 = b.name.toLowerCase();
+    return a1<b1 ?-1:a1> b1? 1 :0;
+    })
+    sortPriceLocationList.forEach(function(item) {
         var itemData = jQuery('<div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] "><span class="block pro-name">'+item.name+'</span><span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span></div>').data('price', item)
           priceData.append(itemData);
       });
