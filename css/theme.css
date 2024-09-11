@@ -5561,6 +5561,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     min-height: 620px;
   }
 
+  .md\:min-h-\[400px\] {
+    min-height: 400px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }

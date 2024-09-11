@@ -280,8 +280,8 @@
                <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
                    <h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
                   <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
-                    <div class="absolute w-[100%] text-center left-0 bottom-[0px]">
-                    <img class="max-w-[100%] h-[220px] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
+                    <div class=" relative w-[100%] text-center left-0 bottom-[0px]">
+                    	<img class="max-w-[100%] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
                    </div>
                </div>
 			 </div>
@@ -290,7 +290,7 @@
         </div>
 
         <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
-           <a href="/contact-us/"> <button class="bg-dark-orange text-white px-6 py-3 rounded-lg text-lg">Hire Now</button> </a>
+           <a href="/contact-us/"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Hire Now</button> </a>
         </div>
 </div>		
 </section>
@@ -484,7 +484,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
 <?php while (have_rows('hire_block_section')) : the_row(); ?>
 <?php if (get_row_layout() == 'client_section') : ?>
-    <section class="w-[100%] md:min-h-[600px] py-16">
+    <section class="w-[100%] md:min-h-[300px] py-16">
         <div class="max-w-[600px] relative mx-auto text-center">
 		<?php if(get_sub_field('top_title')): ?>
         <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_title'); ?></span></div>
@@ -632,8 +632,8 @@
                   </p>
 				<?php endif; ?>   
                   <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#FF4F04] font-normal "> 
-                    <svg class=" inline-block mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
+                    <svg id="change-icons" class=" inline-block  mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                    	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
                     </svg>
 					<span class="cursor-pointer " id="show-more">Show</span></p>
               </div>
@@ -655,7 +655,7 @@
 		
 <div class="w-full relative" id="sticky-details">
     <div class="max-w-[1280px] mx-auto">
-          <div class="show-more-box pt-[60px]">
+          <div class="show-more-box pt-[0px]">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
               <div class="grid-item col-span-2 content-start" id="fix-side-box">
                 <div class="stickysidenav">
