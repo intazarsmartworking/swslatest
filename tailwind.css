@@ -1695,7 +1695,7 @@ ul li, ol li{
     color: #FF4F04;
 }
 .stickysidenav{
-    max-width: 176px;
+    max-width: 320px;
     min-width: 237px;
 }
 .side-bar-fix{

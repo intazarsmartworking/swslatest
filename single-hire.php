@@ -129,7 +129,7 @@
 				  </div>
                 </div>
 				<h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
-				    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
 					 <?php if(have_rows('technology')): ?>
 					 <?php while(have_rows('technology')): the_row(); ?>
 					 <?php 
@@ -158,7 +158,7 @@
 						 $interview_screening_color = get_sub_field('interview_screening_color');
 					 ?>
 					
-						<div class="w-full py-4 mt-4">
+						<div class="w-full py-4">
 						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
 						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
 							<span class="tooltip-box" style="background:<?php echo $interview_screening_color;?>; left:calc(<?php echo $interview_screening_multiply;?>% - 16px)">
@@ -181,7 +181,7 @@
 						 $technical_assignment_color = get_sub_field('technical_assignment_color');
 					 ?>
 					
-						<div class="w-full py-4 mt-4">
+						<div class="w-full py-4">
 						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
 						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
 							<span class="tooltip-box" style="background:<?php echo $technical_assignment_color;?>; left:calc(<?php echo $technical_assignment_multiply;?>% - 16px)">
@@ -204,7 +204,7 @@
 						 $language_proficiency_color = get_sub_field('language_proficiency_color');
 					 ?>
 					
-						<div class="w-full py-4 mt-4">
+						<div class="w-full py-4">
 						  <p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
 						  <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
 							<span class="tooltip-box" style="background:<?php echo $language_proficiency_color;?>; left:calc(<?php echo $language_proficiency_multiply;?>% - 16px)">
@@ -608,7 +608,7 @@
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'hire_offshore') : ?>
 <div class="w-full relative grid items-center py-16">
-    <div class="max-w-[1280px] mx-auto">
+    <div class="container mx-auto">
           <div class="d-block">
 		  <?php if(get_sub_field('top_title')): ?>
             <h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
@@ -654,7 +654,7 @@
 
 		
 <div class="w-full relative" id="sticky-details">
-    <div class="max-w-[1280px] mx-auto">
+    <div class="container mx-auto">
           <div class="show-more-box pt-[0px]">
             <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
               <div class="grid-item col-span-2 content-start" id="fix-side-box">
@@ -708,10 +708,10 @@
               </div>
 			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
-                <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
-                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]"><?php echo get_sub_field('right_cta_heading'); ?></h1>
+                <div class="bg-[#FF4D02] rounded-[10px] min-h-[100px] p-5 stickysidenav">
+                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h1>
 					<?php if(get_sub_field('right_cta_button_name')): ?>
-                    <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]"><?php echo get_sub_field('right_cta_button_name'); ?> 
+                    <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block py-4 text-center text-[18px] px-5 rounded-[14px] border text-[#FF4D02] mt-[30px]"><?php echo get_sub_field('right_cta_button_name'); ?> 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                       </svg>
