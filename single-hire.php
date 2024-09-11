@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="w-full relative">
-	<div class="w-[100%] landing-dev-box min-h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+	<div class="w-[100%] landing-dev-box min-h-[450px] p-[30px] rounded-[30px] bg-white max-w-[330px] md:max-w-[450px] border-[10px] border-[#fff] lg:ml-auto">
 	
 	<?php if(have_rows('banner_right_box')): ?>
 	<?php while(have_rows('banner_right_box')): the_row(); ?>
@@ -222,11 +222,11 @@
 					
 					<div class="flex flex-wrap -mx-2 mt-4">
 						<?php if(get_sub_field('per_hour')): ?>
-							<div class="w-full md:w-1/2 px-2 mb-4">
+							<div class="w-1/2 px-2 mb-4">
 								<p class="font-medium text-2xl text-white"><?php echo get_sub_field('per_hour'); ?></p>
 							</div>
 						<?php endif; ?>
-                        <div class="w-full md:w-1/2 px-2 mb-4 text-right">
+                        <div class="w-1/2 px-2 mb-4 text-right">
                             <a href="/contact-us/"> <button class="profile-button-custom"> Hire Now </button> </a>
                         </div>
                     </div>

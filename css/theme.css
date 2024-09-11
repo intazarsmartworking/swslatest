@@ -1777,6 +1777,9 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-\[330px\] {
+  max-width: 330px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -5588,6 +5591,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     max-width: 56rem;
   }
 
+  .md\:max-w-\[450px\] {
+    max-width: 450px;
+  }
+
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -5822,6 +5829,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:ml-\[12\%\] {
     margin-left: 12%;
+  }
+
+  .lg\:ml-auto {
+    margin-left: auto;
   }
 
   .lg\:mr-\[10px\] {
