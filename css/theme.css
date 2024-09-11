@@ -5328,10 +5328,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     }
 
 }
-.hover\:border-\[\#fff\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
 .hover\:bg-\[\#050403\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(5 4 3 / var(--tw-bg-opacity));
@@ -5366,10 +5362,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .hover\:text-orange-400:hover {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
-}
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .focus\:border-\[\#FF4D02\]:focus {
   --tw-border-opacity: 1;

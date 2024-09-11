@@ -162,7 +162,7 @@
                             <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/vetting-bottom.svg">
                         </div>
 
-                        <a class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home" href="/find-a-developer/">Hire Top 1% engineers</a>
+                        <a class="w-[300px] button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/find-a-developer/">Hire Top 1% engineers</a>
                     </div>
 
 
@@ -192,8 +192,8 @@
                             <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
                             <?php if(get_sub_field('button_name')): ?>
                                 <?php $calc_url =  get_sub_field('button_url'); ?>
-                                <p>
-                                    <a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+                                <p class="mt-6">
+                                    <a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] text-center button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
                                 </p>
                             <?php endif; ?>
                         </div>
