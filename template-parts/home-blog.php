@@ -5,15 +5,15 @@
 		<?php while (have_rows('block')) : the_row(); ?>
 		<?php if (get_row_layout() == 'home_blog_heading') : ?>	
 			<?php if(get_sub_field('small_heading')): ?>		
-				<h3 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h3>
+				<h4 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h4>
 			<?php endif; ?>
 
 			<?php if(get_sub_field('main_heading')): ?>		
-				<h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?> </h1>
+				<h2 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?> </h2>
 			<?php endif; ?>
 
 			<?php if(get_sub_field('small_paragraph')): ?>	
-				<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </h3>
+				<p class="text-white text-xl font-normal text-center mt-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
 			<?php endif; ?>	
 			
 		<?php endif; ?>

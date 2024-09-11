@@ -4,11 +4,11 @@
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'ai_vetted_section') : ?>	
 	<?php if(get_sub_field('small_title')): ?>	
-	  <h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+	  <h4 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h4>
 	<?php endif; ?> 
 	  
 	<?php if(get_sub_field('main_heading')): ?>	  
-	  <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h1>
+	  <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:px-96 md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
 	<?php endif; ?> 
 
 	<?php if(get_sub_field('subheading')): ?>	
@@ -18,7 +18,7 @@
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?>  
-	  <div class="grid md:flex md:flex-wrap items-start mt-[45px]">
+	  <div class="grid md:flex md:flex-wrap items-start mt-10">
 		<div class="md:w-[25%] px-6">
 			<?php display_ai_vetted_profile_categories();?>
 		</div>

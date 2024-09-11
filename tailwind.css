@@ -7,7 +7,10 @@
     padding: 0px;
     margin: 0px;
 }
-html, body { height: 100%; overflow-x: hidden; }
+html, body { 
+    height: 100%; 
+    overflow-x: hidden; 
+}
 body{
     width: 100%;
     height: auto;
@@ -1697,8 +1700,8 @@ ul li, ol li{
     color: #FF4F04;
 }
 .stickysidenav{
-    max-width: 320px;
-    min-width: 237px;
+    max-width: 260px;
+    min-width: 260px;
 }
 .blog-data-show.stickysidenav{
     max-width: 237px;
@@ -2435,6 +2438,41 @@ input[type="range"].home-range-slider {
   }
   #menu-footer-menu li{
     display: block;
+  }
+
+  .turquoiseBlue{
+    border: 1px solid #60E3D5;
+    background: linear-gradient(299deg, #60E3D5 0.1%, #309F94 100.1%);
+  }
+  .burningOrange{
+    border: 1px solid #FF7B31;
+    background: linear-gradient(299deg, #FF7B31 0.1%, #EC9C52 100.1%);
+  }
+  .cashmere{
+    border: 1px solid #ECC1A1;
+    background: linear-gradient(299deg, #ECC1A1 0.1%, #D09C76 100.1%);
+  }
+  .denimBlue{
+    border: 1px solid #6098B3;
+    background: linear-gradient(299deg, #77BDDF 0.1%, #4F99BD 100.1%);
+  }
+  .lightPurple{
+    border: 1px solid #9C68C9;
+    background: linear-gradient(299deg, #C282FA 0.1%, #913EDA 100.1%);
+  }
+  .algaeGreen{
+    border: 1px solid #60E3D5;
+    background: linear-gradient(299deg, #62E9A0 0.1%, #309F5D 100.1%);
+  }
+
+  .text-18{
+    font-size: 18px;
+  }
+  .text-18{
+    font-size: 18px;
+  }
+  .text-18{
+    font-size: 18px;
   }
 
 

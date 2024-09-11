@@ -5,7 +5,7 @@
     <div class="container mx-auto md:px-0 px-10">
 	
         <?php if(get_sub_field('top_title')): ?>
-        <h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
+        	<h4 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h4>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('first_title')): ?>
@@ -22,10 +22,10 @@
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('description')): ?>
-        <h3 class="text-white text-2xl font-normal text-center py-6 px-0 "> <?php echo get_sub_field('description'); ?> </h3>
+        <p class="text-white text-2xl font-normal text-center mt-6 px-0 "> <?php echo get_sub_field('description'); ?> </p>
 		<?php endif; ?>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
 		
 		<?php if(have_rows('review_box')): ?>
 		<?php while(have_rows('review_box')): the_row(); ?>
