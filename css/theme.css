@@ -2992,24 +2992,27 @@ select {
     padding: 0px;
     margin: 0px;
 }
-html,body
-{
+html, body { height: 100%; overflow-x: hidden; }
+body{
     width: 100%;
     height: auto;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #0F0F0F;
 }
-body {
+/* body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #0F0F0F;
     /* background-image: radial-gradient(circle, rgba(172,58,9,0.4) 0%, transparent 50%); */
-    /* background-repeat: no-repeat;
+/* background-repeat: no-repeat;
     background-position: top -200px left 0px;
-    background-size: 100% 1024px; */
-}
+    background-size: 100% 1024px; 
+} */
 .header-menu-section{
     border: 1px solid #ffffff14;
     border-radius: 14px;
