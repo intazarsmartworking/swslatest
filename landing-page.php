@@ -8,7 +8,7 @@
  get_header();
 ?>
 <div class=" w-full relative">
-  	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-12%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
+  	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-30%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[800px] mx-auto py-16">
