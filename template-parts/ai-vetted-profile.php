@@ -1,4 +1,4 @@
-<div class="w-full relative grid items-center py-16">
+<div class="w-full relative grid items-center py-16" id="profile-vet">
 	<div class="container mx-auto md:px-0 px-10">
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
@@ -25,171 +25,121 @@
 		<div class="grid-item col-span-8 p-3 border rounded-lg border-[#a962444d]">
 			<div class="slide-show max-w-[100%] mt-3">
 
-				<!-- <div class="your-class" id="vetted-profile">
-					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Gabriel-T-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Matteo-F-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
-						<img src="<?php echo get_template_directory_uri();?>/images/Henry-R-1.png" class="rounded-xl">
-						<div class="short-bio">
-							<p class="text-white pb-2 text-center text-xl">Liselotte M</p>
-							<p class="text-white text-center mb-5 text-sm">Senior WordPress Developer</p>
-							<div class="block pb-3">
-								<ul class="skill-card-itme">
-									<li>WordPress</li>
-									<li>PHP</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-				</div> -->
+				 <div class="your-class" id="vetted-profile">
+					
+					<?php
+					// Check if a category is selected
+					$category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
 
+					// Default Query: Display all 'ai-vetted-profile' posts or filter by category if selected
+					  $args = array(
+						'post_type' => 'ai-vetted-profile',
+						'posts_per_page' => -1,
+						'orderby' => 'date',
+						'order' => 'DESC',
+					  );
+					  
+					  if ($category_id) {
+						$args['tax_query'] = array(
+                        array(
+                            'taxonomy' => 'vettedcategory',
+                            'field' => 'term_id',
+                            'terms' => $category_id,
+                        ),
+						);
+					  }
+					  $query = new WP_Query($args);
+					  if ($query->have_posts()) {
+					  $total_posts = $query->post_count;
+					  $counter = 0;
+						while ($query->have_posts() && $counter < 5) {
+						$query->the_post();
+						$designation = get_field('profile');
+						$dev_image_id = get_post_thumbnail_id();
+						$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+					?>
+					<a href="/contact-us/" class="grid-item col-span-3 block rounded-[12px] developer-sec-pic">
+						<img src="<?php echo esc_url($dev_image_src[0]);?>" class="rounded-xl">
+						<div class="short-bio">
+							<p class="text-white pb-2 text-center text-xl"><?php the_title();?> </p>
+							<p class="text-white text-center mb-5 text-sm"><?php echo esc_html($designation);?></p>
+							<div class="block pb-3">
+								<ul class="skill-card-itme">
+								<?php
+								  if (have_rows('skills')) {
+								  while (have_rows('skills')) {
+									the_row();
+									$skill = get_sub_field('skill');
+								?>	
+									<li><?php echo esc_html($skill);?></li>
+								  <?php }}?>	
+								</ul>
+							</div>
+						</div>
+					</a>
+					  <?php $counter++; }} ?>
+					
+					
+					
+					
+				</div> 
+				 
 
-						 <div class="dev-section">
-						Posts will be loaded here via AJAX 
-						</div> 
+				<!-- <div class="dev-section"> Posts will be loaded here via AJAX </div> -->
 			</div>
-			 
+			
+			<?php
+				$category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
+				$args = array(
+					'post_type' => 'ai-vetted-profile',
+					'posts_per_page' => -1,
+					'orderby' => 'date',
+					'order' => 'DESC',
+				  );
+				  
+				  if ($category_id) {
+					$args['tax_query'] = array(
+					array(
+						'taxonomy' => 'vettedcategory',
+						'field' => 'term_id',
+						'terms' => $category_id,
+					),
+					);
+				  }
+				  $query = new WP_Query($args);
+				  if ($query->have_posts()) {
+				  $total_posts = $query->post_count;
+				  if ($total_posts > 5) {
+			?>
+			<div>
+			<section class="section-introduction p-3">
+				<div class="container-circule">
+				<?php
+				$counter = 0;
+				while ($query->have_posts() && $counter < 3) {
+				$query->the_post();
+				$dev_image_id = get_post_thumbnail_id();
+				$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+				?>
+					<div class="item-<?php echo $counter;?> circle-box"><img src="<?php echo esc_url($dev_image_src[0]);?>"></div>
+				<?php 
+				$counter++; }
+				$remaining_count = $total_posts - 7;
+				if ($remaining_count > 0) {
+				?>	
+					<div class="item-4 circle-box">
+						<p>+<?php echo $remaining_count;?></p>
+					</div>
+				<?php }?>	
+				</div>
+			</section>
+			</div>
+			<?php
+			 	wp_reset_postdata();
+						} else {
+							echo '<p>No posts found.</p>';
+				  }}
+					?>
 		</div>
 	  </div>
 	</div>
