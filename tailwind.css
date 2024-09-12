@@ -2476,6 +2476,31 @@ input[type="range"].home-range-slider {
   }
 
 
+  .logo__text{
+    fill: #fff;
+  }
+  .tp-star-full{
+    fill: #00b67a;
+  }
+  .card-skill{
+    padding: 0px;
+    margin: 0px;
+
+  }
+  .card-skill li{
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: rgba(255, 77, 2, 0.16);
+    border-radius: 26px;
+    padding: 6px 18px;
+    border: 1px solid rgba(255, 77, 2, 0.2);
+    margin-bottom: 8px;
+    color: rgba(252, 188, 160, 1);
+    font-size: 13px;
+  }
+
+
 @media (max-width: 800px) {
     .howItWorkHeading{
         transform: rotate(0deg);
