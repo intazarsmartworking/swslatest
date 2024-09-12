@@ -25,7 +25,7 @@
 		<div class="grid-item col-span-8 p-3 border rounded-lg border-[#a962444d]">
 			<div class="slide-show max-w-[100%] mt-3">
 
-				<div class="your-class" id="vetted-profile">
+				<!-- <div class="your-class" id="vetted-profile">
 					<a href="/contact-us/" class="grid-item col-span-3 rounded-[12px] block developer-sec-pic">
 						<img src="<?php echo get_template_directory_uri();?>/images/Liselotte-M-1.png" class="rounded-xl">
 						<div class="short-bio">
@@ -182,12 +182,12 @@
 							</div>
 						</div>
 					</a>
-				</div>
+				</div> -->
 
 
-						<!-- <div class="dev-section">
+						 <div class="dev-section">
 						Posts will be loaded here via AJAX 
-						</div> -->
+						</div> 
 			</div>
 			 
 		</div>
