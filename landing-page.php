@@ -527,9 +527,9 @@
                     </h2>
                     <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">Simple terms, tailored to your company.</p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-6 md:gap-32 relative z-10 footer-background px-28 py-16 border border-[#3c1201]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-6 md:gap-32 relative z-10 footer-background px-3 py-3 lg:px-28 lg:py-16 border border-[#3c1201]">
                         <div class="grid-item col-span-1 relative content-center divider-line">
-                            <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[140px] mb-4 text-dark-orange lg:leading-[80px]">£20</h5>
+                            <h5 class="text-center font-extrabold text-[120px] md:text-[140px] mb-4 text-dark-orange lg:leading-[80px]">£20</h5>
                             <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-3">per developer, per hour</p>
                             <p class="text-center font-normal text-[14px] text-gray-200">No additional costs &#8226; Flexible terms &#8226; Long term support</p>
                         </div>
@@ -566,7 +566,7 @@
         </section>
 
         <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[90%] mx-auto py-16">
+            <div class=" w-[100%] lg:max-w-[90%] mx-auto py-16">
                 <div class="block">
                     <div class="text-center small-intro">Testimonial</div>
                     <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[60px]">
