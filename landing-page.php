@@ -138,8 +138,10 @@
                             </div>
                         </div>
                         <div class="grid-item col-span-1 content-center">
+						<?php if(get_sub_field('form_part')): ?>
                             <div class=" w-[100%] max-w-[450px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
-                                <p class="text-[#000] text-[18px] mb-5">Not sure where to start? Let's have a chat</p>
+							<?php echo get_sub_field('form_part'); ?>
+							 <!--<p class="text-[#000] text-[18px] mb-5">Not sure where to start? Let's have a chat</p>
                                 <label class="text-[#000] text-[13px] mb-3">Full Name</label>
                                 <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02] h-[45px] mb-5" placeholder="Enter name">
                                 <label class="text-[#000] text-[13px] mb-3">Company email</label>
@@ -147,8 +149,9 @@
                                 <div class="block mb-10">
                                     <a href="#" class="button inline-block align-middle button-small rounded-md px-12 py-3 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">BOOK A CALL</a>
                                 </div>
-                                <p class=" text-gray-400 text-[13px]">First developer start within days. No aggressive sales pitch.</p>
+                                <p class=" text-gray-400 text-[13px]">First developer start within days. No aggressive sales pitch.</p> -->
                             </div>
+						<?php endif; ?>	
                         </div>
                     </div>
             </div>
@@ -299,9 +302,11 @@
                                     <p class="font-medium text-2xl text-white"><?php echo get_sub_field('per_hour'); ?></p>
 								<?php endif; ?>	
                                 </div>
+								<?php if(get_sub_field('button_name')): ?>
                                 <div class="w-1/2 px-2 mb-4 text-right">
-                                    <a href="/contact-us/"> <button class="profile-button-custom"> Hire Now </button> </a>
+                                    <a href="<?php echo get_sub_field('button_url'); ?>"> <button class="profile-button-custom"> <?php echo get_sub_field('button_name'); ?> </button> </a>
                                 </div>
+								<?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -417,7 +422,7 @@
 							?>
                                 <div class="grid-item col-span-1 relative pl-[80px] mb-8">
                                     <div class="absolute w-[60px] h-[60px] rounded-[50%] left-0 top-[calc(50%-30px)] overflow-hidden text-center">
-									<?php $image_user = get_sub_field('image');
+									<?php $image_user = get_sub_field('icon');
 										if (!empty($image_user) && isset($image_user['url'])):
 									?>
                                         <img class="w-[100%] inline-block" src="<?php echo esc_url($image_user['url']); ?>" alt="">
@@ -677,17 +682,16 @@
                             </div>
                         </div>
                         <div class="grid-item col-span-1 lg:col-span-7 content-center relative">
-                            <div class="absolute right-0 top-[-50px] w-[100%] h-[500px] bg-[#fff] rounded-[24px]"></div>
+						<?php if(get_sub_field('calender')): ?>
+                            <div class="absolute right-0 top-[-50px] w-[100%] h-[500px] bg-[#fff] rounded-[24px]">
+							    <?php echo get_sub_field('calender'); ?>
+							</div>
+						<?php endif; ?>	
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-		
-		
-		
-        
-		
 		<?php endif; ?> 
 		<?php endwhile; ?>
 		<?php endif; ?>
@@ -695,4 +699,4 @@
 </div>
 
 
-<?php get_footer('second');?>
+<?php get_footer();?>
