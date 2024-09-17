@@ -794,7 +794,7 @@ jQuery('#show-more').on('click', function(){
   if(jQuery(this).text() == 'Show'){
     jQuery(this).text('Hide')
   }else{
-    jQuery(this).text('Show')
+    jQuery(this).text('Show more')
   }
   callFunction()
 })
