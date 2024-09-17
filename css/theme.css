@@ -922,6 +922,9 @@ select {
 .bottom-\[\#fff\] {
   bottom: #fff;
 }
+.bottom-\[-1\.8rem\] {
+  bottom: -1.8rem;
+}
 .bottom-\[-8px\] {
   bottom: -8px;
 }
@@ -1110,12 +1113,6 @@ select {
 }
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
-}
-.bottom-\[-1\.75rem\] {
-  bottom: -1.75rem;
-}
-.bottom-\[-1\.8rem\] {
-  bottom: -1.8rem;
 }
 .z-0 {
   z-index: 0;
@@ -1481,9 +1478,6 @@ select {
 .h-\[30px\] {
   height: 30px;
 }
-.h-\[35px\] {
-  height: 35px;
-}
 .h-\[400px\] {
   height: 400px;
 }
@@ -1529,14 +1523,14 @@ select {
 .max-h-\[120px\] {
   max-height: 120px;
 }
+.max-h-\[200px\] {
+  max-height: 200px;
+}
 .max-h-\[400px\] {
   max-height: 400px;
 }
 .max-h-\[600px\] {
   max-height: 600px;
-}
-.max-h-\[200px\] {
-  max-height: 200px;
 }
 .min-h-\[100px\] {
   min-height: 100px;
@@ -1549,6 +1543,9 @@ select {
 }
 .min-h-\[250px\] {
   min-height: 250px;
+}
+.min-h-\[255px\] {
+  min-height: 255px;
 }
 .min-h-\[300px\] {
   min-height: 300px;
@@ -1582,9 +1579,6 @@ select {
 }
 .min-h-\[85px\] {
   min-height: 85px;
-}
-.min-h-\[255px\] {
-  min-height: 255px;
 }
 .w-0 {
   width: 0px;
@@ -2466,6 +2460,10 @@ select {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.py-\[16px\] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -2490,15 +2488,14 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.py-\[16px\] {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
 .\!pt-3 {
   padding-top: 0.75rem !important;
+}
+.\!pt-\[130px\] {
+  padding-top: 130px !important;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -2673,15 +2670,6 @@ select {
 }
 .pt-\[9px\] {
   padding-top: 9px;
-}
-.\!pt-\[166px\] {
-  padding-top: 166px !important;
-}
-.\!pt-\[150px\] {
-  padding-top: 150px !important;
-}
-.\!pt-\[130px\] {
-  padding-top: 130px !important;
 }
 .text-left {
   text-align: left;
@@ -5371,124 +5359,125 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     top: 7px;
   }
 .text-75{
-    font-size: 75px;
-    color: #fff;
+    font-size: 75px !important;
+    color: #fff !important;
   }
 .text-70{
-    font-size: 70px;
-    color: #fff;
+    font-size: 70px !important;
+    color: #fff !important;
   }
 .text-65{
-    font-size: 65px;
-    color: #fff;
+    font-size: 65px !important;
+    color: #fff !important;
   }
 .text-60{
     font-size: 60px;
-    color: #fff;
+    color: #fff !important;
   }
 .text-55{
-    font-size: 55px;
-    color: #fff;
+    font-size: 55px !important;
+    color: #fff !important;
   }
 .text-56{
-    font-size: 56px;
-    color: #fff;
+    font-size: 56px !important;
+    color: #fff !important;
   }
 .text-57{
-    font-size: 57px;
-    color: #fff;
+    font-size: 57px !important;
+    color: #fff !important;
   }
 .text-50{
-    font-size: 50px;
-    color: #fff;
+    font-size: 50px !important;
+    color: #fff !important;
   }
 .text-46{
-    font-size: 46px;
-    color: #fff;
+    font-size: 46px !important;
+    color: #fff !important;
   }
 .text-42{
-    font-size: 42px;
-    color: #fff;
+    font-size: 42px !important;
+    color: #fff !important;
   }
 .text-38{
-    font-size: 38px;
-    color: #fff;
+    font-size: 38px !important;
+    color: #fff !important;
   }
 .text-36{
-    font-size: 36px;
-    color: #fff;
+    font-size: 36px !important;
+    color: #fff !important;
   }
 .text-34{
-    font-size: 34px;
-    color: #fff;
+    font-size: 34px !important;
+    color: #fff !important;
   }
 .text-32{
-    font-size: 32px;
-    color: #fff;
+    font-size: 32px !important;
+    color: #fff !important;
   }
 .text-30{
-    font-size: 30px;
-    color: #fff;
+    font-size: 30px !important;
+    color: #fff !important;
   }
 .text-28{
-    font-size: 28px;
-    color: #fff;
+    font-size: 28px !important;
+    color: #fff !important;
   }
 .text-26{
-    font-size: 26px;
-    color: #fff;
+    font-size: 26px !important;
+    color: #fff !important;
   }
 .text-24{
-    font-size: 24px;
-    color: #fff;
+    font-size: 24px !important;
+    color: #fff !important;
   }
 .text-22{
-    font-size: 22px;
-    color: #fff;
+    font-size: 22px !important;
+    color: #fff !important;
   }
 .text-20{
-    font-size: 20px;
-    color: #fff;
+    font-size: 20px !important;
+    color: #fff !important;
   }
 .text-19{
-    font-size: 19px;
-    color: #fff;
+    font-size: 19px !important;
+    color: #fff !important;
   }
 .text-18{
-    font-size: 18px;
-    color: #fff;
+    font-size: 18px !important;
+    color: #fff !important;
   }
 .text-17{
-    font-size: 17px;
-    color: #fff;
+    font-size: 17px !important;
+    color: #fff !important;
   }
 .text-16{
-    font-size: 16px;
-    color: #fff;
+    font-size: 16px !important;
+    color: #fff !important;
   }
 .text-15{
-    font-size: 15px;
-    color: #fff;
+    font-size: 15px !important;
+    color: #fff !important;
   }
 .text-14{
-    font-size: 14px;
-    color: #fff;
+    font-size: 14px !important;
+    color: #fff !important;
   }
 .text-13{
-    font-size: 13px;
-    color: #fff;
+    font-size: 13px !important;
+    color: #fff !important;
   }
 .text-12{
-    font-size: 12px;
-    color: #fff;
+    font-size: 12px !important;
+    color: #fff !important;
   }
 .text-11{
-    font-size: 11px;
-    color: #fff;
+    font-size: 11px !important;
+    color: #fff !important;
   }
 .text-10{
-    font-size: 10px;
-    color: #fff;
+    font-size: 10px !important;
+    color: #fff !important;
+    font-weight: 400;
   }
 .logo__text{
     fill: #fff;
