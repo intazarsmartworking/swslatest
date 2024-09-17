@@ -922,6 +922,9 @@ select {
 .bottom-\[\#fff\] {
   bottom: #fff;
 }
+.bottom-\[-1\.8rem\] {
+  bottom: -1.8rem;
+}
 .bottom-\[-8px\] {
   bottom: -8px;
 }
@@ -1276,9 +1279,6 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
-.ml-\[25px\] {
-  margin-left: 25px;
-}
 .ml-\[35px\] {
   margin-left: 35px;
 }
@@ -1375,9 +1375,6 @@ select {
 .mt-\[50px\] {
   margin-top: 50px;
 }
-.mt-\[5px\] {
-  margin-top: 5px;
-}
 .mt-\[60px\] {
   margin-top: 60px;
 }
@@ -1392,9 +1389,6 @@ select {
 }
 .block {
   display: block;
-}
-.\!inline-block {
-  display: inline-block !important;
 }
 .inline-block {
   display: inline-block;
@@ -1451,9 +1445,6 @@ select {
 .h-\[110px\] {
   height: 110px;
 }
-.h-\[150px\] {
-  height: 150px;
-}
 .h-\[190px\] {
   height: 190px;
 }
@@ -1486,12 +1477,6 @@ select {
 }
 .h-\[30px\] {
   height: 30px;
-}
-.h-\[33px\] {
-  height: 33px;
-}
-.h-\[35px\] {
-  height: 35px;
 }
 .h-\[400px\] {
   height: 400px;
@@ -1538,6 +1523,9 @@ select {
 .max-h-\[120px\] {
   max-height: 120px;
 }
+.max-h-\[200px\] {
+  max-height: 200px;
+}
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -1555,6 +1543,9 @@ select {
 }
 .min-h-\[250px\] {
   min-height: 250px;
+}
+.min-h-\[255px\] {
+  min-height: 255px;
 }
 .min-h-\[300px\] {
   min-height: 300px;
@@ -1673,9 +1664,6 @@ select {
 .w-\[30px\] {
   width: 30px;
 }
-.w-\[33px\] {
-  width: 33px;
-}
 .w-\[35px\] {
   width: 35px;
 }
@@ -1788,14 +1776,8 @@ select {
 .max-w-\[70\%\] {
   max-width: 70%;
 }
-.max-w-\[700px\] {
-  max-width: 700px;
-}
 .max-w-\[80\%\] {
   max-width: 80%;
-}
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 .max-w-\[80rem\] {
   max-width: 80rem;
@@ -2189,25 +2171,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(35 16 8 / var(--tw-bg-opacity));
 }
-.bg-\[\#60E3D5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 227 213 / var(--tw-bg-opacity));
-}
-.bg-\[\#77BDDF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(119 189 223 / var(--tw-bg-opacity));
-}
-.bg-\[\#C282FA\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(194 130 250 / var(--tw-bg-opacity));
-}
 .bg-\[\#DF4402\] {
   --tw-bg-opacity: 1;
   background-color: rgb(223 68 2 / var(--tw-bg-opacity));
-}
-.bg-\[\#ECC1A1\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 193 161 / var(--tw-bg-opacity));
 }
 .bg-\[\#FF4D02\] {
   --tw-bg-opacity: 1;
@@ -2494,6 +2460,10 @@ select {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.py-\[16px\] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -2523,6 +2493,9 @@ select {
 }
 .\!pt-3 {
   padding-top: 0.75rem !important;
+}
+.\!pt-\[130px\] {
+  padding-top: 130px !important;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -2886,9 +2859,6 @@ select {
 }
 .leading-\[56px\] {
   line-height: 56px;
-}
-.leading-\[60px\] {
-  line-height: 60px;
 }
 .leading-normal {
   line-height: 1.5;
@@ -5389,124 +5359,125 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     top: 7px;
   }
 .text-75{
-    font-size: 75px;
-    color: #fff;
+    font-size: 75px !important;
+    color: #fff !important;
   }
 .text-70{
-    font-size: 70px;
-    color: #fff;
+    font-size: 70px !important;
+    color: #fff !important;
   }
 .text-65{
-    font-size: 65px;
-    color: #fff;
+    font-size: 65px !important;
+    color: #fff !important;
   }
 .text-60{
     font-size: 60px;
-    color: #fff;
+    color: #fff !important;
   }
 .text-55{
-    font-size: 55px;
-    color: #fff;
+    font-size: 55px !important;
+    color: #fff !important;
   }
 .text-56{
-    font-size: 56px;
-    color: #fff;
+    font-size: 56px !important;
+    color: #fff !important;
   }
 .text-57{
-    font-size: 57px;
-    color: #fff;
+    font-size: 57px !important;
+    color: #fff !important;
   }
 .text-50{
-    font-size: 50px;
-    color: #fff;
+    font-size: 50px !important;
+    color: #fff !important;
   }
 .text-46{
-    font-size: 46px;
-    color: #fff;
+    font-size: 46px !important;
+    color: #fff !important;
   }
 .text-42{
-    font-size: 42px;
-    color: #fff;
+    font-size: 42px !important;
+    color: #fff !important;
   }
 .text-38{
-    font-size: 38px;
-    color: #fff;
+    font-size: 38px !important;
+    color: #fff !important;
   }
 .text-36{
-    font-size: 36px;
-    color: #fff;
+    font-size: 36px !important;
+    color: #fff !important;
   }
 .text-34{
-    font-size: 34px;
-    color: #fff;
+    font-size: 34px !important;
+    color: #fff !important;
   }
 .text-32{
-    font-size: 32px;
-    color: #fff;
+    font-size: 32px !important;
+    color: #fff !important;
   }
 .text-30{
-    font-size: 30px;
-    color: #fff;
+    font-size: 30px !important;
+    color: #fff !important;
   }
 .text-28{
-    font-size: 28px;
-    color: #fff;
+    font-size: 28px !important;
+    color: #fff !important;
   }
 .text-26{
-    font-size: 26px;
-    color: #fff;
+    font-size: 26px !important;
+    color: #fff !important;
   }
 .text-24{
-    font-size: 24px;
-    color: #fff;
+    font-size: 24px !important;
+    color: #fff !important;
   }
 .text-22{
-    font-size: 22px;
-    color: #fff;
+    font-size: 22px !important;
+    color: #fff !important;
   }
 .text-20{
-    font-size: 20px;
-    color: #fff;
+    font-size: 20px !important;
+    color: #fff !important;
   }
 .text-19{
-    font-size: 19px;
-    color: #fff;
+    font-size: 19px !important;
+    color: #fff !important;
   }
 .text-18{
-    font-size: 18px;
-    color: #fff;
+    font-size: 18px !important;
+    color: #fff !important;
   }
 .text-17{
-    font-size: 17px;
-    color: #fff;
+    font-size: 17px !important;
+    color: #fff !important;
   }
 .text-16{
-    font-size: 16px;
-    color: #fff;
+    font-size: 16px !important;
+    color: #fff !important;
   }
 .text-15{
-    font-size: 15px;
-    color: #fff;
+    font-size: 15px !important;
+    color: #fff !important;
   }
 .text-14{
-    font-size: 14px;
-    color: #fff;
+    font-size: 14px !important;
+    color: #fff !important;
   }
 .text-13{
-    font-size: 13px;
-    color: #fff;
+    font-size: 13px !important;
+    color: #fff !important;
   }
 .text-12{
-    font-size: 12px;
-    color: #fff;
+    font-size: 12px !important;
+    color: #fff !important;
   }
 .text-11{
-    font-size: 11px;
-    color: #fff;
+    font-size: 11px !important;
+    color: #fff !important;
   }
 .text-10{
-    font-size: 10px;
-    color: #fff;
+    font-size: 10px !important;
+    color: #fff !important;
+    font-weight: 400;
   }
 .logo__text{
     fill: #fff;
@@ -6239,10 +6210,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     justify-content: space-between;
   }
 
-  .lg\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .lg\:gap-14 {
     gap: 3.5rem;
   }
@@ -6289,10 +6256,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:p-\[32px\] {
     padding: 32px;
-  }
-
-  .lg\:p-\[40px\] {
-    padding: 40px;
   }
 
   .lg\:p-\[50px\] {

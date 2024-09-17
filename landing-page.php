@@ -12,10 +12,10 @@
   	<div class=" w-full relative z-10">
 		
         <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class=" w-[100%] max-w-[1280px] mx-auto py-[16px]">
                 <div class="grid grid-cols-1 content-center gap-6 md:gap-32 relative z-10">
                     <div class="grid-item col-span-1">
-                        <img class="h-[35px]" src="<?php echo get_template_directory_uri();?>/images/logo_white_orange.svg" alt="">
+                        <img class="h-[23px]" src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
 		<?php while (have_rows('landing_block_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class=" w-[100%] max-w-[1280px] mx-auto py-16 !pt-[130px]">
                 <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-6 md:gap-32 relative z-10">
                         <div class="grid-item col-span-1">
 						<?php if(get_sub_field('main_heading')): ?>
@@ -353,17 +353,17 @@
 				  $gap_class = get_sub_field('gap_class'); 
 				?>
 				
-                    <div class="grid-item col-span-12 lg:<?php echo $box_color;?> p-7 rounded-[16px] content-center">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 <?php echo $gap_class;?>">
+                    <div class="grid-item col-span-12 lg:<?php echo $box_color;?> p-7 rounded-[16px] min-h-[255px]" >
+                        <div class="grid grid-cols-1 lg:grid-cols-12 <?php echo $gap_class;?> h-[100%] relative">
                             <div class="grid-item col-span-8">
                                 <h5 class=" text-white text-[24px] font-semibold mb-4 leading-[30px]"><?php echo $heading;?></h5>
                                 <p class=" text-white text-[16px] font-normal"><?php echo $paragraph;?></p>
                             </div>
-                            <div class="grid-item col-span-4">
+                            <div class="grid-item col-span-4 relative">
 							<?php $image_user = get_sub_field('image');
 								if (!empty($image_user) && isset($image_user['url'])):
 							?>
-                                <img src="<?php echo esc_url($image_user['url']); ?>">
+                                <img class=" absolute right-0 bottom-[-1.8rem] max-h-[200px] w-auto" src="<?php echo esc_url($image_user['url']); ?>">
 							<?php endif; ?> 	
                             </div>
                         </div>
