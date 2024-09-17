@@ -4798,7 +4798,7 @@ ul li, ol li{
     font-weight: 700;
   }
 .scroll-section p{
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #E3E3E3;
   }
 .scroll-section p a{

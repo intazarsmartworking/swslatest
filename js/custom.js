@@ -791,10 +791,10 @@ jQuery('#show-more').on('click', function(){
   console.log('log', jQuery(this).text())
   jQuery('#change-icons').toggleClass('change-icons')
 
-  if(jQuery(this).text() == 'Show'){
+  if(jQuery(this).text() == 'Show more'){
     jQuery(this).text('Hide')
   }else{
-    jQuery(this).text('Show')
+    jQuery(this).text('Show more')
   }
   callFunction()
 })
