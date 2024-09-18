@@ -1204,6 +1204,9 @@ select {
 .\!mb-6 {
   margin-bottom: 1.5rem !important;
 }
+.\!ml-0 {
+  margin-left: 0px !important;
+}
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1260,6 +1263,9 @@ select {
 }
 .mb-\[40px\] {
   margin-bottom: 40px;
+}
+.mb-\[50px\] {
+  margin-bottom: 50px;
 }
 .mb-\[60px\] {
   margin-bottom: 60px;
@@ -1447,6 +1453,9 @@ select {
 }
 .h-\[100\%\] {
   height: 100%;
+}
+.h-\[100px\] {
+  height: 100px;
 }
 .h-\[110px\] {
   height: 110px;
@@ -1745,6 +1754,9 @@ select {
 }
 .max-w-\[1380px\] {
   max-width: 1380px;
+}
+.max-w-\[210px\] {
+  max-width: 210px;
 }
 .max-w-\[220px\] {
   max-width: 220px;
@@ -2073,6 +2085,10 @@ select {
 .border-\[\#401A0A\] {
   --tw-border-opacity: 1;
   border-color: rgb(64 26 10 / var(--tw-border-opacity));
+}
+.border-\[\#431d0e\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(67 29 14 / var(--tw-border-opacity));
 }
 .border-\[\#464444\] {
   --tw-border-opacity: 1;
@@ -2409,6 +2425,10 @@ select {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -2497,14 +2517,18 @@ select {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
 .\!pt-3 {
   padding-top: 0.75rem !important;
 }
-.\!pt-\[130px\] {
-  padding-top: 130px !important;
+.\!pt-\[90px\] {
+  padding-top: 90px !important;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -2514,6 +2538,9 @@ select {
 }
 .pb-12 {
   padding-bottom: 3rem;
+}
+.pb-16 {
+  padding-bottom: 4rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
@@ -2662,6 +2689,9 @@ select {
 .pt-\[30px\] {
   padding-top: 30px;
 }
+.pt-\[32px\] {
+  padding-top: 32px;
+}
 .pt-\[40px\] {
   padding-top: 40px;
 }
@@ -2679,9 +2709,6 @@ select {
 }
 .pt-\[9px\] {
   padding-top: 9px;
-}
-.\!pt-\[90px\] {
-  padding-top: 90px !important;
 }
 .text-left {
   text-align: left;
@@ -2764,6 +2791,9 @@ select {
 }
 .text-\[26px\] {
   font-size: 26px;
+}
+.text-\[28px\] {
+  font-size: 28px;
 }
 .text-\[30px\] {
   font-size: 30px;
@@ -2860,6 +2890,9 @@ select {
 .leading-\[130px\] {
   line-height: 130px;
 }
+.leading-\[16px\] {
+  line-height: 16px;
+}
 .leading-\[28px\] {
   line-height: 28px;
 }
@@ -2868,6 +2901,9 @@ select {
 }
 .leading-\[36px\] {
   line-height: 36px;
+}
+.leading-\[40px\] {
+  line-height: 40px;
 }
 .leading-\[56px\] {
   line-height: 56px;
@@ -3421,9 +3457,9 @@ body{
         display: none;
     }
 
-    .small-intro{
+    /* .small-intro{
         width:50%
-    }
+    } */
 
     .calculator-intro{
         width:50%;
@@ -5514,6 +5550,40 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     color: rgba(252, 188, 160, 1);
     font-size: 13px;
   }
+.story-filter{
+    display: block;
+    margin: 0px;
+  }
+.story-filter li{
+    display: inline-block;
+    vertical-align: middle;
+  }
+.story-filter li a{
+    display: block;
+    padding: 5px 15px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+  }
+.story-filter li a.active{
+    background: #FF4D02;
+  }
+.stories-img-box{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+.stories-img-box .cover-box{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
 @media (max-width: 800px) {
     .howItWorkHeading{
         transform: rotate(0deg);
@@ -5902,6 +5972,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     gap: 8rem;
   }
 
+  .md\:gap-80 {
+    gap: 20rem;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -5945,6 +6019,16 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .md\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .md\:pb-16 {
@@ -6010,6 +6094,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 24px;
   }
 
+  .md\:text-\[40px\] {
+    font-size: 40px;
+  }
+
   .md\:text-\[56px\] {
     font-size: 56px;
   }
@@ -6022,6 +6110,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[20px\] {
+    font-size: 20px;
   }
 
   .md\:leading-tight {
