@@ -3067,7 +3067,7 @@ select {
 }
 html, body { 
     height: 100%; 
-    overflow-x: hidden; 
+    overflow-x: clip; 
 }
 body{
     width: 100%;
@@ -4613,15 +4613,15 @@ ul li, ol li{
     color: #FF4F04;
 }
 .stickysidenav{
-    max-width: 260px;
-    min-width: 260px;
+    max-width: 100%;
+    min-width: 100%;
 }
 .blog-data-show.stickysidenav{
-    max-width: 237px;
-    min-width: 237px;
+    max-width: 100%;
+    min-width: 100%;
 }
 .side-bar-fix{
-    position: fixed;
+    position: sticky;
     top: 70px;
 }
 .scroll-section{
