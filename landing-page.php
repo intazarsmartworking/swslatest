@@ -210,14 +210,10 @@
                                     </div>
                                 </div>
                                 <div class="flex flex-col sm:flex-row">
-                                    <img src="<?php echo get_template_directory_uri();?>/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
-                                    <div>
-                                        <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
-                                        <p class="text-white text-base font-medium"><?php echo $avai;?></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
-                            <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
+                            <h2 class="text-sm font-medium text-white pb-5">Skills</h2>
                             <div class="block mb-3">
                                 <ul class="card-skill">
 								<?php if(have_rows('technology')): ?>
