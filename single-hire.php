@@ -372,13 +372,13 @@
 <?php endif; ?>
 
 
-
-
-    <?php endwhile; ?>
-<?php endif; ?>   
-
  <!-- Calculate Section -->
-
+<?php if (get_row_layout() == 'why_smartworking_section') : ?>
+<?php if(get_sub_field('main_heading')): ?>
+ <div class="mx-auto text-center pt-10">
+	<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
+</div>
+<?php endif; ?>
 <div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
@@ -388,23 +388,33 @@
                   <div class="flex flex-row">
                       <div class="pr-3">
                         <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
-						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-hidden-Fee.svg">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_sub_field('box_image_1')['url']; ?>">
 						</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">No Hidden Costs</h3>
-                        <p class=" text-white text-[16px] font-medium ">We take care of all employment costs and provide long-term support. </p>
+					  <?php if(get_sub_field('box_heading_1')): ?>
+                        <h3 class=" text-white text-[18px] font-medium"><?php echo get_sub_field('box_heading_1'); ?></h3>
+					  <?php endif; ?>	
+					  
+					  <?php if(get_sub_field('box_paragraph_1')): ?>
+                        <p class=" text-white text-[16px] font-medium "><?php echo get_sub_field('box_paragraph_1'); ?></p>
+					  <?php endif; ?>	
                       </div>
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
                         <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
-						  <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Relatively-flexible.svg">
+						  <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_sub_field('box_image_2')['url']; ?>">
 						</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">Flexibility</h3>
-                        <p class=" text-white text-[16px] font-medium ">No minimum length of contract</p>
+					  <?php if(get_sub_field('box_heading_2')): ?>
+                        <h3 class=" text-white text-[18px] font-medium"><?php echo get_sub_field('box_heading_2'); ?></h3>
+					  <?php endif; ?>
+					  
+					  <?php if(get_sub_field('box_paragraph_2')): ?>	
+                        <p class=" text-white text-[16px] font-medium "><?php echo get_sub_field('box_paragraph_2'); ?></p>
+					  <?php endif; ?>	
                       </div>
                   </div>
                 </div>
@@ -412,23 +422,33 @@
                   <div class="flex flex-row">
                       <div class="pr-3">
                         <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
-						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/No-Charge.svg">
+						 <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_sub_field('box_image_3')['url']; ?>">
 						</div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">No Charge</h3>
-                        <p class=" text-white text-[16px] font-medium ">We do not charge a search or placement fee</p>
+					  <?php if(get_sub_field('box_heading_3')): ?>
+                        <h3 class=" text-white text-[18px] font-medium"><?php echo get_sub_field('box_heading_3'); ?></h3>
+					  <?php endif; ?>	
+						
+					  <?php if(get_sub_field('box_paragraph_3')): ?>	
+                        <p class=" text-white text-[16px] font-medium "><?php echo get_sub_field('box_paragraph_3'); ?></p>
+					  <?php endif; ?>	
                       </div>
                   </div>
                   <div class="flex flex-row">
                       <div class="pr-3">
                           <div class=" w-[40px] rounded-[50%] h-[40px] border border-[#FF4D02] bg-black text-center text-white text-[20px] pt-1">
-						    <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_template_directory_uri();?>/images/Cost-Saving.svg">
+						    <img class=" w-[35px] h-[22px] pt-1.5" src="<?php echo get_sub_field('box_image_4')['url']; ?>">
 						  </div>
                       </div>
                       <div>
-                        <h3 class=" text-white text-[18px] font-medium">Cost Saving</h3>
-                        <p class=" text-white text-[16px] font-medium ">40-50% annual saving from hiring locally. </p>
+					  <?php if(get_sub_field('box_heading_4')): ?>
+                        <h3 class=" text-white text-[18px] font-medium"><?php echo get_sub_field('box_heading_4'); ?></h3>
+					  <?php endif; ?>	
+						
+					  <?php if(get_sub_field('box_paragraph_4')): ?>	
+                        <p class=" text-white text-[16px] font-medium "><?php echo get_sub_field('box_paragraph_4'); ?></p>
+					  <?php endif; ?>	
                       </div>
                   </div>
                 </div>
@@ -475,10 +495,15 @@
               </div>
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
 				<div class=" border border-[#fff] rounded-[20px] p-[40px] max-w-[400px] mx-auto">
-						<h1 class=" text-white text-[56px] font-semibold ">£18/hr</h1>
-						<p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
+				<?php if(get_sub_field('euro_price')): ?>
+						<h1 class=" text-white text-[56px] font-semibold "><?php echo get_sub_field('euro_price'); ?></h1>
+				<?php endif; ?>	
+
+				<?php if(get_sub_field('euro_text')): ?>	
+						<p class=" text-white text-[16px] font-medium "><?php echo get_sub_field('euro_text'); ?></p>
+				<?php endif; ?>			
 						<div class="d-block mt-[40px]">
-							<a class="button inline-block w-[100%] max-w-[248px] button-small rounded-md px-[10px] md:px-[20px] py-[15px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/pricing/">Start Calculating <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+							<a class="button inline-block w-[100%] max-w-[248px] button-small rounded-md px-[10px] md:px-[20px] py-[15px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="<?php echo get_sub_field('button_url'); ?>"><?php echo get_sub_field('button_name'); ?> <svg class=" inline-block ml-[5px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="white"/>
 								</svg>
 							</a>
@@ -489,12 +514,10 @@
       </div>
     </div>
 </div>
-
+<?php endif; ?> 
 
 <!-- Client Section -->
 
-<?php if (have_rows('hire_block_section')) : ?>
-<?php while (have_rows('hire_block_section')) : the_row(); ?>
 <?php if (get_row_layout() == 'client_section') : ?>
     <section class="w-[100%] md:min-h-[300px] py-16">
         <div class="max-w-[600px] relative mx-auto text-center">
