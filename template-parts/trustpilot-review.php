@@ -1,15 +1,15 @@
 <?php if (have_rows('block')) : ?>
 <?php while (have_rows('block')) : the_row(); ?>
 <?php if (get_row_layout() == 'review_section') : ?>
-<div class="w-full relative grid items-center pb-28">
+<div class="w-full relative grid items-center py-16">
     <div class="container mx-auto md:px-0 px-10">
 	
         <?php if(get_sub_field('top_title')): ?>
-        <h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
+        	<h4 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h4>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('first_title')): ?>
-        <div class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center">
+        <h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight">
 		 <span class="inline-block align-middle"><?php echo get_sub_field('first_title'); ?></span>
 		 <?php $title_image = get_sub_field('title_image');
 		  if (!empty($title_image) && isset($title_image['url'])):
@@ -18,14 +18,14 @@
 		 <img class="inline-block align-middle" src="<?php echo esc_url($title_image['url']); ?>" alt="<?php echo esc_url($title_image['alt']); ?>"/> 
 		 <?php endif; ?>
 		 <span class="inline-block align-middle"><?php echo get_sub_field('second_title'); ?></span> 
-		</div>
+		</h2>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('description')): ?>
-        <h3 class="text-white text-2xl font-normal text-center py-6 px-0 "> <?php echo get_sub_field('description'); ?> </h3>
+        <p class="text-white text-2xl font-normal text-center mt-6 px-0 "> <?php echo get_sub_field('description'); ?> </p>
 		<?php endif; ?>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
 		
 		<?php if(have_rows('review_box')): ?>
 		<?php while(have_rows('review_box')): the_row(); ?>

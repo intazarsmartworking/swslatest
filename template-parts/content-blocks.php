@@ -55,16 +55,16 @@
 	<div class="w-full relative  grid items-center py-16" >
 	<div class="px-0 md:px-10">
 	    <?php if(get_sub_field('main_heading')): ?>
-		<h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h1>
+		<h2 class="flex flex-col items-center justify-center text-center md:leading-tight mb-20"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h2>
 		<?php endif; ?>
 		<div class="container mx-auto p-4">
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 			<?php if(have_rows('block_part')): ?>
 			<?php while(have_rows('block_part')): the_row(); ?>
 				<div class="p-4">
-				<h2 class="text-4xl font-bold text-dark-orange" data-target="<?php echo get_sub_field('data_target'); ?>"><?php echo get_sub_field('heading'); ?></h2>
+				<p class="text-4xl font-bold text-dark-orange" data-target="<?php echo get_sub_field('data_target'); ?>"><?php echo get_sub_field('heading'); ?></p>
 				<hr class="my-4 borderdown">
-				<h3 class="text-2xl font-medium text-white"><?php echo get_sub_field('second_heading'); ?></h3>
+				<p class="text-2xl font-medium text-white"><?php echo get_sub_field('second_heading'); ?></p>
 				</div>
 			<?php endwhile; ?>	
 			<?php endif; ?> 	
@@ -83,10 +83,10 @@
 	<div class="w-full relative grid items-center py-16">
 	<div class="container mx-auto md:px-0 px-10">
 		<?php if(get_sub_field('short_title')): ?>
-		<h3 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h3>
+		<h4 class="text-center small-intro"> <?php echo get_sub_field('short_title'); ?> </h4>
 		<?php endif; ?> 
 		<?php if(get_sub_field('main_heading')): ?>	
-		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h1>
+		<h2 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h2>
 		<?php endif; ?>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-28">
 			<?php if(have_rows('box_item')): ?>
@@ -105,8 +105,8 @@
 						<img src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['url']; ?>" class="mb-12 icons-img">
 					</div>
 					<div class="mt-12">
-						<h3 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h3>
-						<span class="text-white text-base"> <?php echo $subtitle_name;?> </span>
+						<h5 class="text-white text-xl font-bold leading-tight mb-3"> <?php echo $title_name;?> </h5>
+						<p class="text-white text-base"> <?php echo $subtitle_name;?> </p>
 					</div>
 				</div>
 				<div class="ml-auto absolute right-0 bottom-0 ">
@@ -131,20 +131,20 @@
 	<?php if (get_row_layout() == 'curious_section') : ?>
 	<section class="calculator-box w-[100%] py-16">
 	<div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
-		<div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
+		<div class="grid-item col-span-5 py-[10%] lg:py-[100px] content-center">
 			<div class="block mb-5">
 				<?php if(get_sub_field('small_title')): ?>
 				<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
 				<?php endif; ?>
 			</div>
 			<?php if(get_sub_field('main_heading')): ?>	
-			<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+			<h3 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h3>
 			<?php endif; ?>
 			<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
 			<?php if(get_sub_field('button_name')): ?>
 			<?php $calc_url =  get_sub_field('button_url'); ?>
 			<p>
-				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+				<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] text-center button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
 			</p>
 			<?php endif; ?>
 		</div>
@@ -204,17 +204,17 @@
 	<?php if (get_row_layout() == 'home_faq_heading') : ?>
 		
 	<?php if(get_sub_field('small_heading')): ?>		
-		<h3 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h3>
+		<h4 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h4>
 	<?php endif; ?>	
 
 	<?php if(get_sub_field('main_heading')): ?>		
-		<h1 class="text-[30px] sm:text-3xl lg:text-[56px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"><?php echo get_sub_field('orange_heading'); ?> </span></h1>
+		<h2 class="text-[30px] sm:text-3xl lg:text-[56px] mb-10 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"><?php echo get_sub_field('orange_heading'); ?> </span></h2>
 	<?php endif; ?>
 
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?> 	
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			<?php 
 				$faq_argument = array( 'post_type' => 'faq');
 				$faq_query	= new WP_Query($faq_argument);
@@ -248,12 +248,12 @@
 	<div class="w-full relative grid items-center px-3  py-16">
 	<div class="container mx-auto md:px-0 px-10 ready-hire-bg">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
+			<div class="pl-7 pr-7 md:pl-48 md:pr-12 content-center">
 				<?php if(get_sub_field('main_title')): ?>
-				<h1 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight mt-8 md:mt-20 md:mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+				<h2 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight  md:mb-2"><?php echo get_sub_field('main_title'); ?></h2>
 				<?php endif; ?>	
 				<?php if(get_sub_field('subheading')): ?>	
-				<span class="text-center md:text-left text-white text-base"> <?php echo get_sub_field('subheading'); ?> </span>
+				<p class="text-center text-[20px] md:text-left text-white"> <?php echo get_sub_field('subheading'); ?> </p>
 				<?php endif; ?> 
 				<?php if(get_sub_field('button_name')): ?>
 				<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
@@ -265,8 +265,8 @@
 			<?php $hire_dev_main_img = get_sub_field('background_image');
 				if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
 				?>
-			<div class="px-6 py-10 flex justify-self-center">
-				<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-auto">
+			<div class="px-6 py-10 lg:pr-[20%] content-center text-right">
+				<img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-[100%] inline-block max-w-[450px]">
 			</div>
 			<?php endif; ?>
 		</div>

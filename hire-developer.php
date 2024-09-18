@@ -274,42 +274,54 @@
 		<?php get_template_part( 'template-parts/home-blog' );?>
 
 		<!-- FAQ Section  -->
+		<?php if (have_rows('section_block')) : ?>
+		<?php while (have_rows('section_block')) : the_row(); ?>
+		<?php if (get_row_layout() == 'faq_section') : ?>
 		<div class="w-full relative grid items-center z-10 lg:pt-[100px]">
 			<div class="container mx-auto md:px-0 px-10">
-			<h3 class="text-center small-intro"> FAQ's </h3>
-			<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Common questions<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">and their answers </span></h1>
-			<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
+			<?php if(get_sub_field('small_title')): ?>
+			<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
+			<?php endif; ?>
+			
+			<?php if(get_sub_field('main_title')): ?>
+			<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"><?php echo get_sub_field('orange_title'); ?> </span></h1>
+			<?php endif; ?>
 			
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+					<?php if(have_rows('faq')): ?>
+					<?php while(have_rows('faq')): the_row(); ?>
 					<?php 
-						$faq_argument = array( 'post_type' => 'faq');
-						$faq_query	= new WP_Query($faq_argument);
-					?>
-					<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
-					<?php $post_id = get_the_ID(); ?>
+					  $question = get_sub_field('question'); 
+					  $answer = get_sub_field('answer'); 
+					  $row_index = get_row_index();
+					  
+					?> 
 
 					<div>
 					<div class="accordian-sec-bg mb-5">
-						<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
-							<span id="accordion-label-<?php echo $post_id; ?>" class="text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
-							<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $row_index; ?>)">
+							<span id="accordion-label-<?php echo $row_index; ?>" class="text-xl pt-6 pb-6 font-medium text-white"><?php echo $question;?></span>
+							<svg id="arrow-down-<?php echo $row_index; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M6 9l4 4 4-4"></path>
 							</svg>
-							<svg id="arrow-up-<?php echo $post_id; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<svg id="arrow-up-<?php echo $row_index; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M6 9l4-4 4 4"></path>
 							</svg>
 						</button>
-						<div id="accordion-section-<?php echo $post_id; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-						<p class="p-4 text-base text-white"><?php echo get_the_excerpt();?></p>
+						<div id="accordion-section-<?php echo $row_index; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
+						<p class="p-4 text-base text-white"><?php echo  $answer;?></p>
 						</div>
 					</div>
 					</div>
-					<?php endwhile; wp_reset_postdata();?>
+					<?php endwhile; ?>	
+					<?php endif; ?> 
 				</div>
 
 			</div>
 		</div>
-
+		<?php endif; ?>
+        <?php endwhile; ?>
+		<?php endif; ?>
 
 		<!-- Ready To Hire  -->
 		<?php if (have_rows('block')) : ?>
@@ -349,6 +361,138 @@
 			<?php endif; ?>		
 			<?php endwhile; ?>
 		<?php endif; ?>	
+		
+		
+		
+		<?php if (have_rows('section_block')) : ?>
+ <?php while (have_rows('section_block')) : the_row(); ?>
+   <?php if (get_row_layout() == 'hire_offshore') : ?>
+<div class="w-full relative grid items-center py-16">
+    <div class="container mx-auto">
+          <div class="d-block">
+		  <?php if(get_sub_field('top_title')): ?>
+            <h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
+		  <?php endif; ?>  
+
+			<?php if(get_sub_field('main_title')): ?>
+            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+            <?php echo get_sub_field('orange_title'); ?></span></h1>
+			<?php endif; ?>  
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
+              <div class="grid-item col-span-8 content-center">
+				<?php if(get_sub_field('title')): ?>
+                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h1>
+				<?php endif; ?> 
+
+				<?php if(get_sub_field('paragraph')): ?>	
+                  <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] font-normal ">
+                    <?php echo get_sub_field('paragraph'); ?>
+                  </p>
+				<?php endif; ?>   
+                  <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#FF4F04] font-normal "> 
+                    <svg id="change-icons" class=" inline-block change-icons  mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                    	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.0769 23.1698V9.88162C16.3929 11.1965 18.1849 12.0344 20.0953 12.0344H21.1722V9.88054H20.0953C17.4687 9.88054 15.0769 7.48762 15.0769 4.86208V3.78516H12.923V4.86208C12.923 7.48762 10.5312 9.88054 7.90458 9.88054H6.82766V12.0344H7.90458C9.81504 12.0344 11.607 11.1965 12.923 9.88162L12.923 23.1698H15.0769Z" fill="#FF4F04"/>
+                    </svg>
+					<span class="cursor-pointer " id="show-more">Show more</span></p>
+              </div>
+               <?php $right_image = get_sub_field('right_image');
+					if (!empty($right_image) && isset($right_image['url'])):
+				?>
+					<div class="grid-item col-span-2 content-center text-end pt-5">				
+						<img class="img-3 inline w-[214px]" src="<?php echo esc_url($right_image['url']); ?>">
+					</div>	
+				<?php endif; ?>
+          </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+		
+<div class="w-full relative" id="sticky-details">
+    <div class="container mx-auto">
+          <div class="show-more-box pt-[0px]">
+            <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
+              <div class="grid-item col-span-2 content-start" id="fix-side-box">
+                <div class="stickysidenav">
+                  <ul class="scroll-menu">
+				  
+				  <?php if(have_rows('table_content')): ?>
+				  <?php $section_count = 1; ?>
+					<?php while(have_rows('table_content')): the_row(); ?>
+					<?php 
+					  $main_title = get_sub_field('main_title'); 
+					  $unique_id = 'target' . $section_count;
+					?>
+                    <li><a class=" cursor-pointer" data-location="<?php echo $unique_id; ?>"> <?php echo $main_title;?> </a></li>
+                    
+					
+					<?php $section_count++;?>
+					<?php endwhile; ?>	
+					<?php endif; ?>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid-item col-span-6 content-start">
+                
+				
+				<?php if(have_rows('table_content')): ?>
+				  <?php $section_count = 1; ?>
+					<?php while(have_rows('table_content')): the_row(); ?>
+					<?php 
+					  $main_title = get_sub_field('main_title'); 
+					  $unique_id = 'target' . $section_count;
+					?>
+				<div class="scroll-section" id="<?php echo $unique_id; ?>">
+                  <h1 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h1>
+                  <?php if(have_rows('description')): ?>
+				  <?php while(have_rows('description')): the_row(); ?>
+				  
+					<?php echo get_sub_field('main_description') ;?>
+					
+                  <?php endwhile; ?>	
+				  <?php endif; ?>
+				  
+				</div>
+				<?php $section_count++;?>
+				<?php endwhile; ?>	
+				<?php endif; ?>
+                
+                
+                
+                
+              </div>
+			  <?php if(get_sub_field('right_cta_heading')): ?>
+              <div class="grid-item col-span-2 content-start">
+                <div class="bg-[#FF4D02] rounded-[10px] min-h-[100px] p-5 stickysidenav">
+                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h1>
+					<?php if(get_sub_field('right_cta_button_name')): ?>
+                    <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block py-4 text-center text-[18px] px-5 rounded-[14px] border text-[#FF4D02] mt-[30px]"><?php echo get_sub_field('right_cta_button_name'); ?> 
+                      <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
+                      </svg>
+                    </a>
+					<?php endif; ?>
+                </div>
+              </div>
+			  <?php endif; ?>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<?php endif; ?>  
+<?php endwhile; ?>
+<?php endif; ?>
+		
+		
+		
 	</div>
 </div>
 

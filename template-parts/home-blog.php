@@ -5,15 +5,15 @@
 		<?php while (have_rows('block')) : the_row(); ?>
 		<?php if (get_row_layout() == 'home_blog_heading') : ?>	
 			<?php if(get_sub_field('small_heading')): ?>		
-				<h3 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h3>
+				<h4 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h4>
 			<?php endif; ?>
 
 			<?php if(get_sub_field('main_heading')): ?>		
-				<h1 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?> </h1>
+				<h2 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?> </h2>
 			<?php endif; ?>
 
 			<?php if(get_sub_field('small_paragraph')): ?>	
-				<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </h3>
+				<p class="text-white text-xl font-normal text-center mt-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
 			<?php endif; ?>	
 			
 		<?php endif; ?>
@@ -70,8 +70,8 @@
 			
 			</div> 
 
-			<div class="header-buttons mt-12 mb-12 text-center">
-			<a href="/blog" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home">View all</a>
+			<div class="header-buttons mt-12 mb-0 text-center">
+			<a href="/blog" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">View all</a>
 			</div>
 		
 		</div>

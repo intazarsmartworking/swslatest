@@ -9,11 +9,11 @@
    <?php endif; ?>
    
    <?php if(get_sub_field('main_heading')): ?>  
-        <h1 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span></h1>
+        <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><span class="text-dark-orange block"> <?php echo get_sub_field('orange_heading'); ?> </span></h2>
     <?php endif; ?>
 
     <?php if(get_sub_field('small_paragraph')): ?>  
-        <p class="text-center text-white font-medium text-[18px] md:text-2xl pt-[10px] pb-[50px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
+        <p class="text-center text-white font-medium text-[18px] md:text-2xl mt-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
     <?php endif; ?>
     
     <?php endif; ?>
@@ -33,7 +33,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50025 18.0764C6.24425 18.0764 5.98825 17.9785 5.79325 17.7835C5.40225 17.3935 5.40225 16.7604 5.79325 16.3694L10.0862 12.0754L5.79325 7.78147C5.40225 7.39047 5.40225 6.75747 5.79325 6.36747C6.18425 5.97647 6.81625 5.97647 7.20725 6.36747L12.2072 11.3685C12.5982 11.7594 12.5982 12.3915 12.2072 12.7825L7.20725 17.7835C7.01225 17.9785 6.75625 18.0764 6.50025 18.0764Z" fill="white"/>
                         </svg>
                     </div>
-                    <h3 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h3>
+                    <h4 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h4>
                     <div class="flex items-center border-2 border-gray-300 rounded-lg p-2 bg-white my-5">
                         <svg class="w-6 h-6 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.35-6.65A7 7 0 1114 4a7 7 0 015 2.35 7 7 0 010 9.9z"></path>
@@ -61,7 +61,7 @@
 
                             <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
                                 <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="pb-4">
-                                <h4 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h4>
+                                <h6 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h6>
                                 <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
                                 <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
                                 </svg>
@@ -79,7 +79,7 @@
                     <!-- <img src="<?php echo get_template_directory_uri();?>/images/smartworking-black.svg" class="mx-auto"> -->
 
                      <div class="rounded-2xl p-3 lg:px-[2.5rem] border-pattern ">
-                        <h3 class="text-dark-orange font-bold text-2xl"> Share your requirements </h3>
+                        <h6 class="text-dark-orange font-bold text-2xl"> Share your requirements </h6>
 
                         <!--<form method="post">
 
@@ -97,7 +97,7 @@
                         </form>-->
 
                         <?php echo do_shortcode('[contact-form-7 id="713a21a" title="Assemble Team Form"]'); ?>
-                        <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
+                        <p class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </p>
                     </div>
                     <!-- <div class="rounded-2xl border-pattern ">
                         <iframe class="home-form" aria-label='Share Your Requirement' frameborder="0" style="height:330px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>

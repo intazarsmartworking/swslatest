@@ -791,10 +791,10 @@ jQuery('#show-more').on('click', function(){
   console.log('log', jQuery(this).text())
   jQuery('#change-icons').toggleClass('change-icons')
 
-  if(jQuery(this).text() == 'Show'){
+  if(jQuery(this).text() == 'Show more'){
     jQuery(this).text('Hide')
   }else{
-    jQuery(this).text('Show')
+    jQuery(this).text('Show more')
   }
   callFunction()
 })
@@ -1279,7 +1279,12 @@ function priceRateGet(){
 
 
   var priceData = jQuery('#searchItem');
-      priceLocationList.forEach(function(item) {
+  const sortPriceLocationList = priceLocationList.sort((a,b)=> {
+    var a1 = a.name.toLowerCase();
+    var b1 = b.name.toLowerCase();
+    return a1<b1 ?-1:a1> b1? 1 :0;
+    })
+    sortPriceLocationList.forEach(function(item) {
         var itemData = jQuery('<div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] "><span class="block pro-name">'+item.name+'</span><span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span></div>').data('price', item)
           priceData.append(itemData);
       });
@@ -1319,7 +1324,7 @@ jQuery(document).ready(function(){
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 10,
+    slidesToShow: 7,
     slidesToScroll: 3,
     autoplay: true,
     responsive: [
@@ -1328,22 +1333,112 @@ jQuery(document).ready(function(){
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          dots: false,
           infinite: true,
-          dots: true
+          autoplay: true,
         }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 2,
+          autoplay: true,
+          dots: false,
+          infinite: true,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      }
+    ]
+  });
+
+  jQuery('#vetted-profile').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      }
+    ]
+  });
+
+  jQuery('#testimonial-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows:false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
         }
       }
     ]

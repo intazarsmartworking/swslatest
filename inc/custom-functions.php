@@ -117,13 +117,19 @@ function display_ai_vetted_profile_categories() {
         'order' => 'ASC',
 		'hide_empty' => false, 
     ));
+	
+	// Get the active category ID
+    $active_category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
     
     // Check if there are any categories
     if (!empty($terms) && !is_wp_error($terms)) {
         echo '<div class="left-profile">';
         foreach ($terms as $term) {
-            echo '<div class="skills px-4 py-5 rounded-2xl mb-4">';
-            echo '<a href="#" class="category-filter" data-category-id="' . esc_attr($term->term_id) . '">';
+		$active_class = ($term->term_id == $active_category_id) ? 'category-filter active' : '';	
+		$category_link = add_query_arg('category_id', esc_attr($term->term_id), get_permalink());
+        $category_link .= '#profile-vet';	
+            echo '<div class="skills px-4 py-5 rounded-2xl mb-4 ' . esc_attr($active_class) . '">';
+            echo '<a href="' . esc_url($category_link) . '">';
             echo '<h3>' . esc_html($term->name) . '</h3>';
             echo '</a>';
             echo '</div>';

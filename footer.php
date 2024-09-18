@@ -31,7 +31,7 @@
         
       </div>
       <div class="text-left">
-        <h3 class="text-white text-xl font-medium leading-normal"> Menu </h3>
+        <h6 class="text-white text-xl font-medium leading-normal"> Menu </h6>
         <?php
             wp_nav_menu( array(
                 'theme_location' => 'footer',
@@ -44,21 +44,21 @@
         
       </div>
       <div>
-        <h3 class="text-white text-xl font-medium leading-normal"> Our Location </h3>
+        <h6 class="text-white text-xl font-medium leading-normal"> Our Location </h6>
         <div class="pb-7 pt-5">
-          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h4>
+          <h6 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h6>
           <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('uk_address', 'options'); ?> </p>
         </div>
         
       </div>
       <div>
-        <h3 class="text-white text-xl font-medium leading-normal"> Contact Details </h3>
+        <h6 class="text-white text-xl font-medium leading-normal"> Contact Details </h6>
         <div class="pb-7 pt-5">
-          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h4>
+          <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h6>
           <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('email_footer', 'options'); ?> </p>
         </div>
         <div class="pb-7">
-          <h4 class="text-footer-menu-color text-base font-medium leading-normal"> Phone </h4>
+          <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Phone </h6>
           <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('phone_footer', 'options'); ?> </p>
         </div>
       </div>
