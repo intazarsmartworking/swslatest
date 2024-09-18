@@ -422,9 +422,9 @@ body{
         display: none;
     }
 
-    .small-intro{
+    /* .small-intro{
         width:50%
-    }
+    } */
 
     .calculator-intro{
         width:50%;
@@ -2637,6 +2637,43 @@ input[type="range"].home-range-slider {
     margin-bottom: 8px;
     color: rgba(252, 188, 160, 1);
     font-size: 13px;
+  }
+
+  .story-filter{
+    display: block;
+    margin: 0px;
+  }
+  .story-filter li{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .story-filter li a{
+    display: block;
+    padding: 5px 15px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+  }
+  .story-filter li a.active{
+    background: #FF4D02;
+  }
+  .stories-img-box{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .stories-img-box{
+    position: relative;
+  }
+  .stories-img-box .cover-box{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
   }
 
 
