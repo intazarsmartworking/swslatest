@@ -24,7 +24,7 @@
 		<?php while (have_rows('landing_block_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-16 !pt-[130px]">
+            <div class=" w-[100%] max-w-[1280px] mx-auto py-16 !pt-[90px]">
                 <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-6 md:gap-32 relative z-10">
                         <div class="grid-item col-span-1">
 						<?php if(get_sub_field('main_heading')): ?>
