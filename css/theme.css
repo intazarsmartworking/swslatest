@@ -1279,6 +1279,9 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
+.ml-\[-5px\] {
+  margin-left: -5px;
+}
 .ml-\[35px\] {
   margin-left: 35px;
 }
@@ -1418,6 +1421,9 @@ select {
   width: 100%;
   height: 100%;
 }
+.\!h-\[23px\] {
+  height: 23px !important;
+}
 .h-16 {
   height: 4rem;
 }
@@ -1541,11 +1547,11 @@ select {
 .min-h-\[180px\] {
   min-height: 180px;
 }
+.min-h-\[220px\] {
+  min-height: 220px;
+}
 .min-h-\[250px\] {
   min-height: 250px;
-}
-.min-h-\[255px\] {
-  min-height: 255px;
 }
 .min-h-\[300px\] {
   min-height: 300px;
@@ -1579,6 +1585,9 @@ select {
 }
 .min-h-\[85px\] {
   min-height: 85px;
+}
+.\!w-\[185px\] {
+  width: 185px !important;
 }
 .w-0 {
   width: 0px;
@@ -3058,7 +3067,7 @@ select {
 }
 html, body { 
     height: 100%; 
-    overflow-x: hidden; 
+    overflow-x: clip; 
 }
 body{
     width: 100%;
@@ -4604,15 +4613,15 @@ ul li, ol li{
     color: #FF4F04;
 }
 .stickysidenav{
-    max-width: 260px;
-    min-width: 260px;
+    max-width: 100%;
+    min-width: 100%;
 }
 .blog-data-show.stickysidenav{
-    max-width: 237px;
-    min-width: 237px;
+    max-width: 100%;
+    min-width: 100%;
 }
 .side-bar-fix{
-    position: fixed;
+    position: sticky;
     top: 70px;
 }
 .scroll-section{
