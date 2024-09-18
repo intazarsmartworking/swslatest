@@ -15,7 +15,7 @@
             <div class=" w-[100%] max-w-[1280px] mx-auto py-[16px]">
                 <div class="grid grid-cols-1 content-center gap-6 md:gap-32 relative z-10">
                     <div class="grid-item col-span-1">
-                        <img class="h-[23px]" src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="">
+                        <img class="!h-[23px] !w-[185px] ml-[-5px]" src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -349,7 +349,7 @@
 				  $gap_class = get_sub_field('gap_class'); 
 				?>
 				
-                    <div class="grid-item col-span-12 lg:<?php echo $box_color;?> p-7 rounded-[16px] min-h-[255px]" >
+                    <div class="grid-item col-span-12 lg:<?php echo $box_color;?> p-7 rounded-[16px] min-h-[220px]" >
                         <div class="grid grid-cols-1 lg:grid-cols-12 <?php echo $gap_class;?> h-[100%] relative">
                             <div class="grid-item col-span-8">
                                 <h5 class=" text-white text-[24px] font-semibold mb-4 leading-[30px]"><?php echo $heading;?></h5>
@@ -541,7 +541,7 @@
 				?>
 					<div class="grid-item col-span-12 lg:col-span-4 mb-10 lg:mb-0 content-center text-center">
 						<div class="block mb-5">
-							<span class="bg-[#fff] inline-block w-[50px] h-[50px] rounded-[10px] p-2 text-center">
+							<span class="inline-block w-[60px] h-[60px] rounded-[10px] p-2 text-center">
 							<?php $icon_user = get_sub_field('image');
 							  if (!empty($icon_user) && isset($icon_user['url'])):
 							?>
