@@ -45,8 +45,8 @@
                         </div>
                         <div class="grid-item col-span-1 content-center">
 						<?php if(get_sub_field('form_part')): ?>
-                            <div class=" w-[100%] max-w-[450px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
-							<?php echo get_sub_field('form_part'); ?>
+                            <div class=" w-[100%] max-w-[550px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
+							    <?php echo get_sub_field('form_part'); ?>
 							 
                             </div>
 						<?php endif; ?>	
@@ -291,21 +291,21 @@
                     <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">S<?php echo get_sub_field('paragraph'); ?></p>
 				<?php endif; ?> 	
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-6 md:gap-32 relative z-10 footer-background px-28 py-16 border border-[#3c1201]">
-                        <div class="grid-item col-span-1 relative content-center divider-line">
-						<?php if(get_sub_field('price')): ?>
-                            <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[140px] mb-4 text-dark-orange lg:leading-[80px]"><?php echo get_sub_field('price'); ?></h5>
-						<?php endif; ?> 
-						
-						<?php if(get_sub_field('tagline')): ?>	
-                            <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-3"><?php echo get_sub_field('tagline'); ?></p>
-						<?php endif; ?> 
-						
-						<?php if(get_sub_field('extra_text')): ?>	
-                            <p class="text-center font-normal text-[14px] text-gray-200"><?php echo get_sub_field('extra_text'); ?></p>
-						<?php endif; ?> 	
+                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 footer-background px-28 py-16 border border-[#3c1201]">
+                        <div class="grid-item col-span-2 relative content-center">
+                            <?php if(get_sub_field('price')): ?>
+                                <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[140px] mb-4 text-dark-orange lg:leading-[80px]"><?php echo get_sub_field('price'); ?></h5>
+                            <?php endif; ?> 
+                            
+                            <?php if(get_sub_field('tagline')): ?>	
+                                <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-3"><?php echo get_sub_field('tagline'); ?></p>
+                            <?php endif; ?> 
+                            
+                            <?php if(get_sub_field('extra_text')): ?>	
+                                <p class="text-center font-normal text-[14px] text-gray-200"><?php echo get_sub_field('extra_text'); ?></p>
+                            <?php endif; ?> 	
                         </div>
-                        <div class="grid-item col-span-1 content-center">
+                        <!-- <div class="grid-item col-span-1 content-center">
                             <div class="grid grid-cols-1">
 							
 							<?php if(have_rows('timing_section')): ?>
@@ -331,13 +331,14 @@
 							<?php endif; ?>	
                                 
                             </div>
-                        </div>
+                        </div> -->
+                        <?php if(get_sub_field('button_name')): ?>
+                            <div class="grid-item col-span-2 block text-center mt-10">
+                                <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                            </div>
+                        <?php endif; ?>	
                 </div>
-				<?php if(get_sub_field('button_name')): ?>
-                <div class="block text-center mt-10">
-                    <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
-                </div>
-				<?php endif; ?>	
+				
             </div>
     </section>
 	<?php endif; ?> 
@@ -454,14 +455,16 @@
 					</div>
 				<?php endwhile; ?>	
 				<?php endif; ?>	
+
+                <?php if(get_sub_field('button_name')): ?>
+                <div class="grid-item col-span-12 block text-center">
+                    <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                </div>
+                <?php endif; ?>	
 					
 				</div>
             </div>
-			<?php if(get_sub_field('button_name')): ?>
-            <div class="block text-center mt-10">
-                <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
-            </div>
-			<?php endif; ?>	
+			
             </div>
         </section>
 		
