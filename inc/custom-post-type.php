@@ -167,3 +167,67 @@ function cc_author_post_type() {
 
 	register_post_type( 'author-sws', $args );
 }
+
+// Custom Post Type for Success Stories
+add_action( 'init', 'success_stories_post_type' );
+function success_stories_post_type() {
+	$labels = array(
+		'name'               => __( 'Success Story' ),
+		'singular_name'      => __( 'Success Story' ),
+		'all_items'          => __( 'Success Story' ),
+		'add_new'            => _x( 'Add new', 'Success Story' ),
+		'add_new_item'       => __( 'Add new Success Story' ),
+		'edit_item'          => __( 'Edit Success Story' ),
+		'new_item'           => __( 'New Success Story' ),
+		'view_item'          => __( 'View Success Story' ),
+		'search_items'       => __( 'Search in Success Story' ),
+		'not_found'          => __( 'No Success Story found' ),
+		'not_found_in_trash' => __( 'No Success Story found in trash' ),
+		'parent_item_colon'  => '',
+		
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'hierarchical'       => true,
+        'show_ui'            => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'menu_icon'          => 'dashicons-welcome-view-site',
+		'rewrite'            => array( 'slug' => 'success-story' ),
+		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
+		'taxonomies'  		 => array( 'successcategory' )
+	);
+
+	register_post_type( 'success-story', $args );
+}
+
+
+// Custom Taxonomy for Success Story
+add_action( 'init', 'success_story_taxonomy', 0 );
+function success_story_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Success Story Category', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Success Story Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Success Story Category' ),
+		'all_items'         => __( 'All Success Story Category' ),
+		'parent_item'       => __( 'Parent Success Story Category' ),
+		'parent_item_colon' => __( 'Parent Success Story Category:' ),
+		'edit_item'         => __( 'Edit Success Story Category' ),
+		'update_item'       => __( 'Update Success Story Category' ),
+		'add_new_item'      => __( 'Add New Success Story Category' ),
+		'new_item_name'     => __( 'New Success Story Category Name' ),
+		'menu_name'         => __( 'Success Story Category' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'successcategories' ),
+	);
+
+	register_taxonomy( 'successcategory', array( 'success-story' ), $args );
+}

@@ -11,231 +11,157 @@
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-15%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
-		
-        <!-- <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
-                <div class="block">
-                    <div class="text-center small-intro">STORIES</div>
-                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[60px]">
-                    Our customer <span class="text-dark-orange block">Success Stories</span> 
-                    </h2>
-                    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">Check the hourly market rates of the IT professionals you are looking for and compare them with what our offshore developers charge for a long-term association.</p>
-						
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto pt-16 mb-[40px]">
-                <div class="block">
-                    <p class="text-[18px] text-dark-orange block mb-[40px]">Customers by size</p>
-                    <h4 class="text-4xl text-[35px] md:text-[40px] mb-4 text-white  lg:leading-[56px]">
-                        Companies of all sizes around the world<br>use SmarWorking
-                    </h4>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto pb-16">
-                <div class="block">
-                    <ul class="story-filter">
-                        <li><a class="active" href="#">All</a></li>
-                        <li><a href="#">Startup</a></li>
-                        <li><a href="#">Growth</a></li>
-                        <li><a href="#">Enterprises</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
+		<?php if (have_rows('story_section')) : ?>
+		<?php while (have_rows('story_section')) : the_row(); ?>
+		<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 py-0 md:py-14 gap-2 md:gap-80">
                     <div class="col-span-2 md:col-span-1 content-center">
-                        <div class="small-intro !ml-0">SUCCESS STORIES</div>
-                        <h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> Trusted by the&nbsp; <br>
-                            <span class="gradient-text"> world’s largest</span> <br>
-                            <span class="text-dark-orange"> teams</span> 
-                        </h1>
-                        <p class="text-white text-[20px] pt-[32px]">Get inspired, learn and read first-hand feedback from teams around the globe on how they are getting value from Dovetail.</p>
+					<?php if(get_sub_field('small_title')): ?>
+                        <div class="small-intro !ml-0"><?php echo get_sub_field('small_title'); ?></div>
+					<?php endif; ?>		
 						
+					<?php if(get_sub_field('main_title')): ?>
+                        <h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> <?php echo get_sub_field('main_title'); ?> <br>
+                            <span class="gradient-text"> <?php echo get_sub_field('gradient_title'); ?></span> <br>
+                            <span class="text-dark-orange"> <?php echo get_sub_field('orange_title'); ?></span> 
+                        </h1>
+					<?php endif; ?>	
+					
+					<?php if(get_sub_field('paragraph')): ?>	
+                        <p class="text-white text-[20px] pt-[32px]"><?php echo get_sub_field('paragraph'); ?></p>
+					<?php endif; ?>		
                     </div>
                     <div class="col-span-2 md:col-span-1">
-                        <div class="inline-block w-[100%] max-w-[210px] align-top mr-5">
+					
+					<?php if(have_rows('banner_image')): ?>
+					<?php while(have_rows('banner_image')): the_row(); ?>
+                        <div class="inline-block w-[100%] max-w-[210px] align-top <?php echo get_sub_field('margin'); ?>">
                             <div class="stories-img-box">
-                                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-home-1.png" alt="">
-                                <div class="cover-box text-center" style="background: rgba(8, 104, 176, 0.90);">
-                                    <img class="h-[100px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
+							<?php $first_image = get_sub_field('first_image');
+								if (!empty($first_image) && isset($first_image['url'])):
+							?>
+                                <img class="w-[100%]" src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>">
+							<?php endif; ?>	
+                                <div class="cover-box text-center" style="<?php echo get_sub_field('background_color'); ?>">
+								<?php $second_image = get_sub_field('second_image');
+									if (!empty($second_image) && isset($second_image['url'])):
+								?>
+                                    <img class="h-[100px] inline-block self-center" src="<?php echo esc_url($second_image['url']); ?>" alt="<?php echo esc_attr($second_image['alt']); ?>">
+								<?php endif; ?>		
                                 </div>
                             </div>
                         </div>
-                        <div class="inline-block w-[100%] max-w-[210px] align-top mt-8">
-                            <div class="stories-img-box">
-                                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-home-2.png" alt="">
-                                <div class="cover-box text-center" style="background: rgba(9, 41, 155, 0.90);">
-                                    <img class="h-[100px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="inline-block w-[100%] max-w-[210px] align-top mr-5">
-                            <div class="stories-img-box">
-                                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-home-3.png" alt="">
-                                <div class="cover-box text-center" style="background: rgba(245, 72, 2, 0.90);">
-                                    <img class="h-[100px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="inline-block w-[100%] max-w-[210px] align-top mt-8">
-                            <div class="stories-img-box">
-                                <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-home-4.png" alt="">
-                                <div class="cover-box text-center" style="background: rgba(9, 155, 129, 0.90);">
-                                    <img class="h-[100px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                                </div>
-                            </div>
-                        </div>
+                    <?php endwhile; ?>	
+					<?php endif; ?>     
+                        
+                        
                     </div>
                 </div>
             </div>
         </section>
+		<?php endif; ?>		
+		<?php endwhile; ?>
+		<?php endif; ?>	
 
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
+			<?php
+				$story_count = wp_count_posts('success-story')->publish;
+				$posts_per_page = 10;
+				$paged = 1;
+				$args = array(
+					'post_type' => 'success-story',
+					'post_status' => 'publish',
+					'paged' => $paged,
+					'posts_per_page' => $posts_per_page
+				);
+				$story_query = new WP_Query($args);
+			?>
                 <div class="grid grid-cols-2 md:grid-cols-2 py-0 md:py-5 border-b border-[#431d0e] gap-2 md:gap-80">
                     <div class="col-span-1 md:col-span-1">
-                        <p class="text-[15px] md:text-[20px] text-[#fff] leading-[28px]">Customer stories <span class="text-dark-orange">23</span><p>
+                        <p class="text-[15px] md:text-[20px] text-[#fff] leading-[28px]">Customer stories <span class="text-dark-orange"><?php echo esc_html($story_count); ?></span><p>
                     </div>
-                    <div class="col-span-1 md:col-span-1">
-                        <p class="text-[15px] md:text-[20px] text-end text-[#fff] leading-[28px]">Filters <span class="text-dark-orange">All Industries</span><p>
-                    </div>
+                    
                 </div>
+			<div class="story-container">	
+				<?php if ($story_query->have_posts()) : ?>
+				<?php while ($story_query->have_posts()) : $story_query->the_post();?>
+				<?php $image_id = get_post_thumbnail_id();
+					$image_src = wp_get_attachment_image_src($image_id, 'full');
+					$terms = get_the_terms(get_the_ID(), 'successcategory');
+					 $term_names = array();
+					if ($terms && !is_wp_error($terms)) {
+						foreach ($terms as $term) {
+							$term_names[] = $term->name;
+						}
+					}
+				?>
                 <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
                     <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
+                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]"><?php the_title(); ?></h5>
+                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]"><?php echo get_the_excerpt();?></p>
+                        <p class="text-[12px] text-[#fff] leading-[16px]"> <?php echo implode(', ', $term_names); ?> • 500+<p>
                     </div>
                     <div class="col-span-2 md:col-span-1">
                         <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(232, 164, 51, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
+                            <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>">
+                            
                         </div>
                     </div>
                 </div>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+            </div>    
 
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
-                    <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(8, 104, 176, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
-                    <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(245, 72, 2, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
-                    <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(9, 41, 155, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
-                    <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(9, 155, 129, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
-                    <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]">See how Trident simplified cross-border hiring with SmartWorking</h5>
-                        <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit.</p>
-                        <p class="text-[12px] text-[#fff] leading-[16px]"> Technology • 500+<p>
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/story-1.png" alt="">
-                            <div class="cover-box text-center" style="background: rgba(118, 27, 208, 0.80);">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+			<?php
+				$total_pages = $story_query->max_num_pages;
+				if ($total_pages > 1) : 
+			?>
                 <div class="block text-center mt-10">
-                    <a href="#" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-2 border-[#fff] text-white text-[16px] hover:bg-dark-orange hover:[#fff] ">Load more</a>
+                    <a href="#" id="load-more" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-2 border-[#fff] text-white text-[16px] hover:bg-dark-orange hover:[#fff] ">Load more</a>
                 </div>
-
-
-
-
-            </div>
+			<?php endif; ?>
+			</div>
         </section>
-
+		
+		<?php if (have_rows('story_section')) : ?>
+		<?php while (have_rows('story_section')) : the_row(); ?>
+		<?php if (get_row_layout() == 'curious_section') : ?>
         <section class="calculator-box w-[100%] py-16">
             <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-[10px] md:px-[10%]">
                     <div class="grid-item col-span-5 py-[10%] lg:py-[100px]">
                         <div class="block mb-5">
-                            <span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] ">Calculator</span>
-                        </div>
-                        <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4">Curious About <span class="text-dark-orange"> Cost? </span></h1>
-                        <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium">Find out the price of your next remote hire here.</p>
+						<?php if(get_sub_field('small_title')): ?>
+                            <span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] "><?php echo get_sub_field('small_title'); ?></span>
+                        <?php endif; ?>
+						</div>
+						<?php if(get_sub_field('main_heading')): ?>	
+                        <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+                        <?php endif; ?>
+						<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
+						<?php if(get_sub_field('button_name')): ?>
+						<?php $calc_url =  get_sub_field('button_url'); ?>
                         <p class="mt-6">
-                            <a href="/pricing/" class="w-[300px] text-center button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Click to calculate now</a>
+                            <a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] text-center button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
                         </p>
+						<?php endif; ?>
                     </div>
                     <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
                         <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                             <div class="px-6 py-4">
+							<?php if(get_sub_field('hourly_rate_title')): ?>
                             <div class="block">
-                                <p class="text-[24px] text-[#64748b]">Hourly rate</p>
+                                <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
                             </div>
+							<?php endif; ?>
+							<?php if(get_sub_field('amount')): ?> 
                             <div class="block">
-                                <p class="text-[54px] font-[500] ">£20/hr</p>
+                                <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
                             </div>
+							<?php endif; ?>	
                             <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
                                 <div class="sliderwrap">
                                     <input class="home-range-slider" id="range" type="range" max="100" value="60">
@@ -243,203 +169,91 @@
                             </div>
                             <div class="block pt-5">
                                 <div class="flex">
+								<?php if(get_sub_field('amount_save_title')): ?>
                                     <div class="grow">
-                                        <span class="text-[18px] font-[400] text-gray-500 ">Amount save</span>
+                                        <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
                                     </div>
+								<?php endif; ?>		
                                     <div class="grow text-end">
-                                        <span id="price-value" class="text-[24px] font-[500] text-black">£ 2536</span>
+                                        <span id="price-value" class="text-[24px] font-[500] text-black">£ </span>
                                     </div>
                                 </div>
                             </div>
                             </div>
                         </div>
-                        <img width="864" height="594" class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0] entered lazyloaded" src="https://smartworking.io/wp-content/uploads/2024/09/calcbg.webp" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/09/calcbg.webp" data-ll-status="loaded">
-                        <noscript><img width="864" height="594" class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="https://smartworking.io/wp-content/uploads/2024/09/calcbg.webp"></noscript>
+						<?php $curious_img = get_sub_field('main_image');
+							if (!empty($curious_img) && isset($curious_img['url'])):
+						?>
+							<img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
+						<?php endif; ?>
                     </div>
                 </div>
         </section>
-
+		<?php endif; ?>		
+		
+		<?php if (get_row_layout() == 'client_section') : ?>
         <section class="w-[100%] md:min-h-[300px] py-16">
             <div class="max-w-[600px] relative mx-auto text-center">
-                <h3 class="text-center small-intro">Clients</h3>
+			<?php if(get_sub_field('top_title')): ?>
+                <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
+			<?php endif; ?>	
+			
+			<?php if(get_sub_field('main_title')): ?>
                 <h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
-                    Trusted by			<span class="text-dark-orange block"> 150+ of Organizations </span>
+                   <?php echo get_sub_field('main_title'); ?>	<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
                 </h1>
-                <!--         <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px] text-[#FF4D02] ">150+ of Organizations</h1>
-                    -->
+			<?php endif; ?>	
             </div>
             <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
-                <div class="logo-slider slick-initialized slick-slider">
-                    <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
-                    <div class="slick-list draggable">
-                        <div class="slick-track" style="opacity: 1; width: 7194px; transform: translate3d(-2834px, 0px, 0px);">
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-7" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-6" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-5" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="0" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="1" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="2" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="3" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/EssentialNET-Ltd.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/EssentialNET-Ltd.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/EssentialNET-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="4" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/formed-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/formed-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/formed-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="5" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/matrix-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/matrix-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/matrix-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="6" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="7" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="8" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="9" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="10" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide" data-slick-index="11" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-current slick-active" data-slick-index="12" aria-hidden="false" style="width: 198px;" tabindex="0">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="13" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Amperative-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="14" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/CONXTD-Technologies-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="15" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" data-ll-status="loaded" class="entered lazyloaded">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Densitron-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="16" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/EssentialNET-Ltd.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/EssentialNET-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="17" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/formed-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/formed-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned slick-active" data-slick-index="18" id="" aria-hidden="false" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/matrix-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/matrix-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="19" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="20" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Silver-Bullet-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="21" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/tiller-1.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="22" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Trident-2.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="23" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/virtualDCS.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="24" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Workflow-Doctor-Ltd.png" /></noscript>
-                        </div>
-                        <div class="slide-item slick-slide slick-cloned" data-slick-index="25" id="" aria-hidden="true" style="width: 198px;" tabindex="-1">
-                            <img width="1400" height="570" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20570'%3E%3C/svg%3E" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png">
-                            <noscript><img width="1400" height="570" src="https://smartworking.io/wp-content/uploads/2024/08/Satoshi-Systems.png" /></noscript>
-                        </div>
-                        </div>
+                    <div class="logo-slider">
+                    <?php if(have_rows('clients')): ?>
+                    <?php while(have_rows('clients')): the_row(); ?>
+                        <div class="slide-item"><img src="<?php echo get_sub_field('client_image')['url']; ?>" /> </div>
+                    <?php endwhile; ?>	
+                    <?php endif; ?> 	
                     </div>
-                    <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>
-                </div>
             </div>
         </section>
-
+		
+		<?php endif; ?>		
+		
+		<?php if (get_row_layout() == 'hire_developer_section') : ?>
         <section class="w-full relative grid items-center px-3  py-16">
-            <div class="container mx-auto md:px-0 px-10 ready-hire-bg" data-rocket-lazy-bg-8fbeeefb-44ec-4fe3-8683-cec3324f1196="loaded">
+            <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="pl-7 pr-7 md:pl-48 md:pr-12 content-center">
+					<?php if(get_sub_field('main_title')): ?>
                         <h2 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight  md:mb-2">
-                        <p style="color: white; font-size: 48px;"> Ready to Hire a Developer? </p>
+                        <?php echo get_sub_field('main_title'); ?>
                         </h2>
-                        <p class="text-center text-[20px] md:text-left text-white"> </p>
-                        <p style="color: white; font-size: 16px;">It is quick, easy and cost effective with Smart Working. </p>
-                        <p></p>
-                        <div class="header-buttons mt-16 mb-10 text-center md:text-left">
-                        <a href="https://calendly.com/smart-working/30min?month=2024-08" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white">Schedule a Call</a>
-                        </div>
+					<?php endif; ?>	
+
+					<?php if(get_sub_field('subheading')): ?>		
+                        <p class="text-center text-[20px] md:text-left text-white"> <?php echo get_sub_field('subheading'); ?> </p>
+                    <?php endif; ?>	
+					<?php if(get_sub_field('button_name')): ?>
+					<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
+					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
+					<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+					</div>
+					<?php endif; ?>	
+					
                     </div>
+					
+					<?php $hire_dev_main_img = get_sub_field('image');
+						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
+					?>
                     <div class="px-6 py-10 lg:pr-[20%] content-center text-right">
-                        <img width="510" height="435" src="https://smartworking.io/wp-content/uploads/2024/09/Untitled-design-56-1.png" alt="" class="w-[100%] inline-block max-w-[450px] entered lazyloaded" data-lazy-src="https://smartworking.io/wp-content/uploads/2024/09/Untitled-design-56-1.png" data-ll-status="loaded">
-                        <noscript><img width="510" height="435" src="https://smartworking.io/wp-content/uploads/2024/09/Untitled-design-56-1.png" alt="" class="w-[100%] inline-block max-w-[450px]"></noscript>
+                        <img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-[100%] inline-block max-w-[450px]">
                     </div>
+					<?php endif; ?>
                 </div>
             </div>
         </section>
-
-
-    </div>
+		<?php endif; ?>
+		<?php endwhile; ?>
+		<?php endif; ?>	
+	</div>
 </div>
-
-
-
-
 
 <?php get_footer();?>
