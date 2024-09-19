@@ -238,6 +238,74 @@ function ajax_fetch_ai_vetted_profile_posts() {
 add_action('wp_ajax_nopriv_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 add_action('wp_ajax_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 
+
+
+
+
+
+function load_more_stories() {
+    $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+    $args = array(
+        'post_type' => 'success-story',
+        'post_status' => 'publish',
+        'paged' => $paged,
+        'posts_per_page' => 10
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $image_id = get_post_thumbnail_id();
+            $image_src = wp_get_attachment_image_src($image_id, 'full');
+            $terms = get_the_terms(get_the_ID(), 'successcategory');
+            $term_names = array();
+            if ($terms && !is_wp_error($terms)) {
+                foreach ($terms as $term) {
+                    $term_names[] = $term->name;
+                }
+            }
+            ?>
+            <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
+                <div class="col-span-2 md:col-span-1">
+                    <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]"><?php the_title(); ?></h5>
+                    <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]"><?php echo get_the_excerpt(); ?></p>
+                    <p class="text-[12px] text-[#fff] leading-[16px]"><?php echo implode(', ', $term_names); ?> • 500+</p>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <div class="stories-img-box">
+                        <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>">
+                        <div class="cover-box text-center">
+                            <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        wp_reset_postdata();
+    } else {
+        // No more posts to load
+        wp_die();
+    }
+    wp_die();
+}
+add_action('wp_ajax_load_more_stories', 'load_more_stories');
+add_action('wp_ajax_nopriv_load_more_stories', 'load_more_stories');
+
+
+// Code for Success Story
+function enqueue_custom_scripts() {
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom-ajax.js', array('jquery'), null, true);
+    wp_localize_script('custom-js', 'my_ajax_obj', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+
 // Enqueue the script and localize it with the AJAX URL
 function enqueue_custom_ajax_script() {
     wp_enqueue_script('custom-ajax-script', get_template_directory_uri() . '/js/custom-ajax.js', array('jquery'), null, true);
@@ -247,3 +315,5 @@ function enqueue_custom_ajax_script() {
     ));
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_script');
+
+
