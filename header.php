@@ -77,58 +77,35 @@
       <div class="show-main-menu" id="hireDevId">
           <div class="grid grid-cols-1 md:grid-cols-9 h-[100%]">
             <div class="col-span-3">
+			<?php
+				$active_menu = 'frontEndDev';
+				$menu_data = get_field('hire_dev_menu', 'option');
+			?>
               <ul class="mega-menu-left">
-                <li class="active" data-menu="frontEndDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/front-end-development.svg">
-                    <span class="menu-title">Front-End Developer</span>
-                  </a>
-                </li>
-                <li data-menu="backEndDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/back-end-development.svg">
-                    <span class="menu-title">Back-End Developer</span>
-                  </a>
-                </li>
-                <li data-menu="fullStackDev">
-                  <a>
-                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/full-stack-development.svg">
-                    <span class="menu-title">Full Stack Developer</span>
-                  </a>
-                </li>
-                <li data-menu="webDev">
-                  <a>
-                  <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/mobile-development.svg">
-                    <span class="menu-title">Web Developer</span>
-                  </a>
-                </li>
-                <li data-menu="cloudDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/web-development.svg">
-                    <span class="menu-title">Cloud Developer</span>
-                  </a>
-                </li>
-                
-                <li data-menu="mobileDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Mobile App Developer</span>
-                  </a>
+			  <?php 
+				if ($menu_data) : 
+				foreach ($menu_data as $row) : 
+                $data_menu = $row['data_menu']; 
+                $menu_image = $row['menu_image'];
+                $menu_name = $row['menu_name'];
+				
+				if (is_array($menu_image)) {
+                    $menu_image_url = $menu_image['url']; // Assuming 'url' is the key
+                } else {
+                    $menu_image_url = esc_url($menu_image); // For image ID or URL
+                }
+				?> 
+
+				<li class="<?php echo ($data_menu === $active_menu) ? 'active' : ''; ?>" data-menu="<?php echo esc_attr($data_menu); ?>">
+                    <a>
+                        <img class="w-[24px] menu-icons" src="<?php echo esc_url($menu_image_url); ?>" alt="<?php echo esc_attr($menu_name); ?>">
+                        <span class="menu-title"><?php echo esc_html($menu_name); ?></span>
+                    </a>
                 </li>
 				
-				<li data-menu="specializedDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/specialized-development.svg">
-                    <span class="menu-title">Software Developer</span>
-                  </a>
-                </li>
-				
-				<li data-menu="trendingDev">
-                  <a>
-                    <img class="w-[24px] menu-icons" src="<?php echo get_template_directory_uri();?>/images/game-gevelopment.svg">
-                    <span class="menu-title">Trending Developer</span>
-                  </a>
-                </li>
+			 <?php endforeach; else : ?> 
+				<li>No menu items found.</li> 
+			<?php endif; ?> 	
                 
               </ul>
             </div>
