@@ -276,9 +276,7 @@ function load_more_stories() {
                 <div class="col-span-2 md:col-span-1">
                     <div class="stories-img-box">
                         <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>">
-                        <div class="cover-box text-center">
-                            <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                        </div>
+                        
                     </div>
                 </div>
             </div>

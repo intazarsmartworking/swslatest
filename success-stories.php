@@ -83,9 +83,7 @@
                     <div class="col-span-1 md:col-span-1">
                         <p class="text-[15px] md:text-[20px] text-[#fff] leading-[28px]">Customer stories <span class="text-dark-orange"><?php echo esc_html($story_count); ?></span><p>
                     </div>
-                    <div class="col-span-1 md:col-span-1">
-                        <p class="text-[15px] md:text-[20px] text-end text-[#fff] leading-[28px]">Filters <span class="text-dark-orange">All Industries</span><p>
-                    </div>
+                    
                 </div>
 			<div class="story-container">	
 				<?php if ($story_query->have_posts()) : ?>
@@ -109,9 +107,7 @@
                     <div class="col-span-2 md:col-span-1">
                         <div class="stories-img-box">
                             <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>">
-                            <div class="cover-box text-center">
-                                <img class="h-[200px] inline-block self-center" src="<?php echo get_template_directory_uri();?>/images/cleint-logg.png" alt="">
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
