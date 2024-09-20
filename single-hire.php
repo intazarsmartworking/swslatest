@@ -230,7 +230,7 @@
 							</div>
 						<?php endif; ?>
                         <div class="w-1/2 px-2 mb-4 text-right">
-                            <a href="/contact-us/"> <button class="profile-button-custom"> Hire Now </button> </a>
+                            <a href="/contact-us/"> <button class="profile-button-custom hover:bg-dark-orange"> Hire Now </button> </a>
                         </div>
                     </div>
 					
