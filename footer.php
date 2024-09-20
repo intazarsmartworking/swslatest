@@ -25,7 +25,7 @@
         <?php
          $unlock_btn_url = get_field('button_link', 'options');
         ?>
-          <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_field('button_name', 'options'); ?></a>
+          <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button button-small font-semibold  px-8 py-4 rounded-xl text-white text-[14px] get-started-banner-home"><?php echo get_field('button_name', 'options'); ?></a>
         </div>
         <?php endif; ?>
         

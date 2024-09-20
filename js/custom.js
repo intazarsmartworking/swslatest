@@ -1402,7 +1402,7 @@ jQuery(document).ready(function(){
     ]
   });
 
-  jQuery('#testimonial-slider').slick({
+  jQuery('#vetted-profiles-slider').slick({
     dots: false,
     infinite: true,
     speed: 300,
@@ -1410,6 +1410,8 @@ jQuery(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     arrows:false,
+    prevArrow: jQuery('#prev-slide'),
+    nextArrow: jQuery('#next-slide'),
     responsive: [
       {
         breakpoint: 1024,
@@ -1442,6 +1444,14 @@ jQuery(document).ready(function(){
         }
       }
     ]
+  });
+
+  jQuery('#prev-slide').click(function(e) {
+    jQuery('#vetted-profiles-slider').slick('slickNext');
+  });
+  
+  jQuery('#next-slide').click(function(e) {
+    jQuery('#vetted-profiles-slider').slick('slickPrev');
   });
 
 
