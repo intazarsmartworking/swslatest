@@ -198,7 +198,7 @@
                                 </div>
 								<?php if(get_sub_field('button_name')): ?>
                                 <div class="w-1/2 px-2 mb-4 text-right">
-                                    <a href="<?php echo get_sub_field('button_url'); ?>"> <button class="profile-button-custom"> <?php echo get_sub_field('button_name'); ?> </button> </a>
+                                    <a href="<?php echo get_sub_field('button_url'); ?>"> <button class="profile-button-custom hover:bg-dark-orange"> <?php echo get_sub_field('button_name'); ?> </button> </a>
                                 </div>
 								<?php endif; ?>
                             </div>
