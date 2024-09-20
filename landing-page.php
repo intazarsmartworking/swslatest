@@ -45,7 +45,7 @@
                         </div>
                         <div class="grid-item col-span-1 content-center">
 						<?php if(get_sub_field('form_part')): ?>
-                            <div class=" w-[100%] max-w-[550px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
+                            <div class=" w-[100%] max-w-[450px] min-h-[300px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
 							    <?php echo get_sub_field('form_part'); ?>
 							 
                             </div>
@@ -289,21 +289,22 @@
 				<?php endif; ?> 
 				
 				<?php if(get_sub_field('paragraph')): ?>	
-                    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">S<?php echo get_sub_field('paragraph'); ?></p>
+                    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"><?php echo get_sub_field('paragraph'); ?></p>
 				<?php endif; ?> 	
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 footer-background px-28 py-16 border border-[#3c1201]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 bg-white rounded-[25px] mx-auto max-w-[850px] px-28 py-16">
+                        <img class=" absolute right-[-50px] top-[-50px] max-h-[150px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png">
                         <div class="grid-item col-span-2 relative content-center">
                             <?php if(get_sub_field('price')): ?>
-                                <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[140px] mb-4 text-dark-orange lg:leading-[80px]"><?php echo get_sub_field('price'); ?></h5>
+                                <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[200px] text-dark-orange lg:leading-[180px]"><?php echo get_sub_field('price'); ?></h5>
                             <?php endif; ?> 
                             
                             <?php if(get_sub_field('tagline')): ?>	
-                                <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-3"><?php echo get_sub_field('tagline'); ?></p>
+                                <p class="text-center text-black font-bold text-[20px] md:text-[50px]"><?php echo get_sub_field('tagline'); ?></p>
                             <?php endif; ?> 
                             
                             <?php if(get_sub_field('extra_text')): ?>	
-                                <p class="text-center font-normal text-[14px] text-gray-200"><?php echo get_sub_field('extra_text'); ?></p>
+                                <p class="text-center font-semibold text-[30px] text-black"><?php echo get_sub_field('extra_text'); ?></p>
                             <?php endif; ?> 	
                         </div>
                         <!-- <div class="grid-item col-span-1 content-center">
@@ -333,12 +334,12 @@
                                 
                             </div>
                         </div> -->
-                        <?php if(get_sub_field('button_name')): ?>
-                            <div class="grid-item col-span-2 block text-center mt-10">
-                                <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
-                            </div>
-                        <?php endif; ?>	
                 </div>
+                <?php if(get_sub_field('button_name')): ?>
+                    <div class="block text-center mt-10">
+                        <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                    </div>
+                <?php endif; ?>	
 				
             </div>
     </section>
@@ -533,7 +534,7 @@
                 <div class=" block relative rounded-[24px] vetting-bg">
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
-                        <div class="grid-item col-span-1 lg:col-span-5 content-center h-[400px] py-[32px] px-[5%]">
+                        <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
 						<?php if(get_sub_field('heading')): ?>
                             <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
 						<?php endif; ?>	
@@ -583,7 +584,7 @@
                         </div>
                         <div class="grid-item col-span-1 lg:col-span-7 content-center relative">
 						<?php if(get_sub_field('calender')): ?>
-                            <div class="absolute right-0 top-[-50px] w-[100%] h-[500px] bg-[#fff] rounded-[24px]">
+                            <div class="absolute right-0 top-[-100px] w-[100%] min-h-[700px] bg-[#fff] rounded-[24px]">
 							    <?php echo get_sub_field('calender'); ?>
 							</div>
 						<?php endif; ?>	

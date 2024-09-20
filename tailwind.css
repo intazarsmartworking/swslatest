@@ -407,6 +407,9 @@ body{
     left: 48%;
     top: 10%;
   }
+  .slider-main-box.slick-initialized .slick-slide{
+    background: transparent !important;
+  }
 
 
 
@@ -2674,6 +2677,25 @@ input[type="range"].home-range-slider {
     z-index: 10;
     display: flex;
     justify-content: center;
+  }
+  .skill-list{
+    padding: 0px;
+    margin: 0px;
+  }
+  .skill-list li{
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    padding: 12px 5px 5px 50px;
+    border-radius: 8px;
+    height: 50px;
+    width: 200px;
+    border: 1px solid rgba(5, 4, 3, 0.20);
+    background: #FFF;
+    font-size: 16px;
+    color: #040524;
+    font-weight: 700;
+    text-align: left;
   }
 
 
