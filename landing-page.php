@@ -211,11 +211,7 @@
 
                     
                 </div>
-				<?php if(get_sub_field('button_name')): ?>
-                <div class="block text-center mt-12">
-                    <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-8 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
-                </div>
-				<?php endif; ?>
+				
 
             </div>
         </section>
@@ -269,6 +265,11 @@
                     
 
                 </div>
+				<?php if(get_sub_field('button_name')): ?>
+                <div class="block text-center mt-12">
+                    <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-8 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                </div>
+				<?php endif; ?>
             </div>
         </section>
 	<?php endif; ?> 
