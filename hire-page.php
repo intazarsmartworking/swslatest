@@ -10,728 +10,193 @@
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-15%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
+	
+	<?php if (have_rows('hire_role_section')) : ?>
+	<?php while (have_rows('hire_role_section')) : the_row(); ?>
+	<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 py-0 md:py-14 gap-3">
                     <div class="col-span-2 md:col-span-1 content-center">
+					<?php if(get_sub_field('main_heading')): ?>
                         <h1 class="font-medium text-[35px] md:text-[72px] mb-4 text-white  lg:leading-[78px]">
-                                Hire Frontend<br><span class="text-dark-orange"> Developer</span> 
+                                <?php echo get_sub_field('main_heading'); ?> <br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span> 
                         </h1>
-                        <p class=" text-white font-medium text-[20px] pt-[10px] px-0 mb-16">With Arc, find pre-vetted remote software developers<br>proficient in all programming languages, frameworks,<br>and technologies.</p>
-                        <div class="block">
-                            <a href="" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange mr-4 ">Hire Now</a>
-                            <a href="" class="button mobile-m-0 inline-block button-small rounded-[10px] px-[10px] md:px-[20px] py-4 border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange">Calculate Cost</a>
-                        </div>
+					<?php endif; ?>	
+					<?php if(get_sub_field('paragraph')): ?>
+                        <p class=" text-white font-medium text-[20px] pt-[10px] px-0 mb-16"><?php echo get_sub_field('paragraph'); ?></p>
+                    <?php endif; ?>	    
+						<div class="block">
+						<?php if(get_sub_field('button_name_1')): ?>
+                            <a href="<?php echo get_sub_field('button_url_1'); ?>" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange mr-4 "><?php echo get_sub_field('button_name_1'); ?></a>
+                        <?php endif; ?>	
+						
+						<?php if(get_sub_field('button_name_2')): ?>
+							<a href="<?php echo get_sub_field('button_url_2'); ?>" class="button mobile-m-0 inline-block button-small rounded-[10px] px-[10px] md:px-[20px] py-4 border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange"><?php echo get_sub_field('button_name_2'); ?></a>
+                        <?php endif; ?>	
+						</div>
                     </div>
+					<?php if(get_sub_field('right_side_image')): ?>
                     <div class="col-span-2 md:col-span-1 content-center text-right">
-                        <img class="w-[100%] max-w-[550px] inline-block" src="<?php echo get_template_directory_uri();?>/images/hire-front-dev.svg" alt="">
+                        <img class="w-[100%] max-w-[550px] inline-block" src="<?php echo get_sub_field('right_side_image')['url']; ?>" alt="<?php echo get_sub_field('right_side_image')['alt']; ?>">
                     </div>
+					<?php endif; ?>
                 </div>
             </div>
         </section>
+	<?php endif; ?>
+	<?php if (get_row_layout() == 'vetted_profile') : ?>
         <section class="w-full px-3">
             <div class="w-[100%] max-w-[1280px] mx-auto py-16">
                 <div class="block">
-                    <div class="text-center small-intro">Vetted Profiles</div>
-
-                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]">Meet Our Vetted <span class="text-dark-orange block">Python Developers</span></h2>
-
-                    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">No hidden costs, timezone aligned and able to hire in one week.</p>
-                </div>
+				<?php if(get_sub_field('small_title')): ?>
+                    <div class="text-center small-intro"><?php echo get_sub_field('small_title'); ?></div>
+				<?php endif; ?>
+				
+				<?php if(get_sub_field('main_title')): ?>
+                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]"><?php echo get_sub_field('main_title'); ?><span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span></h2>
+				<?php endif; ?>
+				
+				<?php if(get_sub_field('paragraph')): ?>
+                    <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"><?php echo get_sub_field('paragraph'); ?></p>
+                <?php endif; ?>
+				</div>
                 <div class="block w-[100%]">
                     <div class="slider-main-box" id="vetted-profiles-slider">
+					
+					<?php if(have_rows('vetted_box')): ?>
+					<?php while(have_rows('vetted_box')): the_row(); ?>
+					<?php 
+					  $developer_name = get_sub_field('developer_name'); 
+					  $profile = get_sub_field('profile'); 
+					  $experience = get_sub_field('experience'); 
+					  $avai = get_sub_field('avai'); 
+					?> 
                         <div class="slider-itme">
                             <div class="custom-bg custom-border">
                                 <div class="flex items-center">
-                                    <img
-                                        width="154"
-                                        height="154"
-                                        src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        alt="Author"
-                                        class="w-16 h-16 rounded-full mr-4 entered lazyloaded"
-                                        data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        data-ll-status="loaded"
-                                    />
-                                    <noscript><img width="154" height="154" src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png" alt="Author" class="w-16 h-16 rounded-full mr-4" /></noscript>
-
-                                    <div>
-                                        <span class="text-white text-2xl font-medium block">Neha G.</span>
-                                        <span class="text-white text-sm font-normal block">Angular Front-End Developer</span>
-                                    </div>
-                                </div>
+									<?php $poet_image = get_sub_field('image');
+										if (!empty($poet_image) && isset($poet_image['url'])):
+									?>
+										<img src="<?php echo esc_url($poet_image['url']); ?>" alt="Author" class="w-16 h-16 rounded-full mr-4">
+									<?php endif; ?>	    
+									<div>
+										<span class="text-white text-2xl font-medium block"><?php echo $developer_name;?></span>
+										<span class="text-white text-sm font-normal block"><?php echo $profile;?></span>
+									</div>
+								</div>
 
                                 <div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="21"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            alt="Experience 1"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="21" height="20" src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
-                                            <p class="text-white text-base font-medium">3 years</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="20"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            alt="Experience 2"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="20" height="20" src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
-                                            <p class="text-white text-base font-medium">2 Weeks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Angular</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Html 5</h3>
-                                        </div>
-                                        <img
-                                            width="94"
-                                            height="132"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="94" height="132" src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Python</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/python.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">NgRx</h3>
-                                        </div>
-                                        <img
-                                            width="90"
-                                            height="96"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="90" height="96" src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #f26829; left: calc(88% - 16px);">
-                                            8.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#F26829"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 88%; background: #f26829;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #95c93d; left: calc(78% - 16px);">
-                                            7.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#95C93D"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 78%; background: #95c93d;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #00c9d3; left: calc(72% - 16px);">
-                                            7.2
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#00C9D3"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 72%; background: #00c9d3;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="flex flex-wrap -mx-2 mt-4">
-                                    <div class="w-1/2 px-2 mb-4">
-                                        <p class="font-medium text-2xl text-white">£17/hr</p>
-                                    </div>
-                                    <div class="w-1/2 px-2 mb-4 text-right">
-                                        <a href="/contact-us/"> <button class="profile-button-custom">Hire Now</button> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-itme">
-                            <div class="custom-bg custom-border">
-                                <div class="flex items-center">
-                                    <img
-                                        width="154"
-                                        height="154"
-                                        src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        alt="Author"
-                                        class="w-16 h-16 rounded-full mr-4 entered lazyloaded"
-                                        data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        data-ll-status="loaded"
-                                    />
-                                    <noscript><img width="154" height="154" src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png" alt="Author" class="w-16 h-16 rounded-full mr-4" /></noscript>
-
+                                <div class="flex flex-col sm:flex-row">
+                                    <img src="<?php echo get_template_directory_uri();?>/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4">
                                     <div>
-                                        <span class="text-white text-2xl font-medium block">Neha G.</span>
-                                        <span class="text-white text-sm font-normal block">Angular Front-End Developer</span>
+                                        <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
+                                        <p class="text-white text-base font-medium"><?php echo $experience;?></p>
                                     </div>
                                 </div>
-
-                                <div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="21"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            alt="Experience 1"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="21" height="20" src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
-                                            <p class="text-white text-base font-medium">3 years</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="20"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            alt="Experience 2"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="20" height="20" src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
-                                            <p class="text-white text-base font-medium">2 Weeks</p>
-                                        </div>
-                                    </div>
+                                <div class="flex flex-col sm:flex-row">
+                                    
                                 </div>
+								</div>
                                 <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
+								<?php if(have_rows('technology')): ?>
+								 <?php while(have_rows('technology')): the_row(); ?>
+								 <?php 
+								  $tech_name = get_sub_field('name'); 
+								 ?>
                                     <div class="flex items-center tech-item">
                                         <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Angular</h3>
+                                            <h3 class="text-xs font-medium"><?php echo $tech_name;?></h3>
                                         </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
+                                        <?php $tech_image = get_sub_field('image');
+											if (!empty($tech_image) && isset($tech_image['url'])):
+										?>
+											<img src="<?php echo esc_url($tech_image['url']); ?>" alt="Technology 1" class="w-4 h-4 inline-block rounded-full">
+										<?php endif; ?> 
                                     </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Html 5</h3>
-                                        </div>
-                                        <img
-                                            width="94"
-                                            height="132"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="94" height="132" src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Python</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/python.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">NgRx</h3>
-                                        </div>
-                                        <img
-                                            width="90"
-                                            height="96"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="90" height="96" src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
+								<?php endwhile; ?>	
+								<?php endif; ?>
                                 </div>
 
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #f26829; left: calc(88% - 16px);">
-                                            8.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#F26829"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 88%; background: #f26829;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
+                                <?php  
+								 $interview_screening_value = get_sub_field('interview_screening');
+								 $interview_screening_percent = get_sub_field('interview_screening');
+								 $interview_screening_multiply = $interview_screening_percent* 10;
+								 $interview_screening_color = get_sub_field('interview_screening_color');
+								?>
+								<div class="w-full py-4">
+									<p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Coding Ability</p>
+									<div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+										<span class="tooltip-box" style="background:<?php echo $interview_screening_color;?>; left:calc(<?php echo $interview_screening_multiply;?>% - 16px)">
+											<?php echo $interview_screening_value;?>								
+											<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+											<path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $interview_screening_color;?>"></path>
+											</svg>
+										</span>
+										<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $interview_screening_multiply;?>%; background:<?php echo $interview_screening_color;?>;"></div>
+									</div>
+									<p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+								</div>
 
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #95c93d; left: calc(78% - 16px);">
-                                            7.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#95C93D"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 78%; background: #95c93d;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
+                                <?php  
+								 $technical_assignment_value = get_sub_field('technical_assignment');
+								 $technical_assignment_percent = get_sub_field('technical_assignment');
+								 $technical_assignment_multiply = $technical_assignment_percent* 10;
+								 $technical_assignment_color = get_sub_field('technical_assignment_color');
+								?>
+								<div class="w-full py-4">
+									<p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Problem Solving</p>
+									<div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+										<span class="tooltip-box" style="background:<?php echo $technical_assignment_color;?>; left:calc(<?php echo $technical_assignment_multiply;?>% - 16px)">
+											<?php echo $technical_assignment_value;?>								
+											<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+											<path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $technical_assignment_color;?>"></path>
+											</svg>
+										</span>
+										<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $technical_assignment_multiply;?>%; background:<?php echo $technical_assignment_color;?>;"></div>
+									</div>
+									<p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+								</div>
 
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #00c9d3; left: calc(72% - 16px);">
-                                            7.2
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#00C9D3"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 72%; background: #00c9d3;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
+                                <?php 
+								 $language_proficiency_value = get_sub_field('language_proficiency');
+								 $language_proficiency_percent = get_sub_field('language_proficiency');
+								 $language_proficiency_multiply = $language_proficiency_percent* 10;
+								 $language_proficiency_color = get_sub_field('language_proficiency_color');
+								?>
+								<div class="w-full py-4">
+									<p class=" text-[14px] text-[#fff] font-semibold mb-[8px]">Communication Skills</p>
+									<div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
+										<span class="tooltip-box" style="background:<?php echo $language_proficiency_color;?>; left:calc(<?php echo $language_proficiency_multiply;?>% - 16px)">
+											<?php echo $language_proficiency_value;?>								
+											<svg class=" absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
+											<path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="<?php echo $language_proficiency_color;?>"></path>
+											</svg>
+										</span>
+										<div class="h-2 rounded-full dark:bg-blue-500" style="width: <?php echo $language_proficiency_multiply;?>%; background:<?php echo $language_proficiency_color;?>;"></div>
+									</div>
+									<p class=" text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
+								</div>
 
                                 <div class="flex flex-wrap -mx-2 mt-4">
-                                    <div class="w-1/2 px-2 mb-4">
-                                        <p class="font-medium text-2xl text-white">£17/hr</p>
-                                    </div>
-                                    <div class="w-1/2 px-2 mb-4 text-right">
-                                        <a href="/contact-us/"> <button class="profile-button-custom">Hire Now</button> </a>
-                                    </div>
-                                </div>
+									<div class="w-1/2 px-2 mb-4">
+									<?php if(get_sub_field('per_hour')): ?>
+										<p class="font-medium text-2xl text-white"><?php echo get_sub_field('per_hour'); ?></p>
+									<?php endif; ?>	
+									</div>
+									<?php if(get_sub_field('button_name')): ?>
+									<div class="w-1/2 px-2 mb-4 text-right">
+										<a href="<?php echo get_sub_field('button_url'); ?>"> <button class="profile-button-custom hover:bg-dark-orange"> <?php echo get_sub_field('button_name'); ?> </button> </a>
+									</div>
+									<?php endif; ?>
+								</div>
                             </div>
                         </div>
-                        <div class="slider-itme">
-                            <div class="custom-bg custom-border">
-                                <div class="flex items-center">
-                                    <img
-                                        width="154"
-                                        height="154"
-                                        src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        alt="Author"
-                                        class="w-16 h-16 rounded-full mr-4 entered lazyloaded"
-                                        data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        data-ll-status="loaded"
-                                    />
-                                    <noscript><img width="154" height="154" src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png" alt="Author" class="w-16 h-16 rounded-full mr-4" /></noscript>
-
-                                    <div>
-                                        <span class="text-white text-2xl font-medium block">Neha G.</span>
-                                        <span class="text-white text-sm font-normal block">Angular Front-End Developer</span>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="21"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            alt="Experience 1"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="21" height="20" src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
-                                            <p class="text-white text-base font-medium">3 years</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="20"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            alt="Experience 2"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="20" height="20" src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
-                                            <p class="text-white text-base font-medium">2 Weeks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Angular</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Html 5</h3>
-                                        </div>
-                                        <img
-                                            width="94"
-                                            height="132"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="94" height="132" src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Python</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/python.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">NgRx</h3>
-                                        </div>
-                                        <img
-                                            width="90"
-                                            height="96"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="90" height="96" src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #f26829; left: calc(88% - 16px);">
-                                            8.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#F26829"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 88%; background: #f26829;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #95c93d; left: calc(78% - 16px);">
-                                            7.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#95C93D"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 78%; background: #95c93d;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #00c9d3; left: calc(72% - 16px);">
-                                            7.2
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#00C9D3"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 72%; background: #00c9d3;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="flex flex-wrap -mx-2 mt-4">
-                                    <div class="w-1/2 px-2 mb-4">
-                                        <p class="font-medium text-2xl text-white">£17/hr</p>
-                                    </div>
-                                    <div class="w-1/2 px-2 mb-4 text-right">
-                                        <a href="/contact-us/"> <button class="profile-button-custom">Hire Now</button> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-itme">
-                            <div class="custom-bg custom-border">
-                                <div class="flex items-center">
-                                    <img
-                                        width="154"
-                                        height="154"
-                                        src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        alt="Author"
-                                        class="w-16 h-16 rounded-full mr-4 entered lazyloaded"
-                                        data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png"
-                                        data-ll-status="loaded"
-                                    />
-                                    <noscript><img width="154" height="154" src="https://smartworking.io/wp-content/uploads/2024/07/Neha-Gupta.png" alt="Author" class="w-16 h-16 rounded-full mr-4" /></noscript>
-
-                                    <div>
-                                        <span class="text-white text-2xl font-medium block">Neha G.</span>
-                                        <span class="text-white text-sm font-normal block">Angular Front-End Developer</span>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 custom-grid-bg sm:grid-cols-2 gap-4 my-7 px-4 py-3 rounded-lg">
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="21"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            alt="Experience 1"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="21" height="20" src="https://smartworking.io/wp-content/themes/sws/images/Bag.svg" alt="Experience 1" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Experience</h3>
-                                            <p class="text-white text-base font-medium">3 years</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col sm:flex-row">
-                                        <img
-                                            width="20"
-                                            height="20"
-                                            src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            alt="Experience 2"
-                                            class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4 entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="20" height="20" src="https://smartworking.io/wp-content/themes/sws/images/smallclock.svg" alt="Experience 2" class="w-8 h-8 rounded-lg mb-4 sm:mb-0 sm:mr-4" /></noscript>
-                                        <div>
-                                            <h3 class="text-sm font-normal pb-2 text-white">Available in</h3>
-                                            <p class="text-white text-base font-medium">2 Weeks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Angular</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/angular-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Html 5</h3>
-                                        </div>
-                                        <img
-                                            width="94"
-                                            height="132"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="94" height="132" src="https://smartworking.io/wp-content/uploads/2024/08/Html-5.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">Python</h3>
-                                        </div>
-                                        <img
-                                            width="28"
-                                            height="29"
-                                            src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/07/python.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="28" height="29" src="https://smartworking.io/wp-content/uploads/2024/07/python.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium">NgRx</h3>
-                                        </div>
-                                        <img
-                                            width="90"
-                                            height="96"
-                                            src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            alt="Technology 1"
-                                            class="w-4 h-4 rounded-full entered lazyloaded"
-                                            data-lazy-src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg"
-                                            data-ll-status="loaded"
-                                        />
-                                        <noscript><img width="90" height="96" src="https://smartworking.io/wp-content/uploads/2024/08/NgRx-1.svg" alt="Technology 1" class="w-4 h-4 rounded-full" /></noscript>
-                                    </div>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Interview Screening</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #f26829; left: calc(88% - 16px);">
-                                            8.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#F26829"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 88%; background: #f26829;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Technical Ability</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #95c93d; left: calc(78% - 16px);">
-                                            7.8
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#95C93D"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 78%; background: #95c93d;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="w-full py-4">
-                                    <p class="text-[14px] text-[#fff] font-semibold mb-[8px]">Communication (English)</p>
-                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-1 dark:bg-gray-700 relative">
-                                        <span class="tooltip-box" style="background: #00c9d3; left: calc(72% - 16px);">
-                                            7.2
-                                            <svg class="absolute bottom-[-8px] left-[7px]" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 8 5" fill="none">
-                                                <path d="M3.24372 4.12713C3.6425 4.58759 4.35681 4.58759 4.75558 4.12713L7.89677 0.5H0.102539L3.24372 4.12713Z" fill="#00C9D3"></path>
-                                            </svg>
-                                        </span>
-                                        <div class="h-2 rounded-full dark:bg-blue-500" style="width: 72%; background: #00c9d3;"></div>
-                                    </div>
-                                    <p class="text-[12px] text-[#fff] font-semibold mb-[0px]">0 <span class="float-end">10</span></p>
-                                </div>
-
-                                <div class="flex flex-wrap -mx-2 mt-4">
-                                    <div class="w-1/2 px-2 mb-4">
-                                        <p class="font-medium text-2xl text-white">£17/hr</p>
-                                    </div>
-                                    <div class="w-1/2 px-2 mb-4 text-right">
-                                        <a href="/contact-us/"> <button class="profile-button-custom">Hire Now</button> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <?php endwhile; ?>	
+					<?php endif; ?>     
+                        
+                        
                     </div>
                 </div>
                 <div class="block text-center mt-10">
@@ -746,6 +211,9 @@
 
             </div>
         </section>
+	<?php endif; ?>		
+	<?php endwhile; ?>	
+	<?php endif; ?>	
         <section class="w-full px-3">
             <div class="w-[100%] max-w-[1280px] mx-auto py-16">
                 <div class="block">
