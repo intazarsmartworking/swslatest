@@ -216,46 +216,79 @@
 	<?php endif; ?>	
         <section class="w-full px-3">
             <div class="w-[100%] max-w-[1280px] mx-auto py-16">
+			<?php if (have_rows('hire_role_section')) : ?>
+			<?php while (have_rows('hire_role_section')) : the_row(); ?>
+			<?php if (get_row_layout() == 'explore_section') : ?>
                 <div class="block">
-                    <div class="text-center small-intro">Explore</div>
-                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]">Hire Frontend Developers with the <span class="text-dark-orange block">Experts You Need</span></h2>
-                    <!-- <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">No hidden costs, timezone aligned and able to hire in one week.</p> -->
-                </div>
+				<?php if(get_sub_field('top_title')): ?>
+                    <div class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></div>
+				<?php endif; ?>	
+				<?php if(get_sub_field('main_heading')): ?>	
+                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]"><?php echo get_sub_field('main_heading'); ?> <span class="text-dark-orange block"><?php echo get_sub_field('orange_heading'); ?></span></h2>
+                <?php endif; ?>
+				</div>
+			<?php endif; ?>		
+			<?php endwhile; ?>	
+			<?php endif; ?>	
                 <div class="relative z-10 footer-background !rounded-[24px] p-[32px] border border-[#3c1201]">
                     <div class="block bg-[#fff] p-[40px] rounded-[24px] mb-10">
                         <p class=" text-[#050403] font-bold text-[20px] px-0 mb-5 text-center">Find and hire software developers by role / expertise</p>
-                        <div class="block">
-                            <ul class="skill-list">
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                                <li><img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo get_template_directory_uri();?>/images/js-lib.svg" alt=""> Ajax</li>
-                            </ul>
-                        </div>
+                        <?php if (have_rows('hire_role_section')) : ?>
+						<?php while (have_rows('hire_role_section')) : the_row(); ?>
+						<?php
+						 
+							 $selected_role_id  = get_sub_field('select_role_category');
+							 if ( $selected_role_id  ) {
+								 $args = array(
+									'post_type' => 'hire',
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'rolecategory',
+											'field'    => 'term_id', 
+											'terms'    => $selected_role_id, 
+										),
+									),
+								);
+								$query = new WP_Query( $args );
+								if ( $query->have_posts() ) {
+						?>
+							<div class="block">
+								<ul class="skill-list">
+								<?php
+								while ( $query->have_posts() ) {
+									$query->the_post();
+									
+								$hire_image_id = get_post_thumbnail_id();
+								$hire_image_src = wp_get_attachment_image_src($hire_image_id, 'full');
+								$permalink = get_permalink();
+								$modified_permalink = rtrim($permalink, '/') . '-developer/';	
+								?>
+									<li>
+									<a href="<?php echo get_permalink(); ?>">
+									<img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo esc_url($hire_image_src[0]) ;?>" alt="<?php the_title();?>"> <?php the_title();?></li>
+									</a>
+								<?php }?>	
+								</ul>
+							</div>
+							
+							<?php } else  { echo 'No Developers found for this role'; }
+									wp_reset_postdata(); 
+						 } else { echo '';}?>
+						<?php endwhile; ?>		
+						<?php endif; ?>		
+						
                     </div>
-
+					<?php if (have_rows('hire_role_section')) : ?>
+					<?php while (have_rows('hire_role_section')) : the_row(); ?>
+					<?php if (get_row_layout() == 'explore_section') : ?>
+					<?php if(get_sub_field('button_name')): ?>	
                     <div class="block text-center">
-                        <a href="" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange">Hire Developers</a>
+                        <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
                     </div>
+					<?php endif; ?>		
+					<?php endif; ?>		
+					<?php endwhile; ?>	
+					<?php endif; ?>
                 </div>
             </div>
         </section>

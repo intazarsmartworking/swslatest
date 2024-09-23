@@ -16,6 +16,38 @@
                 "id": ""
             },
             "layouts": {
+                "layout_66f1a2eae1d2c": {
+                    "key": "layout_66f1a2eae1d2c",
+                    "name": "select_role",
+                    "label": "Select Role",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66f1a2f6e1d2d",
+                            "label": "Select Role Category",
+                            "name": "select_role_category",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "rolecategory",
+                            "field_type": "radio",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66f161f498c63": {
                     "key": "layout_66f161f498c63",
                     "name": "banner_section",
@@ -935,5 +967,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727096578
+    "modified": 1727111979
 }
