@@ -792,16 +792,15 @@
             </div>
         </section>
         <section class="w-full px-3">
-            <div class="w-[100%] max-w-[1280px] mx-auto py-16" id="pinContainer-12">
-                <div class="block">
-                    <div class="text-center small-intro">Process</div>
-                    <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]">Our Matching<br><span class="text-dark-orange block">Progress</span></h2>
-                    <!-- <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">No hidden costs, timezone aligned and able to hire in one week.</p> -->
-                </div>
-
-                <div class="section-slider pt-10 w-[100%] max-w-[100%] relative" id="slideContainer">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 slide-point">
+            <div class="block py-16">
+                <div class="text-center small-intro">Process</div>
+                <h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]">Our Matching<br><span class="text-dark-orange block">Progress</span></h2>
+                <!-- <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10">No hidden costs, timezone aligned and able to hire in one week.</p> -->
+            </div>
+        </div>
+        <section class="w-full px-3" id="pinContainerHire">
+                <div class="w-full absolute left-0 top-0 bg-[#0F0F0F] slide-point-1">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto">
                         <div class="col-span-2 md:col-span-1 content-center pr-0 md:pr-64">
                             <div class="block text-[16px] text-[#D0511B] font-semibold mb-5"><img class="w-[24px] h-[24px] align-top inline-block mr-2" src="<?php echo get_template_directory_uri();?>/images/pro-slide-icon-1.svg" alt=""><span class="inline-block align-top">Business value</span></div>
                             <h5 class="text-white text-[30px] md:text-[40px] mb-7 ">Design that adds value</h5>
@@ -812,8 +811,9 @@
                             <img class="w-[100%] max-w-[550px] rounded-[12px] inline-block" src="<?php echo get_template_directory_uri();?>/images/pro-slide-1.png" alt="">
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 slide-point">
+                </div>   
+                <div class="w-full absolute left-0 top-0 bg-[#0F0F0F] slide-point-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto">
                         <div class="col-span-2 md:col-span-1 content-center pr-0 md:pr-64">
                             <div class="block text-[16px] text-[#D0511B] font-semibold mb-5"><img class="w-[24px] h-[24px] align-top inline-block mr-2" src="<?php echo get_template_directory_uri();?>/images/pro-slide-icon-2.svg" alt=""><span class="inline-block align-top">Effectiveness</span></div>
                             <h5 class="text-white text-[30px] md:text-[40px] mb-7 ">Responsiveness, speed, and flexibility</h5>
@@ -824,8 +824,9 @@
                             <img class="w-[100%] max-w-[550px] rounded-[12px] inline-block" src="<?php echo get_template_directory_uri();?>/images/pro-slide-2.png" alt="">
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 slide-point">
+                </div>
+                <div class="w-full absolute left-0 top-0 bg-[#0F0F0F] slide-point-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto">
                         <div class="col-span-2 md:col-span-1 content-center pr-0 md:pr-64">
                             <div class="block text-[16px] text-[#D0511B] font-semibold mb-5"><img class="w-[24px] h-[24px] align-top inline-block mr-2" src="<?php echo get_template_directory_uri();?>/images/pro-slide-icon-3.svg" alt=""><span class="inline-block align-top">Commitment</span></div>
                             <h5 class="text-white text-[30px] md:text-[40px] mb-7 ">Partnership and customer success</h5>
@@ -836,10 +837,8 @@
                             <img class="w-[100%] max-w-[550px] rounded-[12px] inline-block" src="<?php echo get_template_directory_uri();?>/images/pro-slide-3.png" alt="">
                         </div>
                     </div>
-
-
-
                 </div>
+
 
 
                 <!-- <div id="pinContainer-12">
@@ -858,9 +857,6 @@
                         </section>
                     </div>
                 </div> -->
-
-
-            </div>
         </section>
         <section class="calculator-box w-[100%] py-16">
             <div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">

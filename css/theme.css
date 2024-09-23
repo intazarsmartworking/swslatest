@@ -1003,11 +1003,11 @@ select {
 .right-\[-30\%\] {
   right: -30%;
 }
+.right-\[-30px\] {
+  right: -30px;
+}
 .right-\[-35\%\] {
   right: -35%;
-}
-.right-\[-50px\] {
-  right: -50px;
 }
 .right-\[-7px\] {
   right: -7px;
@@ -1033,11 +1033,11 @@ select {
 .top-0 {
   top: 0px;
 }
-.top-\[-100px\] {
-  top: -100px;
-}
 .top-\[-1100px\] {
   top: -1100px;
+}
+.top-\[-115px\] {
+  top: -115px;
 }
 .top-\[-12\%\] {
   top: -12%;
@@ -1122,12 +1122,6 @@ select {
 }
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
-}
-.right-\[-30px\] {
-  right: -30px;
-}
-.top-\[-115px\] {
-  top: -115px;
 }
 .z-0 {
   z-index: 0;
@@ -1348,9 +1342,6 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
-.mt-20 {
-  margin-top: 5rem;
-}
 .mt-28 {
   margin-top: 7rem;
 }
@@ -1556,9 +1547,6 @@ select {
 .max-h-\[120px\] {
   max-height: 120px;
 }
-.max-h-\[150px\] {
-  max-height: 150px;
-}
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -1567,9 +1555,6 @@ select {
 }
 .max-h-\[600px\] {
   max-height: 600px;
-}
-.max-h-\[90px\] {
-  max-height: 90px;
 }
 .max-h-\[80px\] {
   max-height: 80px;
@@ -1618,9 +1603,6 @@ select {
 }
 .min-h-\[650px\] {
   min-height: 650px;
-}
-.min-h-\[700px\] {
-  min-height: 700px;
 }
 .min-h-\[85px\] {
   min-height: 85px;
@@ -1838,9 +1820,6 @@ select {
 }
 .max-w-\[80rem\] {
   max-width: 80rem;
-}
-.max-w-\[850px\] {
-  max-width: 850px;
 }
 .max-w-\[90\%\] {
   max-width: 90%;
@@ -2233,6 +2212,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(5 4 3 / var(--tw-bg-opacity));
 }
+.bg-\[\#0F0F0F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 15 15 / var(--tw-bg-opacity));
+}
 .bg-\[\#1F0C04\] {
   --tw-bg-opacity: 1;
   background-color: rgb(31 12 4 / var(--tw-bg-opacity));
@@ -2372,6 +2355,9 @@ select {
 .p-7 {
   padding: 1.75rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .p-\[10px\] {
   padding: 10px;
 }
@@ -2393,12 +2379,6 @@ select {
 .p-\[8px\] {
   padding: 8px;
 }
-.p-14 {
-  padding: 3.5rem;
-}
-.p-8 {
-  padding: 2rem;
-}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2418,10 +2398,6 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -5684,20 +5660,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     right: -90px;
     bottom: -90px;
   }
-#pinContainer-12 {
-    width: 100%;
-    height: 100%;
+#pinContainerHire{
+    width: 100% !important;
+    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
     overflow: hidden;
-    perspective: 1000;
-  }
-#slideContainer {
-    width: 400%; /* to contain 4 panels, each with 100% of window width */
-    height: 100%;
-  }
-.panel-12 {
-    height: 100%;
-    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
-    float: left;
   }
 @media (max-width: 800px) {
     .howItWorkHeading{
@@ -6213,12 +6180,12 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     line-height: 1;
   }
 
-  .md\:text-\[16px\] {
-    font-size: 16px;
+  .md\:text-\[100px\] {
+    font-size: 100px;
   }
 
-  .md\:text-\[200px\] {
-    font-size: 200px;
+  .md\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .md\:text-\[20px\] {
@@ -6227,6 +6194,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .md\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .md\:text-\[25px\] {
+    font-size: 25px;
   }
 
   .md\:text-\[32px\] {
@@ -6239,10 +6210,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .md\:text-\[48px\] {
     font-size: 48px;
-  }
-
-  .md\:text-\[50px\] {
-    font-size: 50px;
   }
 
   .md\:text-\[56px\] {
@@ -6261,14 +6228,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[100px\] {
-    font-size: 100px;
-  }
-
-  .md\:text-\[25px\] {
-    font-size: 25px;
   }
 
   .md\:leading-\[32px\] {
@@ -6741,8 +6700,8 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 72px;
   }
 
-  .lg\:leading-\[180px\] {
-    line-height: 180px;
+  .lg\:leading-\[100px\] {
+    line-height: 100px;
   }
 
   .lg\:leading-\[30px\] {
@@ -6783,10 +6742,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:leading-tight {
     line-height: 1.25;
-  }
-
-  .lg\:leading-\[100px\] {
-    line-height: 100px;
   }
 }
 @media (min-width: 1280px) {
