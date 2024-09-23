@@ -45,9 +45,8 @@
       </div>
       <div>
         <h6 class="text-white text-xl font-medium leading-normal"> Our Location </h6>
-        <div class="pb-7 pt-5">
-          <h6 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h6>
-          <p class="text-footer-menu-color text-sm leading-normal"> <?php echo get_field('uk_address', 'options'); ?> </p>
+        <div class="pb-7 pt-5" id="findAdress">
+          
         </div>
         
       </div>

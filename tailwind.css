@@ -2698,6 +2698,25 @@ input[type="range"].home-range-slider {
     text-align: left;
   }
 
+  .dot-color-bg::after{
+    content: '';
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    border-radius: 300px;
+    background: rgba(255, 77, 2, 0.40);
+    filter: blur(200.4239501953125px);
+    z-index: 1;
+    right: -90px;
+    bottom: -90px;
+  }
+  #pinContainerHire{
+    width: 100% !important;
+    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
+    overflow: hidden;
+  }
+
 
 @media (max-width: 800px) {
     .howItWorkHeading{
