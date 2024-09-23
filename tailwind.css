@@ -2710,21 +2710,11 @@ input[type="range"].home-range-slider {
     right: -90px;
     bottom: -90px;
   }
-  #pinContainer-12 {
-    width: 100%;
-    height: 100%;
+  #pinContainerHire{
+    width: 100% !important;
+    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
     overflow: hidden;
-    -webkit-perspective: 1000;
-            perspective: 1000;
-  }
-  #slideContainer {
-    width: 400%; /* to contain 4 panels, each with 100% of window width */
-    height: 100%;
-  }
-  .panel-12 {
-    height: 100%;
-    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
-    float: left;
   }
 
 
