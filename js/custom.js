@@ -759,9 +759,10 @@ function menuOnScroll(mySection, myMenu, myClass) {
     if((jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top)) && (boxScrollHeight > jQuery(window).scrollTop())){
       console.log(jQuery(window).scrollTop())
       jQuery('.stickysidenav').addClass('side-bar-fix');
-    } else {
-      jQuery('.stickysidenav').removeClass('side-bar-fix');
-    }  
+    } 
+    // else {
+    //   jQuery('.stickysidenav').removeClass('side-bar-fix');
+    // }  
     jQuery(mySection).each(function(i){
       if (jQuery(this).offset().top <= elScroll) {
         jQuery(myMenu).removeClass(myClass);
@@ -1184,7 +1185,23 @@ $("#myInput").on("keyup", function() {
 
 var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;;
 
-console.log('dataSet', timeZone)
+
+
+const today = new Date()
+console.log('dataSet', timeZone, Intl, today)
+const checkLocation = today.toString()
+if(checkLocation.includes('India')){
+  console.log('India')
+  const contryName = `<h6 class="text-footer-menu-color text-base font-medium leading-normal"> India </h6>
+          <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p>`;
+  jQuery('#findAdress').append(contryName)
+}else{
+  const contryName = `<h6 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h6>
+          <p class="text-footer-menu-color text-sm leading-normal"> The Plaza, 535 King’s Rd, London SW10 0SZ </p>`;
+  jQuery('#findAdress').append(contryName)
+}
+
+
 
 
 function priceRateGet(){
@@ -1454,6 +1471,38 @@ jQuery(document).ready(function(){
     jQuery('#vetted-profiles-slider').slick('slickPrev');
   });
 
+  
+
 
   priceRateGet()
+});
+
+jQuery(function () { // wait for document ready
+  var controllerBox = new ScrollMagic.Controller();
+
+    // define movement of panels
+    var wipeAnimationBox = new TimelineMax()
+      // animate to second panel
+      .to("#slideContainer", 0.5, {z: -150})		// move back in 3D space
+      .to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
+      .to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
+      // animate to third panel
+      .to("#slideContainer", 0.5, {z: -150, delay: 1})
+      .to("#slideContainer", 1,   {x: "-50%"})
+      .to("#slideContainer", 0.5, {z: 0})
+      // animate to forth panel
+      .to("#slideContainer", 0.5, {z: -150, delay: 1})
+      .to("#slideContainer", 1,   {x: "-75%"})
+      .to("#slideContainer", 0.5, {z: 0});
+
+    // create scene to pin and link animation
+    new ScrollMagic.Scene({
+        triggerElement: "#pinContainer-12",
+        triggerHook: "onLeave",
+        duration: "400%"
+      })
+      .setPin("#pinContainer-12")
+      .setTween(wipeAnimationBox)
+      //.addIndicators() // add indicators (requires plugin)
+      .addTo(controllerBox);
 });

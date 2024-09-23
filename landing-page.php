@@ -292,54 +292,61 @@
                     <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"><?php echo get_sub_field('paragraph'); ?></p>
 				<?php endif; ?> 	
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 bg-white rounded-[25px] mx-auto max-w-[850px] px-28 py-16">
-                        <img class=" absolute right-[-50px] top-[-50px] max-h-[150px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png">
-                        <div class="grid-item col-span-2 relative content-center">
-                            <?php if(get_sub_field('price')): ?>
-                                <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[200px] text-dark-orange lg:leading-[180px]"><?php echo get_sub_field('price'); ?></h5>
-                            <?php endif; ?> 
-                            
-                            <?php if(get_sub_field('tagline')): ?>	
-                                <p class="text-center text-black font-bold text-[20px] md:text-[50px]"><?php echo get_sub_field('tagline'); ?></p>
-                            <?php endif; ?> 
-                            
-                            <?php if(get_sub_field('extra_text')): ?>	
-                                <p class="text-center font-semibold text-[30px] text-black"><?php echo get_sub_field('extra_text'); ?></p>
-                            <?php endif; ?> 	
-                        </div>
-                        <!-- <div class="grid-item col-span-1 content-center">
-                            <div class="grid grid-cols-1">
-							
-							<?php if(have_rows('timing_section')): ?>
-							<?php while(have_rows('timing_section')): the_row(); ?>
-							<?php 
-							  $heading = get_sub_field('heading'); 
-							  $paragraph = get_sub_field('paragraph'); 
-							  $box_color = get_sub_field('box_color'); 
-							  $gap_class = get_sub_field('gap_class'); 
-							?>
-                                <div class="grid-item col-span-1 relative pl-[80px] mb-8">
-                                    <div class="absolute w-[60px] h-[60px] rounded-[50%] left-0 top-[calc(50%-30px)] overflow-hidden text-center">
-									<?php $image_user = get_sub_field('icon');
-										if (!empty($image_user) && isset($image_user['url'])):
-									?>
-                                        <img class="w-[100%] inline-block" src="<?php echo esc_url($image_user['url']); ?>" alt="">
-									<?php endif; ?> 		
-                                    </div>
-                                    <h6 class="font-semibold text-[25px] text-white"><?php echo $heading;?></h6>
-                                    <p class="text-white text-[16px]"><?php echo $paragraph;?></p>
-                                </div>
-							<?php endwhile; ?>	
-							<?php endif; ?>	
+
+                <div class="block footer-background border border-[#3c1201] p-[30px] lg:p-[70px]">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 bg-white rounded-[25px] mx-auto max-w-[450px] p-8">
+                            <img class=" absolute right-[-30px] top-[-30px] max-h-[80px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png">
+                            <div class="grid-item col-span-2 relative content-center">
+                                <?php if(get_sub_field('price')): ?>
+                                    <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[100px] text-dark-orange lg:leading-[100px]"><?php echo get_sub_field('price'); ?></h5>
+                                <?php endif; ?> 
                                 
+                                <?php if(get_sub_field('tagline')): ?>	
+                                    <p class="text-center text-black font-bold text-[20px] md:text-[25px]"><?php echo get_sub_field('tagline'); ?></p>
+                                <?php endif; ?> 
+                                
+                                <?php if(get_sub_field('extra_text')): ?>	
+                                    <p class="text-center font-semibold text-[18px] text-black"><?php echo get_sub_field('extra_text'); ?></p>
+                                <?php endif; ?> 	
                             </div>
-                        </div> -->
-                </div>
-                <?php if(get_sub_field('button_name')): ?>
-                    <div class="block text-center mt-10">
-                        <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                            <!-- <div class="grid-item col-span-1 content-center">
+                                <div class="grid grid-cols-1">
+                                
+                                <?php if(have_rows('timing_section')): ?>
+                                <?php while(have_rows('timing_section')): the_row(); ?>
+                                <?php 
+                                $heading = get_sub_field('heading'); 
+                                $paragraph = get_sub_field('paragraph'); 
+                                $box_color = get_sub_field('box_color'); 
+                                $gap_class = get_sub_field('gap_class'); 
+                                ?>
+                                    <div class="grid-item col-span-1 relative pl-[80px] mb-8">
+                                        <div class="absolute w-[60px] h-[60px] rounded-[50%] left-0 top-[calc(50%-30px)] overflow-hidden text-center">
+                                        <?php $image_user = get_sub_field('icon');
+                                            if (!empty($image_user) && isset($image_user['url'])):
+                                        ?>
+                                            <img class="w-[100%] inline-block" src="<?php echo esc_url($image_user['url']); ?>" alt="">
+                                        <?php endif; ?> 		
+                                        </div>
+                                        <h6 class="font-semibold text-[25px] text-white"><?php echo $heading;?></h6>
+                                        <p class="text-white text-[16px]"><?php echo $paragraph;?></p>
+                                    </div>
+                                <?php endwhile; ?>	
+                                <?php endif; ?>	
+                                    
+                                </div>
+                            </div> -->
                     </div>
-                <?php endif; ?>	
+
+                    <?php if(get_sub_field('button_name')): ?>
+                        <div class="block text-center mt-10">
+                            <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[30px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+                        </div>
+                    <?php endif; ?>	
+                </div>
+
+                
+               
 				
             </div>
     </section>
@@ -584,7 +591,7 @@
                         </div>
                         <div class="grid-item col-span-1 lg:col-span-7 content-center relative">
 						<?php if(get_sub_field('calender')): ?>
-                            <div class="absolute right-0 top-[-100px] w-[100%] min-h-[700px] bg-[#fff] rounded-[24px]">
+                            <div class="absolute right-0 top-[-115px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
 							    <?php echo get_sub_field('calender'); ?>
 							</div>
 						<?php endif; ?>	
