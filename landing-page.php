@@ -46,7 +46,7 @@
                         <div class="grid-item col-span-1 content-center">
 						
                             <div class=" w-[100%] max-w-[450px] min-h-[300px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
-							    <h6 class="text-dark-orange font-bold text-2xl"> Share your requirements </h6>
+							    <h6 class="text-dark-orange font-bold text-2xl"> Let’s find the perfect talent</h6>
 							    <?php echo do_shortcode('[contact-form-7 id="5476fb8" title="Landing Form"]'); ?>
                             </div>
 						
