@@ -133,6 +133,35 @@ function cc_hire_post_type() {
 	register_post_type( 'hire', $args );
 }
 
+// Custom Taxonomy for Hire Developer
+add_action( 'init', 'hire_developer_taxonomy', 0 );
+function hire_developer_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Role Category', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Role Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Role Category' ),
+		'all_items'         => __( 'All Role Category' ),
+		'parent_item'       => __( 'Parent Role Category' ),
+		'parent_item_colon' => __( 'Parent Role Category:' ),
+		'edit_item'         => __( 'Edit Role Category' ),
+		'update_item'       => __( 'Update Role Category' ),
+		'add_new_item'      => __( 'Add New Role Category' ),
+		'new_item_name'     => __( 'New Role Category Name' ),
+		'menu_name'         => __( 'Role Category' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'rolecategories' ),
+	);
+
+	register_taxonomy( 'rolecategory', array( 'hire' ), $args );
+}
+
 
 // Custom Post Type for Author
 add_action( 'init', 'cc_author_post_type' );
