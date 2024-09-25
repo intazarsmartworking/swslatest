@@ -68,8 +68,8 @@
         ?>
       </div>
       <div class="col-span-3 content-center text-start md:text-end">
-        <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange" target="">Find a Developer</a>
-        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">Contact Us</a>
+        <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange" target="">FIND A DEVELOPER</a>
+        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " target="">CONTACT US</a>
       </div>
     </div> 
     <div class="mega-menu-box">
