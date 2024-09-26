@@ -33,7 +33,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50025 18.0764C6.24425 18.0764 5.98825 17.9785 5.79325 17.7835C5.40225 17.3935 5.40225 16.7604 5.79325 16.3694L10.0862 12.0754L5.79325 7.78147C5.40225 7.39047 5.40225 6.75747 5.79325 6.36747C6.18425 5.97647 6.81625 5.97647 7.20725 6.36747L12.2072 11.3685C12.5982 11.7594 12.5982 12.3915 12.2072 12.7825L7.20725 17.7835C7.01225 17.9785 6.75625 18.0764 6.50025 18.0764Z" fill="white"/>
                         </svg>
                     </div>
-                    <h4 class="text-dark-black text-xl font-bold"> Choose the language that will empower your dream team! </h4>
+                    <h4 class="text-dark-black text-xl font-bold"> Let’s start building the perfect team </h4>
                     <div class="flex items-center border-2 border-gray-300 rounded-lg p-2 bg-white my-5">
                         <svg class="w-6 h-6 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.35-6.65A7 7 0 1114 4a7 7 0 015 2.35 7 7 0 010 9.9z"></path>

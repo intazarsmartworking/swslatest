@@ -17,7 +17,7 @@
       <div>
         <?php if(get_field('footer_logo', 'options')): ?>
         <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-          <img src="<?php echo get_field('footer_logo', 'options')['url']; ?>" alt="<?php echo get_field('footer_logo', 'options')['alt']; ?>" class="w-40">
+          <img src="<?php echo get_field('footer_logo', 'options')['url']; ?>" alt="<?php echo get_field('footer_logo', 'options')['alt']; ?>" class="w-64">
         </a>  
         <?php endif; ?>
         <?php if(get_field('button_name', 'options')): ?>

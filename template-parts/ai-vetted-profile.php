@@ -18,21 +18,25 @@
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?>  
-	  <div class="grid grid-cols-1 lg:grid-cols-10 mt-10">
-		<div class="grid-item col-span-2 px-6">
+	  <div class="grid md:flex">
+		<div class="md:w-[25%] px-6">
 			<?php display_ai_vetted_profile_categories();?>
 		</div>
-		<div class="grid-item col-span-8 p-3 border rounded-lg border-[#a962444d]">
+		<div class="md:w-[75%] p-3 border rounded-lg border-[#a962444d]">
+			<div class="slide-show grid grid-cols-1 max-w-[100%]" >
+						<div class="dev-section">
+						<!-- Posts will be loaded here via AJAX -->	
+						</div> 
+			</div>
+		</div>
+		<!--<div class="grid-item col-span-8 p-3 border rounded-lg border-[#a962444d]">
 			<div class="slide-show max-w-[100%] mt-3">
 
 				 <div class="your-class" id="vetted-profile">
 					
 					<?php
-					// Check if a category is selected
 					$category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
-
-					// Default Query: Display all 'ai-vetted-profile' posts or filter by category if selected
-					  $args = array(
+					$args = array(
 						'post_type' => 'ai-vetted-profile',
 						'posts_per_page' => -1,
 						'orderby' => 'date',
@@ -78,14 +82,7 @@
 						</div>
 					</a>
 					  <?php $counter++; }} ?>
-					
-					
-					
-					
 				</div> 
-				 
-
-				<!-- <div class="dev-section"> Posts will be loaded here via AJAX </div> -->
 			</div>
 			
 			<?php
@@ -140,7 +137,7 @@
 							echo '<p>No posts found.</p>';
 				  }}
 					?>
-		</div>
+		</div> -->
 	  </div>
 	</div>
 </div>
