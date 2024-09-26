@@ -117,11 +117,32 @@ function display_ai_vetted_profile_categories() {
         'order' => 'ASC',
 		'hide_empty' => false, 
     ));
-	
-	// Get the active category ID
-    $active_category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
     
     // Check if there are any categories
+    if (!empty($terms) && !is_wp_error($terms)) {
+        echo '<div class="left-profile">';
+        foreach ($terms as $term) {
+            echo '<div class="skills px-4 py-5 rounded-2xl mb-4">';
+            echo '<a href="#" class="category-filter" data-category-id="' . esc_attr($term->term_id) . '">';
+            echo '<h3>' . esc_html($term->name) . '</h3>';
+            echo '</a>';
+            echo '</div>';
+        }
+        echo '</div>';
+    } else {
+        echo '<p>No categories found.</p>';
+    }
+}
+/*function display_ai_vetted_profile_categories() {
+	$terms  = get_terms(array(
+        'taxonomy' => 'vettedcategory', 
+        'type' => 'ai-vetted-profile',
+        'orderby' => 'name',
+        'order' => 'ASC',
+		'hide_empty' => false, 
+    ));
+	
+	$active_category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
     if (!empty($terms) && !is_wp_error($terms)) {
         echo '<div class="left-profile">';
         foreach ($terms as $term) {
@@ -138,7 +159,7 @@ function display_ai_vetted_profile_categories() {
     } else {
         echo '<p>No categories found.</p>';
     }
-}
+}*/
 
 
 
@@ -154,7 +175,6 @@ function ajax_fetch_ai_vetted_profile_posts() {
         'order' => 'DESC',
     );
 
-    // If a category ID is provided, include it in the query
     if ($category_id) {
         $args['tax_query'] = array(
             array(
@@ -164,12 +184,8 @@ function ajax_fetch_ai_vetted_profile_posts() {
             ),
         );
     }
-
-    // Execute the query
-    $query = new WP_Query($args);
-
-    // Check if there are any posts
-    if ($query->have_posts()) {
+	$query = new WP_Query($args);
+	if ($query->have_posts()) {
         $total_posts = $query->post_count;
 		echo '<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">';
 		$counter = 0;
@@ -178,14 +194,13 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			$designation = get_field('profile');
 			$dev_image_id = get_post_thumbnail_id();
 			$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
-            echo '<a href="/contact-us/" class="grid-item col-span-3 block developer-sec-pic">';
+            echo '<a href="' . get_permalink() . '" class="grid-item col-span-3 block developer-sec-pic">';
             echo '<img src="' . esc_url($dev_image_src[0]) . '" class="rounded-xl">';
             echo '<div class="short-bio">';
             echo '<p class="text-white pb-2 text-center text-xl">' . get_the_title() . '</p>';
             echo '<p class="text-white text-center mb-5 text-sm">' . esc_html($designation) . '</p>';
             echo '<div class="block pb-3">';
             echo '<ul class="skill-card-itme">';
-            // Display the repeater field 'skills'
             if (have_rows('skills')) {
                 while (have_rows('skills')) {
                     the_row();
@@ -237,6 +252,97 @@ function ajax_fetch_ai_vetted_profile_posts() {
 }
 add_action('wp_ajax_nopriv_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 add_action('wp_ajax_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
+
+/*function ajax_fetch_ai_vetted_profile_posts() {
+    check_ajax_referer('ai_vetted_profile_nonce', 'nonce');
+	$category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : null;
+
+    $args = array(
+        'post_type' => 'ai-vetted-profile',
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    );
+
+    // If a category ID is provided, include it in the query
+    if ($category_id) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'vettedcategory',
+                'field' => 'term_id',
+                'terms' => $category_id,
+            ),
+        );
+    }
+
+    $query = new WP_Query($args);
+	if ($query->have_posts()) {
+        $total_posts = $query->post_count;
+		echo '<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">';
+		$counter = 0;
+        while ($query->have_posts() && $counter < 4 ) {
+            $query->the_post();
+			$designation = get_field('profile');
+			$dev_image_id = get_post_thumbnail_id();
+			$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+            echo '<a href="/contact-us/" class="grid-item col-span-3 block developer-sec-pic">';
+            echo '<img src="' . esc_url($dev_image_src[0]) . '" class="rounded-xl">';
+            echo '<div class="short-bio">';
+            echo '<p class="text-white pb-2 text-center text-xl">' . get_the_title() . '</p>';
+            echo '<p class="text-white text-center mb-5 text-sm">' . esc_html($designation) . '</p>';
+            echo '<div class="block pb-3">';
+            echo '<ul class="skill-card-itme">';
+            if (have_rows('skills')) {
+                while (have_rows('skills')) {
+                    the_row();
+                    $skill = get_sub_field('skill');
+                    echo '<li>' . esc_html($skill) . '</li>';
+                }
+            }
+            echo '</ul>';
+            echo '</div>';
+            echo '</div>';
+            echo '</a>';
+			$counter++;
+        }
+		echo '</div>';
+
+		if ($total_posts > 4) {
+        echo '<div class="grid-cols-1">';
+		echo '<section class="section-introduction p-3">';
+		echo '<div class="container-circule">';
+		$counter = 0;
+		while ($query->have_posts() && $counter < 3) {
+		$query->the_post();
+		$dev_image_id = get_post_thumbnail_id();
+		$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+		echo '<div class="item-' . $counter . ' circle-box">';
+		echo '<img src="' . esc_url($dev_image_src[0]) . '" />';
+		echo '</div>'; 
+		$counter++;
+		}
+		$remaining_count = $total_posts - 7;
+		 
+		 
+		if ($remaining_count > 0) {
+			echo '<div class="item-4 circle-box">';
+			echo '<p>+' . $remaining_count . '</p>';
+			echo '</div>';
+		}
+		echo '</div>'; 
+		echo '</section>';
+		echo '</div>';
+
+        wp_reset_postdata();
+    } else {
+        echo '<p>No posts found.</p>';
+    }
+
+    die();
+}
+}
+add_action('wp_ajax_nopriv_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
+add_action('wp_ajax_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts'); */
 
 
 
