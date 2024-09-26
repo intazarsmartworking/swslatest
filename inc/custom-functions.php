@@ -218,7 +218,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 
 		if ($total_posts > 4) {
         echo '<div class="grid-cols-1">';
-		echo '<section class="section-introduction p-3">';
+		echo '<section class="section-introduction p-3 hidden">';
 		echo '<div class="container-circule">';
 		$counter = 0;
 		while ($query->have_posts() && $counter < 3) {
