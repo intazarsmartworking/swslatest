@@ -1192,8 +1192,12 @@ console.log('dataSet', timeZone, Intl, today)
 const checkLocation = today.toString()
 if(checkLocation.includes('India')){
   console.log('India')
-  const contryName = `<h6 class="text-footer-menu-color text-base font-medium leading-normal"> India </h6>
-          <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p>`;
+  const contryName = `
+          <h6 class="text-footer-menu-color text-base font-medium leading-normal"> India </h6>
+          <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p>
+          <h6 class="text-footer-menu-color text-base font-medium leading-normal mt-5"> United Kingdom </h6>
+          <p class="text-footer-menu-color text-sm leading-normal"> The Plaza, 535 King’s Rd, London SW10 0SZ </p>
+          `;
   jQuery('#findAdress').append(contryName)
 }else{
   const contryName = `<h6 class="text-footer-menu-color text-base font-medium leading-normal"> United Kingdom </h6>
