@@ -57,7 +57,7 @@
 		
 		<?php if(get_sub_field('button_name')): ?>
 		<div class="header-buttons mt-12 text-center">
-		  <a href="<?php echo get_sub_field('button_link'); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+		  <a href="<?php echo get_sub_field('button_link'); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
 		</div>
 		<?php endif; ?> 
 

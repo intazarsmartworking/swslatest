@@ -234,7 +234,7 @@
 					<?php if(get_sub_field('button_name')): ?>
 					<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
 					<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-					<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+					<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white"><?php echo get_sub_field('button_name'); ?></a>
 					</div>
 					<?php endif; ?>	
 					

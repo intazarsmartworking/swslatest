@@ -162,7 +162,7 @@
                             <img class="w-[100%]" src="<?php echo get_template_directory_uri();?>/images/vetting-bottom.svg">
                         </div>
 
-                        <a class="w-[300px] button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/find-a-developer/">Hire Top 1% engineers</a>
+                        <a class="w-[300px] button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange " href="/find-a-developer/">HIRE TOP 1% ENGINEERS</a>
                     </div>
 
 
@@ -292,7 +292,7 @@
                     
                     <?php if(get_sub_field('button_name')): ?>
                     <?php $hire_dev_btn_url =  get_sub_field('button_url'); ?> 
-                        <a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_sub_field('button_name'); ?> </a>
+                        <a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white"> <?php echo get_sub_field('button_name'); ?> </a>
                     <?php endif; ?>		
                     </div>
                     

@@ -269,7 +269,7 @@ get_header();
 					
 					<?php if(get_field('cta_button_name')): ?>
 					<?php $cta_btn_url =  get_field('cta_button_url'); ?>
-					<a href="<?php echo esc_url( $cta_btn_url ); ?>" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] "> <?php echo get_field('cta_button_name'); ?> </a>
+					<a href="<?php echo esc_url( $cta_btn_url ); ?>" class="uppercase button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white"> <?php echo get_field('cta_button_name'); ?> </a>
 					<?php endif; ?>
 				</div>
 				

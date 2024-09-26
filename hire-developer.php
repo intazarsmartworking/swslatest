@@ -32,7 +32,7 @@
 					<?php if(get_sub_field('button_name')): ?> 
 					<?php $bb_url =  get_sub_field('button_url'); ?>
 					<div class="header-buttons mb-20">
-						<a href="<?php echo esc_url( $bb_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+						<a href="<?php echo esc_url( $bb_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
 					</div>
 					<?php endif; ?> 
 					
@@ -100,7 +100,7 @@
 						
 					</div>
 					<div class="header-buttons my-5 text-center">
-								<a href="/contact-us/" class="button button-small  px-8 py-4 font-bold rounded-xl  text-white text-lg get-started-banner-home">Hire Developers</a>
+								<a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange">Hire Developers</a>
 						</div>
 					</div>	
 			</div>	
@@ -213,7 +213,7 @@
 							<?php if(get_sub_field('button_name')): ?>
 								<?php $calc_url =  get_sub_field('button_url'); ?>
 								<p>
-									<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[300px] inline-block text-white text-[16px] font-bold h-[50px] py-3 text-center rounded-[12px] get-started-banner-home"><?php echo get_sub_field('button_name'); ?></a>
+									<a href="<?php echo esc_url( $calc_url ); ?>" class="w-[100%] max-w-[300px] text-center button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
 								</p>
 							<?php endif; ?>
 						</div>
@@ -343,7 +343,7 @@
 								<?php if(get_sub_field('button_name')): ?>
 								<?php $hire_dev_btn_url =  get_sub_field('button_url'); ?>
 									<div class="header-buttons mt-16 mb-10 text-center md:text-left">
-										<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button button-small  px-8 py-4 font-bold rounded-xl text-dark-orange text-lg bg-white"><?php echo get_sub_field('button_name'); ?></a>
+										<a href="<?php echo esc_url( $hire_dev_btn_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white"><?php echo get_sub_field('button_name'); ?></a>
 									</div>
 								<?php endif; ?>	
 								</div>
