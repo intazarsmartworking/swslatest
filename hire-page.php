@@ -8,7 +8,7 @@
  get_header();
 ?>
 <div class=" w-full relative">
-  	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-15%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
+  	<img class="bg-img absolute w-[130%] max-w-[initial] right-[-700px] z-0 top-[-700px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
 	
 	<?php if (have_rows('hire_role_section')) : ?>
@@ -674,7 +674,7 @@
 					  $unique_id = 'target' . $section_count;
 					?>
 				<div class="scroll-section" id="<?php echo $unique_id; ?>">
-                  <h1 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h1>
+                  <h3 class="text-[36px] text-white font-semibold"><?php echo $main_title;?></h3>
                   <?php if(have_rows('description')): ?>
 				  <?php while(have_rows('description')): the_row(); ?>
 				  
@@ -695,7 +695,7 @@
 			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
                 <div class="bg-[#FF4D02] rounded-[10px] min-h-[100px] p-5 stickysidenav">
-                    <h1  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h1>
+                    <h3 class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h3>
 					<?php if(get_sub_field('right_cta_button_name')): ?>
                     <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block py-4 text-center text-[18px] px-5 rounded-[14px] border text-[#FF4D02] mt-[30px]"><?php echo get_sub_field('right_cta_button_name'); ?> 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
