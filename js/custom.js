@@ -226,7 +226,7 @@ function filterSkills() {
 function toggleSkill(skillElement) {
   const isSelected = skillElement.classList.toggle('skill-selected');
   const crossIcon = skillElement.querySelector('svg');
-  const skillName = skillElement.querySelector('h4').textContent.trim();
+  const skillName = skillElement.querySelector('h6').textContent.trim();
 
   if (isSelected) {
     addToInput(skillName);
@@ -259,7 +259,7 @@ function deselectSkill(event) {
   event.stopPropagation(); // Prevents triggering the skill toggle again
   const skillElement = event.currentTarget.parentNode;
   skillElement.classList.remove('skill-selected');
-  const skillName = skillElement.querySelector('h4').textContent.trim();
+  const skillName = skillElement.querySelector('h6').textContent.trim();
   removeFromInput(skillName);
   event.currentTarget.classList.add('hidden');
 }
