@@ -112,91 +112,176 @@
             <div class="col-span-3 py-[12px]">
               <div class="w-[100%] bg-[#231008] h-[100%] rounded-[10px] p-5">
                   <div class="show-more-menu show-more" id="frontEndDev">
-                    <ul class="mega-menu-center">
-                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
-                  </div>
+						<ul class="mega-menu-center">
+							<?php if( have_rows('frontend_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('frontend_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('frontend_menu', 'option') ): ?>
+										<?php while( have_rows('frontend_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('frontend_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+						</ul>
+					</div>
                   <div class="show-more-menu" id="backEndDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/java-developer/">Java Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/python/">Python Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/ruby-on-rails-developer/">Ruby on Rails Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/dot-net-developer/">.Net Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/node-js-developer/">Node.js Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/django-developer/">Django Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('backend_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('backend_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('backend_menu', 'option') ): ?>
+										<?php while( have_rows('backend_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('backend_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
                   <div class="show-more-menu" id="fullStackDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/blockchain-developer/">Blockchain Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/node-js-developer/">Node.js  Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('full_stack_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('full_stack_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('backend_menu', 'option') ): ?>
+										<?php while( have_rows('backend_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('full_stack_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
 				  <div class="show-more-menu" id="webDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/laravel-developer/">Laravel Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/woocommerce-developer/">WooCommerce Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/wordpress-developer/">WordPress Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/magento-developer/">Magento Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/shopify-developer/">Shopify Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/react-developer/">React Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/angular-developer/">Angular Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/node-js-developer/">Node.js Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/qa-tester/">QA Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('web_developer_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('web_developer_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('web_developer_menu', 'option') ): ?>
+										<?php while( have_rows('web_developer_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('web_developer_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
 				  <div class="show-more-menu" id="cloudDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/devops-developer/">DevOps Engineer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/aws-developer/">AWS Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/azure-developer/">Azure Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('cloud_developer_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('cloud_developer_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('cloud_developer_menu', 'option') ): ?>
+										<?php while( have_rows('cloud_developer_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('cloud_developer_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
 				  
                   <div class="show-more-menu" id="mobileDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/android-developer/">Android Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/ios-developer/">iOS Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/flutter-developer/">Flutter Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/react-native-developer/">React Native Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('mobile_app_developer_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('mobile_app_developer_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('mobile_app_developer_menu', 'option') ): ?>
+										<?php while( have_rows('mobile_app_developer_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('mobile_app_developer_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
                   
                   
                   <div class="show-more-menu" id="specializedDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/java-developer/">Java Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/python/">Python Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="hire/dot-net-developer/">.NET Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/flutter-developer/">Flutter Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/docker-developer/">Docker Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/kubernetes-developer/">Kubernetes Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/javascript-developer/">JavaScript Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/php-developer/">PHP Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('software_developer_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('software_developer_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('software_developer_menu', 'option') ): ?>
+										<?php while( have_rows('software_developer_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('software_developer_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
 				  
 				  <div class="show-more-menu" id="trendingDev">
                     <ul class="mega-menu-center">
-                      <li><a href="/hire/unity-developer/">Unity Developer <span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/game-developer/">Game Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/ai-developer/">AI Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/salesforce-developer/">Salesforce Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                      <li><a href="/hire/mongodb-developer/">MongoDB Developer<span><img class="w-[20px]" src="<?php echo get_template_directory_uri();?>/images/right-arrow.png" /></span></a></li>
-                    </ul>
+							<?php if( have_rows('trending_developer_menu_second_level', 'option') ): ?>
+								<?php while( have_rows('trending_developer_menu_second_level', 'option') ): the_row(); ?>
+									<?php if( have_rows('trending_developer_menu', 'option') ): ?>
+										<?php while( have_rows('trending_developer_menu', 'option') ): the_row(); 
+											$menu_name = get_sub_field('trending_developer_sub_menu_name');
+											$menu_url = get_sub_field('url');
+										?>
+											<li>
+												<a href="<?php echo esc_url($menu_url); ?>">
+													<?php echo esc_html($menu_name); ?>
+													<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+												</a>
+											</li>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+					</ul>
                   </div>
               </div>
             </div>
