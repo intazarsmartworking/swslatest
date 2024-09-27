@@ -8,7 +8,7 @@
  get_header();
 ?>
 <div class=" w-full relative">
-  	<img class="bg-img absolute w-[130%] max-w-[initial] right-[-700px] z-0 top-[-700px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
+  	<img class="bg-img absolute w-[100%] right-[0px] z-0 top-[-149px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-right-color.svg" alt="">
   	<div class=" w-full relative z-10">
 	
 	<?php if (have_rows('hire_role_section')) : ?>
@@ -432,7 +432,7 @@
 				?>
                 <div class="grid grid-cols-12 md:grid-cols-12 py-14 border-t border-[#2D1004] gap-3 mt-14">
                     <div class="col-span-12 md:col-span-6">
-                        <h5 class="font-medium text-[25px] md:text-[32px] text-white md:leading-[32px] mb-5"><?php echo $heading;?></h5>
+                        <h5 class="font-medium text-[25px] md:text-[32px] text-dark-orange md:leading-[32px] mb-5 "><?php echo $heading;?></h5>
                     </div>
                     <div class="col-span-12 md:col-span-6">
                         <p class=" text-white text-[16px] md:text-[20px]"><?php echo $paragraph;?></p>

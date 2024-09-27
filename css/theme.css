@@ -1042,6 +1042,9 @@ select {
 .top-\[-12\%\] {
   top: -12%;
 }
+.top-\[-149px\] {
+  top: -149px;
+}
 .top-\[-15\%\] {
   top: -15%;
 }
@@ -1631,9 +1634,6 @@ select {
 .w-4 {
   width: 1rem;
 }
-.w-40 {
-  width: 10rem;
-}
 .w-48 {
   width: 12rem;
 }
@@ -1645,6 +1645,9 @@ select {
 }
 .w-60 {
   width: 15rem;
+}
+.w-64 {
+  width: 16rem;
 }
 .w-8 {
   width: 2rem;
@@ -1742,9 +1745,6 @@ select {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-.w-64 {
-  width: 16rem;
 }
 .min-w-\[100\%\] {
   min-width: 100%;
@@ -2231,25 +2231,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(35 16 8 / var(--tw-bg-opacity));
 }
-.bg-\[\#60E3D5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 227 213 / var(--tw-bg-opacity));
-}
-.bg-\[\#77BDDF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(119 189 223 / var(--tw-bg-opacity));
-}
-.bg-\[\#C282FA\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(194 130 250 / var(--tw-bg-opacity));
-}
 .bg-\[\#DF4402\] {
   --tw-bg-opacity: 1;
   background-color: rgb(223 68 2 / var(--tw-bg-opacity));
-}
-.bg-\[\#ECC1A1\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 193 161 / var(--tw-bg-opacity));
 }
 .bg-\[\#FF4D02\] {
   --tw-bg-opacity: 1;
@@ -5775,6 +5759,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   --tw-bg-opacity: 1;
   background-color: rgb(42 15 4 / var(--tw-bg-opacity));
 }
+.hover\:bg-black:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .hover\:bg-dark-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 15 15 / var(--tw-bg-opacity));
@@ -5790,17 +5778,9 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
 .hover\:text-\[\#ffffff\]:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .hover\:text-dark-orange:hover {
   --tw-text-opacity: 1;
@@ -6016,16 +5996,16 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     width: 50%;
   }
 
-  .md\:w-auto {
-    width: auto;
-  }
-
   .md\:w-\[25\%\] {
     width: 25%;
   }
 
   .md\:w-\[75\%\] {
     width: 75%;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:min-w-\[405px\] {
