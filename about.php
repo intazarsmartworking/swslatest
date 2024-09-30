@@ -317,7 +317,7 @@
 																	<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
 																</div>
 															</div>
-															<a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a>
+															<!-- <a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a> -->
 														</div>
 													</div>
 												</div>
