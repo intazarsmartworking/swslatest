@@ -1488,15 +1488,16 @@ jQuery(function () { // wait for document ready
 
     // define movement of panels
     var wipeAnimationHire = new TimelineMax()
-    .fromTo(".slide-point-2", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-    .fromTo(".slide-point-3", 1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+    .fromTo(".slide-point-1", 1, {y: "0%", opacity:1,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
+    .fromTo(".slide-point-2", 1, {y: "-100%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
+    .fromTo(".slide-point-3", 1, {y:  "-100%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from right
 
     // create scene to pin and link animation
     new ScrollMagic.Scene({
         triggerElement: "#pinContainerHire",
         triggerHook: "onLeave",
         duration: "300%",
-        offset:-300
+        offset:-200
       })
       .setPin("#pinContainerHire")
       .setTween(wipeAnimationHire)
