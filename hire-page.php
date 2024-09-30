@@ -215,7 +215,8 @@
 	<?php endwhile; ?>	
 	<?php endif; ?>	
         <section class="w-full px-3">
-            <div class="w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
+			<img class="absolute w-[400px] right-[-180px] z-0 top-[165px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
 			<?php if (have_rows('hire_role_section')) : ?>
 			<?php while (have_rows('hire_role_section')) : the_row(); ?>
 			<?php if (get_row_layout() == 'explore_section') : ?>
@@ -308,7 +309,7 @@
 			</div>
         </section>
         <section class="w-full px-3" id="pinContainerHire">
-		
+			
 			<?php if(have_rows('process_section')): ?>
 			<?php while(have_rows('process_section')): the_row(); ?>
 			<?php 
@@ -317,7 +318,7 @@
 				$paragraph = get_sub_field('paragraph');
 				$row_index = get_row_index();				
 			?> 
-                <div class="w-full absolute left-0 top-0 bg-[#0F0F0F] slide-point-<?php echo $row_index; ?>">
+                <div class="w-full absolute z-10 left-0 top-0 bg-[#0F0F0F] slide-point-<?php echo $row_index; ?>">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto relative">
 						<img class=" absolute left-[-50px] top-0" src="<?php echo get_template_directory_uri();?>/images/bar-<?php echo $row_index; ?>.svg" alt="">
                         <div class="col-span-2 md:col-span-1 content-center pr-0 md:pr-64">
@@ -449,7 +450,7 @@
 		
 
         <?php if (get_row_layout() == 'testimonial_section') : ?>
-			<div class="my-0 mx-auto flex flex-col justify-center testimonial-section items-center py-16">
+			<div class="my-0 relative mx-auto flex flex-col justify-center testimonial-section items-center py-16">
 				<?php if(get_sub_field('small_heading')): ?>
 					<div class ="container mx-auto md:px-0 px-10">
 						<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
@@ -461,7 +462,8 @@
 						<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
 					</div>
 				<?php endif; ?>
-				<div class="w-full flex relative min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
+				<img class="absolute w-[400px] right-[300px] z-0 top-[20px]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" alt="">
+				<div class="w-full flex relative z-10 min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
 				<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 				<div class="slider-wrapper w-full min-h-[400px] lg:min-h-[500px] pt-[30px] relative card-container overflow-visible">
 					<div class="slider-overlay">
