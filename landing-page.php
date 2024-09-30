@@ -511,7 +511,7 @@
 					$name = get_sub_field('name'); 
 					$description = get_sub_field('description'); 
 				?>
-                    <div class="trustpilot-bg mb-5">
+                    <div class="trustpilot-bg">
                         <div class="flex">	
                             <div>
                                 <?php if (!empty($name)): ?>
