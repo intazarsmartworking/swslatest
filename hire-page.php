@@ -16,7 +16,7 @@
 	<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
-                <div class="grid grid-cols-1 md:grid-cols-2 py-0 md:py-14 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div class="col-span-2 md:col-span-1 content-center">
 					<?php if(get_sub_field('main_heading')): ?>
                         <h1 class="font-medium text-[35px] md:text-[72px] mb-4 text-white  lg:leading-[78px]">
@@ -318,7 +318,8 @@
 				$row_index = get_row_index();				
 			?> 
                 <div class="w-full absolute left-0 top-0 bg-[#0F0F0F] slide-point-<?php echo $row_index; ?>">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1280px] mx-auto relative">
+						<img class=" absolute left-[-50px] top-0" src="<?php echo get_template_directory_uri();?>/images/bar-<?php echo $row_index; ?>.svg" alt="">
                         <div class="col-span-2 md:col-span-1 content-center pr-0 md:pr-64">
                             <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
 							<?php if(get_sub_field('icon')): ?>
@@ -342,6 +343,8 @@
 
         </section>
 		<?php endif; ?>
+
+		
 		
 		<?php if (get_row_layout() == 'calculator_section') : ?>
         <section class="calculator-box w-[100%] py-16">
@@ -521,7 +524,7 @@
         <?php if (have_rows('hire_role_section')) : ?>
 		<?php while (have_rows('hire_role_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'faq_section') : ?>
-		<div class="w-full relative grid items-center z-10 lg:pt-[100px]">
+		<div class="w-full relative grid items-center z-10 py-16 lg:pt-[100px]">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('small_title')): ?>
 			<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
@@ -566,31 +569,37 @@
 		<?php endif; ?>
 		
 		<?php if (get_row_layout() == 'cta_section') : ?>
-        <section class="w-full relative grid items-center py-16">
-            <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
-                <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
-                    <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
-					<?php if(get_sub_field('heading')): ?>
-                        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white md:leading-tight mb-4"><?php echo get_sub_field('heading'); ?></h1>
-					<?php endif; ?>	
-					
-					<?php if(get_sub_field('paragraph')): ?>
-                        <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> <?php echo get_sub_field('paragraph'); ?> </span>
-                    <?php endif; ?>
-					</div>
-
-                    <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
-                        <div class="bg-white ml-0 lg:ml-[12%] relative rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
-                            <?php if(get_sub_field('calender')): ?>
-							<div class="w-full">
-                               <?php echo get_sub_field('calender'); ?>
-                            </div>
-							<?php endif; ?>
+        
+		
+			<section class="w-full py-24">
+            <div class=" w-[100%] container !p-0 mx-auto">
+                <div class=" block relative rounded-[24px] vetting-bg">
+                    <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
+                        <div class="grid-item col-span-1 lg:col-span-4 content-center min-h-[500px] py-[32px] pl-[30px] lg:pl-[150px]">
+						<?php if(get_sub_field('heading')): ?>
+                            <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
+						<?php endif; ?>	
+						
+						<?php if(get_sub_field('paragraph')): ?>
+                            <p class=" text-white text-[16px] mt-[30px] mb-[30px]"><?php echo get_sub_field('paragraph'); ?></p>
+						<?php endif; ?>		
+                           
+                        </div>
+                        <div class="grid-item col-span-1 lg:col-span-8 content-center relative">
+						<?php if(get_sub_field('calender')): ?>
+                            <div class="absolute right-0 top-[-100px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
+							    <?php echo get_sub_field('calender'); ?>
+							</div>
+						<?php endif; ?>	
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+		
+		
+		
 		
 		<?php endif; ?>
         
