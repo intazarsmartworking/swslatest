@@ -295,7 +295,7 @@
 
                 <div class="block footer-background border border-[#3c1201] p-[30px] lg:p-[70px]">
                     <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 bg-white rounded-[25px] mx-auto max-w-[450px] p-8">
-                            <img class=" absolute right-[-30px] top-[-30px] max-h-[80px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png">
+                            <!-- <img class=" absolute right-[-30px] top-[-30px] max-h-[80px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png"> -->
                             <div class="grid-item col-span-2 relative content-center">
                                 <?php if(get_sub_field('price')): ?>
                                     <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[100px] text-dark-orange lg:leading-[100px]"><?php echo get_sub_field('price'); ?></h5>
@@ -512,17 +512,19 @@
 					$description = get_sub_field('description'); 
 				?>
                     <div class="trustpilot-bg mb-5">
-                        <div class="flex">
-						<?php $auth_image = get_sub_field('image');
-							  if (!empty($auth_image) && isset($auth_image['url'])):
-						  ?>
-                            <div class="pr-4">
-                                <img class="mb-7 w-48" src="<?php echo esc_url($auth_image['url']); ?>" alt="<?php echo esc_url($auth_image['alt']); ?>">
-                            </div>
-						<?php endif; ?>	
+                        <div class="flex">	
                             <div>
-                                <p class="font-bold text-base text-white"> <?php echo $name;?> </p>
-								<p class="text-sm pt-5 pilot-descri"> <?php echo $description;?> </p>
+                                <?php if (!empty($name)): ?>
+                                    <p class="font-bold text-base text-white"> <?php echo $name;?> </p>
+                                <?php endif; ?>
+								<div class="text-sm pilot-descri"> <?php echo $description;?> </div>
+                                <?php $auth_image = get_sub_field('image');
+                                    if (!empty($auth_image) && isset($auth_image['url'])):
+                                ?>
+                                    <div class="pr-4 mt-3">
+                                        <img class="h-[20px]" src="<?php echo esc_url($auth_image['url']); ?>" alt="<?php echo esc_url($auth_image['alt']); ?>">
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -542,6 +544,7 @@
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
                         <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
+                            <p><img class="h-[25px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 						<?php if(get_sub_field('heading')): ?>
                             <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
 						<?php endif; ?>	
