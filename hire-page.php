@@ -19,8 +19,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div class="col-span-2 md:col-span-1 content-center">
 					<?php if(get_sub_field('main_heading')): ?>
-                        <h1 class="font-medium text-[35px] md:text-[72px] mb-4 text-white  lg:leading-[78px]">
-                                <?php echo get_sub_field('main_heading'); ?> <br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span> 
+                        <h1 class="font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+                                <?php echo get_sub_field('main_heading'); ?><br><span class="gradient-text"> <?php echo get_sub_field('orange_heading'); ?> </span> <br><span class="text-dark-orange"> <?php echo get_sub_field('orange_heading'); ?> </span> 
                         </h1>
 					<?php endif; ?>	
 					<?php if(get_sub_field('paragraph')): ?>
