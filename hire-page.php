@@ -578,7 +578,7 @@
                 <div class=" block relative rounded-[24px] vetting-bg">
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
-                        <div class="grid-item col-span-1 lg:col-span-4 content-center min-h-[500px] py-[32px] pl-[30px] lg:pl-[150px]">
+                        <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] pl-[30px] lg:pl-[150px]">
 						<p><img class="h-[25px] w-[260px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 						<?php if(get_sub_field('heading')): ?>
                             <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
@@ -628,7 +628,7 @@
                             </div>	
                            
                         </div>
-                        <div class="grid-item col-span-1 lg:col-span-8 content-center relative">
+                        <div class="grid-item col-span-1 lg:col-span-7 content-center relative">
 						<?php if(get_sub_field('calender')): ?>
                             <div class="absolute right-0 top-[-100px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
 							    <?php echo get_sub_field('calender'); ?>
