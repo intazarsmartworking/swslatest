@@ -1000,6 +1000,9 @@ select {
 .right-\[-150px\] {
   right: -150px;
 }
+.right-\[-180px\] {
+  right: -180px;
+}
 .right-\[-27px\] {
   right: -27px;
 }
@@ -1027,6 +1030,9 @@ select {
 .right-\[20px\] {
   right: 20px;
 }
+.right-\[300px\] {
+  right: 300px;
+}
 .right-\[9\%\] {
   right: 9%;
 }
@@ -1035,6 +1041,9 @@ select {
 }
 .top-0 {
   top: 0px;
+}
+.top-\[-100px\] {
+  top: -100px;
 }
 .top-\[-1100px\] {
   top: -1100px;
@@ -1102,6 +1111,9 @@ select {
 .top-\[13px\] {
   top: 13px;
 }
+.top-\[165px\] {
+  top: 165px;
+}
 .top-\[170px\] {
   top: 170px;
 }
@@ -1128,30 +1140,6 @@ select {
 }
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
-}
-.top-\[-100px\] {
-  top: -100px;
-}
-.right-\[-200px\] {
-  right: -200px;
-}
-.top-\[149px\] {
-  top: 149px;
-}
-.right-\[-100px\] {
-  right: -100px;
-}
-.top-\[100px\] {
-  top: 100px;
-}
-.right-\[-180px\] {
-  right: -180px;
-}
-.top-\[165px\] {
-  top: 165px;
-}
-.right-\[300px\] {
-  right: 300px;
 }
 .z-0 {
   z-index: 0;
@@ -1706,6 +1694,9 @@ select {
 .w-\[214px\] {
   width: 214px;
 }
+.w-\[220px\] {
+  width: 220px;
+}
 .w-\[22px\] {
   width: 22px;
 }
@@ -1772,6 +1763,12 @@ select {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+.w-\[260px\] {
+  width: 260px;
+}
+.w-\[110px\] {
+  width: 110px;
 }
 .min-w-\[100\%\] {
   min-width: 100%;
@@ -2666,6 +2663,9 @@ select {
 .pl-\[20px\] {
   padding-left: 20px;
 }
+.pl-\[30px\] {
+  padding-left: 30px;
+}
 .pl-\[60px\] {
   padding-left: 60px;
 }
@@ -2773,9 +2773,6 @@ select {
 }
 .pt-\[9px\] {
   padding-top: 9px;
-}
-.pl-\[30px\] {
-  padding-left: 30px;
 }
 .text-left {
   text-align: left;
@@ -6606,6 +6603,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding-left: 100px;
   }
 
+  .lg\:pl-\[150px\] {
+    padding-left: 150px;
+  }
+
   .lg\:pl-\[40px\] {
     padding-left: 40px;
   }
@@ -6644,10 +6645,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:pt-\[100px\] {
     padding-top: 100px;
-  }
-
-  .lg\:pl-\[150px\] {
-    padding-left: 150px;
   }
 
   .lg\:text-end {

@@ -522,7 +522,7 @@
                                     if (!empty($auth_image) && isset($auth_image['url'])):
                                 ?>
                                     <div class="pr-4 mt-3">
-                                        <img class="h-[20px]" src="<?php echo esc_url($auth_image['url']); ?>" alt="<?php echo esc_url($auth_image['alt']); ?>">
+                                        <img class="h-[20px] w-[110px]" src="<?php echo esc_url($auth_image['url']); ?>" alt="<?php echo esc_url($auth_image['alt']); ?>">
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -544,7 +544,7 @@
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
                         <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
-                            <p><img class="h-[25px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
+                        <p><img class="h-[25px] w-[260px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 						<?php if(get_sub_field('heading')): ?>
                             <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
 						<?php endif; ?>	
