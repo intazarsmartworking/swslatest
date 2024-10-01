@@ -74,6 +74,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_66fc241812d41",
+                            "label": "Gradient Heading",
+                            "name": "gradient_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_66f1627a3ceb2",
                             "label": "Orange Heading",
                             "name": "orange_heading",
@@ -1953,5 +1972,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727187294
+    "modified": 1727800377
 }
