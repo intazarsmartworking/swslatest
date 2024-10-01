@@ -1484,13 +1484,26 @@ jQuery(document).ready(function(){
 jQuery(function () { // wait for document ready
  
     // define movement of panels
+
+    var x = document.querySelectorAll(".process-slide");
+    
     var controllerHire = new ScrollMagic.Controller();
 
     // define movement of panels
-    var wipeAnimationHire = new TimelineMax()
-    .fromTo(".slide-point-1", 1, {y: "0%", opacity:1,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
-    .fromTo(".slide-point-2", 1, {y: "-100%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
-    .fromTo(".slide-point-3", 1, {y:  "-100%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from right
+    var wipeAnimationHire = new TimelineMax();
+    // var wipeAnimationHire = new TimelineMax()
+    // .fromTo(".slide-point-1", 1, {y: "0%", opacity:1,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
+    // .fromTo(".slide-point-2", 1, {y: "20%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from left
+    // .fromTo(".slide-point-3", 1, {y:  "20%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})  // in from right
+
+    for (let i = 0; i < x.length; i++) {
+      const slideClass = `.slide-point-${i+1}`
+     if(i == 0){
+      wipeAnimationHire.fromTo(slideClass, 1, {y: "0%", opacity:1,}, {y: "0%",opacity:1, ease: Linear.easeNone})
+     }else{
+      wipeAnimationHire.fromTo(slideClass, 1, {y: "50%", opacity:0,}, {y: "0%",opacity:1, ease: Linear.easeNone})
+     }
+    }
 
     // create scene to pin and link animation
     new ScrollMagic.Scene({
