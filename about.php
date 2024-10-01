@@ -392,7 +392,7 @@
 								if (!empty($cta_right_side_image) && isset($cta_right_side_image['url'])):
 							?>
 							<div class="text-end pt-[40px] lg:pt-[0px]">
-								<img class="w-[100%] max-w-[500px]" src="<?php echo esc_url($cta_right_side_image['url']); ?>" alt="<?php echo esc_attr($cta_right_side_image['alt']); ?>" />
+								<img class="w-[100%] max-w-[500px] inline-block" src="<?php echo esc_url($cta_right_side_image['url']); ?>" alt="<?php echo esc_attr($cta_right_side_image['alt']); ?>" />
 							</div>
 							<?php endif; ?>
 							
