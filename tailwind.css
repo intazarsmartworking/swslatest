@@ -2716,6 +2716,60 @@ input[type="range"].home-range-slider {
     min-height: calc(100vh - 300px);
     overflow: hidden;
   }
+  .content-slider .slide-item{
+    background: transparent !important;
+  }
+  .hire-process{
+    padding: 0px;
+    margin: 0px;
+    border-left: 2px solid #fff;
+    margin-left: 20%;
+  }
+  .hire-process li{
+    display: block;
+    position: relative;
+    margin-bottom: 45px;
+    padding-left: 55px;
+  }
+
+  .hire-process li .icons-box{
+    position: absolute;
+    left: -16px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FF4D02;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding-top: 3px;
+  }
+  .hire-process li .text-box{
+    color: #0C0020;
+    background: #fff;
+    padding: 10px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 0px 1px rgba(12, 0, 32, 0.08), 0px 16px 24px -8px rgba(12, 0, 32, 0.12);
+    position: relative;
+    display: inline-block;
+    
+  }
+  .hire-process li .text-box::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: -9px;
+    top: 11px;
+  }
 
 
 @media (max-width: 800px) {

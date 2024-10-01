@@ -1475,6 +1475,58 @@ jQuery(document).ready(function(){
     jQuery('#vetted-profiles-slider').slick('slickPrev');
   });
 
+  jQuery('#content-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows:false,
+    prevArrow: jQuery('#prev-slide'),
+    nextArrow: jQuery('#next-slide'),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      }
+    ]
+  });
+
+  jQuery('#prev-slide').click(function(e) {
+    jQuery('#content-slider').slick('slickNext');
+  });
+  
+  jQuery('#next-slide').click(function(e) {
+    jQuery('#content-slider').slick('slickPrev');
+  });
+
   
 
 
