@@ -371,10 +371,10 @@
 													</div>	
 												</div>
 										</div>
-										<div>
+										<div class="flex flex-col justify-center items-center">
 											<div class="buttons flex gap-3">
-												<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
-												<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
+												<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="prevButton">←</button>
+												<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="nextButton">→</button>
 											</div>
 										</div>
 								
