@@ -159,7 +159,45 @@
 
 				
 				<div class="grid grid-cols-1 lg:grid-cols-10 content-center mb-[6rem] relative">
-					<img class=" w-[100%] max-w-[320px] absolute left-[-12%] top-[-6%]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png">
+					<div class=" w-[100%] max-w-[320px] absolute left-[-12%] top-[-6%]">
+						<svg width="100%" height="auto" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path id="motionPath" fill="none" stroke="#504F4F" stroke-miterlimit="20" d="
+								M 174, 174
+								m -20, 65
+								a 87,87 0 0,0 174,0
+								a 87,87 0 0,0 -174,0
+								"/>
+							<path id="motionPath2" fill="none" stroke="#504F4F" stroke-miterlimit="20" d="
+								M 244, 244
+								m -126, -6
+								a 122,122 0 1,0 244,0
+								a 122,122 0 1,0 -244,0
+								"/>  
+								
+							<path id="motionPath3" fill="none" stroke="#504F4F" stroke-miterlimit="20" d="
+								M 440, 440
+								m -420, -200
+								a 220,220 0 1,0 440,0
+								a 220,220 0 1,0 -440,0
+								"/>
+
+							<circle cx="" cy="" r="8" fill="#504F4F">
+								<animateMotion dur="2.8s" repeatCount="indefinite">
+								<mpath xlink:href="#motionPath"></mpath>
+								</animateMotion>
+							</circle>
+							<circle cx="" cy="" r="8" fill="#504F4F">
+								<animateMotion dur="3s" repeatCount="indefinite">
+								<mpath xlink:href="#motionPath2"></mpath>
+								</animateMotion>
+							</circle>
+							<circle cx="" cy="" r="8" fill="#504F4F">
+								<animateMotion dur="3s" repeatCount="indefinite">
+								<mpath xlink:href="#motionPath3"></mpath>
+								</animateMotion>
+							</circle>
+						</svg>
+					</div>
 					<?php $hire_dev_main_img = get_sub_field('left_side_image');
 						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
 					?>
