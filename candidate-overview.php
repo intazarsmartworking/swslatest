@@ -307,7 +307,7 @@
 	<?php if (get_row_layout() == 'cta_section') : ?>
         <section class="w-[100%] px-[5%] py-16">
                 <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
-                    <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="http://sws.local/wp-content/themes/sws/images/bg-line-box.png">
+                    <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="pt-[60px]">
 					<?php if(get_sub_field('main_title')): ?>
                         <h4 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]"><?php echo get_sub_field('main_title'); ?></h4>
