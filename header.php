@@ -302,7 +302,7 @@
                   <div class="block pt-5">
                     <div class="flex">
                       <div class="grow">
-                        <span class="text-[11px] font-[400] text-gray-500 ">Amount save</span>
+                        <span class="text-[11px] font-[400] text-gray-500 ">Amount saved per month</span>
                       </div>
                       <div class="grow text-end">
                         <span class="text-[15px] price-value font-[500] text-black">£ </span>
@@ -316,7 +316,7 @@
               </div>
               <p class="text-[18px] text-[#FF4E03] mt-8">Curious About Cost?</p>
               <p class="text-[12px] text-[#fff] mt-3">Find out the price of your next remote hire here.</p>
-              <a href="/pricing/"> <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">Click to calculate now</button> </a>
+              <a href="/pricing/"> <button class="block py-2 w-[100%] mt-4 rounded-lg text-center px-8 bg-[#FF4E03] text-[16px] text-[#fff]">CLICK TO CALCULATE NOW</button> </a>
             </div>
           </div>
       </div>
