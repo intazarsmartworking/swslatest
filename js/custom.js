@@ -1527,6 +1527,7 @@ jQuery(document).ready(function(){
     jQuery('#content-slider').slick('slickPrev');
   });
 
+
   
 
 
@@ -1568,4 +1569,25 @@ jQuery(function () { // wait for document ready
       .setTween(wipeAnimationHire)
       //.addIndicators() // add indicators (requires plugin)
       .addTo(controllerHire);
+});
+
+
+jQuery('.slider-for').slick({
+  autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+jQuery('.slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  vertical:true,
+  asNavFor: '.slider-for',
+  dots: false,
+  focusOnSelect: true,
+  centerMode:true,
+  verticalSwiping:false,
+  arrows: false,
 });
