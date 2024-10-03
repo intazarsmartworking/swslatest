@@ -285,56 +285,7 @@
 										</div> 
 									</div>
 
-									<div class="timeline-item pb-[100px]">
-										<div class="timeline-content-box max-w-[1280px]">
-										
-					
-										<div class="w-full flex relative min-h-[600px] pr-3 lg:pr-0 pt-16 overflow-hidden">
-										<div class="slider-wrapper w-full relative card-container overflow-visible">
-											<div class="slider-overlay">
-											<?php if(have_rows('testimonial_card')): ?>
-											<?php while(have_rows('testimonial_card')): the_row(); ?>
-											<?php 
-												$testimonial = get_sub_field('testimonial'); 
-												$author_name = get_sub_field('name'); 
-												$author_designation = get_sub_field('designation'); 
-												$background = get_sub_field('background_color'); 
-												$linkedin = get_sub_field('linkedin');
-											?>
-										
-												<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>">
-													<div class="p-4 lg:p-10 flex flex-col ">
-														<div class="flex justify-between items-center mb-6">
-															<img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">
-															<img src="<?php echo get_sub_field('rating')['url']; ?>">
-														</div>
-														<p class="text-[20px] text-[#050403] leading-6"> <?php echo $testimonial;?> </p>
-														<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-[2.5rem]">
-															<div class="flex items-center">
-																<img class=" w-[70px] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
-																<div>
-																	<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
-																	<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
-																</div>
-															</div>
-															<!-- <a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a> -->
-														</div>
-													</div>
-												</div>
-												<?php endwhile; ?>	
-											<?php endif; ?> 
-										</div>	
-										</div>
-									</div>
-									<div>
-										<div class="buttons flex gap-3">
-											<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
-											<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
-										</div>
-									</div>
-								
-										</div> 
-									</div>
+									
 
 
 									<div class="timeline-item curv-box pb-[100px]" id="scroll-effect-13">
@@ -372,6 +323,65 @@
 							</div>
 						</div>
 					</section>
+
+					<div class="w-full pb-[100px]">
+										<div class="w-[100%] pl-[5%]">
+											<div class=" block">
+												<div class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48">Testimonial</div>
+												<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><span class="text-white text-5xl  lg:text-[56px] lg:leading-[5rem]">Don’t just take</span>
+													<span class="text-dark-orange text-5xl  lg:text-[56px]">our word for it</span>
+												</h2>
+											</div>
+										
+					
+												<div class="w-full flex relative min-h-[600px] pr-3 lg:pr-0 pt-16 overflow-hidden">
+													<div class="slider-wrapper w-full relative card-container overflow-visible">
+														<div class="slider-overlay">
+														<?php if(have_rows('testimonial_card')): ?>
+														<?php while(have_rows('testimonial_card')): the_row(); ?>
+														<?php 
+															$testimonial = get_sub_field('testimonial'); 
+															$author_name = get_sub_field('name'); 
+															$author_designation = get_sub_field('designation'); 
+															$background = get_sub_field('background_color'); 
+															$linkedin = get_sub_field('linkedin');
+														?>
+													
+															<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-100 lg:w-[600px] h-[450px] rounded-3xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>">
+																<div class="p-4 lg:p-10 flex flex-col ">
+																	<div class="flex justify-between items-center mb-6">
+																		<img class=" h-[55px]" src="<?php echo get_sub_field('logo')['url']; ?>">
+																		<img src="<?php echo get_sub_field('rating')['url']; ?>">
+																	</div>
+																	<p class="text-[20px] text-[#050403] leading-6"> <?php echo $testimonial;?> </p>
+																	<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-[2.5rem]">
+																		<div class="flex items-center">
+																			<img class=" w-[70px] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+																			<div>
+																				<p class="text-[#050403] text-[24px]"> <?php echo esc_attr($author_name);?> </p>
+																				<p class="text-[#050403] text-[16px]"> <?php echo esc_attr($author_designation);?> </p>
+																			</div>
+																		</div>
+																		<!-- <a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a> -->
+																	</div>
+																</div>
+															</div>
+															<?php endwhile; ?>	
+														<?php endif; ?> 
+													</div>	
+												</div>
+										</div>
+										<div>
+											<div class="buttons flex gap-3">
+												<button class="text-white p-3 rounded-2xl border border-main-gray" id="prevButton">&#8592;</button>
+												<button class="text-white p-3 rounded-2xl border border-main-gray" id="nextButton">&#8594;</button>
+											</div>
+										</div>
+								
+										</div> 
+									</div>
+
+
 
 					<section class="w-[100%] px-[5%]">
 						<div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">

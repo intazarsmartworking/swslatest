@@ -16,7 +16,7 @@
 				<div class="max-w-[900px] relative mx-auto text-center">
 					<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >BLOGS</span></div>
 					<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Our ideas and insights</h1>
-					<h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hire Developers</h1>
+					<h6 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hire Developers</h6>
 				</div>
 
 				
@@ -75,7 +75,7 @@
 
 				<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 items-center mt-[100px]">
 					<div class="grid-item col-span-6">
-						<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Get the latest</h1>
+						<h4 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Get the latest</h4>
 					</div>
 					
 				</div>
@@ -143,7 +143,7 @@
 			<div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
 				<img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
 				<div class="pt-[60px]">
-					<h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]">Check Our Vetting Process Now</h1>
+					<h5 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]">Check Our Vetting Process Now</h5>
 					<p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]"> How we make sure which candidate would be able to add values to your projects?</p>
 					
 					<a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white"> CHECK NOW </a>
