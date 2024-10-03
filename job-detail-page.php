@@ -27,6 +27,9 @@
         </section>
         <section class="w-full px-3 bg-[#fff]">
             <div class="w-[100%] relative max-w-[1280px] mx-auto p-3 lg:p-20">
+                
+
+
                 <h3 class=" text-[#000] font-bold text-[36px] mb-4">About SmartWorking</h3>
                 <p class=" text-[#000] text-[20px] mb-6">For more than 20 years our founder worked with international developers but never imagined anything like the COVID pandemic would come up with huge losses.</p>
 

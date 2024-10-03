@@ -19,8 +19,7 @@ get_header();
                     <div class="">
                         <div class="w-[100%] max-w-[600px] mx-auto text-center">
                             <h1 class="text-[22px] lg:text-[56px] text-[#ffffff] leading-[56px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">Thank You</h1>
-                            <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] leading-[28px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">Your submission has been received.
-                            We will be in touch and contact you soon.</p>
+                            <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] leading-[28px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">You submission has been received. We will be in touch soon</p>
                         </div>
                         <div class="w-[100%] text-center pt-[48px]">
                             <a href="<?php echo home_url(); ?>">
