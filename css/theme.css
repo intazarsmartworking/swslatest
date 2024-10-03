@@ -2825,6 +2825,9 @@ select {
 .pt-\[9px\] {
   padding-top: 9px;
 }
+.pl-\[5\%\] {
+  padding-left: 5%;
+}
 .text-left {
   text-align: left;
 }
@@ -7098,6 +7101,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 
   .lg\:leading-tight {
     line-height: 1.25;
+  }
+
+  .lg\:leading-\[5rem\] {
+    line-height: 5rem;
   }
 }
 @media (min-width: 1280px) {
