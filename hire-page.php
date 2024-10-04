@@ -98,7 +98,7 @@
                                     
                                 </div>
 								</div>
-                                <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
+                                <h2 class="text-sm font-medium text-white pb-5">Skills</h2>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
 								<?php if(have_rows('technology')): ?>
 								 <?php while(have_rows('technology')): the_row(); ?>
@@ -326,7 +326,8 @@
 
 								<div class="thumbnail-image">
 									<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
-									<?php echo $main_title;?>	
+									<!-- <?php echo $main_title;?>	 -->
+									<h5 class=" text-white font-bold md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
 								</div>
 
 								<?php endwhile; ?>	
@@ -346,12 +347,12 @@
 											$row_index = get_row_index();				
 										?> 
 											<div class="slider-banner-image">
-												<div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
+												<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
 													<?php if(get_sub_field('icon')): ?>
 														<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
 													<?php endif; ?>
 													<span class="!inline-block align-top"><?php echo $small_title;?></span></div>
-												</siv>
+												</siv> -->
 												<!-- <span class="inline-block align-top"><?php echo $small_title;?></span> -->
 												<h5 class=" text-white text-[1.5rem] font-bold md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 "><?php echo $main_title;?></h5>
 												<p class="text-white text-[16px]"><?php echo $paragraph;?></p>
@@ -467,22 +468,29 @@
                     <?php endif; ?>    
                     </div>
                 </div>
-				<?php if(have_rows('content_section')): ?>
-				<?php while(have_rows('content_section')): the_row(); ?>
-				<?php 
-					$heading = get_sub_field('heading'); 
-					$paragraph = get_sub_field('paragraph');	
-				?>
-                <div class="grid grid-cols-12 md:grid-cols-12 py-14 border-t border-[#2D1004] gap-3 mt-14">
-                    <div class="col-span-12 md:col-span-6">
-                        <h5 class="font-medium text-[25px] md:text-[32px] text-dark-orange md:leading-[32px] mb-5 "><?php echo $heading;?></h5>
-                    </div>
-                    <div class="col-span-12 md:col-span-6">
-                        <p class=" text-white text-[16px] md:text-[20px]"><?php echo $paragraph;?></p>
-                    </div>
+				<div class="grid grid-cols-12 md:grid-cols-12 py-14 gap-5 mt-14">
+					<?php if(have_rows('content_section')): ?>
+					<?php while(have_rows('content_section')): the_row(); ?>
+					<?php 
+						$heading = get_sub_field('heading'); 
+						$paragraph = get_sub_field('paragraph');	
+					?>
+						<div class="col-span-12 md:col-span-4">
+							<div class="europe-box rounded-3xl mb-5 h-[100%]">
+								<div class="flex">
+									<div class="w-[100%] px-6 py-6">
+										<div class="mt-12">
+											<h5 class="text-white text-[25px] font-bold leading-tight mb-5"> <?php echo $heading;?> </h5>
+											<p class="text-white text-base text-justify"><?php echo $paragraph;?></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php endwhile; ?>	
+					<?php endif; ?>
+				
                 </div>
-                <?php endwhile; ?>	
-				<?php endif; ?>
 			</div>
         </section>
 		<?php endif; ?>		
@@ -572,7 +580,7 @@
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('main_title')): ?>
-			<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"><?php echo get_sub_field('orange_title'); ?> </span></h1>
+			<h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"><?php echo get_sub_field('orange_title'); ?> </span></h5>
 			<?php endif; ?>
 			
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
@@ -620,7 +628,7 @@
 							<div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] pl-[30px] lg:pl-[150px]">
 							<p><img class="h-[25px] w-[260px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 							<?php if(get_sub_field('heading')): ?>
-								<h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
+								<h5 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h5>
 							<?php endif; ?>	
 							
 							<?php if(get_sub_field('paragraph')): ?>
@@ -694,15 +702,15 @@
 		  <?php endif; ?>  
 
 			<?php if(get_sub_field('main_title')): ?>
-            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
-            <?php echo get_sub_field('orange_title'); ?></span></h1>
+            <h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+            <?php echo get_sub_field('orange_title'); ?></span></h5>
 			<?php endif; ?>  
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
               <div class="grid-item col-span-8 content-center">
 				<?php if(get_sub_field('title')): ?>
-                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h1>
+                  <h5 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h5>
 				<?php endif; ?> 
 
 				<?php if(get_sub_field('paragraph')): ?>	

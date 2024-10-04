@@ -26,7 +26,7 @@
                         <?php endif; ?>	
                         
                         <?php if(get_sub_field('orange_title')): ?>
-                            <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "> <?php echo get_sub_field('orange_title'); ?> </h1>
+                            <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "> <?php echo get_sub_field('orange_title'); ?> </h5>
                         <?php endif; ?>
                         
                             <?php if(get_sub_field('paragraph')): ?>
@@ -75,7 +75,7 @@
                         <div class="grid-item col-span-5 <?php echo $is_odd ? $first_column_class : $second_column_class; ?>">
                         <?php if ($is_odd): ?>
                             <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo $step_tagline;?></span></div>
-                            <h1 class="text-[26px] lg:text-[36px] text-[#FF4D02] font-medium mb-4"><?php echo $main_title;?></h1>
+                            <h5 class="text-[26px] lg:text-[36px] text-[#FF4D02] font-medium mb-4"><?php echo $main_title;?></h5>
                             <ul class="section-dicription">
                             <?php if(have_rows('list_item')): ?>
                             <?php while(have_rows('list_item')): the_row(); ?>
@@ -104,7 +104,7 @@
                                         <?php echo $step_tagline; ?>
                                     </span>
                                 </div>
-                                <h1 class="text-[26px] lg:text-[36px] text-[#FF4D02] font-medium mb-4"><?php echo $main_title; ?></h1>
+                                <h5 class="text-[26px] lg:text-[36px] text-[#FF4D02] font-medium mb-4"><?php echo $main_title; ?></h5>
                                 <ul class="section-dicription">
                                     <?php if(have_rows('list_item')): ?>
                                         <?php while(have_rows('list_item')): the_row(); ?>
@@ -187,7 +187,7 @@
                                 
                             </div>
                             <?php if(get_sub_field('main_heading')): ?>	
-                                <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+                                <h5 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h5>
                             <?php endif; ?>
                             <p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
                             <?php if(get_sub_field('button_name')): ?>
@@ -256,11 +256,11 @@
                 <?php endif; ?>
 
                 <?php if(get_sub_field('main_title')): ?>
-                <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+                <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('orange_title')): ?>
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_title'); ?></h1>
+                <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_title'); ?></h5>
                 <?php endif; ?>
                 
                 </div>
@@ -283,7 +283,7 @@
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
                     <div class="pt-[60px]">
                     <?php if(get_sub_field('heading')): ?>
-                        <h1 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?> </h1>
+                        <h5 class=" text-white text-[32px] lg:text-[45px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?> </h5>
                     <?php endif; ?>
                     
                     <?php if(get_sub_field('description')): ?>

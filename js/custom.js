@@ -1581,7 +1581,7 @@ jQuery('.slider-for').slick({
   asNavFor: '.slider-nav'
 });
 jQuery('.slider-nav').slick({
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   vertical:true,
   asNavFor: '.slider-for',

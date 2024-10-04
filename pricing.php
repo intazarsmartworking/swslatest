@@ -23,7 +23,7 @@
                 <?php endif; ?>	
                 
                 <?php if(get_sub_field('orange_heading')): ?>
-                    <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_heading'); ?></h1>
+                    <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium "><?php echo get_sub_field('orange_heading'); ?></h5>
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('paragraph')): ?>	
@@ -41,7 +41,7 @@
             <div class="max-w-[100%] relative mx-auto rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
-                        <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h1>
+                        <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h5>
                         <div class=" block w-full mt-3">
                             <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>
@@ -50,7 +50,7 @@
                             <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem"></div>
                         </div>
                         <div class=" block w-full mt-[30px]">
-                            <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h1>
+                            <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h5>
                             <div class="d-block w-full mt-3">
                                 <span id="exp-item-2" onclick="skillExperience({id:2,level:'midLevel'})" class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
                                     Mid level (3-4year)
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class=" block w-full mt-[30px]">
-                            <h1 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">How many people need at your company?</h1>
+                            <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">How many people need at your company?</h5>
                             <div class="d-block w-full mt-3">
                                 <div class="relative mb-6">
 
@@ -97,7 +97,7 @@
                     <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
                         
                         <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
-                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">£<span id="total-price">0</span>/hr</h1>
+                            <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">£<span id="total-price">0</span>/hr</h5>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
                             <a href="/contact-us/"> <button class="w-full button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange" >HIRE NOW WITH SMART WORKING</button> </a>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p>
@@ -105,7 +105,7 @@
 
                         <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4 text-center">
                             <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
-                            <h1 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save £<span id="discount-price">0</span>/month</h1>
+                            <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save £<span id="discount-price">0</span>/month</h5>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p>
                             
                         </div>
@@ -154,7 +154,7 @@
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('main_heading')): ?>
-                <h1 class="gradient-text text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
+                <h5 class="gradient-text text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
                 <?php endif; ?>
             </div>
 
@@ -204,11 +204,11 @@
             <?php endif; ?> 	
 
             <?php if(get_sub_field('main_title')): ?>
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+            <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
             <?php endif; ?> 	
             
             <?php if(get_sub_field('orange_title')): ?>   
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+                <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
             <?php endif; ?> 
             
             <?php if(get_sub_field('paragraph')): ?>	
@@ -221,7 +221,7 @@
                     <div class="grid-item col-span-3 rounded-[12px]">
                         <?php if(get_sub_field('table_one_heading')): ?>
                         <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                            <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_one_heading'); ?></h1>
+                            <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_one_heading'); ?></h5>
                         </div>
                         <?php endif; ?> 
                         
@@ -239,7 +239,7 @@
                     
                         <?php if(get_sub_field('table_second_heading')): ?>
                         <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
-                            <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_second_heading'); ?></h1>
+                            <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_second_heading'); ?></h5>
                         </div>
                         <?php endif; ?>
                         
@@ -257,7 +257,7 @@
                     
                         <?php if(get_sub_field('table_third_heading')): ?>
                         <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
-                            <h1 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_third_heading'); ?></h1>
+                            <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_third_heading'); ?></h5>
                         </div>
                         <?php endif; ?>
                         
@@ -286,11 +286,11 @@
             <?php endif; ?>
             
             <?php if(get_sub_field('main_title')): ?>	
-            <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+            <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
             <?php endif; ?>
             
             <?php if(get_sub_field('orange_title')): ?>
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+                <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
             <?php endif; ?>	
             </div>
 
@@ -408,11 +408,11 @@
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('main_title')): ?>
-                <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h1>
+                <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('orange_title')): ?>
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h1>
+                <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
                 <?php endif; ?>
                 
             </div>
@@ -455,7 +455,7 @@
             <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
             <div class="pt-[60px]">
                 <?php if(get_sub_field('title')): ?>
-                <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_sub_field('title'); ?></h1>
+                <h5 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"><?php echo get_sub_field('title'); ?></h5>
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('paragraph')): ?>

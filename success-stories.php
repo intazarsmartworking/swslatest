@@ -139,7 +139,7 @@
                         <?php endif; ?>
 						</div>
 						<?php if(get_sub_field('main_heading')): ?>	
-                        <h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+                        <h5 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h5>
                         <?php endif; ?>
 						<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
 						<?php if(get_sub_field('button_name')): ?>
@@ -199,9 +199,9 @@
 			<?php endif; ?>	
 			
 			<?php if(get_sub_field('main_title')): ?>
-                <h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
+                <h5 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
                    <?php echo get_sub_field('main_title'); ?>	<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
-                </h1>
+                </h5>
 			<?php endif; ?>	
             </div>
             <div class="w-[100%] px-[15px] md:px-[10%] mt-[50px]">
