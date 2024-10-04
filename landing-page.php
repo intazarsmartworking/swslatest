@@ -557,7 +557,7 @@
                         <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
                         <p><img class="h-[25px] w-[260px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 						<?php if(get_sub_field('heading')): ?>
-                            <h1 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h1>
+                            <h5 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h5>
 						<?php endif; ?>	
 						
 						<?php if(get_sub_field('paragraph')): ?>

@@ -95,8 +95,8 @@
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire
-            a Developer? </h1>
+            <h6 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire
+            a Developer? </h6>
             <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]">It is quick and easy with Smart Working</p>
         
             <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] text-dark-orange text-lg bg-white hover:bg-black hover:text-white">Schedule a Call</a>

@@ -14,7 +14,7 @@
         <div class="grid grid-cols-1 py-3 lg:py-[80px]">
             <div class=" text-center">
                 <h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Our Leader</h1>
-                <h1 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">Thoughts</h1>
+                <h6 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">Thoughts</h6>
             </div>
         <div>
     </div>
@@ -75,8 +75,8 @@
     <div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
         <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
         <div class="pt-[60px]">
-            <h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire
-            a Developer? </h1>
+            <p class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]">Ready to Hire
+            a Developer? </p>
             <p class=" text-white text-[16px] lg:text-[24px] lg:mt-[30px] mb-[30px]">It is quick and easy with Smart Working</p>
         
             <a href="/contact-us/" class="w-[150px] h-[40px] bg-white rounded-[10px] px-[15px] py-[8px] text-[18px] text-[#FF4D02] ">Schedule a Call</a>

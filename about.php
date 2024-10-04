@@ -59,7 +59,7 @@
 										<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
 										<div class="timeline-content-box max-w-[1000px]">
 										<?php if(get_sub_field('third_section_heading')): ?>
-											<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium"> <?php echo get_sub_field('third_section_heading'); ?> </h1>
+											<p class="text-[22px] lg:text-[56px] text-[#FF4D02] leading-[56px] font-medium"> <?php echo get_sub_field('third_section_heading'); ?> </p>
 										<?php endif; ?>
 										
 											<?php if(get_sub_field('third_section_paragraph')): ?>
@@ -78,7 +78,7 @@
 										<img class="absolute curv-img w-[36px] left-[0px] top-[-80px]" src="<?php echo get_template_directory_uri();?>/images/curv-line.png" />
 										<div class="timeline-content-box max-w-[1000px]">
 										<?php if(get_sub_field('six_section_heading')): ?>
-											<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium "> <?php echo get_sub_field('six_section_heading'); ?> </h1>
+											<p class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium "> <?php echo get_sub_field('six_section_heading'); ?> </p>
 										<?php endif; ?>	
 
 										<?php if(get_sub_field('six_section_paragraph')): ?>
@@ -105,7 +105,7 @@
 																<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M36.1108 31.8324H30.4061C29.9983 31.8324 29.6677 32.1631 29.6677 32.5709V37.6109C29.6677 38.3863 29.0585 38.9955 28.2831 38.9955C27.5261 38.9955 26.8985 38.3863 26.8985 37.6109V25.2417C26.8985 24.2632 26.1231 23.4694 25.1446 23.4694H21.0092C20.0308 23.4694 19.2554 24.2632 19.2554 25.2417V37.6109C19.2554 38.3863 18.6277 38.9955 17.8708 38.9955C17.0954 38.9955 16.4862 38.3863 16.4862 37.6109V29.1001C16.4862 28.6923 16.1556 28.3617 15.7477 28.3617H10.0431C8.10466 28.3617 6.51697 29.9309 6.51697 31.8878V38.3863C6.51697 40.3432 8.10466 41.9309 10.0431 41.9309H36.1108C38.0492 41.9309 39.6369 40.3432 39.6369 38.3863V35.3586C39.6369 33.4201 38.0492 31.8324 36.1108 31.8324Z" fill="#FF4D02"/>
 															</svg>
 														</span>
-														<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Quality</h1>
+														<p class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Quality</p>
 														<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We are committed to sourcing, vetting, and delivering the best tech talent globally.</p>
 													</div>
 
@@ -123,7 +123,7 @@
 																<path d="M29.7469 36.3925V37.8449C29.7469 40.8999 27.2517 43.3925 24.1995 43.3925C21.1471 43.3925 18.6519 40.8999 18.6519 37.8449V36.3925H29.7469Z" fill="#FF4D02"/>
 															</svg>
 														</span>
-														<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Excellence</h1>
+														<p class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Excellence</p>
 														<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">Our commitment to excellence drives us to consistently exceed expectations, delivering exceptional talent to all our clients.</p>
 													</div>
 
@@ -135,7 +135,7 @@
 																<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M19.9477 28.6807C17.3261 28.6807 14.8929 29.0554 13.0209 29.6167C11.8966 29.9914 10.7741 30.5527 10.0246 31.3022C9.27688 32.0499 8.71381 33.1742 8.71381 34.485C8.71381 35.7957 9.08858 36.7317 10.0246 37.6677C10.7741 38.4154 11.8966 38.9785 13.0209 39.3514C14.8929 39.9145 17.3261 40.2874 19.9477 40.2874C21.0701 40.2874 21.8197 39.5397 21.8197 38.4154V30.5527C21.8197 29.4302 21.0701 28.6807 19.9477 28.6807Z" fill="#FF4D02"/>
 															</svg>
 														</span>
-														<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Innovation</h1>
+														<p class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Innovation</p>
 														<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We embrace new ideas and technologies to continually improve our platform and processes, staying ahead of industry trends.</p>
 													</div>
 
@@ -152,7 +152,7 @@
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M35.7248 29.2735C35.6159 29.0871 35.4627 28.9228 35.1581 28.5923C33.9784 27.3129 31.8165 24.948 30.5353 23.4379C30.1402 23.0539 29.9316 23.0483 29.4313 23.1517C28.1224 23.4194 27.4448 25.0551 28.7648 29.1572C28.8627 29.4563 28.7962 29.5892 28.4547 29.5892H26.627C24.6368 29.5892 23.6418 29.5892 22.9642 29.9954C22.3458 30.3683 21.8898 30.9628 21.6922 31.6569C21.4762 32.4175 21.7347 33.3775 22.2534 35.2994L22.7371 37.092C23.0104 38.1092 23.1488 38.6188 23.4368 38.9991C23.7027 39.348 24.0571 39.6194 24.4633 39.7855C24.9045 39.9646 25.4325 39.9646 26.4867 39.9646H32.2098C33.5168 39.9646 34.1722 39.9646 34.6725 39.7135C35.1341 39.4846 35.507 39.1117 35.7359 38.6502C35.987 38.1499 35.987 37.4945 35.987 36.1855V30.7099C35.987 30.2631 35.987 30.0379 35.9408 29.8274C35.8965 29.6317 35.8245 29.4471 35.7248 29.2735Z" fill="#FF4D02"/>
 															</svg>
 														</span>
-														<h1 class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Diversity</h1>
+														<p class="text-[20px] mt-2 lg:mt-[24px] lg:text-[24px] text-[#ffffff] font-medium">Diversity</p>
 														<p class="text-[13px] mt-2 lg:mt-[16px] lg:text-[16px] text-[#ffffff] font-medium">We believe in the power of diverse teams and are dedicated to creating opportunities for talented individuals from all backgrounds.</p>
 													</div>
 
@@ -170,7 +170,7 @@
 										<div class="timeline-content-box max-w-[1280px]">
 											<div class="max-w-[1000px]">
 											<?php if(get_sub_field('eight_section_heading')): ?>
-												<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"><?php echo get_sub_field('eight_section_heading'); ?></h1>
+												<h5 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"><?php echo get_sub_field('eight_section_heading'); ?></h5>
 											<?php endif; ?>
 
 											<?php if(get_sub_field('eight_section_para_first')): ?>
@@ -233,7 +233,7 @@
 											<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
 												<div class="grid-item col-span-8 content-center">
 												<?php if(get_sub_field('tenth_section_title')): ?>
-													<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"> <?php echo get_sub_field('tenth_section_title'); ?> </h1>
+													<h5 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"> <?php echo get_sub_field('tenth_section_title'); ?> </h5>
 												<?php endif; ?> 
 
 												<?php if(get_sub_field('tenth_section_first_paragraph')): ?>	
@@ -295,7 +295,7 @@
 											<div class="grid grid-cols-10 gap-5 content-center">
 												<div class="grid-item col-span-8 content-center">
 												<?php if(get_sub_field('elevent_section_title')): ?>
-													<h1 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"> <?php echo get_sub_field('elevent_section_title'); ?> </h1>
+													<h5 class="text-[22px] lg:text-[56px] text-[#FF4D02] lg:leading-[56px] font-medium"> <?php echo get_sub_field('elevent_section_title'); ?> </h5>
 												<?php endif; ?>	
 												
 												<?php if(get_sub_field('eleventh_section_paragraph')): ?>
@@ -314,7 +314,7 @@
 									<?php if(get_sub_field('eleventh_section_continue')): ?>
 									<div class="timeline-item pb-[0px]">
 										<div class="timeline-content-box relative  rounded-[12px] min-h-[100px] max-w-[1280px] p-3 lg:p-[50px]">
-											<h1 class="text-[30px] text-[#FF4D02] lg:text-[56px] font-[500]"><?php echo get_sub_field('eleventh_section_continue'); ?></h1>
+											<5 class="text-[30px] text-[#FF4D02] lg:text-[56px] font-[500]"><?php echo get_sub_field('eleventh_section_continue'); ?></5>
 										</div>
 									</div>
 									<?php endif; ?> 
@@ -388,7 +388,7 @@
 							<img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png" />
 							<div class="pt-[60px]">
 							<?php if(get_sub_field('cta_title')): ?>
-								<h1 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"> <?php echo get_sub_field('cta_title'); ?> </h1>
+								<h5 class=" text-white text-[32px] lg:text-[62px] lg:leading-[62px]"> <?php echo get_sub_field('cta_title'); ?> </h5>
 							<?php endif; ?> 
 
 							<?php if(get_sub_field('cta_description')): ?>	

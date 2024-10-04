@@ -43,7 +43,7 @@ get_header();
             <div class="grid grid-cols-1 gap-4 pb-[10px]">
                 <div class="">
                     <div class="w-[100%] max-w-[600px] mx-auto text-center">
-                        <h1 class="text-[22px] lg:text-[56px] text-[#ffffff] leading-[56px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">In the meantime</h1>
+                        <h5 class="text-[22px] lg:text-[56px] text-[#ffffff] leading-[56px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">In the meantime</h5>
                         <p class="text-[15px] mt-1 lg:mt-[24px] lg:text-[20px] text-[#ffffff] leading-[28px] font-medium drop-shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]">you may have been looking for one of the following:</p>
                     </div>
                 </div>

@@ -54,7 +54,7 @@
 			<div class="mx-auto w-[100%] max-w-[1280px]">
 					<h3 class="text-center small-intro">Explore</h3>
 					<div class="flex flex-col items-center justify-center">
-						<h1 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white">Need top notch developers?</h1> 
+						<h5 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white">Need top notch developers?</h5> 
 						<span class="text-dark-orange  text-[35px] text-center  lg:text-[56px]">You are in the right place.</span> 
 						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> 
 							With Smart Working, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
@@ -119,7 +119,7 @@
 					<?php endif; ?>
 
 					<?php if(get_sub_field('main_title')): ?>
-						<h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h1>
+						<h5 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h5>
 					<?php endif; ?>
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-28">
 
@@ -207,7 +207,7 @@
 					<?php endif; ?>
 					<div class="grid-item col-span-5 relative lg:pl-[40px]">
 					<?php if(get_sub_field('heading')): ?>
-						<h1 class="text-[25px] font-bold lg:text-[48px] mb-4 text-white"><?php echo get_sub_field('heading'); ?></h1>
+						<h5 class="text-[25px] font-bold lg:text-[48px] mb-4 text-white"><?php echo get_sub_field('heading'); ?></h5>
 					<?php endif; ?>	
 					
 					<?php if(have_rows('list_part')): ?>
@@ -245,7 +245,7 @@
 								
 							</div>
 							<?php if(get_sub_field('main_heading')): ?>	
-								<h1 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h1>
+								<h5 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h5>
 							<?php endif; ?>
 							<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
 							<?php if(get_sub_field('button_name')): ?>
@@ -322,7 +322,7 @@
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('main_title')): ?>
-			<h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"><?php echo get_sub_field('orange_title'); ?> </span></h1>
+			<h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange"><?php echo get_sub_field('orange_title'); ?> </span></h5>
 			<?php endif; ?>
 			
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
@@ -371,7 +371,7 @@
 							
 								<div class="pl-7 pr-7 md:pl-48 md:pr-12 justify-self-center self-center">
 								<?php if(get_sub_field('main_title')): ?>
-								<h1 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mb-9"><?php echo get_sub_field('main_title'); ?></h1>
+								<h5 class="text-left text-white text-3xl md:text-5xl lg:text-[72px] 3xl:text-58 font-medium  bg-title-text  md:leading-tight mb-9"><?php echo get_sub_field('main_title'); ?></h5>
 								<?php endif; ?>	
 
 								<?php if(get_sub_field('subheading')): ?>	
@@ -413,15 +413,15 @@
 		  <?php endif; ?>  
 
 			<?php if(get_sub_field('main_title')): ?>
-            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
-            <?php echo get_sub_field('orange_title'); ?></span></h1>
+            <h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+            <?php echo get_sub_field('orange_title'); ?></span></h5>
 			<?php endif; ?>  
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
               <div class="grid-item col-span-8 content-center">
 				<?php if(get_sub_field('title')): ?>
-                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h1>
+                  <h5 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h5>
 				<?php endif; ?> 
 
 				<?php if(get_sub_field('paragraph')): ?>	

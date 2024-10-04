@@ -85,7 +85,7 @@
     <section class="flex flex-col items-center justify-center py-16">
       <h3 class="text-center small-intro">Vetted Profiles</h3>
       <div class="flex flex-col items-center justify-center mb-20">
-          <h1 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white">Meet Our Vetted</h1>
+          <h5 class="text-4xl text-center font-bold text-[35px] md:text-[56px] mb-4 text-white">Meet Our Vetted</h5>
           <span class="text-dark-orange  text-center text-[35px] md:text-[56px]">Wordpress Developers</span> 
       </div>
       <div class="container mx-auto p-4">
@@ -427,7 +427,7 @@
       <div class="container mx-auto max-w-[1280px]">
           <h3 class="text-center small-intro">Top 1%</h3>
           <div class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl font-bold text-center text-[35px] md:text-[56px] mb-4 text-white">How We Find Top</h1>
+            <h5 class="text-4xl font-bold text-center text-[35px] md:text-[56px] mb-4 text-white">How We Find Top</h5>
             <span class="text-dark-orange text-center text-[35px] md:text-[56px]">1% Wordpress Developers For You</span> 
             <p class="mb-12 text-lg w-max gradient-paragraph rounded-full p-3 text-white">Hire developers from as low as €16/hr</p>
           </div>
@@ -484,7 +484,7 @@
     <section class="flex flex-col items-center justify-center py-16 w-full !pb-0">
       <h3 class="text-center small-intro">Benefits</h3>
       <div class="flex flex-col items-center justify-center">
-          <h1 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Benefits of Hiring Wordpress</h1>
+          <h5 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Benefits of Hiring Wordpress</h5>
           <span class="text-dark-orange text-[35px] md:text-[56px] text-center">Developer from SmartWorking</span> 
       </div>
       <div class="relative mb-28 w-[100%] lg:mt-[150px]">
@@ -679,7 +679,7 @@
                   </div>
                 </div>
                 <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
-                  <h1 class=" text-white text-[56px] font-semibold ">$16 - $2_?</h1>
+                  <h5 class=" text-white text-[56px] font-semibold ">$16 - $2_?</h5>
                   <p class=" text-white text-[16px] font-medium ">Per Developer, Per hour</p>
                   <div class="d-block mt-[40px]">
                       <a class="bg-[#FF4D02] inline-block w-[170px] text-center text-[18px] p-4 rounded-[4px] text-white ">
@@ -700,7 +700,7 @@
     <div class="w-full relative pt-6 bg-section-trusted">
       <div class="px-10">
           <h3 class="text-center small-intro"> Clients </h3>
-          <h1 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h1>
+          <h5 class="flex flex-col items-center justify-center text-center md:leading-tight"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white">Trusted By</span><span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-dark-orange mt-[24px]">100+ of Organizations</span> </h5>
           
           <div class="grid grid-cols-1 w-[100%] min-h-[350px] max-w-[100%]">
               <div class="grid-item col-span-1 pt-[40px]">
@@ -768,7 +768,7 @@
     <div class="w-full relative grid items-center pb-28 pt-16 md:pt-36">
         <div class="container mx-auto md:px-0 px-10">
             <h3 class="text-center small-intro"> FAQ's </h3>
-            <h1 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Common questions<br><span class="text-dark-orange">and their answers </span></h1>
+            <h5 class="font-bold text-[35px] md:text-[56px] mb-4 text-center text-white">Common questions<br><span class="text-dark-orange">and their answers </span></h5>
             <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> Didn't answer your question? </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-28">
           <?php 
@@ -805,7 +805,7 @@
       <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
         <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
           <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
-            <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire a Developer?</h1>
+            <h5 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire a Developer?</h5>
             <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
             
           </div>
@@ -831,13 +831,13 @@
         <div class="max-w-[1280px] mx-auto">
               <div class="d-block">
                 <h3 class="text-center small-intro"> Hire </h3>
-                <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Hire Offshore<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
-                WordPress Developer</span></h1>
+                <h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight">Hire Offshore<br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+                WordPress Developer</span></h5>
               </div>
 
               <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
                   <div class="grid-item col-span-8 content-center">
-                      <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium">Why Hiring an Offshore WordPress Developer is the Smart Choice (A Guide)</h1>
+                      <h5 class="text-[22px] lg:text-[36px] text-[#fff] font-medium">Why Hiring an Offshore WordPress Developer is the Smart Choice (A Guide)</h5>
                       <p class="text-[15px] mt-2 lg:mt-[24px] lg:text-[20px] text-[#ffffff] font-normal ">
                         The globally popular content management system WordPress is revolutionising website development with its user-friendly interface and robust features. We've compiled this guide to answer your offshore WordPress developer hiring concerns. And if you still have any unanswered questions, you can talk to our consultants anytime. We're happy to <span class="text-[#FF4D02]">help and chat for free.</span>
                       </p>
@@ -874,7 +874,7 @@
                   </div>
                   <div class="grid-item col-span-6 content-start">
                     <div class="scroll-section min-h-[500px]" id="target1">
-                      <h1 class="text-[36px] text-white font-semibold">Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</h1>
+                      <h5 class="text-[36px] text-white font-semibold">Challenges Businesses Face While Finding Qualified Offshore WordPress Developers</h5>
                       <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
                       <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
                       <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
@@ -927,7 +927,7 @@
 
                     </div>
                     <div class="scroll-section min-h-[500px]" id="target2">
-                    <h1 class="text-[36px] text-white font-semibold">Why Hire an Offshore WordPress Developer?</h1>
+                    <h5 class="text-[36px] text-white font-semibold">Why Hire an Offshore WordPress Developer?</h5>
                       <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
                       <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
                       <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
@@ -978,7 +978,7 @@
                       
                     </div>
                     <div class="scroll-section min-h-[500px]" id="target3">
-                    <h1 class="text-[36px] text-white font-semibold">Top Benefits of Hiring Dedicated Offshore WordPress Developers</h1>
+                    <h5 class="text-[36px] text-white font-semibold">Top Benefits of Hiring Dedicated Offshore WordPress Developers</h5>
                       <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
                       <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
                       <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
@@ -1029,7 +1029,7 @@
                     
                     </div>
                     <div class="scroll-section min-h-[500px]" id="target4">
-                    <h1 class="text-[36px] text-white font-semibold">Questions to Ask When Hiring an Offshore WordPress Developer</h1>
+                    <h5 class="text-[36px] text-white font-semibold">Questions to Ask When Hiring an Offshore WordPress Developer</h5>
                       <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
                       <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
                       <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
@@ -1081,7 +1081,7 @@
                       
                     </div>
                     <div class="scroll-section min-h-[500px]" id="target5">
-                    <h1 class="text-[36px] text-white font-semibold">Conclusion</h1>
+                    <h5 class="text-[36px] text-white font-semibold">Conclusion</h5>
                       <h3 class="text-[24px] text-white font-semibold">1. Finding reliable partners</h3>
                       <p class="text-[18px] text-white font-medium ">Finding trustworthy offshore development companies can be difficult. In today's saturated market, countless businesses seem to pop up everywhere. And let's be honest: Many of them cannot perform as per the market expectations and aren't to be trusted with your sensitive information.</p>
                       <h3 class="text-[24px] text-white font-semibold">2. Communication barriers</h3>
@@ -1134,7 +1134,7 @@
                   </div>
                   <div class="grid-item col-span-2 content-start">
                     <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
-                        <h1  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h1>
+                        <h5  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h5>
                         <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
                           <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>

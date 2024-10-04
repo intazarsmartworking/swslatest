@@ -80,10 +80,10 @@
 	
     <div class="flex flex-col items-center justify-center">
 	<?php if(get_sub_field('main_title')): ?>
-		<h1 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+		<h5 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
 			<?php echo get_sub_field('main_title'); ?>
 			<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
-		</h1> 
+		</h5> 
       
 	  <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"> No hidden costs, timezone aligned and able to hire in one week. </p>
 	<?php endif; ?>  
@@ -252,10 +252,10 @@
 <?php endif; ?>
       <div class="flex flex-col items-center justify-center">
         <?php if(get_sub_field('main_title')): ?> 
-          <h1 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white lg:leading-[74px]">
+          <h5 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white lg:leading-[74px]">
 			<?php echo get_sub_field('main_title'); ?>
 			<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
-		</h1> 
+		</h5> 
           
         <?php endif; ?>  
 		<?php if(get_sub_field('small_paragraph')): ?> 
@@ -303,10 +303,10 @@
 	<?php endif; ?> 
       <div class="flex flex-col items-center justify-center">
 	  <?php if(get_sub_field('main_title')): ?>
-        <h1 class="font-medium text-[40px] md:text-[56px] mb-4 li text-center text-white lg:leading-[74px]">
+        <h5 class="font-medium text-[40px] md:text-[56px] mb-4 li text-center text-white lg:leading-[74px]">
 			<?php echo get_sub_field('main_title'); ?>
 			<span class="text-dark-orange font-medium block"><?php echo get_sub_field('orange_title'); ?></span> 
-		</h1> 
+		</h5> 
         
 		<?php endif; ?>   
       </div>
@@ -368,7 +368,7 @@
 <?php if (get_row_layout() == 'why_smartworking_section') : ?>
 <?php if(get_sub_field('main_heading')): ?>
  <div class="mx-auto text-center pt-10">
-	<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h1>
+	<h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
 </div>
 <?php endif; ?>
 <div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
@@ -488,7 +488,7 @@
               <div class="grid-item col-span-4 content-center border-l border-[rgba(70,26,26,0.1)] text-center pt-5">
 				<div class=" border border-[#fff] rounded-[20px] p-[40px] max-w-[400px] mx-auto">
 				<?php if(get_sub_field('euro_price')): ?>
-						<h1 class=" text-white text-[56px] font-semibold "><?php echo get_sub_field('euro_price'); ?></h1>
+						<h5 class=" text-white text-[56px] font-semibold "><?php echo get_sub_field('euro_price'); ?></h5>
 				<?php endif; ?>	
 
 				<?php if(get_sub_field('euro_text')): ?>	
@@ -518,15 +518,15 @@
 		<?php endif; ?>
 
 		<?php if(get_sub_field('main_title')): ?>
-		<h1 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
+		<h5 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px]">
 			<?php echo get_sub_field('main_title'); ?>
 			<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
 	
-		</h1>
+		</h5>
 		<?php endif; ?>
 		
 		<!-- <?php if(get_sub_field('orange_title')): ?>
-        <h1 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px] text-[#FF4D02] "><?php echo get_sub_field('orange_title'); ?></h1>
+        <h5 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 lg:leading-[74px] text-[#FF4D02] "><?php echo get_sub_field('orange_title'); ?></h5>
 		<?php endif; ?> -->
 		
         </div>
@@ -559,9 +559,9 @@
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('main_title')): ?>
-				<h1 class=" text-white font-medium text-[35px] md:text-[56px] text-center lg:leading-[74px]"> <?php echo get_sub_field('main_title'); ?>
+				<h5 class=" text-white font-medium text-[35px] md:text-[56px] text-center lg:leading-[74px]"> <?php echo get_sub_field('main_title'); ?>
 				<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
-			</h1>
+			</h5>
 			<?php endif; ?>
 			
 			<?php if(get_sub_field('small_paragraph')): ?>
@@ -613,7 +613,7 @@
 	   <?php if (get_row_layout() == 'ready_hire') : ?>
       <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
 	    <?php if(get_sub_field('title')): ?>
-        <h1 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h1>
+        <h5 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h5>
 		<?php endif; ?>
 		
 		<?php if(get_sub_field('paragraph')): ?>
@@ -648,15 +648,15 @@
 		  <?php endif; ?>  
 
 			<?php if(get_sub_field('main_title')): ?>
-            <h1 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
-            <?php echo get_sub_field('orange_title'); ?></span></h1>
+            <h5 class=" text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_title'); ?><br><span class="text-5xl sm:text-3xl lg:text-[56px] 3xl:text-58 text-dark-orange">
+            <?php echo get_sub_field('orange_title'); ?></span></h5>
 			<?php endif; ?>  
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center mt-5">
               <div class="grid-item col-span-8 content-center">
 				<?php if(get_sub_field('title')): ?>
-                  <h1 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h1>
+                  <h5 class="text-[22px] lg:text-[36px] text-[#fff] font-medium"> <?php echo get_sub_field('title'); ?> </h5>
 				<?php endif; ?> 
 
 				<?php if(get_sub_field('paragraph')): ?>	

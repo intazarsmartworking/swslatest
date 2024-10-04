@@ -2169,10 +2169,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(5 4 3 / var(--tw-border-opacity));
 }
-.border-\[\#2D1004\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(45 16 4 / var(--tw-border-opacity));
-}
 .border-\[\#302f2f\] {
   --tw-border-opacity: 1;
   border-color: rgb(48 47 47 / var(--tw-border-opacity));
@@ -6284,10 +6280,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     grid-column: span 5 / span 5;
   }
 
-  .md\:col-span-6 {
-    grid-column: span 6 / span 6;
-  }
-
   .md\:col-span-7 {
     grid-column: span 7 / span 7;
   }
@@ -6586,10 +6578,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:leading-\[32px\] {
-    line-height: 32px;
   }
 
   .md\:leading-\[3rem\] {
