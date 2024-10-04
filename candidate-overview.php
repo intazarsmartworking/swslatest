@@ -270,7 +270,7 @@
 						$category_name = $categories[0]->name; 
 					}
 				?>
-                    <a class="block p-[15px] hover:bg-[#F6F6F6] mb-4" href="#">
+                    <a class="block p-[15px] hover:bg-[#F6F6F6] mb-4" href="<?php the_permalink();?>">
                         <p class="text-[#050403] text-[18px] font-bold mb-3"><?php the_title(); ?> <span class="p-[6px] rounded-[10px] font-medium text-[14px] ml-2" style="background:#EFF8FF; color:#175CD3;padding: 6px 15px;">&#x2022; <?php echo esc_html( $category_name ); ?></span></p>
                         <p class="text-[#667085] text-[16px] font-normal mb-6"><?php echo esc_html( $short_description ); ?></p>
                         <div class="block">

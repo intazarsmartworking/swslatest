@@ -176,6 +176,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_66ffaab6dbf09",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_66fe607ddb682",
                             "label": "List Item",
                             "name": "list_item",
@@ -198,7 +217,7 @@
                                     "key": "field_66fe6091db683",
                                     "label": "Points",
                                     "name": "points",
-                                    "type": "textarea",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -209,9 +228,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -225,6 +244,25 @@
                     "label": "Key Responsibility Section",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_66ffaad1dbf0a",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_66fe60c0db685",
                             "label": "Key Responsibility",
@@ -248,7 +286,7 @@
                                     "key": "field_66fe60cddb686",
                                     "label": "Responsibility",
                                     "name": "responsibility",
-                                    "type": "textarea",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -259,9 +297,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -275,6 +313,25 @@
                     "label": "Practical Section",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_66ffaae6dbf0b",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_66fe60fcdb688",
                             "label": "Practical",
@@ -298,7 +355,7 @@
                                     "key": "field_66fe6109db689",
                                     "label": "Practical List",
                                     "name": "practical_list",
-                                    "type": "textarea",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -309,9 +366,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -325,6 +382,25 @@
                     "label": "Application Process Section",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_66ffaafedbf0c",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_66fe6128db68b",
                             "label": "Application Process",
@@ -348,7 +424,7 @@
                                     "key": "field_66fe6134db68c",
                                     "label": "Application Process List",
                                     "name": "application_process_list",
-                                    "type": "textarea",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -359,9 +435,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": ""
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -375,6 +451,25 @@
                     "label": "Benefit Section",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_66ffabb1f57af",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_66fe6172db68e",
                             "label": "Paragraph",
@@ -445,6 +540,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_66ffab24dbf0e",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_66fe61b5db692",
                             "label": "Apply Method",
                             "name": "apply_method",
@@ -512,5 +626,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727947229
+    "modified": 1728031678
 }
