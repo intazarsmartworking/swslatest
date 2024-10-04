@@ -152,7 +152,7 @@
 			<?php endwhile; ?>	
 			<?php endif; ?>
                 <div class="p-3 lg:p-[50px] border border-[#E7ECF0] rounded-[30px]">
-                    <?php echo do_shortcode('[contact-form-7 id="2bbd6e7" title="Career Form"]');?>
+                    <?php echo do_shortcode('[contact-form-7 id="a12d714" title="Career Form"]');?>
 				</div>
 			</div>
         </section>
