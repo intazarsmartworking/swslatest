@@ -218,7 +218,7 @@ get_header();
 								<div class="slide-item !bg-transparent">
 									<div class="block text-white">
 										<div class="mb-6">
-										<a href="<?php the_permalink(); ?>"><img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>"> </a>
+										<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"><img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>"> </a>
 										</div>
 										<?php
 										$author_posts  = get_field('author'); 
@@ -238,8 +238,8 @@ get_header();
 										<?php endif;
 										?>
 										<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-										<a href="<?php the_permalink(); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?> </p></a>
-										<a href="<?php the_permalink(); ?>"><p class="text-[16px] text-[#ffffff] mb-4" ><?php echo wp_trim_words(get_the_content(), 40); ?></p></a>
+										<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"><p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?> </p></a>
+										<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"><p class="text-[16px] text-[#ffffff] mb-4" ><?php echo wp_trim_words(get_the_content(), 40); ?></p></a>
 										
 									</div>
 								</div>

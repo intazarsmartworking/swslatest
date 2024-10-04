@@ -41,7 +41,7 @@
             <div class="max-w-[100%] relative mx-auto rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
-                        <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Role</h5>
+                        <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h5>
                         <div class=" block w-full mt-3">
                             <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>

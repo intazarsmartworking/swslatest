@@ -260,3 +260,67 @@ function success_story_taxonomy() {
 
 	register_taxonomy( 'successcategory', array( 'success-story' ), $args );
 }
+
+
+// Custom Post Type for Career
+add_action( 'init', 'cc_career_post_type' );
+function cc_career_post_type() {
+	$labels = array(
+		'name'               => __( 'Careers' ),
+		'singular_name'      => __( 'Career' ),
+		'all_items'          => __( 'All Careers' ),
+		'add_new'            => _x( 'Add new', 'Career' ),
+		'add_new_item'       => __( 'Add New Career' ),
+		'edit_item'          => __( 'Edit Career' ),
+		'new_item'           => __( 'New Career' ),
+		'view_item'          => __( 'View Career' ),
+		'search_items'       => __( 'Search in Career' ),
+		'not_found'          => __( 'No Career found' ),
+		'not_found_in_trash' => __( 'No Career found in trash' ),
+		'parent_item_colon'  => '',
+		
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'hierarchical'       => true,
+		'public'             => true, // Ensure this is set to true
+        'show_ui'            => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'menu_icon'          => 'dashicons-welcome-learn-more',
+		'rewrite'            => array( 'slug' => 'career'),
+		'supports'           => array( 'custom-fields', 'title', 'thumbnail' )
+	);
+
+	register_post_type( 'career', $args );
+}
+
+// Custom Taxonomy for Career
+add_action( 'init', 'career_taxonomy', 0 );
+function career_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Career Category', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Career Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Career Category' ),
+		'all_items'         => __( 'All Career Category' ),
+		'parent_item'       => __( 'Parent Career Category' ),
+		'parent_item_colon' => __( 'Parent Career Category:' ),
+		'edit_item'         => __( 'Edit Career Category' ),
+		'update_item'       => __( 'Update Career Category' ),
+		'add_new_item'      => __( 'Add New Career Category' ),
+		'new_item_name'     => __( 'New Career Category Name' ),
+		'menu_name'         => __( 'Career Category' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'careercategories' ),
+	);
+
+	register_taxonomy( 'careercategories', array( 'career' ), $args );
+}
