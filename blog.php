@@ -36,7 +36,7 @@
 				
 				<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[20px]">
 					<div class="grid-item col-span-6">
-						<a href="<?php the_permalink(); ?>"> <img class="w-[100%] h-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
+						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <img class="w-[100%] h-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
 					</div>
 					<div class="grid-item col-span-4 p-[40px]">
 						<?php
@@ -57,11 +57,11 @@
 							<?php endif;
 							?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-						<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php the_title(); ?></p> </a>
-						<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
+						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php the_title(); ?></p> </a>
+						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
 						
 						<div class="d-block">
-							<a href="<?php the_permalink(); ?>" class="inline-block px-[30px] py-[10px] mr-3 text-[14px] rounded-[30px] border border-[#050403] text-[#050403] hover:bg-[#050403] hover:text-[#ffffff]" >Read more</a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>" class="inline-block px-[30px] py-[10px] mr-3 text-[14px] rounded-[30px] border border-[#050403] text-[#050403] hover:bg-[#050403] hover:text-[#ffffff]" >Read more</a>
 						</div>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 					<div class="blog-item rounded-[20px] overflow-hidden">
 						<div class="block">
 							<div class="mb-6">
-							<a href="<?php the_permalink(); ?>"> <img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <img class="w-[100%] h-[250px] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
 							</div>
 							<?php
 							$author_posts  = get_field('author'); 
@@ -120,8 +120,8 @@
 							<?php endif;
 							?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-							<a href="<?php the_permalink(); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?>  </p> </a>
-							<a href="<?php the_permalink(); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?>  </p> </a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
 							
 						</div>
 					</div>
