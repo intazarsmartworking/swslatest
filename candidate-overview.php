@@ -32,7 +32,7 @@
 			
 			<?php if(get_sub_field('button_name')): ?>	
 				<div class="block text-center">
-                    <a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
+                    <a href="#job-list-item" class="button inline-block align-middle button-small rounded-[10px] px-12 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
                 </div>
 			<?php endif; ?>		
             </div>
@@ -88,7 +88,7 @@
         <section class="w-full px-3 bg-[#fff]">
             <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
 			<?php if(get_sub_field('main_title')): ?>
-                 <h3 class="text-4xl font-bold text-[35px] md:text-[56px] mb-4 text-black  lg:leading-[74px]">
+                 <h3 class="text-4xl font-bold text-[35px] md:text-[56px] mb-4 text-dark-orange  lg:leading-[74px]">
                  <?php echo get_sub_field('main_title'); ?>
                 </h3>
 			<?php endif; ?>		
@@ -104,7 +104,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-4 bg-[#1F0C04] border border-[#401A0A] rounded-[30px] p-[30px] lg:p-[60px]">
                         <div class="grid-item col-span-3">
 						<?php if(get_sub_field('second_title')): ?>
-                            <h3 class="text-4xl font-bold text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+                            <h3 class="text-4xl font-bold text-[35px] md:text-[56px] mb-4 text-dark-orange lg:leading-[74px]">
                                 <?php echo get_sub_field('second_title'); ?>
                             </h3>
 						<?php endif; ?>	
@@ -127,7 +127,7 @@
             <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
                 <div class="block mb-12">
 				<?php if(get_sub_field('main_title')): ?>	
-                    <h3 class="font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[56px]">
+                    <h3 class="font-medium text-[35px] md:text-[56px] mb-4 text-dark-orange  lg:leading-[56px]">
                         <?php echo get_sub_field('main_title'); ?>
                     </h3>
 				<?php endif; ?>		
@@ -145,7 +145,7 @@
 					?>
 				
                         <div class="grid-item col-span-3">
-                            <p class="font-bold text-[24px] md:text-[24px] mb-2 text-white">
+                            <p class="font-bold text-[24px] md:text-[24px] mb-2 text-dark-orange">
                                 <?php echo $title;?>
                             </p>
                             <p class="text-[16px] text-[#7e7d7d]">
@@ -160,7 +160,7 @@
 	<?php endif; ?>	
 	
 	<?php if (get_row_layout() == 'slider_section') : ?>	
-        <section class="w-full px-3">
+        <!-- <section class="w-full px-3">
             <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-10">
                     <div class="grid-item col-span-5 content-center">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 	<?php endif; ?>
 	
 	<?php if (get_row_layout() == 'hiring_process') : ?>
@@ -236,7 +236,7 @@
 	<?php endwhile; ?>	
 	<?php endif; ?>		
 
-        <section class="w-full px-3 bg-[#fff]">
+        <section class="w-full px-3 bg-[#fff]" id="job-list-item">
             <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
                 <div class="block mb-8">
                     <div class="grid grid-cols-1 lg:grid-cols-10 gap-4">
