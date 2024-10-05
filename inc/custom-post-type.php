@@ -289,7 +289,7 @@ function cc_career_post_type() {
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-welcome-learn-more',
-		'rewrite'            => array( 'slug' => 'career'),
+		'rewrite'            => array( 'slug' => 'career', 'with_front' => false),
 		'supports'           => array( 'custom-fields', 'title', 'thumbnail' )
 	);
 
