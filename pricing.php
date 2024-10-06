@@ -197,7 +197,7 @@
     <?php if (get_row_layout() == 'compare_section') : ?>
     <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
-            <img class="absolute right-[-150px] opacity-[0.6] top-[20%] w-[400px] z-0 rotate-[180deg]" src="http://sws.local/wp-content/themes/sws/images/sqr-circule.png">
+            <img class="absolute right-[-150px] opacity-[0.6] top-[20%] w-[400px] z-0 rotate-[180deg]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
             <div class="w-full text-center">
             <?php if(get_sub_field('top_heading')): ?>
                 <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]"><?php echo get_sub_field('top_heading'); ?></span></div>
@@ -273,7 +273,7 @@
                 </div>
             </div>
 
-        </div> 
+        </img> 
     </section>
     <?php endif; ?>
 
