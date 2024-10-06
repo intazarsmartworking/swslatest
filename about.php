@@ -314,7 +314,7 @@
 									<?php if(get_sub_field('eleventh_section_continue')): ?>
 									<div class="timeline-item pb-[0px]">
 										<div class="timeline-content-box relative  rounded-[12px] min-h-[100px] max-w-[1280px] p-3 lg:p-[50px]">
-											<5 class="text-[30px] text-[#FF4D02] lg:text-[56px] font-[500]"><?php echo get_sub_field('eleventh_section_continue'); ?></5>
+											<h5 class="text-[30px] text-[#FF4D02] lg:text-[56px] font-[500]"><?php echo get_sub_field('eleventh_section_continue'); ?></h5>
 										</div>
 									</div>
 									<?php endif; ?> 
