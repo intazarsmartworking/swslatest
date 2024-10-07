@@ -38,7 +38,7 @@
 
     <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
-            <div class="max-w-[100%] relative mx-auto rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
+            <div class="max-w-[100%] relative mx-auto assemble-section-bg rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
                         <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h5>

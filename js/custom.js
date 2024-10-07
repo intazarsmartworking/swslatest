@@ -755,7 +755,7 @@ var boxScrollHeight = 0;
 
 function menuOnScroll(mySection, myMenu, myClass) {
   jQuery(window).scroll(function(){
-    var elScroll = jQuery(window).scrollTop();
+    var elScroll = jQuery(window).scrollTop() + 150;
     if((jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top)) && (boxScrollHeight > jQuery(window).scrollTop())){
       console.log(jQuery(window).scrollTop())
       jQuery('.stickysidenav').addClass('side-bar-fix');
@@ -781,7 +781,7 @@ function scrollToAnyPoint (navItem) {
     getAttr = jQuery(this).attr('data-location');
     console.log('getAttr', getAttr)
     const getID = '#'+getAttr;
-    var toSection = jQuery(getID).offset().top + 20;
+    var toSection = jQuery(getID).offset().top;
     jQuery("html, body").animate({scrollTop:toSection}, 1000)
   });
 }
