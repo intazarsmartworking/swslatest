@@ -327,7 +327,7 @@
 								<div class="thumbnail-image">
 									<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
 									<!-- <?php echo $main_title;?>	 -->
-									<h5 class=" text-white font-bold md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
+									<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
 								</div>
 
 								<?php endwhile; ?>	
@@ -354,7 +354,7 @@
 													<span class="!inline-block align-top"><?php echo $small_title;?></span></div>
 												</siv> -->
 												<!-- <span class="inline-block align-top"><?php echo $small_title;?></span> -->
-												<h5 class=" text-white text-[1.5rem] font-bold md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 "><?php echo $main_title;?></h5>
+												<h5 class=" text-white text-[1.5rem] font-normal md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 "><?php echo $main_title;?></h5>
 												<p class="text-white text-[16px]"><?php echo $paragraph;?></p>
 											</div>
 											
