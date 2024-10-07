@@ -2999,6 +2999,9 @@ select {
 .font-extrabold {
   font-weight: 800;
 }
+.font-light {
+  font-weight: 300;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -3007,9 +3010,6 @@ select {
 }
 .font-semibold {
   font-weight: 600;
-}
-.font-light {
-  font-weight: 300;
 }
 .uppercase {
   text-transform: uppercase;
@@ -4828,7 +4828,7 @@ ul li, ol li{
 }
 .side-bar-fix{
     position: sticky;
-    top: 70px;
+    top: 125px;
 }
 .scroll-section{
     padding-top: 10px;
