@@ -25,6 +25,9 @@
 		}
 	?>
 	<?php wp_head(); ?>
+
+<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1c984497c48e647699da9dfc/script.js"></script> <!-- End cookieyes banner -->
+
 </head>
 <!-- background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png'); -->
 <body  <?php body_class(); ?> style="">
