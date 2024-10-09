@@ -981,8 +981,10 @@ function skillPrice(price){
   // jQuery('.item-skill').removeClass('active');
   // const activeItem = `#select-item-${price.id}`
   // jQuery(activeItem).addClass('active')
+  // console.log(typeof price)
+  // const dataPrice = JSON.stringify(price)
   skillPriceData = price;
-  console.log(price)
+  console.log(price, skillPriceData)
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
     //const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
     const cost = Number(skillPriceData[skillExpData.level])
@@ -1305,16 +1307,18 @@ function priceRateGet(){
     var b1 = b.name.toLowerCase();
     return a1<b1 ?-1:a1> b1? 1 :0;
     })
-    sortPriceLocationList.forEach(function(item) {
-        var itemData = jQuery('<div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] "><span class="block pro-name">'+item.name+'</span><span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span></div>').data('price', item)
-          priceData.append(itemData);
-      });
+    // sortPriceLocationList.forEach(function(item) {
+    //     var itemData = jQuery('<div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] "><span class="block pro-name">'+item.name+'</span><span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span></div>').data('price', item)
+    //       priceData.append(itemData);
+    //   });
 
 
       priceData.on('click', '.item-skill', function() {
           jQuery('.item-skill').removeClass('active')
           jQuery(this).addClass('active')
           var priceValue = jQuery(this).data('price');
+          console.log('priceValue', priceValue)
+          // const priceData = JSON.stringify(priceValue)
           skillPrice(priceValue);
       });
 
