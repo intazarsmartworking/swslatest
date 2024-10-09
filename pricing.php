@@ -46,8 +46,36 @@
                             <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>
                         <div class="w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
-                            <!-- Append Item from id in javascript file -->
-                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem"></div>
+                            <!-- <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem"></div> -->
+                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+							<?php 
+							$args_skills = array(
+								'post_type' => 'skills',
+								'posts_per_page' => -1,
+							);
+							$query_skills = new WP_Query($args_skills);
+							while ($query_skills->have_posts()) : $query_skills->the_post();
+							$mid_level_dollar_price = get_field('mid_level_dollar_price');
+							$senior_level_dollar_price = get_field('senior_level_dollar_price');
+							$mid_level_pound_price = get_field('mid_level_pound_price');
+							$senior_level_pound_price = get_field('senior_level_pound_price');
+							$skill_image_id = get_post_thumbnail_id();
+							$skill_image_src = wp_get_attachment_image_src($skill_image_id, 'full');
+
+							?>
+							
+							  <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] ">
+								  <span class="block pro-name"> <?php the_title(); ?>  </span>
+								  <span class="block pro-name"> MLD : <?php echo $mid_level_dollar_price;?>  </span>
+								  <span class="block pro-name"> SLD : <?php echo $senior_level_dollar_price;?>  </span>
+								  <span class="block pro-name"> MLP : <?php echo $mid_level_pound_price;?>  </span>
+								  <span class="block pro-name"> SLP : <?php echo $senior_level_pound_price;?>  </span>
+								  <span class="block pro-name"> <img src="<?php echo esc_url($skill_image_src[0]); ?>" alt="<?php the_title(); ?>">  </span>
+								  <span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span>
+							  </div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>  
+							</div>
                         </div>
                         <div class=" block w-full mt-[30px]">
                             <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h5>

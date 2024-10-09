@@ -324,3 +324,37 @@ function career_taxonomy() {
 
 	register_taxonomy( 'careercategories', array( 'career' ), $args );
 }
+
+// Custom Post Type for Skills
+add_action( 'init', 'skills_post_type' );
+function skills_post_type() {
+	$labels = array(
+		'name'               => __( 'Skills' ),
+		'singular_name'      => __( 'Skill' ),
+		'all_items'          => __( 'Skills' ),
+		'add_new'            => _x( 'Add new', 'Skills' ),
+		'add_new_item'       => __( 'Add new Skills' ),
+		'edit_item'          => __( 'Edit Skills' ),
+		'new_item'           => __( 'New Skills' ),
+		'view_item'          => __( 'View Skills' ),
+		'search_items'       => __( 'Search in Skills' ),
+		'not_found'          => __( 'No Skills found' ),
+		'not_found_in_trash' => __( 'No Skills found in trash' ),
+		'parent_item_colon'  => '',
+		
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'hierarchical'       => true,
+        'show_ui'            => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'menu_icon'          => 'dashicons-book',
+		'rewrite'            => array( 'slug' => 'skills' ),
+		'supports'           => array( 'title', 'thumbnail' ),
+		'taxonomies'  		 => array( 'skillcategory' )
+	);
+
+	register_post_type( 'skills', $args );
+}
