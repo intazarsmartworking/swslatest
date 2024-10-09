@@ -66,7 +66,10 @@
 
 							?>
 							
-							  <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] " data-price='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>}'>
+							  <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] " 
+                                data-price='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>}'
+                                data-dolor='{"midLevel":<?php echo $mid_level_dollar_price;?>,"senior":<?php echo $senior_level_dollar_price;?>}'
+                              >
 								  <!-- <span class="block pro-name"> MLD : <?php echo $mid_level_dollar_price;?>  </span>   
 								  <span class="block pro-name"> SLD : <?php echo $senior_level_dollar_price;?>  </span>
 								  <span class="block pro-name"> MLP : <?php echo $mid_level_pound_price;?>  </span>
@@ -127,7 +130,7 @@
                     <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
                         
                         <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
-                            <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold ">£<span id="total-price">0</span>/hr</h5>
+                            <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold "><span id="typeCurrency">£</span><span id="total-price">0</span>/hr</h5>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
                             <a href="/contact-us/"> <button class="w-full button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange" >HIRE NOW WITH SMART WORKING</button> </a>
                             <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p>

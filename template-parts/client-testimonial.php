@@ -59,7 +59,7 @@
 	</div>
 	<div>
 		<div class="buttons flex gap-3">
-			<button class="text-white p-3 rounded-[10px] border border-[#464444] " id="prevButton">&#8592;</button>
+			<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="prevButton">&#8592;</button>
 			<button class="text-white p-3 rounded-[10px] border border-[#464444]" id="nextButton">&#8594;</button>
 		</div>
 	</div>
