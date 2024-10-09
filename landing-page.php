@@ -309,7 +309,7 @@
                             <!-- <img class=" absolute right-[-30px] top-[-30px] max-h-[80px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png"> -->
                             <div class="grid-item col-span-2 relative content-center">
                                 <?php if(get_sub_field('price')): ?>
-                                    <h5 class="text-4xl text-center font-extrabold text-[35px] md:text-[100px] text-dark-orange lg:leading-[100px]"><?php echo get_sub_field('price'); ?></h5>
+                                    <h5 class="text-center font-extrabold text-[100px] text-dark-orange leading-[100px]"><?php echo get_sub_field('price'); ?></h5>
                                 <?php endif; ?> 
                                 
                                 <?php if(get_sub_field('tagline')): ?>	
