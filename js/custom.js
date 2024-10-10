@@ -790,7 +790,7 @@ function scrollToAnyPoint (navItem) {
     getAttr = jQuery(this).attr('data-location');
     console.log('getAttr', getAttr)
     const getID = '#'+getAttr;
-    var toSection = jQuery(getID).offset().top;
+    var toSection = jQuery(getID).offset().top - 150;
     jQuery("html, body").animate({scrollTop:toSection}, 1000)
   });
 }
@@ -853,11 +853,10 @@ jQuery(document).ready(function(){
   const maxMove = (x.length-2)*630;
   let maxMoveItem = 0
 
-  indexChange = 0
+  indexChange = 1;
 
   jQuery('#prevButton').on('click', function(){
      if(maxMoveItem >= 0){
-      jQuery('#nextButton').prop('disabled', false);
       const changePosi = listPosition.map((ele) => (ele - 630));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0 && changePosi[0] <= 0){
@@ -874,6 +873,16 @@ jQuery(document).ready(function(){
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -2];
      }
+     indexChange = indexChange + 1;
+
+     if(indexChange > 0  && x.length > indexChange){
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', false);
+     }else{
+      jQuery('#prevButton').prop('disabled', true);
+      jQuery('#nextButton').prop('disabled', false);
+     }
+
     
   })
 
@@ -895,6 +904,15 @@ jQuery(document).ready(function(){
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -1];
     }
+    indexChange = indexChange - 1;
+    if(indexChange > 1 && x.length > indexChange){
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', false);
+     }else{
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', true);
+     }
+
   })
   
   setTimeout(() =>{
