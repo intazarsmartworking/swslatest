@@ -26,6 +26,47 @@
 	?>
 	<?php wp_head(); ?>
 
+	<script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+    'pageCategory': '<?php echo is_category() ? get_queried_object()->name : (is_single() ? get_the_category()[0]->name : 'General'); ?>',
+    'pageTitle': '<?php wp_title(); ?>',
+    'pageTags': '<?php echo is_single() ? implode(", ", wp_get_post_tags(get_the_ID(), array('fields' => 'names'))) : ''; ?>',
+	'publishDate': '<?php echo is_single() ? get_the_date('Y-m-d') : ''; ?>',
+	'classificationTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'classification', array('fields' => 'names'))) : ''; ?>',
+	'channelTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'channel', array('fields' => 'names'))) : ''; ?>',
+	'audienceTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'audience', array('fields' => 'names'))) : ''; ?>',
+	'selectedPostTitle': '<?php 
+        $selected_post_id = get_post_meta(get_the_ID(), '_selected_post_id', true); 
+        if ($selected_post_id) {
+            $selected_post = get_post($selected_post_id);
+            echo esc_js($selected_post->post_title); 
+        } else {
+            echo ''; 
+        }
+    ?>',
+	'selectedHirePostTitle': '<?php 
+        $selected_hire_post_id = get_post_meta(get_the_ID(), '_selected_hire_post_id', true); 
+        if ($selected_hire_post_id) {
+            $selected_hire_post = get_post($selected_hire_post_id);
+            echo esc_js($selected_hire_post->post_title); 
+        } else {
+            echo ''; 
+        }
+    ?>',
+	'selectedRoleCategories': '<?php 
+        $selected_roles = get_post_meta(get_the_ID(), '_selected_role_categories', true);
+        if (!empty($selected_roles)) {
+            $roles = array_map('get_term', (array)$selected_roles);
+            $role_names = array_map(function($role) { return esc_js($role->name); }, $roles);
+            echo implode(", ", $role_names);
+        } else {
+            echo '';
+        }
+    ?>'
+});
+</script>
+
 <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1c984497c48e647699da9dfc/script.js"></script> <!-- End cookieyes banner -->
 
 </head>
