@@ -985,6 +985,9 @@ select {
 .left-\[7px\] {
   left: 7px;
 }
+.left-\[8px\] {
+  left: 8px;
+}
 .left-\[calc\(50\%-140px\)\] {
   left: calc(50% - 140px);
 }
@@ -1146,6 +1149,9 @@ select {
 }
 .top-\[66\%\] {
   top: 66%;
+}
+.top-\[8px\] {
+  top: 8px;
 }
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
@@ -1583,6 +1589,9 @@ select {
 .h-auto {
   height: auto;
 }
+.h-\[15px\] {
+  height: 15px;
+}
 .max-h-\[120px\] {
   max-height: 120px;
 }
@@ -1778,6 +1787,9 @@ select {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+.w-\[15px\] {
+  width: 15px;
 }
 .min-w-\[100\%\] {
   min-width: 100%;
@@ -2956,6 +2968,9 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-\[10px\] {
+  font-size: 10px;
 }
 .font-\[16px\] {
   font-weight: 16px;
@@ -5001,6 +5016,9 @@ ul li, ol li{
 .item-skill{
     cursor: pointer;
     position: relative;
+    padding: 10px 10px 10px 40px;
+    display: inline-block;
+    margin: 4px;
   }
 .item-skill .active-img{
     display: none;
@@ -6176,9 +6194,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 }
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
-}
-.disabled\:opacity-5:disabled {
-  opacity: 0.05;
 }
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:translate-y-0 {
   --tw-translate-y: 0px;
