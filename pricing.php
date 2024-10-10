@@ -47,7 +47,7 @@
                         </div>
                         <div class="w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
                             <!-- <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem"></div> -->
-                            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="searchItem">
+                            <div class=" block w-full" id="searchItem">
 							<?php 
 							$args_skills = array(
 								'post_type' => 'skills',
@@ -66,7 +66,7 @@
 
 							?>
 							
-							  <div class="item-skill text-[#040524] text-[12px] text-center content-center p-3 h-[80px] rounded-[8px] border border-[rgba(5,4,3,0.20)] " 
+							  <div class="item-skill text-[#040524] text-[12px] rounded-[8px] border border-[rgba(5,4,3,0.20)] " 
                                 data-price='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>}'
                                 data-dolor='{"midLevel":<?php echo $mid_level_dollar_price;?>,"senior":<?php echo $senior_level_dollar_price;?>}'
                               >
@@ -74,9 +74,9 @@
 								  <span class="block pro-name"> SLD : <?php echo $senior_level_dollar_price;?>  </span>
 								  <span class="block pro-name"> MLP : <?php echo $mid_level_pound_price;?>  </span>
 								  <span class="block pro-name"> SLP : <?php echo $senior_level_pound_price;?>  </span> -->
-								  <span class="block text-center pro-name"> <img class=" inline-block w-[22px] h-[22px]" src="<?php echo esc_url($skill_image_src[0]); ?>" alt="<?php the_title(); ?>">  </span>
+								  <span class="block absolute left-[8px] top-[8px] text-center pro-name"> <img class=" inline-block w-[22px] h-[22px]" src="<?php echo esc_url($skill_image_src[0]); ?>" alt="<?php the_title(); ?>">  </span>
                                   <span class="block pro-name"> <?php the_title(); ?>  </span>
-								  <span class="active-img absolute bg-[#DF4402] text-white rounded-full font-extrabold h-[20px] w-[20px] right-[-7px] top-[-5px]">&#10003</span>
+								  <span class="active-img absolute text-[10px] text-center bg-[#DF4402] text-white rounded-full font-extrabold h-[15px] w-[15px] right-[-7px] top-[-5px]">&#10003</span>
 							  </div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>  
@@ -416,8 +416,8 @@
             </div>
             <div>
                 <div class="buttons flex gap-3">
-                    <button class="text-white p-3 rounded-[10px] border border-[#464444]" id="prevButton">&#8592;</button>
-                    <button class="text-white p-3 rounded-[10px] border border-[#464444]" id="nextButton">&#8594;</button>
+                    <button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" id="prevButton">&#8592;</button>
+                    <button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" disabled id="nextButton">&#8594;</button>
                 </div>
             </div>
 
