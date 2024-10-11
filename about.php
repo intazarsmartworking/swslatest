@@ -373,8 +373,8 @@
 										</div>
 										<div class="flex flex-col justify-center items-center">
 											<div class="buttons flex gap-3">
-												<button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" id="prevButton">&#8592;</button>
-												<button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" disabled id="nextButton">&#8594;</button>
+												<button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" disabled id="nextButton">&#8592;</button>
+												<button class="text-white p-3 rounded-[10px] border border-[#464444] disabled:opacity-[0.3]" id="prevButton" >&#8594;</button>
 											</div>
 										</div>
 								
