@@ -420,4 +420,255 @@ function enqueue_custom_ajax_script() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_script');
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
 
+// Register a custom taxonomy for content classifications
+function create_classification_taxonomy() {
+    register_taxonomy(
+        'classification', 
+        'post',          
+        array(
+            'label' => __('Classifications'),
+            'rewrite' => array('slug' => 'classification'),
+            'hierarchical' => true, 
+            'show_admin_column' => true, 
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_classification_taxonomy');
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Register a custom taxonomy for content cluster
+function create_cluster_taxonomy() {
+    register_taxonomy(
+        'cluster', 
+        'post',          
+        array(
+            'label' => __('Cluster'),
+            'rewrite' => array('slug' => 'cluster'),
+            'hierarchical' => true, 
+            'show_admin_column' => true, 
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_cluster_taxonomy');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Register a custom taxonomy for content channel
+function create_channel_taxonomy() {
+    register_taxonomy(
+        'channel', 
+        'post',          
+        array(
+            'label' => __('Channel'),
+            'rewrite' => array('slug' => 'channel'),
+            'hierarchical' => true, 
+            'show_admin_column' => true, 
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_channel_taxonomy');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Register a custom taxonomy for content audience
+function create_audience_taxonomy() {
+    register_taxonomy(
+        'audience', 
+        'post',          
+        array(
+            'label' => __('Audience'),
+            'rewrite' => array('slug' => 'audience'),
+            'hierarchical' => true, 
+            'show_admin_column' => true, 
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_audience_taxonomy');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Add a meta box for selecting a post title
+function add_post_title_dropdown_meta_box() {
+    add_meta_box(
+        'post_title_dropdown_meta_box',
+        'Select a Post',   
+        'render_post_title_dropdown_meta_box',
+        'post',  
+        'side'  
+    );
+}
+add_action('add_meta_boxes', 'add_post_title_dropdown_meta_box');
+
+function render_post_title_dropdown_meta_box($post) {
+    wp_nonce_field('post_title_dropdown_nonce', 'post_title_dropdown_nonce_field');
+    $selected_post_id = get_post_meta($post->ID, '_selected_post_id', true);
+
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+    );
+    $all_posts = get_posts($args);
+
+    echo '<select name="selected_post_id">';
+    echo '<option value="">Select a Post</option>'; // Default option
+    foreach ($all_posts as $single_post) {
+        $selected = ($selected_post_id == $single_post->ID) ? 'selected' : '';
+        echo '<option value="' . esc_attr($single_post->ID) . '" ' . $selected . '>' . esc_html($single_post->post_title) . '</option>';
+    }
+    echo '</select>';
+}
+
+// Save the selected post title when the post is saved
+function save_selected_post_id($post_id) {
+    if (!isset($_POST['post_title_dropdown_nonce_field']) || !wp_verify_nonce($_POST['post_title_dropdown_nonce_field'], 'post_title_dropdown_nonce')) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (isset($_POST['selected_post_id'])) {
+        update_post_meta($post_id, '_selected_post_id', sanitize_text_field($_POST['selected_post_id']));
+    } else {
+        delete_post_meta($post_id, '_selected_post_id');
+    }
+}
+add_action('save_post', 'save_selected_post_id');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Add a meta box for selecting a 'hire' post title
+function add_hire_post_title_dropdown_meta_box() {
+    add_meta_box(
+        'hire_post_title_dropdown_meta_box', 
+        'Select a Hire Post',
+        'render_hire_post_title_dropdown_meta_box',
+        'post', 
+        'side' 
+    );
+}
+add_action('add_meta_boxes', 'add_hire_post_title_dropdown_meta_box');
+
+function render_hire_post_title_dropdown_meta_box($post) {
+    wp_nonce_field('hire_post_title_dropdown_nonce', 'hire_post_title_dropdown_nonce_field');
+
+    $selected_hire_post_id = get_post_meta($post->ID, '_selected_hire_post_id', true);
+
+    $args = array(
+        'post_type'      => 'hire',  
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+    );
+    $all_hire_posts = get_posts($args);
+
+    echo '<select name="selected_hire_post_id">';
+    echo '<option value="">Select a Hire Post</option>'; 
+    foreach ($all_hire_posts as $single_hire_post) {
+        $selected = ($selected_hire_post_id == $single_hire_post->ID) ? 'selected' : '';
+        echo '<option value="' . esc_attr($single_hire_post->ID) . '" ' . $selected . '>' . esc_html($single_hire_post->post_title) . '</option>';
+    }
+    echo '</select>';
+}
+
+// Save the selected 'hire' post ID when the post is saved
+function save_selected_hire_post_id($post_id) {
+    if (!isset($_POST['hire_post_title_dropdown_nonce_field']) || !wp_verify_nonce($_POST['hire_post_title_dropdown_nonce_field'], 'hire_post_title_dropdown_nonce')) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (isset($_POST['selected_hire_post_id'])) {
+        update_post_meta($post_id, '_selected_hire_post_id', sanitize_text_field($_POST['selected_hire_post_id']));
+    } else {
+        delete_post_meta($post_id, '_selected_hire_post_id');
+    }
+}
+add_action('save_post', 'save_selected_hire_post_id');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Add a meta box for selecting role categories in post editor
+function add_role_category_meta_box_to_post() {
+    add_meta_box(
+        'role_category_meta_box',
+        'Select Role Categories', 
+        'render_role_category_meta_box', 
+        'post',  
+        'side' 
+    );
+}
+add_action('add_meta_boxes', 'add_role_category_meta_box_to_post');
+
+function render_role_category_meta_box($post) {
+    wp_nonce_field('role_category_nonce', 'role_category_nonce_field');
+
+    $selected_roles = get_post_meta($post->ID, '_selected_role_categories', true);
+    $selected_roles = !empty($selected_roles) ? (array) $selected_roles : array();
+
+    $terms = get_terms(array(
+        'taxonomy' => 'rolecategory',
+        'hide_empty' => false,
+    ));
+
+    if (!empty($terms) && !is_wp_error($terms)) {
+        foreach ($terms as $term) {
+            $checked = in_array($term->term_id, $selected_roles) ? 'checked' : '';
+            echo '<label>';
+            echo '<input type="checkbox" name="role_categories[]" value="' . esc_attr($term->term_id) . '" ' . $checked . ' /> ';
+            echo esc_html($term->name);
+            echo '</label><br>';
+        }
+    } else {
+        echo 'No role categories found.';
+    }
+}
+
+// Save selected role categories when the post is saved
+function save_selected_role_categories($post_id) {
+    if (!isset($_POST['role_category_nonce_field']) || !wp_verify_nonce($_POST['role_category_nonce_field'], 'role_category_nonce')) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (isset($_POST['role_categories'])) {
+        $role_categories = array_map('sanitize_text_field', $_POST['role_categories']);
+        update_post_meta($post_id, '_selected_role_categories', $role_categories);
+    } else {
+        delete_post_meta($post_id, '_selected_role_categories');
+    }
+}
+add_action('save_post', 'save_selected_role_categories');
