@@ -114,24 +114,28 @@
                                 </div>
 								</div>
                                 <h2 class="text-sm font-medium text-white pb-5">Technologies</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-3">
-								<?php if(have_rows('technology')): ?>
-								 <?php while(have_rows('technology')): the_row(); ?>
-								 <?php 
-								  $tech_name = get_sub_field('name'); 
-								 ?>
-                                    <div class="flex items-center tech-item">
-                                        <div class="flex-1">
-                                            <h3 class="text-xs font-medium"><?php echo $tech_name;?></h3>
-                                        </div>
-                                        <?php $tech_image = get_sub_field('image');
-											if (!empty($tech_image) && isset($tech_image['url'])):
+                                <div class=" block">
+									<ul class="card-skills-item">
+										<?php if(have_rows('technology')): ?>
+										<?php while(have_rows('technology')): the_row(); ?>
+										<?php 
+										$tech_name = get_sub_field('name'); 
 										?>
-											<img src="<?php echo esc_url($tech_image['url']); ?>" alt="Technology 1" class="w-4 h-4 inline-block rounded-full">
-										<?php endif; ?> 
-                                    </div>
-								<?php endwhile; ?>	
-								<?php endif; ?>
+											<li>
+												<?php echo $tech_name;?>
+
+												<?php $tech_image = get_sub_field('image');
+													if (!empty($tech_image) && isset($tech_image['url'])):
+												?>
+													<img src="<?php echo esc_url($tech_image['url']); ?>" alt="Technology 1" class="w-4 h-4 absolute right-[8px] top-[7px] rounded-full">
+												<?php endif; ?> 
+											</li>
+										<?php endwhile; ?>	
+										<?php endif; ?>
+									</ul>
+
+
+								
                                 </div>
 
                                 <?php  

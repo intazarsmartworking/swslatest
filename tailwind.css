@@ -2889,6 +2889,25 @@ input[type="range"].home-range-slider {
 .slider-for.slick-slide img{
   display: inline-block;
 }
+.card-skills-item{
+  padding: 0px;
+  margin: 0px;
+}
+.card-skills-item li{
+    background-color: rgba(255, 77, 2, 0.16);
+    border-radius: 26px;
+    padding: 6px 7px;
+    border: 1px solid rgba(255, 77, 2, 0.2);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 2px;
+    color: rgba(252, 188, 160, 1);
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 7px 30px 7px 14px;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {
     .howItWorkHeading{

@@ -18,15 +18,14 @@
 				<section class="flex flex-col items-center justify-center py-16">
 					<div class="flex flex-col items-center justify-center mb-20">
 					<?php if(get_sub_field('main_title')): ?>    
-						<h1 class="text-[35px] md:text-4xl text-center font-bold lg:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h1> 
-					<?php endif; ?> 
-
-					<?php if(get_sub_field('orange_title')): ?>   
-						<span class="text-dark-orange text-[35px] md:text-4xl text-center font-bold lg:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+						<h1 class="font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+							<?php echo get_sub_field('main_title'); ?><br>
+							<span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span>
+					</h1> 
 					<?php endif; ?> 
 
 					<?php if(get_sub_field('small_paragraph')): ?>      
-						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </h3>
+						<p class="text-white text-xl font-normal text-center py-6 mb-10 px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
 					<?php endif; ?> 
 
 					<?php if(get_sub_field('button_name')): ?> 
