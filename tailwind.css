@@ -1920,6 +1920,9 @@ ul li, ol li{
   .item-skill{
     cursor: pointer;
     position: relative;
+    padding: 10px 10px 10px 40px;
+    display: inline-block;
+    margin: 4px;
   }
   .item-skill .active-img{
     display: none;

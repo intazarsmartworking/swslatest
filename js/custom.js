@@ -1,11 +1,20 @@
 // Home Page Accordian
 var screeSize = false; 
+var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;;
+
+const today = new Date()
+console.log('dataSet', timeZone, Intl, today)
+const checkLocation = today.toString()
 const windoSize = window.innerWidth               
 // $(window).on('resize', function(){
 //     var win = $(this); //this = window
 //     if (win.height() >= 820) { /* ... */ }
     
 // }); 
+
+// const showDolor = checkLocation.includes('India') ? '$':'£';
+
+// jQuery('#typeCurrency').text(showDolor)
 
 if (windoSize < 680) { 
     screeSize = true
@@ -781,7 +790,7 @@ function scrollToAnyPoint (navItem) {
     getAttr = jQuery(this).attr('data-location');
     console.log('getAttr', getAttr)
     const getID = '#'+getAttr;
-    var toSection = jQuery(getID).offset().top;
+    var toSection = jQuery(getID).offset().top - 150;
     jQuery("html, body").animate({scrollTop:toSection}, 1000)
   });
 }
@@ -844,7 +853,7 @@ jQuery(document).ready(function(){
   const maxMove = (x.length-2)*630;
   let maxMoveItem = 0
 
-  indexChange = 0
+  indexChange = 1;
 
   jQuery('#prevButton').on('click', function(){
      if(maxMoveItem >= 0){
@@ -864,6 +873,16 @@ jQuery(document).ready(function(){
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -2];
      }
+     indexChange = indexChange + 1;
+
+     if(indexChange > 0  && x.length > indexChange){
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', false);
+     }else{
+      jQuery('#prevButton').prop('disabled', true);
+      jQuery('#nextButton').prop('disabled', false);
+     }
+
     
   })
 
@@ -885,6 +904,15 @@ jQuery(document).ready(function(){
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -1];
     }
+    indexChange = indexChange - 1;
+    if(indexChange > 1 && x.length > indexChange){
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', false);
+     }else{
+      jQuery('#prevButton').prop('disabled', false);
+      jQuery('#nextButton').prop('disabled', true);
+     }
+
   })
   
   setTimeout(() =>{
@@ -1185,13 +1213,7 @@ $("#myInput").on("keyup", function() {
   }).hide();
 });
 
-var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;;
 
-
-
-const today = new Date()
-console.log('dataSet', timeZone, Intl, today)
-const checkLocation = today.toString()
 if(checkLocation.includes('India')){
   console.log('India')
   const contryName = `
@@ -1317,7 +1339,8 @@ function priceRateGet(){
           jQuery('.item-skill').removeClass('active')
           jQuery(this).addClass('active')
           var priceValue = jQuery(this).data('price');
-          console.log('priceValue', priceValue)
+          var priceValueDolor = jQuery(this).data('dolor');
+          console.log('priceValue', priceValue, priceValueDolor)
           // const priceData = JSON.stringify(priceValue)
           skillPrice(priceValue);
       });
@@ -1326,6 +1349,8 @@ function priceRateGet(){
 
 
 }
+
+
 
 jQuery(document).ready(function(){
   jQuery('.slick-slider-most-blog').slick({
