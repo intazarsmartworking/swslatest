@@ -6195,15 +6195,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
 }
-.disabled\:opacity-5:disabled {
-  opacity: 0.05;
-}
-.disabled\:opacity-\[0\.6\]:disabled {
-  opacity: 0.6;
-}
-.disabled\:opacity-\[0\.9\]:disabled {
-  opacity: 0.9;
-}
 .disabled\:opacity-\[0\.3\]:disabled {
   opacity: 0.3;
 }
