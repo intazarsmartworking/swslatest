@@ -10,7 +10,7 @@
 
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-1000px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
-  	<div class=" w-full relative z-10">
+  	<div class=" w-full relative px-[20px] md:px-[0px] z-10">
         <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
             <a href="#" class="text-[18px] text-white font-medium"><span class="text-[#FF4F04]">&#8592;</span> &nbsp; Customer Success Stories</a>
         </div>

@@ -12,7 +12,7 @@ get_header();
 
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[1] left-[-20%] z-0 top-[-1100px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
-  	<div class=" w-full relative z-10">
+  	<div class=" w-full relative px-[20px] md:px-[0px] z-10">
 
 		<section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[5rem]" onload="callFunction()">
 			<div class="w-[100%] max-w-[1280px] mx-auto px-[20px] lg:px-[0px]">
