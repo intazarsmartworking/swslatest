@@ -103,6 +103,7 @@
   </div>
 </div>
 	
+  <span class=" w-[40px] h-[40px] fixed right-[50px] bottom-[30px] bg-[#ff4d04] block rounded-full z-[999] text-center cursor-pointer text-[20px] pt-[5px] font-bold text-[#fff]" id="top-scroll">&#8593;</span>
 
 <?php wp_footer(); ?>
 
