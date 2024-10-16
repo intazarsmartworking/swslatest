@@ -6555,6 +6555,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding-bottom: 1.25rem;
   }
 
+  .md\:px-\[0px\] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pb-16 {
     padding-bottom: 4rem;
   }
