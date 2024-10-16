@@ -706,6 +706,8 @@ $('.logoSlider').slick({
 });
 
 
+
+
 jQuery('#prev-blog').click(function(e) {
   jQuery('.relatedBlogs').slick('slickNext');
 });
@@ -1619,4 +1621,61 @@ jQuery('.slider-nav').slick({
   centerMode:true,
   verticalSwiping:false,
   arrows: false,
+});
+
+
+jQuery('#top-scroll').on('click', function() {
+  jQuery('html, body').animate({
+    scrollTop: jQuery('html, body').offset().top,
+  });
+});
+
+
+$('.customerStories').slick({
+  dots: true,
+  infinite: false,
+  speed: 100,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  centerMode: false,
+  focusOnSelect: true,
+  autoplay: true,
+  arrows: false,
+  dots:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+
+
+
+jQuery('#prevSlide').click(function(e) {
+  jQuery('.customerStories').slick('slickNext');
+});
+
+jQuery('#nextSlide').click(function(e) {
+  jQuery('.customerStories').slick('slickPrev');
 });
