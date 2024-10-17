@@ -26,7 +26,7 @@ function cc_faq_post_type() {
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-welcome-write-blog',
-		'rewrite'            => array( 'slug' => 'faq' ),
+		'rewrite'            => array( 'slug' => 'faq' , 'with_front' => false),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
@@ -190,7 +190,7 @@ function cc_author_post_type() {
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-edit',
-		'rewrite'            => array( 'slug' => 'author-sws'),
+		'rewrite'            => array( 'slug' => 'author-sws', 'with_front' => false),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' )
 	);
 
@@ -219,11 +219,12 @@ function success_stories_post_type() {
 	$args = array(
 		'labels'             => $labels,
         'hierarchical'       => true,
+		'public'             => true,
         'show_ui'            => true,
 		'show_admin_column'  => true,
 		'query_var'          => true,
 		'menu_icon'          => 'dashicons-welcome-view-site',
-		'rewrite'            => array( 'slug' => 'success-story' ),
+		'rewrite'            => array( 'slug' => 'success-story', 'with_front' => false ),
 		'supports'           => array( 'excerpt', 'custom-fields', 'title', 'thumbnail' ),
 		'taxonomies'  		 => array( 'successcategory' )
 	);

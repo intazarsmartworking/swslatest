@@ -100,13 +100,13 @@
 				?>
                 <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
                     <div class="col-span-2 md:col-span-1">
-                        <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]"><?php the_title(); ?></h5>
+                        <a href="<?php the_permalink(); ?>"> <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]"><?php the_title(); ?></h5> </a>
                         <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]"><?php echo get_the_excerpt();?></p>
                         <p class="text-[12px] text-[#fff] leading-[16px]"> <?php echo implode(', ', $term_names); ?> • 500+<p>
                     </div>
                     <div class="col-span-2 md:col-span-1">
                         <div class="stories-img-box">
-                            <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>">
+                         <a href="<?php the_permalink(); ?>"> <img class="w-[100%]" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php the_title(); ?>"> </a>
                             
                         </div>
                     </div>
