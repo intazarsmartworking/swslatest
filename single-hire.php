@@ -27,8 +27,9 @@
       <?php endif; ?> 
 
       <div class="header-buttons mt-6">
-        <input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
-        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-8 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Hire Now</a>
+	  <?php echo do_shortcode('[contact-form-7 id="75a4af4" title="Hire Developer Form"]');?>
+        <!--<input type="email" placeholder="Enter email address" class="custom-input text-white focus:outline-none mr-3">
+        <a href="https://smartworking.io/" class="button inline-block button-small rounded-md px-8 py-4 border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Hire Now</a>  -->
       </div>
       
     </div>
