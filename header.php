@@ -29,14 +29,14 @@
 	<script>
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
-    'pageCategory': '<?php echo is_category() ? get_queried_object()->name : (is_single() ? get_the_category()[0]->name : 'General'); ?>',
+    'categories': '<?php echo is_category() ? get_queried_object()->name : (is_single() ? get_the_category()[0]->name : 'General'); ?>',
     'pageTitle': '<?php wp_title(); ?>',
-    'pageTags': '<?php echo is_single() ? implode(", ", wp_get_post_tags(get_the_ID(), array('fields' => 'names'))) : ''; ?>',
-	'publishDate': '<?php echo is_single() ? get_the_date('Y-m-d') : ''; ?>',
-	'classificationTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'classification', array('fields' => 'names'))) : ''; ?>',
-	'channelTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'channel', array('fields' => 'names'))) : ''; ?>',
-	'audienceTerms': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'audience', array('fields' => 'names'))) : ''; ?>',
-	'selectedPostTitle': '<?php 
+    'tags': '<?php echo is_single() ? implode(", ", wp_get_post_tags(get_the_ID(), array('fields' => 'names'))) : ''; ?>',
+	  'publishDate': '<?php echo is_single() ? get_the_date('Y-m-d') : ''; ?>',
+	  'contentclassification': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'classification', array('fields' => 'names'))) : ''; ?>',
+	  'channel': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'channel', array('fields' => 'names'))) : ''; ?>',
+	  'targetaudience': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'audience', array('fields' => 'names'))) : ''; ?>',
+	  'pillartopic': '<?php 
         $selected_post_id = get_post_meta(get_the_ID(), '_selected_post_id', true); 
         if ($selected_post_id) {
             $selected_post = get_post($selected_post_id);
@@ -45,7 +45,7 @@ dataLayer.push({
             echo ''; 
         }
     ?>',
-	'selectedHirePostTitle': '<?php 
+	  'skill': '<?php 
         $selected_hire_post_id = get_post_meta(get_the_ID(), '_selected_hire_post_id', true); 
         if ($selected_hire_post_id) {
             $selected_hire_post = get_post($selected_hire_post_id);
@@ -54,7 +54,7 @@ dataLayer.push({
             echo ''; 
         }
     ?>',
-	'selectedRoleCategories': '<?php 
+	  'role': '<?php 
         $selected_roles = get_post_meta(get_the_ID(), '_selected_role_categories', true);
         if (!empty($selected_roles)) {
             $roles = array_map('get_term', (array)$selected_roles);
@@ -67,12 +67,27 @@ dataLayer.push({
 });
 </script>
 
-<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1c984497c48e647699da9dfc/script.js"></script> <!-- End cookieyes banner -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH6R78TJ');</script>
+<!-- End Google Tag Manager -->
 
+<!-- Start cookieyes banner --> 
+<!-- <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1c984497c48e647699da9dfc/script.js"></script> -->
+<!-- End cookieyes banner -->
+<meta name="google-site-verification" content="YhVyne2pd4bS9AodNc8CbiqznJdiw6FUM1zhDYcBB_E" />
 </head>
 <!-- background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png'); -->
 <body  <?php body_class(); ?> style="">
 <?php wp_body_open(); ?>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH6R78TJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="main-header w-[100%]">
   <div class="mobile-menu">
