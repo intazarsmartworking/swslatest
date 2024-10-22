@@ -1700,7 +1700,7 @@ ul li, ol li{
 }
 
 .scroll-menu li a.active{
-    color: #FF4F04;
+    color: #FF4F04 !important;
 }
 .stickysidenav{
     max-width: 100%;
@@ -2930,6 +2930,50 @@ body.lightMode .footer-background{
 }
 body.lightMode .get-latest{
   color: #000;
+}
+body.lightMode .single-blog{
+  color: #000;
+}
+
+body.lightMode .single-blog p{
+  color: #000;
+}
+
+body.lightMode .single-blog h3{
+  color: #000;
+}
+body.lightMode .blog-data-show p{
+  color: #000;
+}
+body.lightMode .blog-data-show .scroll-menu li a{
+  color: #000;
+}
+body.lightMode .relatedBlogs a p{
+  color: #000;
+}
+.swich-mode{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 0px;
+  top: calc(50vh - 20px);
+  z-index: 800;
+  background: #ff4d04;
+  white-space: nowrap;
+  border-radius: 20px 0px 0px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 0px 10px;
+}
+.swich-mode span{
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.swich-mode:hover{
+  width: 110px;
 }
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {
