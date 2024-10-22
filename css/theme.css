@@ -937,6 +937,9 @@ select {
 .bottom-\[100px\] {
   bottom: 100px;
 }
+.bottom-\[120px\] {
+  bottom: 120px;
+}
 .bottom-\[13px\] {
   bottom: 13px;
 }
@@ -1183,8 +1186,8 @@ select {
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
 }
-.bottom-\[120px\] {
-  bottom: 120px;
+.top-\[calc\(50vh-15px\)\] {
+  top: calc(50vh - 15px);
 }
 .-z-10 {
   z-index: -10;
@@ -1198,9 +1201,6 @@ select {
 .z-\[0\] {
   z-index: 0;
 }
-.z-\[100\] {
-  z-index: 100;
-}
 .z-\[10\] {
   z-index: 10;
 }
@@ -1212,6 +1212,9 @@ select {
 }
 .z-\[1\] {
   z-index: 1;
+}
+.z-\[300\] {
+  z-index: 300;
 }
 .z-\[999\] {
   z-index: 999;
@@ -1869,6 +1872,9 @@ select {
 .max-w-\[1380px\] {
   max-width: 1380px;
 }
+.max-w-\[190px\] {
+  max-width: 190px;
+}
 .max-w-\[210px\] {
   max-width: 210px;
 }
@@ -1943,15 +1949,6 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
-}
-.max-w-\[150px\] {
-  max-width: 150px;
-}
-.max-w-\[190px\] {
-  max-width: 190px;
-}
-.max-w-\[230px\] {
-  max-width: 230px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -6061,6 +6058,28 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 0.75rem;
     line-height: 1rem;
     padding: 7px 30px 7px 14px;
+}
+body.lightMode{
+  background-color: #fff;
+}
+body.lightMode .header-menu li a{
+  color: #000;
+}
+body.lightMode .steps-box{
+  color: #000;
+}
+body.lightMode .main-title{
+  color: #000;
+}
+body.lightMode .blog-item a p{
+  color: #000;
+}
+body.lightMode .footer-background{
+  background-color: #0F0F0F;
+  border-radius: 0px;
+}
+body.lightMode .get-latest{
+  color: #000;
 }
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {

@@ -2909,6 +2909,28 @@ input[type="range"].home-range-slider {
     line-height: 1rem;
     padding: 7px 30px 7px 14px;
 }
+body.lightMode{
+  background-color: #fff;
+}
+body.lightMode .header-menu li a{
+  color: #000;
+}
+body.lightMode .steps-box{
+  color: #000;
+}
+body.lightMode .main-title{
+  color: #000;
+}
+body.lightMode .blog-item a p{
+  color: #000;
+}
+body.lightMode .footer-background{
+  background-color: #0F0F0F;
+  border-radius: 0px;
+}
+body.lightMode .get-latest{
+  color: #000;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {
     .howItWorkHeading{

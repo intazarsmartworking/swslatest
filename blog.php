@@ -8,6 +8,7 @@
  get_header();
 ?>
 <div class=" w-full relative">
+	<div class=" w-[30px] bg-white h-[30px] fixed z-[300] right-0 top-[calc(50vh-15px)]" onclick="setLightMode()">Light</div>
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[1] left-[-20%] z-0 top-[-1100px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
 
@@ -15,7 +16,7 @@
 			<div class="w-[100%] max-w-[1280px] mx-auto px-[20px] lg:px-[0px]">
 				<div class="max-w-[900px] relative mx-auto text-center">
 					<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >BLOGS</span></div>
-					<h1 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Our ideas and insights</h1>
+					<h1 class="text-white text-[25px] lg:text-[56px] main-title font-medium mb-0">Our ideas and insights</h1>
 					<h6 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hire Developers</h6>
 				</div>
 
@@ -75,7 +76,7 @@
 
 				<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 items-center mt-[100px]">
 					<div class="grid-item col-span-6">
-						<h4 class="text-white text-[25px] lg:text-[56px] font-medium mb-0">Get the latest</h4>
+						<h4 class="text-white text-[25px] lg:text-[56px] get-latest font-medium mb-0">Get the latest</h4>
 					</div>
 					
 				</div>

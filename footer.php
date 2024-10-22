@@ -381,6 +381,39 @@ if( document.readyState == "complete" ){
         zfutm_zfAdvLead.zfautm_DHtmlSprt();
   }, false);
 }
+
+
+var lightTheme = JSON.parse(localStorage.getItem("themeType"));
+
+function checkBlogPage(change){
+  const location = window.location.href;
+  var findBlogPage = location.includes('/blog/')
+  lightTheme = change;
+  console.log(findBlogPage, lightTheme)
+  if(lightTheme && findBlogPage){
+    jQuery('body').removeClass('darkMode');
+    jQuery('body').addClass('lightMode');
+  }else{
+    jQuery('body').removeClass('lightMode');
+    jQuery('body').addClass('darkMode');
+  }
+}
+
+checkBlogPage(lightTheme);
+
+
+
+function setLightMode(){
+  lightTheme = !lightTheme;
+  localStorage.setItem("themeType", lightTheme);
+  console.log(lightTheme)
+  checkBlogPage(lightTheme);
+}
+
+
+
+
+
 </script>
 
 
