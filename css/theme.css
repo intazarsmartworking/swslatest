@@ -937,6 +937,9 @@ select {
 .bottom-\[100px\] {
   bottom: 100px;
 }
+.bottom-\[120px\] {
+  bottom: 120px;
+}
 .bottom-\[13px\] {
   bottom: 13px;
 }
@@ -945,6 +948,9 @@ select {
 }
 .bottom-\[30px\] {
   bottom: 30px;
+}
+.bottom-\[50px\] {
+  bottom: 50px;
 }
 .left-0 {
   left: 0px;
@@ -1051,6 +1057,9 @@ select {
 .right-\[90px\] {
   right: 90px;
 }
+.right-\[calc\(50\%-60px\)\] {
+  right: calc(50% - 60px);
+}
 .top-0 {
   top: 0px;
 }
@@ -1120,6 +1129,9 @@ select {
 .top-\[-90px\] {
   top: -90px;
 }
+.top-\[0\] {
+  top: 0;
+}
 .top-\[0px\] {
   top: 0px;
 }
@@ -1174,6 +1186,9 @@ select {
 .top-\[calc\(50\%-30px\)\] {
   top: calc(50% - 30px);
 }
+.top-\[calc\(50vh-15px\)\] {
+  top: calc(50vh - 15px);
+}
 .-z-10 {
   z-index: -10;
 }
@@ -1186,8 +1201,20 @@ select {
 .z-\[0\] {
   z-index: 0;
 }
+.z-\[10\] {
+  z-index: 10;
+}
+.z-\[12\] {
+  z-index: 12;
+}
+.z-\[15\] {
+  z-index: 15;
+}
 .z-\[1\] {
   z-index: 1;
+}
+.z-\[300\] {
+  z-index: 300;
 }
 .z-\[999\] {
   z-index: 999;
@@ -1802,6 +1829,9 @@ select {
 .w-\[80px\] {
   width: 80px;
 }
+.w-\[95px\] {
+  width: 95px;
+}
 .w-\[calc\(100\%-30px\)\] {
   width: calc(100% - 30px);
 }
@@ -1841,6 +1871,9 @@ select {
 }
 .max-w-\[1380px\] {
   max-width: 1380px;
+}
+.max-w-\[190px\] {
+  max-width: 190px;
 }
 .max-w-\[210px\] {
   max-width: 210px;
@@ -2451,6 +2484,9 @@ select {
 }
 .p-\[40px\] {
   padding: 40px;
+}
+.p-\[60px\] {
+  padding: 60px;
 }
 .p-\[6px\] {
   padding: 6px;
@@ -3113,6 +3149,10 @@ select {
 .text-\[\#000\] {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-\[\#01191E\] {
+  --tw-text-opacity: 1;
+  color: rgb(1 25 30 / var(--tw-text-opacity));
 }
 .text-\[\#040524\] {
   --tw-text-opacity: 1;
@@ -5393,9 +5433,10 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     z-index: 1000;
     padding: 20px;
     width: 100%;
+    position: sticky;
   }
 .main-header.fixed{
-    position: fixed;
+    position: sticky;
   }
 .main-header.fixed .header-box{
     background: rgba(0,0,0,0.2);
@@ -6018,6 +6059,28 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     line-height: 1rem;
     padding: 7px 30px 7px 14px;
 }
+body.lightMode{
+  background-color: #fff;
+}
+body.lightMode .header-menu li a{
+  color: #000;
+}
+body.lightMode .steps-box{
+  color: #000;
+}
+body.lightMode .main-title{
+  color: #000;
+}
+body.lightMode .blog-item a p{
+  color: #000;
+}
+body.lightMode .footer-background{
+  background-color: #0F0F0F;
+  border-radius: 0px;
+}
+body.lightMode .get-latest{
+  color: #000;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {
     .howItWorkHeading{
@@ -6520,6 +6583,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     padding-right: 24rem;
   }
 
+  .md\:px-\[0px\] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:px-\[10\%\] {
     padding-left: 10%;
     padding-right: 10%;
@@ -6553,11 +6621,6 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .md\:px-\[0px\] {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:pb-16 {
@@ -7146,20 +7209,12 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     font-size: 72px;
   }
 
-  .lg\:text-\[42px\] {
-    font-size: 42px;
-  }
-
   .lg\:leading-\[30px\] {
     line-height: 30px;
   }
 
   .lg\:leading-\[36px\] {
     line-height: 36px;
-  }
-
-  .lg\:leading-\[42px\] {
-    line-height: 42px;
   }
 
   .lg\:leading-\[45px\] {

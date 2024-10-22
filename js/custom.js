@@ -1196,7 +1196,7 @@ jQuery(window).scroll(function(){
       jQuery('.header-menu li a').removeClass('active');
       jQuery(".mega-menu-box").removeClass("open");
       jQuery('#mobile-show-menu').removeClass("isMenuShow");
-    if (scroll >= 100){
+    if (scroll >= 5){
       sticky.addClass('fixed')
     }else{
       sticky.removeClass('fixed')
@@ -1607,9 +1607,11 @@ jQuery('.slider-for').slick({
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplaySpeed: 3000,
   arrows: false,
   fade: true,
-  asNavFor: '.slider-nav'
+  asNavFor: '.slider-nav',
+  pauseOnHover:false
 });
 jQuery('.slider-nav').slick({
   slidesToShow: 3,
@@ -1618,9 +1620,10 @@ jQuery('.slider-nav').slick({
   asNavFor: '.slider-for',
   dots: false,
   focusOnSelect: true,
-  centerMode:true,
+  //centerMode:true,
   verticalSwiping:false,
   arrows: false,
+  pauseOnHover:false
 });
 
 
@@ -1679,3 +1682,5 @@ jQuery('#prevSlide').click(function(e) {
 jQuery('#nextSlide').click(function(e) {
   jQuery('.customerStories').slick('slickPrev');
 });
+
+

@@ -2270,9 +2270,10 @@ input[type="range"].home-range-slider {
     z-index: 1000;
     padding: 20px;
     width: 100%;
+    position: sticky;
   }
   .main-header.fixed{
-    position: fixed;
+    position: sticky;
   }
   .main-header.fixed .header-box{
     background: rgba(0,0,0,0.2);
@@ -2907,6 +2908,28 @@ input[type="range"].home-range-slider {
     font-size: 0.75rem;
     line-height: 1rem;
     padding: 7px 30px 7px 14px;
+}
+body.lightMode{
+  background-color: #fff;
+}
+body.lightMode .header-menu li a{
+  color: #000;
+}
+body.lightMode .steps-box{
+  color: #000;
+}
+body.lightMode .main-title{
+  color: #000;
+}
+body.lightMode .blog-item a p{
+  color: #000;
+}
+body.lightMode .footer-background{
+  background-color: #0F0F0F;
+  border-radius: 0px;
+}
+body.lightMode .get-latest{
+  color: #000;
 }
 /*End USE CSS for Slider*/
 @media (max-width: 800px) {
