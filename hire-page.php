@@ -38,7 +38,28 @@
                     </div>
 					<?php if(get_sub_field('right_side_image')): ?>
                     <div class="col-span-2 md:col-span-1 content-center text-right">
-                        <img class="w-[100%] max-w-[550px] inline-block" src="<?php echo get_sub_field('right_side_image')['url']; ?>" alt="<?php echo get_sub_field('right_side_image')['alt']; ?>">
+						<div class="w-[100%] relative max-w-[550px] inline-block p-[60px]">
+							<img class="absolute w-[150px] left-[0px] z-0 top-[0]" src="<?php echo get_template_directory_uri();?>/images/cut-star.svg" alt="">
+							<img class="absolute w-[95px] right-[0px] z-0 top-[0]" src="<?php echo get_template_directory_uri();?>/images/three-arrow.svg" alt="">
+							<img class="absolute w-[95px] right-[calc(50%-60px)] z-[12] bottom-[50px]" src="<?php echo get_template_directory_uri();?>/images/round-arrow.svg" alt="">
+							<!-- <img class="w-[100%] relative z-[10]" src="<?php echo get_template_directory_uri();?>/images/design-img.png" alt=""> -->
+							<img class="w-[100%] relative z-[10]" src="<?php echo get_sub_field('right_side_image')['url']; ?>" alt="<?php echo get_sub_field('right_side_image')['alt']; ?>">
+							 <div class="w-[100%] text-right absolute z-[15] right-[0px] max-w-[220px] bottom-[120px]">
+								<div class=" bg-white max-w-[190px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
+									Calculate Employee 
+									Costs Instantly
+								</div>
+								<div class=" bg-white w-[100%] mt-[20px] mb-[20px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
+									Draft Employment
+									Agreements Automatically
+								</div>
+								<div class=" bg-white max-w-[190px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
+									Active Global 
+									Payroll and Benefits
+								</div>
+							 </div>
+						</div>
+                        
                     </div>
 					<?php endif; ?>
                 </div>

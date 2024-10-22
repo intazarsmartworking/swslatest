@@ -1607,9 +1607,11 @@ jQuery('.slider-for').slick({
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplaySpeed: 3000,
   arrows: false,
   fade: true,
-  asNavFor: '.slider-nav'
+  asNavFor: '.slider-nav',
+  pauseOnHover:false
 });
 jQuery('.slider-nav').slick({
   slidesToShow: 3,
@@ -1618,9 +1620,10 @@ jQuery('.slider-nav').slick({
   asNavFor: '.slider-for',
   dots: false,
   focusOnSelect: true,
-  centerMode:true,
+  //centerMode:true,
   verticalSwiping:false,
   arrows: false,
+  pauseOnHover:false
 });
 
 
