@@ -97,8 +97,7 @@
                         </form>-->
 
                         <?php echo do_shortcode('[contact-form-7 id="713a21a" title="Assemble Team Form"]'); ?>
-                        <p class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </p>
-                    </div>
+                </div>
                     <!-- <div class="rounded-2xl border-pattern ">
                         <iframe class="home-form" aria-label='Share Your Requirement' frameborder="0" style="height:330px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
                         <h4 class="text-center text-dark-black text-sm font-semibold pt-3"> Our recruitment specialist will be in touch soon! </h4>
