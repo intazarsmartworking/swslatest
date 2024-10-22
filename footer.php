@@ -104,6 +104,7 @@
 </div>
 	
   <span class=" w-[40px] h-[40px] fixed right-[50px] bottom-[30px] bg-[#ff4d04] block rounded-full z-[999] text-center cursor-pointer text-[20px] pt-[5px] font-bold text-[#fff]" id="top-scroll">&#8593;</span>
+  <div id="theme-id" class="swich-mode" onclick="setLightMode()">&#9681; <span id="text-change">Light View</span></div>
 
 
 
@@ -388,14 +389,21 @@ var lightTheme = JSON.parse(localStorage.getItem("themeType"));
 function checkBlogPage(change){
   const location = window.location.href;
   var findBlogPage = location.includes('/blog/')
+  if(findBlogPage){
+    jQuery('#theme-id').show()
+  }else{
+    jQuery('#theme-id').hide()
+  }
   lightTheme = change;
   console.log(findBlogPage, lightTheme)
   if(lightTheme && findBlogPage){
     jQuery('body').removeClass('darkMode');
     jQuery('body').addClass('lightMode');
+    jQuery('#text-change').text('Dark View')
   }else{
     jQuery('body').removeClass('lightMode');
     jQuery('body').addClass('darkMode');
+    jQuery('#text-change').text('Light View')
   }
 }
 

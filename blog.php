@@ -8,7 +8,7 @@
  get_header();
 ?>
 <div class=" w-full relative">
-	<div class=" w-[30px] bg-white h-[30px] fixed z-[300] right-0 top-[calc(50vh-15px)]" onclick="setLightMode()">Light</div>
+	<!-- <div class=" w-[30px] bg-white h-[30px] fixed z-[300] right-0 top-[calc(50vh-15px)]" onclick="setLightMode()">Light</div> -->
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[1] left-[-20%] z-0 top-[-1100px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
 

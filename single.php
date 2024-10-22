@@ -26,7 +26,7 @@ get_header();
 			
 				<div class="max-w-[900px] relative mx-auto text-center">
 					<p class="text-[#FF4D02] text-[16px] font-bold ">Published <?php echo get_the_date('F j, Y');?></p>
-					<h1 class="text-white text-[25px] lg:text-[48px] font-bold mb-0"><?php the_title();?></h1>
+					<h1 class="text-white main-title text-[25px] lg:text-[48px] font-bold mb-0"><?php the_title();?></h1>
 					
 					
 				</div>
@@ -189,7 +189,7 @@ get_header();
 				<div class=" w-full mt-[80px]">
 					<div class="grid grid-cols-1 lg:grid-cols-10 rounded-[30px] mt-[120px]">
 						<div class="grid-item col-span-5">
-							<p class="text-white text-[25px] lg:text-[48px] font-bold mb-0">Related Blogs</p>
+							<p class="text-white text-[25px] lg:text-[48px] get-latest font-bold mb-0">Related Blogs</p>
 						</div>
 						<div class="grid-item col-span-5 text-end ">
 							<span class=" inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3" id="prev-blog">
