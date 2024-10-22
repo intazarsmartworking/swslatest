@@ -2270,9 +2270,10 @@ input[type="range"].home-range-slider {
     z-index: 1000;
     padding: 20px;
     width: 100%;
+    position: sticky;
   }
   .main-header.fixed{
-    position: fixed;
+    position: sticky;
   }
   .main-header.fixed .header-box{
     background: rgba(0,0,0,0.2);
