@@ -3,6 +3,44 @@
     "title": "Blog Detail Section",
     "fields": [
         {
+            "key": "field_67178fd2543a4",
+            "label": "Post Title",
+            "name": "post_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_67178fe1543a5",
+            "label": "Post Description",
+            "name": "post_description",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_66b9e0d58c381",
             "label": "Table Content",
             "name": "table_content",
@@ -248,5 +286,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724338840
+    "modified": 1729597430
 }
