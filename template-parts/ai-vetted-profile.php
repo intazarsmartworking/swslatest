@@ -18,7 +18,7 @@
 	<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?>  
-	  <div class="grid md:flex">
+	  <div class="grid md:flex mt-[40px]">
 		<div class="md:w-[25%] px-6">
 			<?php display_ai_vetted_profile_categories();?>
 		</div>

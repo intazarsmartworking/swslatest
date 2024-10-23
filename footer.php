@@ -104,7 +104,7 @@
 </div>
 	
   <span class=" w-[40px] h-[40px] fixed right-[50px] bottom-[30px] bg-[#ff4d04] block rounded-full z-[999] text-center cursor-pointer text-[20px] pt-[5px] font-bold text-[#fff]" id="top-scroll">&#8593;</span>
-  <div id="theme-id" class="swich-mode" onclick="setLightMode()">&#9681; <span id="text-change">Light View</span></div>
+  <div id="theme-id" class="swich-mode">&#9681; <span id="text-change">Light View</span></div>
 
 
 
@@ -410,13 +410,19 @@ function checkBlogPage(change){
 checkBlogPage(lightTheme);
 
 
-
-function setLightMode(){
+jQuery('#theme-id').on('click', function(){
   lightTheme = !lightTheme;
   localStorage.setItem("themeType", lightTheme);
-  console.log(lightTheme)
   checkBlogPage(lightTheme);
-}
+})
+
+
+// function setLightMode(){
+//   lightTheme = !lightTheme;
+//   localStorage.setItem("themeType", lightTheme);
+//   console.log(lightTheme)
+//   checkBlogPage(lightTheme);
+// }
 
 
 
