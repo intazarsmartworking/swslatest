@@ -1607,7 +1607,7 @@ jQuery('.slider-for').slick({
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 7000,
   arrows: false,
   fade: true,
   asNavFor: '.slider-nav',
