@@ -256,7 +256,15 @@
 			<?php endif; ?>	
                 <div class="relative z-10 footer-background !rounded-[24px] p-[32px] border border-[#3c1201]">
                     <div class="block bg-[#fff] p-[40px] rounded-[24px] mb-10">
-                        <p class=" text-[#050403] font-bold text-[20px] px-0 mb-5 text-center">Find and hire software developers by role / expertise</p>
+					<?php if (have_rows('hire_role_section')) : ?>
+					<?php while (have_rows('hire_role_section')) : the_row(); ?>
+					<?php if (get_row_layout() == 'explore_section') : ?>
+					<?php if(get_sub_field('box_heading')): ?>
+                        <p class=" text-[#050403] font-bold text-[20px] px-0 mb-5 text-center"><?php echo get_sub_field('box_heading'); ?></p>
+					<?php endif; ?>		
+					<?php endif; ?>		
+					<?php endwhile; ?>	
+					<?php endif; ?>	
                         <?php if (have_rows('hire_role_section')) : ?>
 						<?php while (have_rows('hire_role_section')) : the_row(); ?>
 						<?php
