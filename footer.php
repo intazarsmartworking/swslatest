@@ -395,7 +395,6 @@ function checkBlogPage(change){
     jQuery('#theme-id').hide()
   }
   lightTheme = change;
-  console.log(findBlogPage, lightTheme)
   if(lightTheme && findBlogPage){
     jQuery('body').removeClass('darkMode');
     jQuery('body').addClass('lightMode');
