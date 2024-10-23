@@ -44,11 +44,13 @@
 						<?php endif; ?>		
                         </div>
                         <div class="grid-item col-span-1 content-center">
-						
+						<?php if(get_sub_field('form_part')): ?>
                             <div class=" w-[100%] max-w-[450px] min-h-[300px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
 							    <h6 class="text-dark-orange font-bold text-2xl"> Let’s start building your team </h6>
-							    <?php echo do_shortcode('[contact-form-7 id="5476fb8" title="Landing Form"]'); ?>
+								<?php echo get_sub_field('form_part'); ?>
+							    <?php //echo do_shortcode('[contact-form-7 id="5476fb8" title="Landing Form"]'); ?>
                             </div>
+							<?php endif; ?>		
 						
                         </div>
                     </div>
