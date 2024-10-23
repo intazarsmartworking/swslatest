@@ -284,7 +284,7 @@
 								$query = new WP_Query( $args );
 								if ( $query->have_posts() ) {
 						?>
-							<div class="block">
+							<div class="block max-w-[860px] mx-auto">
 								<ul class="skill-list">
 								<?php
 								while ( $query->have_posts() ) {
@@ -296,9 +296,12 @@
 								$modified_permalink = rtrim($permalink, '/') . '-developer/';	
 								?>
 									<li>
-									<a href="<?php echo get_permalink(); ?>">
-									<img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo esc_url($hire_image_src[0]) ;?>" alt="<?php the_title();?>"> <?php the_title();?></li>
-									</a>
+										<a href="<?php echo get_permalink(); ?>">
+											<img class=" absolute top-[12px] left-[15px] w-[23px]" src="<?php echo esc_url($hire_image_src[0]) ;?>" alt="<?php the_title();?>"> 
+											<?php the_title();?>
+										</a>
+									</li>
+									
 								<?php }?>	
 								</ul>
 							</div>
