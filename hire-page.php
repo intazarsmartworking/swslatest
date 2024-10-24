@@ -443,8 +443,21 @@
 				</p>
 				<?php endif; ?>
                 </div>
-                <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
-                    <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
+                <div class="grid-item col-span-5 content-end relative py-[10%] lg:py-[100px]">
+
+						<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
+							<p class="text-[30px] font-semibold text-[#fff]">Hiring with Proxify</p>
+							<p class="text-[50px] font-bold text-[#fff]">27,500</p>
+							<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span> 50,000 <span class="text-[20px] inline-block align-bottom leading-[25px]"> £/yearly</span></p>
+							<p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to £20-25/hour</p>
+							<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+								<p class="text-[20px] text-[#fff]">Save up to £50,000/year</p>
+								<p class="text-[13px] text-[#fff]">All expenses included. No hidden costs.</p>
+							</div>
+						</div>
+
+					
+                    <!-- <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
                         <div class="px-6 py-4">
                             <div class="block">
 								<p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
@@ -474,17 +487,17 @@
 								</div>
                             </div>
                         </div>
-                    </div>
-                    <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="https://smartworking.io/wp-content/uploads/2024/06/calcbg.svg">
+                    </div> -->
+                    <!-- <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="https://smartworking.io/wp-content/uploads/2024/06/calcbg.svg"> -->
                 </div>
             </div>
         </section>
 		<?php endif; ?>		
 		
-		<!-- <?php if (get_row_layout() == 'after_calculator_section') : ?>	
+		<?php if (get_row_layout() == 'after_calculator_section') : ?>	
         <section class="w-full px-3">
             <div class="w-[100%] max-w-[1280px] mx-auto py-16">
-                <div class="grid grid-cols-12 md:grid-cols-12 gap-3">
+                <!-- <div class="grid grid-cols-12 md:grid-cols-12 gap-3">
                     <div class="col-span-12 md:col-span-7">
 					<?php if(get_sub_field('main_heading')): ?>
                         <h5 class="font-medium text-[25px] md:text-[48px] text-white md:leading-[55px] mb-5"><?php echo get_sub_field('main_heading'); ?></h5>
@@ -501,7 +514,7 @@
                         </div>
                     <?php endif; ?>    
                     </div>
-                </div>
+                </div> -->
 				<div class="grid grid-cols-12 md:grid-cols-12 py-14 gap-5 mt-14">
 					<?php if(have_rows('content_section')): ?>
 					<?php while(have_rows('content_section')): the_row(); ?>
@@ -509,13 +522,16 @@
 						$heading = get_sub_field('heading'); 
 						$paragraph = get_sub_field('paragraph');	
 					?>
-						<div class="col-span-12 md:col-span-4">
-							<div class="europe-box rounded-3xl mb-5 h-[100%]">
+						<div class="col-span-12 md:col-span-6">
+							<div class="rounded-3xl relative mb-5 h-[100%] pl-[80px]">
+								<div class=" text-center w-[50px] h-[50px] pt-[10px] absolute bg-black border border-[#FF4D02] rounded-full left-[30px] top-[30px]">
+									<img class="w-[35px] h-[22px] inline-block" src="https://smartworking.io/wp-content/uploads/2024/07/No-hidden-Fee.svg">
+								</div>
 								<div class="flex">
 									<div class="w-[100%] px-6 py-6">
-										<div class="mt-12">
+										<div class="mt-0">
 											<h5 class="text-white text-[25px] font-bold leading-tight mb-5"> <?php echo $heading;?> </h5>
-											<p class="text-white text-base text-justify"><?php echo $paragraph;?></p>
+											<p class="text-white text-base"><?php echo $paragraph;?></p>
 										</div>
 									</div>
 								</div>
@@ -527,7 +543,7 @@
                 </div>
 			</div>
         </section>
-		<?php endif; ?>		 -->
+		<?php endif; ?>
 		
 
         <?php if (get_row_layout() == 'testimonial_section') : ?>
