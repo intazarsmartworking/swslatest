@@ -36,6 +36,8 @@ dataLayer.push({
 	  'contentclassification': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'classification', array('fields' => 'names'))) : ''; ?>',
 	  'channel': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'channel', array('fields' => 'names'))) : ''; ?>',
 	  'targetaudience': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'audience', array('fields' => 'names'))) : ''; ?>',
+    'role': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'role', array('fields' => 'names'))) : ''; ?>',
+    'skill': '<?php echo is_single() ? implode(", ", wp_get_post_terms(get_the_ID(), 'skill', array('fields' => 'names'))) : ''; ?>',
 	  'pillartopic': '<?php 
         $selected_post_id = get_post_meta(get_the_ID(), '_selected_post_id', true); 
         if ($selected_post_id) {
@@ -45,25 +47,7 @@ dataLayer.push({
             echo ''; 
         }
     ?>',
-	  'skill': '<?php 
-        $selected_hire_post_id = get_post_meta(get_the_ID(), '_selected_hire_post_id', true); 
-        if ($selected_hire_post_id) {
-            $selected_hire_post = get_post($selected_hire_post_id);
-            echo esc_js($selected_hire_post->post_title); 
-        } else {
-            echo ''; 
-        }
-    ?>',
-	  'role': '<?php 
-        $selected_roles = get_post_meta(get_the_ID(), '_selected_role_categories', true);
-        if (!empty($selected_roles)) {
-            $roles = array_map('get_term', (array)$selected_roles);
-            $role_names = array_map(function($role) { return esc_js($role->name); }, $roles);
-            echo implode(", ", $role_names);
-        } else {
-            echo '';
-        }
-    ?>'
+	  
 });
 </script>
 
