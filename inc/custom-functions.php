@@ -598,3 +598,20 @@ function save_selected_post_id($post_id) {
     }
 }
 add_action('save_post', 'save_selected_post_id');
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Remove custom taxonomy columns in the posts admin list
+function remove_custom_taxonomy_columns( $columns ) {
+    unset( $columns['taxonomy-audience'] );  // Remove Audience column
+    unset( $columns['taxonomy-channel'] );   // Remove Channel column
+    unset( $columns['taxonomy-cluster'] );   // Remove Cluster column
+    unset( $columns['taxonomy-classification'] ); // Remove Classification column
+    unset( $columns['taxonomy-role'] );      // Remove Role column
+    unset( $columns['taxonomy-skill'] );      // Remove Role column
+    return $columns;
+}
+add_filter( 'manage_edit-post_columns', 'remove_custom_taxonomy_columns' );
