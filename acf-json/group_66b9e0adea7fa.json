@@ -145,6 +145,46 @@
             ]
         },
         {
+            "key": "field_671a553b72792",
+            "label": "References",
+            "name": "references",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_671a554972793",
+                    "label": "Add Reference",
+                    "name": "add_reference",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
             "key": "field_66bccd4004995",
             "label": "Author",
             "name": "author",
@@ -286,5 +326,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729597430
+    "modified": 1729779060
 }

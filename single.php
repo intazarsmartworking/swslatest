@@ -154,6 +154,29 @@ get_header();
 										</div>
 										<?php endif; ?>
 									</div>
+									
+									<div class="blog-bio py-[10px] border-t border-[#eaecf04d] mt-10 pt-[24px]">
+										<div class="w-full">
+										  <div class="basis">
+										    <h3 class="text-[#AAA] font-normal"> References </h3>
+											<?php if(have_rows('references')): ?>
+											<?php while(have_rows('references')): the_row(); ?>
+											<?php 
+												$add_reference = get_sub_field('add_reference'); 
+											?>
+											
+											 <p>  <?php echo $add_reference;?> </p>
+	
+											<?php endwhile; ?>	
+											<?php endif; ?>	 
+											
+										  </div>
+										</div>
+									
+									</div>
+									
+									
+									
 									<?php
 										else :
 											echo '<p>Author information is not available.</p>';
@@ -294,6 +317,16 @@ get_header();
 	jQuery(window).bind("load", function() {
 		callFunction()
 	});
+	
+	jQuery(document).ready(function() {
+		jQuery('a.see-footnote').on('click', function(event) {
+		event.preventDefault();
+
+        jQuery('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top
+        }, 800); 
+      });
+	});	
 </script>
 <?php
 get_footer();
