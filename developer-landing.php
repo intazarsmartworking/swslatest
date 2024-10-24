@@ -1133,7 +1133,7 @@
                     </div>
                   </div>
                   <div class="grid-item col-span-2 content-start">
-                    <div class="bg-[#FF4D02] rounded-[10px] min-h-[300px] p-3 stickysidenav">
+                    <div class="bg-[#c282fa] rounded-[10px] min-h-[300px] p-3 stickysidenav">
                         <h5  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h5>
                         <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
                           <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">

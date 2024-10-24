@@ -2282,7 +2282,8 @@ input[type="range"].home-range-slider {
   .header-box{
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
     padding: 13px 23px;
   }
@@ -2922,34 +2923,34 @@ body.lightMode .main-title{
   color: #000;
 }
 body.lightMode .blog-item a p{
-  color: #000;
+  color: #000 !important;
 }
 body.lightMode .footer-background{
   background-color: #0F0F0F;
   border-radius: 0px;
 }
 body.lightMode .get-latest{
-  color: #000;
+  color: #000 !important;
 }
 body.lightMode .single-blog{
-  color: #000;
+  color: #000 !important;
 }
 
 body.lightMode .single-blog p{
-  color: #000;
+  color: #000 !important;
 }
 
 body.lightMode .single-blog h3{
-  color: #000;
+  color: #000 !important;
 }
 body.lightMode .blog-data-show p{
-  color: #000;
+  color: #000 !important;
 }
 body.lightMode .blog-data-show .scroll-menu li a{
-  color: #000;
+  color: #000 !important;
 }
 body.lightMode .relatedBlogs a p{
-  color: #000;
+  color: #000 !important;
 }
 .swich-mode{
   width: 40px;

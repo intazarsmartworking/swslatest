@@ -18,7 +18,7 @@
 				<section class="flex flex-col items-center justify-center py-16">
 					<div class="flex flex-col items-center justify-center mb-20">
 					<?php if(get_sub_field('main_title')): ?>    
-						<h1 class="font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
+						<h1 class="font-medium text-center text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
 							<?php echo get_sub_field('main_title'); ?><br>
 							<span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span>
 					</h1> 
@@ -505,7 +505,7 @@
               </div>
 			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
-                <div class="bg-[#FF4D02] rounded-[10px] min-h-[100px] p-5 stickysidenav">
+                <div class="bg-[#c282fa] rounded-[10px] min-h-[100px] p-5 stickysidenav">
                     <h3  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h3>
 					<?php if(get_sub_field('right_cta_button_name')): ?>
                     <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block py-4 text-center text-[18px] px-5 rounded-[14px] border text-[#FF4D02] mt-[30px]"><?php echo get_sub_field('right_cta_button_name'); ?> 
