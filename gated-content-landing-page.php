@@ -65,44 +65,7 @@
                     </div>
                     <div class="grid-item col-span-4">
                         <div class=" w-[100%] ml-auto max-w-[480px] bg-[#fff] rounded-[20px] p-[35px] border border-[#fff]">
-                            <h5 class="text-[#000] font-bold text-[30px] mb-[30px]">Download the Report</h5>
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
-                                <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your name" required />
-                            </div>
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Work Email</label>
-                                <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email" required />
-                            </div>
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
-                                <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your company" required />
-                            </div>
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
-                                <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your Phone" required />
-                            </div> 
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Annual Revenue Range</label>
-                                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option>United States</option>
-                                    <option>Canada</option>
-                                    <option>France</option>
-                                    <option>Germany</option>
-                                </select>
-                            </div> 
-                            <div class="mb-5">
-                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Country</label>
-                                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option>United States</option>
-                                    <option>Canada</option>
-                                    <option>France</option>
-                                    <option>Germany</option>
-                                </select>
-                            </div> 
-                            <div class="">
-                                <button class="button w-[100%] block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Download</button>
-                            </div>
+                            <?php echo do_shortcode('[contact-form-7 id="df3904d" title="Gated Form"]');?>
                         </div>
                     </div>
             </div>
