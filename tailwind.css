@@ -2913,9 +2913,9 @@ input[type="range"].home-range-slider {
 body.lightMode{
   background-color: #fff;
 }
-body.lightMode .header-menu li a{
+/* body.lightMode .header-menu li a{
   color: #000;
-}
+} */
 body.lightMode .steps-box{
   color: #000;
 }
@@ -3013,9 +3013,9 @@ body.lightMode .relatedBlogs a p{
     .clinet-logo .item{
         margin: 6px;
     }
-    .stickysidenav.side-bar-fix{
+    /* .stickysidenav.side-bar-fix{
        position: relative !important;
-    }
+    } */
     .header-box{
         padding: 13px 15px;
     }

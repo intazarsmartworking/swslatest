@@ -111,7 +111,7 @@
 		<?php if (have_rows('section_block')) : ?>
 			<?php while (have_rows('section_block')) : the_row(); ?>
 			<?php if (get_row_layout() == 'second_section') : ?>
-			<div class="w-full relative grid items-center pb-32">
+			<div class="w-full relative grid items-center pb-16">
 				<div class="mx-auto w-[100%] max-w-[1280px] md:px-0 px-10">
 					<?php if(get_sub_field('small_title')): ?>	
 						<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
@@ -120,7 +120,7 @@
 					<?php if(get_sub_field('main_title')): ?>
 						<h5 class=" text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <span class="text-white"><?php echo get_sub_field('main_title'); ?></span><span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span> </h5>
 					<?php endif; ?>
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-28">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
 
 					<?php if(have_rows('box_section')): ?>
 						<?php while(have_rows('box_section')): the_row(); ?>

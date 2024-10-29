@@ -15,7 +15,7 @@
 	<?php while (have_rows('hire_role_section')) : the_row(); ?>
 	<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class=" w-[100%] max-w-[1280px] mx-auto py-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div class="col-span-2 md:col-span-1 content-center">
 					<?php if(get_sub_field('main_heading')): ?>
@@ -66,7 +66,7 @@
 	<?php endif; ?>
 	<?php if (get_row_layout() == 'vetted_profile') : ?>
         <section class="w-full px-3">
-            <div class="w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class="w-[100%] max-w-[1280px] mx-auto py-10">
                 <div class="block">
 				<?php if(get_sub_field('small_title')): ?>
                     <div class="text-center small-intro"><?php echo get_sub_field('small_title'); ?></div>
@@ -236,7 +236,7 @@
 	<?php endwhile; ?>	
 	<?php endif; ?>	
         <section class="w-full px-3">
-            <div class="w-[100%] relative max-w-[1280px] mx-auto py-16">
+            <div class="w-[100%] relative max-w-[1280px] mx-auto py-py-8">
 			<img class="absolute w-[400px] right-[-180px] z-0 top-[165px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
 			<?php if (have_rows('hire_role_section')) : ?>
 			<?php while (have_rows('hire_role_section')) : the_row(); ?>
@@ -329,7 +329,7 @@
 		<?php if (have_rows('hire_role_section')) : ?>
 		<?php while (have_rows('hire_role_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'process_section') : ?>
-			<section class="w-full px-3 py-16">
+			<section class="w-full px-3 py-10">
 				<div class="container mx-auto">
 					<div class="block">
 						<?php if(get_sub_field('small_title')): ?>  
@@ -368,7 +368,7 @@
 							</div>
 						</div>
 						<div class="col-span-12 md:col-span-7 content-center pl-0 md:pl-[10rem] pr-3 md:pr-10">
-
+							<div class="p-6 border border-[#fff] rounded-[10px]">
 								<div class="slider slider-for">
 									<?php if(have_rows('process_section')): ?>
 										<?php while(have_rows('process_section')): the_row(); ?>
@@ -396,6 +396,7 @@
 
 										
 								</div>
+							</div>
 
 
 							
@@ -494,7 +495,7 @@
 		
 		<?php if (get_row_layout() == 'after_calculator_section') : ?>	
         <section class="w-full px-3">
-            <div class="w-[100%] max-w-[1280px] mx-auto py-16">
+            <div class="w-[100%] max-w-[1280px] mx-auto py-10">
                 <!-- <div class="grid grid-cols-12 md:grid-cols-12 gap-3">
                     <div class="col-span-12 md:col-span-7">
 					<?php if(get_sub_field('main_heading')): ?>
@@ -513,7 +514,7 @@
                     <?php endif; ?>    
                     </div>
                 </div> -->
-				<div class="grid grid-cols-12 md:grid-cols-12 py-14 gap-5 mt-14">
+				<div class="grid grid-cols-12 md:grid-cols-12 gap-5">
 					<?php if(have_rows('content_section')): ?>
 					<?php while(have_rows('content_section')): the_row(); ?>
 					<?php 
@@ -615,7 +616,7 @@
 		<?php endif; ?>	
 		<?php endwhile; ?>	
 		<?php endif; ?>
-		<div class="w-full relative pt-16">
+		<div class="w-full relative">
 			<h4 class="text-center small-intro"> Blogs </h4>
 			<h2 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight">Our  Blogs </h2>
 			<p class="text-white text-xl font-normal text-center mt-6 mb-0 px-0 "> Interviews, tips, guides, industry best practices, and news. </p>
@@ -626,7 +627,7 @@
         <?php if (have_rows('hire_role_section')) : ?>
 		<?php while (have_rows('hire_role_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'faq_section') : ?>
-		<div class="w-full relative grid items-center z-10 py-16">
+		<div class="w-full relative grid items-center z-10 py-10">
 			<div class="container mx-auto md:px-0 px-10">
 			<?php if(get_sub_field('small_title')): ?>
 			<h3 class="text-center small-intro"> <?php echo get_sub_field('small_title'); ?> </h3>
