@@ -7,7 +7,7 @@
 
  get_header('second');
 ?>
-<section class="w-full p-4 py-[100px]">
+<section class="w-full p-4 py-[30px]">
 	<div class="mx-auto w-[100%] max-w-[1280px]">
         <div class="grid grid-cols-1 lg:grid-cols-10 gap-4 h-[100%]  relative">
 		<?php if (have_rows('contact_block')) : ?>
