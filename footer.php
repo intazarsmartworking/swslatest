@@ -54,11 +54,11 @@
         <h6 class="text-white text-xl font-medium leading-normal"> Contact Details </h6>
         <div class="pb-7 pt-5">
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h6>
-          <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('email_footer', 'options'); ?> </p>
+          <a href= "mailto: <?php echo get_field('email_footer', 'options'); ?>" class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('email_footer', 'options'); ?> </a>
         </div>
         <div class="pb-7">
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Phone </h6>
-          <p class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('phone_footer', 'options'); ?> </p>
+          <a href="tel:<?php echo get_field('phone_footer', 'options'); ?>" class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('phone_footer', 'options'); ?> </a>
         </div>
       </div>
     </div>

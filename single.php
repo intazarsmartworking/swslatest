@@ -12,7 +12,7 @@ get_header();
 
 <div class=" w-full relative">
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[1] left-[-20%] z-0 top-[-1100px]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
-  	<div class=" w-full relative px-[20px] md:px-[0px] z-10">
+  	<div class=" w-full relative px-[0px] lg:px-[20px] md:px-[0px] z-10">
 
 		<section class="w-[100%] min-h-[600px] py-[4rem] lg:py-[5rem]" onload="callFunction()">
 			<div class="w-[100%] max-w-[1280px] mx-auto px-[20px] lg:px-[0px]">
@@ -59,7 +59,7 @@ get_header();
 						
 						
 							<div class="grid grid-cols-1 lg:grid-cols-10 gap-5 mt-5">
-								<div class="grid-item col-span-2 text-white content-start" id="fix-side-box">
+								<div class="grid-item col-span-10 lg:col-span-2 text-white content-start" id="fix-side-box">
 									<div class="stickysidenav blog-data-show">
 										<p class="text-[20px] text-white font-medium !mb-2">In this article</p>
 										<?php if(have_rows('table_content')): ?>
@@ -79,7 +79,7 @@ get_header();
 										</ul>
 									</div>
 								</div>
-								<div class="grid-item col-span-6 text-white single-blog content-start ">
+								<div class="grid-item col-span-10 lg:col-span-6 text-white single-blog content-start ">
 									<p class="text-white font-medium "> <?php echo  get_the_content();?> </p>
 									
 									<?php if(have_rows('table_content')): ?>
@@ -187,7 +187,7 @@ get_header();
 									?>	
 									
 								</div>
-								<div class="grid-item col-span-2 text-white content-start">
+								<div class="grid-item col-span-10 lg:col-span-2 text-white content-start">
 									<div class=" bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
 										
 									<div>

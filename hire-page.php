@@ -370,7 +370,7 @@
 							</div>
 						</div>
 						<div class="col-span-12 md:col-span-7 content-center pl-0 md:pl-[10rem] pr-3 md:pr-10">
-
+							<div class="p-6 border border-[#fff] rounded-[10px]">
 								<div class="slider slider-for">
 									<?php if(have_rows('process_section')): ?>
 										<?php while(have_rows('process_section')): the_row(); ?>
@@ -398,6 +398,7 @@
 
 										
 								</div>
+							</div>
 
 
 							

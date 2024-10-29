@@ -74,7 +74,7 @@
 <!-- Vetted Profile Section -->
 
 <?php if (get_row_layout() == 'vetted_profile') : ?>
-<section class="flex flex-col items-center justify-center py-16">
+<section class="flex flex-col items-center justify-center py-8">
 	<?php if(get_sub_field('top_title')): ?>
 		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 	<?php endif; ?> 
@@ -247,7 +247,7 @@
 <!-- Top Section -->
 
 <?php if (get_row_layout() == 'top_find_section') : ?>
-<section class="w-full relative py-16">
+<section class="w-full relative py-8">
 <div class="container mx-auto max-w-[1280px]">
 <?php if(get_sub_field('top_title')): ?>  
   <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
@@ -299,7 +299,7 @@
 
 <!-- Benefit Section -->
 <?php if (get_row_layout() == 'benefit_section') : ?>
-<section class="flex flex-col items-center justify-center py-16 w-full">
+<section class="flex flex-col items-center justify-center py-8 w-full">
 	<?php if(get_sub_field('top_title')): ?>
 		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 	<?php endif; ?> 
