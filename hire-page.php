@@ -45,18 +45,16 @@
 							<!-- <img class="w-[100%] relative z-[10]" src="<?php echo get_template_directory_uri();?>/images/design-img.png" alt=""> -->
 							<img class="w-[100%] relative z-[10]" src="<?php echo get_sub_field('right_side_image')['url']; ?>" alt="<?php echo get_sub_field('right_side_image')['alt']; ?>">
 							 <div class="w-[100%] text-right absolute z-[15] right-[0px] max-w-[220px] bottom-[120px]">
-								<div class=" bg-white max-w-[190px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
-									Calculate Employee 
-									Costs Instantly
+								<?php if(have_rows('image_text')): ?>
+								<?php while(have_rows('image_text')): the_row(); 
+								  $text = get_sub_field('text'); 
+								  $class = get_sub_field('class'); 
+								?>
+								<div class=" bg-white <?php echo $class;?> inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
+									<?php echo $text;?>
 								</div>
-								<div class=" bg-white w-[100%] mt-[20px] mb-[20px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
-									Draft Employment
-									Agreements Automatically
-								</div>
-								<div class=" bg-white max-w-[190px] inline-block text-center rounded-[15px] text-[#01191E] text-[14px] font-bold p-[15px]">
-									Active Global 
-									Payroll and Benefits
-								</div>
+							    <?php endwhile; ?>	
+								<?php endif; ?>	
 							 </div>
 						</div>
                         
@@ -447,13 +445,13 @@
                 <div class="grid-item col-span-5 content-end relative py-[10%] lg:py-[100px]">
 
 						<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
-							<p class="text-[30px] font-semibold text-[#fff]">Hiring with Proxify</p>
-							<p class="text-[50px] font-bold text-[#fff]">27,500</p>
-							<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span> 50,000 <span class="text-[20px] inline-block align-bottom leading-[25px]"> £/yearly</span></p>
-							<p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to £20-25/hour</p>
+							<p class="text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
+							<p class="text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
+							<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> £/yearly</span></p>
+							<p class="text-[20px] text-[#fff] mt-[20px]"><?php echo get_sub_field('equivalent_text'); ?></p>
 							<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
-								<p class="text-[20px] text-[#fff]">Save up to £50,000/year</p>
-								<p class="text-[13px] text-[#fff]">All expenses included. No hidden costs.</p>
+								<p class="text-[20px] text-[#fff]"><?php echo get_sub_field('save_text'); ?></p>
+								<p class="text-[13px] text-[#fff]"><?php echo get_sub_field('expense_include'); ?></p>
 							</div>
 						</div>
 
