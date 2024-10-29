@@ -9,8 +9,6 @@
 ?>
 <section class="w-full py-16">
     <img class="bg-img absolute w-[100%] right-[0] z-0 top-[-1100px]" src="<?php echo get_template_directory_uri();?>/images/bg-left.svg" alt="">
-    
-	
     <div class="w-full relative z-10">
 	<?php if (have_rows('gated_section')) : ?>
 	<?php while (have_rows('gated_section')) : the_row(); ?>
@@ -50,7 +48,7 @@
         </div>
 		<?php endif; ?>
 		
-		<?php if (get_row_layout() == 'banner_section') : ?>
+		<?php if (get_row_layout() == 'main_section') : ?>
         <div class="container mx-auto mt-6 md:mt-[100px]">
             <div class="grid grid-cols-1 md:grid-cols-10 gap-2 md:gap-6 p-3 md:p-[80px] bg-[#1F0C04] border border-[#401A0A] rounded-[30px]">
                     <div class="grid-item col-span-6">
@@ -113,11 +111,5 @@
 	<?php endwhile; ?>	
 	<?php endif; ?>
     </div>
-		
 </section>
-
-
-
-
-
 <?php get_footer();?>
