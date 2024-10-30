@@ -2949,6 +2949,9 @@ body.lightMode .blog-data-show p{
 body.lightMode .blog-data-show .scroll-menu li a{
   color: #000 !important;
 }
+body.lightMode .blog-data-show .scroll-menu li a.active{
+  color: #FF4F04 !important;
+}
 body.lightMode .relatedBlogs a p{
   color: #000 !important;
 }
@@ -2967,6 +2970,10 @@ body.lightMode .relatedBlogs a p{
   font-size: 25px;
   font-weight: 700;
   padding: 0px 10px;
+  display: none;
+}
+.swich-mode.active{
+  display: block;
 }
 .swich-mode span{
   font-size: 12px;
