@@ -424,7 +424,18 @@ jQuery('#theme-id').on('click', function(){
 // }
 
 
+document.addEventListener('wpcf7mailsent', function(event) {
+	console.log('first');
+    if (event.detail.contactFormId == 3822) { 
+		console.log('second');
+        const pdfUrl = 'https://smartworking.io/wp-content/uploads/2024/09/One-Pager-copy.pdf';
 
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'Gated.pdf'; 
+        link.click();
+    }
+}, false);
 
 
 </script>
