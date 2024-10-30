@@ -514,6 +514,12 @@
                     <?php endif; ?>    
                     </div>
                 </div> -->
+
+				<?php if(get_sub_field('main_heading')): ?>
+					<h5 class="font-medium text-center text-[25px] md:text-[48px] text-white md:leading-[55px] mb-10">Why Choose Smart Working <span class="text-dark-orange block">for Your Next Hiring</span></h5>
+				<?php endif; ?>	
+
+
 				<div class="grid grid-cols-12 md:grid-cols-12 gap-5">
 					<?php if(have_rows('content_section')): ?>
 					<?php while(have_rows('content_section')): the_row(); ?>
