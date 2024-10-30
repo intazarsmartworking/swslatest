@@ -127,19 +127,33 @@
 
 
                     </div>
-                    <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] bg-white p-[10px] lg:p-[20px]">
+                    <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] p-[10px] lg:p-[20px] !py-0">
                         
-                        <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4">
-                            <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold "><span id="typeCurrency">£</span><span id="total-price">0</span>/hr</h5>
-                            <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
+                        <div class="block border bg-white border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px]">
+                            <h5 class="text-[#FF4D02] text-center text-[32px] lg:text-[32px] font-bold "><span class="currency-symble">$</span><span id="total-price">0</span>/hr</h5>
+                            <p class="text-[#040524] text-center text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
                             <a href="/contact-us/"> <button class="w-full button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange" >HIRE NOW WITH SMART WORKING</button> </a>
-                            <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p>
+                            <!-- <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p> -->
                         </div>
 
-                        <div class="block border border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px] mt-4 text-center">
-                            <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
+                        <div class="block mt-6">
+
+                            <div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+                                <p class="text-[30px] font-semibold text-[#fff]"> Hiring with Smart Working</p>
+                                <p class="text-[50px] font-bold text-[#fff]"><span class="discount-price">0</span></p>
+                                <p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="upToPrice">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/yearly</span></p>
+                                <p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span>14-35/hour</p>
+                                <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+                                    <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p>
+                                    <p class="text-[13px] text-[#fff]">All expenses included. No hidden costs.</p>
+                                </div>
+                            </div>
+
+
+
+                            <!-- <img class="h-[42] inline-block" src="<?php echo get_template_directory_uri();?>/images/well-hand.png">
                             <h5 class="text-[#FF4D02] text-[32px] lg:text-[32px] font-bold mt-5">Save £<span id="discount-price">0</span>/month</h5>
-                            <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p>
+                            <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Save 40-50% per hire, as well as the time and hassle of hiring internally</p> -->
                             
                         </div>
                         

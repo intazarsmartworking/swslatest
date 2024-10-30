@@ -390,9 +390,11 @@ function checkBlogPage(change){
   const location = window.location.href;
   var findBlogPage = location.includes('/blog/')
   if(findBlogPage){
-    jQuery('#theme-id').show()
+    jQuery('#theme-id').show();
+    jQuery('#theme-id').addClass('active');
   }else{
-    jQuery('#theme-id').hide()
+    jQuery('#theme-id').hide();
+    jQuery('#theme-id').removeClass('active');
   }
   lightTheme = change;
   if(lightTheme && findBlogPage){
