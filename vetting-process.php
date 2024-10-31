@@ -40,11 +40,7 @@
 
             <section class="w-[100%] relative vetting-step-section">
                 <div class="w-[100%] relative z-10 vetting-step-section-inner max-w-[1375px] mx-auto p-3 lg:px-[60px] lg:py-[80px]">
-                <!-- <div class="w-[20px] left-[50%] top-0 h-[100%] absolute bg-red-300 " id="track">
-                    <img id="element" class="w-[30px] bg-[#fff]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png">
-                    
-                </div> -->
-                    <?php if (have_rows('vetting_process')) : ?>
+                <?php if (have_rows('vetting_process')) : ?>
                     <?php while (have_rows('vetting_process')) : the_row(); ?>
                     <?php if (get_row_layout() == 'step_section') : ?>
                     
@@ -55,11 +51,9 @@
                         $main_title = get_sub_field('main_title'); 
                         $class_name = get_sub_field('class_name'); 
                         
-                        // Determine if the row index is odd or even
                         $row_index = get_row_index();
                         $is_odd = $row_index % 2 !== 0;
 
-                        // Define classes based on the row index
                         if ($is_odd) {
                             $first_column_class = 'lg:pr-[60px]';
                             $second_column_class = 'content-end';
@@ -121,19 +115,6 @@
                         <div class="vetting-path <?php echo $img_inline_class;?>" style="mask-image: url('<?php echo get_template_directory_uri();?>/images/path-line.png')">
                             <div class="vetting_img"></div>
                         </div>
-                        <!-- <svg class="<?php echo $img_inline_class;?>" xmlns="http://www.w3.org/2000/svg" width="577" height="190" viewBox="0 0 577 190" fill="none">
-                            <path d="M576 0V55C576 77.0914 558.091 95 536 95H41C18.9086 95 1 112.909 1 135V190" stroke="url(#paint0_linear_1535_1839)"/>
-                            <defs>
-                                <linearGradient id="paint0_linear_1535_1839" x1="0.999996" y1="190" x2="576" y2="3.70274e-06" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#D0511B" stop-opacity="0.1"/>
-                                <stop offset="0.296676" stop-color="#D0511B"/>
-                                <stop offset="0.701861" stop-color="#D0511B"/>
-                                <stop offset="1" stop-color="#D0511B" stop-opacity="0.1"/>
-                                </linearGradient>
-                            </defs>
-                            
-                        </svg> -->
-                        <!-- <img  src="<?php echo get_template_directory_uri();?>/images/path-line.png"> -->
                     </div>
                     
                     <?php endwhile; ?>	
@@ -197,48 +178,18 @@
                                 </p>
                             <?php endif; ?>
                         </div>
-                        <div class="grid-item col-span-5 relative py-[10%] lg:py-[100px]">
-                                
-                                <div class="max-w-md relative z-10 rounded-3xl min-h-[300px] bg-white overflow-hidden shadow-lg mx-auto">
-                                    <div class="px-6 py-4">
-                                    <?php if(get_sub_field('hourly_rate_title')): ?>
-                                        <div class="block">
-                                            <p class="text-[24px] text-[#64748b]"><?php echo get_sub_field('hourly_rate_title'); ?></p>
-                                        </div>
-                                    <?php endif; ?>
-
-                                    <?php if(get_sub_field('amount')): ?> 
-                                        <div class="block">
-                                            <p class="text-[54px] font-[500] "><?php echo get_sub_field('amount'); ?></p>
-                                        </div>
-                                    <?php endif; ?>	
-                                        <div class="block w-100 mt-3 h-[110px] border-b border-gray-400">
-                                            <div class="sliderwrap">
-                                                <input class="home-range-slider" id="range" type="range" max="100" value="60">
-                                            </div>
-                                        </div>
-                                        <div class="block pt-5">
-                                            <div class="flex">
-                                            <?php if(get_sub_field('amount_save_title')): ?>
-                                                <div class="grow">
-                                                    <span class="text-[18px] font-[400] text-gray-500 "><?php echo get_sub_field('amount_save_title'); ?></span>
-                                                </div>
-                                            <?php endif; ?>	
-                                                <div class="grow text-end">
-                                                    <span id="price-value" class="text-[24px] font-[500] text-black">$ </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php $curious_img = get_sub_field('main_image');
-                                    if (!empty($curious_img) && isset($curious_img['url'])):
-                                ?>
-                                <img class="calculater-bg absolute left-0 bottom-0 w-[100%] z-[0]" src="<?php echo esc_url($curious_img['url']); ?>">
-
-                                <?php endif; ?>
-                            
-                        </div>
+                        <div class="grid-item col-span-5 content-end relative py-[10%] lg:py-[100px]">
+							<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
+								<p class="text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
+								<p class="text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
+								<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> £/yearly</span></p>
+								<p class="text-[20px] text-[#fff] mt-[20px]"><?php echo get_sub_field('equivalent_text'); ?></p>
+								<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+									<p class="text-[20px] text-[#fff]"><?php echo get_sub_field('save_text'); ?></p>
+									<p class="text-[13px] text-[#fff]"><?php echo get_sub_field('expense_include'); ?></p>
+								</div>
+							</div>
+						</div>
                 </div>
             </section>
 
