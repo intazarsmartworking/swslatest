@@ -16,7 +16,7 @@
 	<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
                     <div class="col-span-2 md:col-span-1 content-center">
 					<?php if(get_sub_field('main_heading')): ?>
                         <h1 class="font-medium text-[35px] md:text-[56px] mb-4 text-white  lg:leading-[74px]">
@@ -342,8 +342,8 @@
 					</div>
 
 
-					<div class="grid grid-cols-12 md:grid-cols-12 gap-3 mt-16">
-						<div class="col-span-12 md:col-span-5 content-center">
+					<div class="grid grid-cols-12 lg:grid-cols-12 gap-3 mt-16">
+						<div class="col-span-12 lg:col-span-5 content-center">
 							<div class="slider slider-nav thumb-image">
 
 
@@ -367,7 +367,7 @@
 								
 							</div>
 						</div>
-						<div class="col-span-12 md:col-span-7 content-center pl-0 md:pl-[10rem] pr-3 md:pr-10">
+						<div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
 							<div class="p-6 border border-[#fff] rounded-[10px]">
 								<div class="slider slider-for">
 									<?php if(have_rows('process_section')): ?>
@@ -444,7 +444,7 @@
                 </div>
                 <div class="grid-item col-span-5 content-end relative py-[10%] lg:py-[100px]">
 
-						<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
+						<div class=" w-[100%] lg:max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
 							<p class="text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
 							<p class="text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
 							<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> £/yearly</span></p>
@@ -737,7 +737,7 @@
 							</div>
 							<div class="grid-item col-span-1 lg:col-span-7 content-center relative">
 							<?php if(get_sub_field('calender')): ?>
-								<div class="absolute right-0 top-[-100px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
+								<div class=" relative lg:absolute right-0 lg:top-[-100px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
 									<?php echo get_sub_field('calender'); ?>
 								</div>
 							<?php endif; ?>	

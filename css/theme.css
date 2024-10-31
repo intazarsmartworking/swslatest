@@ -1072,9 +1072,6 @@ select {
 .top-\[-1000px\] {
   top: -1000px;
 }
-.top-\[-100px\] {
-  top: -100px;
-}
 .top-\[-1100px\] {
   top: -1100px;
 }
@@ -1230,6 +1227,9 @@ select {
 }
 .col-span-10 {
   grid-column: span 10 / span 10;
+}
+.col-span-11 {
+  grid-column: span 11 / span 11;
 }
 .col-span-12 {
   grid-column: span 12 / span 12;
@@ -2728,9 +2728,6 @@ select {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
-.pb-12 {
-  padding-bottom: 3rem;
-}
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -2850,9 +2847,6 @@ select {
 }
 .pt-10 {
   padding-top: 2.5rem;
-}
-.pt-12 {
-  padding-top: 3rem;
 }
 .pt-16 {
   padding-top: 4rem;
@@ -5449,7 +5443,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     position: relative;
     left: 0px;
     top: 0px;
-    z-index: 1000;
+    z-index: 5000;
     padding: 20px;
     width: 100%;
     position: sticky;
@@ -6152,7 +6146,7 @@ body.lightMode .relatedBlogs a p{
   width: 110px;
 }
 /*End USE CSS for Slider*/
-@media (max-width: 800px) {
+@media (max-width: 992px) {
     .howItWorkHeading{
         transform: rotate(0deg);
     }
@@ -6549,14 +6543,6 @@ body.lightMode .relatedBlogs a p{
     width: 50%;
   }
 
-  .md\:w-\[25\%\] {
-    width: 25%;
-  }
-
-  .md\:w-\[75\%\] {
-    width: 75%;
-  }
-
   .md\:w-auto {
     width: auto;
   }
@@ -6579,10 +6565,6 @@ body.lightMode .relatedBlogs a p{
 
   .md\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-11 {
-    grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
   .md\:grid-cols-12 {
@@ -6656,11 +6638,6 @@ body.lightMode .relatedBlogs a p{
     padding-right: 3rem;
   }
 
-  .md\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
   .md\:px-\[0px\] {
     padding-left: 0px;
     padding-right: 0px;
@@ -6707,10 +6684,6 @@ body.lightMode .relatedBlogs a p{
 
   .md\:pl-48 {
     padding-left: 12rem;
-  }
-
-  .md\:pl-\[10rem\] {
-    padding-left: 10rem;
   }
 
   .md\:pr-10 {
@@ -6851,6 +6824,10 @@ body.lightMode .relatedBlogs a p{
     top: 0px;
   }
 
+  .lg\:top-\[-100px\] {
+    top: -100px;
+  }
+
   .lg\:top-\[-30px\] {
     top: -30px;
   }
@@ -6859,8 +6836,16 @@ body.lightMode .relatedBlogs a p{
     top: inherit;
   }
 
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .lg\:col-span-4 {
@@ -6877,6 +6862,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:col-span-7 {
     grid-column: span 7 / span 7;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8 / span 8;
   }
 
   .lg\:mb-0 {
@@ -6971,6 +6960,14 @@ body.lightMode .relatedBlogs a p{
     width: 600px;
   }
 
+  .lg\:max-w-\[450px\] {
+    max-width: 450px;
+  }
+
+  .lg\:max-w-\[538px\] {
+    max-width: 538px;
+  }
+
   .lg\:max-w-\[60\%\] {
     max-width: 60%;
   }
@@ -6981,6 +6978,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-12 {
@@ -7085,6 +7086,11 @@ body.lightMode .relatedBlogs a p{
     padding-right: 1.5rem;
   }
 
+  .lg\:px-96 {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+
   .lg\:px-\[0px\] {
     padding-left: 0px;
     padding-right: 0px;
@@ -7150,8 +7156,16 @@ body.lightMode .relatedBlogs a p{
     padding-bottom: 80px;
   }
 
+  .lg\:pl-48 {
+    padding-left: 12rem;
+  }
+
   .lg\:pl-\[100px\] {
     padding-left: 100px;
+  }
+
+  .lg\:pl-\[10rem\] {
+    padding-left: 10rem;
   }
 
   .lg\:pl-\[150px\] {

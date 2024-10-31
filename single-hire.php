@@ -613,7 +613,7 @@
 	<?php if (have_rows('hire_block_section')) : ?>
 	 <?php while (have_rows('hire_block_section')) : the_row(); ?>
 	   <?php if (get_row_layout() == 'ready_hire') : ?>
-      <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
+      <div class="col-span-2 lg:col-span-1 content-center pl-7 pr-7 lg:pl-48 md:pr-12 mb-10">
 	    <?php if(get_sub_field('title')): ?>
         <h5 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4"> <?php echo get_sub_field('title'); ?> </h5>
 		<?php endif; ?>
@@ -626,8 +626,8 @@
 	<?php endif; ?>  
 	<?php endwhile; ?>
 	<?php endif; ?> 
-      <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
-        <div class="bg-white ml-0 lg:ml-[12%] relative rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
+      <div class="col-span-2 relative lg:col-span-1 px-2 lg:px-6 py-10">
+        <div class="bg-white ml-0 lg:ml-[12%] relative rounded-3xl px-6 py-6 w-[100%] lg:max-w-[538px]">
 			<div class="w-full">
 				<iframe aria-label='Share Your Requirement' frameborder="0" style="height:320px;width:100%;border:none;" src='https://forms.zohopublic.in/shubhankit/form/SkillPagesForm/formperma/Kg0mSBrC00V3ydnzP2AdZWY3HYv-yjP5y0vJV2CTa3E'></iframe>
 				<!-- <h4 class="text-center text-dark-black text-sm font-semibold py-6"> Our recruitment specialist will be in touch soon! </h4> -->

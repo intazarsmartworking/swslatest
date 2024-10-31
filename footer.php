@@ -12,9 +12,9 @@
 ?>
 
 <div class="w-full relative grid items-center footer-background pt-20">
-  <div class="container mx-auto md:px-0 px-10 pt-12 pb-12">
-    <div class="grid flex md:grid-cols-4 gap-6">
-      <div>
+  <div class="container mx-auto p-[15px]">
+    <div class="grid grid-cols-12 lg:grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-6 lg:col-span-3">
         <?php if(get_field('footer_logo', 'options')): ?>
         <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
           <img src="<?php echo get_field('footer_logo', 'options')['url']; ?>" alt="<?php echo get_field('footer_logo', 'options')['alt']; ?>" class="w-64">
@@ -30,7 +30,7 @@
         <?php endif; ?>
         
       </div>
-      <div class="text-left">
+      <div class="col-span-12 md:col-span-6 lg:col-span-3 text-left">
         <h6 class="text-white text-xl font-medium leading-normal"> Menu </h6>
         <?php
             wp_nav_menu( array(
@@ -43,14 +43,14 @@
         ?>
         
       </div>
-      <div>
+      <div class="col-span-12 md:col-span-6 lg:col-span-3">
         <h6 class="text-white text-xl font-medium leading-normal"> Our Location </h6>
         <div class="pb-7 pt-5" id="findAdress">
           
         </div>
         
       </div>
-      <div>
+      <div class="col-span-12 md:col-span-6 lg:col-span-3">
         <h6 class="text-white text-xl font-medium leading-normal"> Contact Details </h6>
         <div class="pb-7 pt-5">
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h6>
