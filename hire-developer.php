@@ -274,6 +274,7 @@
 		<?php get_template_part( 'template-parts/client-testimonial' );?>
 
 		<?php endwhile; ?>
+		
 		<?php endif; ?>
 
 
