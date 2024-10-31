@@ -1911,9 +1911,6 @@ select {
 .max-w-\[500px\] {
   max-width: 500px;
 }
-.max-w-\[538px\] {
-  max-width: 538px;
-}
 .max-w-\[550px\] {
   max-width: 550px;
 }
@@ -2505,6 +2502,9 @@ select {
 }
 .p-\[8px\] {
   padding: 8px;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .\!py-0 {
   padding-top: 0px !important;
@@ -6841,6 +6841,10 @@ body.lightMode .relatedBlogs a p{
     top: inherit;
   }
 
+  .lg\:top-\[-115px\] {
+    top: -115px;
+  }
+
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -7031,6 +7035,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:gap-80 {
+    gap: 20rem;
   }
 
   .lg\:rounded-\[44px\] {

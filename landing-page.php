@@ -45,7 +45,7 @@
                         </div>
                         <div class="grid-item col-span-1 content-center">
 						<?php if(get_sub_field('form_part')): ?>
-                            <div class=" w-[100%] max-w-[450px] min-h-[300px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
+                            <div class=" w-[100%] lg:max-w-[450px] min-h-[300px] ml-auto bg-[#fff] rounded-[10px] p-[30px]">
 							    <h6 class="text-dark-orange font-bold text-2xl"> Let’s start building your team </h6>
 								<?php echo get_sub_field('form_part'); ?>
 							    <?php //echo do_shortcode('[contact-form-7 id="5476fb8" title="Landing Form"]'); ?>
@@ -559,8 +559,8 @@
             <div class=" w-[100%] max-w-[1280px] mx-auto py-24">
                 <div class=" block relative rounded-[24px] vetting-bg">
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
-                        <div class="grid-item col-span-1 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
+                    <div class="grid grid-cols-12 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
+                        <div class="grid-item col-span-12 lg:col-span-5 content-center min-h-[500px] py-[32px] px-[5%]">
                         <p><img class="h-[25px] w-[260px] ml-[-5px] mb-5" src="<?php echo get_template_directory_uri();?>/images/white-black-logo.svg" alt=""></p>
 						<?php if(get_sub_field('heading')): ?>
                             <h5 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h5>
@@ -609,9 +609,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="grid-item col-span-1 lg:col-span-7 content-center relative">
+                        <div class="grid-item col-span-12 lg:col-span-7 content-center relative">
 						<?php if(get_sub_field('calender')): ?>
-                            <div class="absolute right-0 top-[-115px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
+                            <div class=" relative lg:absolute right-0  lg:top-[-115px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
 							    <?php echo get_sub_field('calender'); ?>
 							</div>
 						<?php endif; ?>	

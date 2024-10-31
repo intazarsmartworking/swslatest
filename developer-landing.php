@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="w-full relative">
-                <div class="w-[100%] landing-dev-box h-[450px] p-[30px] rounded-[30px] bg-white max-w-[450px] border-[10px] border-[#fff] ml-auto">
+                <div class="w-[100%] landing-dev-box h-[450px] p-[30px] rounded-[30px] bg-white lg:max-w-[450px] border-[10px] border-[#fff] ml-auto">
                   <div class="w-[100%] py-[10px] pl-[65px] pr-[10px] relative mb-[20px]">
                       <div class="w-[52px] h-[52px] absolute left-0 top-[10px] rounded-[50%] text-center bg-[#FF4D02] overflow-hidden pt-[9px]">
                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -802,15 +802,15 @@
 
 
     <div class="w-full  relative grid items-center pb-28">
-      <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
-        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
-          <div class="col-span-2 md:col-span-1 content-center pl-7 pr-7 md:pl-48 md:pr-12 mb-10">
+      <div class="container mx-auto p-10 ready-hire-bg">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] gap-4">
+          <div class="col-span-2 lg:col-span-1 content-center p-7 pr-7 md:pl-48 md:pr-12 mb-10">
             <h5 class="text-center md:text-left text-3xl md:text-5xl lg:text-[45px] 3xl:text-58 font-medium text-white  md:leading-tight mb-4">Ready to Hire a Developer?</h5>
             <span class="text-center md:text-left md:text-[24px] lg:text-[24px] text-white text-base"> It is quick and easy with Smart Working </span>
             
           </div>
-          <div class="col-span-2 relative md:col-span-1 px-2 lg:px-6 py-10">
-            <div class="bg-white lg:right-[150px] relative lg:absolute top-[-50px] h-[500px] rounded-3xl px-6 py-6 w-[100%] max-w-[538px]">
+          <div class="col-span-2 relative lg:col-span-1 px-2 lg:px-6 py-10">
+            <div class="bg-white lg:right-[150px] relative lg:absolute top-[-50px] h-[500px] rounded-3xl px-6 py-6 w-[100%] lg:max-w-[538px]">
                 <div class="rounded-2xl border-pattern px-6 py-6 w-full">
                   <h4 class="text-dark-orange text-2xl font-bold leading-9"> Share your requirements </h4>
                   <form method="post">
@@ -1133,13 +1133,31 @@
                     </div>
                   </div>
                   <div class="grid-item col-span-2 content-start">
-                    <div class="bg-[#c282fa] rounded-[10px] min-h-[300px] p-3 stickysidenav">
+                    <div class="rounded-[10px] min-h-[300px] p-3 stickysidenav">
+
+                          <div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+                                <p class="text-[20px] font-semibold text-[#fff]"> Save up to</p>
+                                <p class="text-[30px] font-bold text-[#fff]"><span class="from-price">4,550</span></p>
+                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">5,980</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/m</span></p>
+                                <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+                                    <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
+                                    <!-- <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">71,500</span>/year with complete transparency.</p>
+                                    <p class="text-[12px] text-[#fff]">All expenses included. No hidden costs.</p> -->
+                                    <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02]">Pricing 
+                                      <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
+                                      </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                        <!-- <img src="" />
                         <h5  class="text-[22px] lg:text-[24px] text-[#fff] text-center font-medium mt-[25%]">Hire diverloer</h5>
                         <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02] mt-[25%]">Pricing 
                           <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                           </svg>
-                        </a>
+                        </a> -->
                     <div>
                   </div>
                 </div>

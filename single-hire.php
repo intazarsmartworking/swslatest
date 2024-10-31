@@ -743,14 +743,30 @@
               </div>
 			  <?php if(get_sub_field('right_cta_heading')): ?>
               <div class="grid-item col-span-2 content-start">
-                <div class="bg-[#c282fa] rounded-[10px] min-h-[100px] p-5 stickysidenav">
-                    <h3  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h3>
+                <div class="rounded-[10px] min-h-[100px] p-5 stickysidenav">
+
+						<div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+                                <p class="text-[20px] font-semibold text-[#fff]"> Save up to</p>
+                                <p class="text-[30px] font-bold text-[#fff]"><span class="from-price">4,550</span></p>
+                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">5,980</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/m</span></p>
+                                <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+                                    <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
+                                    <!-- <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">71,500</span>/year with complete transparency.</p>
+                                    <p class="text-[12px] text-[#fff]">All expenses included. No hidden costs.</p> -->
+                                    <a class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02]">Pricing 
+                                      <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
+                                      </svg>
+                                    </a>
+                                </div>
+                            </div>
+                    <!-- <h3  class="text-[22px] lg:text-[24px] text-[#fff] font-medium"><?php echo get_sub_field('right_cta_heading'); ?></h3>
 					<?php if(get_sub_field('right_cta_button_name')): ?>
                     <a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block py-4 text-center text-[18px] px-5 rounded-[14px] border text-[#FF4D02] mt-[30px]"><?php echo get_sub_field('right_cta_button_name'); ?> 
                       <svg class="inline-block ml-[35px] " xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.38461 12.0058H15.7745C14.6474 10.8779 13.9292 9.34187 13.9292 7.70433V6.78125H15.7754V7.70433C15.7754 9.95571 17.8265 12.0058 20.0769 12.0058H21V13.852H20.0769C17.8265 13.852 15.7754 15.9021 15.7754 18.1535V19.0766H13.9292V18.1535C13.9292 16.516 14.6474 14.98 15.7745 13.852H4.38461V12.0058Z" fill="#FF4D02"/>
                       </svg>
-                    </a>
+                    </a> -->
 					<?php endif; ?>
                 </div>
               </div>
