@@ -140,12 +140,13 @@
 
                             <div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[30px] font-semibold text-[#fff]"> Hiring with Smart Working</p>
-                                <p class="text-[50px] font-bold text-[#fff]"><span class="discount-price">0</span></p>
-                                <p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="upToPrice">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/yearly</span></p>
+                                <p class="text-[50px] font-bold text-[#fff]"><span class="from-price">0</span></p>
+                                <p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/month</span></p>
                                 <p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span>14-35/hour</p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
-                                    <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p>
-                                    <p class="text-[13px] text-[#fff]">All expenses included. No hidden costs.</p>
+                                    <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
+                                    <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year with complete transparency.</p>
+                                    <p class="text-[12px] text-[#fff]">All expenses included. No hidden costs.</p>
                                 </div>
                             </div>
 

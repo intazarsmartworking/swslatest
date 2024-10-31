@@ -2939,7 +2939,18 @@ body.lightMode .single-blog{
 body.lightMode .single-blog p{
   color: #000 !important;
 }
-
+body.lightMode .single-blog .block-quote{
+  color: #000 !important;
+}
+body.lightMode .single-blog  ul{
+  color: #000 !important;
+}
+body.lightMode .single-blog .blog-table{
+  color: #000 !important;
+}
+body.lightMode .single-blog .blog-table thead{
+  color: #fff !important;
+}
 body.lightMode .single-blog h3{
   color: #000 !important;
 }

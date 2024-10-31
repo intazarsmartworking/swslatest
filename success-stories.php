@@ -16,7 +16,7 @@
 		<?php if (get_row_layout() == 'banner_section') : ?>
         <section class="w-full px-3">
             <div class=" w-[100%] max-w-[1280px] mx-auto py-16">
-                <div class="grid grid-cols-1 md:grid-cols-2 py-0 md:py-14 gap-2 md:gap-80">
+                <div class="grid grid-cols-1 md:grid-cols-2 py-0 md:py-14 gap-2 lg:gap-80">
                     <div class="col-span-2 md:col-span-1 content-center">
 					<?php if(get_sub_field('small_title')): ?>
                         <div class="small-intro !ml-0"><?php echo get_sub_field('small_title'); ?></div>
@@ -79,7 +79,7 @@
 				);
 				$story_query = new WP_Query($args);
 			?>
-                <div class="grid grid-cols-2 md:grid-cols-2 py-0 md:py-5 border-b border-[#431d0e] gap-2 md:gap-80">
+                <div class="grid grid-cols-2 md:grid-cols-2 py-0 md:py-5 border-b border-[#431d0e] gap-2 lg:gap-80">
                     <div class="col-span-1 md:col-span-1">
                         <p class="text-[15px] md:text-[20px] text-[#fff] leading-[28px]">Customer stories <span class="text-dark-orange"><?php echo esc_html($story_count); ?></span><p>
                     </div>
@@ -98,7 +98,7 @@
 						}
 					}
 				?>
-                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 md:gap-80">
+                <div class="grid grid-cols-1 md:grid-cols-2 py-14 border-b border-[#431d0e] gap-2 lg:gap-80">
                     <div class="col-span-2 md:col-span-1">
                         <a href="<?php the_permalink(); ?>"> <h5 class="text-[28px] text-[#fff] font-semibold leading-[40px] mb-[50px]"><?php the_title(); ?></h5> </a>
                         <p class="text-[16px] text-[#fff] leading-[28px] mb-[20px]"><?php echo get_the_excerpt();?></p>
@@ -220,8 +220,8 @@
 		<?php if (get_row_layout() == 'hire_developer_section') : ?>
         <section class="w-full relative grid items-center px-3  py-16">
             <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="pl-7 pr-7 md:pl-48 md:pr-12 content-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="pl-7 lg:col-span-1 p-7 lg:pl-48 md:pr-12 content-center">
 					<?php if(get_sub_field('main_title')): ?>
                         <h2 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight  md:mb-2">
                         <?php echo get_sub_field('main_title'); ?>
@@ -243,7 +243,7 @@
 					<?php $hire_dev_main_img = get_sub_field('image');
 						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
 					?>
-                    <div class="px-6 py-10 lg:pr-[20%] content-center text-right">
+                    <div class="px-6 lg:col-span-1 py-10 lg:pr-[20%] content-center text-right">
                         <img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-[100%] inline-block max-w-[450px]">
                     </div>
 					<?php endif; ?>

@@ -999,12 +999,18 @@ function loadAnimation(){
 
 }
 
+function converter(valor){
+  var numero = Intl.NumberFormat('en-US').format(valor);
+  return numero
+}
 
 var skillPriceData = null;
 var skillExpData = null;
 var skillPeopleData = 1;
 var isEurope = true;
-var upToPrice = 50000;
+var upToPrice = 55000;
+var fromPrice = 3500;
+var toPrice = 4600;
 
 
 let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -1013,13 +1019,20 @@ let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log('Europe')
     isEurope = true;
     jQuery('.currency-symble').text('£');
-    jQuery('.upToPrice').text(upToPrice);
+    jQuery('.upToPrice').text(converter(upToPrice));
+    jQuery('.from-price').text(converter(fromPrice));
+    jQuery('.to-price').text(converter(toPrice));
+
   }else{
     console.log('Asia')
     isEurope = false;
     jQuery('.currency-symble').text('$');
-    const convrtDoller = upToPrice*1.30
-    jQuery('.upToPrice').text(convrtDoller);
+    const convrtDoller = upToPrice*1.30;
+    jQuery('.upToPrice').text(converter(convrtDoller));
+    const fromDoller = fromPrice*1.30;
+    const toDoller = toPrice*1.30;
+    jQuery('.from-price').text(converter(fromDoller));
+    jQuery('.to-price').text(converter(toDoller));
   }
   console.log('locationCountry', locationCountry)
 

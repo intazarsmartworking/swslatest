@@ -167,8 +167,8 @@
 		<?php if (get_row_layout() == 'cta_section') : ?>
         <section class="w-full relative grid items-center px-3  py-16">
             <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="pl-7 pr-7 md:pl-48 md:pr-12 content-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="pl-7 lg:col-span-1 pr-7 md:pl-48 md:pr-12 content-center">
 					<?php if(get_sub_field('title')): ?>
                         <h2 class="text-left text-white text-[35px] md:text-5xl lg:text-[45px] font-medium  bg-title-text  md:leading-tight  md:mb-2">
                         <?php echo get_sub_field('title'); ?>
@@ -190,7 +190,7 @@
 					<?php $hire_dev_main_img = get_sub_field('right_side_image');
 						if (!empty($hire_dev_main_img) && isset($hire_dev_main_img['url'])):
 					?>
-                    <div class="px-6 py-10 lg:pr-[20%] content-center text-right">
+                    <div class="px-6 lg:col-span-1 py-10 lg:pr-[20%] content-center text-right">
                         <img src="<?php echo esc_url($hire_dev_main_img['url']); ?>" alt="<?php echo esc_attr($hire_dev_main_img['alt']); ?>" class="w-[100%] inline-block max-w-[450px]">
                     </div>
 					<?php endif; ?>
