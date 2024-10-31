@@ -1138,7 +1138,7 @@
                           <div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[20px] font-semibold text-[#fff]"> Save up to</p>
                                 <p class="text-[30px] font-bold text-[#fff]"><span class="from-price">4,550</span></p>
-                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">5,980</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/m</span></p>
+                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]">to</span><span class="to-price">5,980</span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <span class="currency-symble">$</span>/m</span></p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
                                     <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
                                     <!-- <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">71,500</span>/year with complete transparency.</p>

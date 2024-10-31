@@ -1072,9 +1072,6 @@ select {
 .top-\[-1100px\] {
   top: -1100px;
 }
-.top-\[-115px\] {
-  top: -115px;
-}
 .top-\[-12\%\] {
   top: -12%;
 }
@@ -2359,10 +2356,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 78 3 / var(--tw-bg-opacity));
 }
-.bg-\[\#c282fa\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(194 130 250 / var(--tw-bg-opacity));
-}
 .bg-\[\#ff4d04\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 77 4 / var(--tw-bg-opacity));
@@ -2443,6 +2436,9 @@ select {
 .p-0 {
   padding: 0px;
 }
+.p-10 {
+  padding: 2.5rem;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -2502,9 +2498,6 @@ select {
 }
 .p-\[8px\] {
   padding: 8px;
-}
-.p-10 {
-  padding: 2.5rem;
 }
 .\!py-0 {
   padding-top: 0px !important;
@@ -6833,16 +6826,16 @@ body.lightMode .relatedBlogs a p{
     top: -100px;
   }
 
+  .lg\:top-\[-115px\] {
+    top: -115px;
+  }
+
   .lg\:top-\[-30px\] {
     top: -30px;
   }
 
   .lg\:top-\[inherit\] {
     top: inherit;
-  }
-
-  .lg\:top-\[-115px\] {
-    top: -115px;
   }
 
   .lg\:col-span-1 {
