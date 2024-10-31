@@ -1004,7 +1004,9 @@ var skillPriceData = null;
 var skillExpData = null;
 var skillPeopleData = 1;
 var isEurope = true;
-var upToPrice = 50000;
+var upToPrice = 55000;
+var fromPrice = 3500;
+var toPrice = 4600;
 
 
 let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -1014,12 +1016,19 @@ let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
     isEurope = true;
     jQuery('.currency-symble').text('£');
     jQuery('.upToPrice').text(upToPrice);
+    jQuery('.from-price').text(fromPrice);
+    jQuery('.to-price').text(toPrice);
+
   }else{
     console.log('Asia')
     isEurope = false;
     jQuery('.currency-symble').text('$');
-    const convrtDoller = upToPrice*1.30
+    const convrtDoller = upToPrice*1.30;
     jQuery('.upToPrice').text(convrtDoller);
+    const fromDoller = fromPrice*1.30;
+    const toDoller = toPrice*1.30;
+    jQuery('.from-price').text(fromDoller);
+    jQuery('.to-price').text(toDoller);
   }
   console.log('locationCountry', locationCountry)
 
