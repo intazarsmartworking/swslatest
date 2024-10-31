@@ -1408,12 +1408,36 @@ jQuery(document).ready(function(){
     prevArrow: jQuery('.blog-prev-arrow'),
     nextArrow: jQuery('.blog-next-arrow'),
     responsive: [
-        {
-            breakpoint: 768, 
-            settings: {
-                slidesToShow: 1 
-            }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: false,
+          infinite: true,
+          autoplay: true,
         }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          dots: false,
+          infinite: true,
+        }
+      }
     ]
   });
 
@@ -1477,7 +1501,7 @@ jQuery(document).ready(function(){
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -1521,7 +1545,7 @@ jQuery(document).ready(function(){
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

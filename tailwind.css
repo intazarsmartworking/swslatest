@@ -2267,7 +2267,7 @@ input[type="range"].home-range-slider {
     position: relative;
     left: 0px;
     top: 0px;
-    z-index: 1000;
+    z-index: 5000;
     padding: 20px;
     width: 100%;
     position: sticky;
@@ -2984,7 +2984,7 @@ body.lightMode .relatedBlogs a p{
   width: 110px;
 }
 /*End USE CSS for Slider*/
-@media (max-width: 800px) {
+@media (max-width: 992px) {
     .howItWorkHeading{
         transform: rotate(0deg);
     }

@@ -302,7 +302,7 @@
 						
 						</div>
 						<div class="grid-item col-span-1 lg:col-span-7 content-center relative">
-							<div class="absolute right-0 top-[-120px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
+							<div class="relative lg:absolute right-0 top-[-120px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
 								<!-- Calendly inline widget begin -->
 								<div class="calendly-inline-widget" data-url="https://calendly.com/smart-working/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=ff4d04" style="width:100%;height:700px;"></div>
 								<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
