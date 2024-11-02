@@ -1232,6 +1232,8 @@ jQuery(".mega-menu-left li").on('click', function(){
   const getAttr = jQuery(this).attr('data-menu');
   console.log('getAttr', getAttr)
   const getId = `#${getAttr}`;
+  // const getIdMore = `#mobile-${getAttr}`;
+  // jQuery(getIdMore).addClass('show-more')
   jQuery(getId).addClass('show-more')
 })
 

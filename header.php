@@ -144,6 +144,202 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img class="w-[24px] menu-icons" src="<?php echo esc_url($menu_image_url); ?>" alt="<?php echo esc_attr($menu_name); ?>">
                         <span class="menu-title"><?php echo esc_html($menu_name); ?></span>
                     </a>
+					<div class="only-moble-menu">
+					<?php if($data_menu == 'frontEndDev'): ?>
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+								<?php if( have_rows('frontend_menu_second_level', 'option') ): ?>
+									<?php while( have_rows('frontend_menu_second_level', 'option') ): the_row(); ?>
+										<?php if( have_rows('frontend_menu', 'option') ): ?>
+											<?php while( have_rows('frontend_menu', 'option') ): the_row(); 
+												$menu_name = get_sub_field('frontend_sub_menu_name');
+												$menu_url = get_sub_field('url');
+											?>
+												<li>
+													<a href="<?php echo esc_url($menu_url); ?>">
+														<?php echo esc_html($menu_name); ?>
+														<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+													</a>
+												</li>
+											<?php endwhile; ?>
+										<?php endif; ?>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+
+					<?php if($data_menu == 'backEndDev'): ?>
+
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('backend_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('backend_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('backend_menu', 'option') ): ?>
+												<?php while( have_rows('backend_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('backend_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>	
+
+					<?php if($data_menu == 'fullStackDev'): ?>
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('full_stack_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('full_stack_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('backend_menu', 'option') ): ?>
+												<?php while( have_rows('backend_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('full_stack_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>	
+					
+					<?php if($data_menu == 'webDev'): ?>
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('web_developer_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('web_developer_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('web_developer_menu', 'option') ): ?>
+												<?php while( have_rows('web_developer_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('web_developer_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>	
+
+					<?php if($data_menu == 'cloudDev'): ?>
+
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('cloud_developer_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('cloud_developer_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('cloud_developer_menu', 'option') ): ?>
+												<?php while( have_rows('cloud_developer_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('cloud_developer_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>	
+
+					<?php if($data_menu == 'mobileDev'): ?>
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('mobile_app_developer_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('mobile_app_developer_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('mobile_app_developer_menu', 'option') ): ?>
+												<?php while( have_rows('mobile_app_developer_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('mobile_app_developer_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+
+					<?php if($data_menu == 'specializedDev'): ?>	
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('software_developer_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('software_developer_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('software_developer_menu', 'option') ): ?>
+												<?php while( have_rows('software_developer_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('software_developer_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+
+					<?php if($data_menu == 'trendingDev'): ?>	
+						<div class="show-more-menu">
+							<ul class="mega-menu-center">
+									<?php if( have_rows('trending_developer_menu_second_level', 'option') ): ?>
+										<?php while( have_rows('trending_developer_menu_second_level', 'option') ): the_row(); ?>
+											<?php if( have_rows('trending_developer_menu', 'option') ): ?>
+												<?php while( have_rows('trending_developer_menu', 'option') ): the_row(); 
+													$menu_name = get_sub_field('trending_developer_sub_menu_name');
+													$menu_url = get_sub_field('url');
+												?>
+													<li>
+														<a href="<?php echo esc_url($menu_url); ?>">
+															<?php echo esc_html($menu_name); ?>
+															<span><img class="w-[20px]" src="<?php echo get_template_directory_uri(); ?>/images/right-arrow.png" /></span>
+														</a>
+													</li>
+												<?php endwhile; ?>
+											<?php endif; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
+							</ul>
+						</div>
+					<?php endif; ?>	
+
+					</div>
                 </li>
 				
 			 <?php endforeach; else : ?> 
@@ -152,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
               </ul>
             </div>
-            <div class="col-span-3 py-[12px]">
+            <div class="col-span-3 py-[12px] only-desktop-menu">
               <div class="w-[100%] bg-[#231008] h-[100%] rounded-[10px] p-5">
                   <div class="show-more-menu show-more" id="frontEndDev">
 						<ul class="mega-menu-center">
@@ -328,7 +524,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </div>
               </div>
             </div>
-            <div class="col-span-3 p-4">
+            <div class="col-span-3 only-desktop-menu p-4">
               <div class="max-w-md relative z-10 rounded-[12px] min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
                 <div class="px-6 py-4">
                   <div class="block">

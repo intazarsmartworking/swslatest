@@ -5513,7 +5513,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .mega-menu-left li.active{
     background: linear-gradient(90deg, rgba(172,58,9,0.2) 0%, rgba(0,0,0,0) 100%);
   }
-.mega-menu-left li a{
+.mega-menu-left > li > a{
     display: block;
     padding: 10px 10px 10px 45px;
     border-radius: 10px 0px 0px 10px;
@@ -6237,6 +6237,33 @@ body.lightMode .relatedBlogs a p{
     .show-details{
         padding: 0px 20px;
     }
+
+}
+.only-moble-menu{
+  display: none;
+}
+.only-desktop-menu{
+  display: block;
+}
+@media (max-width: 620px) {
+  .only-moble-menu{
+    display: block;
+  }
+  .only-desktop-menu{
+    display: none;
+  }
+  .mega-menu-left li.active .only-moble-menu{
+    display: block;
+  }
+  .mega-menu-left li.active .show-more-menu{
+    display: block;
+  }
+  .only-moble-menu .mega-menu-center li{
+    padding: 0px !important;
+  }
+  .only-moble-menu .mega-menu-center li a{
+    padding: 8px 30px;
+  }
 
 }
 .hover\:bg-\[\#050403\]:hover {
