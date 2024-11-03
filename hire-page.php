@@ -329,7 +329,7 @@
 		<?php if (have_rows('hire_role_section')) : ?>
 		<?php while (have_rows('hire_role_section')) : the_row(); ?>
 		<?php if (get_row_layout() == 'process_section') : ?>
-			<section class="w-full px-3 py-10">
+			<section class="w-full px-3 py-10" id="count-digit-2">
 				<div class="container mx-auto">
 					<div class="block">
 						<?php if(get_sub_field('small_title')): ?>  
