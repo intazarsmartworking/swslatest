@@ -14,43 +14,59 @@
 <div class="w-full relative grid items-center footer-background pt-20">
   <div class="container mx-auto p-[15px]">
     <div class="grid grid-cols-12 lg:grid-cols-12 gap-4">
-      <div class="col-span-12 md:col-span-6 lg:col-span-3">
+      <div class="col-span-12 md:col-span-6 lg:col-span-4">
         <?php if(get_field('footer_logo', 'options')): ?>
         <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
           <img src="<?php echo get_field('footer_logo', 'options')['url']; ?>" alt="<?php echo get_field('footer_logo', 'options')['alt']; ?>" class="w-64">
         </a>  
         <?php endif; ?>
         <?php if(get_field('button_name', 'options')): ?>
-        <div class="header-buttons mt-16 mb-20">
+        <div class="header-buttons mt-10 mb-10">
         <?php
          $unlock_btn_url = get_field('button_link', 'options');
         ?>
           <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_field('button_name', 'options'); ?></a>
         </div>
         <?php endif; ?>
+        <div class="block">
+          <img class=" inline-block rounded-[10px] w-[50px]" src="<?php echo get_template_directory_uri();?>/images/client-1.png" alt="">
+          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" alt="">
+          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" alt="">
+          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" alt="">
+        </div>
         
       </div>
-      <div class="col-span-12 md:col-span-6 lg:col-span-3 text-left">
-        <h6 class="text-white text-xl font-medium leading-normal"> Menu </h6>
+      <div class="col-span-12 md:col-span-6 lg:col-span-2 text-left">
+        <h6 class="text-white text-xl font-medium leading-normal mb-5"> Menu </h6>
         <?php
             wp_nav_menu( array(
                 'theme_location' => 'footer',
                 'container'      => 'ul',
-                'menu_class'     => 'pt-7', 
+                'menu_class'     => 'footer-menu', 
                 'depth'          => 1,
                 'walker'         => new Custom_Walker_Nav_Menu()
             ));
         ?>
         
       </div>
-      <div class="col-span-12 md:col-span-6 lg:col-span-3">
+      <div class="col-span-12 md:col-span-6 lg:col-span-2 text-left">
+        <h6 class="text-white text-xl font-medium leading-normal mb-5"> Hire Developers </h6>
+        <ul class="footer-menu">
+          <li><a href="/hire-back-end-developer">Back End</a></li>
+          <li><a href="/hire-cloud-developer">Cloud</a></li>
+          <li><a href="/hire-frontend-developers">Front End</a></li>
+          <li><a href="/hire-full-stack-developers">Full Stack</a></li>
+        </ul>
+        
+      </div>
+      <div class="col-span-12 md:col-span-6 lg:col-span-2">
         <h6 class="text-white text-xl font-medium leading-normal"> Our Location </h6>
         <div class="pb-7 pt-5" id="findAdress">
           
         </div>
         
       </div>
-      <div class="col-span-12 md:col-span-6 lg:col-span-3">
+      <div class="col-span-12 md:col-span-6 lg:col-span-2">
         <h6 class="text-white text-xl font-medium leading-normal"> Contact Details </h6>
         <div class="pb-7 pt-5">
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Email </h6>
@@ -95,7 +111,7 @@
       <?php endif; ?>
 
       <?php if(get_field('button_2_name', 'options')): ?>
-			  <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-footer-menu-color text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
+			  <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-footer-menu-color text-right text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
 		  <?php endif; ?>
     </div>
       </div>
@@ -447,3 +463,4 @@ document.addEventListener('wpcf7mailsent', function(event) {
 
 </body>
 </html>
+    

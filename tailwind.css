@@ -2994,6 +2994,23 @@ body.lightMode .relatedBlogs a p{
 .swich-mode:hover{
   width: 110px;
 }
+.footer-menu{
+  padding: 0px;
+  margin: 0px;
+}
+.footer-menu li{
+  display: block;
+  margin: 0px !important;
+  line-height: 2rem !important;
+}
+.footer-menu li a{
+  cursor: pointer;
+  color: #aba4a4;
+  font-size: 0.875rem;
+}
+.footer-menu li a:hover{
+  color: #ff4d04;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 992px) {
     .howItWorkHeading{
@@ -3086,7 +3103,7 @@ body.lightMode .relatedBlogs a p{
         display: none;
     }
     .show-details{
-        padding: 0px 20px;
+        padding: 0px 0px;
     }
 
 }
