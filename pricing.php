@@ -67,8 +67,8 @@
 							?>
 							
 							  <div class="item-skill text-[#040524] text-[12px] rounded-[8px] border border-[rgba(5,4,3,0.20)] " 
-                                data-price='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>}'
-                                data-dolor='{"midLevel":<?php echo $mid_level_dollar_price;?>,"senior":<?php echo $senior_level_dollar_price;?>}'
+                                data-price='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>,"name":"<?php the_title(); ?>"}'
+                                data-dolor='{"midLevel":<?php echo $mid_level_dollar_price;?>,"senior":<?php echo $senior_level_dollar_price;?>,"name":"<?php the_title(); ?>"}'
                               >
 								  <!-- <span class="block pro-name"> MLD : <?php echo $mid_level_dollar_price;?>  </span>   
 								  <span class="block pro-name"> SLD : <?php echo $senior_level_dollar_price;?>  </span>
@@ -142,7 +142,7 @@
                                 <p class="text-[30px] font-semibold text-[#fff]"> Hiring with Smart Working</p>
                                 <p class="text-[50px] font-bold text-[#fff]"><span class="from-price">0</span></p>
                                 <p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/month</span></p>
-                                <p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span>14-35/hour</p>
+                                <p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span><span class="start-price">0</span>-<span class="end-price">0</span>/hour</p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
                                     <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
                                     <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year with complete transparency.</p>
@@ -224,7 +224,7 @@
                                 <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
                             </span>
                             <?php echo $title_name;?>
-                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?></span>
+                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><span class="currency-symble">$</span><?php echo $price;?></span>
                             <!-- <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span> -->
                         </div>
                         <!-- <div class="accordion-details w-full relative pt-4">
