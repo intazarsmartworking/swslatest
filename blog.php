@@ -16,8 +16,8 @@
 			<div class="w-[100%] max-w-[1280px] mx-auto px-[20px] lg:px-[0px]">
 				<div class="max-w-[900px] relative mx-auto text-center">
 					<div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " >BLOGS</span></div>
-					<h1 class="text-white text-[25px] lg:text-[56px] main-title font-medium mb-0">Our ideas and insights</h1>
-					<h6 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hire Developers</h6>
+					<h1 class="text-white text-[25px] lg:text-[56px] main-title font-medium mb-0">Our Ideas and Insights</h1>
+					<h6 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium ">on Hiring Developers</h6>
 				</div>
 
 				
