@@ -29,10 +29,21 @@
         </div>
         <?php endif; ?>
         <div class="block">
-          <img class=" inline-block rounded-[10px] w-[50px]" src="<?php echo get_template_directory_uri();?>/images/client-1.png" alt="">
-          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-2.png" alt="">
-          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-3.png" alt="">
-          <img class=" inline-block rounded-[10px] w-[60px]" src="<?php echo get_template_directory_uri();?>/images/client-4.png" alt="">
+        <?php if(get_field('client_logo_first', 'options')): ?>
+          <img class=" inline-block rounded-[10px] w-[80px]" src="<?php echo get_field('client_logo_first', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_first', 'options')['alt']; ?>">
+        <?php endif; ?>  
+        
+        <?php if(get_field('client_logo_second', 'options')): ?>
+          <img class=" inline-block rounded-[10px] w-[80px]" src="<?php echo get_field('client_logo_second', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_second', 'options')['alt']; ?>">
+        <?php endif; ?> 
+
+        <?php if(get_field('client_logo_third', 'options')): ?>
+          <img class=" inline-block rounded-[10px] w-[80px]" src="<?php echo get_field('client_logo_third', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_third', 'options')['alt']; ?>">
+        <?php endif; ?> 
+
+        <?php if(get_field('client_logo_fourth', 'options')): ?>
+          <img class=" inline-block rounded-[10px] w-[80px]" src="<?php echo get_field('client_logo_fourth', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_fourth', 'options')['alt']; ?>">
+        <?php endif; ?> 
         </div>
         
       </div>
