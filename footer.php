@@ -51,12 +51,15 @@
       </div>
       <div class="col-span-12 md:col-span-6 lg:col-span-2 text-left">
         <h6 class="text-white text-xl font-medium leading-normal mb-5"> Hire Developers </h6>
-        <ul class="footer-menu">
-          <li><a href="/hire-back-end-developer">Back End</a></li>
-          <li><a href="/hire-cloud-developer">Cloud</a></li>
-          <li><a href="/hire-frontend-developers">Front End</a></li>
-          <li><a href="/hire-full-stack-developers">Full Stack</a></li>
-        </ul>
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'footer_hire',
+                'container'      => 'ul',
+                'menu_class'     => 'footer-menu', 
+                'depth'          => 1,
+                'walker'         => new Custom_Walker_Nav_Menu()
+            ));
+        ?>
         
       </div>
       <div class="col-span-12 md:col-span-6 lg:col-span-2">

@@ -5,7 +5,8 @@
 register_nav_menus(
 	array(
 		'footer' => esc_html__( 'Footer', 'sws' ),
-        'header_menu' => __('Header Menu')
+        'header_menu' => __('Header Menu'),
+        'footer_hire' => __('Footer Hire Menu')
 	)
 );
 
