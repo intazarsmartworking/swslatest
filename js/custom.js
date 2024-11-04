@@ -1379,17 +1379,6 @@ jQuery('body').on('click',function(event){
 var countedSlide = 0;
 
 jQuery(window).scroll(function(){
-
-  let swiftBox = jQuery('#count-digit-2');
-
-  if(swiftBox){
-    var oTop = swiftBox.top - window.innerHeight;
-    if (countedSlide == 0 && jQuery(window).scrollTop() > oTop) {
-      countedSlide++;
-      $('.slider-for').slick('slickPlay')
-    }
-  }
-
   var sticky = jQuery('.main-header'),
       scroll = jQuery(window).scrollTop();
       jQuery('.header-menu li a').removeClass('active');
@@ -1958,3 +1947,16 @@ jQuery('#prevSlide').click(function(e) {
 jQuery('#nextSlide').click(function(e) {
   jQuery('.customerStories').slick('slickPrev');
 });
+
+scrollCounter = 0
+
+function afetrLoadScrollBox(){
+  const totalTop = document.getElementById('count-digit');
+  jQuery(window).scroll(function(){
+    if (scrollCounter == 0 && jQuery(window).scrollTop() > totalTop.offsetTop) {
+      jQuery('.slider-for').slick('slickPlay');
+      scrollCounter++
+    }
+
+  })
+}
