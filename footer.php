@@ -88,7 +88,7 @@
         </div>
         <div class="pb-7">
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> Phone </h6>
-          <a href="tel:<?php echo get_field('phone_footer', 'options'); ?>" class="text-footer-menu-color text-sm leading-tight"> <?php echo get_field('phone_footer', 'options'); ?> </a>
+           <?php echo get_field('phone_footer', 'options'); ?> 
         </div>
       </div>
     </div>
