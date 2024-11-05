@@ -1024,46 +1024,10 @@ function skillPrice(price){
     const totalPrice = isEurope ? cost : Math.trunc((cost*1.30))
     jQuery('#total-price').text(totalPrice)
 
-    // if(skillPriceData[skillExpData.level] == 12){
-    //   const discount = 750*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }else if(skillPriceData[skillExpData.level] == 14){
-    //   const discount = 1500*skillPeopleData;
-      
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-
-    //   fromRangePrice = isEurope ? discount : Math.trunc((1270*1.30));
-    //   toRangePrice = isEurope ? discount : Math.trunc((2323*1.30));
-    //   jQuery('.from-price').text(converter(fromRangePrice));
-    //   jQuery('.to-price').text(converter(toRangePrice));
-
-    // }else if(skillPriceData[skillExpData.level] == 15){
-    //   const discount = 1875*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }else if(skillPriceData[skillExpData.level] == 17){
-    //   const discount = 2625*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }else if(skillPriceData[skillExpData.level] == 18){
-    //   const discount = 3000*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }else if(skillPriceData[skillExpData.level] == 20){
-    //   const discount = 3750*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }else if(skillPriceData[skillExpData.level] == 22){
-    //   const discount = 4500*skillPeopleData;
-    //   const converPrice = isEurope ? discount : Math.trunc((discount*1.30))
-    //   jQuery('.discount-price').text(converPrice);
-    // }
 
     if(skillPriceData.midLevel == 26 && skillPriceData.senior == 30){
-      fromRangePrice = isEurope ? 2430 : Math.trunc((2430*1.30));
-      toRangePrice = isEurope ? 5806 : Math.trunc((5806*1.30));
+      fromRangePrice = isEurope ? 5070 : Math.trunc((5070*1.30));
+      toRangePrice = isEurope ? 5850 : Math.trunc((5850*1.30));
       jQuery('.from-price').text(converter(fromRangePrice));
       jQuery('.to-price').text(converter(toRangePrice));
 
@@ -1071,10 +1035,13 @@ function skillPrice(price){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 69680 : Math.trunc((69680*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 22 && skillPriceData.senior == 24){
-      fromRangePrice = isEurope ? 2376 : Math.trunc((2376*1.30));
-      toRangePrice = isEurope ? 5320 : Math.trunc((5320*1.30));
+      fromRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
+      toRangePrice = isEurope ? 4680 : Math.trunc((4680*1.30));
       jQuery('.from-price').text(converter(fromRangePrice));
       jQuery('.to-price').text(converter(toRangePrice));
 
@@ -1082,10 +1049,14 @@ function skillPrice(price){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 63840 : Math.trunc((63840*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
+
 
     }else if(skillPriceData.midLevel == 20 && skillPriceData.senior == 22){
-      fromRangePrice = isEurope ? 1933 : Math.trunc((1933*1.30));
-      toRangePrice = isEurope ? 2793 : Math.trunc((2793*1.30));
+      fromRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
+      toRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
       jQuery('.from-price').text(converter(fromRangePrice));
       jQuery('.to-price').text(converter(toRangePrice));
 
@@ -1093,10 +1064,13 @@ function skillPrice(price){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33520 : Math.trunc((33520*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 18 && skillPriceData.senior == 20){
-      fromRangePrice = isEurope ? 1906 : Math.trunc((1906 *1.30));
-      toRangePrice = isEurope ? 2766 : Math.trunc((2766*1.30));
+      fromRangePrice = isEurope ? 3510 : Math.trunc((3510 *1.30));
+      toRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
       jQuery('.from-price').text(converter(fromRangePrice));
       jQuery('.to-price').text(converter(toRangePrice));
 
@@ -1104,10 +1078,13 @@ function skillPrice(price){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33200 : Math.trunc((33200*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
       
     }else if(skillPriceData.midLevel == 14 && skillPriceData.senior == 18){
-      fromRangePrice = isEurope ? 1270 : Math.trunc((1270 *1.30));
-      toRangePrice = isEurope ? 2323 : Math.trunc((2323*1.30));
+      fromRangePrice = isEurope ? 2730 : Math.trunc((2730 *1.30));
+      toRangePrice = isEurope ? 3510 : Math.trunc((3510*1.30));
       jQuery('.from-price').text(converter(fromRangePrice));
       jQuery('.to-price').text(converter(toRangePrice));
 
@@ -1115,6 +1092,9 @@ function skillPrice(price){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 27880 : Math.trunc((27880*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
     }
 
     
@@ -1178,59 +1158,75 @@ function skillExperience(count){
     // }
 
     if(skillPriceData.midLevel == 26 && skillPriceData.senior == 30){
-      fromRangePrice = isEurope ? 2430 : Math.trunc((2430*1.30));
-      toRangePrice = isEurope ? 5806 : Math.trunc((5806*1.30));
-      jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
-      jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
+      fromRangePrice = isEurope ? 5070 : Math.trunc((5070*1.30));
+      toRangePrice = isEurope ? 5850 : Math.trunc((5850*1.30));
+      jQuery('.from-price').text(converter(fromRangePrice));
+      jQuery('.to-price').text(converter(toRangePrice));
 
       const startPrice = isEurope ? skillPriceData.midLevel : Math.trunc((skillPriceData.midLevel*1.30));
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 69680 : Math.trunc((69680*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 22 && skillPriceData.senior == 24){
-      fromRangePrice = isEurope ? 2376 : Math.trunc((2376*1.30));
-      toRangePrice = isEurope ? 5320 : Math.trunc((5320*1.30));
-      jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
-      jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
+      fromRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
+      toRangePrice = isEurope ? 4680 : Math.trunc((4680*1.30));
+      jQuery('.from-price').text(converter(fromRangePrice));
+      jQuery('.to-price').text(converter(toRangePrice));
 
       const startPrice = isEurope ? skillPriceData.midLevel : Math.trunc((skillPriceData.midLevel*1.30));
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 63840 : Math.trunc((63840*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
+
 
     }else if(skillPriceData.midLevel == 20 && skillPriceData.senior == 22){
-      fromRangePrice = isEurope ? 1933 : Math.trunc((1933*1.30));
-      toRangePrice = isEurope ? 2793 : Math.trunc((2793*1.30));
-      jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
-      jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
+      fromRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
+      toRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
+      jQuery('.from-price').text(converter(fromRangePrice));
+      jQuery('.to-price').text(converter(toRangePrice));
 
       const startPrice = isEurope ? skillPriceData.midLevel : Math.trunc((skillPriceData.midLevel*1.30));
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33520 : Math.trunc((33520*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 18 && skillPriceData.senior == 20){
-      fromRangePrice = isEurope ? 1906 : Math.trunc((1906 *1.30));
-      toRangePrice = isEurope ? 2766 : Math.trunc((2766*1.30));
-      jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
-      jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
+      fromRangePrice = isEurope ? 3510 : Math.trunc((3510 *1.30));
+      toRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
+      jQuery('.from-price').text(converter(fromRangePrice));
+      jQuery('.to-price').text(converter(toRangePrice));
 
       const startPrice = isEurope ? skillPriceData.midLevel : Math.trunc((skillPriceData.midLevel*1.30));
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33200 : Math.trunc((33200*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
       
     }else if(skillPriceData.midLevel == 14 && skillPriceData.senior == 18){
-      fromRangePrice = isEurope ? 1270 : Math.trunc((1270 *1.30));
-      toRangePrice = isEurope ? 2323 : Math.trunc((2323*1.30));
-      jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
-      jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
+      fromRangePrice = isEurope ? 2730 : Math.trunc((2730 *1.30));
+      toRangePrice = isEurope ? 3510 : Math.trunc((3510*1.30));
+      jQuery('.from-price').text(converter(fromRangePrice));
+      jQuery('.to-price').text(converter(toRangePrice));
 
       const startPrice = isEurope ? skillPriceData.midLevel : Math.trunc((skillPriceData.midLevel*1.30));
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 27880 : Math.trunc((27880*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
     }
 
     
@@ -1249,8 +1245,8 @@ function skilleldPeople(count){
     jQuery('#total-price').text(totalPrice)
 
     if(skillPriceData.midLevel == 26 && skillPriceData.senior == 30){
-      fromRangePrice = isEurope ? 2430 : Math.trunc((2430*1.30));
-      toRangePrice = isEurope ? 5806 : Math.trunc((5806*1.30));
+      fromRangePrice = isEurope ? 5070 : Math.trunc((5070*1.30));
+      toRangePrice = isEurope ? 5850 : Math.trunc((5850*1.30));
       jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
       jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
 
@@ -1258,10 +1254,13 @@ function skilleldPeople(count){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 69680 : Math.trunc((69680*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 22 && skillPriceData.senior == 24){
-      fromRangePrice = isEurope ? 2376 : Math.trunc((2376*1.30));
-      toRangePrice = isEurope ? 5320 : Math.trunc((5320*1.30));
+      fromRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
+      toRangePrice = isEurope ? 4680 : Math.trunc((4680*1.30));
       jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
       jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
 
@@ -1269,10 +1268,14 @@ function skilleldPeople(count){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 63840 : Math.trunc((63840*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
+
 
     }else if(skillPriceData.midLevel == 20 && skillPriceData.senior == 22){
-      fromRangePrice = isEurope ? 1933 : Math.trunc((1933*1.30));
-      toRangePrice = isEurope ? 2793 : Math.trunc((2793*1.30));
+      fromRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
+      toRangePrice = isEurope ? 4290 : Math.trunc((4290*1.30));
       jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
       jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
 
@@ -1280,10 +1283,13 @@ function skilleldPeople(count){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33520 : Math.trunc((33520*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
 
     }else if(skillPriceData.midLevel == 18 && skillPriceData.senior == 20){
-      fromRangePrice = isEurope ? 1906 : Math.trunc((1906 *1.30));
-      toRangePrice = isEurope ? 2766 : Math.trunc((2766*1.30));
+      fromRangePrice = isEurope ? 3510 : Math.trunc((3510 *1.30));
+      toRangePrice = isEurope ? 3900 : Math.trunc((3900*1.30));
       jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
       jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
 
@@ -1291,10 +1297,13 @@ function skilleldPeople(count){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 33200 : Math.trunc((33200*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
       
     }else if(skillPriceData.midLevel == 14 && skillPriceData.senior == 18){
-      fromRangePrice = isEurope ? 1270 : Math.trunc((1270 *1.30));
-      toRangePrice = isEurope ? 2323 : Math.trunc((2323*1.30));
+      fromRangePrice = isEurope ? 2730 : Math.trunc((2730 *1.30));
+      toRangePrice = isEurope ? 3510 : Math.trunc((3510*1.30));
       jQuery('.from-price').text(converter(fromRangePrice*skillPeopleData));
       jQuery('.to-price').text(converter(toRangePrice*skillPeopleData));
 
@@ -1302,6 +1311,9 @@ function skilleldPeople(count){
       const endPrice = isEurope ? skillPriceData.senior : Math.trunc((skillPriceData.senior*1.30));
       jQuery('.start-price').text(converter(startPrice));
       jQuery('.end-price').text(converter(endPrice));
+
+      const upToDiscount = isEurope ? 27880 : Math.trunc((27880*1.30));
+      jQuery('.up-to-disc').text(converter(upToDiscount));
     }
 
     

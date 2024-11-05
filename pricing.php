@@ -42,7 +42,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
                         <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h5>
-                        <div class=" block w-full mt-3">
+                        <div class=" block w-full mt-2">
                             <input type="text" id="myInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" placeholder="Search skills" />
                         </div>
                         <div class="w-full mt-3 !pt-3 h-[240px] overflow-y-auto thin-scroll-bar">
@@ -82,7 +82,7 @@
 							<?php wp_reset_postdata(); ?>  
 							</div>
                         </div>
-                        <div class=" block w-full mt-[30px]">
+                        <div class=" block w-full mt-[10px]">
                             <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Experience</h5>
                             <div class="d-block w-full mt-3">
                                 <span id="exp-item-2" onclick="skillExperience({id:2,level:'midLevel'})" class="exp-item cursor-pointer inline-block px-[30px] py-[8px] mr-3 mb-3 text-[14px] rounded-[8px] border bottom-[#040524] text-[#040524]">
@@ -96,7 +96,7 @@
                             </div>
                         </div>
 
-                        <div class=" block w-full mt-[30px]">
+                        <div class=" block w-full mt-[10px]">
                             <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">How many people need at your company?</h5>
                             <div class="d-block w-full mt-3">
                                 <div class="relative mb-6">
@@ -138,14 +138,14 @@
 
                         <div class="block mt-6">
 
-                            <div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
-                                <p class="text-[30px] font-semibold text-[#fff]"> Hiring with Smart Working</p>
-                                <p class="text-[50px] font-bold text-[#fff]"><span class="from-price">0</span></p>
-                                <p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> <span class="currency-symble">$</span>/month</span></p>
-                                <p class="text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span><span class="start-price">0</span>-<span class="end-price">0</span>/hour</p>
+                            <div class=" w-[100%] max-w-[450px] min-h-[350px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+                                <p class="text-[25px] font-bold text-[#fff]"> Hiring with Smart Working</p>
+                                <p class="text-[35px] font-bold text-[#fff]"><span class="from-price">0</span></p>
+                                <p class="text-[35px] font-bold text-[#fff] leading-[35px]"><span class="text-[20px] inline-block align-bottom leading-[30px]">to</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[30px]"> <span class="currency-symble">$</span>/month</span></p>
+                                <p class="text-[18px] font-semibold text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span><span class="start-price">0</span>-<span class="end-price">0</span>/hour</p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
                                     <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
-                                    <p class="text-[15px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year with complete transparency.</p>
+                                    <p class="text-[14px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="up-to-disc">0</span>/year with complete transparency.</p>
                                     <p class="text-[12px] text-[#fff]">All expenses included. No hidden costs.</p>
                                 </div>
                             </div>
