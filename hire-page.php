@@ -295,7 +295,7 @@
 								?>
 									<li class="!p-0 !h-auto">
 										<a class="block p-3" href="<?php echo get_permalink(); ?>">
-											<span class="block text-center"><img class="w-[35px] inline-block" src="<?php echo esc_url($hire_image_src[0]) ;?>" alt="<?php the_title();?>"></span>
+											<span class="block text-center"><img class="w-[35px] h-[35px] inline-block" src="<?php echo esc_url($hire_image_src[0]) ;?>" alt="<?php the_title();?>"></span>
 											<span class="block text-center mt-2"><?php the_title();?></span>
 										</a>
 									</li>

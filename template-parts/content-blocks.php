@@ -34,7 +34,7 @@
 				</div>
 				<?php endif; ?>
 				<?php if(get_sub_field('app_star_icon')): ?>
-				<div class="get-app mt-8">
+				<div class="get-app mt-2">
 				<img src="<?php echo get_sub_field('app_star_icon')['url']; ?>" alt="<?php echo get_sub_field('app_star_icon')['alt']; ?>">
 				</div>
 				<?php endif; ?>	

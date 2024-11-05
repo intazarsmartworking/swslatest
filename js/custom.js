@@ -827,15 +827,18 @@ jQuery(document).ready(function(){
   indexChange = 1;
 
   jQuery('#prevButton').on('click', function(){
+    var rNum = (Math.random()*8)-5;
      if(maxMoveItem >= 0){
       const changePosi = listPosition.map((ele) => (ele - 630));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0 && changePosi[0] <= 0){
           //x[index].style.left = `${ele}px`;
-          jQuery(x[index]).animate({left:`${ele}px`})
+          jQuery(x[index]).animate({left:`${ele+(20*index)}px`})
           if(ele <= 0){
             // x[index].style.rotate = `${index*2}deg`;
-            jQuery(x[index]).animate({rotate:`-${index*2}deg`})
+            jQuery(x[index]).animate({rotate:`${rNum}deg`})
+            jQuery(x[index]).animate({top: 300},"slow");
+            jQuery(x[index]).animate({top: 0},"slow");
             jQuery(x[index]).addClass('active')
           }
         }
@@ -863,7 +866,7 @@ jQuery(document).ready(function(){
       changePosi.forEach((ele, index) =>{
         if(ele >= 0  && changePosi[0] <= 0){
           // x[index].style.left = `${ele}px`
-          jQuery(x[index]).animate({left:`${ele}px`})
+          jQuery(x[index]).animate({left:`${ele+(20*index)}px`})
           if(ele > 0){
             //x[index].style.rotate = `${0}deg`
             jQuery(x[index]).animate({rotate:`${0}deg`})
