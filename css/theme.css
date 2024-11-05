@@ -1601,6 +1601,9 @@ select {
 .h-\[30px\] {
   height: 30px;
 }
+.h-\[35px\] {
+  height: 35px;
+}
 .h-\[400px\] {
   height: 400px;
 }
@@ -5857,6 +5860,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
     color: #040524;
     font-weight: 700;
     text-align: left;
+  }
+.skill-list li:hover{
+    border-color: #ff4d04;
+    box-shadow: 0px 0px 11px 3px rgba(255,77,4,0.6);
+    /* zoom: 1.2; */
   }
 .dot-color-bg::after{
     content: '';

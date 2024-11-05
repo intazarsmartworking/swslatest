@@ -368,13 +368,14 @@
 
  <!-- Calculate Section -->
 <?php if (get_row_layout() == 'why_smartworking_section') : ?>
-<?php if(get_sub_field('main_heading')): ?>
- <div class="mx-auto text-center pt-10">
-	<h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
-</div>
-<?php endif; ?>
+
 <div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
+		<?php if(get_sub_field('main_heading')): ?>
+			<div class="mx-auto text-center">
+				<h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
+			</div>
+		<?php endif; ?>
       <div class="block mt-5 w-[100%] min-h-[300px] p-3 lg:p-[120px] calc-sec-bg">
           <div class="grid grid-cols-1 lg:grid-cols-10 gap-5 content-center">
               <div class="grid-item col-span-6 content-center">
