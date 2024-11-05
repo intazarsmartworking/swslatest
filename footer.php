@@ -61,7 +61,7 @@
         
       </div>
       <div class="col-span-12 md:col-span-6 lg:col-span-2 text-left">
-        <h6 class="text-white text-xl font-medium leading-normal mb-5"> Hire Developers </h6>
+        <h6 class="text-white text-xl font-medium leading-normal mb-5"> Hire by Role </h6>
         <?php
             wp_nav_menu( array(
                 'theme_location' => 'footer_hire',
