@@ -288,10 +288,12 @@
         <?php endwhile; ?>	
         <?php endif; ?>  
         </div>
-
+		
+		<?php if(get_sub_field('button_name')): ?> 
         <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
-           <a href="/contact-us/"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange ">Hire Now</button> </a>
+           <a href="<?php echo get_sub_field('button_url'); ?>"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></button> </a>
         </div>
+		<?php endif; ?>
 </div>		
 </section>
 <?php endif; ?>
