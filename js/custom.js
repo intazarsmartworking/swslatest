@@ -996,6 +996,7 @@ let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
     jQuery('.upToPrice').text(converter(upToPrice));
     jQuery('.from-price').text(converter(fromRangePrice));
     jQuery('.to-price').text(converter(toRangePrice));
+    jQuery('.currency-pound').show();
 
   }else{
     console.log('Asia')
@@ -1007,6 +1008,7 @@ let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const toDoller = toPrice*1.30;
     jQuery('.from-price').text(converter(fromRangePrice));
     jQuery('.to-price').text(converter(toRangePrice));
+    jQuery('.currency-dollar').show();
   }
   console.log('locationCountry', locationCountry)
 
@@ -1607,6 +1609,7 @@ jQuery(document).ready(function(){
     slidesToShow: 7,
     slidesToScroll: 3,
     autoplay: true,
+    arrows:false,
     responsive: [
       {
         breakpoint: 1024,

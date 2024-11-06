@@ -1489,6 +1489,9 @@ select {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
 .block {
   display: block;
 }
@@ -5114,6 +5117,10 @@ ul li, ol li{
 .item-skill .active-img{
     display: none;
   }
+.item-skill:hover{
+    border: 1px solid #DF4402;
+    box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
+  }
 .item-skill.active{
     border: 1px solid #DF4402;
     box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
@@ -5127,6 +5134,10 @@ ul li, ol li{
   }
 .exp-item .active-img{
     display: none;
+  }
+.exp-item:hover{
+    border: 1px solid #DF4402;
+    box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
   }
 .exp-item.active{
     border: 1px solid #DF4402;
@@ -6171,6 +6182,15 @@ body.lightMode .relatedBlogs a p{
 .footer-menu li a:hover{
   color: #ff4d04;
 }
+.currency-dollar{
+  display: none;
+}
+.currency-euro{
+  display: none;
+}
+.currency-pound{
+  display: none;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 992px) {
     .howItWorkHeading{
@@ -7213,6 +7233,16 @@ body.lightMode .relatedBlogs a p{
     padding-bottom: 80px;
   }
 
+  .lg\:px-\[120px\] {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .lg\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .lg\:pl-48 {
     padding-left: 12rem;
   }
@@ -7373,6 +7403,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:leading-\[45px\] {
     line-height: 45px;
+  }
+
+  .lg\:leading-\[4rem\] {
+    line-height: 4rem;
   }
 
   .lg\:leading-\[56px\] {
