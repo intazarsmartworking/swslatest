@@ -1938,6 +1938,82 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_672bb553632d3",
+                            "label": "Right CTA Save Text",
+                            "name": "right_cta_save_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_672bb5d0632d4",
+                            "label": "Right CTA From Price",
+                            "name": "right_cta_from_price",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_672bb5e2632d5",
+                            "label": "Right CTA To Price",
+                            "name": "right_cta_to_price",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_672bb5f2632d6",
+                            "label": "Right CTA Duration",
+                            "name": "right_cta_duration",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_66f2c8e956c9a",
                             "label": "Right CTA Button Name",
                             "name": "right_cta_button_name",
@@ -2107,5 +2183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729840642
+    "modified": 1730917896
 }
