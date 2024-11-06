@@ -257,6 +257,44 @@
                                     "maxlength": ""
                                 },
                                 {
+                                    "key": "field_672b81eb3fb5b",
+                                    "label": "Price Euro",
+                                    "name": "price_euro",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_672b81fc3fb5c",
+                                    "label": "Price Pound",
+                                    "name": "price_pound",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
                                     "key": "field_66bd9556faa1a",
                                     "label": "Description",
                                     "name": "description",
@@ -1011,5 +1049,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723705980
+    "modified": 1730904588
 }

@@ -214,6 +214,8 @@
                 <?php 
                     $title_name = get_sub_field('title'); 
                     $price = get_sub_field('price'); 
+                    $price_euro = get_sub_field('price_euro'); 
+                    $price_pound = get_sub_field('price_pound'); 
                     $description = get_sub_field('description'); 
                     $first_colour = get_sub_field('first_colour'); 
                     $second_colour = get_sub_field('second_colour'); 
@@ -224,7 +226,7 @@
                                 <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
                             </span>
                             <?php echo $title_name;?>
-                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><span class="currency-symble">$</span><?php echo $price;?></span>
+                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?> <?php //echo $price_euro;?> <?php //echo $price_pound;?></span>
                             <!-- <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span> -->
                         </div>
                         <!-- <div class="accordion-details w-full relative pt-4">
