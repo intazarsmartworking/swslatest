@@ -526,7 +526,7 @@
 						$paragraph = get_sub_field('paragraph');	
 					?>
 						<div class="col-span-12 md:col-span-6">
-							<div class="rounded-3xl relative mb-5 h-[100%] pl-[80px]">
+							<div class="rounded-3xl relative border-bottom-img mb-5 h-[100%] pl-[80px]">
 								<div class=" text-center w-[50px] h-[50px] pt-[10px] absolute bg-black border border-[#FF4D02] rounded-full left-[30px] top-[30px]">
 									<img class="w-[35px] h-[22px] inline-block" src="https://smartworking.io/wp-content/uploads/2024/07/No-hidden-Fee.svg">
 								</div>

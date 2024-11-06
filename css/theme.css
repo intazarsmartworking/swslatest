@@ -1345,6 +1345,9 @@ select {
 .mb-\[0px\] {
   margin-bottom: 0px;
 }
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -1488,9 +1491,6 @@ select {
 }
 .mt-\[80px\] {
   margin-top: 80px;
-}
-.mb-\[16px\] {
-  margin-bottom: 16px;
 }
 .block {
   display: block;
@@ -7178,6 +7178,11 @@ body.lightMode .relatedBlogs a p{
     padding-right: 100px;
   }
 
+  .lg\:px-\[120px\] {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
   .lg\:px-\[2\.5rem\] {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -7228,19 +7233,14 @@ body.lightMode .relatedBlogs a p{
     padding-bottom: 5rem;
   }
 
-  .lg\:py-\[80px\] {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .lg\:px-\[120px\] {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-
   .lg\:py-\[60px\] {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  .lg\:py-\[80px\] {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .lg\:pl-48 {
