@@ -226,7 +226,11 @@
                                 <img class="w-[100%]" src="<?php echo get_sub_field('image')['url']; ?>">
                             </span>
                             <?php echo $title_name;?>
-                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end"><?php echo $price;?> <?php //echo $price_euro;?> <?php //echo $price_pound;?></span>
+                            <span class=" block w-[150px] h-[30px] absolute right-[0px] top-[-4px] text-white text-[16px] lg:text-[32px] text-end">
+                                <span class="currency-dollar"><?php echo $price;?></span> 
+                                <span class="currency-euro"><?php echo $price_euro;?></span> 
+                                <span class="currency-pound"><?php echo $price_pound;?></span>
+                            </span>
                             <!-- <span class=" block w-[30px] h-[30px] absolute right-0 top-0 text-white text-center">&#11107;</span> -->
                         </div>
                         <!-- <div class="accordion-details w-full relative pt-4">
@@ -254,12 +258,15 @@
             <?php endif; ?> 	
 
             <?php if(get_sub_field('main_title')): ?>
-            <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
+            <h5 class="text-white text-[25px] lg:text-[56px] leading-[25px] lg:leading-[4rem]">
+                <?php echo get_sub_field('main_title'); ?>
+                <span class="text-[#FF4D02] block"><?php echo get_sub_field('orange_title'); ?></span>
+            </h5>
             <?php endif; ?> 	
             
-            <?php if(get_sub_field('orange_title')): ?>   
+            <!-- <?php if(get_sub_field('orange_title')): ?>   
                 <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
-            <?php endif; ?> 
+            <?php endif; ?>  -->
             
             <?php if(get_sub_field('paragraph')): ?>	
                 <p class="text-white text-[16px] lg:text-[24px] font-medium mb-0 max-w-[80%] block mx-auto "><?php echo get_sub_field('paragraph'); ?></p>
@@ -336,12 +343,15 @@
             <?php endif; ?>
             
             <?php if(get_sub_field('main_title')): ?>	
-            <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
+                <h5 class="text-white text-[25px] lg:text-[56px] leading-[25px] lg:leading-[4rem] mb-0">
+                    <?php echo get_sub_field('main_title'); ?>
+                    <span class="text-[#FF4D02] block"><?php echo get_sub_field('orange_title'); ?></span>
+                </h5>
             <?php endif; ?>
             
-            <?php if(get_sub_field('orange_title')): ?>
+            <!-- <?php if(get_sub_field('orange_title')): ?>
                 <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
-            <?php endif; ?>	
+            <?php endif; ?>	 -->
             </div>
 
             <div class="w-full relative mt-8">
@@ -379,7 +389,7 @@
     <?php while (have_rows('block')) : the_row(); ?>
     <?php if (get_row_layout() == 'testimonial_section') : ?>
         <section class="price-page py-16 w-full relative">
-            <div class="py-[30px] mx-auto flex flex-col justify-center testimonial-section items-center">
+            <div class="mx-auto flex flex-col justify-center testimonial-section items-center">
                 <?php if(get_sub_field('small_heading')): ?>
                     <div class ="container mx-auto md:px-0 px-10">
                         <p class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></p>
@@ -444,26 +454,34 @@
     <?php endwhile; ?>
     <?php endif; ?>
 
-
-    <?php get_template_part( 'template-parts/home-blog' );?>
+    <section class="price-page pt-16 w-full relative">
+            <div class="">
+                <div class="text-center small-intro">Blogs</div>
+                <h2 class="text-[25px] lg:text-[56px] leading-[25px] lg:leading-[4rem] mb-0 gradient-text text-center">Our  Blogs </h2>
+            </div>
+            <?php get_template_part( 'template-parts/home-blog' );?>
+    </section>
 
     <?php if (have_rows('pricing_block')) : ?>
     <?php while (have_rows('pricing_block')) : the_row(); ?>
     <?php if (get_row_layout() == 'faq_section') : ?>
     <section class="price-page py-16  w-full relative">
-        <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
+        <div class=" container w-[100%] !max-w-[1280px] relative">
             <div class="w-full text-center">
                 <?php if(get_sub_field('top_title')): ?>
                 <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem]"><?php echo get_sub_field('top_title'); ?></span></div>
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('main_title')): ?>
-                <h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_title'); ?></h5>
+                <h5 class="text-white text-[25px] lg:text-[56px] leading-[25px] lg:leading-[4rem]">
+                    <?php echo get_sub_field('main_title'); ?>
+                    <span class="text-[#FF4D02] block"><?php echo get_sub_field('orange_title'); ?></span>
+                </h5>
                 <?php endif; ?>
                 
-                <?php if(get_sub_field('orange_title')): ?>
+                <!-- <?php if(get_sub_field('orange_title')): ?>
                 <h5 class="text-[#FF4D02] text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('orange_title'); ?></h5>
-                <?php endif; ?>
+                <?php endif; ?> -->
                 
             </div>
 
