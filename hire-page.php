@@ -325,91 +325,92 @@
                 </div>
             </div>
         </section>
-		<section class="w-full px-3 py-10" id="count-digit">
-			<?php if (have_rows('hire_role_section')) : ?>
-			<?php while (have_rows('hire_role_section')) : the_row(); ?>
-			<?php if (get_row_layout() == 'process_section') : ?>
-				
-					<div class="container mx-auto">
-						<div class="block">
-							<?php if(get_sub_field('small_title')): ?>  
-								<div class="text-center small-intro"><?php echo get_sub_field('small_title'); ?></div>
-							<?php endif; ?>
+		<?php if (have_rows('hire_role_section')) : ?>
+			<section class="w-full px-3 py-10" id="count-digit">
+				<?php while (have_rows('hire_role_section')) : the_row(); ?>
+				<?php if (get_row_layout() == 'process_section') : ?>
+					
+						<div class="container mx-auto">
+							<div class="block">
+								<?php if(get_sub_field('small_title')): ?>  
+									<div class="text-center small-intro"><?php echo get_sub_field('small_title'); ?></div>
+								<?php endif; ?>
 
-							<?php if(get_sub_field('main_heading')): ?>	
-								<h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange block"><?php echo get_sub_field('orange_heading'); ?></span></h2>
-							<?php endif; ?>
-						</div>
-
-
-						<div class="grid grid-cols-12 lg:grid-cols-12 gap-3 mt-16">
-							<div class="col-span-12 lg:col-span-5 content-center">
-								<div class="slider slider-nav thumb-image">
-
-
-								<?php if(have_rows('process_section')): ?>
-									<?php while(have_rows('process_section')): the_row(); ?>
-									<?php 
-										$small_title = get_sub_field('small_title'); 
-										$main_title = get_sub_field('main_title'); 
-										$paragraph = get_sub_field('paragraph');
-										$row_index = get_row_index();				
-									?>
-
-									<div class="thumbnail-image">
-										<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
-										<!-- <?php echo $main_title;?>	 -->
-										<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
-									</div>
-
-									<?php endwhile; ?>	
-								<?php endif; ?>  
-									
-								</div>
+								<?php if(get_sub_field('main_heading')): ?>	
+									<h2 class="text-4xl text-center font-medium text-[35px] md:text-[56px] mb-4 text-white lg:leading-[60px]"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange block"><?php echo get_sub_field('orange_heading'); ?></span></h2>
+								<?php endif; ?>
 							</div>
-							<div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
-								<div class="p-6 border border-[#fff] rounded-[10px]">
-									<div class="slider slider-for">
-										<?php if(have_rows('process_section')): ?>
-											<?php while(have_rows('process_section')): the_row(); ?>
-											<?php 
-												$small_title = get_sub_field('small_title'); 
-												$main_title = get_sub_field('main_title'); 
-												$paragraph = get_sub_field('paragraph');
-												$row_index = get_row_index();				
-											?> 
-												<div class="slider-banner-image">
-													<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
-														<?php if(get_sub_field('icon')): ?>
-															<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
-														<?php endif; ?>
-														<span class="!inline-block align-top"><?php echo $small_title;?></span></div>
-													</siv> -->
-													<!-- <span class="inline-block align-top"><?php echo $small_title;?></span> -->
-													<h5 class=" text-white text-[1.5rem] font-normal md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 "><?php echo $main_title;?></h5>
-													<p class="text-white text-[16px]"><?php echo $paragraph;?></p>
-												</div>
+
+
+							<div class="grid grid-cols-12 lg:grid-cols-12 gap-3 mt-16">
+								<div class="col-span-12 lg:col-span-5 content-center">
+									<div class="slider slider-nav thumb-image">
+
+
+									<?php if(have_rows('process_section')): ?>
+										<?php while(have_rows('process_section')): the_row(); ?>
+										<?php 
+											$small_title = get_sub_field('small_title'); 
+											$main_title = get_sub_field('main_title'); 
+											$paragraph = get_sub_field('paragraph');
+											$row_index = get_row_index();				
+										?>
+
+										<div class="thumbnail-image">
+											<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
+											<!-- <?php echo $main_title;?>	 -->
+											<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
+										</div>
+
+										<?php endwhile; ?>	
+									<?php endif; ?>  
+										
+									</div>
+								</div>
+								<div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
+									<div class="p-6 border border-[#fff] rounded-[10px]">
+										<div class="slider slider-for">
+											<?php if(have_rows('process_section')): ?>
+												<?php while(have_rows('process_section')): the_row(); ?>
+												<?php 
+													$small_title = get_sub_field('small_title'); 
+													$main_title = get_sub_field('main_title'); 
+													$paragraph = get_sub_field('paragraph');
+													$row_index = get_row_index();				
+												?> 
+													<div class="slider-banner-image">
+														<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
+															<?php if(get_sub_field('icon')): ?>
+																<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
+															<?php endif; ?>
+															<span class="!inline-block align-top"><?php echo $small_title;?></span></div>
+														</siv> -->
+														<!-- <span class="inline-block align-top"><?php echo $small_title;?></span> -->
+														<h5 class=" text-white text-[1.5rem] font-normal md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 "><?php echo $main_title;?></h5>
+														<p class="text-white text-[16px]"><?php echo $paragraph;?></p>
+													</div>
+													
+												<?php endwhile; ?>	
+												<?php endif; ?> 
+
+
 												
-											<?php endwhile; ?>	
-											<?php endif; ?> 
-
-
-											
+										</div>
 									</div>
+
+
+									
+									<!-- End User this HTML for Slider -->
 								</div>
-
-
-								
-								<!-- End User this HTML for Slider -->
 							</div>
+
+
+
+							
 						</div>
-
-
-
-						
-					</div>
-			<?php endif; ?>
-		</section>
+				
+			</section>
+		<?php endif; ?>
 
 			
 
