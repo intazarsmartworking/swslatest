@@ -988,6 +988,14 @@ var toRangePrice = 0;
 
 
 let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
+console.log('locationCountry', locationCountry)
+  if(locationCountry.includes('Calcutta')){
+    jQuery('.addr-india').show();
+    jQuery('.addr-uk').show();
+  }else{
+    jQuery('.addr-uk').show();
+  }
+
 
   if(locationCountry.includes('Europe')){
     console.log('Europe')

@@ -370,7 +370,7 @@
                         <?php endif; ?>
                         
                         <div class="absolute w-[calc(100%-30px)] left-[15px] bottom-0 bg-white rounded-[15px] p-[20px]">
-                            <p class="text-[19px] lg:text-[19px] font-medium mb-0"><?php echo $description;?></p>
+                            <p class="text-[19px] lg:text-[19px] font-medium mb-4"><?php echo $description;?></p>
                             <a href="<?php echo $button_link;?>"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo $button_name ;?></button> </a>
                         </div>
                     </div>

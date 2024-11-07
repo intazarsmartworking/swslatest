@@ -3041,6 +3041,9 @@ body.lightMode .relatedBlogs a p{
 .currency-pound{
   display: none;
 }
+.addr-india, .addr-uk{
+  display: none;
+}
 /*End USE CSS for Slider*/
 @media (max-width: 992px) {
     .howItWorkHeading{

@@ -75,8 +75,16 @@
       </div>
       <div class="col-span-12 md:col-span-6 lg:col-span-2">
         <h6 class="text-white text-xl font-medium leading-normal"> Our Location </h6>
-        <div class="pb-7 pt-5" id="findAdress">
-          
+        <div class="pb-7 pt-5">
+            <div class="addr-india">
+              <h6 class="text-footer-menu-color text-base font-medium leading-normal mb-2">India</h6>
+              <p class="text-footer-menu-color text-sm leading-normal"><?php echo get_field('india_address', 'options'); ?></p>
+              <!-- <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p> -->
+            </div>
+            <div class="addr-uk">
+              <h6 class="text-footer-menu-color text-base font-medium leading-normal mt-5 mb-2">United Kingdom</h6>
+              <p class="text-footer-menu-color text-sm leading-normal"><?php echo get_field('uk_address', 'options'); ?></p>
+            </div>
         </div>
         
       </div>
