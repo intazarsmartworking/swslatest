@@ -2756,6 +2756,9 @@ select {
 .pb-\[10px\] {
   padding-bottom: 10px;
 }
+.pb-\[120px\] {
+  padding-bottom: 120px;
+}
 .pb-\[150px\] {
   padding-bottom: 150px;
 }
@@ -7113,6 +7116,10 @@ body.lightMode .relatedBlogs a p{
     gap: 20rem;
   }
 
+  .lg\:rounded-\[40px\] {
+    border-radius: 40px;
+  }
+
   .lg\:p-10 {
     padding: 2.5rem;
   }
@@ -7349,6 +7356,10 @@ body.lightMode .relatedBlogs a p{
     font-size: 28px;
   }
 
+  .lg\:text-\[30px\] {
+    font-size: 30px;
+  }
+
   .lg\:text-\[32px\] {
     font-size: 32px;
   }
@@ -7371,6 +7382,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:text-\[48px\] {
     font-size: 48px;
+  }
+
+  .lg\:text-\[50px\] {
+    font-size: 50px;
   }
 
   .lg\:text-\[56px\] {
