@@ -149,11 +149,11 @@
 			<?php endif; ?>
 		</div>
 		<div class="grid-item col-span-5 content-end relative py-[10%] lg:py-[100px]">
-			<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[40px] relative overflow-hidden ml-auto">
-				<p class="text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
-				<p class="text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
-				<p class="text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to </span> <?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> <?php echo get_sub_field('amount_duration'); ?> </span></p>
-				<p class="text-[20px] text-[#fff] mt-[20px]"><?php echo get_sub_field('equivalent_text'); ?></p>
+			<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
+				<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
+				<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
+				<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to </span> <?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> <?php echo get_sub_field('amount_duration'); ?> </span></p>
+				<p class="text-[18px] lg:text-[20px] text-[#fff] mt-[20px]"><?php echo get_sub_field('equivalent_text'); ?></p>
 				<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
 					<p class="text-[18px] lg:text-[20px] text-[#fff]"><?php echo get_sub_field('save_text'); ?></p>
 					<!-- <p class="text-[13px] text-[#fff]"><?php echo get_sub_field('expense_include'); ?></p> -->
