@@ -303,5 +303,6 @@
 <script type="text/javascript">
    jQuery(window).bind("load", function() {
    	homePageAnimation()
+	afetrLoadScrollBox()
    });
 </script>

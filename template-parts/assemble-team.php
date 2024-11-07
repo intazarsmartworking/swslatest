@@ -59,11 +59,11 @@
                                 $modified_permalink = rtrim($permalink, '/') . '-developer/';
                             ?>
 
-                            <div class="flex flex-col items-center justify-center py-2 px-2 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
-                                <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="pb-4">
-                                <h6 class="text-xs font-normal text-dark-black"> <?php the_title();?> </h6>
+                            <div class="home-skills flex flex-col items-center justify-center p-3 rounded-lg skill-border cursor-pointer" onclick="toggleSkill(this)">
+                                <img src="<?php echo esc_url($hire_image_src[0]) ;?>" class="w-[40px] h-[40px]" />
+                                <h6 class="text-xs font-normal text-dark-black mt-4"> <?php the_title();?> </h6>
                                 <svg class="hidden w-4 h-4 mt-1 text-red-600 fill-current cursor-pointer cross-icon-position" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="deselectSkill(event)">
-                                <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M15.293 4.293a1 1 0 00-1.414 0L10 8.586 6.707 5.293a1 1 0 00-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 001.414 1.414L10 11.414l3.293 3.293a1 1 0 001.414-1.414L11.414 10l3.293-3.293a1 1 0 000-1.414z" clip-rule="evenodd" />
                                 </svg>
                             </div>
 

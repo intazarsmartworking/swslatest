@@ -1345,6 +1345,9 @@ select {
 .mb-\[0px\] {
   margin-bottom: 0px;
 }
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -1488,9 +1491,6 @@ select {
 }
 .mt-\[80px\] {
   margin-top: 80px;
-}
-.mb-\[16px\] {
-  margin-bottom: 16px;
 }
 .block {
   display: block;
@@ -1693,6 +1693,9 @@ select {
 }
 .min-h-\[520px\] {
   min-height: 520px;
+}
+.min-h-\[530px\] {
+  min-height: 530px;
 }
 .min-h-\[55px\] {
   min-height: 55px;
@@ -2732,9 +2735,6 @@ select {
 .pb-3 {
   padding-bottom: 0.75rem;
 }
-.pb-4 {
-  padding-bottom: 1rem;
-}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -2783,9 +2783,6 @@ select {
 .pl-7 {
   padding-left: 1.75rem;
 }
-.pl-\[100px\] {
-  padding-left: 100px;
-}
 .pl-\[20px\] {
   padding-left: 20px;
 }
@@ -2831,6 +2828,9 @@ select {
 .pr-\[30px\] {
   padding-right: 30px;
 }
+.pt-0 {
+  padding-top: 0px;
+}
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -2863,6 +2863,9 @@ select {
 }
 .pt-7 {
   padding-top: 1.75rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pt-\[0px\] {
   padding-top: 0px;
@@ -3776,10 +3779,11 @@ body{
 .hiw-bullat-point{
     padding: 0px;
     margin-left: 0px;
+    color: #fff;
 }
 .hiw-bullat-point li{
     padding: 0px;
-    color: #050403;
+    color: #fff;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -3787,12 +3791,13 @@ body{
     padding-left: 30px;
     position: relative;
     margin-bottom: 12px;
-
 }
 .hiw-bullat-point li .bullet-point{
     position: absolute;
     left: 0px;
     top: 5px;
+    width: 15px;
+    height: 15px;
 }
 .how-it-works-card h3{
     color: #050403;
@@ -5118,6 +5123,10 @@ ul li, ol li{
     display: none;
   }
 .item-skill:hover{
+    border: 1px solid #DF4402;
+    box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
+  }
+.home-skills:hover{
     border: 1px solid #DF4402;
     box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
   }
@@ -6783,10 +6792,6 @@ body.lightMode .relatedBlogs a p{
     padding-top: 9rem;
   }
 
-  .md\:pt-\[0px\] {
-    padding-top: 0px;
-  }
-
   .md\:text-left {
     text-align: left;
   }
@@ -6873,10 +6878,6 @@ body.lightMode .relatedBlogs a p{
     bottom: -60px;
   }
 
-  .lg\:bottom-\[30px\] {
-    bottom: 30px;
-  }
-
   .lg\:left-\[-90px\] {
     left: -90px;
   }
@@ -6907,10 +6908,6 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:top-\[-30px\] {
     top: -30px;
-  }
-
-  .lg\:top-\[inherit\] {
-    top: inherit;
   }
 
   .lg\:col-span-1 {
@@ -7013,8 +7010,16 @@ body.lightMode .relatedBlogs a p{
     max-height: 240px;
   }
 
+  .lg\:min-h-\[450px\] {
+    min-height: 450px;
+  }
+
   .lg\:min-h-\[500px\] {
     min-height: 500px;
+  }
+
+  .lg\:min-h-\[530px\] {
+    min-height: 530px;
   }
 
   .lg\:w-1\/12 {
@@ -7105,14 +7110,6 @@ body.lightMode .relatedBlogs a p{
     gap: 20rem;
   }
 
-  .lg\:rounded-\[44px\] {
-    border-radius: 44px;
-  }
-
-  .lg\:p-0 {
-    padding: 0px;
-  }
-
   .lg\:p-10 {
     padding: 2.5rem;
   }
@@ -7178,6 +7175,11 @@ body.lightMode .relatedBlogs a p{
     padding-right: 100px;
   }
 
+  .lg\:px-\[120px\] {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
   .lg\:px-\[2\.5rem\] {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -7228,27 +7230,18 @@ body.lightMode .relatedBlogs a p{
     padding-bottom: 5rem;
   }
 
-  .lg\:py-\[80px\] {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .lg\:px-\[120px\] {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-
   .lg\:py-\[60px\] {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  .lg\:pl-48 {
-    padding-left: 12rem;
+  .lg\:py-\[80px\] {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
-  .lg\:pl-\[100px\] {
-    padding-left: 100px;
+  .lg\:pl-48 {
+    padding-left: 12rem;
   }
 
   .lg\:pl-\[10rem\] {
@@ -7281,10 +7274,6 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:pr-\[60px\] {
     padding-right: 60px;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
   }
 
   .lg\:pt-16 {

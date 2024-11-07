@@ -279,7 +279,13 @@
 
 
 		<?php get_template_part( 'template-parts/assemble-team' );?>
-		<?php get_template_part( 'template-parts/home-blog' );?>
+		<!-- <?php get_template_part( 'template-parts/home-blog' );?> -->
+		<div class="w-full relative">
+			<h4 class="text-center small-intro"> Blogs </h4>
+			<h2 class=" text-3xl sm:text-4xl lg:text-5xl 3xl:text-58 font-medium gradient-text text-center px-0  md:leading-tight">Our  Blogs </h2>
+			<p class="text-white text-xl font-normal text-center mt-6 mb-0 px-0 "> Interviews, tips, guides, industry best practices, and news. </p>
+			<?php get_template_part( 'template-parts/home-blog' );?>
+		</div>
 
 		<!-- FAQ Section  -->
 		<?php if (have_rows('section_block')) : ?>
