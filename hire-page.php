@@ -347,23 +347,23 @@
 									<div class="slider slider-nav thumb-image">
 
 
-									<?php if(have_rows('process_section')): ?>
-										<?php while(have_rows('process_section')): the_row(); ?>
-										<?php 
-											$small_title = get_sub_field('small_title'); 
-											$main_title = get_sub_field('main_title'); 
-											$paragraph = get_sub_field('paragraph');
-											$row_index = get_row_index();				
-										?>
+										<?php if(have_rows('process_section')): ?>
+											<?php while(have_rows('process_section')): the_row(); ?>
+											<?php 
+												$small_title = get_sub_field('small_title'); 
+												$main_title = get_sub_field('main_title'); 
+												$paragraph = get_sub_field('paragraph');
+												$row_index = get_row_index();				
+											?>
 
-										<div class="thumbnail-image">
-											<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
-											<!-- <?php echo $main_title;?>	 -->
-											<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
-										</div>
+											<div class="thumbnail-image">
+												<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
+												<!-- <?php echo $main_title;?>	 -->
+												<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
+											</div>
 
-										<?php endwhile; ?>	
-									<?php endif; ?>  
+											<?php endwhile; ?>	
+										<?php endif; ?>  
 										
 									</div>
 								</div>

@@ -501,10 +501,11 @@ body{
 .hiw-bullat-point{
     padding: 0px;
     margin-left: 0px;
+    color: #fff;
 }
 .hiw-bullat-point li{
     padding: 0px;
-    color: #050403;
+    color: #fff;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -512,12 +513,13 @@ body{
     padding-left: 30px;
     position: relative;
     margin-bottom: 12px;
-
 }
 .hiw-bullat-point li .bullet-point{
     position: absolute;
     left: 0px;
     top: 5px;
+    width: 15px;
+    height: 15px;
 }
 .how-it-works-card h3{
     color: #050403;
@@ -1928,6 +1930,10 @@ ul li, ol li{
     display: none;
   }
   .item-skill:hover{
+    border: 1px solid #DF4402;
+    box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
+  }
+  .home-skills:hover{
     border: 1px solid #DF4402;
     box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
   }
