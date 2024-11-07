@@ -561,18 +561,21 @@
 
         <?php if (get_row_layout() == 'testimonial_section') : ?>
 			<div class="my-0 relative mx-auto flex flex-col justify-center testimonial-section items-center py-16">
-				<?php if(get_sub_field('small_heading')): ?>
-					<div class ="container mx-auto md:px-0 px-10">
-						<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
-					</div>
-				<?php endif; ?>
-				
-				<?php if(get_sub_field('main_heading')): ?>
-					<div class="flex flex-col items-center justify-center">
-						<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
-					</div>
-				<?php endif; ?>
 				<img class="absolute w-[400px] right-[300px] z-0 top-[20px]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" alt="">
+				<div class="w-full relative z-10">
+					<?php if(get_sub_field('small_heading')): ?>
+						<div class ="container mx-auto md:px-0 px-10">
+							<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
+						</div>
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('main_heading')): ?>
+						<div class="flex flex-col items-center justify-center">
+							<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
+						</div>
+					<?php endif; ?>
+				</div>
+				
 				<div class="w-full flex relative z-10 min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
 				<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 				<div class="slider-wrapper w-full min-h-[400px] lg:min-h-[500px] pt-[30px] relative card-container overflow-visible">
