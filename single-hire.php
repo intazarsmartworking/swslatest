@@ -758,7 +758,7 @@
 							<div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[20px] font-semibold text-[#fff]"> <?php echo get_sub_field('right_cta_save_text'); ?></p>
                                 <p class="text-[30px] font-bold text-[#fff]"><span class="from-price"> <?php echo get_sub_field('right_cta_from_price'); ?> </span></p>
-                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]"> to </span> <span class="to-price"> <?php echo get_sub_field('right_cta_to_price'); ?> </span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <span class="currency-symble">$</span><?php echo get_sub_field('right_cta_duration'); ?></span></p>
+                                <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]"> to </span> <span class="to-price"> <?php echo get_sub_field('right_cta_to_price'); ?> </span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <?php echo get_sub_field('right_cta_duration'); ?></span></p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
                                     <?php if(get_sub_field('right_cta_button_name')): ?>
 									<a href="<?php echo get_sub_field('right_cta_button_link'); ?>" class="bg-[#fff] inline-block w-[100%] py-4 text-center text-[18px] px-2 rounded-[14px] text-[#FF4D02]"> <?php echo get_sub_field('right_cta_button_name'); ?> 
