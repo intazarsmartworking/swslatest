@@ -90,7 +90,7 @@
 					  $avai = get_sub_field('avai'); 
 					?> 
                         <div class="slider-itme">
-                            <div class="custom-bg custom-border">
+                            <div class="profile-box-bg">
                                 <div class="flex items-center">
 									<?php $poet_image = get_sub_field('image');
 										if (!empty($poet_image) && isset($poet_image['url'])):
@@ -220,14 +220,24 @@
                         
                     </div>
                 </div>
-                <div class="block text-center mt-10">
-                    <span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3" id="next-slide">
-                        &lt;
-                    </span>
-                    <span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle" id="prev-slide">
-                        &gt;
-                    </span>
-                </div>
+				<?php if (have_rows('vetted_box')): ?>
+					<?php $length = 0;
+					while (have_rows('vetted_box')): the_row();
+						$length++;
+					endwhile;
+
+					if ($length > 3): ?>
+						<div class="block text-center mt-10">
+							<span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3"  id="next-slide">
+								&lt;
+							</span>
+							<span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle" id="prev-slide">
+								&gt;
+							</span>
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
+                
 				
 
             </div>

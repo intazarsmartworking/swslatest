@@ -35,7 +35,7 @@
                                 $row_index = get_row_index(); 
                             ?>
 
-                            <div class="thumbnail-image" >
+                            <div class="thumbnail-image" style="background:<?php echo $background_color;?>">
                                 <span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
                                 <h5 class=" text-white font-light md:text-[30px] leading-[40px]"><?php echo $small_title;?></h5>
                             </div>
@@ -46,7 +46,7 @@
                         </div>
                 </div>
                 <div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
-                    <div class="p-6 border border-[#fff] min-h-[350px] rounded-[10px]">
+                    <div class=" block">
 										<div class="slider slider-for">
                                             <?php if(have_rows('box_content')): ?>
                                                 <?php while(have_rows('box_content')): the_row(); ?>
@@ -56,7 +56,7 @@
                                                     $background_color = get_sub_field('background_color'); 
                                                     $background_name = get_sub_field('background_name'); 
                                                 ?>
-													<div class="slider-banner-image">
+													<div class="slider-banner-image p-6 min-h-[350px] rounded-[10px]" style="border:1px solid <?php echo $background_color;?>">
 														<h5 class=" text-white text-[1.5rem] font-normal md:text-[3rem] leading-[1.5rem] md:leading-[3rem] mb-7 ">
                                                             <span class="text-dark-orange"><?php echo $right_side_heading;?></span>
                                                         </h5>

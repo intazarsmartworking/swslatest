@@ -38,7 +38,8 @@
 
     <section class="price-page py-16 w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
-            <div class="max-w-[100%] relative mx-auto assemble-section-bg rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
+            <img class=" absolute left-[-100px] top-[-100px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" alt="">
+            <div class="max-w-[100%] relative z-10 mx-auto assemble-section-bg rounded-[24px] border border-[rgba(255,77,2,0.30)] p-3 lg:p-[32px] ">
                 <div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
                     <div class="grid-item col-span-6 rounded-[12px] bg-white p-[10px] lg:p-[20px] ">
                         <h5 class=" text-black text-[20px] lg:text-[20px] font-bold mb-0">Let’s start building your team</h5>
@@ -138,15 +139,15 @@
 
                         <div class="block mt-6">
 
-                            <div class=" w-[100%] max-w-[450px] min-h-[350px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
-                                <p class="text-[25px] font-bold text-[#fff]"> Hiring with Smart Working</p>
-                                <p class="text-[35px] font-bold text-[#fff]"><span class="from-price">0</span></p>
-                                <p class="text-[35px] font-bold text-[#fff] leading-[35px]"><span class="text-[20px] inline-block align-bottom leading-[30px]">to</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[30px]"> <span class="currency-symble">$</span>/month</span></p>
+                            <div class=" w-[100%] max-w-[450px] min-h-[350px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] relative overflow-hidden ml-auto">
+                                <p class="   font-bold text-[#fff]"> Hiring with Smart Working</p>
+                                <p class="text-[35px] font-bold text-[#fff]"><span class="currency-symble">$</span><span class="from-price">0</span></p>
+                                <p class="text-[35px] font-bold text-[#fff] leading-[35px]"><span class="text-[20px] inline-block align-bottom leading-[30px]">to </span> <span class="currency-symble">$</span><span class="to-price">50,000</span> <span class="text-[20px] inline-block align-bottom leading-[30px]"> /month</span></p>
                                 <p class="text-[18px] font-semibold text-[#fff] mt-[20px]">Equivalent to <span class="currency-symble">$</span><span class="start-price">0</span>-<span class="end-price">0</span>/hour</p>
                                 <div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
                                     <!-- <p class="text-[20px] text-[#fff]">Save up to <span class="currency-symble">$</span><span class="upToPrice">0</span>/year</p> -->
-                                    <p class="text-[14px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="up-to-disc">0</span>/year with complete transparency.</p>
-                                    <p class="text-[12px] text-[#fff]">All expenses included. No hidden costs.</p>
+                                    <p class="text-[16px] lg:text-[18px] font-bold text-[#fff]">Enjoy annual savings of up to <span class="currency-symble">$</span><span class="up-to-disc">0</span>/year with complete transparency.</p>
+                                    
                                 </div>
                             </div>
 
@@ -196,7 +197,8 @@
     <?php if (get_row_layout() == 'add_on_section') : ?>
     <section class="price-page py-16  w-full relative">
         <div class=" container w-[100%] !max-w-[1280px] relative py-[30px]">
-            <div class="w-full text-center">
+            <img class=" absolute right-0 top-[0px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
+            <div class="w-full z-10 text-center">
                 <?php if(get_sub_field('top_heading')): ?>
                 <div class="block mb-5"><span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('top_heading'); ?></span></div>
                 <?php endif; ?>
@@ -370,7 +372,7 @@
                         <?php endif; ?>
                         
                         <div class="absolute w-[calc(100%-30px)] left-[15px] bottom-0 bg-white rounded-[15px] p-[20px]">
-                            <p class="text-[19px] lg:text-[19px] font-medium mb-0"><?php echo $description;?></p>
+                            <p class="text-[19px] lg:text-[19px] font-medium mb-4"><?php echo $description;?></p>
                             <a href="<?php echo $button_link;?>"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo $button_name ;?></button> </a>
                         </div>
                     </div>

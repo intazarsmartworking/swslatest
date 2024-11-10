@@ -92,7 +92,7 @@
 					  $avai = get_sub_field('avai'); 
 					?> 
                         <div class="slider-itme">
-                            <div class="custom-bg custom-border">
+                            <div class="profile-box-bg">
                                 <div class="flex items-center">
 									<?php $poet_image = get_sub_field('image');
 										if (!empty($poet_image) && isset($poet_image['url'])):
@@ -220,14 +220,23 @@
                         
                     </div>
                 </div>
-                <div class="block text-center mt-10">
-                    <span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3" id="next-slide">
-                        &lt;
-                    </span>
-                    <span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle"  id="prev-slide">
-                        &gt;
-                    </span>
-                </div>
+				<?php if (have_rows('vetted_box')): ?>
+					<?php $length = 0;
+					while (have_rows('vetted_box')): the_row();
+						$length++;
+					endwhile;
+
+					if ($length > 3): ?>
+						<div class="block text-center mt-10">
+							<span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle mr-3"  id="next-slide">
+								&lt;
+							</span>
+							<span class="inline-block p-[10px] w-[50px] cursor-pointer rounded-[8px] border border-[#302f2f] text-[#AAA] text-center text-[16px] align-middle" id="prev-slide">
+								&gt;
+							</span>
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
 
 
             </div>
@@ -368,7 +377,7 @@
 									</div>
 								</div>
 								<div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
-									<div class="p-6 border border-[#fff] rounded-[10px]">
+									<div class="block">
 										<div class="slider slider-for">
 											<?php if(have_rows('process_section')): ?>
 												<?php while(have_rows('process_section')): the_row(); ?>
@@ -378,7 +387,7 @@
 													$paragraph = get_sub_field('paragraph');
 													$row_index = get_row_index();				
 												?> 
-													<div class="slider-banner-image">
+													<div class="slider-banner-image rounded-[10px]">
 														<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
 															<?php if(get_sub_field('icon')): ?>
 																<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
@@ -515,6 +524,7 @@
                 </div> -->
 
 				<?php if(get_sub_field('main_heading')): ?>
+					<div class="text-center small-intro">Clients</div>
 					<h5 class="font-medium text-center text-[25px] md:text-[48px] text-white md:leading-[55px] mb-10">Why Choose Smart Working <span class="text-dark-orange block">for Your Next Hiring</span></h5>
 				<?php endif; ?>	
 
@@ -552,18 +562,21 @@
 
         <?php if (get_row_layout() == 'testimonial_section') : ?>
 			<div class="my-0 relative mx-auto flex flex-col justify-center testimonial-section items-center py-16">
-				<?php if(get_sub_field('small_heading')): ?>
-					<div class ="container mx-auto md:px-0 px-10">
-						<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
-					</div>
-				<?php endif; ?>
-				
-				<?php if(get_sub_field('main_heading')): ?>
-					<div class="flex flex-col items-center justify-center">
-						<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
-					</div>
-				<?php endif; ?>
 				<img class="absolute w-[400px] right-[300px] z-0 top-[20px]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" alt="">
+				<div class="w-full relative z-10">
+					<?php if(get_sub_field('small_heading')): ?>
+						<div class ="container mx-auto md:px-0 px-10">
+							<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
+						</div>
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('main_heading')): ?>
+						<div class="flex flex-col items-center justify-center">
+							<h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-[58px] font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
+						</div>
+					<?php endif; ?>
+				</div>
+				
 				<div class="w-full flex relative z-10 min-h-[520px] md:min-h-[620px] pr-3 lg:pr-0 pt-5 lg:pt-16 pb-2 md:pb-16 overflow-hidden">
 				<div class="flex w-0 lg:w-1/12">&nbsp;</div>
 				<div class="slider-wrapper w-full min-h-[400px] lg:min-h-[500px] pt-[30px] relative card-container overflow-visible">
@@ -898,7 +911,7 @@
 
 	jQuery(window).bind("load", function() {
 		callFunction()
-		afetrLoadScrollBox()
+		//afetrLoadScrollBox()
 	});
 </script>
 

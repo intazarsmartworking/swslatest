@@ -1141,7 +1141,7 @@
                   <div class="grid-item col-span-2 content-start">
                     <div class="rounded-[10px] min-h-[300px] p-3 stickysidenav">
 
-                          <div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+                          <div class=" w-[100%] min-w-[300px] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[20px] font-semibold text-[#fff]"> Save up to</p>
                                 <p class="text-[30px] font-bold text-[#fff]"><span class="from-price">4,550</span></p>
                                 <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]">to</span><span class="to-price">5,980</span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <span class="currency-symble">$</span>/m</span></p>

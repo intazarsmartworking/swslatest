@@ -484,7 +484,7 @@
               <div class="grid-item col-span-2 content-start">
                 <div class="rounded-[10px] min-h-[100px] p-5 stickysidenav">
 
-							<div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+							<div class=" w-[100%] min-w-[300px] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[20px] font-semibold text-[#fff]"> <?php echo get_sub_field('right_cta_save_text'); ?></p>
                                 <p class="text-[30px] font-bold text-[#fff]"><span class="from-price"> <?php echo get_sub_field('right_cta_from_price'); ?> </span></p>
                                 <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]"> to </span> <span class="to-price"> <?php echo get_sub_field('right_cta_to_price'); ?> </span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <?php echo get_sub_field('right_cta_duration'); ?></span></p>
