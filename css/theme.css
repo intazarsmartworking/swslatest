@@ -955,6 +955,9 @@ select {
 .left-0 {
   left: 0px;
 }
+.left-\[-100px\] {
+  left: -100px;
+}
 .left-\[-12\%\] {
   left: -12%;
 }
@@ -1005,9 +1008,6 @@ select {
 }
 .right-0 {
   right: 0px;
-}
-.right-\[-100\] {
-  right: -100;
 }
 .right-\[-12\%\] {
   right: -12%;
@@ -1191,12 +1191,6 @@ select {
 }
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
-}
-.right-\[-100px\] {
-  right: -100px;
-}
-.left-\[-100px\] {
-  left: -100px;
 }
 .-z-10 {
   z-index: -10;
@@ -1878,11 +1872,11 @@ select {
 .min-w-\[100\%\] {
   min-width: 100%;
 }
-.min-w-\[405px\] {
-  min-width: 405px;
-}
 .min-w-\[300px\] {
   min-width: 300px;
+}
+.min-w-\[405px\] {
+  min-width: 405px;
 }
 .\!max-w-\[1280px\] {
   max-width: 1280px !important;
@@ -5125,6 +5119,9 @@ ul li, ol li{
   background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(64, 21, 2, 1) 0%, rgba(8, 3, 0, 1) 100%);
   padding: 25px;
 }
+.top-scroll{
+  display: none;
+}
 .auther-page-bg{
     border-radius: 22px;
     border: 1px #401A0A;
@@ -6247,6 +6244,16 @@ body.lightMode .relatedBlogs a p{
   min-height: 350px;
   border: 1px solid #fff;
   padding: 1.5rem;
+}
+@media (min-width: 991px) and (max-width:1360px) {
+  .header-menu li a{
+    padding: 13px 4px;
+    font-size: 12px;
+  }
+  .btn-header{
+    padding: 13px 8px !important;
+    font-size: 12px;
+  }
 }
 /*End USE CSS for Slider*/
 @media (max-width: 992px) {
