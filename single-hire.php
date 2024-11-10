@@ -89,8 +89,9 @@
 	  <p class="text-center text-white font-medium text-2xl pt-[10px] px-0 mb-10"> No hidden costs, timezone aligned and able to hire in one week. </p>
 	<?php endif; ?>  
     </div>
-	<div class="container mx-auto p-4">
-	<div class="block w-[100%]">
+	<div class="container relative z-10 mx-auto p-4">
+		<img class=" absolute right-0 top-[-250px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
+		<div class="block relative z-10 w-[100%]">
                     <div class="slider-main-box" id="vetted-profiles-slider">
 					
 					<?php if(have_rows('vetted_box')): ?>
@@ -102,7 +103,7 @@
 					  $avai = get_sub_field('avai'); 
 					?> 
                         <div class="slider-itme">
-                            <div class="custom-bg custom-border">
+                            <div class="profile-box-bg">
                                 <div class="flex items-center">
 									<?php $poet_image = get_sub_field('image');
 										if (!empty($poet_image) && isset($poet_image['url'])):
@@ -257,53 +258,58 @@
 
 <?php if (get_row_layout() == 'top_find_section') : ?>
 <section class="w-full relative py-8">
-<div class="container mx-auto max-w-[1280px]">
-<?php if(get_sub_field('top_title')): ?>  
-  <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
-<?php endif; ?>
-      <div class="flex flex-col items-center justify-center">
-        <?php if(get_sub_field('main_title')): ?> 
-          <h5 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white lg:leading-[74px]">
-			<?php echo get_sub_field('main_title'); ?>
-			<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
-		</h5> 
-          
-        <?php endif; ?>  
-		<?php if(get_sub_field('small_paragraph')): ?> 
-        <p class="mb-12 text-[13px] md:text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
-      <?php endif; ?>  
-      </div>
 
-       
-        <div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
-		<?php if(have_rows('step_section')): ?>
-		<?php while(have_rows('step_section')): the_row(); ?>
-		<?php 
-		  $step_title = get_sub_field('step_title'); 
-		  $title = get_sub_field('title'); 
-          $position = get_sub_field('position'); 
-		?>  
-             <div class="grid-item col-span-3 pt-[50px] relative" style="margin-top:<?php echo $position;?>">
-               <h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
-               <div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px]">
-               <img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
-                   <h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
-                  <p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
-                    <div class=" relative w-[100%] text-center left-0 bottom-[0px]">
-                    	<img class="max-w-[100%] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
-                   </div>
-               </div>
-			 </div>
-        <?php endwhile; ?>	
-        <?php endif; ?>  
-        </div>
-		
-		<?php if(get_sub_field('button_name')): ?> 
-        <div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
-           <a href="<?php echo get_sub_field('button_url'); ?>"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></button> </a>
-        </div>
+<div class="container relative z-10 mx-auto max-w-[1280px]">
+	<img class="absolute left-0 top-[200px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" alt="">
+	<div class="relative z-10">
+		<?php if(get_sub_field('top_title')): ?>  
+		<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
 		<?php endif; ?>
-</div>		
+			<div class="flex flex-col items-center justify-center">
+				<?php if(get_sub_field('main_title')): ?> 
+				<h5 class="text-4xl font-medium text-center text-[35px] md:text-[56px] mb-4 text-white lg:leading-[74px]">
+					<?php echo get_sub_field('main_title'); ?>
+					<span class="text-dark-orange block"><?php echo get_sub_field('orange_title'); ?></span> 
+				</h5> 
+				
+				<?php endif; ?>  
+				<?php if(get_sub_field('small_paragraph')): ?> 
+				<p class="mb-12 text-[13px] md:text-lg w-max gradient-paragraph rounded-full p-3 text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+			<?php endif; ?>  
+			</div>
+
+			
+				<div class="grid grid-cols-1 lg:grid-cols-9 gap-6 relative">
+				
+				<?php if(have_rows('step_section')): ?>
+				<?php while(have_rows('step_section')): the_row(); ?>
+				<?php 
+				$step_title = get_sub_field('step_title'); 
+				$title = get_sub_field('title'); 
+				$position = get_sub_field('position'); 
+				?>  
+					<div class="grid-item col-span-3 pt-[50px] relative" style="margin-top:<?php echo $position;?>">
+					<h2 class="text-[44px] absolute z-0 top-0 left-0 gradient-text-dev-landing"><?php echo $step_title;?></h2>
+					<div class="min-w-[100%] md:min-w-[405px] p-[24px] relative z-10 dev-gradient-bg min-h-[500px]">
+					<img class="mb-3" src="<?php echo get_sub_field('icon')['url']; ?>" alt="" />
+						<h3 class="text-[24px] font-semibold mb-2 text-white"><?php echo $title;?></h3>
+						<p class="mb-4 text-[16px] text-white"><?php echo get_sub_field('small_paragraph'); ?></p>
+							<div class=" relative w-[100%] text-center left-0 bottom-[0px]">
+								<img class="max-w-[100%] inline-block" src="<?php echo get_sub_field('image')['url']; ?>" alt="">
+						</div>
+					</div>
+					</div>
+				<?php endwhile; ?>	
+				<?php endif; ?>  
+				</div>
+				
+				<?php if(get_sub_field('button_name')): ?> 
+				<div class="min-w-[405px] h-[90px] w-[100%] text-center pt-[20px] mt-10">
+				<a href="<?php echo get_sub_field('button_url'); ?>"> <button class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></button> </a>
+				</div>
+				<?php endif; ?>
+		</div>
+	</div>		
 </section>
 <?php endif; ?>
 
@@ -384,6 +390,7 @@
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="mx-auto text-center">
+				<div class="text-center small-intro">Clients</div>
 				<h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
 			</div>
 		<?php endif; ?>
@@ -574,49 +581,52 @@
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'faq_section') : ?>
 		<div class="w-full relative grid items-center z-10 py-8">
-			<div class="container mx-auto md:px-0 px-10">
-			<?php if(get_sub_field('top_title')): ?>
-				<h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
-			<?php endif; ?>
-			
-			<?php if(get_sub_field('main_title')): ?>
-				<h5 class=" text-white font-medium text-[35px] md:text-[56px] text-center lg:leading-[74px]"> <?php echo get_sub_field('main_title'); ?>
-				<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
-			</h5>
-			<?php endif; ?>
-			
-			<?php if(get_sub_field('small_paragraph')): ?>
-			<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
-			<?php endif; ?>
-			
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-					
-					<?php if(have_rows('faq_part')): ?>
-					<?php while(have_rows('faq_part')): the_row(); ?>
-					<?php 
-					  $question = get_sub_field('question'); 
-					  $answer = get_sub_field('answer'); 
-					  $row_index = get_row_index();
-					?>
-					<div>
-					  <div class="accordian-sec-bg mb-5">
-						<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $row_index; ?>)">
-							<span id="accordion-label-<?php echo $row_index; ?>" class="text-xl pt-6 pb-6 font-medium text-white"> <?php echo $question;?> </span>
-							<svg id="arrow-down-<?php echo $row_index; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							  <path d="M6 9l4 4 4-4"></path>
-							</svg>
-							<svg id="arrow-up-<?php echo $row_index; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							  <path d="M6 9l4-4 4 4"></path>
-							</svg>
-						</button>
-						<div id="accordion-section-<?php echo $row_index; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-						   <p class="p-4 text-base text-white"> <?php echo $answer;?> </p>
-						</div>
-					  </div>
-					</div>
-					
-					<?php endwhile; ?>	
+			<div class="container relative z-10 mx-auto md:px-0 px-10">
+				<img class="absolute right-0 top-[0px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" alt="">
+				<div class="w-full relative z-10">
+					<?php if(get_sub_field('top_title')): ?>
+						<h3 class="text-center small-intro"> <?php echo get_sub_field('top_title'); ?> </h3>
 					<?php endif; ?>
+					
+					<?php if(get_sub_field('main_title')): ?>
+						<h5 class=" text-white font-medium text-[35px] md:text-[56px] text-center lg:leading-[74px]"> <?php echo get_sub_field('main_title'); ?>
+						<span class="text-dark-orange block"> <?php echo get_sub_field('orange_title'); ?> </span>
+					</h5>
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('small_paragraph')): ?>
+					<p class="text-center text-white font-medium text-2xl pt-[10px] px-0 "> <?php echo get_sub_field('small_paragraph'); ?> </p>
+					<?php endif; ?>
+			
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+						
+						<?php if(have_rows('faq_part')): ?>
+						<?php while(have_rows('faq_part')): the_row(); ?>
+						<?php 
+						$question = get_sub_field('question'); 
+						$answer = get_sub_field('answer'); 
+						$row_index = get_row_index();
+						?>
+						<div>
+						<div class="accordian-sec-bg mb-5">
+							<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $row_index; ?>)">
+								<span id="accordion-label-<?php echo $row_index; ?>" class="text-xl pt-6 pb-6 font-medium text-white"> <?php echo $question;?> </span>
+								<svg id="arrow-down-<?php echo $row_index; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M6 9l4 4 4-4"></path>
+								</svg>
+								<svg id="arrow-up-<?php echo $row_index; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M6 9l4-4 4 4"></path>
+								</svg>
+							</button>
+							<div id="accordion-section-<?php echo $row_index; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
+							<p class="p-4 text-base text-white"> <?php echo $answer;?> </p>
+							</div>
+						</div>
+						</div>
+						
+						<?php endwhile; ?>	
+						<?php endif; ?>
+					</div>
 				</div>
 
 			</div>
@@ -764,7 +774,7 @@
               <div class="grid-item col-span-2 content-start">
                 <div class="rounded-[10px] min-h-[100px] p-5 stickysidenav">
 
-							<div class=" w-[100%] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
+							<div class=" w-[100%] min-w-[300px] max-w-[450px] min-h-[300px] bg-[#ff4d04] p-[15px] md:p-[30px] rounded-[16px] relative overflow-hidden ml-auto">
                                 <p class="text-[20px] font-semibold text-[#fff]"> <?php echo get_sub_field('right_cta_save_text'); ?></p>
                                 <p class="text-[30px] font-bold text-[#fff]"><span class="from-price"> <?php echo get_sub_field('right_cta_from_price'); ?> </span></p>
                                 <p class="text-[30px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[36px]"> to </span> <span class="to-price"> <?php echo get_sub_field('right_cta_to_price'); ?> </span> <span class="text-[20px] inline-block align-bottom leading-[36px]"> <?php echo get_sub_field('right_cta_duration'); ?></span></p>

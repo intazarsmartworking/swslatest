@@ -90,7 +90,7 @@
 					  $avai = get_sub_field('avai'); 
 					?> 
                         <div class="slider-itme">
-                            <div class="custom-bg custom-border">
+                            <div class="profile-box-bg">
                                 <div class="flex items-center">
 									<?php $poet_image = get_sub_field('image');
 										if (!empty($poet_image) && isset($poet_image['url'])):

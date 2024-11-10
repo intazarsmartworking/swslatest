@@ -1006,6 +1006,9 @@ select {
 .right-0 {
   right: 0px;
 }
+.right-\[-100\] {
+  right: -100;
+}
 .right-\[-12\%\] {
   right: -12%;
 }
@@ -1069,6 +1072,9 @@ select {
 .top-\[-1000px\] {
   top: -1000px;
 }
+.top-\[-100px\] {
+  top: -100px;
+}
 .top-\[-1100px\] {
   top: -1100px;
 }
@@ -1086,6 +1092,9 @@ select {
 }
 .top-\[-16\%\] {
   top: -16%;
+}
+.top-\[-250px\] {
+  top: -250px;
 }
 .top-\[-30\%\] {
   top: -30%;
@@ -1147,6 +1156,9 @@ select {
 .top-\[20\%\] {
   top: 20%;
 }
+.top-\[200px\] {
+  top: 200px;
+}
 .top-\[20px\] {
   top: 20px;
 }
@@ -1179,6 +1191,12 @@ select {
 }
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
+}
+.right-\[-100px\] {
+  right: -100px;
+}
+.left-\[-100px\] {
+  left: -100px;
 }
 .-z-10 {
   z-index: -10;
@@ -1604,6 +1622,9 @@ select {
 .h-\[30px\] {
   height: 30px;
 }
+.h-\[350px\] {
+  height: 350px;
+}
 .h-\[35px\] {
   height: 35px;
 }
@@ -1802,6 +1823,9 @@ select {
 .w-\[30px\] {
   width: 30px;
 }
+.w-\[350px\] {
+  width: 350px;
+}
 .w-\[35px\] {
   width: 35px;
 }
@@ -1856,6 +1880,9 @@ select {
 }
 .min-w-\[405px\] {
   min-width: 405px;
+}
+.min-w-\[300px\] {
+  min-width: 300px;
 }
 .\!max-w-\[1280px\] {
   max-width: 1280px !important;
@@ -3672,6 +3699,10 @@ body{
     border:1px solid rgba(5, 4, 3, 0.2);
     position: relative;
 }
+.skill-border:hover{
+  border: 1px solid #DF4402;
+  box-shadow: 0px 2.7px 2.7px 0px rgba(35, 6, 74, 0.10);
+}
 /* Custom scrollbar styles */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
@@ -5084,9 +5115,15 @@ ul li, ol li{
 }
 .dev-gradient-bg{
     border-radius: 12px;
-    background: radial-gradient(188.91% 103.49% at 50.12% -19.11%, rgba(255, 77, 2, 0.40) 0%, rgba(255, 77, 2, 0.00) 100%);
+    background: radial-gradient(188.91% 103.49% at 50.12% -19.11%, rgb(75, 24, 3) 0%, rgb(24, 7, 0) 100%);
     border: 1px solid rgba(255, 77, 2, 0.09);
     border-bottom: 0;
+}
+.profile-box-bg{
+  border-radius: 24px;
+  border: 1px solid rgba(255, 77, 2, 0.30);
+  background: radial-gradient(240.6% 133.71% at 12.13% -3.87%, rgba(64, 21, 2, 1) 0%, rgba(8, 3, 0, 1) 100%);
+  padding: 25px;
 }
 .auther-page-bg{
     border-radius: 22px;
@@ -6205,6 +6242,11 @@ body.lightMode .relatedBlogs a p{
 }
 .addr-india, .addr-uk{
   display: none;
+}
+.slider-for .slider-banner-image{
+  min-height: 350px;
+  border: 1px solid #fff;
+  padding: 1.5rem;
 }
 /*End USE CSS for Slider*/
 @media (max-width: 992px) {

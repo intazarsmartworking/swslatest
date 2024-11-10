@@ -92,7 +92,7 @@
 					  $avai = get_sub_field('avai'); 
 					?> 
                         <div class="slider-itme">
-                            <div class="custom-bg custom-border">
+                            <div class="profile-box-bg">
                                 <div class="flex items-center">
 									<?php $poet_image = get_sub_field('image');
 										if (!empty($poet_image) && isset($poet_image['url'])):
@@ -377,7 +377,7 @@
 									</div>
 								</div>
 								<div class="col-span-12 lg:col-span-7 content-center pl-0 lg:pl-[10rem] pr-3 md:pr-10">
-									<div class="p-6 border border-[#fff] rounded-[10px]">
+									<div class="block">
 										<div class="slider slider-for">
 											<?php if(have_rows('process_section')): ?>
 												<?php while(have_rows('process_section')): the_row(); ?>
@@ -387,7 +387,7 @@
 													$paragraph = get_sub_field('paragraph');
 													$row_index = get_row_index();				
 												?> 
-													<div class="slider-banner-image">
+													<div class="slider-banner-image rounded-[10px]">
 														<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
 															<?php if(get_sub_field('icon')): ?>
 																<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
@@ -524,6 +524,7 @@
                 </div> -->
 
 				<?php if(get_sub_field('main_heading')): ?>
+					<div class="text-center small-intro">Clients</div>
 					<h5 class="font-medium text-center text-[25px] md:text-[48px] text-white md:leading-[55px] mb-10">Why Choose Smart Working <span class="text-dark-orange block">for Your Next Hiring</span></h5>
 				<?php endif; ?>	
 
@@ -910,7 +911,7 @@
 
 	jQuery(window).bind("load", function() {
 		callFunction()
-		afetrLoadScrollBox()
+		//afetrLoadScrollBox()
 	});
 </script>
 
