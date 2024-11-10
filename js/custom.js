@@ -3,7 +3,7 @@ var screeSize = false;
 var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;;
 
 const today = new Date()
-console.log('dataSet', timeZone, Intl, today)
+//console.log('dataSet', timeZone, Intl, today)
 const checkLocation = today.toString()
 const windoSize = window.innerWidth               
 // $(window).on('resize', function(){
@@ -389,7 +389,7 @@ function homePageAnimation(){
 var wipeAnimation;
 
 if(!screeSize){
-    console.log('screeSize', screeSize)
+    //console.log('screeSize', screeSize)
     wipeAnimation = new TimelineMax()
                     .fromTo("section.panel.white", 1, {x: "5%"}, {x: "5%", ease: Linear.easeNone})  // in from left
                     .fromTo("section.panel.blue", 1, {x: "85%"}, {x: "10%", ease: Linear.easeNone})  // in from left
@@ -737,7 +737,7 @@ function menuOnScroll(mySection, myMenu, myClass) {
   jQuery(window).scroll(function(){
     var elScroll = jQuery(window).scrollTop() + 150;
     if((jQuery(window).scrollTop() > (elementPosition != null && elementPosition.top)) && (boxScrollHeight > jQuery(window).scrollTop())){
-      console.log(jQuery(window).scrollTop())
+      //console.log(jQuery(window).scrollTop())
       jQuery('.stickysidenav').addClass('side-bar-fix');
     } 
     // else {
@@ -759,7 +759,7 @@ function scrollToAnyPoint (navItem) {
     e.preventDefault();
     // getAttr = jQuery(this).attr('data-location');
     getAttr = jQuery(this).attr('data-location');
-    console.log('getAttr', getAttr)
+    //console.log('getAttr', getAttr)
     const getID = '#'+getAttr;
     var toSection = jQuery(getID).offset().top - 150;
     jQuery("html, body").animate({scrollTop:toSection}, 1000)
@@ -769,7 +769,7 @@ function scrollToAnyPoint (navItem) {
 scrollToAnyPoint("a[data-location]");
 
 jQuery('#show-more').on('click', function(){
-  console.log('log', jQuery(this).text())
+  //console.log('log', jQuery(this).text())
   jQuery('#change-icons').toggleClass('change-icons')
 
   if(jQuery(this).text() == 'Show more'){
@@ -796,7 +796,7 @@ function callFunction(){
     let sideMenuH = jQuery('.stickysidenav').height();
     let moreBoxH =  jQuery('.show-more-box').height();
     boxScrollHeight = ( moreBoxH + elementPosition.top) - sideMenuH;
-    console.log(boxScrollHeight, elementPosition, sideMenuH)
+    //console.log(boxScrollHeight, elementPosition, sideMenuH)
    }, 300)
 }
 
@@ -843,7 +843,7 @@ jQuery(document).ready(function(){
           }
         }
       })
-      console.log(changePosi)
+      //console.log(changePosi)
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -2];
      }
@@ -874,7 +874,7 @@ jQuery(document).ready(function(){
           }
         }
       })
-      console.log(changePosi)
+      //console.log(changePosi)
       listPosition = changePosi;
       maxMoveItem = listPosition[changePosi.length -1];
     }
@@ -967,7 +967,7 @@ function loadAnimation(){
   })
   //.addIndicators();
 
-  console.log('bezier', controller, scrollBar)
+  //console.log('bezier', controller, scrollBar)
 
 }
 
@@ -988,7 +988,7 @@ var toRangePrice = 0;
 
 
 let locationCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
-console.log('locationCountry', locationCountry)
+  //console.log('locationCountry', locationCountry)
   if(locationCountry.includes('Calcutta')){
     jQuery('.addr-india').show();
     jQuery('.addr-uk').show();
@@ -998,7 +998,7 @@ console.log('locationCountry', locationCountry)
 
 
   if(locationCountry.includes('Europe')){
-    console.log('Europe')
+    //console.log('Europe')
     isEurope = true;
     jQuery('.currency-symble').text('£');
     jQuery('.upToPrice').text(converter(upToPrice));
@@ -1007,7 +1007,7 @@ console.log('locationCountry', locationCountry)
     jQuery('.currency-pound').show();
 
   }else{
-    console.log('Asia')
+    //console.log('Asia')
     isEurope = false;
     jQuery('.currency-symble').text('$');
     const convrtDoller = upToPrice*1.30;
@@ -1018,7 +1018,7 @@ console.log('locationCountry', locationCountry)
     jQuery('.to-price').text(converter(toRangePrice));
     jQuery('.currency-dollar').show();
   }
-  console.log('locationCountry', locationCountry)
+  //console.log('locationCountry', locationCountry)
 
 
 function skillPrice(price){
@@ -1030,7 +1030,7 @@ function skillPrice(price){
   // console.log(typeof price)
   // const dataPrice = JSON.stringify(price)
   skillPriceData = price;
-  console.log(price, skillPriceData)
+  //console.log(price, skillPriceData)
   if(skillPriceData != null && skillExpData != null && skillPeopleData != null){
     //const cost = Number(skillPriceData[skillExpData.level]) * Number(skillPeopleData)
     const cost = Number(skillPriceData[skillExpData.level])
@@ -1245,7 +1245,7 @@ function skillExperience(count){
     
 
   }
-  console.log(count)
+  //console.log(count)
 }
 
 function skilleldPeople(count){
@@ -1383,7 +1383,7 @@ jQuery(".mega-menu-left li").on('click', function(){
   jQuery(this).addClass('active');
   jQuery('.show-more-menu').removeClass('show-more')
   const getAttr = jQuery(this).attr('data-menu');
-  console.log('getAttr', getAttr)
+  //console.log('getAttr', getAttr)
   const getId = `#${getAttr}`;
   // const getIdMore = `#mobile-${getAttr}`;
   // jQuery(getIdMore).addClass('show-more')
@@ -1430,7 +1430,7 @@ $("#myInput").on("keyup", function() {
 
 
 if(checkLocation.includes('India')){
-  console.log('India')
+  //console.log('India')
   const contryName = `
           <h6 class="text-footer-menu-color text-base font-medium leading-normal"> India </h6>
           <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p>
@@ -1533,7 +1533,7 @@ function priceRateGet(){
     priceLocationList = priceDataEuro;
   }else{
     priceLocationList = priceDataPound;
-    console.log('priceDataDoller', priceDataDoller)
+    //console.log('priceDataDoller', priceDataDoller)
   }
 
 
@@ -1555,7 +1555,7 @@ function priceRateGet(){
           jQuery(this).addClass('active')
           var priceValue = jQuery(this).data('price');
           var priceValueDolor = jQuery(this).data('dolor');
-          console.log('priceValue', priceValue, priceValueDolor)
+          //console.log('priceValue', priceValue, priceValueDolor)
           // const priceData = JSON.stringify(priceValue)
           skillPrice(priceValue);
       });
@@ -1856,7 +1856,37 @@ jQuery(document).ready(function(){
   priceRateGet()
 });
 
+scrollTotalBox = 0;
+jQuery('#top-scroll').on('click', function() {
+  jQuery('html, body').animate({
+    scrollTop: jQuery('html, body').offset().top,
+  });
+  scrollTotalBox = 0;
+  // jQuery('#down-scroll').show()
+  // jQuery('#top-scroll').hide()
+});
+jQuery('#down-scroll').on('click', function() {
+  jQuery('html, body').animate({
+    scrollTop: jQuery('html, body').offset().top + 610,
+  });
+  scrollTotalBox = 610;
+  // jQuery('#down-scroll').hide()
+  // jQuery('#top-scroll').show()
+});
+
 jQuery(function () { // wait for document ready
+  jQuery('#down-scroll').show()
+  jQuery(window).scroll(function(){
+    const scrollWind = jQuery(this).scrollTop()
+    //console.log(scrollWind)
+    if(scrollWind > 600){
+      jQuery('#down-scroll').hide()
+      jQuery('#top-scroll').show()
+    }else{
+      jQuery('#down-scroll').show()
+      jQuery('#top-scroll').hide()
+    }
+  });
  
     // define movement of panels
 
@@ -1918,11 +1948,6 @@ jQuery('.slider-nav').slick({
 });
 
 
-jQuery('#top-scroll').on('click', function() {
-  jQuery('html, body').animate({
-    scrollTop: jQuery('html, body').offset().top,
-  });
-});
 
 
 $('.customerStories').slick({

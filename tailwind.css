@@ -1898,7 +1898,9 @@ ul li, ol li{
   padding: 25px;
 }
 
-
+.top-scroll{
+  display: none;
+}
 
 
   .auther-page-bg{
