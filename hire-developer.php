@@ -51,22 +51,46 @@
 		
 		<section class=" w-full py-16">
 			<div class="mx-auto w-[100%] max-w-[1280px]">
-					<h3 class="text-center small-intro">Explore</h3>
+				<?php if (have_rows('section_block')) : ?>
+				<?php while (have_rows('section_block')) : the_row(); ?>
+				<?php if (get_row_layout() == 'explore_section') : ?>
+				
+				<?php if(get_sub_field('top_title')): ?> 
+					<h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
+				<?php endif; ?>	
 					<div class="flex flex-col items-center justify-center">
-						<h5 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white">Need top notch developers?</h5> 
-						<span class="text-dark-orange  text-[35px] text-center  lg:text-[56px]">You are in the right place.</span> 
+					<?php if(get_sub_field('main_title')): ?> 
+						<h5 class="text-[35px] text-center  lg:text-[56px] mb-4 text-white"><?php echo get_sub_field('main_title'); ?></h5> 
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('orange_title')): ?> 	
+						<span class="text-dark-orange  text-[35px] text-center  lg:text-[56px]"><?php echo get_sub_field('orange_title'); ?></span> 
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('small_paragraph')): ?> 	
 						<h3 class="text-white text-xl font-normal text-center py-6 mb-10 px-0 lg:max-w-[60%] "> 
-							With Smart Working, find pre-vetted remote software developers proficient in all programming languages, framework, and technologies. Check out our popular remote developer specializing below.
+							<?php echo get_sub_field('small_paragraph'); ?>
 						</h3>
+					<?php endif; ?>	
 					</div>
-
+				<?php endif; ?>
+				<?php endwhile; ?>
+				<?php endif; ?>
 
 					<div class="grid grid-cols-1 md:grid-cols-1 gap-4 my-8  md:mb-3 assemble-section-bg rounded-3xl relative">
 					<img class=" w-[100%] max-w-[320px] absolute right-[-12%] top-[-30%]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png">
 					<div class="bg-white py-4 md:py-10 px-4 md:px-10 rounded-xl relative z-10">
-						<h3 class="text-dark-black text-xl font-bold text-center pb-10"> Find and hire software engineers by skills </h3>
-						
-
+					<?php if (have_rows('section_block')) : ?>
+					<?php while (have_rows('section_block')) : the_row(); ?>
+					<?php if (get_row_layout() == 'explore_section') : ?>
+					
+					<?php if(get_sub_field('box_heading')): ?> 
+						<h3 class="text-dark-black text-xl font-bold text-center pb-10"> <?php echo get_sub_field('box_heading'); ?> </h3>
+					<?php endif; ?>
+					
+					<?php endif; ?>
+					<?php endwhile; ?>
+					<?php endif; ?>
 						<div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pr-5">
 						
 							
@@ -98,9 +122,19 @@
 						</div>
 						
 					</div>
+					<?php if (have_rows('section_block')) : ?>
+					<?php while (have_rows('section_block')) : the_row(); ?>
+					<?php if (get_row_layout() == 'explore_section') : ?>
+					
+					<?php if(get_sub_field('button_name')): ?> 
 					<div class="header-buttons my-5 text-center">
-								<a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange">Hire Developers</a>
-						</div>
+						<a href="<?php echo get_sub_field('button_url'); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange"><?php echo get_sub_field('button_name'); ?></a>
+					</div>
+					<?php endif; ?>
+					
+					<?php endif; ?>
+					<?php endwhile; ?>
+					<?php endif; ?>
 					</div>	
 			</div>	
 
