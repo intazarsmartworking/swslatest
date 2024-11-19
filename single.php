@@ -80,7 +80,7 @@ get_header();
 									</div>
 								</div>
 								<div class="grid-item col-span-10 lg:col-span-6 text-white single-blog content-start ">
-									<p class="text-white font-medium "> <?php echo  get_the_content();?> </p>
+									<p class="text-white font-medium "> <?php echo do_shortcode(get_the_content()); ?> </p>
 									
 									<?php if(have_rows('table_content')): ?>
 									<?php $section_count = 1; ?>
