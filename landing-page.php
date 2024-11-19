@@ -521,7 +521,7 @@
 					  <?php $title_image = get_sub_field('title_image');
 						if (!empty($title_image) && isset($title_image['url'])):
 					  ?> 
-					   <img class="h-[60px] w-auto inline-block align-middle" src="<?php echo esc_url($title_image['url']); ?>" alt="<?php echo esc_url($title_image['alt']); ?>">
+					   <img class="h-[80px] w-auto inline-block" style="margin-top: -19px; margin-right: 7px; margin-left: 7px;" src="<?php echo esc_url($title_image['url']); ?>" alt="<?php echo esc_url($title_image['alt']); ?>">
 					  <?php endif; ?>  
 					   <span class="inline-block align-middle"><?php echo get_sub_field('second_title'); ?></span>
                     </h2>
