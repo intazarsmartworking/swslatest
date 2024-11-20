@@ -188,14 +188,14 @@ function ajax_fetch_ai_vetted_profile_posts() {
 	$query = new WP_Query($args);
 	if ($query->have_posts()) {
         $total_posts = $query->post_count;
-		echo '<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">';
+		echo '<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">';
 		$counter = 0;
         while ($query->have_posts() && $counter < 4 ) {
             $query->the_post();
 			$designation = get_field('profile');
 			$dev_image_id = get_post_thumbnail_id();
 			$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
-            echo '<a href="https://app.monstercampaigns.com/c/d92ueq5qy5kjabzuo6hc/" class="grid-item col-span-3 block developer-sec-pic">';
+            echo '<a href="https://app.monstercampaigns.com/c/d92ueq5qy5kjabzuo6hc/" class="grid-item md:col-span-6 lg:col-span-6 xl:col-span-3 block developer-sec-pic">';
             echo '<img src="' . esc_url($dev_image_src[0]) . '" class="rounded-xl">';
             echo '<div class="short-bio">';
             echo '<p class="text-white pb-2 text-center text-xl">' . get_the_title() . '</p>';

@@ -8,7 +8,7 @@
 	<?php endif; ?> 
 	  
 	<?php if(get_sub_field('main_heading')): ?>	  
-	  <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 lg:px-96 md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
+	  <h2 class=" text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:leading-tight"><?php echo get_sub_field('main_heading'); ?></h2>
 	<?php endif; ?> 
 
 	<?php if(get_sub_field('subheading')): ?>	

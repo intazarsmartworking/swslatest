@@ -92,15 +92,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="container mx-auto !p-0 relative desk-top-menu" id="mobile-show-menu">
-    <div class="grid grid-cols-1 md:grid-cols-10 lg:gap-4 content-center h-[100%] header-box relative">
-      <div class="col-span-2 content-center hide-mobile">
+    <div class="grid grid-cols-1 lg:grid-cols-10 lg:gap-4 content-center h-[100%] header-box relative">
+      <div class="col-span-1 lg:col-span-2 content-center hide-mobile">
         <?php if(get_field('header_logo', 'options')): ?>
           <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
             <img class="h-[23px]" src="<?php echo get_field('header_logo', 'options')['url']; ?>" alt="<?php bloginfo('name'); ?>">
           </a>
         <?php endif; ?>
       </div>
-      <div class="col-span-5 content-center relative">
+      <div class="col-span-5 lg:col-span-5 content-center relative">
         <?php
         wp_nav_menu(array(
             'theme_location' => 'header_menu',
@@ -110,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         ));
         ?>
       </div>
-      <div class="col-span-3 content-center text-start md:text-end">
+      <div class="col-span-5 lg:col-span-3 content-center text-start lg:text-end">
         <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange btn-header" target="">FIND A DEVELOPER</a>
         <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange btn-header" target="">CONTACT US</a>
       </div>

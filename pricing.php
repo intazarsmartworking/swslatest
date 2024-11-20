@@ -131,7 +131,7 @@
                     <div class="grid-item col-span-6 md:col-span-4 rounded-[12px] p-[10px] lg:p-[20px] !py-0">
                         
                         <div class="block border bg-white border-[rgba(5,4,3,0.20)] rounded-[16px] p-[24px]">
-                            <h5 class="text-[#FF4D02] text-center text-[32px] lg:text-[32px] font-bold "><span class="currency-symble">$</span><span id="total-price">0</span>/hr</h5>
+                            <h5 class="text-[#FF4D02] text-center text-[32px] lg:text-[32px] font-bold "><span class="currency-symble">$</span><span id="total-price">20</span>/hr</h5>
                             <p class="text-[#040524] text-center text-[14px] lg:text-[14px] font-medium mb-4 mt-4">Smart Working will have vetted candidates ready for you to review in 7 days</p>
                             <a href="/contact-us/"> <button class="w-full button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange" >HIRE NOW WITH SMART WORKING</button> </a>
                             <!-- <p class="text-[#040524] text-[14px] lg:text-[14px] font-medium mb-4 mt-4">We will be in touch soon.</p> -->

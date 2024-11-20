@@ -483,6 +483,7 @@ body{
 .card-placement {
     position: absolute;
     transition: transform all 0.5s ease;
+    min-width: 600px;
 }
 
 #card1 { left: 10px; }
@@ -2824,6 +2825,7 @@ input[type="range"].home-range-slider {
   padding-left: 90px;
   position: relative;
   color: #ffffff41;
+  cursor: pointer;
 }
 .thumb-image .thumbnail-image.slick-current{
   background: #ff4d04;
@@ -2960,7 +2962,7 @@ body.lightMode .blog-item a p{
   color: #000 !important;
 }
 body.lightMode .footer-background{
-  background-color: #0F0F0F;
+  background-color: #0F0F0F;                                                                                        
   border-radius: 0px;
 }
 body.lightMode .get-latest{
@@ -2977,6 +2979,9 @@ body.lightMode .single-blog .block-quote{
   color: #000 !important;
 }
 body.lightMode .single-blog  ul{
+  color: #000 !important;
+}
+body.lightMode .single-blog  ol{
   color: #000 !important;
 }
 body.lightMode .single-blog .blog-table{

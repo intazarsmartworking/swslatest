@@ -191,8 +191,8 @@ get_header();
 									
 								</div>
 								<div class="grid-item col-span-10 lg:col-span-2 text-white content-start">
-									<div class=" bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
-										
+									<div class="bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
+										<img class=" w-full" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" alt="">
 									<div>
 								</div>
 							</div>

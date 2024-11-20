@@ -22,7 +22,7 @@
 		<div class="w-full">
 			<div class="grid gap-8 relative pr-5">
 				<?php if(get_sub_field('title')): ?>
-				<h1 class="text-3xl sm:text-4xl lg:text-7xl 3xl:text-58 font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
+				<h1 class="text-[40px] lg:text-58 font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
 				<?php endif; ?>
 				<?php if(get_sub_field('description')): ?>
 				<p class="flex text-white font-normal text-xl"><?php echo get_sub_field('description'); ?></p>
@@ -97,7 +97,7 @@
 				?>
 			<div class="europe-box rounded-3xl mb-5 min-h-[250px]">
 				<div class="flex">
-				<div class="w-[100%] max-w-[70%] px-6 py-6">
+				<div class="w-[100%] max-w-[60%] lg:max-w-[60%] xl::max-w-[70%] px-6 py-6">
 					<div class="icons-box">
 						<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
 							<rect rx="8" ry="8" class="line" height="100%" width="100%" stroke-linejoin="round"/>
@@ -110,7 +110,7 @@
 					</div>
 				</div>
 				<div class="ml-auto absolute right-0 bottom-0 ">
-					<img class=" max-h-[120px] lg:max-h-[240px] w-auto" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
+					<img class="max-w-[200px] lg:w-auto  max-h-[120px] lg:max-h-[240px]" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
 				</div>
 				</div>
 			</div>
