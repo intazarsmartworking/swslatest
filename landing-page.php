@@ -273,12 +273,12 @@
 				?>
 				
                     <div class="grid-item col-span-12 lg:<?php echo $box_color;?> p-7 rounded-[16px] min-h-[220px]" >
-                        <div class="grid grid-cols-1 lg:grid-cols-12 <?php echo $gap_class;?> h-[100%] relative">
-                            <div class="grid-item col-span-8">
+                        <div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 <?php echo $gap_class;?> h-[100%] relative">
+                            <div class="grid-item md:col-span-6 lg:col-span-8">
                                 <h5 class=" text-white text-[24px] font-semibold mb-4 leading-[30px]"><?php echo $heading;?></h5>
                                 <p class=" text-white text-[16px] font-normal"><?php echo $paragraph;?></p>
                             </div>
-                            <div class="grid-item col-span-4 relative">
+                            <div class="grid-item md:col-span-6 lg:col-span-4 relative">
 							<?php $image_user = get_sub_field('image');
 								if (!empty($image_user) && isset($image_user['url'])):
 							?>
