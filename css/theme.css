@@ -7476,6 +7476,14 @@ body.lightMode .relatedBlogs a p{
     font-size: 72px;
   }
 
+  .lg\:text-\[4\.5rem\] {
+    font-size: 4.5rem;
+  }
+
+  .lg\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+
   .lg\:leading-\[30px\] {
     line-height: 30px;
   }
@@ -7524,6 +7532,10 @@ body.lightMode .relatedBlogs a p{
 
   .xl\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .xl\:text-\[4\.5rem\] {
+    font-size: 4.5rem;
   }
 }
 .peer:focus ~ .rtl\:peer-focus\:left-auto:where([dir="rtl"], [dir="rtl"] *) {

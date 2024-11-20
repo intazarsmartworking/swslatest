@@ -22,7 +22,7 @@
 		<div class="w-full">
 			<div class="grid gap-8 relative pr-5">
 				<?php if(get_sub_field('title')): ?>
-				<h1 class="text-[40px] lg:text-58 font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
+				<h1 class="text-[40px] lg:text-[3.5rem] xl:text-[4.5rem] font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
 				<?php endif; ?>
 				<?php if(get_sub_field('description')): ?>
 				<p class="flex text-white font-normal text-xl"><?php echo get_sub_field('description'); ?></p>
