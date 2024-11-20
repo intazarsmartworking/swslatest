@@ -257,7 +257,7 @@
 <!-- Top Section -->
 
 <?php if (get_row_layout() == 'top_find_section') : ?>
-<section class="w-full relative py-8">
+<section class="w-full relative py-16">
 
 <div class="container relative z-10 mx-auto max-w-[1280px]">
 	<img class="absolute left-0 top-[200px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/sqr-circule.png" alt="">
@@ -386,7 +386,7 @@
  <!-- Calculate Section -->
 <?php if (get_row_layout() == 'why_smartworking_section') : ?>
 
-<div class="w-full relative calculate-sec grid items-center py-8" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
+<div class="w-full relative calculate-sec grid items-center py-16" style="background-image: url('<?php echo get_template_directory_uri();?>/images/calc-bg.png');">
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="mx-auto text-center">
@@ -532,7 +532,7 @@
 <!-- Client Section -->
 
 <?php if (get_row_layout() == 'client_section') : ?>
-    <section class="w-[100%] md:min-h-[300px] py-8">
+    <section class="w-[100%] md:min-h-[300px] py-16">
         <div class="max-w-[600px] relative mx-auto text-center">
 		<?php if(get_sub_field('top_title')): ?>
         <h3 class="text-center small-intro"><?php echo get_sub_field('top_title'); ?></h3>
@@ -580,7 +580,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'faq_section') : ?>
-		<div class="w-full relative grid items-center z-10 py-8">
+		<div class="w-full relative grid items-center z-10 py-16">
 			<div class="container relative z-10 mx-auto md:px-0 px-10">
 				<img class="absolute right-0 top-[0px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" alt="">
 				<div class="w-full relative z-10">
@@ -636,7 +636,7 @@
 <?php endif; ?>  
 
 
-<div class="w-full  relative grid items-center py-8">
+<div class="w-full  relative grid items-center py-16">
   <div class="container mx-auto md:px-0 px-10 ready-hire-bg">
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px] gap-4">
 	<?php if (have_rows('hire_block_section')) : ?>
@@ -671,7 +671,7 @@
 <?php if (have_rows('hire_block_section')) : ?>
  <?php while (have_rows('hire_block_section')) : the_row(); ?>
    <?php if (get_row_layout() == 'hire_offshore') : ?>
-<div class="w-full relative grid items-center py-8">
+<div class="w-full relative grid items-center py-16">
     <div class="container mx-auto">
           <div class="d-block">
 		  <?php if(get_sub_field('top_title')): ?>

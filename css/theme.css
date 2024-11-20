@@ -6012,6 +6012,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   padding-left: 90px;
   position: relative;
   color: #ffffff41;
+  cursor: pointer;
 }
 .thumb-image .thumbnail-image.slick-current{
   background: #ff4d04;
