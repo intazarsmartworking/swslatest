@@ -2990,7 +2990,19 @@ body.lightMode .single-blog .blog-table{
 body.lightMode .single-blog .blog-table thead{
   color: #fff !important;
 }
+body.lightMode .single-blog h2{
+  color: #000 !important;
+}
 body.lightMode .single-blog h3{
+  color: #000 !important;
+}
+body.lightMode .single-blog h4{
+  color: #000 !important;
+}
+body.lightMode .single-blog h5{
+  color: #000 !important;
+}
+body.lightMode .single-blog h6{
   color: #000 !important;
 }
 body.lightMode .blog-data-show p{
