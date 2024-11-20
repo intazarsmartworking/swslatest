@@ -3791,6 +3791,7 @@ body{
 .card-placement {
     position: absolute;
     transition: transform all 0.5s ease;
+    min-width: 600px;
 }
 #card1 { left: 10px; }
 #card2 { left: 30px; }
@@ -6144,7 +6145,7 @@ body.lightMode .blog-item a p{
   color: #000 !important;
 }
 body.lightMode .footer-background{
-  background-color: #0F0F0F;
+  background-color: #0F0F0F;                                                                                        
   border-radius: 0px;
 }
 body.lightMode .get-latest{
