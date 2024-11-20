@@ -122,15 +122,21 @@
 	<?php endif; ?>
 	
 	<!-- How It Works Section -->
-	<?php get_template_part( 'template-parts/client-how-it-works' );?>	
+	 <div class=" w-full relative">
+		<div class="w-full relative z-10">
+			<?php get_template_part( 'template-parts/client-how-it-works' );?>
+		</div>
+	 </div>
+		
 	<?php endwhile; ?>
 	<?php endif; ?>
 	<!-- Curios Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
-	<section class="calculator-box w-[100%] py-16">
-	<div class="inner-box grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
+	<section class="calculator-box relative w-[100%] py-16">
+		<img class=" absolute right-0 z-0 top-[0px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/squr-roted.png" alt="">
+	<div class="inner-box relative z-10 grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
 		<div class="grid-item col-span-5 py-[10%] lg:py-[100px] content-center">
 			<div class="block mb-5">
 				<?php if(get_sub_field('small_title')): ?>
@@ -172,47 +178,50 @@
 	<?php get_template_part( 'template-parts/home-blog' );?>
 	<!-- FAQ Section  -->
 	<div class="w-full relative grid items-center z-10 py-16">
-	<div class="container mx-auto md:px-0 px-10 ">
-	<?php if (have_rows('block')) : ?>
-	<?php while (have_rows('block')) : the_row(); ?>
-	<?php if (get_row_layout() == 'home_faq_heading') : ?>
-		
-	<?php if(get_sub_field('small_heading')): ?>		
-		<h4 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h4>
-	<?php endif; ?>	
+	<div class="container relative mx-auto md:px-0 px-10 ">
+		<img class=" absolute left-0 z-0 top-[0px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/circule-bg.png" alt="">
+	<div class="w-full relative z-10">
+		<?php if (have_rows('block')) : ?>
+		<?php while (have_rows('block')) : the_row(); ?>
+		<?php if (get_row_layout() == 'home_faq_heading') : ?>
+			
+		<?php if(get_sub_field('small_heading')): ?>		
+			<h4 class="text-center small-intro"> <?php echo get_sub_field('small_heading'); ?> </h4>
+		<?php endif; ?>	
 
-	<?php if(get_sub_field('main_heading')): ?>		
-		<h2 class="text-[30px] sm:text-3xl lg:text-[56px] mb-10 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"><?php echo get_sub_field('orange_heading'); ?> </span></h2>
-	<?php endif; ?>
+		<?php if(get_sub_field('main_heading')): ?>		
+			<h2 class="text-[30px] sm:text-3xl lg:text-[56px] mb-10 font-medium text-white text-center px-0  md:leading-tight"><?php echo get_sub_field('main_heading'); ?><br><span class="text-dark-orange"><?php echo get_sub_field('orange_heading'); ?> </span></h2>
+		<?php endif; ?>
 
-	<?php endif; ?>
-	<?php endwhile; ?>
-	<?php endif; ?> 	
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			<?php 
-				$faq_argument = array( 'post_type' => 'faq');
-				$faq_query	= new WP_Query($faq_argument);
-				?>
-			<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
-			<?php $post_id = get_the_ID(); ?>
-			<div>
-				<div class="accordian-sec-bg mb-5">
-				<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
-					<span id="accordion-label-<?php echo $post_id; ?>" class="text-[18px] md:text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
-					<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M6 9l4 4 4-4"></path>
-					</svg>
-					<svg id="arrow-up-<?php echo $post_id; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M6 9l4-4 4 4"></path>
-					</svg>
-				</button>
-				<div id="accordion-section-<?php echo $post_id; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
-					<p class="p-4 text-base text-white"><?php echo get_the_excerpt();?></p>
+		<?php endif; ?>
+		<?php endwhile; ?>
+		<?php endif; ?> 	
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<?php 
+					$faq_argument = array( 'post_type' => 'faq');
+					$faq_query	= new WP_Query($faq_argument);
+					?>
+				<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
+				<?php $post_id = get_the_ID(); ?>
+				<div>
+					<div class="accordian-sec-bg mb-5">
+					<button class="w-full text-left py-1 px-4  focus:outline-none flex justify-between items-center" onclick="toggleAccordion(<?php echo $post_id; ?>)">
+						<span id="accordion-label-<?php echo $post_id; ?>" class="text-[18px] md:text-xl pt-6 pb-6 font-medium text-white"><?php the_title();?></span>
+						<svg id="arrow-down-<?php echo $post_id; ?>" class="h-4 w-4 text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M6 9l4 4 4-4"></path>
+						</svg>
+						<svg id="arrow-up-<?php echo $post_id; ?>" class="h-4 w-4 hidden text-gray-500 rounded-full" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M6 9l4-4 4 4"></path>
+						</svg>
+					</button>
+					<div id="accordion-section-<?php echo $post_id; ?>" class="overflow-hidden transition-max-height duration-300 rounded-xl" style="max-height:0;">
+						<p class="p-4 text-base text-white"><?php echo get_the_excerpt();?></p>
+					</div>
+					</div>
 				</div>
-				</div>
+				<?php endwhile; wp_reset_postdata();?>
 			</div>
-			<?php endwhile; wp_reset_postdata();?>
-		</div>
+	</div>
 	</div>
 	</div>
 	
