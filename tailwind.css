@@ -3210,5 +3210,11 @@ body.lightMode .relatedBlogs a p{
   .only-moble-menu .mega-menu-center li a{
     padding: 8px 30px;
   }
+  .card-placement{
+    min-width: 320px !important;
+  }
+  .card-placement.active{
+    left: 0px !important;
+  }
 
 }

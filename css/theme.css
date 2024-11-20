@@ -1141,6 +1141,9 @@ select {
 .top-\[10px\] {
   top: 10px;
 }
+.top-\[120px\] {
+  top: 120px;
+}
 .top-\[13px\] {
   top: 13px;
 }
@@ -1191,9 +1194,6 @@ select {
 }
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
-}
-.top-\[120px\] {
-  top: 120px;
 }
 .-z-10 {
   z-index: -10;
@@ -6399,6 +6399,12 @@ body.lightMode .relatedBlogs a p{
   .only-moble-menu .mega-menu-center li a{
     padding: 8px 30px;
   }
+  .card-placement{
+    min-width: 320px !important;
+  }
+  .card-placement.active{
+    left: 0px !important;
+  }
 
 }
 .hover\:bg-\[\#050403\]:hover {
@@ -7432,6 +7438,10 @@ body.lightMode .relatedBlogs a p{
     font-size: 28px;
   }
 
+  .lg\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+
   .lg\:text-\[30px\] {
     font-size: 30px;
   }
@@ -7474,14 +7484,6 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:text-\[72px\] {
     font-size: 72px;
-  }
-
-  .lg\:text-\[4\.5rem\] {
-    font-size: 4.5rem;
-  }
-
-  .lg\:text-\[3\.5rem\] {
-    font-size: 3.5rem;
   }
 
   .lg\:leading-\[30px\] {
