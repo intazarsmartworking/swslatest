@@ -94,7 +94,10 @@ get_header();
 										<h3><?php echo $main_title;?></h3>
 										<?php if(have_rows('main_description')): ?>
 										<?php while(have_rows('main_description')): the_row(); ?>
-										<?php echo get_sub_field('description') ;?>
+										<?php 
+										$description = get_sub_field('description');
+										echo do_shortcode($description);
+										?>
 										<?php endwhile; ?>	
 										<?php endif; ?>
 										
