@@ -6,13 +6,13 @@
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('first_title')): ?>	
-        <h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 lg:px-96 md:leading-tight">
+        <h2 class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-white text-center px-0 md:leading-tight">
             <?php echo get_sub_field('first_title'); ?> 
         </h2>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('second_title')): ?>	
-        <p class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-center px-0 lg:px-96 md:leading-tight  text-dark-orange mb-3"><?php echo get_sub_field('second_title'); ?></p>
+        <p class="text-[35px] sm:text-[40px] lg:text-[56px] 3xl:text-58 font-medium text-center px-0 md:leading-tight  text-dark-orange mb-3"><?php echo get_sub_field('second_title'); ?></p>
 	<?php endif; ?>
 	
 	 <?php if(get_sub_field('small_paragraph')): ?>	

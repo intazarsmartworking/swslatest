@@ -390,7 +390,7 @@
     <div class="container mx-auto md:px-0 px-10 min-h-[300px]">
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="mx-auto text-center">
-				<div class="text-center small-intro">Clients</div>
+				<div class="text-center small-intro">Smart Working</div>
 				<h5 class="text-white text-[25px] lg:text-[56px] font-medium mb-0"><?php echo get_sub_field('main_heading'); ?></h5>
 			</div>
 		<?php endif; ?>

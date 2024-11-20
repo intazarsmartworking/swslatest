@@ -2980,6 +2980,9 @@ body.lightMode .single-blog .block-quote{
 body.lightMode .single-blog  ul{
   color: #000 !important;
 }
+body.lightMode .single-blog  ol{
+  color: #000 !important;
+}
 body.lightMode .single-blog .blog-table{
   color: #000 !important;
 }

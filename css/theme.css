@@ -1899,6 +1899,9 @@ select {
 .max-w-\[1380px\] {
   max-width: 1380px;
 }
+.max-w-\[200px\] {
+  max-width: 200px;
+}
 .max-w-\[210px\] {
   max-width: 210px;
 }
@@ -1941,11 +1944,11 @@ select {
 .max-w-\[550px\] {
   max-width: 550px;
 }
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
 .max-w-\[600px\] {
   max-width: 600px;
-}
-.max-w-\[70\%\] {
-  max-width: 70%;
 }
 .max-w-\[80\%\] {
   max-width: 80%;
@@ -2735,9 +2738,6 @@ select {
 .\!pt-3 {
   padding-top: 0.75rem !important;
 }
-.\!pt-\[90px\] {
-  padding-top: 90px !important;
-}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -3310,6 +3310,9 @@ select {
 }
 .underline {
   text-decoration-line: underline;
+}
+.line-through {
+  text-decoration-line: line-through;
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -6163,6 +6166,9 @@ body.lightMode .single-blog .block-quote{
 body.lightMode .single-blog  ul{
   color: #000 !important;
 }
+body.lightMode .single-blog  ol{
+  color: #000 !important;
+}
 body.lightMode .single-blog .blog-table{
   color: #000 !important;
 }
@@ -6852,10 +6858,6 @@ body.lightMode .relatedBlogs a p{
     text-align: left;
   }
 
-  .md\:text-end {
-    text-align: end;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -6972,6 +6974,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .lg\:col-span-4 {
@@ -7092,6 +7098,10 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:w-\[600px\] {
     width: 600px;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:max-w-\[450px\] {
@@ -7220,11 +7230,6 @@ body.lightMode .relatedBlogs a p{
     padding-right: 1.5rem;
   }
 
-  .lg\:px-96 {
-    padding-left: 24rem;
-    padding-right: 24rem;
-  }
-
   .lg\:px-\[0px\] {
     padding-left: 0px;
     padding-right: 0px;
@@ -7258,6 +7263,11 @@ body.lightMode .relatedBlogs a p{
   .lg\:px-\[60px\] {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .lg\:py-\[100px\] {
@@ -7488,6 +7498,16 @@ body.lightMode .relatedBlogs a p{
 
   .lg\:leading-tight {
     line-height: 1.25;
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .xl\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }
 .peer:focus ~ .rtl\:peer-focus\:left-auto:where([dir="rtl"], [dir="rtl"] *) {
