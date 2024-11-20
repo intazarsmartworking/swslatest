@@ -172,7 +172,13 @@
 	<?php get_template_part( 'template-parts/client-testimonial' );?>
 	<?php endwhile; ?>
 	<?php endif; ?>
-	<?php get_template_part( 'template-parts/ai-vetted-profile' );?>
+	<div class=" w-full relative">
+		<div class="w-full relative z-10">
+			<img class=" absolute right-0 z-0 top-[120px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/circule-bg.png" alt="">
+			<?php get_template_part( 'template-parts/ai-vetted-profile' );?>
+		</div>
+	 </div>
+	
 	<?php get_template_part( 'template-parts/assemble-team' );?>
 	<?php get_template_part( 'template-parts/trustpilot-review' );?>
 	<?php get_template_part( 'template-parts/home-blog' );?>

@@ -1192,6 +1192,9 @@ select {
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
 }
+.top-\[120px\] {
+  top: 120px;
+}
 .-z-10 {
   z-index: -10;
 }
