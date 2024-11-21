@@ -148,7 +148,7 @@
 
         <section class="w-[100%] px-[5%] py-16 mb-[60px]">
 			<div class="relative grid grid-cols-1 lg:grid-cols-2 content-center gap-0 rounded-[24px] vetting-bg py-[32px] px-[10%]">
-				<img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="http://sws.local/wp-content/themes/sws/images/bg-line-box.png">
+				<img class="absolute h-[100%] w-[50%] right-[0px] top-[0px]" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
 				<div class="pt-[60px]">
 					<h3 class=" text-white text-[32px] lg:text-[56px] lg:leading-[56px]">Check Our Vetting Process Now</h3>
 					
@@ -158,7 +158,7 @@
                 </div>
 				
 								<div class="text-end pt-[40px] lg:pt-[0px]">
-					<img class="inline-block w-[100%] max-w-[500px]" src="http://sws.local/wp-content/uploads/2024/08/about-bottom-img.png" alt="">
+					<img class="inline-block w-[100%] max-w-[500px]" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" alt="">
 				</div>
 								
 			</div>
