@@ -135,7 +135,7 @@
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
 	<section class="calculator-box relative w-[100%] py-16">
-		<img class=" absolute right-0 z-0 top-[0px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/squr-roted.png" alt="">
+		<img class=" absolute right-0 z-0 top-[0px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
 	<div class="inner-box relative z-10 grid grid-cols-1 lg:grid-cols-10 content-center rounded-[60px] max-w-[90%] min-h-[350px] mx-auto px-4 md:px-[10%]">
 		<div class="grid-item col-span-5 py-[10%] lg:py-[100px] content-center">
 			<div class="block mb-5">
@@ -174,7 +174,7 @@
 	<?php endif; ?>
 	<div class=" w-full relative">
 		<div class="w-full relative z-10">
-			<img class=" absolute right-0 z-0 top-[120px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/circule-bg.png" alt="">
+			<img class=" absolute right-0 z-0 top-[120px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" alt="">
 			<?php get_template_part( 'template-parts/ai-vetted-profile' );?>
 		</div>
 	 </div>
@@ -185,7 +185,7 @@
 	<!-- FAQ Section  -->
 	<div class="w-full relative grid items-center z-10 py-16">
 	<div class="container relative mx-auto md:px-0 px-10 ">
-		<img class=" absolute left-0 z-0 top-[0px] w-[350px] h-[350px]" src="http://sws.local/wp-content/themes/sws/images/circule-bg.png" alt="">
+		<img class=" absolute left-0 z-0 top-[0px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/circule-bg.png" alt="">
 	<div class="w-full relative z-10">
 		<?php if (have_rows('block')) : ?>
 		<?php while (have_rows('block')) : the_row(); ?>
