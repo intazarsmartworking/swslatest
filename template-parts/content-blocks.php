@@ -144,7 +144,7 @@
 				<?php endif; ?>
 			</div>
 			<?php if(get_sub_field('main_heading')): ?>	
-			<h3 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[30px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h3>
+			<h3 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[45px] font-medium mb-4 max-w-[400px]"><?php echo get_sub_field('main_heading'); ?></h3>
 			<?php endif; ?>
 			<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
 			<?php if(get_sub_field('button_name')): ?>
@@ -158,7 +158,7 @@
 			<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
 				<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> <?php echo get_sub_field('hourly_rate_title'); ?></p>
 				<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><?php echo get_sub_field('amount'); ?></p>
-				<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to </span> <?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> <?php echo get_sub_field('amount_duration'); ?> </span></p>
+				<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <?php echo get_sub_field('amount_save_title'); ?>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> <?php echo get_sub_field('amount_duration'); ?> </span></p>
 				<p class="text-[18px] lg:text-[20px] text-[#fff] mt-[20px]"><?php echo get_sub_field('equivalent_text'); ?></p>
 				<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
 					<p class="text-[18px] lg:text-[20px] text-[#fff]"><?php echo get_sub_field('save_text'); ?></p>
