@@ -279,14 +279,14 @@
                 <div class="grid grid-cols-1 lg:grid-cols-9 gap-0">
                     <div class="grid-item col-span-3 rounded-[12px]">
                         <?php if(get_sub_field('table_one_heading')): ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] min-h-[90px] content-center">
                             <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_one_heading'); ?></h5>
                         </div>
                         <?php endif; ?> 
                         
                         <?php if(have_rows('table_first_content')): ?>
                         <?php while(have_rows('table_first_content')): the_row(); ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] min-h-[90px] content-center">
                             <p class="text-white text-[20px] lg:text-[22px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                         </div>
                         <?php endwhile; ?>	
@@ -297,14 +297,14 @@
                     <div class="grid-item col-span-3 rounded-[12px] bg-gradient-to-r from-[#FF7D46] from-0%  to-[#FF4F05] to-100% ">
                     
                         <?php if(get_sub_field('table_second_heading')): ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.4)] min-h-[90px] px-[15px] content-center">
                             <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_second_heading'); ?></h5>
                         </div>
                         <?php endif; ?>
                         
                         <?php if(have_rows('table_second_content')): ?>
                         <?php while(have_rows('table_second_content')): the_row(); ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.4)] h-[90px] px-[15px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.4)] min-h-[90px] px-[15px] content-center">
                             <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                         </div>
                         <?php endwhile; ?>	
@@ -315,14 +315,14 @@
                     <div class="grid-item col-span-3 rounded-[12px]">
                     
                         <?php if(get_sub_field('table_third_heading')): ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] min-h-[90px] content-center">
                             <h5 class="text-white text-[20px] lg:text-[28px] font-normal mb-0"><?php echo get_sub_field('table_third_heading'); ?></h5>
                         </div>
                         <?php endif; ?>
                         
                         <?php if(have_rows('table_third_content')): ?>
                         <?php while(have_rows('table_third_content')): the_row(); ?>
-                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] h-[90px] content-center">
+                        <div class="line-box border-b border-[rgba(255,255,255,0.10)] px-[15px] min-h-[90px] content-center">
                             <p class="text-white text-[18px] lg:text-[18px] font-normal mb-0"><?php echo get_sub_field('title'); ;?></p>
                         </div>
                         <?php endwhile; ?>	
@@ -399,9 +399,9 @@
                 <?php endif; ?>
                 
                 <?php if(get_sub_field('main_heading')): ?>
-                    <div class="flex flex-col items-center justify-center">
+                    <h1 class="text-white text-5xl  lg:text-[56px] lg:leading-[5rem] text-center">
                         <?php echo get_sub_field('main_heading'); ?>
-                    </div>
+                    </h1>
                 <?php endif; ?>
                 <div class="w-full flex relative min-h-[580px] pr-3 lg:pr-0 pt-16 overflow-hidden">
                 <div class="flex w-0 lg:w-1/12">&nbsp;</div>
