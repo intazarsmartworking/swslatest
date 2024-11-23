@@ -1408,7 +1408,7 @@ jQuery(window).scroll(function(){
       scroll = jQuery(window).scrollTop();
       jQuery('.header-menu li a').removeClass('active');
       jQuery(".mega-menu-box").removeClass("open");
-      jQuery('#mobile-show-menu').removeClass("isMenuShow");
+      //jQuery('#mobile-show-menu').removeClass("isMenuShow");
     if (scroll >= 5){
       sticky.addClass('fixed')
     }else{
