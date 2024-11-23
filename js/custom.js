@@ -1798,12 +1798,6 @@ jQuery(document).ready(function(){
   });
 
 
- 
-
-
-  
-
-
   priceRateGet()
 });
 
