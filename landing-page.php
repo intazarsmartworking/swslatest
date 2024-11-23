@@ -566,8 +566,8 @@
 		
 		<?php if (get_row_layout() == 'cta_section') : ?>
 		
-		<section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-24">
+		<section class="w-full py-24">
+            <div class="container mx-auto">
                 <div class=" block relative rounded-[24px] vetting-bg">
                     <img class="absolute h-[100%] w-[50%] right-[0px] top-[0px] z-1" src="<?php echo get_template_directory_uri();?>/images/bg-line-box.png">
                     <div class="grid grid-cols-12 lg:grid-cols-12 content-center gap-4 relative z-10 h-[100%]">
@@ -622,7 +622,7 @@
                         </div>
                         <div class="grid-item col-span-12 lg:col-span-7 content-center relative">
 						<?php if(get_sub_field('calender')): ?>
-                            <div class=" relative lg:absolute right-0  lg:top-[-115px] w-[100%] min-h-[500px] overflow-hidden rounded-[24px]">
+                            <div class=" relative lg:absolute right-0  lg:top-[-115px] w-[100%] max-w-[800px] min-h-[500px] overflow-hidden rounded-[24px]">
 							    <?php echo get_sub_field('calender'); ?>
 							</div>
 						<?php endif; ?>	
