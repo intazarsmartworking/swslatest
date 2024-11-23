@@ -3141,7 +3141,7 @@ body.lightMode .relatedBlogs a p {
   color: #000 !important;
 }
 .swich-mode {
-  width: 40px;
+  width: 105px;
   height: 40px;
   position: fixed;
   right: 0px;
@@ -3166,7 +3166,7 @@ body.lightMode .relatedBlogs a p {
   vertical-align: middle;
 }
 .swich-mode:hover {
-  width: 110px;
+  width: 105px;
 }
 .footer-menu {
   padding: 0px;
