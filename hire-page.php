@@ -362,10 +362,11 @@
 												$small_title = get_sub_field('small_title'); 
 												$main_title = get_sub_field('main_title'); 
 												$paragraph = get_sub_field('paragraph');
-												$row_index = get_row_index();				
+												$row_index = get_row_index();	
+												$background_color = get_sub_field('background_color'); 												
 											?>
 
-											<div class="thumbnail-image">
+											<div class="thumbnail-image" style="background:<?php echo $background_color;?>">
 												<span class="absolute !text-black text-center pt-[10px] text-[13px] font-bold left-[25px] top-[31px] w-[40px] h-[40px] bg-[#fff] rounded-[50%]"><?php echo $row_index; ?></span>
 												<!-- <?php echo $main_title;?>	 -->
 												<h5 class=" text-white font-light md:text-[30px] leading-[40px]">Step <?php echo $row_index; ?></h5>
@@ -385,9 +386,10 @@
 													$small_title = get_sub_field('small_title'); 
 													$main_title = get_sub_field('main_title'); 
 													$paragraph = get_sub_field('paragraph');
-													$row_index = get_row_index();				
+													$row_index = get_row_index();
+												    $background_color = get_sub_field('background_color'); 
 												?> 
-													<div class="slider-banner-image rounded-[10px]">
+													<div class="slider-banner-image rounded-[10px]" style="border:1px solid <?php echo $background_color;?>">
 														<!-- <div class="block text-[16px] text-[#D0511B] font-semibold mb-5">
 															<?php if(get_sub_field('icon')): ?>
 																<img class="!w-[24px] !h-[24px] align-top !inline-block mr-2" src="<?php echo get_sub_field('icon')['url']; ?>" alt="<?php echo get_sub_field('icon')['alt']; ?>">
