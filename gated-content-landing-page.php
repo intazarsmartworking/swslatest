@@ -65,7 +65,11 @@
                     </div>
                     <div class="grid-item col-span-4">
                         <div class=" w-[100%] ml-auto max-w-[480px] bg-[#fff] rounded-[20px] p-[35px] border border-[#fff]">
-                            <?php echo do_shortcode('[contact-form-7 id="df3904d" title="Gated Form"]');?>
+                        <?php //echo do_shortcode('[contact-form-7 id="df3904d" title="Gated Form"]');?>
+                            <?php 
+										$form_shortcode = get_sub_field('form_shortcode');
+										echo do_shortcode($form_shortcode);
+										?>
                         </div>
                     </div>
             </div>
