@@ -145,6 +145,25 @@
             ]
         },
         {
+            "key": "field_674425ff30e92",
+            "label": "Right Area PlaceHolder",
+            "name": "right_area_placeholder",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_671a553b72792",
             "label": "References",
             "name": "references",
@@ -326,5 +345,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729779060
+    "modified": 1732519490
 }

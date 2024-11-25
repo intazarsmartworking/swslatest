@@ -191,12 +191,14 @@ get_header();
 									
 								</div>
 								<div class="grid-item col-span-10 lg:col-span-2 text-white content-start">
-									<div class="bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
-										<img class=" w-full" src="<?php echo get_template_directory_uri();?>/images/about-bottom-img.png" alt="">
-									<div>
-								</div>
-							</div>
-						</div>
+								<?php if(get_field('right_area_placeholder')): ?>
+								<?php $right_area_placeholder = get_field('right_area_placeholder'); ?>
+								  <div class="bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
+										<?php echo do_shortcode($right_area_placeholder);?>
+									<div></div>
+							      </div>
+								<?php endif; ?>  
+						        </div>
 					</div>
 					
 					
