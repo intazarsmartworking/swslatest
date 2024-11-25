@@ -33,6 +33,8 @@
 					$latest_post_id = get_the_ID();
 					$image_id = get_post_thumbnail_id();
 					$image_src = wp_get_attachment_image_src($image_id, 'full');
+					$post_title_new = get_field('post_title');
+					$post_desc_new = get_field('post_description');
 				?>
 				
 				<div class="grid grid-cols-1 lg:grid-cols-10 bg-white rounded-[30px] overflow-hidden mt-[20px]">
@@ -58,8 +60,8 @@
 							<?php endif;
 							?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php the_title(); ?></p> </a>
-						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
+						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#050403] font-bold mb-4" ><?php echo $post_title_new;?></p> </a>
+						<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#050403] mb-4" > <?php echo $post_desc_new;?> </p> </a>
 						
 						<div class="d-block">
 							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>" class="inline-block px-[30px] py-[10px] mr-3 text-[14px] rounded-[30px] border border-[#050403] text-[#050403] hover:bg-[#050403] hover:text-[#ffffff]" >Read more</a>
@@ -90,12 +92,15 @@
 					'post_status'    => 'publish',
 				);
 				$all_posts_query = new WP_Query($all_posts_args);
+				
 				?>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 blog-box mt-[65px]" id="post-container">
 				<?php if ($all_posts_query->have_posts()) : ?>
 				<?php while ($all_posts_query->have_posts()) : $all_posts_query->the_post(); ?>
 				<?php $image_id = get_post_thumbnail_id();
 					$image_src = wp_get_attachment_image_src($image_id, 'full');
+					$post_title_new = get_field('post_title');
+					$post_desc_new = get_field('post_description');
 				?>
 				
 					<div class="blog-item rounded-[20px] overflow-hidden">
@@ -121,8 +126,8 @@
 							<?php endif;
 							?>
 							<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo wp_trim_words(get_the_title(), 7); ?>  </p> </a>
-							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo wp_trim_words(get_the_content(), 40); ?> </p> </a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[24px] text-[#ffffff] font-bold mb-4" > <?php echo $post_title_new; ?>  </p> </a>
+							<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>"> <p class="text-[16px] text-[#ffffff] mb-4" > <?php echo $post_desc_new; ?> </p> </a>
 							
 						</div>
 					</div>
@@ -159,7 +164,4 @@
 
 	</div>
 </div>
-
-
-
 <?php get_footer();?>
