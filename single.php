@@ -194,7 +194,7 @@ get_header();
 								<?php if(get_field('right_area_placeholder')): ?>
 								<?php $right_area_placeholder = get_field('right_area_placeholder'); ?>
 								  <div class="bg-transparent rounded-[10px] min-h-[300px] p-3 stickysidenav">
-										<?php echo do_shortcode($right_area_placeholder);?>
+										<?php echo $right_area_placeholder;?>
 									<div></div>
 							      </div>
 								<?php endif; ?>  
