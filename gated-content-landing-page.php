@@ -64,7 +64,7 @@
 					<?php endif; ?>	
                     </div>
                     <div class="grid-item col-span-4">
-                        <div class=" w-[100%] ml-auto max-w-[480px] bg-[#fff] rounded-[20px] p-[15px] border border-[#fff]">
+                        <div class=" w-[100%] ml-auto max-w-[480px] bg-[#fff] rounded-[20px] p-[10px] border border-[#fff]">
                         <?php //echo do_shortcode('[contact-form-7 id="df3904d" title="Gated Form"]');?>
                             <?php 
 										$form_shortcode = get_sub_field('form_shortcode');
