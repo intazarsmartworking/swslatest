@@ -110,7 +110,7 @@
 					</div>
 				</div>
 				<div class="ml-auto absolute right-0 bottom-0 ">
-					<img class="max-w-[200px] lg:w-auto  max-h-[120px] lg:max-h-[240px]" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
+					<img class="w-[120px] lg:w-auto  h-[120px] lg:h-[240px]" src="<?php echo get_sub_field('main_image')['url']; ?>" alt="<?php echo get_sub_field('main_image')['url']; ?>">
 				</div>
 				</div>
 			</div>

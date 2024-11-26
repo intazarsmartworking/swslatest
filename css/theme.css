@@ -895,6 +895,9 @@ select {
 .visible {
   visibility: visible;
 }
+.invisible {
+  visibility: hidden;
+}
 .collapse {
   visibility: collapse;
 }
@@ -1583,6 +1586,9 @@ select {
 .h-\[110px\] {
   height: 110px;
 }
+.h-\[120px\] {
+  height: 120px;
+}
 .h-\[15px\] {
   height: 15px;
 }
@@ -1660,9 +1666,6 @@ select {
 }
 .h-auto {
   height: auto;
-}
-.max-h-\[120px\] {
-  max-height: 120px;
 }
 .max-h-\[200px\] {
   max-height: 200px;
@@ -1771,6 +1774,9 @@ select {
 }
 .w-\[110px\] {
   width: 110px;
+}
+.w-\[120px\] {
+  width: 120px;
 }
 .w-\[134px\] {
   width: 134px;
@@ -1902,9 +1908,6 @@ select {
 .max-w-\[1380px\] {
   max-width: 1380px;
 }
-.max-w-\[200px\] {
-  max-width: 200px;
-}
 .max-w-\[210px\] {
   max-width: 210px;
 }
@@ -2017,6 +2020,11 @@ select {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
 }
 .resize {
   resize: both;
@@ -3370,6 +3378,14 @@ select {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -6430,6 +6446,9 @@ body.lightMode .relatedBlogs a p {
   border: 1px solid #fff;
   padding: 1.5rem;
 }
+body.lightMode .single-blog .blog-table .text-16 {
+  color: #000;
+}
 @media (min-width: 991px) and (max-width: 1360px) {
   .header-menu li a {
     padding: 13px 4px;
@@ -6566,6 +6585,18 @@ body.lightMode .relatedBlogs a p {
   .card-placement.active {
     left: 0px !important;
   }
+}
+.placeholder\:block::-moz-placeholder {
+  display: block;
+}
+.placeholder\:block::placeholder {
+  display: block;
+}
+.placeholder\:inline::-moz-placeholder {
+  display: inline;
+}
+.placeholder\:inline::placeholder {
+  display: inline;
 }
 .hover\:bg-\[\#050403\]:hover {
   --tw-bg-opacity: 1;
@@ -7250,8 +7281,8 @@ body.lightMode .relatedBlogs a p {
     display: flex;
   }
 
-  .lg\:max-h-\[240px\] {
-    max-height: 240px;
+  .lg\:h-\[240px\] {
+    height: 240px;
   }
 
   .lg\:min-h-\[450px\] {
