@@ -39,7 +39,7 @@
                     </div>
                     <div class="grid-item col-span-5">
 					<?php if(get_sub_field('right_side_image')): ?>
-                        <div class=" w-[100%] ml-auto max-w-[460px] bg-[#1F0C04] rounded-[30px] px-[35px] pt-[35px] border border-[#401A0A]">
+                        <div class=" w-[100%] ml-auto max-w-[500px] bg-[#1F0C04] rounded-[30px] px-[25px] pt-[35px] border border-[#401A0A]">
                             <img class=" w-[100%] max-w-[100%] h-auto" src="<?php echo get_sub_field('right_side_image')['url']; ?>" />
                         </div>
 					<?php endif; ?>	
@@ -64,7 +64,7 @@
 					<?php endif; ?>	
                     </div>
                     <div class="grid-item col-span-4">
-                        <div class=" w-[100%] ml-auto max-w-[480px] bg-[#fff] rounded-[20px] p-[10px] border border-[#fff]">
+                        <div class=" w-[100%] ml-auto max-w-[550px] bg-[#fff] rounded-[20px] p-[10px] border border-[#fff]">
                         <?php //echo do_shortcode('[contact-form-7 id="df3904d" title="Gated Form"]');?>
                             <?php 
 										$form_shortcode = get_sub_field('form_shortcode');
