@@ -25,8 +25,59 @@
 		}
 	?>
 	<?php wp_head(); ?>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH6R78TJ');</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dedicated Remote Developers",
+  "description": "Smart Working provides the world's top dedicated remote developers to help businesses build high-quality projects.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Smart Working",
+    "logo": "https://smartworking.io/wp-content/uploads/2024/08/LogoSVG.svg",
+    "url": "https://smartworking.io/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44 1344 636399",
+      "email": "info@smartworking.io",
+      "contactType": "Customer Service",
+      "areaServed": "Global",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "The Plaza, 535 King’s Rd",
+      "addressLocality": "London",
+      "postalCode": "SW10 0SZ",
+      "addressCountry": "United Kingdom"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "2199",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+	<meta name="google-site-verification" content="YhVyne2pd4bS9AodNc8CbiqznJdiw6FUM1zhDYcBB_E" />
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH6R78TJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	
 
