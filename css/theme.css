@@ -6845,6 +6845,12 @@ body.lightMode .single-blog .blog-table .text-16 {
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
 }
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+.disabled\:bg-\[\#ff4e0279\]:disabled {
+  background-color: #ff4e0279;
+}
 .disabled\:opacity-\[0\.3\]:disabled {
   opacity: 0.3;
 }
