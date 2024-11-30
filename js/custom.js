@@ -2060,6 +2060,11 @@ jQuery('.chip-skill li').on('click', function(){
   }
   console.log('selectedSkill', selectedSkill.length)
   jQuery('.count-skill').text(selectedSkill.length)
+  if(selectedSkill.length == 0){
+    jQuery('.next-step').prop('disabled', true);
+  }else{
+    jQuery('.next-step').prop('disabled', false);
+  }
   //jQuery('#selected_skill').text(selectedSkill.length)
   jQuery('#selected_skill').val(JSON.stringify(selectedSkill));
 })

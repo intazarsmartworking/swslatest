@@ -94,7 +94,7 @@
                                 <input type="hidden" id="selected_skill" name="selected_skill" />
                             </div>
                             <div class="flex justify-end w-full">
-                                <button type="button" class="next-step text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Next</button>
+                                <button type="button" disabled class="next-step text-white bg-[#FF4D02] disabled:bg-[#ff4e0279] disabled:cursor-not-allowed hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Next</button>
                             </div>
                         </div>
 
@@ -126,7 +126,7 @@
                             </div>
                             <div class="flex justify-between w-full">
                                 <button type="button" class="previous-step text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Previous</button>
-                                <button type="button" class="next-step text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Next</button>
+                                <button type="button" class="next-step disabled:bg-[#ff4e0279] disabled:cursor-not-allowed text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Next</button>
                             </div>
                         </div>
 
@@ -150,10 +150,6 @@
                                 <input class="text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]" type="submit" name="submit_form" value="Submit">
                             </div>
                         </div>
-
-                        
-
-                        
                     </form>
 
                 </div>
