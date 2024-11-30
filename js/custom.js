@@ -2010,3 +2010,75 @@ jQuery('#prev-blog').click(function(e) {
 jQuery('#next-blog').click(function(e) {
   jQuery('.relatedBlogs').slick('slickPrev');
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let currentStep = 1;
+  const steps = document.querySelectorAll('.step-box');
+  const nextButtons = document.querySelectorAll('.next-step');
+  const previousButtons = document.querySelectorAll('.previous-step');
+
+  // Show the first step by default
+  steps[0].classList.add('active');
+
+  nextButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          if (currentStep < steps.length) {
+              steps[currentStep - 1].classList.remove('active');
+              steps[currentStep].classList.add('active');
+              currentStep++;
+          }
+      });
+  });
+  
+  previousButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          if (currentStep > 1) {
+              steps[currentStep - 1].classList.remove('active');
+              steps[currentStep - 2].classList.add('active');
+              currentStep--;
+          }
+      });
+  });
+});
+
+var selectedSkill = [];
+jQuery('.chip-skill li').on('click', function(){
+  const hasClass = jQuery(this).hasClass('active')
+  if(hasClass){
+    jQuery(this).removeClass('active');
+    const skill = jQuery(this).text()
+    const findIndex = selectedSkill.indexOf(skill)
+    selectedSkill.splice(findIndex, 1)
+  }else{
+    jQuery(this).addClass('active');
+    const skill = jQuery(this).text()
+    selectedSkill.push(skill);
+  }
+  console.log('selectedSkill', selectedSkill.length)
+  jQuery('.count-skill').text(selectedSkill.length)
+  //jQuery('#selected_skill').text(selectedSkill.length)
+  jQuery('#selected_skill').val(JSON.stringify(selectedSkill));
+})
+
+
+jQuery("#search-skill").on('input', function() {
+  // console.log('search')
+  // if (jQuery("#search-skill").val() != '') {
+  //   jQuery('.searched-skill-box').show();
+  // } else {
+  //   jQuery('.searched-skill-box').hide();
+  // }
+  var value = this.value.toLowerCase().trim();
+  jQuery(".chip-skill li").show().filter(function() {
+    return jQuery(this).text().toLowerCase().trim().indexOf(value) == -1;
+  }).hide();
+})
+
+// jQuery(".searched-skill-list li").on('click', function(){
+//   jQuery("#search-skill").val('');
+//   jQuery('.searched-skill-box').hide();
+// })
