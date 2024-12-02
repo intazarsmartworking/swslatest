@@ -322,9 +322,30 @@ add_action('admin_menu', 'custom_form_data_menu');
 function display_custom_form_data() {
     global $wpdb;
     $table_name = $wpdb->prefix . 'custom_form_data';  // Custom table
+    
+    // Number of rows per page
+    $rows_per_page = 20;
 
-    // Query to get all rows from the custom table
-    $results = $wpdb->get_results("SELECT * FROM $table_name ORDER BY submitted_at DESC");
+    // Get the current page from the URL, default to page 1
+    $current_page = isset($_GET['paged']) ? absint($_GET['paged']) : 1;
+    if ($current_page <= 0) {
+        $current_page = 1;
+    }
+
+    // Calculate the offset for the SQL query
+    $offset = ($current_page - 1) * $rows_per_page;
+
+    // Query to get the total number of rows in the table
+    $total_rows = $wpdb->get_var("SELECT COUNT(*) FROM $table_name");
+
+    // Query to get a specific number of rows based on pagination
+    $results = $wpdb->get_results(
+        $wpdb->prepare(
+            "SELECT * FROM $table_name ORDER BY submitted_at DESC LIMIT %d OFFSET %d",
+            $rows_per_page,
+            $offset
+        )
+    );
 
     // If no data exists
     if (empty($results)) {
@@ -340,20 +361,38 @@ function display_custom_form_data() {
         // Loop through the results and display each row
         foreach ($results as $row) {
             echo '<tr>';
-			echo '<td>' . esc_html($row->name) . '</td>';
+            echo '<td>' . esc_html($row->name) . '</td>';
             echo '<td>' . esc_html($row->email) . '</td>';
-			echo '<td>' . esc_html($row->phone) . '</td>';
-			echo '<td>' . esc_html($row->selected_skill) . '</td>';
-			echo '<td>' . esc_html($row->working_time) . '</td>';
+            echo '<td>' . esc_html($row->phone) . '</td>';
+            echo '<td>' . esc_html($row->selected_skill) . '</td>';
+            echo '<td>' . esc_html($row->working_time) . '</td>';
             echo '<td>' . esc_html($row->submitted_at) . '</td>';
             echo '</tr>';
         }
 
         echo '</tbody>';
         echo '</table>';
+
+        // Pagination
+        $total_pages = ceil($total_rows / $rows_per_page);
+        if ($total_pages > 1) {
+            echo '<div class="pagination-links">';
+            $base_url = add_query_arg('paged', '%#%');
+            echo paginate_links(array(
+                'base' => $base_url,
+                'format' => '',
+                'total' => $total_pages,
+                'current' => $current_page,
+                'prev_text' => '&laquo; Previous',
+                'next_text' => 'Next &raquo;',
+            ));
+            echo '</div>';
+        }
+
         echo '</div>';
     }
 }
+
 
 // Add custom styles for the table
 function custom_admin_styles() {
@@ -365,6 +404,36 @@ function custom_admin_styles() {
             .wp-list-table tbody tr:nth-child(even) {
                 background-color: #f9f9f9;
             }
+			.pagination-links {
+				margin-top: 20px;
+				text-align: right;
+			}
+
+			.pagination-links .page-numbers {
+				padding: 6px 12px;
+				margin: 0 4px;
+				border: 1px solid #ddd;
+				background: #f9f9f9;
+				color: #333;
+				text-decoration: none;
+				border-radius: 3px;
+			}
+
+			.pagination-links .page-numbers.current {
+				background: #0073aa;
+				color: #fff;
+				border-color: #0073aa;
+			}
+
+			.pagination-links .page-numbers:hover {
+				background: #006799;
+				color: #fff;
+				border-color: #006799;
+			}
+
+			.pagination-links .prev, .pagination-links .next {
+				font-weight: bold;
+			}
         </style>
     ';
 }
