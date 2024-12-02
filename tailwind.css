@@ -3420,3 +3420,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   color: #000;
   border-radius: 3px;
 }
+
+.error-mes {
+  display: none;
+}

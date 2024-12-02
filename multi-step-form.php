@@ -141,7 +141,11 @@
                             <div class="block mb-6">
                                 <label class="block" for="email">Email:</label>
                                 <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" required>
+                                <div id="error-box" class="error-mes mt-2 text-sm text-red-800 dark:bg-gray-800 dark:text-red-400" role="alert">
+                                    Please use your company email address or apply as a developer
+                                </div>
                             </div>
+                            
                             <div class="block mb-14">
                                 <label class="block" for="phone">Phone number:</label>
                                 <input type="tel" id="phone" name="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4D02] focus:border-[#FF4D02] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF4D02] dark:focus:border-[#FF4D02]" required>
@@ -149,10 +153,11 @@
                             <div class="flex justify-between w-full">
                                 <button type="button" class="previous-step text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]">Previous</button>
                                 <!-- <button type="button" class="next-step">Next</button> -->
-                                <input class="text-white bg-[#FF4D02] hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]" type="submit" name="submit_form" value="Submit">
+                                <input id="submit-form" class="text-white bg-[#FF4D02] disabled:bg-[#ff4e0279] disabled:cursor-not-allowed hover:bg-[#ff4e02dc] focus:ring-4 focus:ring-[#ff4e02a2] font-medium rounded-lg text-sm px-8 py-3 dark:bg-[#FF4D02] dark:hover:bg-[#FF4D02] focus:outline-none dark:focus:bg-[#FF4D02]" type="submit" name="submit_form" value="Submit">
                             </div>
                         </div>
                     </form>
+                   
 
                 </div>
                 

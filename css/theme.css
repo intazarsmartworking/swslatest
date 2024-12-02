@@ -1480,6 +1480,9 @@ select {
 .mt-\[10px\] {
   margin-top: 10px;
 }
+.mt-\[10rem\] {
+  margin-top: 10rem;
+}
 .mt-\[120px\] {
   margin-top: 120px;
 }
@@ -1513,17 +1516,8 @@ select {
 .mt-\[70px\] {
   margin-top: 70px;
 }
-.mt-\[80\%\] {
-  margin-top: 80%;
-}
 .mt-\[80px\] {
   margin-top: 80px;
-}
-.mt-\[4rem\] {
-  margin-top: 4rem;
-}
-.mt-\[10rem\] {
-  margin-top: 10rem;
 }
 .block {
   display: block;
@@ -2452,6 +2446,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+}
 .bg-transparent {
   background-color: transparent;
 }
@@ -3335,6 +3333,10 @@ select {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -6646,7 +6648,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   width: 100%;
 }
 .skill-scroll-box {
-  height: 300px;
+  height: 250px;
 }
 .searched-skill-box {
   position: absolute;
@@ -6676,6 +6678,9 @@ body.lightMode .single-blog .blog-table .text-16 {
   background: #ff4e023d;
   color: #000;
   border-radius: 3px;
+}
+.error-mes {
+  display: none;
 }
 .placeholder\:block::-moz-placeholder {
   display: block;
@@ -7878,6 +7883,11 @@ body.lightMode .single-blog .blog-table .text-16 {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
   .dark\:text-gray-300 {
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -7886,6 +7896,11 @@ body.lightMode .single-blog .blog-table .text-16 {
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-red-400 {
+    --tw-text-opacity: 1;
+    color: rgb(248 113 113 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
