@@ -2083,7 +2083,41 @@ jQuery("#search-skill").on('input', function() {
   }).hide();
 })
 
+var block_free_domains = [
+  'tempmail.com',
+  '10minutemail.com',
+  'guerrillamail.com',
+  'mailinator.com',
+  'dispostable.com',
+  'throwawaymail.com',
+  'maildrop.cc',
+  'gmail.com', 
+  'yahoo.com', 
+  'aol.com', 
+  'hotmail.com', 
+  'outlook.com', 
+  'aol.com', 
+  'icloud.com', 
+  'live.com', 
+  'zoho.com', 
+  'dont-reply.me'
+]
+
+jQuery("#email").on('input', function() {
+  var value = this.value.toLowerCase().trim();
+  const domain = value.split('@')[1];
+  if(block_free_domains.includes(domain)){
+    jQuery('#error-box').show();
+    jQuery('#submit-form').prop('disabled', true);
+  }else{
+    jQuery('#error-box').hide();
+    jQuery('#submit-form').prop('disabled', false);
+  }
+})
+
+
+
 // jQuery(".searched-skill-list li").on('click', function(){
-//   jQuery("#search-skill").val('');
+//   jQuery("#search-skill").val(''); email
 //   jQuery('.searched-skill-box').hide();
 // })
