@@ -303,7 +303,6 @@ function create_custom_table() {
 }
 register_activation_hook(__FILE__, 'create_custom_table');
 
-
 // Add custom admin menu
 function custom_form_data_menu() {
     add_menu_page(
