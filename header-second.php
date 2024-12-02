@@ -33,42 +33,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MH6R78TJ');</script>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Dedicated Remote Developers",
-  "description": "Smart Working provides the world's top dedicated remote developers to help businesses build high-quality projects.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Smart Working",
-    "logo": "https://smartworking.io/wp-content/uploads/2024/08/LogoSVG.svg",
-    "url": "https://smartworking.io/",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+44 1344 636399",
-      "email": "info@smartworking.io",
-      "contactType": "Customer Service",
-      "areaServed": "Global",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "The Plaza, 535 King’s Rd",
-      "addressLocality": "London",
-      "postalCode": "SW10 0SZ",
-      "addressCountry": "United Kingdom"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "2199",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-}
-</script>
 
 	<meta name="google-site-verification" content="YhVyne2pd4bS9AodNc8CbiqznJdiw6FUM1zhDYcBB_E" />
 </head>

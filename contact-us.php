@@ -67,12 +67,21 @@
 		<?php endif; ?>
 		<?php endwhile; ?>
 		<?php endif; ?>	
-			
+		
+
+		<?php if (have_rows('contact_block')) : ?>
+		<?php while (have_rows('contact_block')) : the_row(); ?>
+		<?php if (get_row_layout() == 'form_section') : ?>
 		<div class="grid-item col-span-5 content-center relative">
+		<?php if(get_sub_field('form_shortcode')): ?>
 			<div class=" bg-white rounded-[30px] min-h-[580px] py-[30px] px-[25px]">
-              <iframe aria-label='Share Your Requirement' frameborder="0" style="height:580px;width:100%;border:none;" src='https://forms.smartworking.io/shubhankit/form/ContactUsForm/formperma/id4WgG4ZljDvVm388-5p-A9d9t9TFE8-Mm8cXswDscI'></iframe>
+              <?php echo get_sub_field('form_shortcode'); ?>
             </div>
+		<?php endif; ?> 	
 		</div>
+		<?php endif; ?>
+		<?php endwhile; ?>
+		<?php endif; ?>	
         </div>
     </div>
 </section>
