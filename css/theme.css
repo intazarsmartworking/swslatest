@@ -1519,6 +1519,12 @@ select {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mt-\[4rem\] {
+  margin-top: 4rem;
+}
+.mt-\[10rem\] {
+  margin-top: 10rem;
+}
 .block {
   display: block;
 }
