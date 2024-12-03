@@ -67,21 +67,28 @@
 		<?php endif; ?>
 		<?php endwhile; ?>
 		<?php endif; ?>	
+
+        <div class="grid-item col-span-7 content-center relative">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/smart-working/discovery-call-smartworking?primary_color=ff4d04" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
 		
 
-		<?php if (have_rows('contact_block')) : ?>
+		<!-- <?php if (have_rows('contact_block')) : ?>
 		<?php while (have_rows('contact_block')) : the_row(); ?>
 		<?php if (get_row_layout() == 'form_section') : ?>
-		<div class="grid-item col-span-5 content-center relative">
-		<?php if(get_sub_field('form_shortcode')): ?>
-			<div class=" bg-white rounded-[30px] min-h-[580px] py-[30px] px-[25px]">
-              <?php echo get_sub_field('form_shortcode'); ?>
+		<div class="grid-item col-span-7 content-center relative">
+
+		<?php // if(get_sub_field('form_shortcode')): ?>
+			<div class="w-full">
+
+              <?php // echo get_sub_field('form_shortcode'); ?>
             </div>
-		<?php endif; ?> 	
+		<?php // endif; ?> 	
 		</div>
 		<?php endif; ?>
 		<?php endwhile; ?>
-		<?php endif; ?>	
+		<?php endif; ?>	 -->
         </div>
     </div>
 </section>
