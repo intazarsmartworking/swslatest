@@ -69,6 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- background-image: url('<?php echo get_template_directory_uri();?>/images/Homepage.png'); -->
 <body  <?php body_class(); ?> style="">
 <?php wp_body_open(); ?>
+<div id="wptime-plugin-preloader"></div>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH6R78TJ"
