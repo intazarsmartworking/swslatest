@@ -11,11 +11,14 @@
   	<img class="bg-img absolute w-[150%] max-w-[initial] opacity-[0.6] left-[-20%] z-0 top-[-15%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   	<div class=" w-full relative z-10">
 		
-        <section class="w-full px-3">
-            <div class=" w-[100%] max-w-[1280px] mx-auto py-[16px]">
-                <div class="grid grid-cols-1 content-center gap-6 md:gap-32 relative z-10">
-                    <div class="grid-item col-span-1">
-                        <img class="!h-[23px] !w-[185px] ml-[-5px]" src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="">
+        <section class="w-full sticky top-0 z-[99]">
+            <div class=" w-[100%] max-w-[1280px] mx-auto header-box">
+                <div class="grid grid-cols-2 gap-6 md:gap-32 relative z-10">
+                    <div class="grid-item col-span-1 content-center">
+                        <img class="!h-[25px] !w-[208px] ml-[-5px] " src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="">
+                    </div>
+					<div class="grid-item col-span-1 text-right">
+						<a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange btn-header" target="">Book a Call</a>
                     </div>
                 </div>
             </div>
@@ -37,11 +40,28 @@
 						<?php if(get_sub_field('small_paragraph')): ?>
                             <p class=" text-white font-medium text-2xl pt-[10px] px-0 mb-10"><?php echo get_sub_field('small_paragraph'); ?></p>
 						<?php endif; ?>	
-						<?php if(get_sub_field('app_star_icon')): ?>
-						   <div class="block get-app">
-                                <img src="<?php echo get_sub_field('app_star_icon')['url']; ?>" alt="<?php echo get_sub_field('app_star_icon')['alt']; ?>">
-                            </div>
-						<?php endif; ?>		
+						
+							<div class="block mt-10">
+								<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+									<div class="grid-item col-span-1">
+										<p class=" text-white text-[15px] relative pl-[30px]"><img class="h-[15px] w-[15px] absolute left-0 top-[4px]" src="<?php echo get_template_directory_uri();?>/images/checked.svg" alt=""> Meet our vetted talent within 7 working days</p>
+									</div>
+									<div class="grid-item col-span-1">
+										<p class=" text-white text-[15px] relative pl-[30px]"><img class="h-[15px] w-[15px] absolute left-0 top-[4px]" src="<?php echo get_template_directory_uri();?>/images/checked.svg" alt=""> 6,000+ vetted developers, with only 4% of applicants progressed</p>
+									</div>
+									<div class="grid-item col-span-1">
+										<p class=" text-white text-[15px] relative pl-[30px]"><img class="h-[15px] w-[15px] absolute left-0 top-[4px]" src="<?php echo get_template_directory_uri();?>/images/checked.svg" alt=""> Time zone aligned, working your hours and in permanent communication</p>
+									</div>
+									<div class="grid-item col-span-1">
+										<p class=" text-white text-[15px] relative pl-[30px]"><img class="h-[15px] w-[15px] absolute left-0 top-[4px]" src="<?php echo get_template_directory_uri();?>/images/checked.svg" alt=""> All our developers are screened and compliance checked</p>
+									</div>
+								</div>
+							</div>
+							<?php if(get_sub_field('app_star_icon')): ?>
+								<div class="block get-app mt-10">
+									<img src="<?php echo get_sub_field('app_star_icon')['url']; ?>" alt="<?php echo get_sub_field('app_star_icon')['alt']; ?>">
+								</div>
+							<?php endif; ?>	
                         </div>
                         <div class="grid-item col-span-1 content-center">
 						<?php if(get_sub_field('form_part')): ?>
@@ -324,6 +344,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 content-center gap-3 relative z-10 bg-white rounded-[25px] mx-auto max-w-[450px] p-8">
                             <!-- <img class=" absolute right-[-30px] top-[-30px] max-h-[80px] w-auto" src="<?php echo get_template_directory_uri();?>/images/price-img.png"> -->
                             <div class="grid-item col-span-2 relative content-center">
+								<p class="text-center text-black font-bold text-[20px] md:text-[25px]">Starting at</p>
                                 <?php if(get_sub_field('price')): ?>
                                     <h5 class="text-center font-extrabold text-[100px] text-dark-orange leading-[100px]"><?php echo get_sub_field('price'); ?></h5>
                                 <?php endif; ?> 
@@ -578,8 +599,33 @@
 						<?php endif; ?>	
 						
 						<?php if(get_sub_field('paragraph')): ?>
-                            <p class=" text-white text-[16px] mt-[30px] mb-[30px]"><?php echo get_sub_field('paragraph'); ?></p>
-						<?php endif; ?>		
+                            <p class=" text-white text-[16px] mt-[10px] mb-[10px]"><?php echo get_sub_field('paragraph'); ?></p>
+						<?php endif; ?>	
+						<div class="block mt-[30px] mb-[30px]">
+							<ul class="hiw-bullat-point">
+								<li>
+									<span class="bullet-point">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C8.01088 2.5 6.10322 3.29018 4.6967 4.6967C3.29018 6.10322 2.5 8.01088 2.5 10C2.5 11.9891 3.29018 13.8968 4.6967 15.3033C6.10322 16.7098 8.01088 17.5 10 17.5Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M9.75016 5.83203L10.7502 8.4987L13.6668 8.66536L11.4168 10.4987L12.1668 13.332L9.75016 11.7487L7.3335 13.332L8.0835 10.4987L5.8335 8.66536L8.66683 8.4987L9.75016 5.83203Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</span> Hire in 7 days 
+								</li>
+								<li><span class="bullet-point">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C8.01088 2.5 6.10322 3.29018 4.6967 4.6967C3.29018 6.10322 2.5 8.01088 2.5 10C2.5 11.9891 3.29018 13.8968 4.6967 15.3033C6.10322 16.7098 8.01088 17.5 10 17.5Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M9.75016 5.83203L10.7502 8.4987L13.6668 8.66536L11.4168 10.4987L12.1668 13.332L9.75016 11.7487L7.3335 13.332L8.0835 10.4987L5.8335 8.66536L8.66683 8.4987L9.75016 5.83203Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</span>
+									Vetted and screened talent</li>
+								<li> <span class="bullet-point">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C8.01088 2.5 6.10322 3.29018 4.6967 4.6967C3.29018 6.10322 2.5 8.01088 2.5 10C2.5 11.9891 3.29018 13.8968 4.6967 15.3033C6.10322 16.7098 8.01088 17.5 10 17.5Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M9.75016 5.83203L10.7502 8.4987L13.6668 8.66536L11.4168 10.4987L12.1668 13.332L9.75016 11.7487L7.3335 13.332L8.0835 10.4987L5.8335 8.66536L8.66683 8.4987L9.75016 5.83203Z" stroke="#ff4d02" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</span>£20/hr (all-in)</li>
+							</ul>
+						</div>	
                             <div class="block text-left mt-10">
                                 <span class=" inline-block relative align-middle">
                                     <span class=" text-[14px] text-[#fff] block text-start font-bold">Excellent</span>
