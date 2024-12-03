@@ -3424,3 +3424,7 @@ body.lightMode .single-blog .blog-table .text-16 {
 .error-mes {
   display: none;
 }
+.multi-step-logo li {
+  display: inline-block;
+  margin-bottom: 0px;
+}
