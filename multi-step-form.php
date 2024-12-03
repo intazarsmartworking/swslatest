@@ -8,12 +8,13 @@
  get_header('second');
 ?>
 
-<section class="w-full p-0">
+<section class="w-full p-0 relative">
         <div class="grid grid-cols-10 h-[100%] min-h-[100vh] relative">
             <div class="grid-item col-span-5 content-center h-[100%] relative">
                 <div class="">
-                    <img class="bg-img absolute w-[100%] right-[0] z-0 top-[0]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
-                    <div class=" relative max-w-[550px] ml-auto z-10 p-10 h-[100%] rounded-md">
+                    <div class=" relative max-w-[550px] z-10 p-10 h-[100%] rounded-md ml-[10%]">
+                        <img class="bg-img absolute w-[100%] right-[0] z-0 top-[0]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
+                    
                         <div class="block mb-8 mt-5">
                             <a> 
                                 <img class="w-[100%] max-w-[250px]" src="<?php echo get_template_directory_uri();?>/images/LogoSVG.svg" alt="<?php echo esc_attr($image['alt']); ?>">
@@ -21,7 +22,7 @@
                         </div>
                         <h1 class="text-[25px] font-medium lg:text-[40px] mb-4 text-white">Find your perfect match</h1>
                         <p class="text-[18px] lg:text-[18px] mb-8 text-[#A6A6A6]">Answer 6 short questions to help us understand your needs.</p>
-                        <div class=" mt-[10rem]">
+                        <div class=" mt-[15rem]">
                             <ul class="hiw-bullat-point text-white">
                                 <li class="!text-white !text-[16px] !mb-6">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="bullet-point" width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -51,7 +52,7 @@
                 </div>
             </div>
             <div class="grid-item col-span-5 content-center h-[100%] relative bg-white">
-                <div class=" max-w-[550px] w-[100%] p-10 relative">
+                <div class=" max-w-[600px] w-[100%] p-10 relative">
                     <?php // echo do_shortcode('[contact-form-7 id="300e693" title="Multi Step"]');?>
 
                     <form action="" method="POST">
@@ -161,6 +162,24 @@
 
                 </div>
                 
+            </div>
+        </div>
+        <div class=" absolute left-0 bottom-0 w-[100%] bg-black">
+            <div class="container">
+                <ul class="multi-step-logo text-center">
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-1.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-2.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-3.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-4.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-1.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-2.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-3.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-4.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-1.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-2.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-3.png"></li>
+                    <li><img class="w-[120px]" src="<?php echo get_template_directory_uri();?>/images/cont-4.png"></li>
+                </ul>
             </div>
         </div>
 </section>
