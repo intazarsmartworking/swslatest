@@ -113,8 +113,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         ?>
       </div>
       <div class="col-span-5 lg:col-span-3 content-center text-start lg:text-end">
-        <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange btn-header" target="">FIND A DEVELOPER</a>
-        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange btn-header" target="">CONTACT US</a>
+        <!-- <a href="/find-a-developer/" class="button mobile-m-0 inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-little-orange border-2 text-[16px] text-white radial-gradient-login mr-0 lg:mr-[20px] hover:bg-dark-orange btn-header" target="">FIND A DEVELOPER</a> -->
+        <a href="/contact-us/" class="button inline-block button-small rounded-md px-[10px] md:px-[20px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[16px] hover:bg-transparent hover:text-dark-orange btn-header" target="">Book a Call</a>
       </div>
     </div> 
     <div class="mega-menu-box">
