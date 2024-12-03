@@ -88,6 +88,7 @@
 		<?php if(get_sub_field('main_heading')): ?>	
 		<h2 class=" text-2xl text-white sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium flex flex-col text-center px-0 md:leading-tight"> <?php echo get_sub_field('main_heading'); ?>  </h2>
 		<?php endif; ?>
+		<p class="text-center text-[14px] lg:text-[25px]  pt-[10px] text-white">£20/hour: Average rate for a developer with 6+ yrs experience</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:mt-28">
 			<?php if(have_rows('box_item')): ?>
 			<?php while(have_rows('box_item')): the_row(); ?>
