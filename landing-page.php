@@ -598,9 +598,9 @@
                             <h5 class=" text-white font-bold text-[32px] lg:text-[40px] lg:leading-[45px]"><?php echo get_sub_field('heading'); ?></h5>
 						<?php endif; ?>	
 						
-						<!-- <?php if(get_sub_field('paragraph')): ?>
-                            <p class=" text-white text-[16px] mt-[30px] mb-[30px]"><?php echo get_sub_field('paragraph'); ?></p>
-						<?php endif; ?>	 -->
+						<?php if(get_sub_field('paragraph')): ?>
+                            <p class=" text-white text-[16px] mt-[10px] mb-[10px]"><?php echo get_sub_field('paragraph'); ?></p>
+						<?php endif; ?>	
 						<div class="block mt-[30px] mb-[30px]">
 							<ul class="hiw-bullat-point">
 								<li>

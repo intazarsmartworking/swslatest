@@ -1522,6 +1522,9 @@ select {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
 .block {
   display: block;
 }
