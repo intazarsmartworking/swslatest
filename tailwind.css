@@ -3428,3 +3428,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   display: inline-block;
   margin-bottom: 0px;
 }
+
+.calendly-call .calendly-inline-widget {
+  min-width: 1136px;
+}
