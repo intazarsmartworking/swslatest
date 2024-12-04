@@ -1739,6 +1739,46 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_67506a52e1c36",
+                            "label": "Bullet Points",
+                            "name": "bullet_points",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_67506a66e1c37",
+                                    "label": "Points",
+                                    "name": "points",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_66e9aa8a12e5c",
                             "label": "Calender",
                             "name": "calender",
@@ -1785,5 +1825,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726813372
+    "modified": 1733323387
 }
