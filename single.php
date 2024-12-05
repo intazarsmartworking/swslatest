@@ -160,8 +160,8 @@ get_header();
 									
 									<div class="blog-bio py-[10px] border-t border-[#eaecf04d] mt-10 pt-[24px]">
 										<div class="w-full">
-										  <div class="basis">
-										    <h3 class="text-[#AAA] font-normal"> References </h3>
+										  <div class="basis reference">
+										    <h3 class="text-[#AAA] font-normal "> References </h3>
 											<?php if(have_rows('references')): ?>
 											<?php while(have_rows('references')): the_row(); ?>
 											<?php 
