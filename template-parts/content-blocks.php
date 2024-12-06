@@ -149,9 +149,9 @@
 			<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
 		</div>
 		<div class="inner-box relative z-10 rounded-[60px] max-w-[90%] min-h-[350px] mx-auto p-4 md:p-[50px]">
-			<div class="grid grid-cols-1 lg:grid-cols-9 content-center">
-				<div class="grid-item col-span-3 content-center">
-					<div class=" w-[100%] max-w-[400px]">
+			<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3 content-center">
+				<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
+					<div class="w-[100%] xl:max-w-[400px]">
 						<h5 class="text-[25px] font-bold text-[#fff] mb-8">What are you looking for?</h5>
 						<div class="block mb-8">
 							<label for="select_skill" class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill:</label>
@@ -207,8 +207,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid-item col-span-3 content-center">
-					<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
+				<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
+					<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
 						<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> Hiring with SmartWorking</p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
@@ -218,8 +218,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid-item col-span-3 content-center">
-					<div class=" w-[100%] max-w-[450px] min-h-[400px] bg-[#fff] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
+				<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
+					<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#fff] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
 						<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
