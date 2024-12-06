@@ -182,9 +182,9 @@
 						<div class="block mb-8">
 							<label for="countriesList" class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in:</label>
 							<select id="countriesList" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
-								<option selected>Choose a country</option>
+								<!-- <option selected>Choose a country</option> -->
 								<option value="US">United States</option>
-								<option value="UK">United Kingdom</option>
+								<option value="UK" selected>United Kingdom</option>
 								<!-- <option value="FR">France</option>
 								<option value="DE">Germany</option> -->
 							</select>
