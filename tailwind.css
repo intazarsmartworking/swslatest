@@ -3432,3 +3432,13 @@ body.lightMode .single-blog .blog-table .text-16 {
 .calendly-call .calendly-inline-widget {
   min-width: 1136px;
 }
+
+#quantity-input::-webkit-outer-spin-button,
+#quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+#quantity-input {
+  -moz-appearance: textfield;
+}

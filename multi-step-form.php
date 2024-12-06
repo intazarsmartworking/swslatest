@@ -22,7 +22,7 @@
                         </div>
                         <h1 class="text-[25px] font-medium lg:text-[40px] mb-4 text-white">Find your perfect match</h1>
                         <p class="text-[18px] lg:text-[18px] mb-8 text-[#A6A6A6]">Answer 6 short questions to help us understand your needs.</p>
-                        <div class=" mt-[15rem]">
+                        <div class="mt-[15rem]">
                             <ul class="hiw-bullat-point text-white">
                                 <li class="!text-white !text-[16px] !mb-6">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="bullet-point" width="18" height="18" viewBox="0 0 24 24" fill="none">

@@ -2121,3 +2121,137 @@ jQuery("#email").on('input', function() {
 //   jQuery("#search-skill").val(''); email
 //   jQuery('.searched-skill-box').hide();
 // })
+
+var smartFromPrice = 0;
+var smartToPrice = 0;
+var otherFromPrice = 0;
+var otherToPrice = 0;
+var fromHoursPrice = 0;
+var toHoursPrice = 0;
+var numberOfDev = 1;
+var currencyValue = 1;
+var saveAmount = 1;
+
+
+
+jQuery('#select_skill').on('change', function() {
+  const selectedValue = JSON.parse(jQuery(this).val());
+  console.log('Selected value: ',  selectedValue);
+
+  
+
+  fromHoursPrice = selectedValue.midLevel;
+  toHoursPrice = selectedValue.senior;
+
+  if(selectedValue.midLevel == 26 && selectedValue.senior == 30){
+
+    smartFromPrice = 60840;
+    smartToPrice = 70200;
+    otherFromPrice = 90000;
+    otherToPrice = 140000;
+
+    showConvertPrice()
+    
+
+  }else if(selectedValue.midLevel == 22 && selectedValue.senior == 24){
+
+    smartFromPrice = 51480;
+    smartToPrice = 56160;
+    otherFromPrice = 80000;
+    otherToPrice = 120000;
+
+    showConvertPrice()
+   
+  }else if(selectedValue.midLevel == 20 && selectedValue.senior == 22){
+
+    smartFromPrice = 46800;
+    smartToPrice = 51480;
+    otherFromPrice = 70000;
+    otherToPrice = 85000;
+
+    showConvertPrice()
+
+  }else if(selectedValue.midLevel == 18 && selectedValue.senior == 20){
+
+    smartFromPrice = 42120;
+    smartToPrice = 46800;
+    otherFromPrice = 65000;
+    otherToPrice = 80000;
+
+    showConvertPrice()
+
+  }else if(selectedValue.midLevel == 14 && selectedValue.senior == 18){
+
+    smartFromPrice = 32760;
+    smartToPrice = 42120;
+    otherFromPrice = 52000;
+    otherToPrice = 70000;
+
+    showConvertPrice()
+
+  }
+
+});
+
+jQuery('#countriesList').on('change', function() {
+  const selectedValue = jQuery(this).val();
+  if(selectedValue == 'US'){
+    currencyValue = 1.2;
+    jQuery('.currency-symbols').text('$');
+    jQuery('.select-country').text('United States');
+  }else if(selectedValue == 'UK'){
+    currencyValue = 1;
+    jQuery('.currency-symbols').text('£');
+    jQuery('.select-country').text('United Kingdom')
+  }else{
+    currencyValue = 1;
+  }
+  console.log('Selected value: ',  selectedValue);
+
+  
+  showConvertPrice()
+  
+  
+})
+
+jQuery('#increment-button').on('click',function() {
+  numberOfDev = numberOfDev + 1;
+  $('#quantity-input').val(numberOfDev);
+  showConvertPrice()
+});
+
+// Decrease value by 1
+jQuery('#decrement-button').on('click', function() {
+  numberOfDev = numberOfDev - 1;
+  if(numberOfDev > 0){
+    $('#quantity-input').val(numberOfDev);
+    showConvertPrice()
+  }else{
+    numberOfDev = 1;
+    $('#quantity-input').val(numberOfDev);
+  }
+});
+
+function showConvertPrice(){
+    console.log('conver price', currencyValue, numberOfDev)
+    const smartFromPriceChange = Math.trunc(((smartFromPrice/12)*numberOfDev)*currencyValue);
+    const smartToPriceChange = Math.trunc(((smartToPrice/12)*numberOfDev)*currencyValue);
+
+    jQuery('.smartFromPrice').text(converter(smartFromPriceChange));
+    jQuery('.smartToPrice').text(converter(smartToPriceChange));
+
+    const otherFromPriceChange = Math.trunc(((otherFromPrice/12)*numberOfDev)*currencyValue);
+    const otherToPriceChange = Math.trunc(((otherToPrice/12)*numberOfDev)*currencyValue);
+
+    jQuery('.otherFromPrice').text(converter(otherFromPriceChange));
+    jQuery('.otherToPrice').text(converter(otherToPriceChange));
+
+    const currencyStart = Math.trunc(fromHoursPrice*currencyValue);
+    const currencyEnd = Math.trunc(toHoursPrice*currencyValue);
+
+    jQuery('.currency-start').text(currencyStart);
+    jQuery('.currency-end').text(currencyEnd)
+
+    const saveAmount = Math.trunc(((otherToPriceChange - smartFromPriceChange)*12)*currencyValue)
+    jQuery('.save-amount').text(converter(saveAmount));
+}
