@@ -3442,3 +3442,27 @@ body.lightMode .single-blog .blog-table .text-16 {
 #quantity-input {
   -moz-appearance: textfield;
 }
+
+.heding-box {
+  max-width: 800px;
+  width: 100%;
+  margin: 0px auto;
+}
+.heding-box h1 span {
+  color: #f34d05;
+}
+.btn-home {
+  padding: 13px 26px;
+  border-radius: 100px;
+  background: linear-gradient(105deg, #fff 6.2%, #fae0d6 91.51%);
+  color: #bc4615;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+  display: inline-block;
+}
+.hero-slider .hero-card {
+  background: transparent;
+  color: #fff;
+}

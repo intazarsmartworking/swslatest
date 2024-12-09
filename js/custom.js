@@ -2280,3 +2280,57 @@ function showConvertPrice(){
 
     
 }
+
+jQuery('.hero-slider').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  centerMode: false,
+  focusOnSelect: true,
+  autoplay: true,
+  arrows: false,
+  dots:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow:4,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    }
+  ]
+});
