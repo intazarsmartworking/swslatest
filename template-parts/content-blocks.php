@@ -223,7 +223,7 @@
 						<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
-						<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span>0-0/hour</p>
+						<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
 						<div class="w-[100%] absolute h-[110px] bg-[#f4f5f7] left-0 bottom-0 p-[20px] md:px-[30px]">
 							<p class="text-[16px] lg:text-[16px] text-[#000]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
 						</div>
