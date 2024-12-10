@@ -44,6 +44,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Hero Slider -->
 			<div class="hero-slider-box mt-10">
 				<div class="hero-slider">
 					<div class="slider-item">
