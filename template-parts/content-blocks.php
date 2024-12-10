@@ -10,8 +10,9 @@
    ?>
 <!-- home banner start -->
 <div class=" w-full relative">
-  <img class="bg-img absolute w-[100%] right-[-35%] z-0 top-[-5%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
-  <img class="bg-img absolute w-[100%] right-[0] z-0 top-[66%]" src="<?php echo get_template_directory_uri();?>/images/bg-left.svg" alt="">
+  <!-- <img class="bg-img absolute w-[100%] right-[-35%] z-0 top-[-5%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt=""> -->
+  <!-- <img class="bg-img absolute w-[100%] right-[0] z-0 top-[66%]" src="<?php echo get_template_directory_uri();?>/images/bg-left.svg" alt=""> -->
+  <img class="bg-img absolute w-[800px] left-[-300px] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/home-circule-bg.svg" alt="">
   <div class=" w-full relative z-10  py-16">
 
 	<?php if (have_rows('block')) : ?>
