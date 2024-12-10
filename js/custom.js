@@ -2284,9 +2284,9 @@ function showConvertPrice(){
 jQuery('.hero-slider').slick({
   infinite: true,
   speed: 300,
-  slidesToShow: 6,
+  slidesToShow: 5,
   slidesToScroll: 1,
-  centerMode: false,
+  centerMode: true,
   focusOnSelect: true,
   autoplay: true,
   arrows: false,

@@ -46,21 +46,115 @@
 			</div>
 			<div class="hero-slider-box mt-10">
 				<div class="hero-slider">
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
-					<div class="hero-card">your content</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/01.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Kiran C.</p>
+									<p class="hero-profile">Frontend Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>Nord JS</li>
+										<li>React</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/02.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Rahul M.</p>
+									<p class="hero-profile">Machine Learning Engineer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>Data Engineering</li>
+										<li>Python</li>
+										<li>AWS</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/03.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Maria S.</p>
+									<p class="hero-profile">Senior React Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>React Native</li>
+										<li>Javascript</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/04.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Isha I.</p>
+									<p class="hero-profile">Fullstack Developer • 5+ Years</p>
+									<ul class="hero-skills">
+										<li>Javascript</li>
+										<li>.Net Core</li>
+										<li>Laravel</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">George H.</p>
+									<p class="hero-profile">Game Developer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>3D</li>
+										<li>Unreal Engine</li>
+										<li>AR/VR</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/06.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Aditi D.</p>
+									<p class="hero-profile">Android Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>Flutter</li>
+										<li>React Native</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">George H.</p>
+									<p class="hero-profile">Game Developer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>3D</li>
+										<li>Unreal Engine</li>
+										<li>AR/VR</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
