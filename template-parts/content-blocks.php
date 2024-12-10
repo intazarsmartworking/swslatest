@@ -12,24 +12,32 @@
 <div class=" w-full relative">
   <img class="bg-img absolute w-[100%] right-[-35%] z-0 top-[-5%]" src="<?php echo get_template_directory_uri();?>/images/bg-gradint-color.svg" alt="">
   <img class="bg-img absolute w-[100%] right-[0] z-0 top-[66%]" src="<?php echo get_template_directory_uri();?>/images/bg-left.svg" alt="">
-  <div class=" w-full relative z-10">
+  <div class=" w-full relative z-10  py-16">
 
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'home_header') : ?>
-	<div class="container mx-auto py-16">
+	<div class="container mx-auto">
 		<div class="w-full">
 			<div class="heding-box">
 				<div class="block mb-8">
-					<h1 class=" text-[48px] font-[600] text-[rgba(255,255,255,0.70)] text-center mb-5">Hire Dedicated Senior <span>Software</span> Developers from £20/hr</h1>
+					<h1 class=" text-[48px] font-[600] text-[rgba(255,255,255,0.70)] text-center mb-5">Hire Dedicated Senior <span class="typed-text"></span><span class="type-cursor">&nbsp;</span><br>Developers from £20/hr</h1>
 					<p class=" text-[20px] text-[rgba(255,255,255,0.80)] text-center">Flexible terms. Fully vetted. Remote hiring made safe.</p>
 				</div>
 				<div class="block text-center mb-8">
-					<a class="btn-home" href="">Hire Top Talent 
-						<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<path d="M4.92914 12.0458L19.071 11.9539" stroke="#BC4615" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M11.8203 4.93103L19.0689 11.82L12.1799 19.0686" stroke="#BC4615" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+					<!-- <button class="blob-btn">
+						Hire Top Talent &#129122;
+						<span class="blob-btn__inner">
+						<span class="blob-btn__blobs">
+							<span class="blob-btn__blob"></span>
+							<span class="blob-btn__blob"></span>
+							<span class="blob-btn__blob"></span>
+							<span class="blob-btn__blob"></span>
+						</span>
+						</span>
+					</button> -->
+					<a class="button_slide slide_right" href="">
+						Hire Top Talent &#129122;
 					</a>
 				</div>
 				<div class="w-full text-center">
@@ -47,114 +55,144 @@
 			<!-- Hero Slider -->
 			<div class="hero-slider-box mt-10">
 				<div class="hero-slider">
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/01.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">Kiran C.</p>
 									<p class="hero-profile">Frontend Developer • 4+ Years</p>
-									<ul class="hero-skills">
-										<li>Nord JS</li>
-										<li>React</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">Nord JS</div>
+										<div class="item">React</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/02.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">Rahul M.</p>
 									<p class="hero-profile">Machine Learning Engineer • 6+ Years</p>
-									<ul class="hero-skills">
-										<li>Data Engineering</li>
-										<li>Python</li>
-										<li>AWS</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">Data Engineering</div>
+										<div class="item">Python</div>
+										<div class="item">AWS</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/03.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">Maria S.</p>
 									<p class="hero-profile">Senior React Developer • 4+ Years</p>
-									<ul class="hero-skills">
-										<li>React Native</li>
-										<li>Javascript</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">React Native</div>
+										<div class="item">Javascript</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/04.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">Isha I.</p>
 									<p class="hero-profile">Fullstack Developer • 5+ Years</p>
-									<ul class="hero-skills">
-										<li>Javascript</li>
-										<li>.Net Core</li>
-										<li>Laravel</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">Javascript</div>
+										<div class="item">.Net Core</div>
+										<div class="item">Laravel</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">George H.</p>
 									<p class="hero-profile">Game Developer • 6+ Years</p>
-									<ul class="hero-skills">
-										<li>3D</li>
-										<li>Unreal Engine</li>
-										<li>AR/VR</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">3D</div>
+										<div class="item">Unreal Engine</div>
+										<div class="item">AR/VR</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/06.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">Aditi D.</p>
 									<p class="hero-profile">Android Developer • 4+ Years</p>
-									<ul class="hero-skills">
-										<li>Flutter</li>
-										<li>React Native</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">Flutter</div>
+										<div class="item">React Native</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slider-item">
+					<div class="hero-slider-item">
 						<div class="hero-card">
 							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
 							<div class="hero-card-overlay">
 								<div class="hero-card-details">
 									<p class="hero-name">George H.</p>
 									<p class="hero-profile">Game Developer • 6+ Years</p>
-									<ul class="hero-skills">
-										<li>3D</li>
-										<li>Unreal Engine</li>
-										<li>AR/VR</li>
-									</ul>
+									<div class="hero-skills">
+										<div class="item">3D</div>
+										<div class="item">Unreal Engine</div>
+										<div class="item">AR/VR</div>
+									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w-full bg-[rgba(30,30,30,0.40)] p-3 mt-7">
+		<div class="container mx-auto">
+			<div class="grid grid-cols-2 lg:grid-cols-12 gap-3 lg:gap-5 xl:gap-12">
+				<div class="col-span-1 lg:col-span-3">
+					<div class="hero-feature">
+						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_template_directory_uri();?>/images/tick-circle.svg" alt="">
+						Meet our vetted talent within <span>7 working days</span>
+					</div>
+				</div>
+				<div class="col-span-1 lg:col-span-3">
+					<div class="hero-feature">
+						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_template_directory_uri();?>/images/tick-circle.svg" alt="">
+						<span>6,000+ vetted developers,</span> with only 4% of applicants progressed
+					</div>
+				</div>
+				<div class="col-span-1 lg:col-span-3">
+					<div class="hero-feature">
+						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_template_directory_uri();?>/images/tick-circle.svg" alt="">
+						All our developers are <span>screened and compliance checked</span>
+					</div>
+				</div>
+				<div class="col-span-1 lg:col-span-3">
+					<div class="hero-feature">
+						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_template_directory_uri();?>/images/tick-circle.svg" alt="">
+						<span>Time zone aligned,</span> working your hours and in permanent communication
 					</div>
 				</div>
 			</div>
