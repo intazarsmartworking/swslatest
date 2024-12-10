@@ -2131,6 +2131,9 @@ var toHoursPrice = 0;
 var numberOfDev = 1;
 var currencyValue = 1;
 var saveAmount = 1;
+var otherFromHoursPrice = 0;
+var otherToHoursPrice = 0;
+
 
 
 
@@ -2149,6 +2152,8 @@ jQuery('#select_skill').on('change', function() {
     smartToPrice = 70200;
     otherFromPrice = 90000;
     otherToPrice = 140000;
+    otherFromHoursPrice = 39;
+    otherToHoursPrice = 60;
 
     showConvertPrice()
     
@@ -2160,6 +2165,9 @@ jQuery('#select_skill').on('change', function() {
     otherFromPrice = 80000;
     otherToPrice = 120000;
 
+    otherFromHoursPrice = 35;
+    otherToHoursPrice = 52;
+
     showConvertPrice()
    
   }else if(selectedValue.midLevel == 20 && selectedValue.senior == 22){
@@ -2168,6 +2176,9 @@ jQuery('#select_skill').on('change', function() {
     smartToPrice = 51480;
     otherFromPrice = 70000;
     otherToPrice = 85000;
+    
+    otherFromHoursPrice = 30;
+    otherToHoursPrice = 37;
 
     showConvertPrice()
 
@@ -2178,6 +2189,9 @@ jQuery('#select_skill').on('change', function() {
     otherFromPrice = 65000;
     otherToPrice = 80000;
 
+    otherFromHoursPrice = 28;
+    otherToHoursPrice = 35;
+
     showConvertPrice()
 
   }else if(selectedValue.midLevel == 14 && selectedValue.senior == 18){
@@ -2186,6 +2200,9 @@ jQuery('#select_skill').on('change', function() {
     smartToPrice = 42120;
     otherFromPrice = 52000;
     otherToPrice = 70000;
+
+    otherFromHoursPrice = 21;
+    otherToHoursPrice = 30;
 
     showConvertPrice()
 
@@ -2254,4 +2271,66 @@ function showConvertPrice(){
 
     const saveAmount = Math.trunc(((otherToPriceChange - smartFromPriceChange)*12)*currencyValue)
     jQuery('.save-amount').text(converter(saveAmount));
+
+    const currencyStartOther = Math.trunc(otherFromHoursPrice*currencyValue);
+    const currencyEndOther = Math.trunc(otherToHoursPrice*currencyValue);
+
+    jQuery('.currency-start-other').text(currencyStartOther);
+    jQuery('.currency-end-other').text(currencyEndOther)
+
+    
 }
+
+jQuery('.hero-slider').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  centerMode: true,
+  focusOnSelect: true,
+  autoplay: true,
+  arrows: false,
+  dots:false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow:4,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+      }
+    }
+  ]
+});

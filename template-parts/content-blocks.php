@@ -18,34 +18,146 @@
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'home_header') : ?>
 	<div class="container mx-auto py-16">
-	<div class="grid lg:flex lg:justify-between gap-10 lg:gap-15 items-center">
 		<div class="w-full">
-			<div class="grid gap-8 relative pr-5">
-				<?php if(get_sub_field('title')): ?>
-				<h1 class="text-[40px] lg:text-[3.5rem] xl:text-[4.5rem] font-medium text-white lg:leading-tight"> <?php echo get_sub_field('title'); ?> </h1>
-				<?php endif; ?>
-				<?php if(get_sub_field('description')): ?>
-				<p class="flex text-white font-normal text-xl"><?php echo get_sub_field('description'); ?></p>
-				<?php endif; ?>
-				<?php if(get_sub_field('button_name')): ?>
-				<?php $home_banner_url =  get_sub_field('button_url'); ?>
-				<div class="header-buttons mt-6">
-				<a href="<?php echo esc_url( $home_banner_url ); ?>" class="button inline-block button-small rounded-md px-[10px] md:px-[30px] py-[10px] border-dark-orange border-2 bg-dark-orange text-white text-[20px] hover:bg-transparent hover:text-dark-orange "><?php echo get_sub_field('button_name'); ?></a>
+			<div class="heding-box">
+				<div class="block mb-8">
+					<h1 class=" text-[48px] font-[600] text-[rgba(255,255,255,0.70)] text-center mb-5">Hire Dedicated Senior <span>Software</span> Developers from £20/hr</h1>
+					<p class=" text-[20px] text-[rgba(255,255,255,0.80)] text-center">Flexible terms. Fully vetted. Remote hiring made safe.</p>
 				</div>
-				<?php endif; ?>
-				<?php if(get_sub_field('app_star_icon')): ?>
-				<div class="get-app mt-2">
-				<img src="<?php echo get_sub_field('app_star_icon')['url']; ?>" alt="<?php echo get_sub_field('app_star_icon')['alt']; ?>">
+				<div class="block text-center mb-8">
+					<a class="btn-home" href="">Hire Top Talent 
+						<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M4.92914 12.0458L19.071 11.9539" stroke="#BC4615" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M11.8203 4.93103L19.0689 11.82L12.1799 19.0686" stroke="#BC4615" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
 				</div>
-				<?php endif; ?>	
+				<div class="w-full text-center">
+					<div class=" inline-block px-6 py-1 border border-[rgba(255,255,255,0.20)] rounded-[10px]">
+						<img class="w-[100px] h-[70px]" src="<?php echo get_template_directory_uri();?>/images/trustpilot.svg" alt="">
+					</div>
+					<div class=" inline-block px-6 py-1 border border-[rgba(255,255,255,0.20)] rounded-[10px]">
+						<img class="w-[100px] h-[70px]" src="<?php echo get_template_directory_uri();?>/images/glassdooe.svg" alt="">
+					</div>
+					<div class=" inline-block px-6 py-1 border border-[rgba(255,255,255,0.20)] rounded-[10px]">
+						<img class="w-[70px] h-[70px]" src="<?php echo get_template_directory_uri();?>/images/ISO_9001_2015.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hero-slider-box mt-10">
+				<div class="hero-slider">
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/01.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Kiran C.</p>
+									<p class="hero-profile">Frontend Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>Nord JS</li>
+										<li>React</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/02.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Rahul M.</p>
+									<p class="hero-profile">Machine Learning Engineer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>Data Engineering</li>
+										<li>Python</li>
+										<li>AWS</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/03.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Maria S.</p>
+									<p class="hero-profile">Senior React Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>React Native</li>
+										<li>Javascript</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/04.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Isha I.</p>
+									<p class="hero-profile">Fullstack Developer • 5+ Years</p>
+									<ul class="hero-skills">
+										<li>Javascript</li>
+										<li>.Net Core</li>
+										<li>Laravel</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">George H.</p>
+									<p class="hero-profile">Game Developer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>3D</li>
+										<li>Unreal Engine</li>
+										<li>AR/VR</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/06.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">Aditi D.</p>
+									<p class="hero-profile">Android Developer • 4+ Years</p>
+									<ul class="hero-skills">
+										<li>Flutter</li>
+										<li>React Native</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="hero-card">
+							<img class="w-[100%] h-[100%]" src="<?php echo get_template_directory_uri();?>/images/05.png" alt="">
+							<div class="hero-card-overlay">
+								<div class="hero-card-details">
+									<p class="hero-name">George H.</p>
+									<p class="hero-profile">Game Developer • 6+ Years</p>
+									<ul class="hero-skills">
+										<li>3D</li>
+										<li>Unreal Engine</li>
+										<li>AR/VR</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<?php if(get_sub_field('image')): ?>
-		<div class="w-full relative">
-			<img class="w-full my-12" src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo get_sub_field('image')['alt']; ?>">
-		</div>
-		<?php endif; ?>
-	</div>
 	</div>
 	<?php endif; ?>
 
@@ -223,7 +335,7 @@
 						<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
 						<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
-						<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span>0-0/hour</p>
+						<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
 						<div class="w-[100%] absolute h-[110px] bg-[#f4f5f7] left-0 bottom-0 p-[20px] md:px-[30px]">
 							<p class="text-[16px] lg:text-[16px] text-[#000]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
 						</div>
