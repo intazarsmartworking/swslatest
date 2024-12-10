@@ -170,7 +170,7 @@
 	</div>
 	<div class="w-full bg-[rgba(30,30,30,0.40)] p-3 mt-7">
 		<div class="container mx-auto">
-			<div class="grid grid-cols-2 lg:grid-cols-12 gap-3 lg:gap-5 xl:gap-12">
+			<div class="grid grid-cols-2 lg:grid-cols-12 gap-3 lg:gap-5 xl:gap-14">
 				<div class="col-span-1 lg:col-span-3">
 					<div class="hero-feature">
 						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_template_directory_uri();?>/images/tick-circle.svg" alt="">
