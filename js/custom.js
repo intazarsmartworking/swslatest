@@ -2311,17 +2311,19 @@ function showConvertPrice(){
 
 jQuery('.hero-slider').slick({
   infinite: true,
-  speed: 300,
+  autoplay: true,
+  speed: 4000,
+  autoplaySpeed: 0,
   slidesToShow: 6,
   slidesToScroll: 1,
   centerMode: true,
   focusOnSelect: false,
-  autoplay: true,
   arrows: false,
   dots:false,
   accessibility: false,
   touchMove: false,
   pauseOnHover: false,
+  cssEase: 'linear',
   responsive: [
     {
       breakpoint: 1367,
