@@ -1,49 +1,30 @@
 
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".type-cursor");
-const textArray = ["Software", "Fullstack", "Frontend", "Backend", "Android"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
 
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } else {
-    cursorSpan.classList.remove("typing");
-    setTimeout(erase, newTextDelay);
-  }
-}
+const wrapper = document.querySelector(".words");
+const words = wrapper.querySelectorAll("span");
+const currentWord = wrapper.querySelector("span.current");
+const wordsWidths = Array.from(words).map((word) => word.offsetWidth);
+const maxWordsWidth = Math.max(...wordsWidths);
+const CURRENT_CLASS = "current";
+const NEXT_CLASS = "next";
 
-function erase() {
-  if (charIndex > 0) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(
-      0,
-      charIndex - 1
-    );
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
+wrapper.style.setProperty("--width", `${currentWord.offsetWidth}px`);
+wrapper.style.setProperty("--width-mobile", `${maxWordsWidth}px`);
 
-document.addEventListener("DOMContentLoaded", function () {
-  // On DOM Load initiate the effect
-  if (textArray.length) setTimeout(type, newTextDelay + 250);
-});
-
+setInterval(() => {
+  const currentWord = wrapper.querySelector("span.current");
+  const nextWord = wrapper.querySelector("span.next");
+  const nextNextWord = nextWord.nextElementSibling
+    ? nextWord.nextElementSibling
+    : wrapper.firstElementChild;
+  currentWord.classList.remove(CURRENT_CLASS);
+  nextWord.classList.remove(NEXT_CLASS);
+  nextWord.classList.add(CURRENT_CLASS);
+  nextNextWord.classList.add(NEXT_CLASS);
+  wrapper.style.setProperty("--color", nextWord.dataset.color);
+  wrapper.style.setProperty("--color-bg", nextWord.dataset.bgColor);
+  wrapper.style.setProperty("--width", `${nextWord.offsetWidth}px`);
+}, 2000);
 
 // Home Page Accordian
 var screeSize = false; 
@@ -2330,17 +2311,32 @@ function showConvertPrice(){
 
 jQuery('.hero-slider').slick({
   infinite: true,
-  speed: 300,
-  slidesToShow: 5,
+  autoplay: true,
+  speed: 4000,
+  autoplaySpeed: 0,
+  slidesToShow: 6,
   slidesToScroll: 1,
   centerMode: true,
   focusOnSelect: false,
-  autoplay: true,
   arrows: false,
   dots:false,
   accessibility: false,
   touchMove: false,
+  pauseOnHover: false,
+  cssEase: 'linear',
   responsive: [
+    {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
     {
       breakpoint: 1024,
       settings: {
