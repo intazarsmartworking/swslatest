@@ -970,6 +970,9 @@ select {
 .left-\[-20px\] {
   left: -20px;
 }
+.left-\[-300px\] {
+  left: -300px;
+}
 .left-\[-40px\] {
   left: -40px;
 }
@@ -1206,21 +1209,6 @@ select {
 }
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
-}
-.right-\[-400px\] {
-  right: -400px;
-}
-.left-\[-400px\] {
-  left: -400px;
-}
-.left-\[-200px\] {
-  left: -200px;
-}
-.left-\[-300px\] {
-  left: -300px;
-}
-.top-\[100px\] {
-  top: 100px;
 }
 .-z-10 {
   z-index: -10;
@@ -1667,6 +1655,9 @@ select {
 .h-\[25px\] {
   height: 25px;
 }
+.h-\[28px\] {
+  height: 28px;
+}
 .h-\[30px\] {
   height: 30px;
 }
@@ -1910,6 +1901,9 @@ select {
 .w-\[70px\] {
   width: 70px;
 }
+.w-\[800px\] {
+  width: 800px;
+}
 .w-\[80px\] {
   width: 80px;
 }
@@ -1928,12 +1922,6 @@ select {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-.w-\[477px\] {
-  width: 477px;
-}
-.w-\[800px\] {
-  width: 800px;
 }
 .min-w-\[100\%\] {
   min-width: 100%;
@@ -2265,6 +2253,9 @@ select {
 }
 .rounded-\[6px\] {
   border-radius: 6px;
+}
+.rounded-\[80px\] {
+  border-radius: 80px;
 }
 .rounded-\[8px\] {
   border-radius: 8px;
@@ -3357,6 +3348,10 @@ select {
 .text-\[\#bbbbbb\] {
   --tw-text-opacity: 1;
   color: rgb(187 187 187 / var(--tw-text-opacity));
+}
+.text-\[\#f34d05\] {
+  --tw-text-opacity: 1;
+  color: rgb(243 77 5 / var(--tw-text-opacity));
 }
 .text-\[\#fff\] {
   --tw-text-opacity: 1;
@@ -5790,13 +5785,13 @@ input[type="range"].home-range-slider::-moz-range-thumb {
           backdrop-filter: blur(10px);
 }
 .header-box {
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  border-radius: 100px;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
-  padding: 13px 23px;
+  padding: 12px;
 }
 .header-menu {
   padding: 0px;
@@ -5810,11 +5805,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .header-menu li a {
   display: block;
   cursor: pointer;
-  padding: 13px;
-  font-size: 17px;
+  padding: 6px 14px;
+  font-size: 15px;
   font-weight: 400;
-  color: #fff;
-  border-radius: 4px;
+  color: #a9a7a7;
+  border-radius: 30px;
   position: relative;
 }
 .header-menu li a:hover,
@@ -6814,6 +6809,12 @@ body.lightMode .single-blog .blog-table .text-16 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
+.hero-card > img {
+  transition: all 0.3s ease;
+}
+.hero-card:hover > img {
+  transform: scale(1.2);
+}
 .hero-card .hero-card-overlay {
   width: 100%;
   height: 100%;
@@ -6861,7 +6862,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
-  padding: 6px 12px;
+  padding: 6px 10px;
   margin: 2px;
 }
 .hero-feature {
@@ -6997,6 +6998,44 @@ body.lightMode .single-blog .blog-table .text-16 {
   color: #fff;
   box-shadow: inset 400px 0 0 0 #f34d05;
 }
+.words-wrapper {
+  text-align: center;
+}
+.words-wrapper .css {
+  color: #2ec4b6;
+}
+.words-wrapper .words {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  width: var(--width);
+  min-width: 192px;
+  height: 70px;
+  color: var(--color, #f34d05);
+  box-sizing: content-box;
+  transition: all 0.7s;
+  font-weight: 700;
+}
+.words-wrapper .words span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -100%);
+  transition: transform 0.7s, opacity 0.25s 0.25s;
+}
+.words-wrapper .words span.current {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.words-wrapper .words span.next {
+  transform: translate(-50%, 100%);
+}
+@media (max-width: 700px) {
+  .words-wrapper .words {
+    width: var(--width-mobile) !important;
+  }
+}
 .placeholder\:block::-moz-placeholder {
   display: block;
 }
@@ -7016,6 +7055,10 @@ body.lightMode .single-blog .blog-table .text-16 {
 .hover\:bg-\[\#2A0F04\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(42 15 4 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[\#BC4615\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(188 70 21 / var(--tw-bg-opacity));
 }
 .hover\:bg-\[\#F6F6F6\]:hover {
   --tw-bg-opacity: 1;
@@ -8186,10 +8229,6 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .xl\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .xl\:gap-12 {
-    gap: 3rem;
   }
 
   .xl\:gap-14 {

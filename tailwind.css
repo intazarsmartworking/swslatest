@@ -2428,12 +2428,12 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   backdrop-filter: blur(10px);
 }
 .header-box {
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
   box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
-  padding: 13px 23px;
+  padding: 12px;
 }
 .header-menu {
   padding: 0px;
@@ -2447,11 +2447,11 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .header-menu li a {
   display: block;
   cursor: pointer;
-  padding: 13px;
-  font-size: 17px;
+  padding: 6px 14px;
+  font-size: 15px;
   font-weight: 400;
-  color: #fff;
-  border-radius: 4px;
+  color: #a9a7a7;
+  border-radius: 30px;
   position: relative;
 }
 .header-menu li a:hover,
@@ -3474,6 +3474,12 @@ body.lightMode .single-blog .blog-table .text-16 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
+.hero-card > img {
+  transition: all 0.3s ease;
+}
+.hero-card:hover > img {
+  transform: scale(1.2);
+}
 .hero-card .hero-card-overlay {
   width: 100%;
   height: 100%;
@@ -3522,7 +3528,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
-  padding: 6px 12px;
+  padding: 6px 10px;
   margin: 2px;
 }
 .hero-feature {
@@ -3661,4 +3667,43 @@ body.lightMode .single-blog .blog-table .text-16 {
 .slide_right:hover {
   color: #fff;
   box-shadow: inset 400px 0 0 0 #f34d05;
+}
+
+.words-wrapper {
+  text-align: center;
+}
+.words-wrapper .css {
+  color: #2ec4b6;
+}
+.words-wrapper .words {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  width: var(--width);
+  min-width: 192px;
+  height: 70px;
+  color: var(--color, #f34d05);
+  box-sizing: content-box;
+  transition: all 0.7s;
+  font-weight: 700;
+}
+.words-wrapper .words span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -100%);
+  transition: transform 0.7s, opacity 0.25s 0.25s;
+}
+.words-wrapper .words span.current {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.words-wrapper .words span.next {
+  transform: translate(-50%, 100%);
+}
+@media (max-width: 700px) {
+  .words-wrapper .words {
+    width: var(--width-mobile) !important;
+  }
 }
