@@ -10,7 +10,7 @@
    ?>
 <!-- home banner start -->
 <div class=" w-full relative">
-  <div class=" w-full relative z-10  py-16">
+  <div class=" w-full relative z-10 pt-[2.5rem]">
 
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
@@ -18,9 +18,9 @@
 	<div class="container mx-auto">
 		<div class="w-full">
 			<div class="heding-box">
-				<div class="block mb-8">
+				<div class="block mb-5">
 				<?php if(get_sub_field('title')): ?>
-					<h1 class="words-wrapper text-[48px] font-[600] text-[rgba(255,255,255,0.70)]">
+					<h1 class="words-wrapper text-[2.25rem] font-[700] text-[rgba(255,255,255,0.70)]">
 						<?php echo get_sub_field('title'); ?>
 						<span class="words">
 							<span class="current" data-color="#f34d05">Software</span>
@@ -32,11 +32,11 @@
 					</h1>
 				<?php endif; ?>
 				<?php if(get_sub_field('short_description')): ?>
-					<h1 class=" text-[48px] font-[600] text-[rgba(255,255,255,0.70)] text-center mb-5"><?php echo get_sub_field('short_description'); ?></h1>
+					<h1 class=" text-[2.25rem] font-[700] text-[rgba(255,255,255,0.70)] text-center mb-[0.5rem]"><?php echo get_sub_field('short_description'); ?></h1>
 				<?php endif; ?>	
 				
 				<?php if(get_sub_field('small_paragraph')): ?>
-					<p class=" text-[20px] text-[rgba(255,255,255,0.80)] text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
+					<p class=" text-[1.25rem] text-[rgba(255,255,255,0.80)] text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
 				<?php endif; ?>
 				</div>
 				<?php if(get_sub_field('button_name')): ?>
@@ -108,13 +108,13 @@
 	</div>
 	<div class="w-full bg-[rgba(30,30,30,0.40)] mt-7">
 		<div class="container py-3">
-			<div class="grid grid-cols-2 lg:grid-cols-12 gap-3 lg:gap-5 xl:gap-14">
+			<div class="grid grid-cols-2 lg:grid-cols-10 gap-3 lg:gap-5 xl:gap-14">
 			<?php if(have_rows('after_banner_card_section')): ?>
 			<?php while(have_rows('after_banner_card_section')): the_row(); ?>
 			<?php 
 				$small_text = get_sub_field('small_text'); 
 			?>
-				<div class="col-span-1 lg:col-span-3">
+				<div class="col-span-1 lg:col-span-2">
 					<div class="hero-feature">
 						<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_sub_field('icon')['url']; ?>" alt="">
 						<?php echo $small_text;?>
@@ -131,17 +131,16 @@
 	<!-- Future Remote -->
 	<?php if (get_row_layout() == 'future_hiring') : ?>
 	<div class="w-full relative  grid items-center py-16" >
-		<div class="container bg-[#1E1E1E] p-[2.125rem] rounded-[1.25rem]">
+		<div class="container bg-[#1E1E1E] px-[5rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
 			<?php if(get_sub_field('main_heading')): ?>
-				<h2 class="flex flex-col items-center justify-center text-center md:leading-tight mb-20"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h2>
+				<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 			<?php endif; ?>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
 			<?php if(have_rows('block_part')): ?>
 			<?php while(have_rows('block_part')): the_row(); ?>
-				<div class="col-span-1 lg:col-span-3">
-					<?php echo get_sub_field('data_target'); ?>
-					
-					<?php echo get_sub_field('second_heading'); ?>
+				<div class="col-span-1 lg:col-span-3 text-center border-box-bar">
+					<p class="text-[#E8E8E8] text-[2.5rem] font-[500] "><?php echo get_sub_field('data_target'); ?></p>
+					<p class="text-[#E8E8E8] text-[1rem] font-[400] "><?php echo get_sub_field('second_heading'); ?></p>
 				</div>
 			<?php endwhile; ?>	
 			<?php endif; ?> 	

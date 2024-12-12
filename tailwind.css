@@ -3534,12 +3534,12 @@ body.lightMode .single-blog .blog-table .text-16 {
   position: relative;
   font-size: 16px;
   font-style: normal;
-  color: #fbfbfb;
+  color: rgba(251, 251, 251, 0.8);
   padding: 10px 10px 10px 35px;
   /* max-width: 315px; */
 }
 .hero-feature span {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
 }
 .gradint-left {
@@ -3670,9 +3670,9 @@ body.lightMode .single-blog .blog-table .text-16 {
 .button_slide {
   color: #f34d05;
   border: 0px solid #f34d05;
-  padding: 16px 25px;
+  padding: 0.625rem 1rem;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   background: #fff;
@@ -3698,8 +3698,8 @@ body.lightMode .single-blog .blog-table .text-16 {
   position: relative;
   vertical-align: bottom;
   width: var(--width);
-  min-width: 192px;
-  height: 70px;
+  min-width: 148px;
+  height: 55px;
   color: var(--color, #f34d05);
   box-sizing: content-box;
   transition: all 0.7s;
@@ -3727,4 +3727,19 @@ body.lightMode .single-blog .blog-table .text-16 {
 }
 
 .future-section {
+}
+.border-box-bar {
+  position: relative;
+}
+.border-box-bar::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 38px;
+  height: 2.5rem;
+  width: 0.125rem;
+  background: #f34d05;
+}
+.border-box-bar:last-child::after {
+  display: none;
 }

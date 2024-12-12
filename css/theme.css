@@ -1286,10 +1286,6 @@ select {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1363,6 +1359,9 @@ select {
 .mb-9 {
   margin-bottom: 2.25rem;
 }
+.mb-\[0\.5rem\] {
+  margin-bottom: 0.5rem;
+}
 .mb-\[0px\] {
   margin-bottom: 0px;
 }
@@ -1371,6 +1370,9 @@ select {
 }
 .mb-\[16px\] {
   margin-bottom: 16px;
+}
+.mb-\[2\.5rem\] {
+  margin-bottom: 2.5rem;
 }
 .mb-\[20px\] {
   margin-bottom: 20px;
@@ -1717,6 +1719,9 @@ select {
 }
 .min-h-\[250px\] {
   min-height: 250px;
+}
+.min-h-\[290px\] {
+  min-height: 290px;
 }
 .min-h-\[300px\] {
   min-height: 300px;
@@ -2586,9 +2591,6 @@ select {
 .p-\[15px\] {
   padding: 15px;
 }
-.p-\[2\.125rem\] {
-  padding: 2.125rem;
-}
 .p-\[20px\] {
   padding: 20px;
 }
@@ -2704,6 +2706,10 @@ select {
   padding-left: 5%;
   padding-right: 5%;
 }
+.px-\[5rem\] {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2783,6 +2789,10 @@ select {
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.py-\[2\.125rem\] {
+  padding-top: 2.125rem;
+  padding-bottom: 2.125rem;
 }
 .py-\[30px\] {
   padding-top: 30px;
@@ -3015,6 +3025,9 @@ select {
 .pt-\[9px\] {
   padding-top: 9px;
 }
+.pt-\[2\.5rem\] {
+  padding-top: 2.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -3058,6 +3071,9 @@ select {
   font-size: 3rem;
   line-height: 1;
 }
+.text-\[1\.25rem\] {
+  font-size: 1.25rem;
+}
 .text-\[1\.5rem\] {
   font-size: 1.5rem;
 }
@@ -3094,6 +3110,12 @@ select {
 .text-\[1rem\] {
   font-size: 1rem;
 }
+.text-\[2\.25rem\] {
+  font-size: 2.25rem;
+}
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
+}
 .text-\[20px\] {
   font-size: 20px;
 }
@@ -3129,9 +3151,6 @@ select {
 }
 .text-\[44px\] {
   font-size: 44px;
-}
-.text-\[48px\] {
-  font-size: 48px;
 }
 .text-\[50px\] {
   font-size: 50px;
@@ -3324,6 +3343,10 @@ select {
 .text-\[\#D0511B\] {
   --tw-text-opacity: 1;
   color: rgb(208 81 27 / var(--tw-text-opacity));
+}
+.text-\[\#E8E8E8\] {
+  --tw-text-opacity: 1;
+  color: rgb(232 232 232 / var(--tw-text-opacity));
 }
 .text-\[\#FF4D02\] {
   --tw-text-opacity: 1;
@@ -6859,12 +6882,12 @@ body.lightMode .single-blog .blog-table .text-16 {
   position: relative;
   font-size: 16px;
   font-style: normal;
-  color: #fbfbfb;
+  color: rgba(251, 251, 251, 0.8);
   padding: 10px 10px 10px 35px;
   /* max-width: 315px; */
 }
 .hero-feature span {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
 }
 .gradint-left {
@@ -6994,9 +7017,9 @@ body.lightMode .single-blog .blog-table .text-16 {
 .button_slide {
   color: #f34d05;
   border: 0px solid #f34d05;
-  padding: 16px 25px;
+  padding: 0.625rem 1rem;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   background: #fff;
@@ -7019,8 +7042,8 @@ body.lightMode .single-blog .blog-table .text-16 {
   position: relative;
   vertical-align: bottom;
   width: var(--width);
-  min-width: 192px;
-  height: 70px;
+  min-width: 148px;
+  height: 55px;
   color: var(--color, #f34d05);
   box-sizing: content-box;
   transition: all 0.7s;
@@ -7047,6 +7070,21 @@ body.lightMode .single-blog .blog-table .text-16 {
   }
 }
 .future-section {
+}
+.border-box-bar {
+  position: relative;
+}
+.border-box-bar::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 38px;
+  height: 2.5rem;
+  width: 0.125rem;
+  background: #f34d05;
+}
+.border-box-bar:last-child::after {
+  display: none;
 }
 .placeholder\:block::-moz-placeholder {
   display: block;
@@ -7289,6 +7327,10 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .sm\:w-1\/2 {
     width: 50%;
+  }
+
+  .sm\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-2 {
