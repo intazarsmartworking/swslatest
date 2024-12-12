@@ -2326,6 +2326,18 @@ jQuery('.hero-slider').slick({
   cssEase: 'linear',
   responsive: [
     {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
       breakpoint: 1367,
       settings: {
         slidesToShow: 5,
@@ -2338,7 +2350,7 @@ jQuery('.hero-slider').slick({
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1281,
       settings: {
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -2350,9 +2362,33 @@ jQuery('.hero-slider').slick({
       }
     },
     {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
       breakpoint: 900,
       settings: {
-        slidesToShow:4,
+        slidesToShow:3,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 721,
+      settings: {
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         dots: false,
