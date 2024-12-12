@@ -106,8 +106,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-full bg-[rgba(30,30,30,0.40)] p-3 mt-7">
-		<div class="container mx-auto">
+	<div class="w-full bg-[rgba(30,30,30,0.40)] mt-7">
+		<div class="container py-3">
 			<div class="grid grid-cols-2 lg:grid-cols-12 gap-3 lg:gap-5 xl:gap-14">
 			<?php if(have_rows('after_banner_card_section')): ?>
 			<?php while(have_rows('after_banner_card_section')): the_row(); ?>
@@ -131,24 +131,22 @@
 	<!-- Future Remote -->
 	<?php if (get_row_layout() == 'future_hiring') : ?>
 	<div class="w-full relative  grid items-center py-16" >
-	<div class="px-0 md:px-10">
-	    <?php if(get_sub_field('main_heading')): ?>
-		<h2 class="flex flex-col items-center justify-center text-center md:leading-tight mb-20"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h2>
-		<?php endif; ?>
-		<div class="container mx-auto p-4">
+		<div class="container bg-[#1E1E1E] p-[2.125rem] rounded-[1.25rem]">
+			<?php if(get_sub_field('main_heading')): ?>
+				<h2 class="flex flex-col items-center justify-center text-center md:leading-tight mb-20"> <span class="text-2xl sm:text-3xl lg:text-[56px] 3xl:text-58 font-medium  text-white"> <?php echo get_sub_field('main_heading'); ?> </span> </h2>
+			<?php endif; ?>
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 			<?php if(have_rows('block_part')): ?>
 			<?php while(have_rows('block_part')): the_row(); ?>
-				<div class="p-4">
-				<p class="text-4xl font-bold text-dark-orange" data-target="<?php echo get_sub_field('data_target'); ?>"><?php echo get_sub_field('heading'); ?></p>
-				<hr class="my-4 borderdown">
-				<p class="text-2xl font-medium text-white"><?php echo get_sub_field('second_heading'); ?></p>
+				<div class="col-span-1 lg:col-span-3">
+					<?php echo get_sub_field('data_target'); ?>
+					
+					<?php echo get_sub_field('second_heading'); ?>
 				</div>
 			<?php endwhile; ?>	
 			<?php endif; ?> 	
 			</div>
 		</div>
-	</div>
 	</div>
 	<?php endif; ?>
 	<?php endwhile; ?>

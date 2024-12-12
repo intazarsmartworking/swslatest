@@ -43,7 +43,6 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .radial-gradient-login {
@@ -2416,7 +2415,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   left: 0px;
   top: 0px;
   z-index: 5000;
-  padding: 20px;
+  padding: 15px 0px;
   width: 100%;
   position: sticky;
 }
@@ -3526,7 +3525,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   background: rgba(92, 92, 92, 0.4);
   backdrop-filter: blur(8px);
   color: #fff;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   padding: 6px 10px;
   margin: 2px;
@@ -3725,4 +3724,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   .words-wrapper .words {
     width: var(--width-mobile) !important;
   }
+}
+
+.future-section {
 }

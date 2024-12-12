@@ -970,9 +970,6 @@ select {
 .left-\[-20px\] {
   left: -20px;
 }
-.left-\[-300px\] {
-  left: -300px;
-}
 .left-\[-40px\] {
   left: -40px;
 }
@@ -1032,9 +1029,6 @@ select {
 }
 .right-\[-30px\] {
   right: -30px;
-}
-.right-\[-35\%\] {
-  right: -35%;
 }
 .right-\[-7px\] {
   right: -7px;
@@ -1110,9 +1104,6 @@ select {
 }
 .top-\[-4px\] {
   top: -4px;
-}
-.top-\[-5\%\] {
-  top: -5%;
 }
 .top-\[-50px\] {
   top: -50px;
@@ -1191,9 +1182,6 @@ select {
 }
 .top-\[4px\] {
   top: 4px;
-}
-.top-\[66\%\] {
-  top: 66%;
 }
 .top-\[7px\] {
   top: 7px;
@@ -1898,9 +1886,6 @@ select {
 .w-\[70px\] {
   width: 70px;
 }
-.w-\[800px\] {
-  width: 800px;
-}
 .w-\[80px\] {
   width: 80px;
 }
@@ -2200,6 +2185,9 @@ select {
 .rounded-3xl {
   border-radius: 1.5rem;
 }
+.rounded-\[1\.25rem\] {
+  border-radius: 1.25rem;
+}
 .rounded-\[10px\] {
   border-radius: 10px;
 }
@@ -2450,6 +2438,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(5 4 3 / var(--tw-bg-opacity));
 }
+.bg-\[\#1E1E1E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 30 / var(--tw-bg-opacity));
+}
 .bg-\[\#1F0C04\] {
   --tw-bg-opacity: 1;
   background-color: rgb(31 12 4 / var(--tw-bg-opacity));
@@ -2593,6 +2585,9 @@ select {
 }
 .p-\[15px\] {
   padding: 15px;
+}
+.p-\[2\.125rem\] {
+  padding: 2.125rem;
 }
 .p-\[20px\] {
   padding: 20px;
@@ -3432,9 +3427,6 @@ select {
 .opacity-\[0\.2\] {
   opacity: 0.2;
 }
-.opacity-\[0\.3\] {
-  opacity: 0.3;
-}
 .opacity-\[0\.5\] {
   opacity: 0.5;
 }
@@ -3542,7 +3534,6 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 .radial-gradient-login {
   background: radial-gradient(circle, rgba(157, 60, 1, 1), rgba(65, -1, 1, 0));
@@ -5772,7 +5763,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   left: 0px;
   top: 0px;
   z-index: 5000;
-  padding: 20px;
+  padding: 15px 0px;
   width: 100%;
   position: sticky;
 }
@@ -6859,7 +6850,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   color: #fff;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   padding: 6px 10px;
   margin: 2px;
@@ -7054,6 +7045,8 @@ body.lightMode .single-blog .blog-table .text-16 {
   .words-wrapper .words {
     width: var(--width-mobile) !important;
   }
+}
+.future-section {
 }
 .placeholder\:block::-moz-placeholder {
   display: block;

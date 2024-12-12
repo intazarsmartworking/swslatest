@@ -2338,9 +2338,21 @@ jQuery('.hero-slider').slick({
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1281,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2352,7 +2364,19 @@ jQuery('.hero-slider').slick({
     {
       breakpoint: 900,
       settings: {
-        slidesToShow:4,
+        slidesToShow:3,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 721,
+      settings: {
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         dots: false,
