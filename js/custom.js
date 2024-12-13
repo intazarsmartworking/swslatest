@@ -2424,3 +2424,11 @@ jQuery('.hero-slider').slick({
   ]
 });
 
+
+jQuery('.case-tab').on('click', function(){
+  jQuery('.case-tab').removeClass('active');
+  jQuery('.tab-content').removeClass('active');
+  const getId = jQuery(this).attr('data-id');
+  jQuery(this).addClass('active')
+  jQuery(`#${getId}`).addClass('active')
+})

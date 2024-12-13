@@ -20,7 +20,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: #0f0f0f;
+  background-color: #0c0c0c;
 }
 /* body {
     font-family: "DM Sans", sans-serif;
@@ -3742,4 +3742,30 @@ body.lightMode .single-blog .blog-table .text-16 {
 }
 .border-box-bar:last-child::after {
   display: none;
+}
+.case-tab {
+  text-align: center;
+  border-bottom: 0.25rem solid #fff;
+  opacity: 0.4;
+  padding: 1.8rem;
+  cursor: pointer;
+}
+.case-tab.active {
+  opacity: 1;
+}
+.tab-container {
+  width: 100%;
+  position: relative;
+}
+.tab-content {
+  display: none;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6rem;
+}
+.tab-content.active {
+  display: block;
 }
