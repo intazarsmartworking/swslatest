@@ -1012,6 +1012,9 @@ select {
 .right-0 {
   right: 0px;
 }
+.right-\[-0\] {
+  right: -0;
+}
 .right-\[-12\%\] {
   right: -12%;
 }
@@ -2989,6 +2992,9 @@ select {
 .pt-\[14px\] {
   padding-top: 14px;
 }
+.pt-\[2\.5rem\] {
+  padding-top: 2.5rem;
+}
 .pt-\[20px\] {
   padding-top: 20px;
 }
@@ -3024,9 +3030,6 @@ select {
 }
 .pt-\[9px\] {
   padding-top: 9px;
-}
-.pt-\[2\.5rem\] {
-  padding-top: 2.5rem;
 }
 .text-left {
   text-align: left;
