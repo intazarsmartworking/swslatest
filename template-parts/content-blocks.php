@@ -131,19 +131,22 @@
 	<!-- Future Remote -->
 	<?php if (get_row_layout() == 'future_hiring') : ?>
 	<div class="w-full relative  grid items-center py-16" >
-		<div class="container bg-[#1E1E1E] px-[5rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
-			<?php if(get_sub_field('main_heading')): ?>
-				<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
-			<?php endif; ?>
-			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
-			<?php if(have_rows('block_part')): ?>
-			<?php while(have_rows('block_part')): the_row(); ?>
-				<div class="col-span-1 lg:col-span-3 text-center border-box-bar">
-					<p class="text-[#E8E8E8] text-[2.5rem] font-[500] "><?php echo get_sub_field('data_target'); ?></p>
-					<p class="text-[#E8E8E8] text-[1rem] font-[400] "><?php echo get_sub_field('second_heading'); ?></p>
+		<div class="container relative bg-[#1E1E1E] px-[5rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
+			<img class="bg-img absolute h-[100%] w-auto right-[-0] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/future-bg.svg" alt="">
+			<div class="relative z-10 block">
+				<?php if(get_sub_field('main_heading')): ?>
+					<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+				<?php endif; ?>
+				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
+				<?php if(have_rows('block_part')): ?>
+				<?php while(have_rows('block_part')): the_row(); ?>
+					<div class="col-span-1 lg:col-span-3 text-center border-box-bar">
+						<p class="text-[#E8E8E8] text-[2.5rem] font-[500] "><?php echo get_sub_field('data_target'); ?></p>
+						<p class="text-[#E8E8E8] text-[1rem] font-[400] "><?php echo get_sub_field('second_heading'); ?></p>
+					</div>
+				<?php endwhile; ?>	
+				<?php endif; ?> 	
 				</div>
-			<?php endwhile; ?>	
-			<?php endif; ?> 	
 			</div>
 		</div>
 	</div>
