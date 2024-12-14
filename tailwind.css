@@ -3205,142 +3205,11 @@ body.lightMode .relatedBlogs a p {
 body.lightMode .single-blog .blog-table .text-16 {
   color: #000;
 }
-@media (min-width: 991px) and (max-width: 1360px) {
-  .header-menu li a {
-    padding: 13px 4px;
-    font-size: 12px;
-  }
-  .btn-header {
-    padding: 13px 8px !important;
-    font-size: 12px;
-  }
-}
-/*End USE CSS for Slider*/
-@media (max-width: 992px) {
-  .howItWorkHeading {
-    transform: rotate(0deg);
-  }
-  .how-it-works-card {
-    height: 900px;
-    min-height: 900px;
-  }
-
-  .panel {
-    height: auto;
-    width: 94%;
-  }
-  .testimonial-section .card-container .card-placement {
-    rotate: 0deg !important;
-    --deg: 0deg !important;
-  }
-  .assemble-section-bg {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
-  .timeline-content-box {
-    padding-left: 35px;
-  }
-  .timeline-item > .curv-img {
-    display: none;
-  }
-  .timeline-item .border-left-img::before {
-    display: none;
-  }
-  .timeline-item .hide-bottom-border::after {
-    display: block;
-  }
-  .clinet-logo .item {
-    margin: 6px;
-  }
-  /* .stickysidenav.side-bar-fix{
-       position: relative !important;
-    } */
-  .header-box {
-    padding: 13px 15px;
-  }
-  .mobile-menu {
-    display: block;
-  }
-  .desk-top-menu {
-    display: none;
-  }
-  .desk-top-menu.isMenuShow {
-    display: block;
-  }
-  .hide-mobile {
-    display: none;
-  }
-  .main-header.fixed .header-box {
-    /* border-radius: 0px;
-        backdrop-filter: none; */
-  }
-  .header-menu {
-    text-align: left;
-  }
-  .header-menu li {
-    display: block;
-    width: 100%;
-  }
-  .mega-menu-box.open {
-    display: block;
-    height: 100%;
-    overflow-y: auto;
-    top: 0px;
-  }
-  .home-form {
-    min-height: 400px;
-  }
-  .timeline .timeline-box .timeline-item.in-view.curv-box::before {
-    left: -8px;
-  }
-  .timeline .timeline-box .timeline-item.in-view .curv-img {
-    display: none;
-  }
-  .header-menu li a {
-    padding: 8px;
-    font-size: 13px;
-  }
-  .mobile-m-0 {
-    margin: 0px !important;
-  }
-  .mirror-box {
-    display: none;
-  }
-  .show-details {
-    padding: 0px 0px;
-  }
-}
 .only-moble-menu {
   display: none;
 }
 .only-desktop-menu {
   display: block;
-}
-@media (max-width: 620px) {
-  .only-moble-menu {
-    display: block;
-  }
-  .only-desktop-menu {
-    display: none;
-  }
-  .mega-menu-left li.active .only-moble-menu {
-    display: block;
-  }
-  .mega-menu-left li.active .show-more-menu {
-    display: block;
-  }
-  .only-moble-menu .mega-menu-center li {
-    padding: 0px !important;
-  }
-  .only-moble-menu .mega-menu-center li a {
-    padding: 8px 30px;
-  }
-  .card-placement {
-    min-width: 320px !important;
-  }
-  .card-placement.active {
-    left: 0px !important;
-  }
 }
 
 .step-box {
@@ -3762,10 +3631,203 @@ body.lightMode .single-blog .blog-table .text-16 {
   width: 100%;
   position: relative;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 6rem;
 }
 .tab-content.active {
   display: block;
+}
+.how-its-work-items {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.how-its-work-items:last-child {
+  margin-bottom: 0px;
+}
+.how-its-work-title {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+.how-its-work-title span {
+  color: #f34d05;
+}
+.how-its-work-dicription {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  display: none;
+}
+.how-its-work-items .sliderProgressBar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 4px;
+  height: 100%;
+  background: #feede6;
+  border-radius: 6.25rem;
+}
+.how-its-work-items .sliderProgressBar .inProgress {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 4px;
+  background: #f34d05;
+  border-radius: 6.25rem;
+}
+.how-its-work-dicription ul li {
+  margin-bottom: 0.62rem;
+  color: #4b4b4b;
+}
+.how-its-work-dicription ul li::marker {
+  color: #f34d05;
+}
+.how-its-work-dicription ul li ul {
+  margin-top: 0.62rem;
+}
+.how-its-work-dicription ul li ul li::marker {
+  color: #1e1e1e;
+}
+.how-its-work-items.active .how-its-work-dicription {
+  display: block;
+}
+
+@media (min-width: 991px) and (max-width: 1360px) {
+  .header-menu li a {
+    padding: 13px 4px;
+    font-size: 12px;
+  }
+  .btn-header {
+    padding: 13px 8px !important;
+    font-size: 12px;
+  }
+}
+/*End USE CSS for Slider*/
+@media (max-width: 992px) {
+  .tab-content {
+    background-size: 100% 100%;
+  }
+  .howItWorkHeading {
+    transform: rotate(0deg);
+  }
+  .how-it-works-card {
+    height: 900px;
+    min-height: 900px;
+  }
+
+  .panel {
+    height: auto;
+    width: 94%;
+  }
+  .testimonial-section .card-container .card-placement {
+    rotate: 0deg !important;
+    --deg: 0deg !important;
+  }
+  .assemble-section-bg {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .timeline-content-box {
+    padding-left: 35px;
+  }
+  .timeline-item > .curv-img {
+    display: none;
+  }
+  .timeline-item .border-left-img::before {
+    display: none;
+  }
+  .timeline-item .hide-bottom-border::after {
+    display: block;
+  }
+  .clinet-logo .item {
+    margin: 6px;
+  }
+  /* .stickysidenav.side-bar-fix{
+       position: relative !important;
+    } */
+  .header-box {
+    padding: 13px 15px;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .desk-top-menu {
+    display: none;
+  }
+  .desk-top-menu.isMenuShow {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .header-menu {
+    text-align: left;
+  }
+  .header-menu li {
+    display: block;
+    width: 100%;
+  }
+  .mega-menu-box.open {
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+    top: 0px;
+  }
+  .home-form {
+    min-height: 400px;
+  }
+  .timeline .timeline-box .timeline-item.in-view.curv-box::before {
+    left: -8px;
+  }
+  .timeline .timeline-box .timeline-item.in-view .curv-img {
+    display: none;
+  }
+  .header-menu li a {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .mobile-m-0 {
+    margin: 0px !important;
+  }
+  .mirror-box {
+    display: none;
+  }
+  .show-details {
+    padding: 0px 0px;
+  }
+}
+
+@media (max-width: 620px) {
+  .tab-content {
+    background-size: 100% 100%;
+    padding-bottom: 1rem;
+  }
+  .only-moble-menu {
+    display: block;
+  }
+  .only-desktop-menu {
+    display: none;
+  }
+  .mega-menu-left li.active .only-moble-menu {
+    display: block;
+  }
+  .mega-menu-left li.active .show-more-menu {
+    display: block;
+  }
+  .only-moble-menu .mega-menu-center li {
+    padding: 0px !important;
+  }
+  .only-moble-menu .mega-menu-center li a {
+    padding: 8px 30px;
+  }
+  .card-placement {
+    min-width: 320px !important;
+  }
+  .card-placement.active {
+    left: 0px !important;
+  }
 }

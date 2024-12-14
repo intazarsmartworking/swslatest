@@ -1,30 +1,33 @@
 
 
 const wrapper = document.querySelector(".words");
-const words = wrapper.querySelectorAll("span");
-const currentWord = wrapper.querySelector("span.current");
-const wordsWidths = Array.from(words).map((word) => word.offsetWidth);
-const maxWordsWidth = Math.max(...wordsWidths);
-const CURRENT_CLASS = "current";
-const NEXT_CLASS = "next";
-
-wrapper.style.setProperty("--width", `${currentWord.offsetWidth}px`);
-wrapper.style.setProperty("--width-mobile", `${maxWordsWidth}px`);
-
-setInterval(() => {
+if(wrapper){
+  const words = wrapper.querySelectorAll("span");
   const currentWord = wrapper.querySelector("span.current");
-  const nextWord = wrapper.querySelector("span.next");
-  const nextNextWord = nextWord.nextElementSibling
-    ? nextWord.nextElementSibling
-    : wrapper.firstElementChild;
-  currentWord.classList.remove(CURRENT_CLASS);
-  nextWord.classList.remove(NEXT_CLASS);
-  nextWord.classList.add(CURRENT_CLASS);
-  nextNextWord.classList.add(NEXT_CLASS);
-  wrapper.style.setProperty("--color", nextWord.dataset.color);
-  wrapper.style.setProperty("--color-bg", nextWord.dataset.bgColor);
-  wrapper.style.setProperty("--width", `${nextWord.offsetWidth}px`);
-}, 2000);
+  const wordsWidths = Array.from(words).map((word) => word.offsetWidth);
+  const maxWordsWidth = Math.max(...wordsWidths);
+  const CURRENT_CLASS = "current";
+  const NEXT_CLASS = "next";
+
+  wrapper.style.setProperty("--width", `${currentWord.offsetWidth}px`);
+  wrapper.style.setProperty("--width-mobile", `${maxWordsWidth}px`);
+
+  setInterval(() => {
+    const currentWord = wrapper.querySelector("span.current");
+    const nextWord = wrapper.querySelector("span.next");
+    const nextNextWord = nextWord.nextElementSibling
+      ? nextWord.nextElementSibling
+      : wrapper.firstElementChild;
+    currentWord.classList.remove(CURRENT_CLASS);
+    nextWord.classList.remove(NEXT_CLASS);
+    nextWord.classList.add(CURRENT_CLASS);
+    nextNextWord.classList.add(NEXT_CLASS);
+    wrapper.style.setProperty("--color", nextWord.dataset.color);
+    wrapper.style.setProperty("--color-bg", nextWord.dataset.bgColor);
+    wrapper.style.setProperty("--width", `${nextWord.offsetWidth}px`);
+  }, 2000);
+}
+
 
 // Home Page Accordian
 var screeSize = false; 
@@ -64,151 +67,6 @@ function toggleAccordion(sectionNumber) {
 
 
   /* For Mobile Menu */
-document.addEventListener("DOMContentLoaded", function() {
-  // const menuToggle = document.getElementById('menuToggle');
-  // const mobileMenuModal = document.getElementById('mobileMenuModal');
-  // const modalOverlay = document.querySelector('#mobileMenuModal .bg-black');
-
-  // menuToggle.addEventListener("click", function() {
-  //   mobileMenuModal.classList.toggle("hidden");
-  // });
-
-  // modalOverlay.addEventListener("click", function(e) {
-  //   if (e.target === modalOverlay) {
-  //     mobileMenuModal.classList.add("hidden");
-  //   }
-  // });
-
-
-
-
-  //Card Logic
-  
-  // const cards = document.querySelectorAll('.card');
-  // let leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
-  // if(screeSize){
-  //   leftPositions = ['10px', '600px', '800px','1000px', '1200px', '1400px'];
-  // }else{
-  //   leftPositions = ['50px', '90px', '120px','800px', '1450px', '2100px'];
-  // }
-  // let originalLeftPostions = [...leftPositions];
-  // let rotateCards = ['-9deg', '-7deg', '-4deg','-2deg', '0deg']
-
-  // function updateCardPositions() {
-  //     cards.forEach((card, index) => {
-  //         card.style.left = leftPositions[index];
-  //         if(card.style.left != originalLeftPostions[0] && 
-  //           card.style.left != originalLeftPostions[1] && 
-  //           card.style.left != originalLeftPostions[2] ) {
-
-  //           card.style.rotate = rotateCards[rotateCards.length-1]  
-  //           cards[0].style.rotate = rotateCards[rotateCards.length-1]
-  //         }
-  //         else {
-  //           card.style.rotate = rotateCards[index]
-            
-  //         }
-
-  //         if(index === 1 && cards[1].style.left === originalLeftPostions[3] 
-  //           || cards[2].style.left === originalLeftPostions[4]) {
-  //           cards[1].style.left = "700px"
-  //           cards[2].style.left = "1350px"
-  //         }
-  //     });
-
-  //     if(cards[4].style.left === originalLeftPostions[2]) {
-  //       document.getElementById('prevButton').disabled = true;
-  //     }
-  //     else {
-  //       document.getElementById('prevButton').disabled = false;
-  //     }
-
-  //     if(cards[1].style.left != originalLeftPostions[1]
-  //        && cards[1].style.left != originalLeftPostions[2]
-  //         && cards[1].style.left != originalLeftPostions[0]) {
-  //       document.getElementById('nextButton').disabled = true;
-  //     }
-  //     else {
-  //       document.getElementById('nextButton').disabled = false;
-  //     }
-  // }
-
-  // document.getElementById('nextButton').addEventListener('click', () => {
-  //   console.log("next", leftPositions)
-  //     // Move the fourth card to the third card's position
-  //     const fourthCard = leftPositions[3];
-  //     leftPositions[3] = leftPositions[4];
-  //     leftPositions[1] = leftPositions[2];
-  //     leftPositions[4] = leftPositions[5];
-  //     leftPositions[2] = fourthCard;
-  //     leftPositions[5] = originalLeftPostions[5]
-
-  //     if( cards[4].style.left === originalLeftPostions[2] || cards[4].style.left === originalLeftPostions[0]) {
-  //       leftPositions[5] = originalLeftPostions[4]
-  //       leftPositions[4] = originalLeftPostions[3]
-  //       leftPositions[3] = originalLeftPostions[2]
-  //       leftPositions[2] = originalLeftPostions[1]
-  //     }
-      
-
-  //     updateCardPositions();
-  // });
-
-  // document.getElementById('prevButton').addEventListener('click', () => {
-  //   console.log("prev", leftPositions)
-  //   const initailCard = leftPositions[0];
-  //   const firstCard = leftPositions[1];
-  //   const secondCard = leftPositions[2];
-  //   const thirdCard = leftPositions[3];
-  //     leftPositions[1] = originalLeftPostions[0];
-  //     leftPositions[2] = firstCard;
-  //     leftPositions[3] = secondCard;
-  //     leftPositions[4] = thirdCard;
-
-  //   updateCardPositions();
-  // });
-
-  // updateCardPositions();
-
-
-
-  //How It Works Card Logic
-
-  //gsap.registerPlugin(ScrollTrigger);
-
-//const spacer = -500;
-
-
-//let howItWorksCards = gsap.utils.toArray(".how-it-works-card");
-
-// Debug: Log the zIndex of the second card
-// if (howItWorksCards[1]) {
-//   console.log(howItWorksCards[1].style.zIndex);
-// }
-
-// gsap.fromTo(
-//   ".how-it-works-card:not(:first-child)",
-//   {
-//     x: (index) =>  window.innerWidth + spacer, // Initial position off-screen
-//     rotate: 0,
-//   },
-//   {
-//     x: (index) => (index + 1),  // Final position on-screen
-//     stagger: 0.5,
-//     rotate: 0,
-//     scrollTrigger: {
-//       trigger: '.how-it-works-section',  // Trigger element
-//       pin: ".how-it-works-section",     // Pin the entire section
-//       pinSpacing: false,                // Disable automatic pinSpacing adjustment
-//       scrub: true,                      // Smooth scrubbing effect
-//       start: "top 50px",        // Start animation when top of section is 100px from top of viewport
-//       end: "+=1000",                    // End animation 1000px after start
-//       invalidateOnRefresh: true         // Invalidate trigger on refresh
-//     }
-//   }
-// );
-
-}); 
 
 // Dropdown Menu
 
@@ -2388,7 +2246,7 @@ jQuery('.hero-slider').slick({
     {
       breakpoint: 721,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         dots: false,
@@ -2400,7 +2258,7 @@ jQuery('.hero-slider').slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         dots: false,
@@ -2432,3 +2290,78 @@ jQuery('.case-tab').on('click', function(){
   jQuery(this).addClass('active')
   jQuery(`#${getId}`).addClass('active')
 })
+
+
+
+
+jQuery(document).ready(function(){
+	
+
+	jQuery(".slider-hiw").slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    autoplay: false,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+	});
+
+	//ticking machine
+	var percentTime;
+	var tick;
+	var time = 1;
+	var progressBarIndex = 0;
+
+	jQuery('.progressBarContainer .sliderProgressBar').each(function(index) {
+	    var progressSlider = "<div class='inProgress inProgress" + index + "'></div>";
+	    jQuery(this).html(progressSlider);
+	});
+
+	function startProgressbar() {
+	    resetProgressbar();
+	    percentTime = 0;
+	    tick = setInterval(interval, 10);
+	}
+
+	function interval() {
+	    if ((jQuery('.slider-hiw .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+	        progressBarIndex = jQuery('.slider-hiw .slick-track div[aria-hidden="false"]').data("slickIndex");
+	        startProgressbar();
+	    } else {
+	        percentTime += 1 / (time + 5);
+          jQuery('.inProgress').parent().parent().removeClass("active");
+          jQuery('.inProgress' + progressBarIndex).parent().parent().addClass("active");
+	        jQuery('.inProgress' + progressBarIndex).css({
+            height: percentTime + "%"
+	        });
+	        if (percentTime >= 100) {
+            jQuery('.single-item').slick('slickNext');
+	            progressBarIndex++;
+	            if (progressBarIndex > 2) {
+	                progressBarIndex = 0;
+	            }
+	            startProgressbar();
+	        }
+	    }
+	}
+
+	function resetProgressbar() {
+    jQuery('.inProgress').css({
+        height: 0 + '%'
+	    });
+	    clearInterval(tick);
+	}
+	startProgressbar();
+	// End ticking machine
+
+	jQuery('.how-its-work-items').click(function () {
+		clearInterval(tick);
+		var goToThisIndex = jQuery(this).find(".sliderProgressBar").data("slickIndex");
+		jQuery('.single-item').slick('slickGoTo', goToThisIndex, false);
+		startProgressbar();
+	});
+	
+		
+});
