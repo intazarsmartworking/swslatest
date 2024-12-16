@@ -2365,3 +2365,117 @@ jQuery(document).ready(function(){
 	
 		
 });
+
+
+jQuery('.vetted-tech-experts').slick({
+  infinite: true,
+  autoplay: true,
+  speed: 4000,
+  autoplaySpeed: 0,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  focusOnSelect: false,
+  arrows: false,
+  dots:false,
+  accessibility: false,
+  touchMove: false,
+  pauseOnHover: false,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 1367,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 1281,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow:3,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 721,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        accessibility: false,
+        touchMove: false,
+      }
+    }
+  ]
+});
