@@ -367,6 +367,65 @@
 	</div>
 <!-- Vetted New Design End -->
 
+<div class=" w-full relative p-[1rem] lg:p-[2.5rem]">
+	<div class="container">
+		<div class="block mb-[2.5rem]">
+			<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]">Why hire with <span class="text-dark-orange">Smartworking?</span></h2>
+		</div>
+		<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
+			<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
+					<div class="col-span-12 min-h-[27.4rem] sm:col-span-6 lg:col-span-6 bg-[#60E3D5] rounded-[0.67rem] p-8">
+						<div class="block">
+							<img class="w-[7.5rem] h-[7.5rem]" src="<?php echo get_template_directory_uri();?>/images/iso-20001.svg" alt="">
+						</div>
+						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600]">Security</p>
+						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">All developers undergo background checks and compliance screenings. As an ISO 27001 certified company, we guarantee the highest standards of data protection and secure collaboration.</p>
+					</div>
+					<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+						<div class=" text-center min-h-[16.5rem] bg-[rgba(255,255,255,0.12)] mb-4 relative rounded-[0.67rem] p-8">
+							<div class="w-[100%] absolute left-0 bottom-0 text-center">
+								<img class="max-w-[100%] h-[15rem] inline" src="<?php echo get_template_directory_uri();?>/images/home-girl.png" alt="">
+							</div>
+						</div>
+						<div class=" min-h-[6.5rem] bg-[#AAD464] rounded-[0.67rem] p-8">
+							<p class=" text-[#1E1E1E] text-[1.5rem] font-[600]">Reliable</p>
+							<p class=" text-[#1E1E1E] text-[1rem] font-[400]">All our developers have a minimum of 5+ years experience and have worked with US or European businesses.</p>
+						</div>
+					</div>
+					<div class="col-span-12 sm:col-span-12 min-h-[11.2rem] lg:col-span-12 bg-[#C282FA] rounded-[0.67rem] p-8">
+						<p class=" text-[#1E1E1E] text-[2rem] font-[600]">Seamless integration</p>
+						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">Our developers integrate effortlessly into your team, working your hours, attending your meetings, and aligning with your workflows—making them a natural extension of your in-house team without the usual remote hiring challenges.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
+					<div class="col-span-12 min-h-[14.5rem] sm:col-span-6 lg:col-span-7 bg-[#77BDDF] rounded-[0.67rem] p-8">
+						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem]">10 Days</p>
+						<p class=" text-[#1E1E1E] text-[1.75rem] font-[600]">to Hire</p>
+						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">Within this time we will carry out three interviews (communication, character/logic and technical).</p>
+					</div>
+					<div class="col-span-12 sm:col-span-6 lg:col-span-5 bg-[#ECC1A1] rounded-[0.67rem] p-8">
+						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem]">96%</p>
+						<p class=" text-[#1E1E1E] text-[1.75rem] font-[600]">Success</p>
+						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">96% of the developers we place are with the same client 12 months later.</p>
+					</div>
+					<div class="col-span-12 sm:col-span-12 min-h-[24rem] lg:col-span-12 bg-[rgba(255,255,255,0.12)] rounded-[0.67rem] p-8">
+						<div class="block text-center">
+							<img class="max-w-[28rem] w-[100%] inline" src="<?php echo get_template_directory_uri();?>/images/icons-skills.svg" alt="">
+						</div>
+						<div class="block text-center border-t border-[#fff] pt-5">
+							<p class=" text-[#E8E8E8] text-[1.5rem] font-[600]">120+ Skills and Technologies </p>
+							<p class=" text-[#E8E8E8] text-[1rem] font-[400]">Whatever your requirements, we’ll find the perfect developer.<br>We excel in vetting and matching.</p>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+</div>
+
 	<!-- Curios Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
