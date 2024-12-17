@@ -426,101 +426,99 @@
 	</div>
 </div>
 
+
+
 	<!-- Curios Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
-	<section class="calculator-box relative w-[100%] py-16">
-		<img class=" absolute right-0 z-0 top-[80px] w-[350px] h-[350px]" src="<?php echo get_template_directory_uri();?>/images/squr-roted.png" alt="">
-		<div class="block mb-5 text-center">
-			<?php if(get_sub_field('small_title')): ?>
-				<span class="steps-box text-white text-[1rem] inline-block px-[1.25rem] py-[0.8rem] border border-[#EE500C] rounded-[3.5rem] " ><?php echo get_sub_field('small_title'); ?></span>
-			<?php endif; ?>
-		</div>
-		<div class="block mb-5 text-center">
-			<?php if(get_sub_field('main_heading')): ?>	
-			<h3 class="text-[26px] lg:text-[36px] text-[#ffff] lg:leading-[45px] font-medium mb-4"><?php echo get_sub_field('main_heading'); ?></h3>
-			<?php endif; ?>
-			<p class="text-white text-[15px] mb-[30px] lg:text-[24px] font-medium"><?php echo get_sub_field('subheading'); ?></p>
-		</div>
-		<div class="inner-box relative z-10 rounded-[60px] max-w-[90%] min-h-[350px] mx-auto p-4 md:p-[50px]">
-			<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3 content-center">
-				<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
-					<div class="w-[100%] xl:max-w-[400px]">
-						<h5 class="text-[25px] font-bold text-[#fff] mb-8">What are you looking for?</h5>
-						<div class="block mb-8">
-							<label for="select_skill" class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill:</label>
-							<select id="select_skill" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
-								<option selected>Choose a Skill</option>
-								<?php 
-								$args_skills = array(
-									'post_type' => 'skills',
-									'posts_per_page' => -1,
-									'order' => 'ASC',
-									'orderby' => 'title',
-								);
-								$query_skills = new WP_Query($args_skills);
-								while ($query_skills->have_posts()) : $query_skills->the_post();
-								$mid_level_dollar_price = get_field('mid_level_dollar_price');
-								$senior_level_dollar_price = get_field('senior_level_dollar_price');
-								$mid_level_pound_price = get_field('mid_level_pound_price');
-								$senior_level_pound_price = get_field('senior_level_pound_price');
-								$skill_image_id = get_post_thumbnail_id();
-								$skill_image_src = wp_get_attachment_image_src($skill_image_id, 'full');
+	<section class=" w-full relative p-[1rem] lg:p-[2.5rem]">
+		<div class="container">
+			<div class="block text-center mb-[4rem]">
+				<?php if(get_sub_field('main_heading')): ?>	
+				<p class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></p>
+				<?php endif; ?>
+				<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('subheading'); ?></p>
+			</div>
+			<div class="relative min-h-[350px]">
+				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3 content-center">
+					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
+						<div class="w-[100%] xl:max-w-[400px]">
+							<h5 class="text-[25px] font-bold text-[#fff] mb-8">What are you looking for?</h5>
+							<div class="block mb-8">
+								<label for="select_skill" class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill:</label>
+								<select id="select_skill" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
+									<option selected>Choose a Skill</option>
+									<?php 
+									$args_skills = array(
+										'post_type' => 'skills',
+										'posts_per_page' => -1,
+										'order' => 'ASC',
+										'orderby' => 'title',
+									);
+									$query_skills = new WP_Query($args_skills);
+									while ($query_skills->have_posts()) : $query_skills->the_post();
+									$mid_level_dollar_price = get_field('mid_level_dollar_price');
+									$senior_level_dollar_price = get_field('senior_level_dollar_price');
+									$mid_level_pound_price = get_field('mid_level_pound_price');
+									$senior_level_pound_price = get_field('senior_level_pound_price');
+									$skill_image_id = get_post_thumbnail_id();
+									$skill_image_src = wp_get_attachment_image_src($skill_image_id, 'full');
 
-								?>
-								<option value='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>,"name":"<?php the_title(); ?>"}'><?php the_title(); ?></option>
-								<?php endwhile; ?>
-								<?php wp_reset_postdata(); ?> 
-							</select>
-						</div>
-						<div class="block mb-8">
-							<label for="countriesList" class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in:</label>
-							<select id="countriesList" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
-								<!-- <option selected>Choose a country</option> -->
-								<option value="US">United States</option>
-								<option value="UK" selected>United Kingdom</option>
-								<!-- <option value="FR">France</option>
-								<option value="DE">Germany</option> -->
-							</select>
-						</div>
-						<div class="block mb-8">
-							<label for="quantity-input" class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers:</label>
-							<div class="relative flex items-center w-[100%]">
-								<button type="button" id="decrement-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-s-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
-									<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
-									</svg>
-								</button>
-								<input type="number" id="quantity-input" min="1" value="1" class="bg-black border-x-0 min-w-[100px] border-black h-[50px] text-center text-white text-sm focus:ring-black focus:border-black block w-full py-2.5 dark:bg-black dark:border-black dark:placeholder-black dark:text-white dark:focus:ring-black dark:focus:border-black" />
-								<button type="button" id="increment-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-e-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
-									<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-									</svg>
-								</button>
+									?>
+									<option value='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>,"name":"<?php the_title(); ?>"}'><?php the_title(); ?></option>
+									<?php endwhile; ?>
+									<?php wp_reset_postdata(); ?> 
+								</select>
+							</div>
+							<div class="block mb-8">
+								<label for="countriesList" class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in:</label>
+								<select id="countriesList" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
+									<!-- <option selected>Choose a country</option> -->
+									<option value="US">United States</option>
+									<option value="UK" selected>United Kingdom</option>
+									<!-- <option value="FR">France</option>
+									<option value="DE">Germany</option> -->
+								</select>
+							</div>
+							<div class="block mb-8">
+								<label for="quantity-input" class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers:</label>
+								<div class="relative flex items-center w-[100%]">
+									<button type="button" id="decrement-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-s-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
+										<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+										</svg>
+									</button>
+									<input type="number" id="quantity-input" min="1" value="1" class="bg-black border-x-0 min-w-[100px] border-black h-[50px] text-center text-white text-sm focus:ring-black focus:border-black block w-full py-2.5 dark:bg-black dark:border-black dark:placeholder-black dark:text-white dark:focus:ring-black dark:focus:border-black" />
+									<button type="button" id="increment-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-e-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
+										<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+										</svg>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-					<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
-						<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> Hiring with SmartWorking</p>
-						<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span></p>
-						<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
-						<p class="text-[18px] lg:text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start">0</span>-<span class="currency-end">0</span>/hour</p>
-						<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
-							<p class="text-[16px] lg:text-[16px] text-[#fff]">Enjoy annual savings of up to <span class="currency-symbols">£</span><span class="save-amount">0</span>/year with complete transparency.</p>
+					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
+						<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
+							<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> Hiring with SmartWorking</p>
+							<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span></p>
+							<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
+							<p class="text-[18px] lg:text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start">0</span>-<span class="currency-end">0</span>/hour</p>
+							<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
+								<p class="text-[16px] lg:text-[16px] text-[#fff]">Enjoy annual savings of up to <span class="currency-symbols">£</span><span class="save-amount">0</span>/year with complete transparency.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-					<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#fff] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
-						<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
-						<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
-						<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
-						<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
-						<div class="w-[100%] absolute h-[110px] bg-[#f4f5f7] left-0 bottom-0 p-[20px] md:px-[30px]">
-							<p class="text-[16px] lg:text-[16px] text-[#000]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
+					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
+						<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#fff] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
+							<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
+							<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
+							<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
+							<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
+							<div class="w-[100%] absolute h-[110px] bg-[#f4f5f7] left-0 bottom-0 p-[20px] md:px-[30px]">
+								<p class="text-[16px] lg:text-[16px] text-[#000]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
+							</div>
 						</div>
 					</div>
 				</div>
