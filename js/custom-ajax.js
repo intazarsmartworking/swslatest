@@ -49,10 +49,54 @@ jQuery(document).ready(function($) {
                 nonce: nonce
             },
             success: function(response) {
-                $('.dev-section').html(response);
+                $('.vetted-tech-experts').html(response);
+                // Destroy Slick if already initialized
+                if ($('.vetted-tech-experts').hasClass('slick-initialized')) {
+                    $('.vetted-tech-experts').slick('unslick');
+                }
+
+                // Reinitialize Slick Slider
+                $('.vetted-tech-experts').slick({
+                    infinite: true,
+                    autoplay: true,
+                    speed: 4000,
+                    autoplaySpeed: 0,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    focusOnSelect: false,
+                    arrows: false,
+                    dots: false,
+                    accessibility: false,
+                    touchMove: false,
+                    pauseOnHover: false,
+                    responsive: [
+                        {
+                            breakpoint: 1440,
+                            settings: { slidesToShow: 5 }
+                        },
+                        {
+                            breakpoint: 1025,
+                            settings: { slidesToShow: 4 }
+                        },
+                        {
+                            breakpoint: 900,
+                            settings: { slidesToShow: 3 }
+                        },
+                        {
+                            breakpoint: 721,
+                            settings: { slidesToShow: 2 }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: { slidesToShow: 1 }
+                        }
+                    ]
+                });
             }
         });
     }
+
+    
 
     // Event handler for category click
     $('.category-filter').on('click', function(e) {
@@ -61,10 +105,10 @@ jQuery(document).ready(function($) {
         var category_id = $(this).data('category-id');
 
         // Remove 'active' class from all category links
-        $('.category-filter').removeClass('active');
+        $('.category-filter').removeClass('active-now');
 
         // Add 'active' class to the clicked category link
-        $(this).addClass('active');
+        $(this).addClass('active-now');
 
         // Fetch posts for the clicked category
         fetchPosts(category_id);

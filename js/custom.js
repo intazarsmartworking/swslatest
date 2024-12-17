@@ -2369,7 +2369,7 @@ jQuery(document).ready(function(){
 
 jQuery('.vetted-tech-experts').slick({
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 4000,
   autoplaySpeed: 0,
   slidesToShow: 5,

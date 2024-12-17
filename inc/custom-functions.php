@@ -134,7 +134,10 @@ function display_ai_vetted_profile_categories() {
         echo '<p>No categories found.</p>';
     }
 }
-/*function display_ai_vetted_profile_categories() {
+
+
+// Function to fetch and display categories for 'ai-vetted-profile' for new design
+function display_ai_vetted_profile_categories_new_design() {
 	$terms  = get_terms(array(
         'taxonomy' => 'vettedcategory', 
         'type' => 'ai-vetted-profile',
@@ -142,30 +145,131 @@ function display_ai_vetted_profile_categories() {
         'order' => 'ASC',
 		'hide_empty' => false, 
     ));
-	
-	$active_category_id = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
+    
+    // Check if there are any categories
     if (!empty($terms) && !is_wp_error($terms)) {
-        echo '<div class="left-profile">';
+        echo '<ul class="filter-tab">';
+        echo '<li class="category-filter">';
+        echo '<svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+								<path d="M20.5 14C21.6046 14 22.5 13.1046 22.5 12C22.5 10.8954 21.6046 10 20.5 10C19.3954 10 18.5 10.8954 18.5 12C18.5 13.1046 19.3954 14 20.5 14Z" fill="#4B4B4B" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M20.5 6C21.6046 6 22.5 5.10457 22.5 4C22.5 2.89543 21.6046 2 20.5 2C19.3954 2 18.5 2.89543 18.5 4C18.5 5.10457 19.3954 6 20.5 6Z" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M20.5 22C21.6046 22 22.5 21.1046 22.5 20C22.5 18.8954 21.6046 18 20.5 18C19.3954 18 18.5 18.8954 18.5 20C18.5 21.1046 19.3954 22 20.5 22Z" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M4.5 14C5.60457 14 6.5 13.1046 6.5 12C6.5 10.8954 5.60457 10 4.5 10C3.39543 10 2.5 10.8954 2.5 12C2.5 13.1046 3.39543 14 4.5 14Z" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M6.5 12H18.5" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M18.5 4H14.5C12.5 4 11.5 5 11.5 7V17C11.5 19 12.5 20 14.5 20H18.5" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							All';
+        echo '</li>';
         foreach ($terms as $term) {
-		$active_class = ($term->term_id == $active_category_id) ? 'category-filter active' : '';	
-		$category_link = add_query_arg('category_id', esc_attr($term->term_id), get_permalink());
-        $category_link .= '#profile-vet';	
-            echo '<div class="skills px-4 py-5 rounded-2xl mb-4 ' . esc_attr($active_class) . '">';
-            echo '<a href="' . esc_url($category_link) . '">';
-            echo '<h3>' . esc_html($term->name) . '</h3>';
+            $term_id = $term->term_id;
+            $taxonomy_image = get_field('vetted_category_image', 'vettedcategory_' . $term_id);
+            $taxonomy_image_url = !empty($taxonomy_image) ? esc_url($taxonomy_image['url']) : '';
+            echo '<li class="category-filter">';
+            echo '<a href="#"  data-category-id="' . esc_attr($term->term_id) . '">';
+            if ($taxonomy_image_url) {
+                echo '<img class="filter-icon" src="' . $taxonomy_image_url . '" alt="' . esc_attr($term->name) . '">';
+            }
+            echo '<h3 style="display:inline">' . esc_html($term->name) . '</h3>';
             echo '</a>';
-            echo '</div>';
+            echo '</li>';
         }
-        echo '</div>';
+        echo '</ul>';
     } else {
         echo '<p>No categories found.</p>';
     }
-}*/
+}
 
 
 
 // AJAX handler to fetch posts
+
+
 function ajax_fetch_ai_vetted_profile_posts() {
+    check_ajax_referer('ai_vetted_profile_nonce', 'nonce');
+	$category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : null;
+
+    $args = array(
+        'post_type' => 'ai-vetted-profile',
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    );
+
+    if ($category_id) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'vettedcategory',
+                'field' => 'term_id',
+                'terms' => $category_id,
+            ),
+        );
+    }
+	$query = new WP_Query($args);
+	if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+			$designation = get_field('profile');
+			$city = get_field('city');
+			$country = get_field('country');
+			$total_experience = get_field('total_experience');
+			$dev_image_id = get_post_thumbnail_id();
+			$dev_image_src = wp_get_attachment_image_src($dev_image_id, 'full');
+			
+			echo '<div class="hero-slider-item">';
+			  echo '<div class="hero-card vetted-tech-card relative">';
+			    echo '<div class="vetted-hover-box">';
+			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3">' . get_the_title() . '</p>';
+				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-profile.svg"> '  . esc_html($designation) . '</p>';
+				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-location.svg" > ' . esc_html($city) . ', ' . esc_html($country) . '</p>';
+				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icons-star.svg" alt=""> ' . esc_html($total_experience) .' years experience</p>';
+				  echo '<p class="text-[1rem] font-[400] text-[#787878] mb-2">Expertise</p>';
+				  
+				  echo '<div class="grid grid-cols-10 gap-2 text-[0.875rem] font-[400] text-[#1E1E1E] mb-[1.5rem]">';
+				   if (have_rows('skills')) {
+						while (have_rows('skills')) {
+							the_row();
+							$skill = get_sub_field('skill');
+							$experience = get_sub_field('experience');
+							echo '<div class="col-span-7">' . esc_html($skill) . '</div>';
+							echo '<div class="col-span-3">' . esc_html($experience) . '</div>';
+						}
+				   }
+				  echo '</div>';
+				  
+				  echo '<p class="text-[0.875rem] font-[400] text-[#787878] mb-2">' . get_the_title() . ' is available for hire</p>';
+				  echo '<div class="block">';
+				   echo '<a class="button_slide slide_right !text-[0.875rem] !text-[#4B4B4B] hover:!text-[#fff] !font-[500]" href="/contact-us"> View Profile 🡢 </a>';
+				  echo '</div>';
+				echo '</div>';
+				
+				
+				echo '<img class="w-[100%] h-[100%]" src="' . esc_url($dev_image_src[0]) . '">';
+				echo '<div class="hero-card-overlay">';
+				  echo '<div class="hero-card-details">';
+				    echo '<p class="hero-profile !mb-[0px]">' . get_the_title() . ' • <span class="opacity-60">' . esc_html($city) . '</span></p>';
+				    echo '<p class="hero-name !mb-[8px]">' . esc_html($designation) . '</p>';
+					echo '<div class="hero-skills">';
+					  if (have_rows('skills')) {
+						while (have_rows('skills')) {
+							the_row();
+							$skill = get_sub_field('skill');
+							echo '<div class="item vetted">' . esc_html($skill) . '</div>';
+						}
+				      }
+					echo '</div>';
+				  echo '</div>';
+				echo '</div>';
+				
+			  echo '</div>';
+			echo '</div>';
+		}
+	die();
+	}
+}
+
+
+
+/*function ajax_fetch_ai_vetted_profile_posts() {
     check_ajax_referer('ai_vetted_profile_nonce', 'nonce');
 	$category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : null;
 
@@ -250,7 +354,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 
     die();
 }
-}
+}*/
 add_action('wp_ajax_nopriv_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 add_action('wp_ajax_fetch_ai_vetted_profile_posts', 'ajax_fetch_ai_vetted_profile_posts');
 
@@ -616,3 +720,6 @@ function remove_custom_taxonomy_columns( $columns ) {
     return $columns;
 }
 add_filter( 'manage_edit-post_columns', 'remove_custom_taxonomy_columns' );
+
+
+
