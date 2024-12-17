@@ -236,10 +236,10 @@ function ajax_fetch_ai_vetted_profile_posts() {
 				   }
 				  echo '</div>';
 				  
-				  echo '<p class="text-[0.875rem] font-[400] text-[#787878] mb-2">' . get_the_title() . ' is available for hire</p>';
-				  echo '<div class="block">';
-				   echo '<a class="button_slide slide_right !text-[0.875rem] !text-[#4B4B4B] hover:!text-[#fff] !font-[500]" href="/contact-us"> View Profile 🡢 </a>';
-				  echo '</div>';
+				  //echo '<p class="text-[0.875rem] font-[400] text-[#787878] mb-2">' . get_the_title() . ' is available for hire</p>';
+				  //echo '<div class="block">';
+				   //echo '<a class="button_slide slide_right !text-[0.875rem] !text-[#4B4B4B] hover:!text-[#fff] !font-[500]" href="/contact-us"> View Profile 🡢 </a>';
+				  //echo '</div>';
 				echo '</div>';
 				
 				
