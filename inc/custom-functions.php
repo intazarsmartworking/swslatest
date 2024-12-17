@@ -217,7 +217,7 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			
 			echo '<div class="hero-slider-item">';
 			  echo '<div class="hero-card vetted-tech-card relative">';
-			    echo '<div class="vetted-hover-box" style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg);>';
+			    echo '<div class="vetted-hover-box" style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg)">';
 			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3">' . get_the_title() . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-profile.svg"> '  . esc_html($designation) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-location.svg" > ' . esc_html($city) . ', ' . esc_html($country) . '</p>';
