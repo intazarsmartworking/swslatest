@@ -250,10 +250,16 @@ function ajax_fetch_ai_vetted_profile_posts() {
 				    echo '<p class="hero-name !mb-[8px]">' . esc_html($designation) . '</p>';
 					echo '<div class="hero-skills">';
 					  if (have_rows('skills')) {
+                        $skill_count = 0;
 						while (have_rows('skills')) {
 							the_row();
+                        if ($skill_count < 3) {    
 							$skill = get_sub_field('skill');
 							echo '<div class="item vetted">' . esc_html($skill) . '</div>';
+                            $skill_count++;
+                        } else {
+                            break; 
+                        }    
 						}
 				      }
 					echo '</div>';
