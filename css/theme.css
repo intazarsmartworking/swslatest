@@ -940,6 +940,9 @@ select {
 .bottom-\[100px\] {
   bottom: 100px;
 }
+.bottom-\[110px\] {
+  bottom: 110px;
+}
 .bottom-\[120px\] {
   bottom: 120px;
 }
@@ -1197,6 +1200,9 @@ select {
 }
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
+}
+.bottom-\[25px\] {
+  bottom: 25px;
 }
 .-z-10 {
   z-index: -10;
@@ -1762,6 +1768,9 @@ select {
 .min-h-\[250px\] {
   min-height: 250px;
 }
+.min-h-\[26\.25rem\] {
+  min-height: 26.25rem;
+}
 .min-h-\[27\.4rem\] {
   min-height: 27.4rem;
 }
@@ -2289,6 +2298,9 @@ select {
 .rounded-\[2px\] {
   border-radius: 2px;
 }
+.rounded-\[2rem\] {
+  border-radius: 2rem;
+}
 .rounded-\[3\.5rem\] {
   border-radius: 3.5rem;
 }
@@ -2425,6 +2437,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(238 80 12 / var(--tw-border-opacity));
 }
+.border-\[\#EEE\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
 .border-\[\#F34D05\] {
   --tw-border-opacity: 1;
   border-color: rgb(243 77 5 / var(--tw-border-opacity));
@@ -2450,6 +2466,9 @@ select {
 .border-\[\#fff\] {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-\[rgba\(238\2c 238\2c 238\2c 0\.40\)\] {
+  border-color: rgba(238,238,238,0.40);
 }
 .border-\[rgba\(239\2c 80\2c 12\2c 0\.30\)\] {
   border-color: rgba(239,80,12,0.30);
@@ -2508,6 +2527,10 @@ select {
 .border-transparent {
   border-color: transparent;
 }
+.border-\[\#000\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
 .\!bg-transparent {
   background-color: transparent !important;
 }
@@ -2559,6 +2582,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 161 / var(--tw-bg-opacity));
 }
+.bg-\[\#FCFCFC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 252 252 / var(--tw-bg-opacity));
+}
 .bg-\[\#FF4D02\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 77 2 / var(--tw-bg-opacity));
@@ -2566,6 +2593,10 @@ select {
 .bg-\[\#FF4E03\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 78 3 / var(--tw-bg-opacity));
+}
+.bg-\[\#FFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-\[\#f4f5f7\] {
   --tw-bg-opacity: 1;
@@ -2581,6 +2612,9 @@ select {
 }
 .bg-\[\] {
   background-color: ;
+}
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.08\)\] {
+  background-color: rgba(255,255,255,0.08);
 }
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.12\)\] {
   background-color: rgba(255,255,255,0.12);
@@ -2617,6 +2651,10 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#202020\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -2683,6 +2721,9 @@ select {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-\[1\.5rem\] {
+  padding: 1.5rem;
 }
 .p-\[10px\] {
   padding: 10px;
@@ -3301,6 +3342,9 @@ select {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-\[3rem\] {
+  font-size: 3rem;
+}
 .\!font-\[500\] {
   font-weight: 500 !important;
 }
@@ -3588,6 +3632,10 @@ select {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 .text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-\[\#FFF\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -4058,8 +4106,8 @@ body {
 }
 @media (min-width: 1536px) {
   .container {
-    width: 90%;
-    max-width: none;
+    width: 100%;
+    max-width: 1600px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -8275,10 +8323,6 @@ body.lightMode .single-blog .blog-table .text-16 {
     gap: 20rem;
   }
 
-  .lg\:rounded-\[40px\] {
-    border-radius: 40px;
-  }
-
   .lg\:p-10 {
     padding: 2.5rem;
   }
@@ -8605,12 +8649,12 @@ body.lightMode .single-blog .blog-table .text-16 {
     grid-column: span 4 / span 4;
   }
 
-  .xl\:max-w-\[400px\] {
-    max-width: 400px;
+  .xl\:max-w-\[22\.5rem\] {
+    max-width: 22.5rem;
   }
 
-  .xl\:max-w-\[450px\] {
-    max-width: 450px;
+  .xl\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .xl\:grid-cols-12 {

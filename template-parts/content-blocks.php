@@ -444,7 +444,8 @@
 				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3 content-center">
 					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[400px]">
-							<h5 class="text-[25px] font-bold text-[#fff] mb-8">What are you looking for?</h5>
+							<p class="text-[1.5rem] font-[600] text-[#fff] mb-2">What are you looking for?</p>
+							<p class="text-[1rem] font-[400] text-[#fff] mb-8">Save 4% when you hire additional developers.</p>
 							<div class="block mb-8">
 								<label for="select_skill" class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill:</label>
 								<select id="select_skill" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
@@ -500,24 +501,31 @@
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#ff4d04] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
-							<p class="text-[25px] lg:text-[30px] font-semibold text-[#fff]"> Hiring with SmartWorking</p>
-							<p class="text-[35px] lg:text-[50px] font-bold text-[#fff]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span></p>
-							<p class="text-[35px] lg:text-[50px] font-bold text-[#fff] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
-							<p class="text-[18px] lg:text-[20px] text-[#fff] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start">0</span>-<span class="currency-end">0</span>/hour</p>
-							<div class="w-[100%] absolute h-[110px] bg-[rgba(255,255,255,0.4)] left-0 bottom-0 p-[20px] md:px-[30px]">
-								<p class="text-[16px] lg:text-[16px] text-[#fff]">Enjoy annual savings of up to <span class="currency-symbols">£</span><span class="save-amount">0</span>/year with complete transparency.</p>
+						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+							<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
+							<div class="relative h-[100%] text-center">
+								<p class="text-[1.5rem] font-[600] text-[#1E1E1E]"> Hiring with <span class="text-dark-orange">SmartWorking</span></p>
+								<p class="text-[3rem] font-[700] text-[#1E1E1E]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span>/hour</p>
+								<p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
+								<p class="text-[18px] lg:text-[20px] text-[#1E1E1E] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start">0</span>-<span class="currency-end">0</span>/hour</p>
+								
+							</div>
+							<div class="w-[100%] absolute h-[110px] bg-[#FCFCFC] border-t border-[#EEE] left-0 bottom-0 p-[20px]">
+								<p class="text-[0.875rem] font-[500] text-center text-[#1E1E1E]">Enjoy annual savings of up to <span class="currency-symbols">£</span><span class="save-amount">0</span>/year with complete transparency.</p>
 							</div>
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class=" w-[100%] xl:max-w-[450px] min-h-[400px] bg-[#fff] p-[15px] md:p-[30px] pb-[120px] rounded-[16px] lg:rounded-[40px] relative overflow-hidden ml-auto">
-							<p class="text-[25px] lg:text-[30px] font-semibold text-[#000]">Hiring in <span class="select-country">United Kingdom</span></p>
-							<p class="text-[35px] lg:text-[50px] font-bold text-[#000]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
-							<p class="text-[35px] lg:text-[50px] font-bold text-[#000] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
-							<p class="text-[18px] lg:text-[20px] text-[#000] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
-							<div class="w-[100%] absolute h-[110px] bg-[#f4f5f7] left-0 bottom-0 p-[20px] md:px-[30px]">
-								<p class="text-[16px] lg:text-[16px] text-[#000]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
+						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+							<img class=" absolute right-0 bottom-[25px]" src="<?php echo get_template_directory_uri();?>/images/uk-flags.svg" alt="">
+							<div class="relative h-[100%] text-center">
+								<p class="text-[1.5rem] font-[600] text-[#FFF]">Hiring in <span class="select-country">United Kingdom</span></p>
+								<p class="text-[3rem] font-[700] text-[#FFF]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
+								<p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
+								<p class="text-[18px] lg:text-[20px] text-[#FFF] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
+							</div>
+							<div class="w-[100%] absolute h-[110px] bg-[#202020] border-t border-[#000]  left-0 bottom-0 p-[20px] md:px-[30px]">
+								<p class="text-[0.875rem] font-[500] text-center text-[#FFF]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
 							</div>
 						</div>
 					</div>
