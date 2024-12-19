@@ -3750,6 +3750,26 @@ body.lightMode .single-blog .blog-table .text-16 {
 .filter-tab li.active .filter-icon path {
   fill: #ffffff;
 }
+.select-input select {
+  padding-left: 2.5rem;
+  padding: 0.3rem 0.3rem 0.3rem 3rem;
+}
+.select-input img {
+  left: 0.8rem;
+  top: 0.4rem;
+}
+.select-input input {
+  padding: 0.3rem 3rem;
+}
+.select-input .btn-count {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.45rem;
+  text-align: center;
+}
 
 @media (min-width: 991px) and (max-width: 1360px) {
   .header-menu li a {

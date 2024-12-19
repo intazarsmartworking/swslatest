@@ -23,13 +23,14 @@
 						<p class=" text-[#1E1E1E] text-[1rem] font-[400]"><?php echo get_sub_field('first_box_paragraph'); ?></p>
 				    <?php endif; ?>	
 				</div>
-				<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-					<div class=" text-center min-h-[16.5rem] bg-[rgba(255,255,255,0.12)] mb-4 relative rounded-[0.67rem] p-8">
-					<?php if(get_sub_field('second_box_image')): ?>
-						<div class="w-[100%] absolute left-0 bottom-0 text-center">
-							<img class="max-w-[100%] h-[15rem] inline" src="<?php echo get_sub_field('second_box_image')['url']; ?>" alt="">
-						</div>
-					<?php endif; ?>	
+				<div class="col-span-12 sm:col-span-6 relative lg:col-span-6">
+					<img class="absolute right-0 top-0 h-[100%] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/why-box-bg.png" alt="">
+					<div class=" text-center min-h-[16.5rem] bg-[rgba(255,255,255,0.12)] mb-4 relative z-10 rounded-[0.67rem] p-8">
+						<?php if(get_sub_field('second_box_image')): ?>
+							<div class="w-[100%] absolute left-0 bottom-0 text-center">
+								<img class="max-w-[100%] h-[15rem] inline" src="<?php echo get_sub_field('second_box_image')['url']; ?>" alt="">
+							</div>
+						<?php endif; ?>	
 					</div>
 					<div class=" min-h-[6.5rem] bg-[#AAD464] rounded-[0.67rem] p-8">
 					<?php if(get_sub_field('second_box_title')): ?>
@@ -74,19 +75,29 @@
 					<p class=" text-[#1E1E1E] text-[1rem] font-[400]"><?php echo get_sub_field('fifth_box_paragraph'); ?></p>
 				<?php endif; ?>
 				</div>
-				<div class="col-span-12 sm:col-span-12 min-h-[24rem] lg:col-span-12 bg-[rgba(255,255,255,0.12)] rounded-[0.67rem] p-8">
-					<?php if(get_sub_field('six_box_image')): ?>
+				<div class="col-span-12 sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[25.3rem] lg:col-span-6 bg-[#EF995E] rounded-[0.67rem] p-8">
+					<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem] mb-4">Vetting</p>
+					<p class=" text-[#1E1E1E] text-[1rem] font-[400]">
+						We rigorously vet candidates to select the top 1%. Each candidate undergoes technical interviews, assessments, and live coding tests to validate skills.
+					</p> 
+					<p>Communication is assessed through interviews and written exams, while background screening ensures reliability and quality.</p>
+				</div>
+				<div class="col-span-12 sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[25.3rem] relative lg:col-span-6 bg-[rgba(255,255,255,0.12)] rounded-[0.67rem] p-8">
+					<img class="absolute right-0 top-0 h-[100%] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/why-box-bg.png" alt="">
+					<div class=" relative z-10">
 						<div class="block text-center">
-							<img class="max-w-[28rem] w-[100%] inline" src="<?php echo get_sub_field('six_box_image')['url']; ?>" alt="">
+							<?php if(get_sub_field('six_box_title')): ?>
+								<p class=" text-[#E8E8E8] text-[1.5rem] font-[600]"><?php echo get_sub_field('six_box_title'); ?></p>
+							<?php endif; ?>
+							<?php if(get_sub_field('six_box_paragraph')): ?>	
+								<p class=" text-[#E8E8E8] text-[1rem] font-[400]"><?php echo get_sub_field('six_box_paragraph'); ?></p>
+							<?php endif; ?>
 						</div>
-					<?php endif; ?>
-					<div class="block text-center border-t border-[#fff] pt-5">
-					<?php if(get_sub_field('six_box_title')): ?>
-						<p class=" text-[#E8E8E8] text-[1.5rem] font-[600]"><?php echo get_sub_field('six_box_title'); ?></p>
-					<?php endif; ?>
-					<?php if(get_sub_field('six_box_paragraph')): ?>	
-						<p class=" text-[#E8E8E8] text-[1rem] font-[400]"><?php echo get_sub_field('six_box_paragraph'); ?></p>
-					<?php endif; ?>
+						<?php if(get_sub_field('six_box_image')): ?>
+							<div class="block text-center mt-6">
+								<img class="max-w-[28rem] w-[100%] inline" src="<?php echo get_sub_field('six_box_image')['url']; ?>" alt="">
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>		
