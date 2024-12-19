@@ -371,48 +371,85 @@
 				<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('subheading'); ?></p>
 			</div>
 			<div class="relative min-h-[350px]">
-				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3 content-center">
+				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3">
 					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
-						<div class="w-[100%] xl:max-w-[400px]">
-							<p class="text-[1.5rem] font-[600] text-[#fff] mb-2">What are you looking for?</p>
-							<p class="text-[1rem] font-[400] text-[#fff] mb-8">Save 4% when you hire additional developers.</p>
-							<div class="block mb-8">
-								<label for="select_skill" class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill:</label>
-								<select id="select_skill" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
-									<option selected>Choose a Skill</option>
-									<?php 
-									$args_skills = array(
-										'post_type' => 'skills',
-										'posts_per_page' => -1,
-										'order' => 'ASC',
-										'orderby' => 'title',
-									);
-									$query_skills = new WP_Query($args_skills);
-									while ($query_skills->have_posts()) : $query_skills->the_post();
-									$mid_level_dollar_price = get_field('mid_level_dollar_price');
-									$senior_level_dollar_price = get_field('senior_level_dollar_price');
-									$mid_level_pound_price = get_field('mid_level_pound_price');
-									$senior_level_pound_price = get_field('senior_level_pound_price');
-									$skill_image_id = get_post_thumbnail_id();
-									$skill_image_src = wp_get_attachment_image_src($skill_image_id, 'full');
+						<div class="w-[100%] xl:max-w-[500px]">
+							<p class="text-[1.5rem] font-[600] text-[#fff] mb-16">What are you looking for?</p>
 
-									?>
-									<option value='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>,"name":"<?php the_title(); ?>"}'><?php the_title(); ?></option>
-									<?php endwhile; ?>
-									<?php wp_reset_postdata(); ?> 
-								</select>
+							<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-8">
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill</p>
+									<div class="relative select-input">
+										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/fullstak.svg" alt="">
+										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+											<option selected>Choose a Skill</option>
+											<?php 
+											$args_skills = array(
+												'post_type' => 'skills',
+												'posts_per_page' => -1,
+												'order' => 'ASC',
+												'orderby' => 'title',
+											);
+											$query_skills = new WP_Query($args_skills);
+											while ($query_skills->have_posts()) : $query_skills->the_post();
+											$mid_level_dollar_price = get_field('mid_level_dollar_price');
+											$senior_level_dollar_price = get_field('senior_level_dollar_price');
+											$mid_level_pound_price = get_field('mid_level_pound_price');
+											$senior_level_pound_price = get_field('senior_level_pound_price');
+											$skill_image_id = get_post_thumbnail_id();
+											$skill_image_src = wp_get_attachment_image_src($skill_image_id, 'full');
+
+											?>
+											<option value='{"midLevel":<?php echo $mid_level_pound_price;?>,"senior":<?php echo $senior_level_pound_price;?>,"name":"<?php the_title(); ?>"}'><?php the_title(); ?></option>
+											<?php endwhile; ?>
+											<?php wp_reset_postdata(); ?> 
+										</select>
+									</div>
+								</div>
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Experience</p>
+									<div class="relative select-input">
+										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
+										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+											<!-- <option selected>Choose a country</option> -->
+											<option value="ML">Mid level (4-6 years)</option>
+											<option value="SL" selected>Senior level (6+ years)</option>
+											<!-- <option value="FR">France</option>
+											<option value="DE">Germany</option> -->
+										</select>
+									</div>
+								</div>
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers</p>
+									<div class="relative select-input md:max-w-[7.75rem]">
+										<button type="button" class="btn-count left-2" id="decrement-button">
+											<svg class="w-3 h-3 inline text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+											</svg>
+										</button>
+										<input type="number" id="quantity-input" min="1" value="1" class=" bg-[#1f1f1f] text-center border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full py-[0.3rem] px-[2rem] dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]" />
+										<button type="button" class="btn-count right-2" id="increment-button" >
+											<svg class="w-3 h-3 inline text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
+									<div class="relative select-input">
+										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/uk.svg" alt="">
+										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+											<!-- <option selected>Choose a country</option> -->
+											<option value="US">United States</option>
+											<option value="UK" selected>United Kingdom</option>
+											<!-- <option value="FR">France</option>
+											<option value="DE">Germany</option> -->
+										</select>
+									</div>
+								</div>
 							</div>
-							<div class="block mb-8">
-								<label for="countriesList" class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in:</label>
-								<select id="countriesList" class=" bg-black border h-[50px] border-black text-white text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-black dark:border-black dark:placeholder-gray-400 dark:text-white dark:focus:ring-black dark:focus:border-black">
-									<!-- <option selected>Choose a country</option> -->
-									<option value="US">United States</option>
-									<option value="UK" selected>United Kingdom</option>
-									<!-- <option value="FR">France</option>
-									<option value="DE">Germany</option> -->
-								</select>
-							</div>
-							<div class="block mb-8">
+							<!-- <div class="block mb-8">
 								<label for="quantity-input" class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers:</label>
 								<div class="relative flex items-center w-[100%]">
 									<button type="button" id="decrement-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-s-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
@@ -420,42 +457,44 @@
 											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
 										</svg>
 									</button>
-									<input type="number" id="quantity-input" min="1" value="1" class="bg-black border-x-0 min-w-[100px] border-black h-[50px] text-center text-white text-sm focus:ring-black focus:border-black block w-full py-2.5 dark:bg-black dark:border-black dark:placeholder-black dark:text-white dark:focus:ring-black dark:focus:border-black" />
+									
 									<button type="button" id="increment-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-e-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
 										<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
 											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
 										</svg>
 									</button>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
 							<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
 							<div class="relative h-[100%] text-center">
-								<p class="text-[1.5rem] font-[600] text-[#1E1E1E]"> Hiring with <span class="text-dark-orange">SmartWorking</span></p>
-								<p class="text-[3rem] font-[700] text-[#1E1E1E]"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span>/hour</p>
-								<p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p>
-								<p class="text-[18px] lg:text-[20px] text-[#1E1E1E] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start">0</span>-<span class="currency-end">0</span>/hour</p>
+								<p class="text-[1.5rem] font-[600] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
+								<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span>/hour</p>
+								<!-- <p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p> -->
+								<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3">Equivalent to</p>
+								<p class="text-[1rem] font-[400] text-[#1E1E1E]"><span class="currency-start text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
 								
 							</div>
 							<div class="w-[100%] absolute h-[110px] bg-[#FCFCFC] border-t border-[#EEE] left-0 bottom-0 p-[20px]">
-								<p class="text-[0.875rem] font-[500] text-center text-[#1E1E1E]">Enjoy annual savings of up to <span class="currency-symbols">£</span><span class="save-amount">0</span>/year with complete transparency.</p>
+								<p class="text-[0.875rem] font-[500] text-center text-[#1E1E1E]">Take advantage of our vetted talent, with savings of up to 50%</p>
 							</div>
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-							<img class=" absolute right-0 bottom-[25px]" src="<?php echo get_template_directory_uri();?>/images/uk-flags.svg" alt="">
+							<img class="absolute w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/uk.svg" alt="">
 							<div class="relative h-[100%] text-center">
-								<p class="text-[1.5rem] font-[600] text-[#FFF]">Hiring in <span class="select-country">United Kingdom</span></p>
-								<p class="text-[3rem] font-[700] text-[#FFF]"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span></p>
-								<p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p>
-								<p class="text-[18px] lg:text-[20px] text-[#FFF] mt-[20px]">Equivalent to <span class="currency-symbols">£</span><span class="currency-start-other">0</span>-<span class="currency-end-other">0</span>/hour</p>
+								<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country">United Kingdom</span></p>
+								<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span>/hour</p>
+								<!-- <p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p> -->
+								<p class="text-[1rem] font-[400] text-[#FFF] mb-3">Equivalent to</p>
+								<p class="text-[1rem] font-[400] text-[#FFF]"><span class="currency-start-other text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
 							</div>
 							<div class="w-[100%] absolute h-[110px] bg-[#202020] border-t border-[#000]  left-0 bottom-0 p-[20px] md:px-[30px]">
-								<p class="text-[0.875rem] font-[500] text-center text-[#FFF]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs</p>
+								<p class="text-[0.875rem] font-[500] text-center text-[#FFF]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs*</p>
 							</div>
 						</div>
 					</div>
