@@ -154,211 +154,193 @@
 	<?php endwhile; ?>
 	<?php endif; ?>	
 	
-	<!-- Europe Leading Section  -->
-	<?php if (have_rows('block')) : ?>
-	<?php while (have_rows('block')) : the_row(); ?>
-	<?php if (get_row_layout() == 'europe_leading_box') : ?>
-		<div class="w-full relative">
-			<div class="container">
-				<div class="block">
-					<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]">Case <span class="text-dark-orange">Studies</span></h2>
-				</div>
-				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
-					<div class="col-span-4 lg:col-span-4 content-center case-tab active" data-id="tab-1">
-						<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
-					</div>
-					<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-2">
-						<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt="">
-					</div>
-					<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-3">
-						<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/tiller-logo.svg" alt="">
-					</div>
-				</div>
-				<div class="tab-container">
-					<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-1.jpg');">
-						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-							<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
-								<div class="block max-w-[47rem]">
-									<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Seamless and Easy Integration</p>
-									<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]"><img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> The developers at Smart Working have provided work the same hours as our team, attend all meetings, and are always available for communication. Their seamless integration into our workflows has made them feel like a natural extension of our in-house team, without any of the challenges we expected from remote hiring.</p>
-									<p class=" text-[1rem] text-[#fff] font-[600]">Cameron Wade</p>
-									<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Cameron Wade</p>
-								</div>
-							</div>
-							<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
-									</div>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
-									<p class="text-[1rem] text-[#E8E8E8]">of the developers still with the client after 1 year</p>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-2.jpg');">
-						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-							<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
-								<div class="block max-w-[47rem]">
-									<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Reliable and trustworthy way to scale your team</p>
-									<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">
-										<img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> 
-										Hiring remote developers felt like a risk at first, but Smart Working’s process removed all our concerns. The support from their UK team made us feel secure every step of the way. We’ve been using Smart Working for over two years now, and their process has always been safe and dependable.</p>
-									<p class=" text-[1rem] text-[#fff] font-[600]">Mark Cadby</p>
-									<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Chief Technical Officer</p>
-								</div>
-							</div>
-							<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<p class="text-[1rem] text-[#E8E8E8]">Delivered a vetted <br>shortlist in under</p>
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">5</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
-									</div>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
-									<p class="text-[1rem] text-[#E8E8E8]">of the developers undergo and verification checks prior to employment</p>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">The entire dev team <br>came to visit the</p>
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">UK</p></div>
-										<div class="pl-2">
-											<!-- <p class="text-[1rem] text-[#E8E8E8]">days</p> -->
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-content" id="tab-3" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-3.jpg');">
-						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-							<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
-								<div class="block max-w-[47rem]">
-									<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Constant and ongoing support</p>
-									<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">
-										<img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> 
-										Smart Working doesn’t just stop at hiring—they’ve provided continuous support and training to ensure long-term success. Their team’s feedback calls, management and training of our staff has been incredibly useful and made the relationship a huge success.
-									</p>
-									<p class=" text-[1rem] text-[#fff] font-[600]">Edward Genochio</p>
-									<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Chief Technical Officer</p>
-								</div>
-							</div>
-							<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">14</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days<br>scheduled</p></div>
-									</div>
-									<p class="text-[1rem] text-[#E8E8E8]">feedback call with UK <br>based Account Manager</p>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
-									<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">98%</p>
-									<p class="text-[1rem] text-[#E8E8E8]">developer performance <br>score from client feedback</p>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">Expanded developer <br>team to 5 within</p>
-									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
-										<div class="pl-2">
-											<p class="text-[1rem] text-[#E8E8E8]">months</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+	
+	<div class="w-full relative">
+		<div class="container">
+			<div class="block">
+				<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]">Case <span class="text-dark-orange">Studies</span></h2>
 			</div>
+			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
+				<div class="col-span-4 lg:col-span-4 content-center case-tab active" data-id="tab-1">
+					<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
+				</div>
+				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-2">
+					<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt="">
+				</div>
+				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-3">
+					<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/tiller-logo.svg" alt="">
+				</div>
+			</div>
+			<div class="tab-container">
+				<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-1.jpg');">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
+						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+							<div class="block max-w-[47rem]">
+								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Seamless and Easy Integration</p>
+								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]"><img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> The developers at Smart Working have provided work the same hours as our team, attend all meetings, and are always available for communication. Their seamless integration into our workflows has made them feel like a natural extension of our in-house team, without any of the challenges we expected from remote hiring.</p>
+								<p class=" text-[1rem] text-[#fff] font-[600]">Cameron Wade</p>
+								<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Cameron Wade</p>
+							</div>
+						</div>
+						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
+								</div>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
+								<p class="text-[1rem] text-[#E8E8E8]">of the developers still with the client after 1 year</p>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
+								<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-2.jpg');">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
+						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+							<div class="block max-w-[47rem]">
+								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Reliable and trustworthy way to scale your team</p>
+								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">
+									<img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> 
+									Hiring remote developers felt like a risk at first, but Smart Working’s process removed all our concerns. The support from their UK team made us feel secure every step of the way. We’ve been using Smart Working for over two years now, and their process has always been safe and dependable.</p>
+								<p class=" text-[1rem] text-[#fff] font-[600]">Mark Cadby</p>
+								<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Chief Technical Officer</p>
+							</div>
+						</div>
+						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<p class="text-[1rem] text-[#E8E8E8]">Delivered a vetted <br>shortlist in under</p>
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">5</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
+								</div>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
+								<p class="text-[1rem] text-[#E8E8E8]">of the developers undergo and verification checks prior to employment</p>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
+								<p class="text-[1rem] text-[#E8E8E8]">The entire dev team <br>came to visit the</p>
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">UK</p></div>
+									<div class="pl-2">
+										<!-- <p class="text-[1rem] text-[#E8E8E8]">days</p> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="tab-3" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-3.jpg');">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
+						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+							<div class="block max-w-[47rem]">
+								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">Constant and ongoing support</p>
+								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">
+									<img class="h-[2rem] w-[2rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> 
+									Smart Working doesn’t just stop at hiring—they’ve provided continuous support and training to ensure long-term success. Their team’s feedback calls, management and training of our staff has been incredibly useful and made the relationship a huge success.
+								</p>
+								<p class=" text-[1rem] text-[#fff] font-[600]">Edward Genochio</p>
+								<p class=" text-[0.875rem] text-[#A5A5A5] font-[500]">Chief Technical Officer</p>
+							</div>
+						</div>
+						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">14</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days<br>scheduled</p></div>
+								</div>
+								<p class="text-[1rem] text-[#E8E8E8]">feedback call with UK <br>based Account Manager</p>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto mb-[2.5rem]">
+								<p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">98%</p>
+								<p class="text-[1rem] text-[#E8E8E8]">developer performance <br>score from client feedback</p>
+							</div>
+							<div class="max-w-[100%] sm:max-w-[16.5rem] px-[1.8rem] py-2 border-l-4 border-[#F34D05] ml-auto">
+								<p class="text-[1rem] text-[#E8E8E8]">Expanded developer <br>team to 5 within</p>
+								<div class="flex">
+									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
+									<div class="pl-2">
+										<p class="text-[1rem] text-[#E8E8E8]">months</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
-	<?php endif; ?>
+	</div>
 	
-	<!-- How It Works Section -->
-	
-	 
-	 <!-- <div class=" w-full relative">
-		<div class="w-full relative z-10">
-			<?php //get_template_part( 'template-parts/client-how-it-works' );?>
-		</div>
-	 </div> -->
-		
-	<?php endwhile; ?>
-	<?php endif; ?>
 
 
     <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	   <?php if (get_row_layout() == 'how_it_works') : ?>
-<div class=" w-full relative bg-white p-[1rem] lg:p-[2.5rem]">
-		<div class="w-full relative z-10">
-			<div class="container">
-			<?php if(get_sub_field('small_title')): ?>
-				<div class="block mb-[2.5rem]">
-					<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
-				</div>
-			<?php endif; ?>	
-				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 lg:gap-16">
-					<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-						<div class="progressBarContainer">
-						<?php if(have_rows('box_content')): ?>
-						<?php while(have_rows('box_content')): the_row(); ?>
-						<?php 
-							$title = get_sub_field('title'); 
-							$row_index = get_row_index(); 
-						?>
-							<div class="item how-its-work-items">
-								<div class="how-its-work-title"><?php echo $title;?></div>
-								<div class="how-its-work-dicription mt-4">
-									<ul class="list-disc">
-									<?php if(have_rows('main_points')): ?>
-                                    <?php while(have_rows('main_points')): the_row(); ?>
-										<li> <?php echo get_sub_field('points'); ?> </li>
-									<?php endwhile; ?>	
-                                    <?php endif; ?>		
-									</ul>
-								</div>
-								<span data-slick-index="<?php echo $row_index; ?>" class="sliderProgressBar"></span>
-							</div>
-						<?php endwhile; ?>	
-                        <?php endif; ?>
-							
-							
+			<div class=" w-full relative bg-white p-[1rem] lg:p-[2.5rem]">
+				<div class="w-full relative z-10">
+					<div class="container">
+					<?php if(get_sub_field('small_title')): ?>
+						<div class="block mb-[2.5rem]">
+							<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
 						</div>
-						
-					</div>
-					<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-						<div class="slider-hiw single-item">
-						<?php if(have_rows('box_content')): ?>
-						<?php while(have_rows('box_content')): the_row(); ?>
-							<div><img class="w-[100%] max-w-[600px] h-auto" src="<?php echo get_sub_field('images')['url']; ?>" alt="<?php echo get_sub_field('images')['url']; ?>"></div>
-						<?php endwhile; ?>	
-                        <?php endif; ?>	
+					<?php endif; ?>	
+						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 lg:gap-16">
+							<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+								<div class="progressBarContainer">
+								<?php if(have_rows('box_content')): ?>
+								<?php while(have_rows('box_content')): the_row(); ?>
+								<?php 
+									$title = get_sub_field('title'); 
+									$row_index = get_row_index(); 
+								?>
+									<div class="item how-its-work-items">
+										<div class="how-its-work-title"><?php echo $title;?></div>
+										<div class="how-its-work-dicription mt-4">
+											<ul class="list-disc">
+											<?php if(have_rows('main_points')): ?>
+											<?php while(have_rows('main_points')): the_row(); ?>
+												<li> <?php echo get_sub_field('points'); ?> </li>
+											<?php endwhile; ?>	
+											<?php endif; ?>		
+											</ul>
+										</div>
+										<span data-slick-index="<?php echo $row_index; ?>" class="sliderProgressBar"></span>
+									</div>
+								<?php endwhile; ?>	
+								<?php endif; ?>
+									
+									
+								</div>
+								
+							</div>
+							<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+								<div class="slider-hiw single-item">
+								<?php if(have_rows('box_content')): ?>
+								<?php while(have_rows('box_content')): the_row(); ?>
+									<div><img class="w-[100%] max-w-[600px] h-auto" src="<?php echo get_sub_field('images')['url']; ?>" alt="<?php echo get_sub_field('images')['url']; ?>"></div>
+								<?php endwhile; ?>	
+								<?php endif; ?>	
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-<?php endif; ?>
-	
+		<?php endif; ?>
 	<?php endwhile; ?>
 	<?php endif; ?>
 
-
-	
 <!-- Vetted New Design Start -->
 	<div class=" w-full relative bg-white p-[1rem] lg:p-[2.5rem]">
 		<div class="container">
@@ -367,65 +349,13 @@
 	</div>
 <!-- Vetted New Design End -->
 
+<!-- Why Hire SmartWorking Start -->
 <div class=" w-full relative p-[1rem] lg:p-[2.5rem]">
 	<div class="container">
-		<div class="block mb-[2.5rem]">
-			<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]">Why hire with <span class="text-dark-orange">Smartworking?</span></h2>
-		</div>
-		<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
-			<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
-					<div class="col-span-12 min-h-[27.4rem] sm:col-span-6 lg:col-span-6 bg-[#60E3D5] rounded-[0.67rem] p-8">
-						<div class="block">
-							<img class="w-[7.5rem] h-[7.5rem]" src="<?php echo get_template_directory_uri();?>/images/iso-20001.svg" alt="">
-						</div>
-						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600]">Security</p>
-						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">All developers undergo background checks and compliance screenings. As an ISO 27001 certified company, we guarantee the highest standards of data protection and secure collaboration.</p>
-					</div>
-					<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-						<div class=" text-center min-h-[16.5rem] bg-[rgba(255,255,255,0.12)] mb-4 relative rounded-[0.67rem] p-8">
-							<div class="w-[100%] absolute left-0 bottom-0 text-center">
-								<img class="max-w-[100%] h-[15rem] inline" src="<?php echo get_template_directory_uri();?>/images/home-girl.png" alt="">
-							</div>
-						</div>
-						<div class=" min-h-[6.5rem] bg-[#AAD464] rounded-[0.67rem] p-8">
-							<p class=" text-[#1E1E1E] text-[1.5rem] font-[600]">Reliable</p>
-							<p class=" text-[#1E1E1E] text-[1rem] font-[400]">All our developers have a minimum of 5+ years experience and have worked with US or European businesses.</p>
-						</div>
-					</div>
-					<div class="col-span-12 sm:col-span-12 min-h-[11.2rem] lg:col-span-12 bg-[#C282FA] rounded-[0.67rem] p-8">
-						<p class=" text-[#1E1E1E] text-[2rem] font-[600]">Seamless integration</p>
-						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">Our developers integrate effortlessly into your team, working your hours, attending your meetings, and aligning with your workflows—making them a natural extension of your in-house team without the usual remote hiring challenges.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
-					<div class="col-span-12 min-h-[14.5rem] sm:col-span-6 lg:col-span-7 bg-[#77BDDF] rounded-[0.67rem] p-8">
-						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem]">10 Days</p>
-						<p class=" text-[#1E1E1E] text-[1.75rem] font-[600]">to Hire</p>
-						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">Within this time we will carry out three interviews (communication, character/logic and technical).</p>
-					</div>
-					<div class="col-span-12 sm:col-span-6 lg:col-span-5 bg-[#ECC1A1] rounded-[0.67rem] p-8">
-						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem]">96%</p>
-						<p class=" text-[#1E1E1E] text-[1.75rem] font-[600]">Success</p>
-						<p class=" text-[#1E1E1E] text-[1rem] font-[400]">96% of the developers we place are with the same client 12 months later.</p>
-					</div>
-					<div class="col-span-12 sm:col-span-12 min-h-[24rem] lg:col-span-12 bg-[rgba(255,255,255,0.12)] rounded-[0.67rem] p-8">
-						<div class="block text-center">
-							<img class="max-w-[28rem] w-[100%] inline" src="<?php echo get_template_directory_uri();?>/images/icons-skills.svg" alt="">
-						</div>
-						<div class="block text-center border-t border-[#fff] pt-5">
-							<p class=" text-[#E8E8E8] text-[1.5rem] font-[600]">120+ Skills and Technologies </p>
-							<p class=" text-[#E8E8E8] text-[1rem] font-[400]">Whatever your requirements, we’ll find the perfect developer.<br>We excel in vetting and matching.</p>
-						</div>
-					</div>
-				</div>		
-			</div>
-		</div>
+		<?php get_template_part( 'template-parts/why-hire-smartworking' );?>
 	</div>
 </div>
-
+<!-- Why Hire SmartWorking End -->
 
 
 	<!-- Curios Section  -->
