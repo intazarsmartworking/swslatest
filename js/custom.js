@@ -493,12 +493,6 @@ setInterval(function (){
 }, 6000)
 
 
-
-
-
-
-
-
 jQuery('.silkSlide').slick({
   infinite: true,
   speed: 300,
@@ -524,9 +518,6 @@ jQuery('.silkSlide').slick({
         }
       ]
 });
-
-
-
 
 
 $('.logoSlider').slick({
@@ -1907,28 +1898,31 @@ document.addEventListener('DOMContentLoaded', function() {
   const nextButtons = document.querySelectorAll('.next-step');
   const previousButtons = document.querySelectorAll('.previous-step');
 
-  // Show the first step by default
-  steps[0].classList.add('active');
+  if(steps.length > 0){
+    steps[0].classList.add('active')
+    nextButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (currentStep < steps.length) {
+                steps[currentStep - 1].classList.remove('active');
+                steps[currentStep].classList.add('active');
+                currentStep++;
+            }
+        });
+    });
+    
+    previousButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (currentStep > 1) {
+                steps[currentStep - 1].classList.remove('active');
+                steps[currentStep - 2].classList.add('active');
+                currentStep--;
+            }
+        });
+    });
 
-  nextButtons.forEach(button => {
-      button.addEventListener('click', function() {
-          if (currentStep < steps.length) {
-              steps[currentStep - 1].classList.remove('active');
-              steps[currentStep].classList.add('active');
-              currentStep++;
-          }
-      });
-  });
-  
-  previousButtons.forEach(button => {
-      button.addEventListener('click', function() {
-          if (currentStep > 1) {
-              steps[currentStep - 1].classList.remove('active');
-              steps[currentStep - 2].classList.add('active');
-              currentStep--;
-          }
-      });
-  });
+  }
+  // Show the first step by default
+
 });
 
 var selectedSkill = [];
@@ -2019,7 +2013,12 @@ var currencyValue = 1;
 var saveAmount = 1;
 var otherFromHoursPrice = 0;
 var otherToHoursPrice = 0;
-
+var experience = 'senior';
+developerCast = {
+  midLevel:0,
+  senior:0,
+   name: ''
+};
 
 
 
@@ -2027,91 +2026,43 @@ jQuery('#select_skill').on('change', function() {
   const selectedValue = JSON.parse(jQuery(this).val());
   console.log('Selected value: ',  selectedValue);
 
-  
+  developerCast = selectedValue;
 
-  fromHoursPrice = selectedValue.midLevel;
-  toHoursPrice = selectedValue.senior;
+  // fromHoursPrice = selectedValue.midLevel;
+  // toHoursPrice = selectedValue.senior;
 
-  if(selectedValue.midLevel == 26 && selectedValue.senior == 30){
+  showConvertPrice()
 
-    smartFromPrice = 60840;
-    smartToPrice = 70200;
-    otherFromPrice = 90000;
-    otherToPrice = 140000;
-    otherFromHoursPrice = 39;
-    otherToHoursPrice = 60;
-
-    showConvertPrice()
-    
-
-  }else if(selectedValue.midLevel == 22 && selectedValue.senior == 24){
-
-    smartFromPrice = 51480;
-    smartToPrice = 56160;
-    otherFromPrice = 80000;
-    otherToPrice = 120000;
-
-    otherFromHoursPrice = 35;
-    otherToHoursPrice = 52;
-
-    showConvertPrice()
-   
-  }else if(selectedValue.midLevel == 20 && selectedValue.senior == 22){
-
-    smartFromPrice = 46800;
-    smartToPrice = 51480;
-    otherFromPrice = 70000;
-    otherToPrice = 85000;
-    
-    otherFromHoursPrice = 30;
-    otherToHoursPrice = 37;
-
-    showConvertPrice()
-
-  }else if(selectedValue.midLevel == 18 && selectedValue.senior == 20){
-
-    smartFromPrice = 42120;
-    smartToPrice = 46800;
-    otherFromPrice = 65000;
-    otherToPrice = 80000;
-
-    otherFromHoursPrice = 28;
-    otherToHoursPrice = 35;
-
-    showConvertPrice()
-
-  }else if(selectedValue.midLevel == 14 && selectedValue.senior == 18){
-
-    smartFromPrice = 32760;
-    smartToPrice = 42120;
-    otherFromPrice = 52000;
-    otherToPrice = 70000;
-
-    otherFromHoursPrice = 21;
-    otherToHoursPrice = 30;
-
-    showConvertPrice()
-
-  }
-
+});
+jQuery('#experienceDev').on('change', function() {
+  const selectedValue = jQuery(this).val();
+  console.log('Selected value: ',  selectedValue);
+  experience = selectedValue;
+  console.log('devPrice', experience)
+  showConvertPrice()
 });
 
 jQuery('#countriesList').on('change', function() {
   const selectedValue = jQuery(this).val();
-  if(selectedValue == 'US'){
+  let imageName = ''
+  if(selectedValue == 'us'){
     currencyValue = 1.2;
     jQuery('.currency-symbols').text('$');
     jQuery('.select-country').text('United States');
-  }else if(selectedValue == 'UK'){
+    imageName = 'flag-us';
+  }else if(selectedValue == 'uk'){
     currencyValue = 1;
     jQuery('.currency-symbols').text('£');
-    jQuery('.select-country').text('United Kingdom')
+    jQuery('.select-country').text('United Kingdom');
+    imageName = 'flag-uk'
   }else{
     currencyValue = 1;
   }
   console.log('Selected value: ',  selectedValue);
 
-  
+  console.log(my_theme_vars.template_url);
+  $('.countryImage').attr('src', my_theme_vars.template_url + '/images/'+imageName+'.svg');
+
   showConvertPrice()
   
   
@@ -2136,6 +2087,34 @@ jQuery('#decrement-button').on('click', function() {
 });
 
 function showConvertPrice(){
+    console.log('experience', experience)
+    
+    const showSmartPriceHours = developerCast[experience];
+    const showSmartPriceHoursCurrency = showSmartPriceHours*currencyValue;
+    const showSmartPriceHoursCurrencyDevs =  Math.trunc(showSmartPriceHoursCurrency);
+
+    const showSmartPriceMonth = ((showSmartPriceHours*40)*52)/12;
+    const showSmartPriceMonthCurrency = showSmartPriceMonth*currencyValue;
+    const showSmartPriceMonthCurrencyDevs = Math.trunc(showSmartPriceMonthCurrency*numberOfDev);
+
+    const showOtherPriceHoursCurrencyDevs = (showSmartPriceHoursCurrencyDevs*54)/100;
+    const showOtherPriceMonthCurrencyDevs = (showSmartPriceMonthCurrencyDevs*54)/100;
+    const showOtherPriceHoursCurrencyDevsRound = Math.ceil(showSmartPriceHoursCurrencyDevs + showOtherPriceHoursCurrencyDevs)
+    const showOtherPriceMonthCurrencyDevsRound = Math.ceil(showSmartPriceMonthCurrencyDevs + showOtherPriceMonthCurrencyDevs)
+
+    $('.smartHourPrice').text(converter(showSmartPriceHoursCurrencyDevs));
+    $('.smartMonthPrice').text(converter(showSmartPriceMonthCurrencyDevs));
+
+    $('.otherHourPrice').text(converter(showOtherPriceHoursCurrencyDevsRound));
+    $('.otherMonthPrice').text(converter(showOtherPriceMonthCurrencyDevsRound));
+
+
+
+    
+
+
+
+
     console.log('conver price', currencyValue, numberOfDev)
     const smartFromPriceChange = Math.trunc(((smartFromPrice/12)*numberOfDev)*currencyValue);
     const smartToPriceChange = Math.trunc(((smartToPrice/12)*numberOfDev)*currencyValue);
