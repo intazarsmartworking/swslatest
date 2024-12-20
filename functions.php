@@ -159,6 +159,10 @@ function sws_scripts() {
 	wp_enqueue_script( 'sws-addIndicators', get_template_directory_uri() . '/js/debug.addIndicators.js', array(), THEME_VERSION, true );
 	
 	wp_enqueue_script( 'sws-custom', get_template_directory_uri() . '/js/custom.js', array(), THEME_VERSION, true ); // last on write
+	
+	wp_localize_script('sws-custom', 'my_theme_vars', array(
+        'template_url' => get_template_directory_uri(),
+    ));
 
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap', false ); 
 

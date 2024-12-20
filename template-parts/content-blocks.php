@@ -412,8 +412,8 @@
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
 										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<!-- <option selected>Choose a country</option> -->
-											<option value="ML">Mid level (4-6 years)</option>
-											<option value="SL" selected>Senior level (6+ years)</option>
+											<option value="midLevel">Mid level (4-6 years)</option>
+											<option value="senior" selected>Senior level (6+ years)</option>
 											<!-- <option value="FR">France</option>
 											<option value="DE">Germany</option> -->
 										</select>
@@ -438,11 +438,11 @@
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
 									<div class="relative select-input">
-										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/uk.svg" alt="">
+										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
 										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<!-- <option selected>Choose a country</option> -->
-											<option value="US">United States</option>
-											<option value="UK" selected>United Kingdom</option>
+											<option value="us">United States</option>
+											<option value="uk" selected>United Kingdom</option>
 											<!-- <option value="FR">France</option>
 											<option value="DE">Germany</option> -->
 										</select>
@@ -472,10 +472,10 @@
 							<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
 							<div class="relative h-[100%] text-center">
 								<p class="text-[1.5rem] font-[600] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
-								<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartFromPrice">0</span>/hour</p>
+								<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartHourPrice">0</span>/hour</p>
 								<!-- <p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p> -->
 								<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3">Equivalent to</p>
-								<p class="text-[1rem] font-[400] text-[#1E1E1E]"><span class="currency-start text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
+								<p class="text-[1rem] font-[400] text-[#1E1E1E]"><span class="smartMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
 								
 							</div>
 							<div class="w-[100%] absolute h-[110px] bg-[#FCFCFC] border-t border-[#EEE] left-0 bottom-0 p-[20px]">
@@ -485,13 +485,13 @@
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-							<img class="absolute w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/uk.svg" alt="">
+							<img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
 							<div class="relative h-[100%] text-center">
 								<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country">United Kingdom</span></p>
-								<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherFromPrice">0</span>/hour</p>
+								<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherHourPrice">0</span>/hour</p>
 								<!-- <p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p> -->
 								<p class="text-[1rem] font-[400] text-[#FFF] mb-3">Equivalent to</p>
-								<p class="text-[1rem] font-[400] text-[#FFF]"><span class="currency-start-other text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
+								<p class="text-[1rem] font-[400] text-[#FFF]"><span class="otherMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
 							</div>
 							<div class="w-[100%] absolute h-[110px] bg-[#202020] border-t border-[#000]  left-0 bottom-0 p-[20px] md:px-[30px]">
 								<p class="text-[0.875rem] font-[500] text-center text-[#FFF]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs*</p>
