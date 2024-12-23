@@ -76,11 +76,14 @@
 				<?php endif; ?>
 				</div>
 				<div class="col-span-12 sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[25.3rem] lg:col-span-6 bg-[#EF995E] rounded-[0.67rem] p-8">
-					<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem] mb-4">Vetting</p>
+					<?php if(get_sub_field('seven_box_title')): ?>
+						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem] mb-4"><?php echo get_sub_field('seven_box_title'); ?></p>
+					<?php endif; ?>
+					<?php if(get_sub_field('seven_box_paragraph')): ?>
 					<p class=" text-[#1E1E1E] text-[1rem] font-[400]">
-						We rigorously vet candidates to select the top 1%. Each candidate undergoes technical interviews, assessments, and live coding tests to validate skills.
+						<?php echo get_sub_field('seven_box_paragraph'); ?>
 					</p> 
-					<p>Communication is assessed through interviews and written exams, while background screening ensures reliability and quality.</p>
+					<?php endif; ?>
 				</div>
 				<div class="col-span-12 sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[25.3rem] relative lg:col-span-6 bg-[rgba(255,255,255,0.12)] rounded-[0.67rem] p-8">
 					<img class="absolute right-0 top-0 h-[100%] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/why-box-bg.png" alt="">
