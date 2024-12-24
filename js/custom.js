@@ -687,10 +687,11 @@ jQuery(".accordion-item .accordion-title").click(function(){
 
 
 jQuery(document).ready(function(){
+
   var listPosition = []
   var x = document.querySelectorAll(".slider-item");
   for (let i = 0; i < x.length; i++) {
-    const leftPos = 630*i;
+    const leftPos =410*i;
     listPosition.push(leftPos)
   }
 
@@ -698,7 +699,7 @@ jQuery(document).ready(function(){
     x[index].style.left = `${ele}px`
   })
 
-  const maxMove = (x.length-2)*630;
+  const maxMove = (x.length-2)*410;
   let maxMoveItem = 0
 
   indexChange = 1;
@@ -706,7 +707,7 @@ jQuery(document).ready(function(){
   jQuery('#prevButton').on('click', function(){
     var rNum = (Math.random()*8)-5;
      if(maxMoveItem >= 0){
-      const changePosi = listPosition.map((ele) => (ele - 630));
+      const changePosi = listPosition.map((ele) => (ele - 410));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0 && changePosi[0] <= 0){
           //x[index].style.left = `${ele}px`;
@@ -739,7 +740,7 @@ jQuery(document).ready(function(){
 
   jQuery('#nextButton').on('click', function(){
     if(maxMove >= maxMoveItem){
-      const changePosi = listPosition.map((ele) => (ele + 630));
+      const changePosi = listPosition.map((ele) => (ele + 410));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0  && changePosi[0] <= 0){
           // x[index].style.left = `${ele}px`
@@ -765,6 +766,93 @@ jQuery(document).ready(function(){
      }
 
   })
+
+
+  var listPosition2 = []
+  var x2 = document.querySelectorAll(".slider-item2");
+  for (let i = 0; i < x2.length; i++) {
+    const leftPos2 =410*i;
+    listPosition2.push(leftPos2)
+  }
+
+  listPosition2.forEach((ele, index) =>{
+    x2[index].style.left = `${ele}px`
+  })
+
+  const maxMove2 = (x2.length-2)*410;
+  let maxMoveItem2 = 0
+
+  indexChange2 = 1;
+
+  jQuery('#prevButton2').on('click', function(){
+    var rNum2 = (Math.random()*8)-5;
+     if(maxMoveItem2 >= 0){
+      const changePosi2 = listPosition2.map((ele) => (ele - 410));
+      changePosi2.forEach((ele, index) =>{
+        if(ele >= 0 && changePosi2[0] <= 0){
+          //x[index].style.left = `${ele}px`;
+          jQuery(x2[index]).animate({left:`${ele+(20*index)}px`})
+          if(ele <= 0){
+            // x[index].style.rotate = `${index*2}deg`;
+            jQuery(x2[index]).animate({rotate:`${rNum2}deg`})
+            jQuery(x2[index]).animate({top: 300},"slow");
+            jQuery(x2[index]).animate({top: 0},"slow");
+            jQuery(x2[index]).addClass('active')
+          }
+        }
+      })
+      //console.log(changePosi)
+      listPosition2 = changePosi2;
+      maxMoveItem2 = listPosition2[changePosi2.length -2];
+     }
+     indexChange2 = indexChange2 + 1;
+
+     if(indexChange2 > 0  && x2.length > indexChange2){
+      jQuery('#prevButton2').prop('disabled', false);
+      jQuery('#nextButton2').prop('disabled', false);
+     }else{
+      jQuery('#prevButton2').prop('disabled', true);
+      jQuery('#nextButton2').prop('disabled', false);
+     }
+
+    
+  })
+
+  jQuery('#nextButton2').on('click', function(){
+    if(maxMove2 >= maxMoveItem2){
+      const changePosi2 = listPosition2.map((ele) => (ele + 410));
+      changePosi2.forEach((ele, index) =>{
+        if(ele >= 0  && changePosi2[0] <= 0){
+          // x[index].style.left = `${ele}px`
+          jQuery(x2[index]).animate({left:`${ele+(20*index)}px`})
+          if(ele > 0){
+            //x[index].style.rotate = `${0}deg`
+            jQuery(x2[index]).animate({rotate:`${0}deg`})
+            jQuery(x2[index]).removeClass('active')
+          }
+        }
+      })
+      //console.log(changePosi)
+      listPosition2 = changePosi2;
+      maxMoveItem2 = listPosition2[changePosi2.length -1];
+    }
+    indexChange2 = indexChange2 - 1;
+    if(indexChange2 > 1 && x2.length > indexChange2){
+      jQuery('#prevButton2').prop('disabled', false);
+      jQuery('#nextButton2').prop('disabled', false);
+     }else{
+      jQuery('#prevButton2').prop('disabled', false);
+      jQuery('#nextButton2').prop('disabled', true);
+     }
+
+  })
+
+
+
+
+
+
+
   
   setTimeout(() =>{
     jQuery('.userMore').slick({
@@ -2265,6 +2353,13 @@ jQuery('.hero-slider').slick({
 jQuery('.case-tab').on('click', function(){
   jQuery('.case-tab').removeClass('active');
   jQuery('.tab-content').removeClass('active');
+  const getId = jQuery(this).attr('data-id');
+  jQuery(this).addClass('active')
+  jQuery(`#${getId}`).addClass('active')
+})
+jQuery('.testimonial-tab li').on('click', function(){
+  jQuery('.testimonial-tab li').removeClass('active');
+  jQuery('.testimonial-content').removeClass('active');
   const getId = jQuery(this).attr('data-id');
   jQuery(this).addClass('active')
   jQuery(`#${getId}`).addClass('active')
