@@ -1,4 +1,4 @@
-<div class="w-full relative py-6">
+<div class="w-full relative px-4 lg:px-0 py-6">
 	<div class="container">
 		<?php if (have_rows('block')) : ?>
 			<?php while (have_rows('block')) : the_row(); ?>

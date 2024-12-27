@@ -8745,6 +8745,11 @@ body.lightMode .single-blog .blog-table .text-16 {
     padding-bottom: 80px;
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:pl-48 {
     padding-left: 12rem;
   }
