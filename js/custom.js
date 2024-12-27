@@ -2437,6 +2437,7 @@ jQuery(document).ready(function(){
 		startProgressbar();
 	});
 	
+  $('.faq-accordian .faq-accordian-item:first-child').addClass('active');
 		
 });
 
@@ -2553,3 +2554,9 @@ jQuery('.vetted-tech-experts').slick({
     }
   ]
 });
+
+
+jQuery('.faq-accordian-title').on('click', function(){
+  jQuery('.faq-accordian-item').removeClass('active')
+  jQuery(this).parent('.faq-accordian-item').addClass('active')
+})

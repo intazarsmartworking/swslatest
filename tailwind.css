@@ -253,8 +253,8 @@ body {
 }
 
 .footer-background {
-  background: linear-gradient(180deg, transparent 0%, #270d02 100%);
-  border-radius: 24px;
+  background: #fff;
+  border-top: 1px solid #cdcbcb;
 }
 
 .left-profile {
@@ -3206,8 +3206,9 @@ body.lightMode .relatedBlogs a p {
 }
 .footer-menu li a {
   cursor: pointer;
-  color: #aba4a4;
+  color: #4a4a4a;
   font-size: 0.875rem;
+  font-weight: 400;
 }
 .footer-menu li a:hover {
   color: #ff4d04;
@@ -3605,6 +3606,22 @@ body.lightMode .single-blog .blog-table .text-16 {
   color: #fff;
   box-shadow: inset 400px 0 0 0 #f34d05;
 }
+.button_slide_org {
+  color: #fff;
+  border: 0px solid #f34d05;
+  padding: 0.625rem 1.5rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6.25rem;
+  background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
+  border-radius: 40px;
+}
+.button_slide_org:hover {
+  color: #fff;
+  background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
+}
 
 .words-wrapper {
   text-align: center;
@@ -3797,6 +3814,64 @@ body.lightMode .single-blog .blog-table .text-16 {
   position: absolute;
   top: 0.45rem;
   text-align: center;
+}
+.faq-accordian {
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+.faq-accordian::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.faq-accordian::-webkit-scrollbar-track {
+  background: #feede6;
+  border-radius: 10px;
+}
+.faq-accordian::-webkit-scrollbar-thumb {
+  background: #f34d05;
+  border-radius: 10px;
+}
+.faq-accordian::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.faq-accordian-item {
+  border-radius: 0.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.faq-accordian-item .faq-accordian-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.faq-accordian-item .faq-accordian-title .icons-down,
+.faq-accordian-item.active .faq-accordian-title .icons-up {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+}
+.faq-accordian-item .faq-accordian-title .icons-up,
+.faq-accordian-item.active .faq-accordian-title .icons-down {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+.faq-accordian-item .faq-accordian-details {
+  color: #cacaca;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.6rem;
+  display: none;
+}
+.faq-accordian-item.active .faq-accordian-details {
+  display: block;
 }
 
 @media (min-width: 991px) and (max-width: 1360px) {
