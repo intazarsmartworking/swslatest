@@ -411,11 +411,8 @@
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
 										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
-											<!-- <option selected>Choose a country</option> -->
 											<option value="midLevel">Mid level (4-6 years)</option>
 											<option value="senior" selected>Senior level (6+ years)</option>
-											<!-- <option value="FR">France</option>
-											<option value="DE">Germany</option> -->
 										</select>
 									</div>
 								</div>
@@ -440,31 +437,13 @@
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
 										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
-											<!-- <option selected>Choose a country</option> -->
 											<option value="us">United States</option>
 											<option value="uk" selected>United Kingdom</option>
-											<!-- <option value="FR">France</option>
-											<option value="DE">Germany</option> -->
 										</select>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="block mb-8">
-								<label for="quantity-input" class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers:</label>
-								<div class="relative flex items-center w-[100%]">
-									<button type="button" id="decrement-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-s-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
-										<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
-										</svg>
-									</button>
-									
-									<button type="button" id="increment-button" class="bg-[#ff4d04] dark:bg-[#ff4d04] dark:hover:bg-[#ff4d04] dark:border-[#ff4d04] hover:bg-[#ff4d04] border border-[#ff4d04] rounded-e-lg py-4 px-8 h-[50px] focus:ring-[#ff4d04] dark:focus:ring-[#ff4d04] focus:ring-2 focus:outline-none">
-										<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-										</svg>
-									</button>
-								</div>
-							</div> -->
+							
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
@@ -592,30 +571,48 @@
 
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
-	<?php if (get_row_layout() == 'hire_developer_section') : ?>
+	<?php if (get_row_layout() == 'excited_section') : ?>
 		<section class="w-full bg-white p-[1rem] lg:p-[2.5rem]">
 			<div class="container !mb-14">
 				<div class="grid grid-cols-12 gap-4 md:gap-8 lg:gap-10 2xl:gap-16">
+				<?php if(get_sub_field('left_side_image')): ?>
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-3">
-						<img class="w-full" src="<?php echo get_template_directory_uri();?>/images/lft-frawme.svg" alt="">
+						<img class="w-full" src="<?php echo get_sub_field('left_side_image')['url']; ?>" alt="">
 					</div>
+				<?php endif; ?>		
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6 content-center">
-						<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[1rem]">Excited to make your <span class="text-dark-orange">first hire?</span></h2>
-						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#4A4A4A]">We’re ready to assist you to take the first step toward building a brighter future with the best talent by your side.</p>
+					<?php if(get_sub_field('main_title')): ?>
+						<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[1rem]"><?php echo get_sub_field('main_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
+					<?php endif; ?>
+					
+					<?php if(get_sub_field('small_paragraph')): ?>
+						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#4A4A4A]"><?php echo get_sub_field('small_paragraph'); ?></p>
+					<?php endif; ?>	
 						<ul class=" block text-[1rem] text-center font-[400] text-[#1E1E1E] my-[2rem]">
-							<li class="inline-block mx-2"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/Handshake.svg" alt=""> Hire in 7 days</li>
-							<li class="inline-block mx-2"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/UsersThree.svg" alt=""> Vetted and Screened Talent</li>
-							<li class="inline-block mx-3"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/HandCoins.svg" alt=""> £20/hr (all-in)</li>
+						<?php if(get_sub_field('slogan_1')): ?>
+							<li class="inline-block mx-2"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/Handshake.svg" alt=""> <?php echo get_sub_field('slogan_1'); ?></li>
+						<?php endif; ?>	
+						<?php if(get_sub_field('slogan_2')): ?>	
+							<li class="inline-block mx-2"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/UsersThree.svg" alt=""> <?php echo get_sub_field('slogan_2'); ?></li>
+						<?php endif; ?>	
+						<?php if(get_sub_field('slogan_3')): ?>	
+							<li class="inline-block mx-3"><img class="inline align-middle mr-1" src="<?php echo get_template_directory_uri();?>/images/HandCoins.svg" alt=""> <?php echo get_sub_field('slogan_3'); ?></li>
+						<?php endif; ?>
 						</ul>
+						
+						<?php if(get_sub_field('button_name')): ?>
 						<div class="block text-center">
-							<a class="button_slide_org slide_right" href="/contact-us">
-								Book A Call 🡢
+							<a class="button_slide_org slide_right" href="<?php echo get_sub_field('button_url'); ?>">
+								<?php echo get_sub_field('button_name'); ?> 🡢
 							</a>
 						</div>
+						<?php endif; ?>
 					</div>
-					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-3">
-						<img class="w-full" src="<?php echo get_template_directory_uri();?>/images/rt-frawme.svg" alt="">
-					</div>
+					<?php if(get_sub_field('right_side_image')): ?>
+						<div class="grid-item col-span-12 md:col-span-12 lg:col-span-3">
+							<img class="w-full" src="<?php echo get_sub_field('right_side_image')['url']; ?>" alt="">
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
