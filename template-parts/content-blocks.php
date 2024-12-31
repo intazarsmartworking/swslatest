@@ -196,7 +196,7 @@
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
-									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
 								</div>
 							</div>
@@ -204,7 +204,7 @@
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
 									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
 									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
 									</div>
 								</div>
@@ -232,7 +232,7 @@
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
-									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
 								</div>
 							</div>
@@ -240,7 +240,7 @@
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
 									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
 									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
 									</div>
 								</div>
@@ -268,7 +268,7 @@
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
-									<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
 								</div>
 							</div>
@@ -276,7 +276,7 @@
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
 									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
 									<div class="flex">
-										<div><p class="text-[#FDDBCD] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
 									</div>
 								</div>
