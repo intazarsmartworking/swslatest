@@ -530,23 +530,46 @@
 			<?php endwhile; ?>
 			<?php endif; ?> 	
 				<div class="grid grid-cols-12 gap-4 md:gap-8 lg:gap-10 2xl:gap-16">
+				<?php if (have_rows('block')) : ?>
+				<?php while (have_rows('block')) : the_row(); ?>
+				<?php if (get_row_layout() == 'home_faq_heading') : ?>
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6">
 						<div class="w-[100%] relative max-w-[100%] px-[15%]">
 							<div class=" bg-white w-[100%] z-10 absolute left-0 top-[40%] max-w-[15rem] inline-block rounded-[0.5rem] p-[0.65rem]">
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/messages.svg" alt=""> Messages</p>
-								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]">Connect with us instantly through secure messaging</p>
+							<?php if(get_sub_field('left_box_title_1')): ?>	
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/messages.svg" alt=""> <?php echo get_sub_field('left_box_title_1'); ?></p>
+							<?php endif; ?>
+							
+							<?php if(get_sub_field('left_box_paragraph_1')): ?>
+								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]"><?php echo get_sub_field('left_box_paragraph_1'); ?></p>
+							<?php endif; ?>
 							</div>
 							<div class=" bg-white w-[100%] z-10 absolute right-0 top-[10%] max-w-[15rem] inline-block rounded-[0.5rem] p-[0.65rem]">
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/phone-call.svg" alt=""> Phone Call</p>
-								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]">Fast and simple way to talk about your needs over a call.</p>
+							<?php if(get_sub_field('left_box_title_2')): ?>
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/phone-call.svg" alt=""> <?php echo get_sub_field('left_box_title_2'); ?></p>
+							<?php endif; ?>
+							
+							<?php if(get_sub_field('left_box_paragraph_2')): ?>
+								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]"><?php echo get_sub_field('left_box_paragraph_2'); ?></p>
+							<?php endif; ?>
 							</div>
 							<div class=" bg-white w-[100%] z-10 absolute right-0 bottom-[10%] max-w-[15rem] inline-block rounded-[0.5rem] p-[0.65rem]">
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/video-call.svg" alt=""> Video Call</p>
-								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]">Quick and simple video call to address your needs.</p>
+							<?php if(get_sub_field('left_box_title_3')): ?>	
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/video-call.svg" alt=""> <?php echo get_sub_field('left_box_title_3'); ?></p>
+							<?php endif; ?>
+
+							<?php if(get_sub_field('left_box_paragraph_3')): ?>	
+								<p class="text-[0.85rem] font-[400] text-left text-[#1E1E1E]"><?php echo get_sub_field('left_box_paragraph_3'); ?></p>
+							<?php endif; ?>
 							</div>
-							<img class="w-[100%] rounded-[2.5rem] h-auto" src="<?php echo get_template_directory_uri();?>/images/faq-img.jpg" alt="">
+							<?php if(get_sub_field('left_box_main_image')): ?>
+								<img class="w-[100%] rounded-[2.5rem] h-auto" src="<?php echo get_sub_field('left_box_main_image')['url']; ?>" alt="">
+							<?php endif; ?>
 						</div>
 					</div>
+				<?php endif; ?>
+				<?php endwhile; ?>
+				<?php endif; ?>	
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6">
 						<div class="faq-accordian">
 							<?php $faq_argument = array( 'post_type' => 'faq'); $faq_query	= new WP_Query($faq_argument); ?>
@@ -631,15 +654,8 @@
 	<?php endif; ?>		
 	<?php endwhile; ?>
 	<?php endif; ?>	
-
-
-
-
-	</div>
 </div>
-
-
-
+</div>
 <script type="text/javascript">
    jQuery(window).bind("load", function() {
    	homePageAnimation()
