@@ -3858,11 +3858,11 @@ body.lightMode .single-blog .blog-table .text-16 {
 .filter-tab li .filter-icon {
   display: inline;
   vertical-align: middle;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
-.filter-tab li:hover .filter-icon path,
-.filter-tab li.active .filter-icon path {
-  fill: #ffffff;
+.filter-tab li:hover .filter-icon,
+.filter-tab li.active .filter-icon {
+  filter: brightness(0) invert(1);
 }
 .select-input select {
   padding-left: 2.5rem;

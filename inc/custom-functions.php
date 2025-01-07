@@ -167,7 +167,7 @@ function display_ai_vetted_profile_categories_new_design() {
             echo '<li class="category-filter">';
             echo '<a href="#"  data-category-id="' . esc_attr($term->term_id) . '">';
             if ($taxonomy_image_url) {
-                echo '<img class="filter-icon" src="' . $taxonomy_image_url . '" alt="' . esc_attr($term->name) . '">';
+                echo '<object type="image/svg+xml" class="filter-icon" data="'. $taxonomy_image_url .'" alt="' . esc_attr($term->name) . '"></object>';
             }
             echo '<h3 style="display:inline">' . esc_html($term->name) . '</h3>';
             echo '</a>';
