@@ -385,11 +385,11 @@
 				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3">
 					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[500px]">
-							<p class="text-[1.5rem] font-[600] text-[#fff] mb-16">What are you looking for?</p>
+							<p class="text-[1.5rem] font-[600] text-[#fff] mb-16">Start building your team today</p>
 
 							<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-8">
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Select Skill</p>
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Experience</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/fullstak.svg" alt="">
 										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
@@ -418,7 +418,7 @@
 									</div>
 								</div>
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Experience</p>
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Roles</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
 										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
@@ -427,6 +427,18 @@
 										</select>
 									</div>
 								</div>
+								
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
+									<div class="relative select-input">
+										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
+										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+											<option value="us">United States</option>
+											<option value="uk" selected>United Kingdom</option>
+										</select>
+									</div>
+								</div>
+								
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers</p>
 									<div class="relative select-input md:max-w-[7.75rem]">
@@ -441,16 +453,6 @@
 												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
 											</svg>
 										</button>
-									</div>
-								</div>
-								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
-									<div class="relative select-input">
-										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
-										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
-											<option value="us">United States</option>
-											<option value="uk" selected>United Kingdom</option>
-										</select>
 									</div>
 								</div>
 							</div>
