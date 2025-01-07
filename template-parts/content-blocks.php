@@ -613,7 +613,7 @@
 						
 						<?php if(get_sub_field('button_name')): ?>
 						<div class="block text-center">
-							<a class="button_slide_org slide_right" href="<?php echo get_sub_field('button_url'); ?>">
+							<a class="button_slide_org slide_org_right" href="<?php echo get_sub_field('button_url'); ?>">
 								<?php echo get_sub_field('button_name'); ?> 🡢
 							</a>
 						</div>
