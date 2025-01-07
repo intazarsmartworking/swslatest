@@ -25,7 +25,7 @@
         <?php
          $unlock_btn_url = get_field('button_link', 'options');
         ?>
-          <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button_slide_org slide_right"><?php echo get_field('button_name', 'options'); ?></a>
+          <a href="<?php echo esc_url( $unlock_btn_url ); ?>" class="button_slide_org slide_org_right"><?php echo get_field('button_name', 'options'); ?></a>
         </div>
         <?php endif; ?>
         <div class="block">
