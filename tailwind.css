@@ -20,7 +20,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: #0c0c0c;
+  background-color: #030303;
 }
 /* body {
     font-family: "DM Sans", sans-serif;
@@ -364,9 +364,23 @@ body {
 }
 
 .home-blog-para {
-  color: rgba(202, 202, 202, 1);
+  color: #fafafa;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
+.home-page-blog {
+  overflow: hidden;
+}
+.home-page-blog img {
+  transition: transform 0.2s;
+}
+.home-page-blog:hover img {
+  transform: scale(1.5);
+}
 .tagsection {
   font-weight: 500;
   font-size: 14px;
@@ -3887,6 +3901,22 @@ body.lightMode .single-blog .blog-table .text-16 {
   top: 0.45rem;
   text-align: center;
 }
+.faq-accordian-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.faq-accordian-box:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 55px;
+  left: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0) 41.58%, #030303 83.51%);
+  width: 100%;
+  height: 4em;
+}
 .faq-accordian {
   width: 100%;
   height: 100%;
@@ -3894,6 +3924,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   overflow-y: auto;
   padding-right: 1.5rem;
 }
+
 .faq-accordian::-webkit-scrollbar {
   width: 0.2rem;
 }

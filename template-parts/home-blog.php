@@ -26,10 +26,12 @@
 			$image_src = wp_get_attachment_image_src($image_id, 'full');
 			$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);		
 			?>
-				<a href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>">
+				<a class="home-page-blog" href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>">
 				<div class="rounded">
 					<?php if ($image_src): ?>
-					<img class="w-[100%] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+						<div class="w-full h-[16rem] overflow-hidden rounded-t-lg">
+							<img class="w-[100%] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+						</div>
 					<?php endif; ?>
 					<div class="py-4">
 						<?php
@@ -50,8 +52,8 @@
 						<?	endif;
 							?>
 						<span class="inline-block py-3 font-bold text-sm text-dark-orange"> <?php echo get_the_date('F j, Y');?> </span>
-						<div class="font-bold text-2xl mb-2 text-white"><?php echo wp_trim_words(get_the_title(), 7); ?> </div>
-						<p class="home-blog-para text-base"> <?php echo wp_trim_words(get_the_content(), 20); ?></p>
+						<div class="font-[700] text-[1.5rem] mb-2 text-white whitespace-nowrap text-ellipsis w-full overflow-hidden"><?php echo wp_trim_words(get_the_title(), 7); ?> </div>
+						<p class="home-blog-para text-[1rem]"> <?php echo wp_trim_words(get_the_content(), 20); ?></p>
 					</div>
 				</div>
 				</a>
