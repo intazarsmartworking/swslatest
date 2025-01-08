@@ -1,10 +1,6 @@
 <?php if (get_row_layout() == 'testimonial_section') : ?>
 	<div class="w-full testimonial-section">
-	    <!-- <?php if(get_sub_field('small_heading')): ?>
-			<div class ="container mx-auto md:px-0 px-10">
-				<h3 class="text-white text-[12px] lg:text-[16px] text-center flex items-center justify-center small-intro mt-48"><?php echo get_sub_field('small_heading'); ?></h3>
-			</div>
-		<?php endif; ?> -->
+	    
 		
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="block mt-[5rem]">
@@ -54,7 +50,6 @@
 											</div>
 										</div>
 
-										<!-- <a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a> -->
 									</div>
 								</div>
 							</div>
@@ -73,14 +68,14 @@
 			<div class="container relative overflow-hidden min-h-[26rem] py-8">
 					<div class="slider-wrapper w-full min-h-[25rem] relative card-container overflow-visible">
 						<div class="slider-overlay">
-						<?php if(have_rows('testimonial_card')): ?>
-							<?php while(have_rows('testimonial_card')): the_row(); ?>
+						<?php if(have_rows('testimonial_review')): ?>
+							<?php while(have_rows('testimonial_review')): the_row(); ?>
 							<?php 
 								$testimonial = get_sub_field('testimonial'); 
 								$author_name = get_sub_field('name'); 
-								$author_designation = get_sub_field('designation'); 
+								$review_count = get_sub_field('review_count'); 
+								$date_and_time = get_sub_field('date_and_time');
 								$background = get_sub_field('background_color'); 
-								$linkedin = get_sub_field('linkedin');
 							?>
 
 
@@ -88,7 +83,6 @@
 							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item2 w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
 									<div class="block mb-6">
-										<div class="mb-3"><img class="h-[2.5rem]" src="<?php echo get_sub_field('logo')['url']; ?>"></div>
 										<div><img class="h-[0.95rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
 									</div>
 									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
@@ -98,11 +92,11 @@
 											<img class="w-[4.5rem] h-[4.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 											<div>
 												<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
-												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($author_designation);?> </p>
+												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($review_count);?> Review </p>
+												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p>
 											</div>
 										</div>
 
-										<!-- <a href="<?php echo $linkedin;?>" target="_blank"> <img src="<?php echo get_template_directory_uri();?>/images/linkedin_card_logo.svg" /> </a> -->
 									</div>
 								</div>
 							</div>
