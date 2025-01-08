@@ -20,7 +20,7 @@
 				<div class="heding-box">
 					<div class="block mb-5">
 					<?php if(get_sub_field('title')): ?>
-						<h1 class="words-wrapper text-[2.25rem] font-[700] text-[rgba(255,255,255,0.70)]">
+						<h1 class="words-wrapper text-[2.25rem] font-[700] text-[#fff]">
 							<?php echo get_sub_field('title'); ?>
 							<span class="words">
 								<span class="current" data-color="#f34d05">Software</span>
@@ -29,14 +29,15 @@
 								<span data-color="#f34d05">Backend</span>
 								<span data-color="#f34d05">Android</span>
 							</span>
+							<strong class="text-dark-orange">Developers</strong>
 						</h1>
 					<?php endif; ?>
-					<?php if(get_sub_field('short_description')): ?>
+					<!-- <?php if(get_sub_field('short_description')): ?>
 						<h1 class=" text-[2.25rem] font-[700] text-[rgba(255,255,255,0.70)] text-center mb-[0.5rem]"><?php echo get_sub_field('short_description'); ?></h1>
-					<?php endif; ?>	
+					<?php endif; ?>	 -->
 					
 					<?php if(get_sub_field('small_paragraph')): ?>
-						<p class=" text-[1.25rem] text-[rgba(255,255,255,0.80)] text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
+						<p class=" text-[1rem] text-[#E8E8E8] text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
 					<?php endif; ?>
 					</div>
 					<?php if(get_sub_field('button_name')): ?>
@@ -106,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full relative five-item-box bg-[rgba(30,30,30,0.40)] mt-7 pt-3">
+		<div class="w-full relative five-item-box bg-[rgba(30,30,30,0.40)] mt-9 pt-3">
 			<img class="absolute left-0 top-0 h-[0.125rem] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/bar-bg.png" alt="">
 			<div class="container px-4 py-3">
 				<div class="grid grid-cols-10 gap-3 lg:gap-5 xl:gap-14">
@@ -132,7 +133,7 @@
 	<!-- home banner close -->
 	<!-- Future Remote -->
 	<?php if (get_row_layout() == 'future_hiring') : ?>
-	<div class="w-full relative py-10" >
+	<div class="w-full relative py-[3.75rem]" >
 		<div class="container relative bg-[#1E1E1E] px-[0px] sm:px-[1rem] md:px-[5rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
 			<img class="bg-img absolute h-[100%] w-auto right-[-0] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/future-bg.svg" alt="">
 			<div class="relative z-10 block">
@@ -182,7 +183,7 @@
 			<div class="tab-container">
 				<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-1.jpg');">
 					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -192,7 +193,7 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
@@ -218,7 +219,7 @@
 				</div>
 				<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-2.jpg');">
 					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -228,7 +229,7 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
@@ -254,7 +255,7 @@
 				</div>
 				<div class="tab-content" id="tab-3" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-3.jpg');">
 					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-8 content-end">
+						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -264,7 +265,7 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4 content-end">
+						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
 								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 								<div class="flex">
@@ -298,7 +299,7 @@
     <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	   <?php if (get_row_layout() == 'how_it_works') : ?>
-			<div class=" w-full relative bg-white p-[1rem] lg:p-[2.5rem]">
+			<div class=" w-full relative bg-white p-[1rem] lg:pt-[7.5rem] lg:pb-[2.5rem]">
 				<div class="w-full relative z-10">
 					<div class="container">
 					<?php if(get_sub_field('small_title')): ?>
@@ -353,7 +354,7 @@
 	<?php endif; ?>
 
 <!-- Vetted New Design Start -->
-	<div class=" w-full relative bg-white p-[1rem] lg:p-[2.5rem]">
+	<div class=" w-full relative bg-white p-[1rem] lg:pt-[2.5rem] lg:pb-[3.5rem]">
 		<div class="container">
 			<?php get_template_part( 'template-parts/ai-vetted-profile-new-design' );?>	
 		</div>
@@ -361,7 +362,7 @@
 <!-- Vetted New Design End -->
 
 <!-- Why Hire SmartWorking Start -->
-<div class=" w-full relative p-[1rem] lg:p-[2.5rem]">
+<div class=" w-full relative p-[1rem] lg:py-[3.75rem]">
 	<div class="container">
 		<?php get_template_part( 'template-parts/why-hire-smartworking' );?>
 	</div>
@@ -369,11 +370,11 @@
 <!-- Why Hire SmartWorking End -->
 
 
-	<!-- Curios Section  -->
+	<!-- Calculator Section  -->
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'curious_section') : ?>
-	<section class=" w-full relative p-[1rem] lg:p-[2.5rem]">
+	<section class=" w-full relative p-[1rem] lg:py-[3.75rem]">
 		<div class="container">
 			<div class="block text-center mb-[4rem]">
 				<?php if(get_sub_field('main_heading')): ?>	
@@ -382,7 +383,7 @@
 				<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('subheading'); ?></p>
 			</div>
 			<div class="relative min-h-[350px]">
-				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-3">
+				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 xl:gap-7 2xl:gap-10">
 					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
 						<div class="w-[100%] xl:max-w-[500px]">
 							<p class="text-[1.5rem] font-[600] text-[#fff] mb-16">Start building your team today</p>
@@ -392,7 +393,7 @@
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Experience</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/fullstak.svg" alt="">
-										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<option selected>Choose a Skill</option>
 											<?php 
 											$args_skills = array(
@@ -421,7 +422,7 @@
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Roles</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
-										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<option value="midLevel">Mid level (4-6 years)</option>
 											<option value="senior" selected>Senior level (6+ years)</option>
 										</select>
@@ -432,7 +433,7 @@
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
-										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<option value="us">United States</option>
 											<option value="uk" selected>United Kingdom</option>
 										</select>
@@ -447,7 +448,7 @@
 												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
 											</svg>
 										</button>
-										<input type="number" id="quantity-input" min="1" value="1" class=" bg-[#1f1f1f] text-center border h-[2.5rem] rounded-[12.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full py-[0.3rem] px-[2rem] dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]" />
+										<input type="number" id="quantity-input" min="1" value="1" class=" bg-[#1f1f1f] text-center border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full py-[0.3rem] px-[2rem] dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]" />
 										<button type="button" class="btn-count right-2" id="increment-button" >
 											<svg class="w-3 h-3 inline text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
 												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
@@ -460,7 +461,7 @@
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+						<div class="w-[100%] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
 							<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
 							<div class="relative h-[100%] text-center">
 								<p class="text-[1.5rem] font-[600] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
@@ -476,7 +477,7 @@
 						</div>
 					</div>
 					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class="w-[100%] xl:max-w-[22.5rem] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+						<div class="w-[100%] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
 							<img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
 							<div class="relative h-[100%] text-center">
 								<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country">United Kingdom</span></p>
@@ -498,6 +499,7 @@
 	<?php get_template_part( 'template-parts/client-testimonial' );?>
 	<?php endwhile; ?>
 	<?php endif; ?>
+	<!-- Calculator Section End  -->
 	
 	<!-- 
 	<div class=" w-full relative">
@@ -513,7 +515,7 @@
 	<?php get_template_part( 'template-parts/home-blog' );?>
 	<!-- FAQ Section  -->
 
-	<div class="w-full p-[1rem] lg:p-[2.5rem]">
+	<div class="w-full p-[1rem] lg:p-[3.75rem]">
 		<div class="container">
 			<?php if (have_rows('block')) : ?>
 			<?php while (have_rows('block')) : the_row(); ?>
@@ -608,7 +610,7 @@
 	<?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	<?php if (get_row_layout() == 'excited_section') : ?>
-		<section class="w-full bg-white p-[1rem] lg:p-[2.5rem]">
+		<section class="w-full bg-white p-[1rem] lg:p-[3.75rem]">
 			<div class="container !mb-14">
 				<div class="grid grid-cols-12 gap-4 md:gap-8 lg:gap-10 2xl:gap-16">
 				<?php if(get_sub_field('left_side_image')): ?>

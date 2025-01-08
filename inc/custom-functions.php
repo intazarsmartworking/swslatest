@@ -149,7 +149,7 @@ function display_ai_vetted_profile_categories_new_design() {
     // Check if there are any categories
     if (!empty($terms) && !is_wp_error($terms)) {
         echo '<ul class="filter-tab">';
-        echo '<li class="category-filter">';
+        echo '<li class="category-filter active-now">';
         echo '<svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
 								<path d="M20.5 14C21.6046 14 22.5 13.1046 22.5 12C22.5 10.8954 21.6046 10 20.5 10C19.3954 10 18.5 10.8954 18.5 12C18.5 13.1046 19.3954 14 20.5 14Z" fill="#4B4B4B" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
 								<path d="M20.5 6C21.6046 6 22.5 5.10457 22.5 4C22.5 2.89543 21.6046 2 20.5 2C19.3954 2 18.5 2.89543 18.5 4C18.5 5.10457 19.3954 6 20.5 6Z" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -217,7 +217,8 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			
 			echo '<div class="hero-slider-item">';
 			  echo '<div class="hero-card vetted-tech-card relative">';
-			    echo '<div class="vetted-hover-box" style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg)">';
+			    echo '<div class="vetted-hover-box">';
+                //style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg)"
 			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3">' . get_the_title() . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-profile.svg"> '  . esc_html($designation) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-location.svg" > ' . esc_html($city) . ', ' . esc_html($country) . '</p>';
