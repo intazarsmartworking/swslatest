@@ -2510,6 +2510,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(70 68 68 / var(--tw-border-opacity));
 }
+.border-\[\#A6A6A6\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(166 166 166 / var(--tw-border-opacity));
+}
 .border-\[\#E7ECF0\] {
   --tw-border-opacity: 1;
   border-color: rgb(231 236 240 / var(--tw-border-opacity));
