@@ -1540,9 +1540,6 @@ select {
 .mt-6 {
   margin-top: 1.5rem;
 }
-.mt-7 {
-  margin-top: 1.75rem;
-}
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1581,9 +1578,6 @@ select {
 }
 .mt-\[50px\] {
   margin-top: 50px;
-}
-.mt-\[5rem\] {
-  margin-top: 5rem;
 }
 .mt-\[60px\] {
   margin-top: 60px;
@@ -2012,9 +2006,6 @@ select {
 .w-\[380px\] {
   width: 380px;
 }
-.w-\[3rem\] {
-  width: 3rem;
-}
 .w-\[4\.5rem\] {
   width: 4.5rem;
 }
@@ -2350,9 +2341,6 @@ select {
 .rounded-\[0\.25rem\] {
   border-radius: 0.25rem;
 }
-.rounded-\[0\.36rem\] {
-  border-radius: 0.36rem;
-}
 .rounded-\[0\.5rem\] {
   border-radius: 0.5rem;
 }
@@ -2364,9 +2352,6 @@ select {
 }
 .rounded-\[10px\] {
   border-radius: 10px;
-}
-.rounded-\[12\.5rem\] {
-  border-radius: 12.5rem;
 }
 .rounded-\[12px\] {
   border-radius: 12px;
@@ -2808,6 +2793,9 @@ select {
 .p-\[0\.65rem\] {
   padding: 0.65rem;
 }
+.p-\[0px\] {
+  padding: 0px;
+}
 .p-\[1\.5rem\] {
   padding: 1.5rem;
 }
@@ -3014,10 +3002,6 @@ select {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-\[0\.2rem\] {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-}
 .py-\[0\.3rem\] {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -3045,6 +3029,10 @@ select {
 .py-\[2\.125rem\] {
   padding-top: 2.125rem;
   padding-bottom: 2.125rem;
+}
+.py-\[3\.75rem\] {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 .py-\[30px\] {
   padding-top: 30px;
@@ -6172,9 +6160,8 @@ input[type="range"].home-range-slider::-moz-range-thumb {
 .header-box {
   border-radius: 100px;
   border: 0.5px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  background: #353535;
+  /* backdrop-filter: blur(50px); */
   box-shadow: 0px 0px 20px 0px rgba(113, 131, 193, 0.15);
   padding: 12px;
 }
@@ -7129,15 +7116,19 @@ body.lightMode .single-blog .blog-table .text-16 {
 }
 .vetted-tech-card .vetted-hover-box {
   position: absolute;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   z-index: 99;
   padding: 1rem;
   opacity: 0;
-  background-size: cover;
+  top: -1px;
+  /* background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
 }
 .vetted-tech-card:hover .vetted-hover-box {
   opacity: 1;
@@ -7529,7 +7520,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   margin-right: 0px;
 }
 .filter-tab li:hover,
-.filter-tab li.active {
+.filter-tab li.active-now {
   color: #fff;
   background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
 }
@@ -7539,7 +7530,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   margin-right: 0.5rem;
 }
 .filter-tab li:hover .filter-icon,
-.filter-tab li.active .filter-icon {
+.filter-tab li.active-now .filter-icon {
   filter: brightness(0) invert(1);
 }
 .select-input select {
@@ -8007,6 +7998,10 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .sm\:col-span-8 {
     grid-column: span 8 / span 8;
+  }
+
+  .sm\:col-span-7 {
+    grid-column: span 7 / span 7;
   }
 
   .sm\:mb-0 {
@@ -8672,6 +8667,10 @@ body.lightMode .single-blog .blog-table .text-16 {
     padding: 20px;
   }
 
+  .lg\:p-\[3\.75rem\] {
+    padding: 3.75rem;
+  }
+
   .lg\:p-\[32px\] {
     padding: 32px;
   }
@@ -8753,6 +8752,11 @@ body.lightMode .single-blog .blog-table .text-16 {
     padding-bottom: 10rem;
   }
 
+  .lg\:py-\[3\.75rem\] {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
   .lg\:py-\[3rem\] {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -8781,6 +8785,14 @@ body.lightMode .single-blog .blog-table .text-16 {
   .lg\:py-\[80px\] {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .lg\:pb-\[2\.5rem\] {
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:pb-\[3\.5rem\] {
+    padding-bottom: 3.5rem;
   }
 
   .lg\:pl-48 {
@@ -8829,6 +8841,14 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .lg\:pt-\[100px\] {
     padding-top: 100px;
+  }
+
+  .lg\:pt-\[2\.5rem\] {
+    padding-top: 2.5rem;
+  }
+
+  .lg\:pt-\[7\.5rem\] {
+    padding-top: 7.5rem;
   }
 
   .lg\:text-end {
@@ -8975,10 +8995,6 @@ body.lightMode .single-blog .blog-table .text-16 {
     grid-column: span 4 / span 4;
   }
 
-  .xl\:max-w-\[22\.5rem\] {
-    max-width: 22.5rem;
-  }
-
   .xl\:max-w-\[500px\] {
     max-width: 500px;
   }
@@ -8990,11 +9006,19 @@ body.lightMode .single-blog .blog-table .text-16 {
   .xl\:gap-14 {
     gap: 3.5rem;
   }
+
+  .xl\:gap-7 {
+    gap: 1.75rem;
+  }
 }
 @media (min-width: 1536px) {
 
   .\32xl\:min-h-\[25\.3rem\] {
     min-height: 25.3rem;
+  }
+
+  .\32xl\:gap-10 {
+    gap: 2.5rem;
   }
 
   .\32xl\:gap-16 {
