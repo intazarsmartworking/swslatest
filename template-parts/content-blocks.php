@@ -575,30 +575,32 @@
 				<?php endwhile; ?>
 				<?php endif; ?>	
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6">
-						<div class="faq-accordian">
-							<?php $faq_argument = array( 'post_type' => 'faq'); $faq_query	= new WP_Query($faq_argument); ?>
-							<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
-							<?php $post_id = get_the_ID(); ?>
-								<div class="faq-accordian-item">
-									<div class="faq-accordian-title">
-										<?php the_title();?>
-										<span class="icons-up">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-												<path d="M8.46973 13.2598L11.9997 9.73977L15.5297 13.2598" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-											</svg>
-										</span>
-										<span class="icons-down">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-												<path d="M8.46973 10.7402L11.9997 14.2602L15.5297 10.7402" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-											</svg>
-										</span>
+						<div class="faq-accordian-box">
+							<div class="faq-accordian">
+								<?php $faq_argument = array( 'post_type' => 'faq'); $faq_query	= new WP_Query($faq_argument); ?>
+								<?php while ($faq_query->have_posts()) : $faq_query->the_post();?>
+								<?php $post_id = get_the_ID(); ?>
+									<div class="faq-accordian-item">
+										<div class="faq-accordian-title">
+											<?php the_title();?>
+											<span class="icons-up">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M8.46973 13.2598L11.9997 9.73977L15.5297 13.2598" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="icons-down">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M8.46973 10.7402L11.9997 14.2602L15.5297 10.7402" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+										</div>
+										<div class="faq-accordian-details">
+											<?php echo get_the_excerpt();?>
+										</div>
 									</div>
-									<div class="faq-accordian-details">
-										<?php echo get_the_excerpt();?>
-									</div>
-								</div>
-							<?php endwhile; wp_reset_postdata();?>
+								<?php endwhile; wp_reset_postdata();?>
 
+							</div>
 						</div>
 					</div>
 					
