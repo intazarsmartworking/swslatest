@@ -92,18 +92,20 @@
 					
 							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item2 w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
-									<div class="block mb-6">
+									<div class="flex justify-between mb-6">
 										<div><img class="h-[0.95rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
+										<div><p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p></div>
 									</div>
 									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
 
-									<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-7">
-										<div class="flex items-center">
-											<img class="w-[4.5rem] h-[4.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
-											<div>
-												<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
-												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($review_count);?> Review </p>
-												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p>
+									<div class=" absolute bottom-[20px] left-0 w-[100%] px-7">
+										<div class="flex justify-between border-t border-[#A6A6A6] items-center pt-4">
+											<div class="flex items-center ">
+												<img class="w-[4.5rem] h-[4.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+												<div>
+													<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
+													<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($review_count);?> Review </p>
+												</div>
 											</div>
 										</div>
 
