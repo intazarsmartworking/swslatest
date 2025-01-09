@@ -3976,6 +3976,13 @@ body.lightMode .single-blog .blog-table .text-16 {
 .faq-accordian-item.active .faq-accordian-details {
   display: block;
 }
+.flag-img {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1rem;
+  border-radius: 6px;
+  margin-right: 0.45rem;
+}
 
 @media (min-width: 991px) and (max-width: 1360px) {
   .header-menu li a {

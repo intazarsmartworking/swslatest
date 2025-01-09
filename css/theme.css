@@ -1408,6 +1408,9 @@ select {
 .mb-\[0\.5rem\] {
   margin-bottom: 0.5rem;
 }
+.mb-\[0\.75rem\] {
+  margin-bottom: 0.75rem;
+}
 .mb-\[0px\] {
   margin-bottom: 0px;
 }
@@ -1443,6 +1446,9 @@ select {
 }
 .mb-\[4rem\] {
   margin-bottom: 4rem;
+}
+.mb-\[5\.5rem\] {
+  margin-bottom: 5.5rem;
 }
 .mb-\[50px\] {
   margin-bottom: 50px;
@@ -1735,6 +1741,9 @@ select {
 }
 .h-\[2rem\] {
   height: 2rem;
+}
+.h-\[3\.5rem\] {
+  height: 3.5rem;
 }
 .h-\[30px\] {
   height: 30px;
@@ -7656,6 +7665,13 @@ body.lightMode .single-blog .blog-table .text-16 {
 .faq-accordian-item.active .faq-accordian-details {
   display: block;
 }
+.flag-img {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1rem;
+  border-radius: 6px;
+  margin-right: 0.45rem;
+}
 @media (min-width: 991px) and (max-width: 1360px) {
   .header-menu li a {
     padding: 13px 4px;
@@ -9056,6 +9072,10 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .\32xl\:min-h-\[25\.3rem\] {
     min-height: 25.3rem;
+  }
+
+  .\32xl\:min-h-\[22\.3rem\] {
+    min-height: 22.3rem;
   }
 
   .\32xl\:gap-10 {
