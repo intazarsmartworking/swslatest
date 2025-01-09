@@ -41,7 +41,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<div class="col-span-12 sm:col-span-12 min-h-[11.2rem] lg:col-span-12 bg-[#C282FA] rounded-[0.67rem] p-8">
+				<div class="col-span-12 sm:col-span-12 min-h-[12.7rem] lg:col-span-12 bg-[#C282FA] rounded-[0.67rem] p-8">
 				<?php if(get_sub_field('third_box_title')): ?>
 					<p class=" text-[#1E1E1E] text-[2rem] font-[600]"><?php echo get_sub_field('third_box_title'); ?></p>
 				<?php endif; ?>	
@@ -68,7 +68,7 @@
 				</div>
 				<div class="col-span-12 sm:col-span-6 lg:col-span-5 bg-[#ECC1A1] rounded-[0.67rem] p-8">
 				<?php if(get_sub_field('fifth_box_title')): ?>
-					<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem] mb-[0.75rem]"><?php echo get_sub_field('fifth_box_title'); ?></p>
+					<p class=" text-[#1E1E1E] text-[2.5rem] font-[600] leading-[3.25rem] mb-[0.75rem]"><?php echo get_sub_field('fifth_box_title'); ?></p>
 				<?php endif; ?>	
 				<?php if(get_sub_field('fifth_box_small_title')): ?>	
 					<p class=" text-[#1E1E1E] text-[1.75rem] font-[600]"><?php echo get_sub_field('fifth_box_small_title'); ?></p>
@@ -77,9 +77,9 @@
 					<p class=" text-[#1E1E1E] text-[1rem] font-[400]"><?php echo get_sub_field('fifth_box_paragraph'); ?></p>
 				<?php endif; ?>
 				</div>
-				<div class="col-span-12 sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[22.3rem] lg:col-span-6 bg-[#EF995E] rounded-[0.67rem] p-8">
+				<div class="col-span-12 relative sm:col-span-12 min-h-[28.3rem] 2xl:min-h-[22.3rem] lg:col-span-6 bg-[#EF995E] rounded-[0.67rem] p-8">
 					<?php if(get_sub_field('seven_box_title')): ?>
-						<p class=" text-[#1E1E1E] text-[3.25rem] font-[600] leading-[3.25rem] mb-[0.75rem]"><?php echo get_sub_field('seven_box_title'); ?></p>
+						<p class=" text-[#1E1E1E] text-[2.5rem] font-[600] leading-[3.25rem] mb-[0.75rem]"><?php echo get_sub_field('seven_box_title'); ?></p>
 					<?php endif; ?>
 					<?php if(get_sub_field('seven_box_paragraph')): ?>
 					<p class=" text-[#1E1E1E] text-[1rem] font-[400]">
@@ -87,7 +87,7 @@
 					</p> 
 					<?php endif; ?>
 					<?php if(get_sub_field('seven_box_image')): ?>
-						<div class="block text-center mt-6">
+						<div class="block text-center absolute left-0 bottom-8 w-[100%] px-8">
 							<img class="max-w-[28rem] w-[100%] inline" src="<?php echo get_sub_field('seven_box_image')['url']; ?>" alt="">
 						</div>
 					<?php endif; ?>

@@ -1219,6 +1219,12 @@ select {
 .top-\[calc\(50vh-15px\)\] {
   top: calc(50vh - 15px);
 }
+.bottom-4 {
+  bottom: 1rem;
+}
+.bottom-8 {
+  bottom: 2rem;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -1597,6 +1603,9 @@ select {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mt-\[5rem\] {
+  margin-top: 5rem;
+}
 .block {
   display: block;
 }
@@ -1891,6 +1900,9 @@ select {
 }
 .min-h-\[90px\] {
   min-height: 90px;
+}
+.min-h-\[12\.7rem\] {
+  min-height: 12.7rem;
 }
 .\!w-\[208px\] {
   width: 208px !important;
@@ -9070,12 +9082,12 @@ body.lightMode .single-blog .blog-table .text-16 {
 }
 @media (min-width: 1536px) {
 
-  .\32xl\:min-h-\[25\.3rem\] {
-    min-height: 25.3rem;
-  }
-
   .\32xl\:min-h-\[22\.3rem\] {
     min-height: 22.3rem;
+  }
+
+  .\32xl\:min-h-\[25\.3rem\] {
+    min-height: 25.3rem;
   }
 
   .\32xl\:gap-10 {
