@@ -41,7 +41,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -68,6 +68,10 @@ body {
     rgba(255, 77, 2, 1),
     rgba(188, 56, 0, 1)
   );
+}
+.title-orange {
+  font-weight: 700;
+  color: #f34d05;
 }
 
 .trust-box {
@@ -453,7 +457,7 @@ body {
 @media (min-width: 1536px) {
   .container {
     width: 100%;
-    max-width: 1600px;
+    max-width: 80rem;
   }
 }
 
@@ -659,6 +663,13 @@ body {
   color: #fff;
   margin: 0rem 0.4rem;
   cursor: pointer;
+}
+.testimonial-tab li:hover {
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.2) -28.23%,
+    rgba(255, 255, 255, 0) 129.84%
+  );
 }
 .testimonial-tab li.active {
   background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
@@ -2460,7 +2471,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   padding: 15px 0px;
   width: 100%;
   position: sticky;
-  background: #1e1e1e;
+  /* background: #1e1e1e; */
 }
 .main-header.fixed {
   position: sticky;
@@ -3471,14 +3482,14 @@ body.lightMode .single-blog .blog-table .text-16 {
 }
 .hero-feature {
   position: relative;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
-  color: rgba(251, 251, 251, 0.8);
-  padding: 10px 10px 10px 35px;
+  color: #ffffff;
+  padding: 10px 3px 10px 29px;
+  opacity: 0.8;
   /* max-width: 315px; */
 }
 .hero-feature span {
-  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
 }
 .gradint-left {
@@ -3727,6 +3738,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   top: 0;
   left: 50%;
   opacity: 0;
+  font-weight: 700;
   transform: translate(-50%, -100%);
   transition: transform 0.7s, opacity 0.25s 0.25s;
 }
@@ -3784,9 +3796,9 @@ body.lightMode .single-blog .blog-table .text-16 {
   width: 100%;
   position: relative;
   background-position: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding-bottom: 6rem;
+  padding-bottom: 1.6rem;
 }
 .tab-content.active {
   display: block;
@@ -3805,6 +3817,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   font-style: normal;
   font-weight: 600;
   padding: 0.5rem 0;
+  cursor: pointer;
 }
 .how-its-work-title span {
   color: #f34d05;
@@ -3867,7 +3880,9 @@ body.lightMode .single-blog .blog-table .text-16 {
 .filter-tab li:last-child {
   margin-right: 0px;
 }
-.filter-tab li:hover,
+.filter-tab li:hover {
+  background: #dddcdc;
+}
 .filter-tab li.active-now {
   color: #fff;
   background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
@@ -3877,7 +3892,6 @@ body.lightMode .single-blog .blog-table .text-16 {
   vertical-align: middle;
   margin-right: 0.5rem;
 }
-.filter-tab li:hover .filter-icon,
 .filter-tab li.active-now .filter-icon {
   filter: brightness(0) invert(1);
 }
@@ -3896,7 +3910,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   width: 1.5rem;
   height: 1.5rem;
   background: #fff;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   position: absolute;
   top: 0.45rem;
   text-align: center;

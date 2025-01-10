@@ -58,10 +58,10 @@ jQuery(document).ready(function($) {
                 // Reinitialize Slick Slider
                 $('.vetted-tech-experts').slick({
                     infinite: true,
-                    autoplay: true,
+                    autoplay: false,
                     speed: 4000,
                     autoplaySpeed: 0,
-                    slidesToShow: 5,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     focusOnSelect: false,
                     arrows: false,
@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
                     responsive: [
                         {
                             breakpoint: 1440,
-                            settings: { slidesToShow: 5 }
+                            settings: { slidesToShow: 4 }
                         },
                         {
                             breakpoint: 1025,

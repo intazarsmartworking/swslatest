@@ -11,7 +11,7 @@
 <!-- home banner start -->
 <div class=" w-full relative">
   <div class=" w-full relative">
-	<div class="w-full bg-[#1E1E1E] relative z-10 pt-[2.5rem]">
+	<div class="w-full relative z-10 pt-[2.5rem]">
 		<?php if (have_rows('block')) : ?>
 		<?php while (have_rows('block')) : the_row(); ?>
 		<?php if (get_row_layout() == 'home_header') : ?>
@@ -29,7 +29,7 @@
 								<span data-color="#f34d05">Backend</span>
 								<span data-color="#f34d05">Android</span>
 							</span>
-							<strong class="text-dark-orange">Developers</strong>
+							<strong class="title-orange">Developers</strong>
 						</h1>
 					<?php endif; ?>
 					<!-- <?php if(get_sub_field('short_description')): ?>
@@ -37,7 +37,7 @@
 					<?php endif; ?>	 -->
 					
 					<?php if(get_sub_field('small_paragraph')): ?>
-						<p class=" text-[1rem] text-[#E8E8E8] text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
+						<p class=" text-[1rem] text-[#E8E8E8] opacity-80 text-center"><?php echo get_sub_field('small_paragraph'); ?></p>
 					<?php endif; ?>
 					</div>
 					<?php if(get_sub_field('button_name')): ?>
@@ -107,23 +107,25 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full relative five-item-box bg-[rgba(30,30,30,0.40)] mt-9 pt-3">
-			<img class="absolute left-0 top-0 h-[0.125rem] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/bar-bg.png" alt="">
-			<div class="container px-4 py-3">
-				<div class="grid grid-cols-10 gap-3 lg:gap-5 xl:gap-14">
-				<?php if(have_rows('after_banner_card_section')): ?>
-				<?php while(have_rows('after_banner_card_section')): the_row(); ?>
-				<?php 
-					$small_text = get_sub_field('small_text'); 
-				?>
-					<div class="col-span-10 sm:col-span-5 md:col-span-[4] lg:col-span-2">
-						<div class="hero-feature">
-							<img class="absolute w-[22px] h-[22px] left-[0] top-[12px]" src="<?php echo get_sub_field('icon')['url']; ?>" alt="">
-							<?php echo $small_text;?>
+		<div class="w-full relative five-item-box mt-9">
+			<div class="container relative pt-3">
+				<img class="absolute left-0 top-0 h-[0.125rem] w-[100%]" src="<?php echo get_template_directory_uri();?>/images/bar-bg.png" alt="">
+				<div class="w-full py-3">
+					<div class="grid grid-cols-10 gap-6">
+					<?php if(have_rows('after_banner_card_section')): ?>
+					<?php while(have_rows('after_banner_card_section')): the_row(); ?>
+					<?php 
+						$small_text = get_sub_field('small_text'); 
+					?>
+						<div class="col-span-10 sm:col-span-5 md:col-span-[4] lg:col-span-2">
+							<div class="hero-feature">
+								<img class="absolute w-[1.11rem] h-[1.11rem] left-[0] top-[13px]" src="<?php echo get_sub_field('icon')['url']; ?>" alt="">
+								<?php echo $small_text;?>
+							</div>
 						</div>
+					<?php endwhile; ?>	
+					<?php endif; ?>	
 					</div>
-				<?php endwhile; ?>	
-				<?php endif; ?>	
 				</div>
 			</div>
 		</div>
@@ -134,7 +136,7 @@
 	<!-- Future Remote -->
 	<?php if (get_row_layout() == 'future_hiring') : ?>
 	<div class="w-full relative py-[3.75rem]" >
-		<div class="container relative bg-[#1E1E1E] px-[0px] sm:px-[1rem] md:px-[5rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
+		<div class="container relative bg-[#1E1E1E] px-[0px] sm:px-[1rem] md:px-[3rem] py-[2.125rem]  rounded-[1.25rem] min-h-[290px]">
 			<img class="bg-img absolute h-[100%] w-auto right-[-0] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/future-bg.svg" alt="">
 			<div class="relative z-10 block">
 				<?php if(get_sub_field('main_heading')): ?>
@@ -144,7 +146,7 @@
 					<?php if(have_rows('block_part')): ?>
 					<?php while(have_rows('block_part')): the_row(); ?>
 						<div class="col-span-12 sm:col-span-4 lg:col-span-4 text-center border-box-bar">
-							<p class="text-[#E8E8E8] text-[2.5rem] font-[500] "><?php echo get_sub_field('data_target'); ?></p>
+							<p class="text-[#E8E8E8] text-[2.5rem] font-[800] "><?php echo get_sub_field('data_target'); ?></p>
 							<p class="text-[#E8E8E8] text-[1rem] font-[400] "><?php echo get_sub_field('second_heading'); ?></p>
 						</div>
 					<?php endwhile; ?>	
@@ -164,7 +166,7 @@
 	<div class="w-full relative">
 		<div class="container">
 			<div class="block">
-				<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[1.5rem]">Case <span class="text-dark-orange">Studies</span></h2>
+				<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[1.5rem]">Case <span class="title-orange">Studies</span></h2>
 			</div>
 			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
 				<div class="col-span-4 lg:col-span-4 content-center case-tab active" data-id="tab-1">
@@ -181,9 +183,9 @@
 				</div>
 			</div>
 			<div class="tab-container">
-				<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-1.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
+				<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/case-studies-bg-1.png');">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -193,23 +195,23 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
-								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
+								<p class="text-[1rem] text-[#171717]">The first developer was onboarded in just</p>
 								<div class="flex">
-									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
+									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#171717]">developers<br>within 12 months</p></div>
 								</div>
 							</div>
 							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
+								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+									<p class="text-[1rem] text-[#171717]">The first developer was onboarded in just</p>
 									<div class="flex">
-										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
+										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+										<div class="pl-2"><p class="text-[1rem] text-[#171717]">days</p></div>
 									</div>
 								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#E8E8E8] backdrop-blur-[10px] ml-auto">
+								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
 									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
 									<p class="text-[1rem] text-[#171717]">of the developers still with the client after 1 year</p>
 								</div>
@@ -217,9 +219,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-2.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
+				<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/case-studies-bg-2.png');">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -229,20 +231,20 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
-								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-4">
+								<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just </p>
 								<div class="flex">
 									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
 								</div>
 							</div>
 							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
+								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
+									<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 									<div class="flex">
 										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
+										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
 									</div>
 								</div>
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#E8E8E8] backdrop-blur-[10px] ml-auto">
@@ -254,8 +256,8 @@
 					</div>
 				</div>
 				<div class="tab-content" id="tab-3" style="background-image: url('<?php echo get_template_directory_uri();?>/images/tab-bg-3.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[32rem] p-3 gap-4">
-						<div class="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-7 content-end">
+					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
@@ -265,20 +267,20 @@
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Cameron Wade</span></p>
 							</div>
 						</div>
-						<div class="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-5 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-[1.5rem]">
-								<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
+						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto mb-4">
+								<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just </p>
 								<div class="flex">
 									<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
 								</div>
 							</div>
 							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#E8E8E8]">The first developer was onboarded in just</p>
+								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[rgba(255,255,255,0.12)] backdrop-blur-[10px] ml-auto">
+									<p class="text-[1rem] text-[#E8E8E8]">Build the team to</p>
 									<div class="flex">
 										<div><p class="text-[#fff] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">days</p></div>
+										<div class="pl-2"><p class="text-[1rem] text-[#E8E8E8]">developers<br>within 12 months</p></div>
 									</div>
 								</div>
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#E8E8E8] backdrop-blur-[10px] ml-auto">
@@ -304,7 +306,7 @@
 					<div class="container">
 					<?php if(get_sub_field('small_title')): ?>
 						<div class="block mb-[2.5rem]">
-							<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
+							<h2 class="text-[2.25rem] font-[700] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="title-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
 						</div>
 					<?php endif; ?>	
 						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 lg:gap-16">
@@ -384,13 +386,23 @@
 			</div>
 			<div class="relative min-h-[350px]">
 				<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 xl:gap-7 2xl:gap-10">
-					<div class="grid-item md:col-span-12 lg:col-span-2 xl:col-span-4 content-center">
+					<div class="grid-item md:col-span-12 lg:col-span-5 xl:col-span-5 content-center">
 						<div class="w-[100%] xl:max-w-[500px]">
 							<p class="text-[1.5rem] font-[600] text-[#fff] mb-16">Start building your team today</p>
 
 							<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-8">
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Experience</p>
+									<div class="relative select-input">
+										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
+										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+											<option value="midLevel">Mid level (4-6 years)</option>
+											<option value="senior" selected>Senior level (6+ years)</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Roles</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/fullstak.svg" alt="">
 										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
@@ -419,18 +431,7 @@
 									</div>
 								</div>
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Roles</p>
-									<div class="relative select-input">
-										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/exprience-dev.svg" alt="">
-										<select id="experienceDev" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
-											<option value="midLevel">Mid level (4-6 years)</option>
-											<option value="senior" selected>Senior level (6+ years)</option>
-										</select>
-									</div>
-								</div>
-								
-								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I'm based in</p>
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I’m based in</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
 										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
@@ -460,34 +461,38 @@
 							
 						</div>
 					</div>
-					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class="w-[100%] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-							<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
-							<div class="relative h-[100%] text-center">
-								<p class="text-[1.5rem] font-[600] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
-								<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartHourPrice">0</span>/hour</p>
-								<!-- <p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p> -->
-								<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3">Equivalent to</p>
-								<p class="text-[1rem] font-[400] text-[#1E1E1E]"><span class="smartMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
-								
+					<div class="grid-item md:col-span-12 lg:col-span-7 xl:col-span-7 content-center">
+						<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-7">
+							<div class="grid-item md:col-span-6 lg:col-span-6 xl:col-span-6 content-center">
+								<div class="w-[100%] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+									<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
+									<div class="relative h-[100%] text-center">
+										<p class="text-[1.5rem] font-[700] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
+										<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartHourPrice">0</span>/hour</p>
+										<!-- <p class="text-[3rem] font-[700] text-[#1E1E1E] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="smartToPrice">0</span>  <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month</span></p> -->
+										<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3">Equivalent to</p>
+										<p class="text-[1rem] font-[400] text-[#1E1E1E]"><span class="smartMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
+										
+									</div>
+									<div class="w-[100%] absolute h-[110px] bg-[#FCFCFC] border-t border-[#EEE] left-0 bottom-0 p-[20px] md:px-[30px]">
+										<p class="text-[0.875rem] font-[500] text-center text-[#1E1E1E]"><img class="inline-flex" src="<?php echo get_template_directory_uri();?>/images/hand-coins.svg" alt=""> Take advantage of our vetted talent, with <span class="font-[600]">savings of up to 50%</span></p>
+									</div>
+								</div>
 							</div>
-							<div class="w-[100%] absolute h-[110px] bg-[#FCFCFC] border-t border-[#EEE] left-0 bottom-0 p-[20px]">
-								<p class="text-[0.875rem] font-[500] text-center text-[#1E1E1E]">Take advantage of our vetted talent, with savings of up to 50%</p>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item md:col-span-6 lg:col-span-5 xl:col-span-4 content-center">
-						<div class="w-[100%] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-							<img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
-							<div class="relative h-[100%] text-center">
-								<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country">United Kingdom</span></p>
-								<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherHourPrice">0</span>/hour</p>
-								<!-- <p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p> -->
-								<p class="text-[1rem] font-[400] text-[#FFF] mb-3">Equivalent to</p>
-								<p class="text-[1rem] font-[400] text-[#FFF]"><span class="otherMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
-							</div>
-							<div class="w-[100%] absolute h-[110px] bg-[#202020] border-t border-[#000]  left-0 bottom-0 p-[20px] md:px-[30px]">
-								<p class="text-[0.875rem] font-[500] text-center text-[#FFF]">54% Higher annual cost Based on salary benchmarks including region-specific employment costs*</p>
+							<div class="grid-item md:col-span-6 lg:col-span-6 xl:col-span-6 content-center">
+								<div class="w-[100%] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
+									<img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
+									<div class="relative h-[100%] text-center">
+										<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country font-[700]">United Kingdom</span></p>
+										<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherHourPrice">0</span>/hour</p>
+										<!-- <p class="text-[3rem] font-[700] text-[#FFF] leading-[40px]"><span class="text-[20px] inline-block align-bottom leading-[25px]">to &nbsp;</span> <span class="currency-symbols">£</span><span class="otherToPrice">0</span> <span class="text-[20px] inline-block align-bottom leading-[25px]"> /month </span></p> -->
+										<p class="text-[1rem] font-[400] text-[#FFF] mb-3">Equivalent to</p>
+										<p class="text-[1rem] font-[400] text-[#FFF]"><span class="otherMonthPrice text-[1.5rem] font-[700]">0</span> <span class="currency-symbols">£</span>/month</p>
+									</div>
+									<div class="w-[100%] absolute h-[110px] bg-[#202020] border-t border-[#000]  left-0 bottom-0 p-[20px] md:px-[30px]">
+										<p class="text-[0.875rem] font-[500] text-center text-[#FFF]"><img class="inline-flex" src="<?php echo get_template_directory_uri();?>/images/TrendUp.svg" alt=""> <span class="font-[600]">Over a 50% annual increase in cost,</span> information is location specific *</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -622,7 +627,7 @@
 				<?php endif; ?>		
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6 content-center">
 					<?php if(get_sub_field('main_title')): ?>
-						<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[1rem]"><?php echo get_sub_field('main_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
+						<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[1rem]"><?php echo get_sub_field('main_title'); ?> <span class="title-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
 					<?php endif; ?>
 					
 					<?php if(get_sub_field('small_paragraph')): ?>

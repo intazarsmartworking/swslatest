@@ -4,9 +4,9 @@
 		
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="block">
-				<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[1.25rem]"><?php echo get_sub_field('main_heading'); ?></h2>
-				<p class="text-[1.5rem] font-[600] text-center text-[#E8E8E8] mb-[1rem]">Excellent &nbsp;<img class="inline h-[1.5rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/rating_card_img.svg" alt=""></p>
-				<p class="text-[1rem] font-[600] text-center text-[#E8E8E8]">Rated 4.7/5 based on 272,822 reviews on &nbsp;<img class="inline h-[1.5rem] align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/trustpilot.svg" alt=""></p>
+				<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-5"><?php echo get_sub_field('main_heading'); ?></h2>
+				<p class="text-[1.5rem] font-[700] text-center text-[#E8E8E8] mb-3">Excellent &nbsp;<img class="inline h-[0.95rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/rating_card_img.svg" alt=""></p>
+				<p class="text-[1rem] font-[400] text-center text-[#E8E8E8]"><span class="font-[700]">Rated 4.7/5</span> based on reviews on &nbsp;<img class="inline h-[1.5rem] align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/trustpilot.svg" alt=""></p>
 			</div>
 		<?php endif; ?>
 		<div class="w-full mt-10">
@@ -35,16 +35,16 @@
 					
 							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
-									<div class="block mb-6">
-										<div class="mb-3"><img class="h-[2.5rem]" src="<?php echo get_sub_field('logo')['url']; ?>"></div>
-										<div><img class="h-[0.95rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
+									<div class="flex justify-between mb-6">
+										<div class="content-center"><img class="h-[2.5rem]" src="<?php echo get_sub_field('logo')['url']; ?>"></div>
+										<div class="content-center"><img class="h-[0.96rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
 									</div>
 									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
 
 									<div class=" absolute bottom-[20px] left-0 w-[100%] flex justify-between items-center px-7">
 										<div class="flex items-center">
-											<img class="w-[4.5rem] h-[4.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
-											<div>
+											<img class="w-[6.5rem] h-[6.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+											<div class="content-center">
 												<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
 												<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($author_designation);?> </p>
 											</div>
@@ -93,15 +93,17 @@
 							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item2 w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
 									<div class="flex justify-between mb-6">
-										<div><img class="h-[0.95rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
+										<div><img class="h-[0.96rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
 										<div><p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p></div>
 									</div>
 									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
+									
+									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
 
 									<div class=" absolute bottom-[20px] left-0 w-[100%] px-7">
-										<div class="flex justify-between border-t border-[#A6A6A6] items-center pt-4">
+										<div class="flex justify-between items-center">
 											<div class="flex items-center ">
-												<img class="w-[4.5rem] h-[4.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+												<img class="w-[6.5rem] h-[6.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
 												<div>
 													<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
 													<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($review_count);?> Review </p>

@@ -4,7 +4,7 @@
 			<div class="container">
 			<?php if(get_sub_field('small_title')): ?>
 				<div class="block mb-[2.5rem]">
-					<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="text-dark-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
+					<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('small_title'); ?> <span class="title-orange"><?php echo get_sub_field('second_title'); ?></span></h2>
 				</div>
 			<?php endif; ?>	
 				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 lg:gap-16">

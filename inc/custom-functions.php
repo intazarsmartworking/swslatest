@@ -169,7 +169,7 @@ function display_ai_vetted_profile_categories_new_design() {
             if ($taxonomy_image_url) {
                 echo '<object type="image/svg+xml" class="filter-icon" data="'. $taxonomy_image_url .'" alt="' . esc_attr($term->name) . '"></object>';
             }
-            echo '<h3 style="display:inline">' . esc_html($term->name) . '</h3>';
+            echo '<h3 style="display:inline">' . esc_html($term->description) . '</h3>';
             echo '</a>';
             echo '</li>';
         }

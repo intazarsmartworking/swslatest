@@ -2447,7 +2447,7 @@ jQuery('.vetted-tech-experts').slick({
   autoplay: false,
   speed: 4000,
   autoplaySpeed: 0,
-  slidesToShow: 5,
+  slidesToShow: 3,
   slidesToScroll: 1,
   focusOnSelect: false,
   arrows: false,
@@ -2459,7 +2459,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1440,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2471,7 +2471,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1367,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2483,7 +2483,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1281,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2495,7 +2495,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1025,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
