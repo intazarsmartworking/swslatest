@@ -312,25 +312,25 @@
 						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 lg:gap-16">
 							<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 								<div class="progressBarContainer">
-								<?php if(have_rows('box_content')): ?>
-								<?php while(have_rows('box_content')): the_row(); ?>
-								<?php 
-									$title = get_sub_field('title'); 
-									$row_index = get_row_index(); 
-								?>
-									<div class="item how-its-work-items">
-										<div class="how-its-work-title"><?php echo $title;?></div>
-										<div class="how-its-work-dicription mt-4">
-											<ul class="list-disc">
-											<?php if(have_rows('main_points')): ?>
-											<?php while(have_rows('main_points')): the_row(); ?>
-												<li> <?php echo get_sub_field('points'); ?> </li>
-											<?php endwhile; ?>	
-											<?php endif; ?>		
-											</ul>
+									<?php if(have_rows('box_content')): ?>
+									<?php while(have_rows('box_content')): the_row(); ?>
+									<?php 
+										$title = get_sub_field('title'); 
+										$row_index = (get_row_index() - 1); 
+									?>
+										<div class="item how-its-work-items">
+											<div class="how-its-work-title"><?php echo $title;?></div>
+											<div class="how-its-work-dicription mt-4">
+												<ul class="list-disc">
+												<?php if(have_rows('main_points')): ?>
+												<?php while(have_rows('main_points')): the_row(); ?>
+													<li> <?php echo get_sub_field('points'); ?> </li>
+												<?php endwhile; ?>	
+												<?php endif; ?>		
+												</ul>
+											</div>
+											<span data-slick-index='<?php echo $row_index; ?>' class="sliderProgressBar"></span>
 										</div>
-										<span data-slick-index="<?php echo $row_index; ?>" class="sliderProgressBar"></span>
-									</div>
 								<?php endwhile; ?>	
 								<?php endif; ?>
 									

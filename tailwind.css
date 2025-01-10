@@ -3924,7 +3924,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   content: "";
   position: absolute;
   z-index: 1;
-  bottom: 55px;
+  bottom: 0px;
   left: 0;
   pointer-events: none;
   background: linear-gradient(180deg, rgba(3, 3, 3, 0) 41.58%, #030303 83.51%);

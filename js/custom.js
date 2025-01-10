@@ -2396,7 +2396,7 @@ jQuery(document).ready(function(){
 	function startProgressbar() {
 	    resetProgressbar();
 	    percentTime = 0;
-	    tick = setInterval(interval, 10);
+	    tick = setInterval(interval, 40);
 	}
 
 	function interval() {
@@ -2429,10 +2429,12 @@ jQuery(document).ready(function(){
 	}
 	startProgressbar();
 	// End ticking machine
+  //slick-index slickIndex
 
-	jQuery('.how-its-work-items').click(function () {
+	jQuery('.progressBarContainer .how-its-work-items').click(function () {
 		clearInterval(tick);
 		var goToThisIndex = jQuery(this).find(".sliderProgressBar").data("slickIndex");
+    console.log('goToThisIndex', goToThisIndex)
 		jQuery('.single-item').slick('slickGoTo', goToThisIndex, false);
 		startProgressbar();
 	});
