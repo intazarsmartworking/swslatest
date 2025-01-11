@@ -43,8 +43,8 @@
 					<?php if(get_sub_field('button_name')): ?>
 					<div class="block text-center mb-8">
 						
-						<a class="button_slide slide_right" href="<?php echo get_sub_field('button_url'); ?>">
-							<?php echo get_sub_field('button_name'); ?> &#129122;
+						<a class="button_slide slide_right px-[1.5rem]" href="<?php echo get_sub_field('button_url'); ?>">
+							<?php echo get_sub_field('button_name'); ?>
 						</a>
 					</div>
 					<?php endif; ?>
@@ -140,7 +140,7 @@
 			<img class="bg-img absolute h-[100%] w-auto right-[-0] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/future-bg.svg" alt="">
 			<div class="relative z-10 block">
 				<?php if(get_sub_field('main_heading')): ?>
-					<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+					<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 				<?php endif; ?>
 				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
 					<?php if(have_rows('block_part')): ?>
@@ -380,7 +380,7 @@
 		<div class="container">
 			<div class="block text-center mb-[4rem]">
 				<?php if(get_sub_field('main_heading')): ?>	
-				<p class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></p>
+				<p class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></p>
 				<?php endif; ?>
 				<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('subheading'); ?></p>
 			</div>
@@ -444,7 +444,7 @@
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Number of developers</p>
 									<div class="relative select-input md:max-w-[7.75rem]">
-										<button type="button" class="btn-count left-2" id="decrement-button">
+										<button type="button" class="btn-count left-2 disabled:opacity-[0.3]" id="decrement-button" disabled>
 											<svg class="w-3 h-3 inline text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
 												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
 											</svg>
@@ -527,7 +527,7 @@
 			<?php if (get_row_layout() == 'home_faq_heading') : ?>
 				<div class=" block">
 					<?php if(get_sub_field('main_heading')): ?>		
-						<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+						<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 					<?php endif; ?>
 					<?php if(get_sub_field('orange_heading')): ?>		
 						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('orange_heading'); ?></p>
@@ -627,7 +627,7 @@
 				<?php endif; ?>		
 					<div class="grid-item col-span-12 md:col-span-12 lg:col-span-6 content-center">
 					<?php if(get_sub_field('main_title')): ?>
-						<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[1rem]"><?php echo get_sub_field('main_title'); ?> <span class="title-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
+						<h2 class="text-[2.25rem] font-[700] text-center text-[#1E1E1E] mb-[1rem]"><?php echo get_sub_field('main_title'); ?> <span class="title-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
 					<?php endif; ?>
 					
 					<?php if(get_sub_field('small_paragraph')): ?>
@@ -648,7 +648,7 @@
 						<?php if(get_sub_field('button_name')): ?>
 						<div class="block text-center">
 							<a class="button_slide_org slide_org_right" href="<?php echo get_sub_field('button_url'); ?>">
-								<?php echo get_sub_field('button_name'); ?> 🡢
+								<?php echo get_sub_field('button_name'); ?>
 							</a>
 						</div>
 						<?php endif; ?>

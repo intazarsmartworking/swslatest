@@ -2504,7 +2504,7 @@ input[type="range"].home-range-slider::-moz-range-thumb {
   padding: 6px 14px;
   font-size: 15px;
   font-weight: 400;
-  color: #a9a7a7;
+  color: #fff;
   border-radius: 30px;
   position: relative;
 }
@@ -3620,7 +3620,7 @@ body.lightMode .single-blog .blog-table .text-16 {
 .button_slide {
   color: #f34d05;
   border: 0px solid #fff;
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   display: inline-block;
   font-size: 1rem;
   font-weight: 700;
@@ -3667,7 +3667,7 @@ body.lightMode .single-blog .blog-table .text-16 {
 .button_slide_org {
   color: #fff;
   border: 0px solid #fff;
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   display: inline-block;
   font-size: 1rem;
   font-weight: 700;

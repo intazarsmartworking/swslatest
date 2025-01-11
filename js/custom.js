@@ -691,7 +691,7 @@ jQuery(document).ready(function(){
   var listPosition = []
   var x = document.querySelectorAll(".slider-item");
   for (let i = 0; i < x.length; i++) {
-    const leftPos =410*i;
+    const leftPos =430*i;
     listPosition.push(leftPos)
   }
 
@@ -699,7 +699,7 @@ jQuery(document).ready(function(){
     x[index].style.left = `${ele}px`
   })
 
-  const maxMove = (x.length-2)*410;
+  const maxMove = (x.length-2)*430;
   let maxMoveItem = 0
 
   indexChange = 1;
@@ -707,7 +707,7 @@ jQuery(document).ready(function(){
   jQuery('#prevButton').on('click', function(){
     var rNum = (Math.random()*8)-5;
      if(maxMoveItem >= 0){
-      const changePosi = listPosition.map((ele) => (ele - 410));
+      const changePosi = listPosition.map((ele) => (ele - 430));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0 && changePosi[0] <= 0){
           //x[index].style.left = `${ele}px`;
@@ -740,7 +740,7 @@ jQuery(document).ready(function(){
 
   jQuery('#nextButton').on('click', function(){
     if(maxMove >= maxMoveItem){
-      const changePosi = listPosition.map((ele) => (ele + 410));
+      const changePosi = listPosition.map((ele) => (ele + 430));
       changePosi.forEach((ele, index) =>{
         if(ele >= 0  && changePosi[0] <= 0){
           // x[index].style.left = `${ele}px`
@@ -771,7 +771,7 @@ jQuery(document).ready(function(){
   var listPosition2 = []
   var x2 = document.querySelectorAll(".slider-item2");
   for (let i = 0; i < x2.length; i++) {
-    const leftPos2 =410*i;
+    const leftPos2 =430*i;
     listPosition2.push(leftPos2)
   }
 
@@ -779,7 +779,7 @@ jQuery(document).ready(function(){
     x2[index].style.left = `${ele}px`
   })
 
-  const maxMove2 = (x2.length-2)*410;
+  const maxMove2 = (x2.length-2)*430;
   let maxMoveItem2 = 0
 
   indexChange2 = 1;
@@ -787,7 +787,7 @@ jQuery(document).ready(function(){
   jQuery('#prevButton2').on('click', function(){
     var rNum2 = (Math.random()*8)-5;
      if(maxMoveItem2 >= 0){
-      const changePosi2 = listPosition2.map((ele) => (ele - 410));
+      const changePosi2 = listPosition2.map((ele) => (ele - 430));
       changePosi2.forEach((ele, index) =>{
         if(ele >= 0 && changePosi2[0] <= 0){
           //x[index].style.left = `${ele}px`;
@@ -2159,7 +2159,10 @@ jQuery('#countriesList').on('change', function() {
 jQuery('#increment-button').on('click',function() {
   numberOfDev = numberOfDev + 1;
   $('#quantity-input').val(numberOfDev);
-  showConvertPrice()
+  showConvertPrice();
+  if(numberOfDev > 1){
+    jQuery('#decrement-button').prop('disabled', false);
+  }
 });
 
 // Decrease value by 1
@@ -2168,8 +2171,15 @@ jQuery('#decrement-button').on('click', function() {
   if(numberOfDev > 0){
     $('#quantity-input').val(numberOfDev);
     showConvertPrice()
+    if(numberOfDev > 1){
+      jQuery('#decrement-button').prop('disabled', false);
+    }
   }else{
     numberOfDev = 1;
+    if(numberOfDev <= 1){
+      jQuery('#decrement-button').prop('disabled', true);
+    }
+
     $('#quantity-input').val(numberOfDev);
   }
 });

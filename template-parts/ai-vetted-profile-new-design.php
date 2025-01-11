@@ -3,7 +3,7 @@
 <?php if (get_row_layout() == 'ai_vetted_section') : ?>	
 	<div class="block mb-[2.5rem]">
 	 <?php if(get_sub_field('main_heading')): ?>	
-		<h2 class="text-[2.25rem] font-[600] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+		<h2 class="text-[2.25rem] font-[700] text-center text-[#1E1E1E] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 	 <?php endif; ?>
 
 	<?php if(get_sub_field('subheading')): ?>	

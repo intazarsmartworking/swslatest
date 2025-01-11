@@ -4,7 +4,7 @@
 			<?php while (have_rows('block')) : the_row(); ?>
 				<?php if (get_row_layout() == 'home_blog_heading') : ?>	
 					<?php if(get_sub_field('main_heading')): ?>		
-						<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?> </h2>
+						<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?> </h2>
 					<?php endif; ?>
 					<?php if(get_sub_field('small_paragraph')): ?>	
 						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[2.5rem]"> <?php echo get_sub_field('small_paragraph'); ?> </p>
@@ -29,7 +29,7 @@
 				<a class="home-page-blog" href="<?php echo home_url( '/blog/' ) . basename( get_permalink() ); ?>">
 				<div class="rounded">
 					<?php if ($image_src): ?>
-						<div class="w-full h-[16rem] overflow-hidden rounded-t-lg">
+						<div class="w-full h-[13rem] overflow-hidden rounded-t-lg">
 							<img class="w-[100%] rounded-lg" src="<?php echo esc_url($image_src[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 						</div>
 					<?php endif; ?>
