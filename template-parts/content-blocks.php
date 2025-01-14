@@ -196,7 +196,7 @@
 							</div>
 						</div>
 						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
+							<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
 								<p class="text-[1rem] text-[#171717]">The first developer was onboarded in just</p>
 								<div class="flex">
 									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
@@ -204,14 +204,14 @@
 								</div>
 							</div>
 							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
 									<p class="text-[1rem] text-[#171717]">Build the team to</p>
 									<div class="flex">
 										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
 										<div class="pl-2"><p class="text-[1rem] text-[#171717]">developers<br>within 12 months</p></div>
 									</div>
 								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
 									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
 									<p class="text-[1rem] text-[#171717]">within 12 months with the client after 1 year</p>
 								</div>

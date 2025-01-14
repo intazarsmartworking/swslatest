@@ -76,12 +76,12 @@
         <div class="pb-7">
             <div class="addr-india">
               <h6 class="text-[0.875rem] font-[400] text-[#171717] mb-3">India</h6>
-              <p class="text-[0.875rem] font-[400] text-[#4A4A4A] mb-3"><?php echo get_field('india_address', 'options'); ?></p>
+              <p class="text-[0.875rem] font-[400] !text-[#4A4A4A] mb-3"><?php echo get_field('india_address', 'options'); ?></p>
               <!-- <p class="text-footer-menu-color text-sm leading-normal"> C Block Community Centre, Plot No. 6, Upper Ground Floor, Delhi, 110058 </p> -->
             </div>
             <div class="addr-uk mt-6">
               <h6 class="text-[0.875rem] font-[400] text-[#171717] mb-3">United Kingdom</h6>
-              <p class="text-[0.875rem] font-[400] text-[#4A4A4A] mb-3"><?php echo get_field('uk_address', 'options'); ?></p>
+              <p class="text-[0.875rem] font-[400] !text-[#4A4A4A] mb-3"><?php echo get_field('uk_address', 'options'); ?></p>
             </div>
         </div>
         
@@ -91,18 +91,18 @@
           <h6 class="text-[#171717] text-[1.125rem] font-[500] mb-5"> Contact Details </h6>
           <div class="pb-7">
             <h6 class="text-[0.875rem] font-[400] text-[#171717] mb-3"> Email </h6>
-            <p class="text-[0.875rem] font-[400] text-[#4A4A4A] mb-3"><a href= "mailto: <?php echo get_field('email_footer', 'options'); ?>" class=" hover:text-[#FF4D04]"> <?php echo get_field('email_footer', 'options'); ?> </a></p>
+            <p class="text-[0.875rem] font-[400] !text-[#4A4A4A] mb-3"><a href= "mailto: <?php echo get_field('email_footer', 'options'); ?>" class=" hover:text-[#FF4D04]"> <?php echo get_field('email_footer', 'options'); ?> </a></p>
           </div>
           <div class="pb-7">
             <h6 class="text-[0.875rem] font-[400] text-[#171717] mb-3"> Phone </h6>
-            <div class="text-[0.8rem] font-[400] text-[#4A4A4A] mb-3"><?php echo get_field('phone_footer', 'options'); ?></div> 
+            <div class="text-[0.8rem] font-[400] !text-[#4A4A4A] mb-3"><?php echo get_field('phone_footer', 'options'); ?></div> 
           </div>
         </div>
       </div>
     </div>
     <div class="flex justify-between my-6 border-t border-[#dddcdc] pt-8">
         <div>
-            <p class="text-[0.875rem] font-[400] text-[#4A4A4A]"><?php echo get_field('copy_right_text', 'options'); ?> </p>
+            <p class="text-[0.875rem] font-[400] !text-[#4A4A4A]"><?php echo get_field('copy_right_text', 'options'); ?> </p>
         </div>
         <div>
           <div class="flex gap-4 justify-between items-center">
@@ -125,11 +125,11 @@
             $btn2_url = get_field('button_2_url', 'options');
           ?> 
           <?php if(get_field('button_1_name', 'options')): ?> 
-            <p class="text-[0.875rem] font-[400] text-[#1E1E1E]"><a class=" hover:text-[#FF4D04]" href="<?php echo esc_url( $btn1_url ); ?>"><?php echo get_field('button_1_name', 'options'); ?></a></p>
+            <p class="text-[0.875rem] font-[400] !text-[#1E1E1E]"><a class=" hover:text-[#FF4D04]" href="<?php echo esc_url( $btn1_url ); ?>"><?php echo get_field('button_1_name', 'options'); ?></a></p>
           <?php endif; ?>
 
           <?php if(get_field('button_2_name', 'options')): ?>
-            <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-[#1E1E1E] text-right text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
+            <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="!text-[#1E1E1E] text-right text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
           <?php endif; ?>
         </div>
       </div>
