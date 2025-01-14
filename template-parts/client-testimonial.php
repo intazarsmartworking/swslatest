@@ -86,6 +86,7 @@
 								$review_count = get_sub_field('review_count'); 
 								$date_and_time = get_sub_field('date_and_time');
 								$background = get_sub_field('background_color'); 
+								$title = get_sub_field('title'); 
 							?>
 
 
@@ -94,19 +95,21 @@
 								<div class="p-7 flex flex-col">
 									<div class="flex justify-between mb-6">
 										<div><img class="h-[0.96rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
-										<div><p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p></div>
+										<div>
+											<!-- <p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p> -->
+										</div>
 									</div>
-									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
+									<p class="text-[1rem] text-[#1E1E1E] font-[500] mb-3"> <?php echo $title;?> </p>
 									
-									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
+									<p class="text-[0.875rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
 
 									<div class=" absolute bottom-[20px] left-0 w-[100%] px-7">
 										<div class="flex justify-between items-center">
 											<div class="flex items-center ">
-												<img class="w-[6.5rem] h-[6.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>">
+												<!-- <img class="w-[6.5rem] h-[6.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>"> -->
 												<div>
 													<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
-													<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($review_count);?> Review </p>
+													<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?></p>
 												</div>
 											</div>
 										</div>

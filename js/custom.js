@@ -2143,6 +2143,21 @@ jQuery('#countriesList').on('change', function() {
     jQuery('.currency-symbols').text('£');
     jQuery('.select-country').text('United Kingdom');
     imageName = 'flag-uk'
+  }else if(selectedValue == 'eu'){
+    currencyValue = 1.18;
+    jQuery('.currency-symbols').text('€');
+    jQuery('.select-country').text('Europe');
+    imageName = 'flag-eu'
+  }else if(selectedValue == 'au'){
+    currencyValue = 1.97;
+    jQuery('.currency-symbols').text('$');
+    jQuery('.select-country').text('Australia');
+    imageName = 'flag-au'
+  }else if(selectedValue == 'ca'){
+    currencyValue = 1.75;
+    jQuery('.currency-symbols').text('$');
+    jQuery('.select-country').text('Canada');
+    imageName = 'flag-ca'
   }else{
     currencyValue = 1;
   }
@@ -2386,10 +2401,15 @@ jQuery(document).ready(function(){
     arrows: false,
     dots: false,
     autoplay: false,
+    centerMode:false,
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
+    vertical: true,
+    useTransform: true,
+    cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+    adaptiveHeight: true,
 	});
 
 	//ticking machine

@@ -125,11 +125,11 @@
             $btn2_url = get_field('button_2_url', 'options');
           ?> 
           <?php if(get_field('button_1_name', 'options')): ?> 
-            <p class="text-[0.875rem] font-[400] text-[#4A4A4A]"><a class=" hover:text-[#FF4D04]" href="<?php echo esc_url( $btn1_url ); ?>"><?php echo get_field('button_1_name', 'options'); ?></a></p>
+            <p class="text-[0.875rem] font-[400] text-[#1E1E1E]"><a class=" hover:text-[#FF4D04]" href="<?php echo esc_url( $btn1_url ); ?>"><?php echo get_field('button_1_name', 'options'); ?></a></p>
           <?php endif; ?>
 
           <?php if(get_field('button_2_name', 'options')): ?>
-            <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-footer-menu-color text-right text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
+            <a href="<?php echo esc_url( $btn2_url ); ?>"> <p class="text-[#1E1E1E] text-right text-base font-regular leading-normal"> <?php echo get_field('button_2_name', 'options'); ?> </p> </a>
           <?php endif; ?>
         </div>
       </div>

@@ -12,7 +12,7 @@
 				<div class="col-span-12 min-h-[27.4rem] sm:col-span-6 lg:col-span-6 bg-[#60E3D5] rounded-[0.67rem] p-8">
 					<?php if(get_sub_field('first_box_image')): ?>
 						<div class="block mb-3">
-							<img class="w-[7.5rem] h-[7.5rem]" src="<?php echo get_sub_field('first_box_image')['url']; ?>" alt="">
+							<img class="w-[9.5rem] h-[9.5rem]" src="<?php echo get_sub_field('first_box_image')['url']; ?>" alt="">
 						</div>
 					<?php endif; ?>
 					<?php if(get_sub_field('first_box_title')): ?>
