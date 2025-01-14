@@ -53,13 +53,9 @@
 		</div>
 		<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
-				<div class="col-span-12 min-h-[14.5rem] sm:col-span-6 lg:col-span-6 bg-[#6ACAEF] rounded-[0.67rem] p-8">
+				<div class="col-span-12 min-h-[16.8rem] sm:col-span-6 lg:col-span-6 bg-[#6ACAEF] rounded-[0.67rem] p-8">
 					<?php if(get_sub_field('fourth_box_title')): ?>	
-						<p class=" text-[#1E1E1E] text-[3rem] font-[800] leading-[3rem] mb-[0.75rem]"><?php echo get_sub_field('fourth_box_title'); ?>
-						<?php if(get_sub_field('fourth_box_small_title')): ?>	
-							<span class=" text-[#1E1E1E] text-[1.5rem] font-[700]"><?php echo get_sub_field('fourth_box_small_title'); ?></span>
-						<?php endif; ?>	
-						</p>
+						<p class=" text-[#1E1E1E] text-[2.5rem] font-[600] leading-[2.5rem] mb-[0.75rem]"><?php echo get_sub_field('fourth_box_title'); ?></p>
 					<?php endif; ?>	
 					
 					<?php if(get_sub_field('fourth_box_paragraph')): ?>	

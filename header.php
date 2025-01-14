@@ -579,34 +579,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="col-span-3 py-[12px]"></div>
             <div class="col-span-3 p-4">
-            <div class="max-w-md relative z-10 rounded-3xl min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
-                <div class="px-6 py-4">
-                  <div class="block">
-                    <p class="text-[14px] text-[#64748b]">Hourly rate</p>
-                  </div>
-                  <div class="block">
-                    <p class="text-[32px] font-[500] ">£20/hr</p>
-                  </div>
-                  <div class="block w-100 mt-3 h-[90px] border-b border-gray-400">
-                    <div class="sliderwrap">
-                      <input class="home-range-slider header-range" type="range" max="100" value="0">
-                    </div>
-                  </div>
-                  <div class="block pt-5">
-                    <div class="flex">
-                      <div class="grow">
-                        <span class="text-[11px] font-[400] text-gray-500 ">Amount save</span>
-                      </div>
-                      <div class="grow text-end">
-                        <span class="text-[15px] price-value font-[500] text-black">£ </span>
-                      </div>
-                      
-                    </div>
-                  </div>
+				<!-- <div class="max-w-md relative z-10 rounded-3xl min-h-[250px] bg-white overflow-hidden shadow-lg mx-auto">
+					<div class="px-6 py-4">
+					<div class="block">
+						<p class="text-[14px] text-[#64748b]">Hourly rate</p>
+					</div>
+					<div class="block">
+						<p class="text-[32px] font-[500] ">£20/hr</p>
+					</div>
+					<div class="block w-100 mt-3 h-[90px] border-b border-gray-400">
+						<div class="sliderwrap">
+						<input class="home-range-slider header-range" type="range" max="100" value="0">
+						</div>
+					</div>
+					<div class="block pt-5">
+						<div class="flex">
+						<div class="grow">
+							<span class="text-[11px] font-[400] text-gray-500 ">Amount save</span>
+						</div>
+						<div class="grow text-end">
+							<span class="text-[15px] price-value font-[500] text-black">£ </span>
+						</div>
+						
+						</div>
+					</div>
 
-                
-                </div>
-              </div>
+					
+					</div>
+				</div> -->
             </div>
           </div>
       </div>

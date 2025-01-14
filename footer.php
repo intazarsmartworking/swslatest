@@ -30,20 +30,18 @@
         <?php endif; ?>
         <div class="block">
         <?php if(get_field('client_logo_first', 'options')): ?>
-          <img class=" inline-block rounded-[10px] h-[3.5rem]" src="<?php echo get_field('client_logo_first', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_first', 'options')['alt']; ?>">
+          <img class=" inline-block rounded-[10px] h-[4.5rem]" src="<?php echo get_field('client_logo_first', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_first', 'options')['alt']; ?>">
         <?php endif; ?>  
         
         <?php if(get_field('client_logo_second', 'options')): ?>
-          <img class=" inline-block rounded-[10px] h-[3.5rem]" src="<?php echo get_field('client_logo_second', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_second', 'options')['alt']; ?>">
+          <img class=" inline-block rounded-[10px] h-[4.5rem]" src="<?php echo get_field('client_logo_second', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_second', 'options')['alt']; ?>">
         <?php endif; ?> 
 
         <?php if(get_field('client_logo_third', 'options')): ?>
-          <img class=" inline-block rounded-[10px] h-[3.5rem]" src="<?php echo get_field('client_logo_third', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_third', 'options')['alt']; ?>">
+          <img class=" inline-block rounded-[10px] h-[4.5rem]" src="<?php echo get_field('client_logo_third', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_third', 'options')['alt']; ?>">
         <?php endif; ?> 
 
-        <?php if(get_field('client_logo_fourth', 'options')): ?>
-          <img class=" inline-block rounded-[10px] h-[3.5rem]" src="<?php echo get_field('client_logo_fourth', 'options')['url']; ?>" alt="<?php echo get_field('client_logo_fourth', 'options')['alt']; ?>">
-        <?php endif; ?> 
+        
         </div>
         
       </div>

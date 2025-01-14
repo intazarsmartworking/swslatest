@@ -219,7 +219,9 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			  echo '<div class="hero-card vetted-tech-card relative">';
 			    echo '<div class="vetted-hover-box">';
                 //style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg)"
-			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3">' . get_the_title() . '</p>';
+			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<circle cx="10" cy="10" r="4" fill="#31BF31"/>
+</svg>' . get_the_title() . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-profile.svg"> '  . esc_html($designation) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-location.svg" > ' . esc_html($city) . ', ' . esc_html($country) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-3"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icons-star.svg" alt=""> ' . esc_html($total_experience) .' years experience</p>';
@@ -236,11 +238,12 @@ function ajax_fetch_ai_vetted_profile_posts() {
 						}
 				   }
 				  echo '</div>';
-				  
-				  //echo '<p class="text-[0.875rem] font-[400] text-[#787878] mb-2">' . get_the_title() . ' is available for hire</p>';
-				  //echo '<div class="block">';
-				   //echo '<a class="button_slide slide_right !text-[0.875rem] !text-[#4B4B4B] hover:!text-[#fff] !font-[500]" href="/contact-us"> View Profile 🡢 </a>';
-				  //echo '</div>';
+				  echo '<div class="absolute bottom-[1.68rem]">';
+                    echo '<p class="text-[0.875rem] font-[400] text-[#000] mb-2">' . get_the_title() . ' is available for hire</p>';
+                    echo '<div class="block">';
+                    echo '<a class="button_slide_org slide_org_right" href="/contact-us"> Book A Call </a>';
+                    echo '</div>';
+                  echo '</div>';
 				echo '</div>';
 				
 				

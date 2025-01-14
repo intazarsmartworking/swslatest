@@ -49,6 +49,7 @@ jQuery(document).ready(function($) {
                 nonce: nonce
             },
             success: function(response) {
+                console.log('response', response)
                 $('.vetted-tech-experts').html(response);
                 // Destroy Slick if already initialized
                 if ($('.vetted-tech-experts').hasClass('slick-initialized')) {
@@ -101,7 +102,7 @@ jQuery(document).ready(function($) {
     // Event handler for category click
     $('.category-filter').on('click', function(e) {
         e.preventDefault();
-
+        
         var category_id = $(this).data('category-id');
 
         // Remove 'active' class from all category links

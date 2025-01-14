@@ -820,7 +820,7 @@ jQuery(document).ready(function(){
 
   jQuery('#nextButton2').on('click', function(){
     if(maxMove2 >= maxMoveItem2){
-      const changePosi2 = listPosition2.map((ele) => (ele + 410));
+      const changePosi2 = listPosition2.map((ele) => (ele + 430));
       changePosi2.forEach((ele, index) =>{
         if(ele >= 0  && changePosi2[0] <= 0){
           // x[index].style.left = `${ele}px`
