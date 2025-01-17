@@ -4,7 +4,7 @@
 		
 		<?php if(get_sub_field('main_heading')): ?>
 			<div class="block">
-				<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-5"><?php echo get_sub_field('main_heading'); ?></h2>
+				<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-5"><?php echo get_sub_field('main_heading'); ?></h2>
 				<p class="text-[1.5rem] font-[700] text-center text-[#E8E8E8] mb-3">Excellent &nbsp;<img class="inline h-[0.95rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/rating_card_img.svg" alt=""></p>
 				<p class="text-[1rem] font-[400] text-center text-[#E8E8E8]"><span class="font-[700]">Rated 4.7/5</span> based on reviews on &nbsp;<img class="inline h-[1.5rem] align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/trustpilot.svg" alt=""></p>
 			</div>

@@ -4,7 +4,7 @@
 			<?php while (have_rows('block')) : the_row(); ?>
 				<?php if (get_row_layout() == 'home_blog_heading') : ?>	
 					<?php if(get_sub_field('main_heading')): ?>		
-						<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?> </h2>
+						<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?> </h2>
 					<?php endif; ?>
 					<?php if(get_sub_field('small_paragraph')): ?>	
 						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[2.5rem]"> <?php echo get_sub_field('small_paragraph'); ?> </p>

@@ -140,7 +140,7 @@
 			<img class="bg-img absolute h-[100%] w-auto right-[-0] z-0 top-[0px]" src="<?php echo get_template_directory_uri();?>/images/future-bg.svg" alt="">
 			<div class="relative z-10 block">
 				<?php if(get_sub_field('main_heading')): ?>
-					<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+					<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 				<?php endif; ?>
 				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
 					<?php if(have_rows('block_part')): ?>
@@ -166,19 +166,19 @@
 	<div class="w-full relative">
 		<div class="container">
 			<div class="block">
-				<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[1.5rem]">Case <span class="title-orange">Studies</span></h2>
+				<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[1.5rem]">Case <span class="title-orange">Studies</span></h2>
 			</div>
 			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
 				<div class="col-span-4 lg:col-span-4 content-center case-tab active" data-id="tab-1">
-					Seamless and quick hiring process
+					Remote hiring made safe and reliable
 					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt=""> -->
 				</div>
 				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-2">
-					Reliable and impressive quality
+					Excellent and Ongoing Support
 					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt=""> -->
 				</div>
 				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-3">
-					Consistent and remarkable quality
+					High quality and effective solution
 					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/tiller-logo.svg" alt=""> -->
 				</div>
 			</div>
@@ -191,29 +191,26 @@
 									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
 								</p>
 								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">The developers at Smart Working have provided work the same hours as our team, attend all meetings, and are always available for communication. Their seamless integration into our workflows has made them feel like a natural extension of our in-house team, without any of the challenges we expected from remote hiring.</p>
+								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">Smart Working have always delivered strong shortlists of vetted candidates in very tight timescales. We have now built a team of 10 with them and the turnover of our developers has been extremely low. We’d strongly recommend using them.</p>
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Chief Marketing Officer</span></p>
 							</div>
 						</div>
 						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<p class="text-[1rem] text-[#171717]">The first developer was onboarded in just</p>
-								<div class="flex">
-									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#171717]">days</p></div>
-								</div>
+							<div class="max-w-[100%] sm:max-w-[20rem] rounded-[0.25rem] lg:max-w-[20rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
+								<p class="text-[1rem] text-[#171717]">Compared with UK hiring, this is an approximate annual saving of</p>
+								<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">£400,000</p>
 							</div>
 							<div class="flex space-x-4">
 								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
 									<p class="text-[1rem] text-[#171717]">Build the team to</p>
 									<div class="flex">
-										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">6</p></div>
+										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
 										<div class="pl-2"><p class="text-[1rem] text-[#171717]">developers<br>within 12 months</p></div>
 									</div>
 								</div>
 								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
-									<p class="text-[1rem] text-[#171717]">within 12 months with the client after 1 year</p>
+									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">96%</p>
+									<p class="text-[1rem] text-[#171717]">retention rate maintained within the first 12 months</p>
 								</div>
 							</div>
 						</div>
@@ -227,29 +224,29 @@
 									<img class="h-[3rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt="">
 								</p>
 								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">Hiring remote developers felt like a risk at first, but Smart Working’s process removed all our concerns. The support from their UK team made us feel secure every step of the way. We’ve been using Smart Working for over two years now, and their process has always been safe and dependable.</p>
-								<p class=" text-[1rem] text-[#fff] font-[500]">- Mark Cadby &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Chief Technical Officer</span></p>
+								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">We have worked with Smart Working for 2 years and have been very pleased with the quality and skills of their developers. Their UK team has continued to deliver excellent ongoing support to us. We now have 6 people working for us on a long-term basis.</p>
+								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Head of Value Propositions</span></p>
 							</div>
 						</div>
 						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<p class="text-[1rem] text-[#171717]">Delivered a vetted shortlist in under</p>
+								<p class="text-[1rem] text-[#171717]">Build the team to</p>
 								<div class="flex">
-									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">5</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#171717]">days</p></div>
+									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">06</p></div>
+									<div class="pl-2"><p class="text-[1rem] text-[#171717]">engineers<br>within 24 months</p></div>
 								</div>
 							</div>
 							<div class="flex space-x-4">
 								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">The entire dev team came to visit the</p>
+									<p class="text-[1rem] text-[#171717]">Fully vetted candidates were submitted in less than</p>
 									<div class="flex">
-										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">UK</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#171717]"></p></div>
+										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
+										<div class="pl-2"><p class="text-[1rem] text-[#171717]">working<br>days</p></div>
 									</div>
 								</div>
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
 									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
-									<p class="text-[1rem] text-[#171717]">of the developers undergo and verification checks prior to employment</p>
+									<p class="text-[1rem] text-[#171717]">of our developers undergo screening and verification checks prior to employment</p>
 								</div>
 								
 							</div>
@@ -261,34 +258,30 @@
 						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="block max-w-[47rem]">
 								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
-									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/tiller-logo.svg" alt="">
+									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
 								</p>
 								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#fff] mb-[2rem]">Smart Working doesn’t just stop at hiring—they’ve provided continuous support and training to ensure long-term success. Their team’s feedback calls, management and training of our staff has been incredibly useful and made the relationship a huge success.</p>
+								<p class=" text-[1rem] text-[#fff] mb-[2rem]">They are a breath of fresh air, they do what they promise and deliver what they say.</p>
 								<p class=" text-[1rem] text-[#fff] font-[500]">- Edward Genochio &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Chief Executive Officer</span></p>
 							</div>
 						</div>
 						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
 							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<div class="flex">
-									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">14</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#171717]">days<br>scheduled</p></div>
-								</div>
-								<p class="text-[1rem] text-[#171717] mt-1">feedback call with UK based Account Manager</p>
+								<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">3 Rounds</p>
+								<p class="text-[1rem] text-[#171717] mt-1">of technical assessments prior to client interviews</p>
 								
 							</div>
 							<div class="flex space-x-4">
 								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">98%</p>
-									<p class="text-[1rem] text-[#171717]">developer performance score from client feedback</p>
+									<p class="text-[1rem] text-[#171717]">Constant</p>
+									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">Support</p>
+									<p class="text-[1rem] text-[#171717]">from our Account Manager and Customer success team</p>
 									
 								</div>
 								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">Expanded developer team to 5 within</p>
-									<div class="flex">
-										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#171717]">months</p></div>
-									</div>
+									<p class="text-[1rem] text-[#171717]">Reduced hiring timelines by</p>
+									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">50%</p>
+									<p class="text-[1rem] text-[#171717]">compared to traditional recruitment methods</p>
 								</div>
 							</div>
 						</div>
@@ -383,7 +376,7 @@
 		<div class="container">
 			<div class="block text-center mb-[4rem]">
 				<?php if(get_sub_field('main_heading')): ?>	
-				<p class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></p>
+				<p class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></p>
 				<?php endif; ?>
 				<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('subheading'); ?></p>
 			</div>
@@ -543,7 +536,7 @@
 			<?php if (get_row_layout() == 'home_faq_heading') : ?>
 				<div class=" block">
 					<?php if(get_sub_field('main_heading')): ?>		
-						<h2 class="text-[2.25rem] font-[700] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+						<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[0.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
 					<?php endif; ?>
 					<?php if(get_sub_field('orange_heading')): ?>		
 						<p class="text-[1.25rem] opacity-80 font-[400] text-center text-[#E8E8E8] mb-[2.5rem]"><?php echo get_sub_field('orange_heading'); ?></p>

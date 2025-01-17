@@ -3,7 +3,7 @@
 <?php if (get_row_layout() == 'why_hire_smartworking') : ?>
     <?php if(get_sub_field('main_title')): ?>
 	<div class="block mb-[2.5rem]">
-		<h2 class="text-[2.25rem] font-[600] text-center text-[#E8E8E8] mb-[0.5rem]"><?php echo get_sub_field('main_title'); ?> <span class="title-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
+		<h2 class="text-[2.25rem] font-[600] text-center text-[#ffffff] mb-[0.5rem]"><?php echo get_sub_field('main_title'); ?> <span class="title-orange"><?php echo get_sub_field('orange_title'); ?></span></h2>
 	</div>
 	<?php endif; ?>	
 	<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">

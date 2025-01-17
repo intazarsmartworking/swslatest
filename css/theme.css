@@ -3603,6 +3603,14 @@ select {
 .leading-tight {
   line-height: 1.25;
 }
+.\!text-\[\#1E1E1E\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(30 30 30 / var(--tw-text-opacity)) !important;
+}
+.\!text-\[\#4A4A4A\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(74 74 74 / var(--tw-text-opacity)) !important;
+}
 .\!text-black {
   --tw-text-opacity: 1 !important;
   color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
@@ -3795,14 +3803,6 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.\!text-\[\#1E1E1E\] {
-  --tw-text-opacity: 1 !important;
-  color: rgb(30 30 30 / var(--tw-text-opacity)) !important;
-}
-.\!text-\[\#4A4A4A\] {
-  --tw-text-opacity: 1 !important;
-  color: rgb(74 74 74 / var(--tw-text-opacity)) !important;
 }
 .underline {
   text-decoration-line: underline;
@@ -8111,6 +8111,10 @@ body.lightMode .single-blog .blog-table .text-16 {
     max-width: 16.5rem;
   }
 
+  .sm\:max-w-\[20rem\] {
+    max-width: 20rem;
+  }
+
   .sm\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -8648,6 +8652,10 @@ body.lightMode .single-blog .blog-table .text-16 {
 
   .lg\:max-w-\[16\.5rem\] {
     max-width: 16.5rem;
+  }
+
+  .lg\:max-w-\[20rem\] {
+    max-width: 20rem;
   }
 
   .lg\:max-w-\[450px\] {
