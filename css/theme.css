@@ -2269,6 +2269,9 @@ select {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.place-items-center {
+  place-items: center;
+}
 .content-center {
   align-content: center;
 }
@@ -2292,6 +2295,9 @@ select {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
 }
 .gap-0 {
   gap: 0px;
@@ -7601,7 +7607,7 @@ body.lightMode .single-blog .blog-table .text-16 {
 .filter-tab li:hover {
   background: #dddcdc;
 }
-.filter-tab li.active-now {
+.filter-tab li.active {
   color: #fff;
   background: linear-gradient(101deg, #ff4d04 -28.45%, #992e02 120.36%);
 }
@@ -7610,7 +7616,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   vertical-align: middle;
   margin-right: 0.5rem;
 }
-.filter-tab li.active-now .filter-icon {
+.filter-tab li.active .filter-icon {
   filter: brightness(0) invert(1);
 }
 .select-input select {
@@ -7846,6 +7852,9 @@ body.lightMode .single-blog .blog-table .text-16 {
   }
   .card-placement.active {
     left: 0px !important;
+  }
+  .header-box{
+    border-radius: 10px !important;
   }
 }
 .placeholder\:block::-moz-placeholder {

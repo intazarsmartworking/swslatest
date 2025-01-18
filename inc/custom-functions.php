@@ -191,16 +191,17 @@ function ajax_fetch_ai_vetted_profile_posts() {
     $args = array(
         'post_type' => 'ai-vetted-profile',
         'posts_per_page' => -1,
-        'orderby' => 'date',
-        'order' => 'DESC',
+        // 'orderby' => 'date',
+        // 'order' => 'DESC',
     );
 
     if ($category_id) {
         $args['tax_query'] = array(
             array(
                 'taxonomy' => 'vettedcategory',
-                'field' => 'term_id',
-                'terms' => $category_id,
+                'field' => 'id', // Term ID
+                'terms' => $category->term_id,
+                'operator' => 'IN',
             ),
         );
     }
@@ -220,8 +221,8 @@ function ajax_fetch_ai_vetted_profile_posts() {
 			    echo '<div class="vetted-hover-box">';
                 //style="background-image: url(' . get_template_directory_uri() . '/images/card-bg-veted.jpg)"
 			      echo '<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3"><svg class="inline-flex align-middle mr-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<circle cx="10" cy="10" r="4" fill="#31BF31"/>
-</svg>' . get_the_title() . '</p>';
+                        <circle cx="10" cy="10" r="4" fill="#31BF31"/>
+                        </svg>' . get_the_title() . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-profile.svg"> '  . esc_html($designation) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icon-location.svg" > ' . esc_html($city) . ', ' . esc_html($country) . '</p>';
 				  echo '<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-5"><img class="w-[1.25rem] h-[1.25rem] !inline" src="' . get_template_directory_uri() . '/images/icons-star.svg" alt=""> ' . esc_html($total_experience) .' years experience</p>';

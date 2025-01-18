@@ -159,139 +159,89 @@
 		</div>
 	</div>
 	<?php endif; ?>
+
+
+
+
 	<?php endwhile; ?>
 	<?php endif; ?>	
 	
-	
-	<div class="w-full relative">
-		<div class="container">
-			<div class="block">
-				<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[1.5rem]">Case <span class="title-orange">Studies</span></h2>
-			</div>
-			<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
-				<div class="col-span-4 lg:col-span-4 content-center case-tab active" data-id="tab-1">
-					Remote hiring made safe and reliable
-					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt=""> -->
-				</div>
-				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-2">
-					Excellent and Ongoing Support
-					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt=""> -->
-				</div>
-				<div class="col-span-4 lg:col-span-4 content-center case-tab" data-id="tab-3">
-					High quality and effective solution
-					<!-- <img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/tiller-logo.svg" alt=""> -->
-				</div>
-			</div>
-			<div class="tab-container">
-				<div class="tab-content active" id="tab-1" style="background-image: url('<?php echo get_template_directory_uri();?>/images/case-study-checking-1.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="block max-w-[47rem]">
-								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
-									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
-								</p>
-								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">Smart Working have always delivered strong shortlists of vetted candidates in very tight timescales. We have now built a team of 10 with them and the turnover of our developers has been extremely low. We’d strongly recommend using them.</p>
-								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Chief Marketing Officer</span></p>
-							</div>
+	<?php if (have_rows('block')) : ?>
+		<?php while (have_rows('block')) : the_row(); ?>
+			<?php if (get_row_layout() == 'case_studies') : ?>
+				<div class="w-full relative px-4">
+					<div class="container">
+						<div class="block">
+							<?php if(get_sub_field('main_heading')): ?>
+								<h2 class="text-[2.25rem] font-[700] text-center text-[#ffffff] mb-[2.5rem]"><?php echo get_sub_field('main_heading'); ?></h2>
+							<?php endif; ?>
 						</div>
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="max-w-[100%] sm:max-w-[20rem] rounded-[0.25rem] lg:max-w-[20rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<p class="text-[1rem] text-[#171717]">Compared with UK hiring, this is an approximate annual saving of</p>
-								<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">£400,000</p>
-							</div>
-							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">Build the team to</p>
-									<div class="flex">
-										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#171717]">developers<br>within 12 months</p></div>
-									</div>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">96%</p>
-									<p class="text-[1rem] text-[#171717]">retention rate maintained within the first 12 months</p>
-								</div>
-							</div>
+						<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12">
+							<?php if(have_rows('case_studies_tabs')): ?>
+								<?php $row_index_tab = 0; // Initialize the row index counter ?>
+									<?php while(have_rows('case_studies_tabs')): the_row(); ?>
+									<?php 
+										$title = get_sub_field('title');
+										$row_index_tab_active_class = ($row_index_tab == 0) ? 'active' : '';
+									?>
+										<div class="col-span-4 lg:col-span-4 content-center case-tab <?php echo $row_index_tab_active_class; ?>" data-id="tab-<?php echo $row_index_tab; ?>">
+											<?php echo $title;?>
+										</div>
+										<?php $row_index_tab++; // Increment the row index counter ?>
+									<?php endwhile; ?>	
+							<?php endif; ?> 
 						</div>
-					</div>
-				</div>
-				<div class="tab-content" id="tab-2" style="background-image: url('<?php echo get_template_directory_uri();?>/images/case-study-image-2.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="block max-w-[47rem]">
-								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
-									<img class="h-[3rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/stickey-logo.svg" alt="">
-								</p>
-								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]">We have worked with Smart Working for 2 years and have been very pleased with the quality and skills of their developers. Their UK team has continued to deliver excellent ongoing support to us. We now have 6 people working for us on a long-term basis.</p>
-								<p class=" text-[1rem] text-[#fff] font-[500]">- Cameron Wade &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Head of Value Propositions</span></p>
-							</div>
+						<div class="tab-container">
+							<?php if(have_rows('case_studies_tabs')): ?>
+								<?php $row_index_content = 0; // Initialize the row index counter ?>
+									<?php while(have_rows('case_studies_tabs')): the_row(); ?>
+									<?php 
+										$tab_paragraph = get_sub_field('tab_paragraph'); 
+										$name_and_profile = get_sub_field('name_and_profile');
+										$features_box_1 = get_sub_field('features_box_1');
+										$features_box_2 = get_sub_field('features_box_2');
+										$features_box_3 = get_sub_field('features_box_3');
+										$logo_image = get_sub_field('logo_image');
+										$background_image = get_sub_field('background_image');
+										$row_index_content_class = ($row_index_content == 0) ? 'active' : '';
+									?>
+										<div class="tab-content <?php echo $row_index_content_class; ?>" id="tab-<?php echo $row_index_content; ?>" style="background-image: url('<?php echo get_sub_field('background_image')['url']; ?>">
+											<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
+												<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
+													<div class="block max-w-[47rem]">
+														<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
+															<img class="h-[2rem] w-auto inline-block" src="<?php echo get_sub_field('logo_image')['url']; ?>" alt="">
+														</p>
+														<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
+														<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]"><?php echo $tab_paragraph;?></p>
+														<p class=" text-[1rem] text-[#fff] font-[500]"><?php echo $name_and_profile;?></p>
+													</div>
+												</div>
+												<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
+													<div class="max-w-[100%] sm:max-w-[20rem] rounded-[0.25rem] lg:max-w-[20rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
+														<?php echo $features_box_1;?>
+													</div>
+													<div class="flex space-x-4">
+														<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+															<?php echo $features_box_2;?>
+														</div>
+														<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+															<?php echo $features_box_3;?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php $row_index_content++; // Increment the row index counter ?>
+									<?php endwhile; ?>	
+							<?php endif; ?> 
 						</div>
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<p class="text-[1rem] text-[#171717]">Build the team to</p>
-								<div class="flex">
-									<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">06</p></div>
-									<div class="pl-2"><p class="text-[1rem] text-[#171717]">engineers<br>within 24 months</p></div>
-								</div>
-							</div>
-							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">Fully vetted candidates were submitted in less than</p>
-									<div class="flex">
-										<div><p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">10</p></div>
-										<div class="pl-2"><p class="text-[1rem] text-[#171717]">working<br>days</p></div>
-									</div>
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">100%</p>
-									<p class="text-[1rem] text-[#171717]">of our developers undergo screening and verification checks prior to employment</p>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-content" id="tab-3" style="background-image: url('<?php echo get_template_directory_uri();?>/images/case-study-image-31.jpg');">
-					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 min-h-[34rem] gap-4">
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="block max-w-[47rem]">
-								<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
-									<img class="h-[2rem] w-auto inline-block" src="<?php echo get_template_directory_uri();?>/images/keyloop-logo.svg" alt="">
-								</p>
-								<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-								<p class=" text-[1rem] text-[#fff] mb-[2rem]">They are a breath of fresh air, they do what they promise and deliver what they say.</p>
-								<p class=" text-[1rem] text-[#fff] font-[500]">- Edward Genochio &#9679; <span class="text-[#F2F2F2] text-[0.875rem]">Chief Executive Officer</span></p>
-							</div>
-						</div>
-						<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-							<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-								<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">3 Rounds</p>
-								<p class="text-[1rem] text-[#171717] mt-1">of technical assessments prior to client interviews</p>
-								
-							</div>
-							<div class="flex space-x-4">
-								<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">Constant</p>
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">Support</p>
-									<p class="text-[1rem] text-[#171717]">from our Account Manager and Customer success team</p>
-									
-								</div>
-								<div class="max-w-[100%] sm:max-w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
-									<p class="text-[1rem] text-[#171717]">Reduced hiring timelines by</p>
-									<p class="text-[#171717] text-[3.25rem] font-[600] leading-[3rem]">50%</p>
-									<p class="text-[1rem] text-[#171717]">compared to traditional recruitment methods</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-		</div>
-	</div>
-	
+					</div>
+				</div>
+			<?php endif; ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
 
 
     <?php if (have_rows('block')) : ?>

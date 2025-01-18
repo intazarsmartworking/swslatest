@@ -2469,17 +2469,34 @@ jQuery(document).ready(function(){
 		startProgressbar();
 	});
 	
-  $('.faq-accordian .faq-accordian-item:first-child').addClass('active');
+  jQuery('.faq-accordian .faq-accordian-item:first-child').addClass('active');
+
+  jQuery('.tab-box-content .tab-panel').hide(); // Hide all content
+  jQuery('.tab-box-content .tab-panel:first').show(); // Show the first tab content
+    // Handle tab click
+    jQuery('.filter-tab .tab-title').click(function() {
+        var categoryId = $(this).data('category-id'); // Get the category ID from the clicked tab
+        
+        // Remove 'active' class from all tabs and add it to the clicked tab
+        jQuery('.filter-tab .tab-title').removeClass('active');
+        jQuery(this).addClass('active');
+        
+        // Hide all content and show the content for the clicked tab
+        jQuery('.tab-box-content .tab-panel').hide();
+        jQuery('.tab-box-content .tab-panel[data-category-id="' + categoryId + '"]').show();
+    });
+    // Optionally, set the first tab to active by default
+    jQuery('.filter-tab .tab-title:first').addClass('active');
 		
 });
 
 
-jQuery('.vetted-tech-experts').slick({
+jQuery('.vetted-tech-slider').slick({
   infinite: true,
   autoplay: false,
   speed: 4000,
   autoplaySpeed: 0,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   focusOnSelect: false,
   arrows: false,
@@ -2491,7 +2508,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1440,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2503,7 +2520,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1367,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
@@ -2515,7 +2532,7 @@ jQuery('.vetted-tech-experts').slick({
     {
       breakpoint: 1281,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         infinite: true,
