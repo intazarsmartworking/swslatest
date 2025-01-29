@@ -1981,9 +1981,9 @@
                                 },
                                 {
                                     "key": "field_678a995191c40",
-                                    "label": "Author Pic",
-                                    "name": "author_pic",
-                                    "type": "image",
+                                    "label": "Location",
+                                    "name": "location",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -1992,16 +1992,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
-                                    "preview_size": "medium",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_678a995191c41",
@@ -2937,6 +2932,30 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_678e8b5766acb",
+                            "label": "Left Box Icon 1",
+                            "name": "left_box_icon_1",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_678a9afb91c54",
                             "label": "Left Box Title 1",
                             "name": "left_box_title_1",
@@ -2975,6 +2994,30 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_678e8b7c66acc",
+                            "label": "Left Box Icon 2",
+                            "name": "left_box_icon_2",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_678a9b1491c56",
                             "label": "Left Box Title 2",
                             "name": "left_box_title_2",
@@ -3011,6 +3054,30 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_678e8ba766acd",
+                            "label": "Left Box Icon 3",
+                            "name": "left_box_icon_3",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_678a9b2f91c58",
@@ -3123,5 +3190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737140207
+    "modified": 1737404627
 }

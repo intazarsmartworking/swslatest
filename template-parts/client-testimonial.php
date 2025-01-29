@@ -12,7 +12,7 @@
 		<div class="w-full mt-10">
 			<div class="container">
 				<ul class="testimonial-tab">
-					<li class="active" data-id="testimonial1"><img class="inline h-[1.5rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/star-tab.svg" alt="">&nbsp; Client words</li>
+					<li class="active" data-id="testimonial1"><img class="inline h-[1.5rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/star-tab.svg" alt="">&nbsp; Testimonials</li>
 					<li data-id="reviews1"><img class="inline h-[1.5rem] align-middle mb-1 " src="<?php echo get_template_directory_uri();?>/images/heart-tab.svg" alt="">&nbsp; Reviews</li>
 				</ul>
 			</div>
@@ -33,11 +33,11 @@
 
 
 					
-							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
+							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item max-w-[400px] w-[100%] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
 									<div class="flex justify-between mb-6">
-										<div class="content-center"><img class="h-[2.5rem]" src="<?php echo get_sub_field('logo')['url']; ?>"></div>
-										<div class="content-center"><img class="h-[0.96rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
+										<div class="content-center"><img class="h-[2.5rem] w-auto" src="<?php echo get_sub_field('logo')['url']; ?>"></div>
+										<div class="content-center"><img class="h-[0.96rem] w-auto" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
 									</div>
 									<p class="text-[0.95rem] text-[#1E1E1E] font-[400]"> <?php echo $testimonial;?> </p>
 
@@ -87,16 +87,25 @@
 								$date_and_time = get_sub_field('date_and_time');
 								$background = get_sub_field('background_color'); 
 								$title = get_sub_field('title'); 
+								$location = get_sub_field('location'); 
+								$first_two_chars = substr($author_name, 0, 2);
 							?>
 
 
 					
-							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item2 w-[24.375rem] lg:w-[24.375rem] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
+							<div class="bg-[<?php echo esc_attr($background); ?>] slider-item2 max-w-[400px] w-[100%] h-[24.375rem] rounded-xl absolute card-placement card" style="background:<?php echo esc_attr($background); ?>;" >
 								<div class="p-7 flex flex-col">
+									<div class="flex mb-6 border-b-[1px] border-[#A6A6A6] pb-3 gap-3">
+										<div class="w-[3.75rem] h-[3.75rem] rounded-[50%] bg-[#D1F9EA] text-center text-[#000] font-[700] content-center uppercase"><?php echo esc_attr($first_two_chars);?></div>
+										<div class="content-center">
+											<p class="text-[#1E1E1E] text-[1.25rem] font-[700]"><?php echo esc_attr($author_name);?></p>
+											<p class="text-[#787878] text-[0.875rem]"><?php echo esc_attr($review_count);?> review  &nbsp;&nbsp;<img class="w-[1rem] h-[1rem] !inline align-middle" src="<?php echo get_template_directory_uri(); ?>/images/icon-location.svg"> <?php echo esc_attr($location);?></p>
+										</div>
+									</div>
 									<div class="flex justify-between mb-6">
-										<div><img class="h-[0.96rem]" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
+										<div><img class="h-[0.96rem] w-auto" src="<?php echo get_sub_field('rating')['url']; ?>"></div>
 										<div>
-											<!-- <p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?> </p> -->
+											<p class="text-[#4B4B4B] text-[0.875remx] font-[600]"> <?php echo esc_attr($date_and_time);?> </p>
 										</div>
 									</div>
 									<p class="text-[1rem] text-[#1E1E1E] font-[500] mb-3"> <?php echo $title;?> </p>
@@ -108,8 +117,7 @@
 											<div class="flex items-center ">
 												<!-- <img class="w-[6.5rem] h-[6.5rem] rounded-full mr-5" src="<?php echo get_sub_field('author_pic')['url']; ?>"> -->
 												<div>
-													<p class="text-[#1E1E1E] text-[1.125rem]"> <?php echo esc_attr($author_name);?></p>
-													<p class="text-[#4B4B4B] text-[0.875remx]"> <?php echo esc_attr($date_and_time);?></p>
+													<p class="text-[#1E1E1E] text-[0.875rem]"><strong>Date of experience:</strong> <?php echo esc_attr($date_and_time);?></p>
 												</div>
 											</div>
 										</div>

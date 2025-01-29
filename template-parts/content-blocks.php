@@ -27,7 +27,7 @@
 								<span class="next" data-color="#f34d05">Fullstack</span>
 								<span data-color="#f34d05">Frontend</span>
 								<span data-color="#f34d05">Backend</span>
-								<span data-color="#f34d05">Android</span>
+								<!-- <span data-color="#f34d05">Android</span> -->
 							</span>
 							<strong class="title-orange">Developers</strong>
 						</h1>
@@ -169,7 +169,7 @@
 	<?php if (have_rows('block')) : ?>
 		<?php while (have_rows('block')) : the_row(); ?>
 			<?php if (get_row_layout() == 'case_studies') : ?>
-				<div class="w-full relative px-4">
+				<div class="w-full relative px-4" id="case_studies_id">
 					<div class="container">
 						<div class="block">
 							<?php if(get_sub_field('main_heading')): ?>
@@ -212,20 +212,27 @@
 														<p class=" text-[2rem] text-[#F34D05] font-[600] mb-[1rem]">
 															<img class="h-[2rem] w-auto inline-block" src="<?php echo get_sub_field('logo_image')['url']; ?>" alt="">
 														</p>
-														<p><img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt=""> </p>
-														<p class=" text-[1rem] text-[#E8E8E8] mb-[2rem]"><?php echo $tab_paragraph;?></p>
+														<p class=" text-[1.3rem] text-[#E8E8E8] mb-[2rem]">
+															<img class="h-[2rem] w-[1.05rem] inline-block align-text-bottom" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt="">
+															&nbsp; <?php echo $tab_paragraph;?> &nbsp;
+															<img class="h-[2rem] w-[1.05rem] inline-block align-text-top rotate-180" src="<?php echo get_template_directory_uri();?>/images/quat-symble.svg" alt="">
+														</p>
 														<p class=" text-[1rem] text-[#fff] font-[500]"><?php echo $name_and_profile;?></p>
+														
 													</div>
 												</div>
-												<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 content-end">
-													<div class="max-w-[100%] sm:max-w-[20rem] rounded-[0.25rem] lg:max-w-[20rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto mb-4">
-														<?php echo $features_box_1;?>
+												<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 pl-0 lg:pl-10 content-end">
+													<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4 mb-4">
+														<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6"></div>
+														<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 min-h-[12rem] rounded-[0.25rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px]">
+															<?php echo $features_box_1;?>
+														</div>
 													</div>
-													<div class="flex space-x-4">
-														<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+													<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
+														<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 min-h-[12rem] rounded-[0.25rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px]">
 															<?php echo $features_box_2;?>
 														</div>
-														<div class="max-w-[100%] sm:max-w-[16.5rem] w-[16.5rem] rounded-[0.25rem] lg:max-w-[16.5rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px] ml-auto">
+														<div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 min-h-[12rem] rounded-[0.25rem] p-[2rem] bg-[#FFFFFF] backdrop-blur-[10px]">
 															<?php echo $features_box_3;?>
 														</div>
 													</div>
@@ -247,7 +254,7 @@
     <?php if (have_rows('block')) : ?>
 	<?php while (have_rows('block')) : the_row(); ?>
 	   <?php if (get_row_layout() == 'how_it_works') : ?>
-			<div class=" w-full relative bg-white p-[1rem] lg:pt-[7.5rem] lg:pb-[2.5rem]">
+			<div class=" w-full relative bg-white p-[1rem] lg:pt-[7.5rem] lg:pb-[2.5rem]" id="how_it_works_id">
 				<div class="w-full relative z-10">
 					<div class="container">
 					<?php if(get_sub_field('small_title')): ?>
@@ -379,13 +386,14 @@
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
 									<p class="block mb-2 text-sm font-medium text-white dark:text-white">I’m based in</p>
 									<div class="relative select-input">
-										<img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
-										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
+										<!-- <img class="absolute h-[1.5rem] w-[1.5rem] countryImage" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt=""> -->
+										<select id="countriesList" class=" bg-[#1f1f1f] border h-[2.5rem] !pl-[18px] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
 											<option value="uk" selected>United Kingdom</option>
-											<option value="us">United States</option>
+											<option value="na">North America</option>
 											<option value="eu">Europe</option>
-											<option value="au">Australia</option>
-											<option value="ca">Canada</option>
+											<option value="sa">South America</option>
+											<option value="af">Africa</option>
+											<option value="au">Oceania</option>
 										</select>
 									</div>
 								</div>
@@ -413,8 +421,8 @@
 					<div class="grid-item md:col-span-12 lg:col-span-7 xl:col-span-7 content-center">
 						<div class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-7">
 							<div class="grid-item md:col-span-6 lg:col-span-6 xl:col-span-6 content-center">
-								<div class="w-[100%] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-									<img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt="">
+								<div class="w-[100%] min-h-[26.25rem] bg-[#FFF] p-[1.5rem] rounded-[1rem] relative overflow-hidden ml-auto">
+									<!-- <img class=" absolute right-0 bottom-[110px]" src="<?php echo get_template_directory_uri();?>/images/logo-icons.svg" alt=""> -->
 									<div class="relative h-[100%] text-center">
 										<p class="text-[1.5rem] font-[700] text-[#1E1E1E] mt-4"> Hiring with <span class="text-dark-orange">Us</span></p>
 										<p class="text-[3rem] font-[700] text-[#1E1E1E] my-6"><span class="currency-symbols">£</span><span class="smartHourPrice">0</span>/hour</p>
@@ -430,8 +438,8 @@
 								<p class="text-[0.75rem] font-[400] text-center text-[#F5F5F5] mt-[0.89rem]">&nbsp;</p>
 							</div>
 							<div class="grid-item md:col-span-6 lg:col-span-6 xl:col-span-6 content-center">
-								<div class="w-[100%] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[2rem] relative overflow-hidden ml-auto">
-									<img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt="">
+								<div class="w-[100%] min-h-[26.25rem] bg-[rgba(255,255,255,0.08)] border border-[rgba(238,238,238,0.40)] p-[1.5rem] rounded-[1rem] relative overflow-hidden ml-auto">
+									<!-- <img class="absolute countryImage w-[24rem] h-[24rem] opacity-[0.08] right-[-65px] bottom-[15px]" src="<?php echo get_template_directory_uri();?>/images/flag-uk.svg" alt=""> -->
 									<div class="relative h-[100%] text-center">
 										<p class="text-[1.5rem] font-[400] text-[#FFF] mt-4">Hiring in <span class="select-country font-[700]">United Kingdom</span></p>
 										<p class="text-[3rem] font-[700] text-[#FFF] my-6"><span class="currency-symbols">£</span><span class="otherHourPrice">0</span>/hour</p>
@@ -505,7 +513,10 @@
 						<div class="w-[100%] relative max-w-[100%] px-[15%]">
 							<div class=" bg-white w-[100%] z-10 absolute left-0 top-[10%] max-w-[15rem] inline-block rounded-[0.5rem] px-[0.8rem] py-[0.63rem]">
 							<?php if(get_sub_field('left_box_title_1')): ?>	
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/messages.svg" alt=""> <?php echo get_sub_field('left_box_title_1'); ?></p>
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]">
+									<img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_sub_field('left_box_icon_1')['url']; ?>" alt=""> 
+									<?php echo get_sub_field('left_box_title_1'); ?>
+								</p>
 							<?php endif; ?>
 							
 							<?php if(get_sub_field('left_box_paragraph_1')): ?>
@@ -514,7 +525,10 @@
 							</div>
 							<div class=" bg-white w-[100%] z-10 absolute right-0 top-[15%] max-w-[15rem] inline-block rounded-[0.5rem] px-[0.8rem] py-[0.63rem]">
 							<?php if(get_sub_field('left_box_title_2')): ?>
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/phone-svg.svg" alt=""> <?php echo get_sub_field('left_box_title_2'); ?></p>
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]">
+									<img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_sub_field('left_box_icon_2')['url']; ?>" alt=""> 
+									<?php echo get_sub_field('left_box_title_2'); ?>
+								</p>
 							<?php endif; ?>
 							
 							<?php if(get_sub_field('left_box_paragraph_2')): ?>
@@ -523,7 +537,10 @@
 							</div>
 							<div class=" bg-white w-[100%] z-10 absolute right-0 bottom-[10%] max-w-[15rem] inline-block rounded-[0.5rem] px-[0.8rem] py-[0.63rem]">
 							<?php if(get_sub_field('left_box_title_3')): ?>	
-								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]"><img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/video-call.svg" alt=""> <?php echo get_sub_field('left_box_title_3'); ?></p>
+								<p class="text-[1rem] font-[600] text-left text-[#FF4D04] mb-[0.5rem]">
+									<img class="w-[1.5rem] inline-block h-[1.5rem]" src="<?php echo get_sub_field('left_box_icon_3')['url']; ?>" alt=""> 
+									<?php echo get_sub_field('left_box_title_3'); ?>
+								</p>
 							<?php endif; ?>
 
 							<?php if(get_sub_field('left_box_paragraph_3')): ?>	

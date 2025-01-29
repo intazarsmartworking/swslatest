@@ -520,7 +520,7 @@ body {
 .card-placement {
   position: absolute;
   transition: transform all 0.5s ease;
-  min-width: 24.375rem;
+  min-width: 400px;
 }
 
 #card1 {
@@ -3423,7 +3423,7 @@ body.lightMode .single-blog .blog-table .text-16 {
   min-height: 100px;
   left: 0px;
   bottom: 0px;
-  padding: 18px;
+  padding: 1.68rem;
   position: absolute;
   bottom: 0px;
 }
@@ -3460,6 +3460,9 @@ body.lightMode .single-blog .blog-table .text-16 {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(9.5px);
   color: #1e1e1e;
+}
+.hero-card-details .hero-skills .item.vetted:first-child{
+  margin-left: 0px !important;
 }
 .vetted-tech-card .vetted-hover-box {
   position: absolute;

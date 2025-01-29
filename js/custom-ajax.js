@@ -49,7 +49,6 @@ jQuery(document).ready(function($) {
                 nonce: nonce
             },
             success: function(response) {
-                console.log('response', response)
                 $('.vetted-tech-experts').html(response);
                 // Destroy Slick if already initialized
                 if ($('.vetted-tech-experts').hasClass('slick-initialized')) {

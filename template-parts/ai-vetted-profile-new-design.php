@@ -30,7 +30,7 @@ $categories = get_categories(array(
 if ($categories): ?>
     <div class="tabs">
         <ul class="filter-tab tab-titles">
-				<li class="tab-title" data-category-id="all">
+				<!-- <li class="tab-title" data-category-id="all">
 					<svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
 						<path d="M20.5 14C21.6046 14 22.5 13.1046 22.5 12C22.5 10.8954 21.6046 10 20.5 10C19.3954 10 18.5 10.8954 18.5 12C18.5 13.1046 19.3954 14 20.5 14Z" fill="#4B4B4B" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
 						<path d="M20.5 6C21.6046 6 22.5 5.10457 22.5 4C22.5 2.89543 21.6046 2 20.5 2C19.3954 2 18.5 2.89543 18.5 4C18.5 5.10457 19.3954 6 20.5 6Z" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -40,7 +40,7 @@ if ($categories): ?>
 						<path d="M18.5 4H14.5C12.5 4 11.5 5 11.5 7V17C11.5 19 12.5 20 14.5 20H18.5" stroke="#4B4B4B" stroke-linecap="round" stroke-linejoin="round"></path>
 					</svg>
                     All
-                </li>
+                </li> -->
             <?php foreach ($categories as $category): ?>
 				<?php 
 					$term_id = $category->term_id;
@@ -58,13 +58,12 @@ if ($categories): ?>
 
         <div class="tab-box-content mt-10">
 			<!-- "All" Tab Content -->
-            <div class="tab-panel" data-category-id="all">
+            <!-- <div class="tab-panel" data-category-id="all">
 				<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
 					<?php
-					// Get all posts from the custom post type (no category filtering for "All" tab)
 					$args = array(
-						'post_type' => 'ai-vetted-profile', // Custom post type
-						'posts_per_page' => 4, // Adjust as needed
+						'post_type' => 'ai-vetted-profile',
+						'posts_per_page' => 4,
 					);
 
 					$query = new WP_Query($args);
@@ -83,7 +82,6 @@ if ($categories): ?>
 								<div class="hero-slider-item">
 									<div class="hero-card vetted-tech-card relative">
 										<div class="vetted-hover-box">
-											<!-- Profile Title -->
 											<p class="text-[1.5rem] font-[600] text-[#F34D05] mb-3">
 												<svg class="inline-flex align-middle mr-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
 													<circle cx="10" cy="10" r="4" fill="#31BF31"/>
@@ -91,25 +89,25 @@ if ($categories): ?>
 												<?php echo get_the_title(); ?>
 											</p>
 
-											<!-- Designation -->
+											
 											<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2">
 												<img class="w-[1.25rem] h-[1.25rem] !inline" src="<?php echo get_template_directory_uri(); ?>/images/icon-profile.svg">
 												<?php echo esc_html($designation); ?>
 											</p>
 
-											<!-- Location (City and Country) -->
+											
 											<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2">
 												<img class="w-[1.25rem] h-[1.25rem] !inline" src="<?php echo get_template_directory_uri(); ?>/images/icon-location.svg">
 												<?php echo esc_html($city); ?>, <?php echo esc_html($country); ?>
 											</p>
 
-											<!-- Total Years of Experience -->
+											
 											<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-5">
 												<img class="w-[1.25rem] h-[1.25rem] !inline" src="<?php echo get_template_directory_uri(); ?>/images/icons-star.svg" alt="">
 												<?php echo esc_html($total_experience); ?> years experience
 											</p>
 
-											<!-- Expertise Section -->
+											
 											<p class="text-[1rem] font-[400] text-[#787878] mb-2">Expertise</p>
 											<div class="grid grid-cols-10 gap-2 text-[0.875rem] font-[400] text-[#1E1E1E] mb-[1.5rem]">
 												<?php if (have_rows('skills')): ?>
@@ -120,7 +118,7 @@ if ($categories): ?>
 												<?php endif; ?>
 											</div>
 
-											<!-- Call to Action (Book a Call) -->
+											
 											<div class="absolute bottom-[1.68rem]">
 												<p class="text-[0.875rem] font-[400] text-[#000] mb-2">
 													<?php echo get_the_title(); ?> is available for hire
@@ -131,10 +129,10 @@ if ($categories): ?>
 											</div>
 										</div>
 
-										<!-- Background Image -->
+										
 										<img class="w-[100%] h-[100%]" src="<?php echo esc_url($dev_image_src[0]); ?>">
 
-										<!-- Hero Card Overlay -->
+										
 										<div class="hero-card-overlay">
 											<div class="hero-card-details">
 												<p class="hero-profile !mb-[0px]">
@@ -167,7 +165,7 @@ if ($categories): ?>
 					wp_reset_postdata();
 					?>
 				</div>
-			</div>
+			</div> -->
             <?php foreach ($categories as $index => $category): ?>
                 <div class="tab-panel" data-category-id="<?php echo esc_attr($category->term_id); ?>">
 					<div class="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-4">
@@ -216,10 +214,10 @@ if ($categories): ?>
 												</p>
 	
 												<!-- Location (City and Country) -->
-												<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2">
+												<!-- <p class="text-[1rem] font-[400] text-[#1E1E1E] mb-2">
 													<img class="w-[1.25rem] h-[1.25rem] !inline" src="<?php echo get_template_directory_uri(); ?>/images/icon-location.svg">
 													<?php echo esc_html($city); ?>, <?php echo esc_html($country); ?>
-												</p>
+												</p> -->
 	
 												<!-- Total Years of Experience -->
 												<p class="text-[1rem] font-[400] text-[#1E1E1E] mb-5">
