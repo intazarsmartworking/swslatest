@@ -355,11 +355,11 @@
 									</div>
 								</div>
 								<div class="col-span-12 sm:col-span-6 lg:col-span-6">
-									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Roles</p>
+									<p class="block mb-2 text-sm font-medium text-white dark:text-white">Key skill</p>
 									<div class="relative select-input">
 										<img class="absolute h-[1.5rem] w-[1.5rem]" src="<?php echo get_template_directory_uri();?>/images/fullstak.svg" alt="">
 										<select id="select_skill" class=" bg-[#1f1f1f] border h-[2.5rem] rounded-[0.5rem] border-[#414141] text-[#fff] text-[0.875rem] focus:ring-[#1f1f1f] focus:border-[#414141] block w-full dark:bg-[#1f1f1f] dark:border-[#414141] dark:placeholder-gray-400 dark:text-[#000] dark:focus:ring-[#1f1f1f] dark:focus:border-[#414141]">
-											<option selected>Choose a Skill</option>
+											
 											<?php 
 											$args_skills = array(
 												'post_type' => 'skills',
@@ -643,9 +643,3 @@
 	<?php endif; ?>	
 </div>
 </div>
-<script type="text/javascript">
-   jQuery(window).bind("load", function() {
-   	homePageAnimation()
-	//afetrLoadScrollBox()
-   });
-</script>

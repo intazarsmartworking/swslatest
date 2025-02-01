@@ -2406,6 +2406,15 @@ jQuery('.testimonial-tab li').on('click', function(){
 
 jQuery(function($) {
   jQuery(document).ready(function(){
+
+    // $("#select_skill").val("Male").attr("selected","selected");
+    $("#select_skill").val($("#select_skill option:first").val());
+
+    $('.smartHourPrice').text(converter(22));
+    $('.smartMonthPrice').text(converter(3813));
+
+    $('.otherHourPrice').text(converter(34));
+    $('.otherMonthPrice').text(converter(5873));
     
 
     $(".slider-hiw").slick({
@@ -2632,6 +2641,12 @@ jQuery(window).scroll(function(){
 
 
 jQuery('.faq-accordian-title').on('click', function(){
-  jQuery('.faq-accordian-item').removeClass('active')
-  jQuery(this).parent('.faq-accordian-item').addClass('active')
+  if(jQuery(this).parent('.faq-accordian-item').hasClass('active')){
+    jQuery(this).parent('.faq-accordian-item').removeClass('active')
+  }else{
+    jQuery('.faq-accordian-item').removeClass('active')
+    jQuery(this).parent('.faq-accordian-item').addClass('active')
+  }
+  // jQuery('.faq-accordian-item').removeClass('active')
+  // jQuery(this).parent('.faq-accordian-item').addClass('active')
 })
